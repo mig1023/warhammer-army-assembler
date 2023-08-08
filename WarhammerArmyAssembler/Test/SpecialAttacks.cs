@@ -8,8 +8,8 @@ namespace WarhammerArmyAssembler.Test
         public static void GiantAttacks(ref Unit unit, List<Unit> participants,
             ref Dictionary<int, int> roundWounds, int round)
         {
-            Unit giantOpponent = Fight.SelectOpponent(participants, unit);
-            bool opponentIsMonster = giantOpponent.LargeBase;
+            Unit opponent = Fight.SelectOpponent(participants, unit);
+            bool opponentIsMonster = opponent.LargeBase;
 
             int attackType = Dice.RollAll(Dice.Types.OTHER, unit, diceNum: 1, hiddenDice: true);
 
@@ -19,15 +19,20 @@ namespace WarhammerArmyAssembler.Test
             {
                 Data.Console(Data.text, "--> Yell and Bawl (pass round with opponent)");
 
-                giantOpponent.PassThisRound = true;
-                roundWounds[giantOpponent.ID] = 2;
+                opponent.PassThisRound = true;
+                roundWounds[opponent.ID] = 2;
             }
             else if (opponentIsMonster && (attackType >= 2) && (attackType <= 4))
             {
-                Data.Console(Data.text, $"--> Thump with Club --> {giantOpponent.Name} must pass Initiative test");
+                Data.Console(Data.text, $"--> Thump with Club --> " +
+                    $"{opponent.Name} must pass Initiative test");
 
-                if (Dice.Roll(unit, Dice.Types.I, giantOpponent, giantOpponent.Initiative.Value, 1, paramTest: true, hiddenDice: true))
+                int initiative = opponent.Initiative.Value;
+
+                if (Dice.Roll(unit, Dice.Types.I, opponent, initiative, 1, paramTest: true, hiddenDice: true))
+                {
                     Data.Console(Data.goodText, " --> passed");
+                }
                 else
                 {
                     Data.Console(Data.badText, " --> FAIL");
@@ -45,25 +50,25 @@ namespace WarhammerArmyAssembler.Test
                         int wounds = firstWoundDice + secondWoundDice;
                         Data.Console(Data.badText, $" --> Giant's inflict {wounds} wounds");
 
-                        if (wounds > giantOpponent.Wounds.Original)
+                        if (wounds > opponent.Wounds.Original)
                         {
-                            wounds = giantOpponent.Wounds.Original;
+                            wounds = opponent.Wounds.Original;
                             Data.Console(Data.supplText, $", only {wounds} can be inflicted");
                         }
 
-                        roundWounds[giantOpponent.ID] += wounds;
-                        giantOpponent.Wounds.Value -= wounds;
+                        roundWounds[opponent.ID] += wounds;
+                        opponent.Wounds.Value -= wounds;
                     }
                 }
             }
             else if (opponentIsMonster && (attackType >= 5))
             {
                 Data.Console(Data.text, "--> 'Eadbutt");
-                Data.Console(Data.badText, $" --> {giantOpponent.Name} WOUND");
+                Data.Console(Data.badText, $" --> {opponent.Name} WOUND");
 
-                roundWounds[giantOpponent.ID] += 1;
-                giantOpponent.Wounds.Value -= 1;
-                giantOpponent.PassThisRound = true;
+                roundWounds[opponent.ID] += 1;
+                opponent.Wounds.Value -= 1;
+                opponent.PassThisRound = true;
             }
             else if (!opponentIsMonster && (attackType == 2))
             {
@@ -81,7 +86,7 @@ namespace WarhammerArmyAssembler.Test
                 else
                 {
                     int attacks = Dice.RollAll(Dice.Types.OTHER, unit, diceNum: 2, hiddenDice: true);
-                    roundWounds[giantOpponent.ID] += Fight.Round(ref unit, ref giantOpponent, attacks, round);
+                    roundWounds[opponent.ID] += Fight.Round(ref unit, ref opponent, attacks, round);
                 }
             }
             else if (!opponentIsMonster && (attackType == 3))
@@ -100,17 +105,17 @@ namespace WarhammerArmyAssembler.Test
 
                 int pickType = Dice.RollAll(Dice.Types.OTHER, unit, diceNum: 1, hiddenDice: true);
                 Data.Console(Data.text, pickUpType[pickType]);
-                Data.Console(Data.badText, $" --> {giantOpponent.Name} SLAIN");
+                Data.Console(Data.badText, $" --> {opponent.Name} SLAIN");
 
-                roundWounds[giantOpponent.ID] += giantOpponent.Wounds.Original;
-                giantOpponent.Wounds.Value -= giantOpponent.Wounds.Original;
+                roundWounds[opponent.ID] += opponent.Wounds.Original;
+                opponent.Wounds.Value -= opponent.Wounds.Original;
             }
             else
             {
                 Data.Console(Data.text, $"--> {unit.Name} Swing with Club");
 
                 int attacks = Dice.RollAll(Dice.Types.OTHER, unit, diceNum: 1, hiddenDice: true);
-                roundWounds[giantOpponent.ID] += Fight.Round(ref unit, ref giantOpponent, attacks, round);
+                roundWounds[opponent.ID] += Fight.Round(ref unit, ref opponent, attacks, round);
             }
         }
 
@@ -146,23 +151,31 @@ namespace WarhammerArmyAssembler.Test
             roundWounds[hellOpponent.ID] += Fight.Round(ref unit, ref hellOpponent, attacks, round);
         }
 
-        public static void ImpactHit(Unit unit, List<Unit> participants, ref Dictionary<int, int> roundWounds, int round)
+        public static void ImpactHit(Unit unit, List<Unit> participants,
+            ref Dictionary<int, int> roundWounds, int round)
         {
-            bool impactHit = !String.IsNullOrEmpty(unit.ImpactHit) || (unit.ImpactHitByFront > 0);
-            bool impactHitByMount = (unit.Mount != null) && !String.IsNullOrEmpty(unit.Mount.ImpactHit);
+            bool impactHit = !String.IsNullOrEmpty(unit.ImpactHit) ||
+                (unit.ImpactHitByFront > 0);
+
+            bool impactHitByMount = (unit.Mount != null) &&
+                !String.IsNullOrEmpty(unit.Mount.ImpactHit);
 
             if ((round == 1) && (impactHit || impactHitByMount || unit.SteamTank))
             {
-                Unit impactUnit = (unit.Mount != null && !String.IsNullOrEmpty(unit.Mount.ImpactHit) ? unit.Mount : unit);
+                Unit impactUnit = (unit.Mount != null &&
+                    !String.IsNullOrEmpty(unit.Mount.ImpactHit) ? unit.Mount : unit);
+
                 Unit impactOpponent = Fight.SelectOpponent(participants, impactUnit);
 
-                int attacks = ImpactHitNumber(unit, unit.Mount, out string impactOutLine, out bool steamFail);
+                int attacks = ImpactHitNumber(unit, unit.Mount,
+                    out string impactOutLine, out bool steamFail);
 
                 if (steamFail)
                     unit.Wounds.Value -= 1;
 
-                roundWounds[impactOpponent.ID] += Fight.Round(ref impactUnit, ref impactOpponent,
-                    attacks, round, impactHit: true, impactLine: impactOutLine);
+                roundWounds[impactOpponent.ID] += Fight.Round(ref impactUnit,
+                    ref impactOpponent, attacks, round, impactHit: true,
+                    impactLine: impactOutLine);
             }
         }
 
