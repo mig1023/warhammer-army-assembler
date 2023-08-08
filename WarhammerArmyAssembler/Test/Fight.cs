@@ -356,12 +356,12 @@ namespace WarhammerArmyAssembler.Test
 
             Data.Console(Data.text, "\nEnd: ");
 
-            if (enemy.Wounds.Value + (enemy.Mount != null && enemy.Mount.IsNotSimpleMount() ? enemy.Mount.Wounds.Value : 0) <= 0)
+            if (IsThisUnitDeath(enemy))
             {
                 Data.Console(Data.text, $"{unit.Name} win");
                 return 1;
             }
-            else if (unit.Wounds.Value + (unit.Mount != null && unit.Mount.IsNotSimpleMount() ? unit.Mount.Wounds.Value : 0) <= 0)
+            else if (IsThisUnitDeath(unit))
             {
                 Data.Console(Data.text, $"{enemy.Name} win");
                 return 2;
@@ -371,6 +371,14 @@ namespace WarhammerArmyAssembler.Test
                 Data.Console(Data.text, $"{unit.Name} and {enemy.Name} failed to kill each other");
                 return 0;
             }
+        }
+
+        private static bool IsThisUnitDeath(Unit unit)
+        {
+            int nountWounds = unit.Mount != null && unit.Mount.IsNotSimpleMount() ?
+                unit.Mount.Wounds.Value : 0;
+
+            return unit.Wounds.Value + nountWounds <= 0;
         }
 
         private static bool RoundLostBy(List<Unit> units, Dictionary<int, int> roundWounds)
