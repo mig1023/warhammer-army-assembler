@@ -571,19 +571,25 @@ namespace WarhammerArmyAssembler.Test
 
             Unit terrorSource = (((enemyFriend != null) && !enemy.Terror) ? enemyFriend : enemy);
 
-            Data.Console(Data.text, $"\n\n{unit.Name} try to resist of terror by {terrorSource.Name} ");
+            Data.Console(Data.text, $"\n\n{unit.Name} " +
+                $"try to resist of terror by {terrorSource.Name} ");
 
             if (unit.Unbreakable)
+            {
                 Data.Console(Data.goodText, " --> autopassed (unbreakable)");
-
+            }
             else if (unit.ImmuneToPsychology || unit.Undead || unit.Stupidity)
+            {
                 Data.Console(Data.goodText, " --> autopassed (immune to psychology)");
-
+            }
             else if (unit.Frenzy)
+            {
                 Data.Console(Data.goodText, " --> autopassed (frenzy)");
-
+            }
             else if (Dice.Roll(unit, Dice.Types.LD, terrorSource, unit.Leadership.Value, 2))
+            {
                 Data.Console(Data.goodText, " --> passed");
+            }
             else
             {
                 unit.Wounds.Value = 0;
@@ -598,13 +604,19 @@ namespace WarhammerArmyAssembler.Test
         {
             int roundWounds = 0;
             int originalAttackNumber = attackNumber;
+            bool nobodyDeath = (unit.Wounds.Value > 0) && (enemy.Wounds.Value > 0);
+            bool steamImpactHit = impactHit && unit.SteamTank;
 
-            if ((unit.Wounds.Value > 0) && (enemy.Wounds.Value > 0) && !(impactHit && unit.SteamTank) && !afterSteamTankAttack && (attackNumber > 0)) 
+            if (nobodyDeath && !steamImpactHit && !afterSteamTankAttack && (attackNumber > 0)) 
                 Data.Console(Data.text, "\n");
 
             for (int i = 0; i < attackNumber; i++)
             {
-                int wounded = Attack(ref unit, ref enemy, round, out bool additionalAttack, (i >= originalAttackNumber), impactHit, impactLine);
+                bool thisIsAdditionalAttack = i >= originalAttackNumber;
+
+                int wounded = Attack(ref unit, ref enemy, round,
+                    out bool additionalAttack, thisIsAdditionalAttack, impactHit, impactLine);
+
                 roundWounds += wounded;
 
                 if ((enemy.Wounds.Value < wounded) && !enemy.WoundedWithKillingBlow)
@@ -617,12 +629,16 @@ namespace WarhammerArmyAssembler.Test
 
                 if (additionalAttack)
                 {
-                    Data.Console(Data.supplText, $" <-- {unit.Name} have additional attack by predatory fighter rule");
+                    Data.Console(Data.supplText, $" <-- {unit.Name} have additional " +
+                        $"attack by predatory fighter rule");
+
                     attackNumber += 1;
                 }
 
                 if ((wounded > 0) && BecameBloodFrenzy(ref unit))
+                {
                     attackNumber += 1;
+                }
             }
 
             enemy.Wounds.Value = Unit.ParamNormalization(enemy.Wounds.Value, onlyZeroCheck: true);
