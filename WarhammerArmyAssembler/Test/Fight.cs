@@ -654,10 +654,10 @@ namespace WarhammerArmyAssembler.Test
 
             for (int i = 0; i < roundWounds; i++)
             {
-                if (regeneration == 4)
-                    Data.Console(Data.text, $"\n{unit.Name} --> regeneration ");
-                else
-                    Data.Console(Data.text, $"\n{unit.Name} --> regeneration ({regeneration}+) ");
+                string regenarationRate = regeneration == 4 ?
+                    $"({regeneration}+) " : String.Empty;
+
+                Data.Console(Data.text, $"\n{unit.Name} --> regeneration ({regeneration}+) ");
 
                 if (Dice.Roll(unit, Dice.Types.REGENERATION, unit, regeneration))
                 {
@@ -665,7 +665,9 @@ namespace WarhammerArmyAssembler.Test
                     unit.Wounds.Value += 1;
                 }
                 else
+                {
                     Data.Console(Data.badText, " --> fail");
+                }
             }
         }
 
@@ -678,7 +680,6 @@ namespace WarhammerArmyAssembler.Test
                 string participant = u == allParticipants[0] ? String.Empty : " -->";
                 Data.Console(Data.supplText, $"{participant} {u.Name}");
             }
-                
         }
 
         public static bool CheckInitiative(Unit unit, Unit enemy)
