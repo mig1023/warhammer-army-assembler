@@ -467,7 +467,8 @@ namespace WarhammerArmyAssembler.Test
             return randomOpponent;
         }
 
-        private static int PrintAttack(Unit unit, Dictionary<int, int> death, Unit tUnit, Unit tEnemy, Unit tMount)
+        private static int PrintAttack(Unit unit, Dictionary<int, int> death,
+            Unit tUnit, Unit tEnemy, Unit tMount)
         {
             if (unit.Frenzy)
             {
@@ -478,7 +479,10 @@ namespace WarhammerArmyAssembler.Test
             int deathInRound = death[unit.ID];
 
             if (unit.IsSimpleMount())
-                deathInRound = ((tMount != null) && (unit.ID == tMount.ID) ? death[tUnit.ID] : death[tEnemy.ID]);
+            {
+                deathInRound = (tMount != null) && (unit.ID == tMount.ID) ?
+                    death[tUnit.ID] : death[tEnemy.ID];
+            }
 
             int attackNum = unit.Attacks.Value, attacks = 0;
 
@@ -494,13 +498,20 @@ namespace WarhammerArmyAssembler.Test
             if (unit.IsUnit())
             {
                 if (attackNum > 100)
+                {
                     for (int i = 0; i < unitFront; i++)
                         attacks += GetRandomAttack(attackNum, unit.Name, i);
+                }
                 else
+                {
                     attacks = attackNum * unitFront;
+                }
             }
             else
-                attacks = (attackNum > 100 ? GetRandomAttack(attackNum, unit.Name, 0) : attackNum);
+            {
+                attacks = attackNum > 100 ?
+                    GetRandomAttack(attackNum, unit.Name, 0) : attackNum;
+            }
 
             return attacks;
         }
@@ -519,7 +530,8 @@ namespace WarhammerArmyAssembler.Test
             if (current == 0)
                 Data.Console(Data.supplText, "\n");
 
-            Data.Console(Data.supplText, $"\n{unitName} attacks for {Unit.GetRandomAttacksLine(attackNum)}: {attacks}");
+            Data.Console(Data.supplText, $"\n{unitName} attacks for " +
+                $"{Unit.GetRandomAttacksLine(attackNum)}: {attacks}");
 
             return attacks;
         }
