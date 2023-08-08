@@ -414,10 +414,14 @@ namespace WarhammerArmyAssembler.Test
             Unit enemy = units[0];
             Unit enemyMount = units[1];
 
-            int unitFullSize = (unit.Size * unit.Wounds.Original) + (unitMount != null ? unitMount.Size * unitMount.Wounds.Original : 0);
-            int enemyFullSize = (enemy.Size * enemy.Wounds.Original) + (enemyMount != null ? enemyMount.Size * enemyMount.Wounds.Original : 0);
+            int unitFullSize = (unit.Size * unit.Wounds.Original) + 
+                (unitMount != null ? unitMount.Size * unitMount.Wounds.Original : 0);
 
-            string unitSide = ((unitMount != null) && (unit.Wounds.Value <= 0)) ? unitMount.Name : unit.Name;
+            int enemyFullSize = (enemy.Size * enemy.Wounds.Original) + 
+                (enemyMount != null ? enemyMount.Size * enemyMount.Wounds.Original : 0);
+
+            string unitSide = ((unitMount != null) && (unit.Wounds.Value <= 0)) ?
+                unitMount.Name : unit.Name;
 
             if (unitFullSize > enemyFullSize)
                 AddRoundBonus(unitSide, "outnumber", ref roundBonus, bonus: 1);
@@ -429,12 +433,15 @@ namespace WarhammerArmyAssembler.Test
                 AddRoundBonus(unitSide, "BSB", ref roundBonus, bonus: 1);
 
             if (unit.GetRank() > 1)
-                AddRoundBonus(unitSide, "ranks", ref roundBonus, bonus: Unit.ParamNormalization((unit.GetRank() - 1), onlyZeroCheck: true));
+            {
+                int bonus = Unit.ParamNormalization((unit.GetRank() - 1), onlyZeroCheck: true);
+                AddRoundBonus(unitSide, "ranks", ref roundBonus, bonus);
+            }
 
             if (!String.IsNullOrEmpty(unit.AddToCloseCombat))
             {
-                int addBonus = RandomParamParse(unit.AddToCloseCombat);
-                AddRoundBonus(unitSide, "special rules", ref roundBonus, bonus: addBonus);
+                int bonus = RandomParamParse(unit.AddToCloseCombat);
+                AddRoundBonus(unitSide, "special rules", ref roundBonus, bonus);
             }
 
             return roundBonus;
