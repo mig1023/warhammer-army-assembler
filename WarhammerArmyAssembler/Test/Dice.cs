@@ -76,7 +76,8 @@ namespace WarhammerArmyAssembler.Test
             return CheckReroll(unitRerolls, unit, diceType, dice);
         }
 
-        public static int GetRankBonus(Unit unit) => (!unit.StrengthInNumbers ? 0 : Unit.ParamNormalization((unit.GetRank() - 1), onlyZeroCheck: true));
+        public static int GetRankBonus(Unit unit) =>
+            !unit.StrengthInNumbers ? 0 : Unit.ParamNormalization((unit.GetRank() - 1), onlyZeroCheck: true);
 
         public static bool Roll(Unit unit, Types diceType, Unit enemy, int? conditionParam,
             int diceNum = 1, int round = 2, bool breakTest = false, bool hiddenDice = false, bool paramTest = false)
@@ -97,7 +98,8 @@ namespace WarhammerArmyAssembler.Test
                 ["Leadership"] = Types.LD,
             };
 
-            return Roll(unit, toDiceType[lineDiceType], enemy, conditionParam, out int _, diceNum, round, breakTest, hiddenDice, paramTest);
+            return Roll(unit, toDiceType[lineDiceType], enemy, conditionParam,
+                out int _, diceNum, round, breakTest, hiddenDice, paramTest);
         }
 
         public static bool Roll(Unit unit, Types diceType, Unit enemy, int? conditionParam, out int dice,
@@ -123,7 +125,9 @@ namespace WarhammerArmyAssembler.Test
                 int rankBonus = GetRankBonus(unit);
 
                 if (rankBonus <= 0)
+                {
                     Data.Console(Data.supplText, $"({condition} LD, ");
+                }
                 else
                 {
                     condition += rankBonus;
@@ -133,17 +137,20 @@ namespace WarhammerArmyAssembler.Test
                 }
             }
             else if (paramTest)
+            {
                 Data.Console(Data.supplText, $"({condition} {diceType.ToString()}, ");
+            }
             else
+            {
                 Data.Console(Data.supplText, $"({condition}+, ");
+            }
 
             int result = RollAll(diceType, unitTestPassed, diceNum, enemy: hisOpponent);
 
-            bool testPassed = TestPassedByDice(unit, enemy, result, condition, diceType, out string addResult, breakTest, paramTest);
+            bool testPassed = TestPassedByDice(unit, enemy, result, condition,
+                diceType, out string addResult, breakTest, paramTest);
 
             Data.Console(Data.supplText, $"{result}{addResult}");
-
-            if ((diceType == Types.AS) && (result == 1))
            
             if ((diceType == Types.WS) && !paramTest)
             {
@@ -164,21 +171,27 @@ namespace WarhammerArmyAssembler.Test
             }
 
             bool hateHitReroll = unit.Hate && (diceType == Types.WS);
-            bool canBeRerolled = !testPassed && (hateHitReroll || CanBeRerolled(diceType, unit, enemy, result));
+
+            bool canBeRerolled = !testPassed &&
+                (hateHitReroll || CanBeRerolled(diceType, unit, enemy, result));
+
             bool mustBeRerolled = testPassed && MustBeRerolled(diceType, unit, enemy, result);
 
             if ((diceType == Types.AS) && (condition > 6) && (condition < 10) && (result == 6))
             {
                 int supplCondition = condition - 3;
                 result = RollAll(diceType, unitTestPassed, 1, enemy: hisOpponent);
-                testPassed = TestPassedByDice(unit, enemy, result, supplCondition, diceType, out string addAddRoll, breakTest, paramTest);
+
+                testPassed = TestPassedByDice(unit, enemy, result, supplCondition,
+                    diceType, out string addAddRoll, breakTest, paramTest);
 
                 Data.Console(Data.supplText, $" --> {supplCondition}+, {result}{addAddRoll}");
             }
             else if (canBeRerolled || mustBeRerolled)
             {
                 result = RollAll(diceType, unitTestPassed, diceNum, enemy: hisOpponent);
-                testPassed = TestPassedByDice(unit, enemy, result, condition, diceType, out string addReroll, breakTest, paramTest);
+                testPassed = TestPassedByDice(unit, enemy, result,
+                    condition, diceType, out string addReroll, breakTest, paramTest);
 
                 Data.Console(Data.supplText, $", reroll --> {result}{addReroll}");
             }
