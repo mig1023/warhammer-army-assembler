@@ -957,9 +957,12 @@ namespace WarhammerArmyAssembler.Test
 
         private static bool KillingAttack(Unit unit, Unit enemy)
         {
-            bool killingBlow = (unit.HeroicKillingBlow || (unit.KillingBlow && !enemy.LargeBase)) && (Dice.lastDice == 6);
+            bool normalKillingBlowActual = unit.KillingBlow && !enemy.LargeBase;
+            bool killingBlowActual = unit.HeroicKillingBlow || normalKillingBlowActual;
+            bool killingBlow = killingBlowActual && (Dice.lastDice == 6);
 
-            bool extendedKillingBlow = (unit.ExtendedKillingBlow > 0) && !enemy.LargeBase && (Dice.lastDice >= unit.ExtendedKillingBlow);
+            bool extendedKillingBlow = (unit.ExtendedKillingBlow > 0) &&
+                !enemy.LargeBase && (Dice.lastDice >= unit.ExtendedKillingBlow);
 
             if ((killingBlow || extendedKillingBlow) && !enemy.NoKillingBlow && !attackIsPoisoned)
             {
@@ -970,8 +973,10 @@ namespace WarhammerArmyAssembler.Test
             }
 
             if ((enemy.Armour != null) && !enemy.Armour.Null && !unit.NoArmour)
+            {
                 Data.Console(Data.text, " --> AS ");
-
+            }
+                
             return false;
         }
 
@@ -986,16 +991,21 @@ namespace WarhammerArmyAssembler.Test
                 return true;
             }
             else if (unit.HitOn > 0)
+            {
                 chance = unit.HitOn;
-
+            }
             else if (enemy.OpponentHitOn > 0)
+            {
                 chance = enemy.OpponentHitOn;
-
+            }
             else if (unit.WeaponSkill.Value > enemy.WeaponSkill.Value)
+            {
                 chance = 3;
-
+            }
             else if ((unit.WeaponSkill.Value * 2) < enemy.WeaponSkill.Value)
+            {
                 chance = 5;
+            }
 
             return Dice.Roll(unit, Dice.Types.WS, enemy, chance, dice: out dice, round: round);
         }
@@ -1023,20 +1033,25 @@ namespace WarhammerArmyAssembler.Test
                 return true;
             }
             else if (unit.WoundOn > 0)
+            {
                 chance = unit.WoundOn;
-
+            }
             else if (strength == (enemy.Toughness.Value + 1))
+            {
                 chance = 3;
-
+            }
             else if (strength > (enemy.Toughness.Value + 1))
+            {
                 chance = 2;
-
+            }
             else if ((strength + 1) == enemy.Toughness.Value)
+            {
                 chance = 5;
-
+            }
             else if ((strength + 2) == enemy.Toughness.Value)
+            {
                 chance = 6;
-
+            }
             else if ((strength + 2) < enemy.Toughness.Value)
             {
                 Data.Console(Data.supplText, "(impossible)");
@@ -1051,7 +1066,8 @@ namespace WarhammerArmyAssembler.Test
             if ((enemy.Armour == null) || (enemy.Armour.Null) || unit.NoArmour)
                 return true;
 
-            int chance = Unit.ParamNormalization((unit.Strength.Value + unit.ArmourPiercing) - 3, onlyZeroCheck: true);
+            int chanceValue = (unit.Strength.Value + unit.ArmourPiercing) - 3;
+            int chance = Unit.ParamNormalization(chanceValue, onlyZeroCheck: true);
 
             chance += enemy.Armour.Value;
 
@@ -1101,16 +1117,25 @@ namespace WarhammerArmyAssembler.Test
             return wardFail;
         }
 
-        private static Unit UnitFromParticipants(List<Unit> participants, Unit unit) => participants.Where(x => x.ID == unit.ID).FirstOrDefault();
+        private static Unit UnitFromParticipants(List<Unit> participants, Unit unit) =>
+            participants.Where(x => x.ID == unit.ID).FirstOrDefault();
 
         private static void UnitRoundShow(Unit unit, bool firstLine)
         {
-            string uLine = unit.Wounds.Value > 0 ? $"{unit.Name}: {unit.Wounds.Value}W" : String.Empty;
-            bool monstrousMount = (unit.Mount != null) && (unit.Mount.Wounds.Value > 0) && unit.Mount.IsNotSimpleMount();
-            string uMount = monstrousMount ? $"{unit.Mount.Name}: {unit.Mount.Wounds.Value}W" : String.Empty;
-            string bothLine = (!String.IsNullOrEmpty(uLine) && !String.IsNullOrEmpty(uMount) ? " + " : String.Empty);
+            string uLine = unit.Wounds.Value > 0 ?
+                $"{unit.Name}: {unit.Wounds.Value}W" : String.Empty;
 
-            Data.Console(Data.supplText, $"{uLine}{bothLine}{uMount}{(firstLine ? ", " : String.Empty)}");
+            bool monstrousMount = (unit.Mount != null) &&
+                (unit.Mount.Wounds.Value > 0) && unit.Mount.IsNotSimpleMount();
+
+            string uMount = monstrousMount ?
+                $"{unit.Mount.Name}: {unit.Mount.Wounds.Value}W" : String.Empty;
+
+            string bothLine = !String.IsNullOrEmpty(uLine) &&
+                !String.IsNullOrEmpty(uMount) ? " + " : String.Empty;
+
+            Data.Console(Data.supplText, $"{uLine}{bothLine}{uMount}" +
+                $"{(firstLine ? ", " : String.Empty)}");
         }
     }
 }
