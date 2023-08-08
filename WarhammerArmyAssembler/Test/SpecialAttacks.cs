@@ -215,22 +215,26 @@ namespace WarhammerArmyAssembler.Test
                 return steamImpactHit;
             }
             else if ((unitMount == null) || String.IsNullOrEmpty(unitMount.ImpactHit))
+            {
                 impactHit = unit.ImpactHit;
-
+            }
             else if (String.IsNullOrEmpty(unit.ImpactHit))
+            {
                 impactHit = unitMount.ImpactHit;
-
+            }
             else
             {
                 int currentImpact = 0, currentAdd = 0;
 
                 foreach (Unit u in new List<Unit> { unit, unitMount })
                 {
-                    Fight.RandomParamValues(u.ImpactHit, out int diceNumber, out int diceSize, out int addSomething);
+                    Fight.RandomParamValues(u.ImpactHit,
+                        out int diceNumber, out int diceSize, out int addSomething);
 
                     int diceMax = diceNumber * diceSize;
+                    bool diceMaxExactly = (diceMax == currentImpact) && (addSomething > currentAdd);
 
-                    if ((diceMax > currentImpact) || ((diceMax == currentImpact) && (addSomething > currentAdd)))
+                    if ((diceMax > currentImpact) || diceMaxExactly)
                     {
                         currentImpact = diceMax;
                         currentAdd = addSomething;
