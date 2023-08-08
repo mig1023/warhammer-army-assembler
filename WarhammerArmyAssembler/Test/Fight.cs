@@ -688,30 +688,41 @@ namespace WarhammerArmyAssembler.Test
             bool enemyIsEnemy = (enemy.TestType == Unit.TestTypeTypes.Enemy);
 
             if ((round == 1) && unitIsUnit && enemyIsEnemy && (!enemy.HitFirst))
+            {
                 return true;
-
+            }
             else if ((round == 1) && !unitIsUnit && !enemyIsEnemy && (!unit.HitFirst))
+            {
                 return true;
-
+            }
             else if (unit.HitFirst && !enemy.HitFirst)
+            {
                 return true;
-
+            }
             else if (!unit.HitFirst && enemy.HitFirst)
+            {
                 return false;
-
+            }
             else if (unit.HitLast && !enemy.HitLast)
+            {
                 return false;
-
+            }
             else if (!unit.HitLast && enemy.HitLast)
+            {
                 return true;
-
+            }
             else if (unit.Initiative.Value > enemy.Initiative.Value)
+            {
                 return true;
-
+            }
             else if (unit.Initiative.Value < enemy.Initiative.Value)
+            {
                 return false;
+            }
             else
+            {
                 return Dice.Roll(unit, Dice.Types.I, enemy, 4, hiddenDice: true);
+            }
         }
 
         private static bool BreakTestFail(List<Unit> units, ref Dictionary<int, int> woundInRound)
@@ -727,7 +738,9 @@ namespace WarhammerArmyAssembler.Test
             int temoraryLeadership = unit.Leadership.Value;
 
             if (unit.Stubborn)
+            {
                 Data.Console(Data.text, "stubborn --> ");
+            }
             else
             {
                 temoraryLeadership -= woundInRound[unit.ID] + (unitFriend != null ? woundInRound[unitFriend.ID] : 0);
@@ -736,21 +749,28 @@ namespace WarhammerArmyAssembler.Test
 
             temoraryLeadership = Unit.ParamNormalization(temoraryLeadership);
 
-            bool enemyFearOrTerror = ((enemy.Wounds.Value > 0) && enemy.IsFearOrTerror());
-            bool enemyMountFearOrTerror = ((enemyFriend != null) && (enemyFriend.Wounds.Value > 0) ? enemyFriend.IsFearOrTerror() : false);
+            bool enemyFearOrTerror = (enemy.Wounds.Value > 0) && enemy.IsFearOrTerror();
+            bool enemyMountFearOrTerror = (enemyFriend != null) && (enemyFriend.Wounds.Value > 0) ?
+                enemyFriend.IsFearOrTerror() : false;
 
-            bool unitFearOrTerror = ((unit.Wounds.Value > 0) && unit.IsFearOrTerror());
-            bool unitMountFearOrTerror = ((unitFriend != null) && (unitFriend.Wounds.Value > 0) ? unitFriend.IsFearOrTerror() : false);
+            bool unitFearOrTerror = (unit.Wounds.Value > 0) && unit.IsFearOrTerror();
+            bool unitMountFearOrTerror = (unitFriend != null) && (unitFriend.Wounds.Value > 0) ?
+                unitFriend.IsFearOrTerror() : false;
 
-            bool thereAreMoreOfThem = (
-                (unit.Wounds.Original * unit.Size) + (unitFriend != null ? (unitFriend.Wounds.Original * unitFriend.Size) : 0) <
-                (enemy.Wounds.Original * enemy.Size) + (enemyFriend != null ? (enemyFriend.Wounds.Original * enemyFriend.Size) : 0));
+            int unitAreMoreOfThem = (unit.Wounds.Original * unit.Size) +
+                (unitFriend != null ? (unitFriend.Wounds.Original * unitFriend.Size) : 0);
+            int enemyAreMoreOfThem = (enemy.Wounds.Original * enemy.Size) +
+                (enemyFriend != null ? (enemyFriend.Wounds.Original * enemyFriend.Size) : 0);
 
-            bool itNotFear = (unit.ImmuneToPsychology || unit.Stupidity || unit.Undead || unitFearOrTerror || unitMountFearOrTerror);
+            bool thereAreMoreOfThem = unitAreMoreOfThem < enemyAreMoreOfThem;
+
+            bool itNotFear = (unit.ImmuneToPsychology || unit.Stupidity ||
+                unit.Undead || unitFearOrTerror || unitMountFearOrTerror);
 
             if (unit.Unbreakable)
+            {
                 Data.Console(Data.text, "unbreakable");
-
+            }
             else if (thereAreMoreOfThem && (enemyFearOrTerror || enemyMountFearOrTerror) && !itNotFear)
             {
                 string enemyName = enemyFearOrTerror ? enemy.Name : enemyFriend.Name;
@@ -760,7 +780,9 @@ namespace WarhammerArmyAssembler.Test
             else
             {
                 if (Dice.Roll(unit, Dice.Types.LD, enemy, temoraryLeadership, out int dice, diceNum: 2, breakTest: true))
+                {
                     Data.Console(Data.goodText, " --> passed");
+                }
                 else
                 {
                     Data.Console(Data.badText, " --> fail");
@@ -780,7 +802,9 @@ namespace WarhammerArmyAssembler.Test
                         return false;
                     }
                     else
+                    {
                         return true;
+                    }
                 }
             }
 
