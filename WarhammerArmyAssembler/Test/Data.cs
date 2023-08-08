@@ -32,7 +32,8 @@ namespace WarhammerArmyAssembler.Test
 
             if (unit.MountOn > 0)
             {
-                int size = Army.Data.Units[unit.ArmyID].Chariot > 0 ? Army.Data.Units[unit.ArmyID].Chariot : Data.unit.Size;
+                int size = Army.Data.Units[unit.ArmyID].Chariot > 0 ?
+                    Army.Data.Units[unit.ArmyID].Chariot : Data.unit.Size;
 
                 Data.unitMount = Army.Data.Units[unit.MountOn]
                     .Clone()

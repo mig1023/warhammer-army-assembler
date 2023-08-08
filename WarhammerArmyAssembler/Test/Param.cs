@@ -52,7 +52,8 @@ namespace WarhammerArmyAssembler.Test
                 if (unit.IsUnit() && (context == ContextType.Round))
                     testsCount = unit.GetFront();
 
-                bool canBeApplied = (param.Repeat == RepeatType.Normal) || ((param.Repeat == RepeatType.Once) && !param.UsedAlready);
+                bool canBeApplied = (param.Repeat == RepeatType.Normal) ||
+                    ((param.Repeat == RepeatType.Once) && !param.UsedAlready);
 
                 if (param.MountsOnly && (unit.Type != Unit.UnitType.Mount))
                     canBeApplied = false;
@@ -71,7 +72,7 @@ namespace WarhammerArmyAssembler.Test
         private static void ParamTest(ref Unit unit, string param, Unit opponent, TestType test,
             ContextType context, int testCount)
         {
-            bool roundFormat = ((context == ContextType.Hit) || (context == ContextType.Wound));
+            bool roundFormat = (context == ContextType.Hit) || (context == ContextType.Wound);
 
             string newLine = testCount >= 1 ? "\n" : "\n\n";
             string startLine = roundFormat ? " --> " : newLine;
@@ -81,8 +82,11 @@ namespace WarhammerArmyAssembler.Test
             int diceNum = ((param == "Leadership") ? 2 : 1);
 
             if (Dice.Roll(unit, param, opponent, paramProfile.Value, diceNum, paramTest: true))
+            {
                 Data.Console(Data.goodText, " --> passed");
+            }
             else
+            {
                 switch (test)
                 {
                     case TestType.Pass:
@@ -101,6 +105,7 @@ namespace WarhammerArmyAssembler.Test
                         unit.WoundedWithKillingBlow = true;
                         break;
                 }
+            }
         }
 
         private static string ContextAndRepeat(Param type)
