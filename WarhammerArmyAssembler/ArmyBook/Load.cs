@@ -13,7 +13,8 @@ namespace WarhammerArmyAssembler.ArmyBook
 {
     class Load
     {
-        public static int GetNextIndex() => Data.MaxIDindex++;
+        public static int GetNextIndex() =>
+            Data.MaxIDindex++;
 
         private static void LoadUnitsFromXml(XmlDocument xmlFile, string path,
             ref Dictionary<int, Unit> dict, string currentArmyLimit = "")
@@ -96,17 +97,26 @@ namespace WarhammerArmyAssembler.ArmyBook
                     continue;
 
                 Unit enemy = LoadUnit(0, unit, xmlFile, target, enemyCommonXmlOption);
-                enemy.Armybook = xmlFile.SelectSingleNode("ArmyBook/Introduction/Info/Army").InnerText;
+
+                enemy.Armybook = xmlFile
+                    .SelectSingleNode("ArmyBook/Introduction/Info/Army")
+                    .InnerText;
 
                 if (unit["Mount"] != null)
                 {
-                    foreach (XmlNode mount in xmlFile.SelectNodes("ArmyBook/Content/Mounts/Mount"))
+                    XmlNodeList mounts = xmlFile.SelectNodes("ArmyBook/Content/Mounts/Mount");
+
+                    foreach (XmlNode mount in mounts)
+                    {
                         if (unit["Mount"].InnerText == mount["Name"].InnerText)
                             enemy.Mount = LoadUnit(0, mount, xmlFile, null, enemyCommonXmlOption);
+                    }
                 }
 
                 if (size > 0)
+                {
                     enemy.Size = size;
+                }
 
                 return enemy;
             }
@@ -385,9 +395,13 @@ namespace WarhammerArmyAssembler.ArmyBook
                     SetProperty(newUnit, additionalParam, name);
 
                 if (Constants.CommonXmlSpecialRules != null)
+                {
                     foreach (XmlNode specialRule in additionalParam.SelectNodes("*"))
+                    {
                         if (Constants.CommonXmlSpecialRules.ContainsKey(specialRule.Name))
                             newUnit.Options.Add(AddCommonXmlSpecialRules(GetNextIndex(), specialRule.Name));
+                    }
+                }
 
                 if (additionalParam["MagicItems"] != null)
                 {
@@ -426,8 +440,13 @@ namespace WarhammerArmyAssembler.ArmyBook
             }
 
             foreach (XmlNode xmlAmmunition in xmlUnit.SelectNodes("Equipments/*"))
-                newUnit.Options.Add(LoadOption(GetNextIndex(), xmlAmmunition, xml,
-                    category: Option.OptionCategory.Equipment, commonXmlOption: enemyCommonXmlOption));
+            {
+                Option option = LoadOption(GetNextIndex(), xmlAmmunition, xml,
+                    category: Option.OptionCategory.Equipment,
+                    commonXmlOption: enemyCommonXmlOption);
+
+                newUnit.Options.Add(option);
+            }
 
             foreach (XmlNode xmlOption in xmlUnit.SelectNodes("Options/*"))
             {
@@ -442,13 +461,18 @@ namespace WarhammerArmyAssembler.ArmyBook
                 }
             }
 
-            newUnit.SizableType = !newUnit.IsHero() && (newUnit.Type != UnitType.Mount) && (newUnit.MaxSize != newUnit.MinSize);
-            newUnit.VisibleType = newUnit.SizableType ? System.Windows.Visibility.Visible : System.Windows.Visibility.Hidden;
+            newUnit.SizableType = !newUnit.IsHero() &&
+                (newUnit.Type != UnitType.Mount) && (newUnit.MaxSize != newUnit.MinSize);
+
+            newUnit.VisibleType = newUnit.SizableType ?
+                System.Windows.Visibility.Visible : System.Windows.Visibility.Hidden;
 
             newUnit.ArmyColor = (SolidColorBrush)Data.FrontColor;
             newUnit.TooltipColor = (SolidColorBrush)Data.TooltipColor;
 
-            newUnit.Image = TryFindImage(xmlUnit, newUnit, path: String.Empty, out bool anotherEdition);
+            newUnit.Image = TryFindImage(xmlUnit, newUnit,
+                path: String.Empty, out bool anotherEdition);
+
             newUnit.ImageFromAnotherEdition = anotherEdition;
 
             return newUnit;
@@ -485,7 +509,11 @@ namespace WarhammerArmyAssembler.ArmyBook
 
         private static string ImagePathByName(XmlNode xmlUnit, string imagePath = "")
         {
-            string name = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(StringParse(xmlUnit["Name"]).ToLower());
+            string name = CultureInfo.CurrentCulture
+                .TextInfo
+                .ToTitleCase(StringParse(xmlUnit["Name"])
+                .ToLower());
+
             string pathByName = FullImagePath(name.Replace(" ", String.Empty), imagePath);
 
             return File.Exists(pathByName) ? pathByName : String.Empty;
@@ -493,7 +521,9 @@ namespace WarhammerArmyAssembler.ArmyBook
 
         private static string FullImagePath(string image, string imagePath = "")
         {
-            string path = String.IsNullOrEmpty(imagePath) ? Army.Data.UnitsImagesDirectory : imagePath;
+            string path = String.IsNullOrEmpty(imagePath) ?
+                Army.Data.UnitsImagesDirectory : imagePath;
+
             return $"{path}{image}.jpg";
         }
 
@@ -521,9 +551,16 @@ namespace WarhammerArmyAssembler.ArmyBook
             ref Unit newUnit, Dictionary<string, string> commonXmlOption = null)
         {
             foreach (string option in commonXmlOption.Keys)
-                if (xmlUnitRules[option] != null)
-                    newUnit.Options.Add(LoadOption(GetNextIndex(), Services.CreateRuleOnlyOption(xml, option),
-                        xml, commonXmlOption: commonXmlOption));
+            {
+                if (xmlUnitRules[option] == null)
+                    continue;
+
+                Option newOption = LoadOption(GetNextIndex(),
+                    Services.CreateRuleOnlyOption(xml, option),
+                    xml, commonXmlOption: commonXmlOption);
+
+                newUnit.Options.Add(newOption);
+            }
         }
 
         private static void AddToOption(XmlDocument xmlDocument, ref XmlNode xmlNode,
@@ -536,9 +573,18 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             if (!String.IsNullOrEmpty(attributes))
             {
-                foreach (string attributeLine in attributes.Split(',').Select(x => x.Trim()))
+                List<string> allAttributes = attributes
+                    .Split(',')
+                    .Select(x => x.Trim())
+                    .ToList();
+
+                foreach (string attributeLine in allAttributes)
                 {
-                    List<string> attribute = attributeLine.Split(':').Select(x => x.Trim()).ToList();
+                    List<string> attribute = attributeLine
+                        .Split(':')
+                        .Select(x => x.Trim())
+                        .ToList();
+
                     option.SetAttribute(attribute[0], attribute[1]);
                 }
             }
@@ -636,16 +682,32 @@ namespace WarhammerArmyAssembler.ArmyBook
             bool typesIncluded = false;
 
             if (xmlNode.Attributes["Attr"] != null)
-                attributes += ";" + String.Join(";", xmlNode.Attributes["Attr"].InnerText.Split(',').Select(x => x.Trim()));
+            {
+                List<string> attributesLines = xmlNode.Attributes["Attr"].InnerText
+                    .Split(',')
+                    .Select(x => x.Trim())
+                    .ToList();
 
-            foreach (string attributeLine in attributes.Split(';').Select(x => x.Trim('\n').Trim()))
+                attributes += ";" + String.Join(";", attributesLines);
+            }
+
+            List<string> attributeLines = attributes
+                .Split(';')
+                .Select(x => x.Trim('\n'))
+                .ToList();
+
+            foreach (string attributeLine in attributeLines)
             {
                 if (String.IsNullOrEmpty(attributeLine))
                     continue;
 
                 if (attributeLine.Contains(":"))
                 {
-                    List<string> attribute = attributeLine.Split(':').Select(x => x.Trim()).ToList();
+                    List<string> attribute = attributeLine
+                        .Split(':')
+                        .Select(x => x.Trim())
+                        .ToList();
+
                     AddToOption(xmlDocument, ref xmlNode, attribute[0], attribute[1]);
 
                     if (attribute[0] == "Type")
@@ -737,7 +799,9 @@ namespace WarhammerArmyAssembler.ArmyBook
             }
 
             if (category != Option.OptionCategory.Nope)
+            {
                 newOption.Category = category;
+            }
 
             if (xmlNode["Dependency"] != null)
             {
