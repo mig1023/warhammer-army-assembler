@@ -40,7 +40,8 @@ namespace WarhammerArmyAssembler.Interface
         public static bool armybookDetailIsOpen = false;
         public static bool unitTestIsOpen = false;
 
-        public static Thickness Thick(object element, double? left = null, double? top = null, double? right = null, double? bottom = null)
+        public static Thickness Thick(object element, double? left = null,
+            double? top = null, double? right = null, double? bottom = null)
         {
             FrameworkElement control = element as FrameworkElement;
 
@@ -52,16 +53,21 @@ namespace WarhammerArmyAssembler.Interface
             return new Thickness(newLeft, newTop, newRight, newBottom);
         }
 
-        public static void ArmyGridDrop(int id, DataGridRow container = null, double points = 0, int unit = 0)
+        public static void ArmyGridDrop(int id, DataGridRow container = null,
+            double points = 0, int unit = 0)
         {
             if (ArmyBook.Data.Artefact.ContainsKey(id))
+            {
                 ArmyGridDropArtefact(id, container);
-
+            }
             else if (ArmyBook.Data.Mounts.ContainsKey(id))
+            {
                 ArmyGridDropMount(id, points, unit);
-
+            }
             else
+            {
                 ArmyGridDropUnit(id);
+            }
 
             Army.Mod.ChangeGeneralIfNeed();
         }
@@ -97,8 +103,9 @@ namespace WarhammerArmyAssembler.Interface
                 Option currentItem = unit.GetCurrentRunicItemByName(artefact.Name);
 
                 if ((currentItem != null) && (currentItem.Runic >= versions.Count))
+                {
                     return;
-
+                }
                 else if (currentItem != null)
                 {
                     prevRunicItem = currentItem;
@@ -140,10 +147,13 @@ namespace WarhammerArmyAssembler.Interface
                     unit.Options.Remove(prevRunicItem);
 
                 if (ArmyBook.Data.Artefact[id].TypeUnitIncrese && (unit.Type == Unit.UnitType.Core))
+                {
                     unit.Type = Unit.UnitType.Special;
-
+                }
                 else if (ArmyBook.Data.Artefact[id].TypeUnitIncrese && (unit.Type == Unit.UnitType.Special))
+                {
                     unit.Type = Unit.UnitType.Rare;
+                }
 
                 unit.AddAmmunition(id);
                 Reload.ReloadArmyData();
@@ -151,8 +161,9 @@ namespace WarhammerArmyAssembler.Interface
 
                 bool multiple = artefact.Multiple || artefact.Virtue || (artefact.Runic > 0);
                 bool honours = artefact.Honours && (artefact.Points > 0);
+                bool powers = artefact.Type != Option.OptionType.Powers;
 
-                if (!multiple && !honours && (artefact.Type != Option.OptionType.Powers) && String.IsNullOrEmpty(artefact.RandomGroup))
+                if (!multiple && !honours && powers && String.IsNullOrEmpty(artefact.RandomGroup))
                     Mod.SetArtefactAlreadyUsed(id, true);
 
                 Army.Mod.ChangeGeneralIfNeed();
@@ -163,11 +174,16 @@ namespace WarhammerArmyAssembler.Interface
         {
             Unit unit = ArmyBook.Data.Units[id];
 
-            bool slotExists = Army.Params.GetArmyUnitsNumber(unit.Type) < Army.Params.GetArmyMaxUnitsNumber(unit.Type);
+            int unitsNumber = Army.Params.GetArmyUnitsNumber(unit.Type);
+            int maxUnitsNumber = Army.Params.GetArmyMaxUnitsNumber(unit.Type);
+            bool slotExists = unitsNumber < maxUnitsNumber;
             bool coreUnit = unit.Type == Unit.UnitType.Core;
 
-            int allHeroes = Army.Params.GetArmyUnitsNumber(Unit.UnitType.Lord) + Army.Params.GetArmyUnitsNumber(Unit.UnitType.Hero);
-            bool lordInHeroSlot = (unit.Type == Unit.UnitType.Hero) && (allHeroes >= Army.Params.GetArmyMaxUnitsNumber(Unit.UnitType.Hero));
+            int lordNumber = Army.Params.GetArmyUnitsNumber(Unit.UnitType.Lord);
+            int heroNumber = Army.Params.GetArmyUnitsNumber(Unit.UnitType.Hero);
+            int allHeroes = lordNumber + heroNumber;
+            bool allSlotFail = allHeroes >= Army.Params.GetArmyMaxUnitsNumber(Unit.UnitType.Hero);
+            bool lordInHeroSlot = (unit.Type == Unit.UnitType.Hero) && allSlotFail;
 
             if (unit.Character && Army.Checks.IsUnitExistInArmyByArmyBookID(id))
             {
@@ -251,13 +267,17 @@ namespace WarhammerArmyAssembler.Interface
         public static void CheckAndExportTo(bool toPDF = false, bool fullRules = false)
         {
             if (!Army.Checks.IsArmyValid())
+            {
                 MessageBox.Show(Army.Checks.ArmyProblems());
-
+            }
             else if (toPDF)
+            {
                 Export.PDF.SaveArmy(fullRules);
-
+            }
             else
+            {
                 Export.Text.SaveArmy();
+            }
 
             Move(MovingType.ToMain, menu: true);
         }
