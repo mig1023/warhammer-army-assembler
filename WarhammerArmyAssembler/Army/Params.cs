@@ -174,10 +174,17 @@ namespace WarhammerArmyAssembler.Army
 
         public static Unit ReloadArmyUnit(int id, Unit unit)
         {
-            Unit newUnit = unit.Clone().GetOptionRules(hasMods: out _);
+            Unit newUnit = unit
+                .Clone()
+                .GetOptionRules(hasMods: out _);
 
-            newUnit.RulesView = newUnit.GetSpecialRulesLine(withCommandData: true);
-            newUnit.PointsView = newUnit.GetUnitPoints().ToString();
+            newUnit.RulesView = newUnit
+                .GetSpecialRulesLine(withCommandData: true);
+
+            newUnit.PointsView = newUnit
+                .GetUnitPoints()
+                .ToString();
+
             newUnit.ID = id;
 
             return newUnit;
@@ -193,7 +200,8 @@ namespace WarhammerArmyAssembler.Army
             new Unit() { Name = "Dogs of War" },
         };
 
-        public static Unit GetArmyGeneral() => Data.Units.Values.Where(x => x.CurrentGeneral).FirstOrDefault();
+        public static Unit GetArmyGeneral() =>
+            Data.Units.Values.Where(x => x.CurrentGeneral).FirstOrDefault();
 
         public static int GetUnitsNumberByBase(BasesTypes type)
         {
@@ -210,7 +218,9 @@ namespace WarhammerArmyAssembler.Army
                 bool chariotBase = (type == BasesTypes.chariot) && chariot;
                 bool largeBase = (type == BasesTypes.large) && entry.LargeBase;
                 bool cavalryBase = (type == BasesTypes.cavalry) && cavalry && !chariot;
-                bool normalBase = (type == BasesTypes.normal) && !entry.LargeBase && !cavalry && !chariot;
+
+                bool normalBase = (type == BasesTypes.normal) &&
+                    !entry.LargeBase && !cavalry && !chariot;
 
                 if (largeBase || cavalryBase || normalBase || chariotBase)
                     number += entry.Size;
@@ -221,25 +231,32 @@ namespace WarhammerArmyAssembler.Army
 
         public static string GetUnitsListByType(Unit.UnitType type)
         {
-            List<string> units = new List<string>();
+            List<string> lines = new List<string>();
 
-            foreach (Unit entry in Data.Units.Values.Where(x => x.Type == type).GroupBy(x => x.Name).Select(x => x.First()))
+            List<Unit> units = Data.Units.Values
+                .Where(x => x.Type == type)
+                .GroupBy(x => x.Name)
+                .Select(x => x.First())
+                .ToList();
+
+            foreach (Unit entry in units)
             {
                 int count = Data.Units.Values.Count(x => x.Name == entry.Name);
 
                 if (count > 1)
-                    units.Add($"{entry.Name} x {count}");
+                    lines.Add($"{entry.Name} x {count}");
                 else
-                    units.Add(entry.Name);
+                    lines.Add(entry.Name);
             }
-                
 
-            return (units.Count == 0 ? "empty yet" : String.Join("\n", units));
+            return lines.Count == 0 ? "empty yet" : String.Join("\n", lines);
         }
 
         public static double GetVirtuePoints(int id, bool nextPricePreview = false)
         {
-            int count = Data.Units.Values.Sum(x => x.Options.Where(y => y.Name == ArmyBook.Data.Artefact[id].Name).Count());
+            int count = Data.Units.Values
+                .Sum(x => x.Options.Where(y => y.Name == ArmyBook.Data.Artefact[id].Name)
+                .Count());
 
             if (count == 0)
                 return ArmyBook.Data.Artefact[id].VirtueOriginalPoints;
