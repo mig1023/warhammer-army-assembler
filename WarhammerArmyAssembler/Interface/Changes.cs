@@ -407,14 +407,22 @@ namespace WarhammerArmyAssembler.Interface
                 move.Completed += secondAnimation;
 
             if (mainCanvasMoving)
+            {
                 main.mainPlaceCanvas.BeginAnimation(FrameworkElement.MarginProperty, move);
+            }
             else
+            {
                 main.mainGrid.BeginAnimation(FrameworkElement.MarginProperty, move);
+            }
 
             if (menu && (moveTo == MovingType.ToMainMenu))
+            {
                 mainMenuIsOpen = true;
+            }
             else if (menu)
+            {
                 mainMenuIsOpen = false;
+            }
         }
 
         private static BitmapImage GetImage(string imageName, string armyName)
@@ -549,7 +557,9 @@ namespace WarhammerArmyAssembler.Interface
 
         public static void RandomArmy()
         {
-            string randomArmy = allArmies.ElementAt(WarhammerArmyAssembler.Test.Data.rand.Next(0, allArmies.Count)).Key;
+            string randomArmy = allArmies
+                .ElementAt(WarhammerArmyAssembler.Test.Data.rand.Next(0, allArmies.Count))
+                .Key;
 
             SetArmySelected(allArmies[randomArmy]);
             PreviewArmy(randomArmy);
@@ -608,7 +618,8 @@ namespace WarhammerArmyAssembler.Interface
                     Content = new Border
                     {
                         Padding = new Thickness(5),
-                        Child = TooltipBlock(head, armyEdition, description, illustration, released, authors, lineColor),
+                        Child = TooltipBlock(head, armyEdition, description,
+                            illustration, released, authors, lineColor),
                     }
                 };
 
@@ -621,7 +632,10 @@ namespace WarhammerArmyAssembler.Interface
 
                     if (!reload)
                     {
-                        ColumnDefinition column = new ColumnDefinition { Width = new GridLength(5, GridUnitType.Pixel) };
+                        ColumnDefinition column = new ColumnDefinition
+                        {
+                            Width = new GridLength(5, GridUnitType.Pixel)
+                        };
                         changeArmybook.armybookList.ColumnDefinitions.Add(column);
                     }
                 }
@@ -660,8 +674,9 @@ namespace WarhammerArmyAssembler.Interface
             foreach (KeyValuePair<Image, string> image in allImages)
             {
                 if (String.IsNullOrEmpty(armySource) || (armySource == image.Value))
+                {
                     image.Key.Source = new BitmapImage(new Uri(image.Value));
-
+                }
                 else
                 {
                     FormatConvertedBitmap bwImage = new FormatConvertedBitmap();
@@ -728,9 +743,14 @@ namespace WarhammerArmyAssembler.Interface
 
             footer.RowDefinitions.Add(new RowDefinition());
 
-            footer.Children.Add(FooterElement($"Released: {released}", HorizontalAlignment.Left, 0, lineColor));
-            footer.Children.Add(FooterElement($"Written by {authors}", HorizontalAlignment.Center, 1, lineColor));
-            footer.Children.Add(FooterElement("© Games Workshop", HorizontalAlignment.Right, 2, lineColor));
+            footer.Children.Add(FooterElement($"Released: {released}",
+                HorizontalAlignment.Left, 0, lineColor));
+
+            footer.Children.Add(FooterElement($"Written by {authors}",
+                HorizontalAlignment.Center, 1, lineColor));
+
+            footer.Children.Add(FooterElement("© Games Workshop",
+                HorizontalAlignment.Right, 2, lineColor));
 
             return footer;
         }
@@ -879,7 +899,10 @@ namespace WarhammerArmyAssembler.Interface
             };
 
             foreach (FrameworkElement element in elements)
-                element.Margin = Thick(main.enemyForTestText, top: marginTop + main.specialRulesEnemyTest.ActualHeight - 20);
+            {
+                element.Margin = Thick(main.enemyForTestText,
+                    top: marginTop + main.specialRulesEnemyTest.ActualHeight - 20);
+            }
 
             double unitTestHeight = (double)main.enemyForTest.GetValue(Canvas.TopProperty) +
                 main.enemyForTest.ActualHeight + 50;
