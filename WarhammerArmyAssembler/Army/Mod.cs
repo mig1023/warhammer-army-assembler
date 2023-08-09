@@ -74,7 +74,12 @@ namespace WarhammerArmyAssembler.Army
                     removeUnitAlso = entry.Key;
             }
 
-            foreach (Option option in Data.Units[id].Options.Where(x => x.IsMagicItem()))
+            List<Option> magicOptions = Data.Units[id]
+                .Options
+                .Where(x => x.IsMagicItem())
+                .ToList();
+
+            foreach (Option option in magicOptions)
                 Interface.Mod.SetArtefactAlreadyUsed(option.ID, false);
 
             if (removeUnitAlso != null)
@@ -113,7 +118,8 @@ namespace WarhammerArmyAssembler.Army
                         mustBeGeneral = true;
                 }
 
-                bool newChallenger = !unit.NotALeader && !notALeader && (unitLeadership > maxLeadership);
+                bool newChallenger = !unit.NotALeader &&
+                    !notALeader && (unitLeadership > maxLeadership);
 
                 if (mustBeGeneral)
                 {

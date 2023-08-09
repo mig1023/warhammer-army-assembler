@@ -8,7 +8,8 @@ namespace WarhammerArmyAssembler.Army
     {
         public enum BasesTypes { normal, large, cavalry, chariot };
 
-        public static double GetArmyPoints() => Data.Units.Values.Sum(x => x.GetUnitPoints());
+        public static double GetArmyPoints() =>
+            Data.Units.Values.Sum(x => x.GetUnitPoints());
 
         public static int GetArmySize()
         {
@@ -27,8 +28,12 @@ namespace WarhammerArmyAssembler.Army
                         size += option.Countable.Value;
                 }
 
-                if (!((entry.Type == Unit.UnitType.Mount) && (entry.Wounds.Value <= 1)))
+                bool isMount = entry.Type == Unit.UnitType.Mount;
+
+                if (!(isMount && (entry.Wounds.Value <= 1)))
+                {
                     size += entry.Size * modelsInPack;
+                }
             }
 
             return size;
@@ -44,7 +49,9 @@ namespace WarhammerArmyAssembler.Army
             foreach (Unit entry in Data.Units.Values)
             {
                 if ((entry.Type != Unit.UnitType.Core) || !entry.NoCoreSlot)
+                {
                     units[entry.Type] += 1;
+                }
 
                 if (entry.Slots != null)
                 {
@@ -56,26 +63,30 @@ namespace WarhammerArmyAssembler.Army
             return units[type];
         }
 
-        public static int GetArmyMaxPoints() => Data.MaxPoints;
+        public static int GetArmyMaxPoints() =>
+            Data.MaxPoints;
 
         public static int GetArmyMaxUnitsNumber(Unit.UnitType type)
         {
+            int baseSize = ArmyBook.Constants.BaseArmySize;
+            int maxSize = Data.MaxPoints;
+
             switch (type)
             {
                 case Unit.UnitType.Lord:
-                    return (Data.MaxPoints < ArmyBook.Constants.BaseArmySize ? 0 : 1 + ((Data.MaxPoints - 2000) / 1000));
+                    return maxSize < baseSize ? 0 : 1 + ((maxSize - 2000) / 1000);
 
                 case Unit.UnitType.Hero:
-                    return (Data.MaxPoints < ArmyBook.Constants.BaseArmySize ? 3 : (Data.MaxPoints / 1000) * 2);
+                    return maxSize < baseSize ? 3 : (maxSize / 1000) * 2;
 
                 case Unit.UnitType.Core:
-                    return (Data.MaxPoints < ArmyBook.Constants.BaseArmySize ? 2 : 1 + (Data.MaxPoints / 1000));
+                    return maxSize < baseSize ? 2 : 1 + (maxSize / 1000);
 
                 case Unit.UnitType.Special:
-                    return (Data.MaxPoints < ArmyBook.Constants.BaseArmySize ? 3 : 2 + (Data.MaxPoints / 1000));
+                    return maxSize < baseSize ? 3 : 2 + (maxSize / 1000);
 
                 case Unit.UnitType.Rare:
-                    return (Data.MaxPoints < ArmyBook.Constants.BaseArmySize ? 1 : (Data.MaxPoints / 1000));
+                    return maxSize < baseSize ? 1 : (maxSize / 1000);
 
                 default:
                     return 0;
@@ -112,18 +123,25 @@ namespace WarhammerArmyAssembler.Army
                 int wizard = entry.Wizard;
 
                 foreach (Option option in entry.Options)
+                {
                     if ((option.Countable != null) && (option.Countable.ExportToWizardLevel))
                         wizard += option.GetWizardLevelBonus();
+                }
 
                 if (wizard > 2)
+                {
                     dispell += 2;
-
+                }
                 else if (wizard > 0)
+                {
                     dispell += 1;
+                }
 
                 foreach (Option option in entry.Options)
+                {
                     if (option.IsActual())
                         dispell += option.AddToDispell;
+                }
             }
 
             return dispell;
@@ -145,8 +163,10 @@ namespace WarhammerArmyAssembler.Army
                     (Data.Units[entry.Value.MountOn].WeaponTeam);
 
                 if (multiWounds)
-                    categories[(int)entry.Value.Type].Items.Add(
-                        ReloadArmyUnit(entry.Value.MountOn, Data.Units[entry.Value.MountOn]));
+                {
+                    Unit unit = ReloadArmyUnit(entry.Value.MountOn, Data.Units[entry.Value.MountOn]);
+                    categories[(int)entry.Value.Type].Items.Add(unit);
+                }
             }
 
             return categories;
