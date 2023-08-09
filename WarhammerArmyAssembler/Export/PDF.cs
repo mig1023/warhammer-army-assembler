@@ -58,8 +58,15 @@ namespace WarhammerArmyAssembler.Export
                     }
 
                     foreach (string param in linesForEachUnit)
-                        foreach (string line in Interface.Services.WordSplit(param, partLength: 210).Where(x => !String.IsNullOrEmpty(x)))
+                    {
+                        List<string> lines = Interface.Services
+                            .WordSplit(param, partLength: 210)
+                            .Where(x => !String.IsNullOrEmpty(x))
+                            .ToList();
+
+                        foreach (string line in lines)
                             AddText(line, fontSize: 6, lineHeight: 8);
+                    }
 
                     AddText(lineHeight: 16);
                 }
@@ -71,7 +78,6 @@ namespace WarhammerArmyAssembler.Export
             double size = Army.Params.GetArmySize();
             double cast = Army.Params.GetArmyCast();
             double dispell = Army.Params.GetArmyDispell();
-
 
             AddText($"Points: {points} / Models: {size} / Cast: {cast} / Dispell: {dispell}",
                 fontSize: 12, lineHeight: 18, leftColumn: true);
@@ -97,23 +103,26 @@ namespace WarhammerArmyAssembler.Export
                     maxLength = unitSizeLen;
             }
 
-            if (maxLength <= 3)
-                return 20;
-            else
-                return 20 + (maxLength * 4);
+            return 20 + (maxLength <= 3 ? 0 : maxLength * 4);
         }
 
-        static private void AddText(string text = "", float? x = null, float? y = null, int aligment = 0,
-            float fontSize = 14, float lineHeight = 13, bool leftColumn = false, bool newLine = true)
+        static private void AddText(string text = "", float? x = null,
+            float? y = null, int aligment = 0, float fontSize = 14,
+            float lineHeight = 13, bool leftColumn = false, bool newLine = true)
         {
-            BaseFont bf = BaseFont.CreateFont("FONT.TTF", Encoding.GetEncoding(1251).BodyName, BaseFont.NOT_EMBEDDED);
+            string fontBodyName = Encoding.GetEncoding(1251).BodyName;
+            BaseFont bf = BaseFont.CreateFont("FONT.TTF", fontBodyName, BaseFont.NOT_EMBEDDED);
             cb.SetFontAndSize(bf, fontSize);
 
             float yPos = y ?? MARGIN_TOP + currentY;
             float xPos = x ?? MARGIN_LEFT;
 
             cb.BeginText();
-            cb.ShowTextAligned(aligment, text, xPos + (leftColumn ? 0 : unitSizeWidth), (document.PageSize.Height - yPos), 0);
+
+            float xPosFixed = xPos + (leftColumn ? 0 : unitSizeWidth);
+            float yPosFixed = document.PageSize.Height - yPos;
+            cb.ShowTextAligned(aligment, text, xPosFixed, yPosFixed, 0);
+
             cb.EndText();
 
             if (newLine)
