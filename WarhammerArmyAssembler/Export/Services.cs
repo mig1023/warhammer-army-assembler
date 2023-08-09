@@ -20,14 +20,26 @@ namespace WarhammerArmyAssembler.Export
             return fileName;
         }
 
-        public static string GetArmyName() =>
-            String.IsNullOrWhiteSpace(Army.Data.RosterName) ? "warhammer fantasy battles" : Army.Data.RosterName;
+        public static string GetArmyName()
+        {
+            if (String.IsNullOrWhiteSpace(Army.Data.RosterName))
+                return "warhammer fantasy battles";
+            else
+                return Army.Data.RosterName;
+        }
 
         private static string NewFileName(int newIndex, string fileType, out string newFileName)
         {
-            string name = ARMYLIST_DIR + '\\' + Army.Data.Name.Replace(" ", "_") + '_' + Army.Data.MaxPoints.ToString();
-            name += (String.IsNullOrWhiteSpace(Army.Data.RosterName) ? String.Empty : '_' + Army.Data.RosterName.Replace(" ", "_"));
-            newFileName = name + (newIndex > 0 ? '_' + newIndex.ToString() : String.Empty) + '.' + fileType;
+            string name = ARMYLIST_DIR + '\\' +
+                Army.Data.Name.Replace(" ", "_") +
+                '_' +
+                Army.Data.MaxPoints.ToString();
+
+            name += (String.IsNullOrWhiteSpace(Army.Data.RosterName) ?
+                String.Empty : '_' + Army.Data.RosterName.Replace(" ", "_"));
+
+            string index = newIndex > 0 ? '_' + newIndex.ToString() : String.Empty;
+            newFileName = name + index + '.' + fileType;
 
             return newFileName;
         }
@@ -46,8 +58,13 @@ namespace WarhammerArmyAssembler.Export
             string unitSize = unit.Size.ToString();
 
             foreach (Option option in unit.Options)
-                if ((option.Countable != null) && (option.Countable.ExportToUnitSize) && (option.Countable.Value > 0))
+            {
+                bool exportSize = option.Countable.ExportToUnitSize;
+                bool isValued = option.Countable.Value > 0;
+
+                if ((option.Countable != null) && exportSize && isValued)
                     unitSize += $"+{option.Countable.Value}";
+            }
 
             return (unit.IsHeroOrHisMount() ? String.Empty : unitSize + ' ');
         }

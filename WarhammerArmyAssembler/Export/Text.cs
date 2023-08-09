@@ -18,7 +18,12 @@ namespace WarhammerArmyAssembler.Export
             List<Unit> armyByCategories = Army.Params.GetArmyUnitsByCategories();
 
             foreach (Unit unitType in armyByCategories)
-                foreach (Unit unit in unitType.Items.Where(x => x.Type != Unit.UnitType.Mount))
+            {
+                List<Unit> units = unitType.Items
+                    .Where(x => x.Type != Unit.UnitType.Mount)
+                    .ToList();
+
+                foreach (Unit unit in units)
                 {
                     string equipmentLine = unit.GetEquipmentLine();
                     string sizeUnit = Services.UnitSizeIfNeed(unit);
@@ -28,6 +33,7 @@ namespace WarhammerArmyAssembler.Export
 
                     Add(fileName, $"{sizeUnit}{nameUnit}{pointsUnit}{equipment}{equipmentLine}");
                 }
+            }
 
             Add(fileName);
 
