@@ -6,7 +6,8 @@ namespace WarhammerArmyAssembler.Army
 {
     class Mod
     {
-        public static int GetNextIndex() => Data.MaxIDindex += 1;
+        public static int GetNextIndex() =>
+            Data.MaxIDindex += 1;
 
         public static int AddUnitByID(int id)
         {
@@ -16,7 +17,10 @@ namespace WarhammerArmyAssembler.Army
 
             Data.Units.Add(unit.ArmyID, unit);
 
-            Unit mount = ArmyBook.Data.Mounts.Values.Where(x => x.Name == unit.MountInit).FirstOrDefault();
+            Unit mount = ArmyBook.Data.Mounts
+                .Values
+                .Where(x => x.Name == unit.MountInit)
+                .FirstOrDefault();
 
             if (mount == null)
                 return unit.ArmyID;
@@ -43,15 +47,25 @@ namespace WarhammerArmyAssembler.Army
             Data.Units.Add(newID, mount);
         }
 
-        public static void DeleteAllUnits() => Data.Units.Clear();
+        public static void DeleteAllUnits() =>
+            Data.Units.Clear();
 
         public static void DeleteUnitByID(int id)
         {
             int? removeUnitAlso = null;
 
-            foreach (KeyValuePair<int, Unit> entry in Army.Data.Units.Where(x => x.Value.MountOn == id))
+            Dictionary<int, Unit> units = Data.Units
+                .Where(x => x.Value.MountOn == id)
+                .ToDictionary(x => x.Key, x => x.Value);
+
+            foreach (KeyValuePair<int, Unit> entry in units)
             {
-                foreach (Option option in entry.Value.Options.Where(x => x.Name == Data.Units[id].Name))
+                List<Option> options = entry.Value
+                    .Options
+                    .Where(x => x.Name == Data.Units[id].Name)
+                    .ToList();
+
+                foreach (Option option in options)
                     option.Realised = false;
 
                 entry.Value.MountOn = 0;
