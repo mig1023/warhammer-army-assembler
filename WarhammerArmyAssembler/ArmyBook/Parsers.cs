@@ -182,7 +182,9 @@ namespace WarhammerArmyAssembler.ArmyBook
                         allString.Add(rule);
                 }
                 else
+                {
                     allString.Add(xmlSpecialRule.InnerText);
+                }
             }
 
             return allString.ToArray();
@@ -196,11 +198,17 @@ namespace WarhammerArmyAssembler.ArmyBook
             bool success = Enum.TryParse(xmlNode.Name, out UnitType value);
 
             if (success && (value == UnitType.Crew))
+            {
                 return UnitType.Mount;
+            }
             else if (success)
+            {
                 return value;
+            }
             else
+            {
                 return UnitType.Core;
+            }
         }
 
         public static MagicItemsTypes MagicItemsTypeParse(XmlNode xmlNode)
@@ -252,32 +260,39 @@ namespace WarhammerArmyAssembler.ArmyBook
             }
         }
 
-
         private static object PropertyByType(object element, XmlNode value,
             string paramName, bool byAttr = false)
         {
             PropertyInfo param = element.GetType().GetProperty(paramName);
 
             if (param.PropertyType == typeof(Profile))
+            {
                 return ProfileParse(value);
-
+            }
             else if (byAttr)
+            {
                 return null;
-
+            }
             else if (param.PropertyType == typeof(bool))
+            {
                 return BoolParse(value);
-
+            }
             else if (param.PropertyType == typeof(int?))
+            {
                 return IntNullableParse(value);
-
+            }
             else if (param.PropertyType == typeof(int))
+            {
                 return IntParse(value);
-
+            }
             else if (param.PropertyType == typeof(string))
+            {
                 return StringParse(value);
-
+            }
             else
+            {
                 return null;
+            }
         }
 
         private static XmlNode XmlValueSemiParser(XmlNode value, string name)
@@ -304,14 +319,20 @@ namespace WarhammerArmyAssembler.ArmyBook
             bool notByAttr = String.IsNullOrEmpty(byAttr);
 
             if (notByAttr)
+            {
                 xmlNode = XmlValueSemiParser(value, name);
+            }
             else
+            {
                 xmlNode = (XmlNode)value.Attributes[byAttr];
+            }
 
             object propetyValue = PropertyByType(element, xmlNode, name, !notByAttr);
 
             if (propetyValue != null)
+            {
                 element.GetType().GetProperty(name).SetValue(element, propetyValue);
+            }
         }
     }
 }
