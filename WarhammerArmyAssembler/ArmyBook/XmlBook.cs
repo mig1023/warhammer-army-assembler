@@ -19,7 +19,9 @@ namespace WarhammerArmyAssembler.ArmyBook
                     HomologousSeries[head].Add(file);
             }
             else
+            {
                 HomologousSeries.Add(head, new List<string> { file });
+            }
         }
 
         public static List<string> GetHomologue(string army, string unit, string homologue, bool isHero)
@@ -58,22 +60,31 @@ namespace WarhammerArmyAssembler.ArmyBook
             foreach (string xmlName in allXmlFiles)
             {
                 if (nextName)
+                {
                     return xmlName;
+                }
 
                 if ((newArmyList == xmlName) && prev && String.IsNullOrEmpty(prevFile))
+                {
                     return lastFile;
-
+                }
                 else if ((newArmyList == xmlName) && prev)
+                {
                     return prevFile;
+                }
 
                 if ((newArmyList == xmlName) && next && (indexName >= allXmlFiles.Count))
+                {
                     return firstFile;
-
+                }
                 else if ((newArmyList == xmlName) && next)
+                {
                     nextName = true;
-
+                }
                 else if (newArmyList == xmlName)
+                {
                     return xmlName;
+                }
 
                 prevFile = xmlName;
 
@@ -91,10 +102,12 @@ namespace WarhammerArmyAssembler.ArmyBook
 
         public static string FindXmlFileByName(string directory, string name)
         {
-            return Directory
+            string fileName = Directory
                 .GetFiles(directory, name, SearchOption.AllDirectories)
                 .ToList()
                 .FirstOrDefault();
+
+            return fileName;
         }
 
         private static SortedDictionary<string, string> FindAllXmlFilesInDirectories(string programDirectory)
@@ -107,7 +120,10 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             try
             {
-                foreach (string file in Directory.GetFiles(programDirectory, "*ed.xml", SearchOption.AllDirectories))
+                List<string> filesList = Directory.GetFiles(programDirectory,
+                    "*ed.xml", SearchOption.AllDirectories).ToList();
+
+                foreach (string file in filesList)
                 {
                     XmlDocument xmlFile = new XmlDocument();
 

@@ -74,9 +74,13 @@ namespace WarhammerArmyAssembler.ArmyBook
                 return String.Empty;
 
             foreach (string ifOnly in onlyline.Split(',').Select(x => x.Trim()))
+            {
                 foreach (string subline in sublines.Split(',').Select(x => x.Trim()))
+                {
                     if (!String.IsNullOrEmpty(subline) && (ifOnly == subline))
                         return ifOnly;
+                }
+            }
 
             return String.Empty;
         }
