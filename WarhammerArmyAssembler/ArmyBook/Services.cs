@@ -94,8 +94,29 @@ namespace WarhammerArmyAssembler.ArmyBook
 
         public static string CamelNameSplit(string name)
         {
-            List<string> multiWords = Regex.Split(name, @"(?<!^)(?=[A-Z])").Select(x => x.ToLower()).ToList();
-            return multiWords.Count < 2 ? name : CaptalLetter(String.Join(" ", multiWords));
+            List<string> multiWords = Regex
+                .Split(name, @"(?<!^)(?=[A-Z])")
+                .Select(x => x.ToLower())
+                .ToList();
+
+            if (multiWords.Count < 2)
+            {
+                return name;
+            }
+            else if (multiWords[1] == "of")
+            {
+                for (int i = 0; i < multiWords.Count; i++)
+                {
+                    if (i != 1)
+                        multiWords[i] = CaptalLetter(multiWords[i]);
+                }
+            }
+            else
+            {
+                multiWords[0] = CaptalLetter(multiWords[0]);
+            }
+
+            return String.Join(" ", multiWords);
         }
     }
 }
