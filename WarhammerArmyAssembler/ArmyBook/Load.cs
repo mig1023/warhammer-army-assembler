@@ -676,7 +676,7 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             if (EmptyNameSpecific(name) && !String.IsNullOrEmpty(xmlNode.InnerText))
                 name = xmlNode.InnerText;
-
+             
             AddToOption(xmlDocument, ref xmlNode, "Name", name);
 
             bool typesIncluded = false;
@@ -694,6 +694,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             List<string> attributeLines = attributes
                 .Split(';')
                 .Select(x => x.Trim('\n'))
+                .Where(x => !String.IsNullOrWhiteSpace(x))
                 .ToList();
 
             foreach (string attributeLine in attributeLines)
@@ -715,7 +716,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 }
                 else
                 {
-                    AddToOption(xmlDocument, ref xmlNode, attributeLine);
+                    AddToOption(xmlDocument, ref xmlNode, attributeLine.Trim());
                 }
             }
 
