@@ -681,16 +681,6 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             bool typesIncluded = false;
 
-            if (xmlNode.Attributes["Attr"] != null)
-            {
-                List<string> attributesLines = xmlNode.Attributes["Attr"].InnerText
-                    .Split(',')
-                    .Select(x => x.Trim())
-                    .ToList();
-
-                attributes += ";" + String.Join(";", attributesLines);
-            }
-
             List<string> attributeLines = attributes
                 .Split(';')
                 .Select(x => x.Trim('\n'))
