@@ -118,5 +118,29 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             return String.Join(" ", multiWords);
         }
+
+        public static string FindNameInAttributes(string name, string attributesLine)
+        {
+            List<string> attributes = attributesLine
+                .Split(';')
+                .Select(x => x.Trim())
+                .ToList();
+
+            foreach (string attributeLine in attributes)
+            {
+                if (!attributeLine.Contains(":"))
+                    continue;
+
+                List<string> attribute = attributeLine
+                    .Split(':')
+                    .Select(x => x.Trim())
+                    .ToList();
+
+                if (attribute[0] == name)
+                    return attribute[1];
+            }
+
+            return String.Empty;
+        }
     }
 }
