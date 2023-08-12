@@ -71,8 +71,12 @@ namespace WarhammerArmyAssembler.Interface
             {
                 foreach (string rule in unit.GetSpecialRules())
                 {
-                    margins = CheckColumn(margins, ref lastColumnMaxWidth, sizeCollapse: NotEnoughColumnForThis(rule, 15, margins));
-                    margins[1] += AddLabel((rule == "FC" ? "Full command" : rule), margins, 15, ref lastColumnMaxWidth, fixPadding: 5);
+                    margins = CheckColumn(margins, ref lastColumnMaxWidth,
+                        sizeCollapse: NotEnoughColumnForThis(rule, 15, margins));
+
+                    string caption = rule == "FC" ? "Full command" : rule;
+
+                    margins[1] += AddLabel(caption, margins, 15, ref lastColumnMaxWidth, fixPadding: 5);
                 }
 
                 notFirstColumn = true;
@@ -80,9 +84,11 @@ namespace WarhammerArmyAssembler.Interface
             else
             {
                 bool magicItemsPointsExists = unit.Options.Where(x => x.MagicItemsPoints).Count() > 0;
-                bool magicPowersDontExists = !unit.ExistsMagicPowers() && (head == ArmyBook.Data.MagicPowersStyle);
+                bool headIsPowers = head == ArmyBook.Data.MagicPowersStyle;
+                bool headIsMagic = head == ArmyBook.Data.MagicItemsStyle;
+                bool magicPowersDontExists = !unit.ExistsMagicPowers() && headIsPowers;
 
-                if ((!unit.ExistsMagicItems() && (head == ArmyBook.Data.MagicItemsStyle) && !magicItemsPointsExists) || magicPowersDontExists)
+                if ((!unit.ExistsMagicItems() && headIsMagic && !magicItemsPointsExists) || magicPowersDontExists)
                 {
                     margins = CheckColumn(margins, ref lastColumnMaxWidth);
                     margins[1] += AddLabel("empty yet", margins, 15, ref lastColumnMaxWidth, fixPadding: 5);
@@ -92,7 +98,7 @@ namespace WarhammerArmyAssembler.Interface
                 else
                     foreach (Option option in unit.Options)
                     {
-                        if (head == "OPTION" || head == "COMMAND" || head == ArmyBook.Data.MagicItemsStyle || head == ArmyBook.Data.MagicPowersStyle)
+                        if (head == "OPTION" || head == "COMMAND" || headIsMagic || headIsPowers)
                         {
                             if (head == "OPTION" && (!option.IsOption() || option.Command || option.MagicItemsPoints))
                                 continue;
