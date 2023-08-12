@@ -8,15 +8,22 @@ namespace WarhammerArmyAssembler.Interface
         {
             Unit unit = ArmyBook.Data.Units[id];
             double points = unit.StaticPoints + (unit.Size * unit.Points);
+            int maxPoints = Army.Params.GetArmyMaxPoints();
+            double armyPoint = Army.Params.GetArmyPoints();
 
-            return points <= (Army.Params.GetArmyMaxPoints() - Army.Params.GetArmyPoints());
+            return points <= (maxPoints - armyPoint);
         }
 
         public static bool EnoughUnitPointsForAddOption(double points) =>
             points <= (Army.Params.GetArmyMaxPoints() - Army.Params.GetArmyPoints());
 
-        public static bool EnoughPointsForAddArtefact(int id, double pointsPenalty) => 
-            (ArmyBook.Data.Artefact[id].Points - pointsPenalty) <= (Army.Params.GetArmyMaxPoints() - Army.Params.GetArmyPoints());
+        public static bool EnoughPointsForAddArtefact(int id, double pointsPenalty)
+        {
+            double artefactPoints = ArmyBook.Data.Artefact[id].Points - pointsPenalty;
+            double armyPoints = Army.Params.GetArmyMaxPoints() - Army.Params.GetArmyPoints();
+
+            return artefactPoints <= armyPoints;
+        }
 
         public static bool EnoughUnitPointsForAddArtefact(int artefactID, Unit unit, bool addOption = true, double pointsPenalty = 0)
         {
