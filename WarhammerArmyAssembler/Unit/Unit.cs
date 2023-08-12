@@ -1233,8 +1233,12 @@ namespace WarhammerArmyAssembler
                     Test.Param.Describe(option.ParamTests, ref rules);
             }
 
-            foreach (Option option in Options.Where(x => (x.SpecialRuleDescription.Length > 0) && (!x.IsOption() || x.Realised)))
-                foreach (string specialRule in option.SpecialRuleDescription)
+            List<Option> specialRules = Options
+                .Where(x => (x.SpecialRuleDescription.Length > 0) && (!x.IsOption() || x.Realised))
+                .ToList();
+
+            foreach (Option rule in specialRules) 
+                foreach (string specialRule in rule.SpecialRuleDescription)
                     rules.Add(specialRule);
 
             return rules;
@@ -1316,7 +1320,8 @@ namespace WarhammerArmyAssembler
         {
             for(int i = 0; i < Options.Count; i++)
             {
-                bool incompatible = !IsOptionEnabled(Options[i], GetMountOn(), GetMountTypeAlreadyFixed(), postCheck: true);
+                string mount = GetMountTypeAlreadyFixed();
+                bool incompatible = !IsOptionEnabled(Options[i], GetMountOn(), mount, postCheck: true);
                 bool notCompitableMore = IsNotCompitableMore(Options[i]);
                 bool isCountable = (Options[i].Countable != null);
 
@@ -1404,8 +1409,14 @@ namespace WarhammerArmyAssembler
             return String.Empty;
         }
 
-        public bool IsOptionRealised(string optionName) =>
-            Options.Where(x => (x.Name.ToUpper() == optionName.ToUpper()) && x.IsActual()).FirstOrDefault() != null;
+        public bool IsOptionRealised(string optionName)
+        {
+            Option option = Options
+                 .Where(x => (x.Name.ToUpper() == optionName.ToUpper()) && x.IsActual())
+                 .FirstOrDefault();
+                
+            return option != null;
+        }
  
         public bool IsAnotherOptionRealised(string[] optionNames, bool defaultResult)
         {
@@ -1417,7 +1428,8 @@ namespace WarhammerArmyAssembler
 
         private bool IsAnyInGroupUsed(string groupName, Option currentOption)
         {
-            IEnumerable<Option> options = Options.Where(x => (x.DependencyGroup == groupName) && x.IsActual());
+            IEnumerable<Option> options = Options
+                .Where(x => (x.DependencyGroup == groupName) && x.IsActual());
 
             if (currentOption == null)
                 return options.FirstOrDefault() != null;
@@ -1437,9 +1449,14 @@ namespace WarhammerArmyAssembler
             
         public bool IsAnotherOptionIsIncompatible(Option option, bool postCheck = false)
         {
-            bool yesWhenNecessaryNo = !IsAnotherOptionRealised(option.Dependencies, defaultResult: true);
-            bool noWhenNecessaryYes = IsAnotherOptionRealised(option.InverseDependencies, defaultResult: false);
-            bool groopAlreadyUsed = postCheck ? false : IsGroupAlreadyUsed(option.DependencyGroup, option, postCheck);
+            bool yesWhenNecessaryNo =
+                !IsAnotherOptionRealised(option.Dependencies, defaultResult: true);
+
+            bool noWhenNecessaryYes =
+                IsAnotherOptionRealised(option.InverseDependencies, defaultResult: false);
+
+            bool groopAlreadyUsed = postCheck ?
+                false : IsGroupAlreadyUsed(option.DependencyGroup, option, postCheck);
 
             return (yesWhenNecessaryNo || noWhenNecessaryYes || groopAlreadyUsed);
         }
