@@ -113,19 +113,27 @@ namespace WarhammerArmyAssembler.Interface
             double possible = cast * Services.DICE_SIZE;
 
             if (possible < difficulty)
+            {
                 return "no";
+            }
             else
             {
                 int spellsMin = Floor((cast * Services.DICE_HALF), difficulty);
                 int spellsMax = Floor(possible, difficulty);
 
                 if (spellsMax > cast)
+                {
                     spellsMax = cast;
+                }
 
                 if ((spellsMax > spellsMin) && (spellsMin > 0))
+                {
                     return $"~{spellsMin}-{spellsMax}";
+                }
                 else
+                {
                     return $"~{spellsMax}";
+                }
             }
         }
 
