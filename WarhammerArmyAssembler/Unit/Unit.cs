@@ -206,12 +206,14 @@ namespace WarhammerArmyAssembler
                     int value = (option.Countable.Value - option.Countable.Min + 1);
                     points += option.Points * (value > 0 ? value : 0);
                 }
-
                 else if (option.Countable != null)
+                {
                     points += option.Points * option.Countable.Value;
-
+                }
                 else if (!option.IsOption() || (option.IsOption() && option.Realised && !option.IsSlannOption()))
+                {
                     points += option.Points * (option.PerModel ? Size : 1);
+                }
             }
 
             bool firstSlannOptionAlreadyIsFree = false;
@@ -231,14 +233,31 @@ namespace WarhammerArmyAssembler
         {
             if (option == null)
             {
-                Option change = Options.Where(x => (!x.IsOption() || (x.IsOption() && x.Realised)) &&
-                    !String.IsNullOrEmpty(x.Group)).FirstOrDefault();
+                Option change = Options
+                    .Where(x => IsGroupOfRealisedOption(x))
+                    .FirstOrDefault();
 
                 return change?.Group ?? Group;
             }
             else
             {
                 return option.Group;
+            }
+        }
+
+        private bool IsGroupOfRealisedOption(Option option)
+        {
+            if (option.IsOption() && !option.Realised)
+            {
+                return false;
+            }
+            else if (String.IsNullOrEmpty(option.Group))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
             }
         }
 

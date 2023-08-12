@@ -104,9 +104,13 @@ namespace WarhammerArmyAssembler
             if (!IncompatibleRulesList.ContainsKey(name))
                 return false;
 
-            List<string> rulesList = IncompatibleRulesList[name].Split(',').Select(x => x.Trim()).ToList();
+            List<string> rules = IncompatibleRulesList[name]
+                .Split(',')
+                .Select(x => x.Trim())
+                .Where(x => unit.RuleFromAnyOption(x, out string _, out int _))
+                .ToList();
 
-            return rulesList.Where(x => unit.RuleFromAnyOption(x, out string _, out int _)).Count() > 0;
+            return rules.Count() > 0;
         }
     }
 }
