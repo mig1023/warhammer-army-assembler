@@ -1105,10 +1105,10 @@ namespace WarhammerArmyAssembler
                         out string lineOptionValue, out int intOptionValue);
 
                     anyIsTrue = fromParamValue || anyIsTrue;
-                    bool impactHits = ((int)property > 0) || option.ImpactHitByFront > 0;
+                    bool impactHits = option.ImpactHitByFront > 0;
                     bool lineOption = !String.IsNullOrEmpty(lineOptionValue);
 
-                    if ((name == "ImpactHitByFront") && impactHits)
+                    if ((name == "ImpactHitByFront") && (((int)property > 0) || impactHits))
                     {
                         intParamValue = GetFront();
                         anyIsTrue = true;
