@@ -45,7 +45,9 @@ namespace WarhammerArmyAssembler.Interface
 
                 unit.InterfaceColor = ArmyBook.Data.FrontColor;
 
-                int category = unit.DogsOfWar ? ArmyBook.Constants.DogsOfWarCategory : (int)unit.Type;
+                int category = unit.DogsOfWar ?
+                    ArmyBook.Constants.DogsOfWarCategory : (int)unit.Type;
+
                 categories[category].Items.Add(unit);
             }
 
@@ -58,7 +60,11 @@ namespace WarhammerArmyAssembler.Interface
 
             List<string> artefactsTypes = new List<string>();
 
-            foreach (Option entry in ArmyBook.Data.Artefact.Values.Where(x => !artefactsTypes.Contains(x.ArtefactGroup)))
+            List<Option> allArtefacts = ArmyBook.Data.Artefact.Values
+                .Where(x => !artefactsTypes.Contains(x.ArtefactGroup))
+                .ToList();
+
+            foreach (Option entry in allArtefacts)
                 artefactsTypes.Add(entry.ArtefactGroup);
 
             string lastRandomGroup = String.Empty;
@@ -127,9 +133,13 @@ namespace WarhammerArmyAssembler.Interface
             List<Unit> categories = Army.Params.GetArmyUnitsByCategories();
 
             foreach (Unit unitType in categories)
+            {
                 foreach (Unit unit in unitType.Items)
+                {
                     Changes.ArmyInInterface.Add(unit);
-
+                }
+            }
+                
             Changes.main.ArmyGrid.ItemsSource = Changes.ArmyInInterface;
 
             int lord = UnitsNumber(Unit.UnitType.Lord);
@@ -161,8 +171,10 @@ namespace WarhammerArmyAssembler.Interface
             Changes.main.armyDispell.Content = $"Dispell: {Army.Params.GetArmyDispell()}";
         }
 
-        private static int UnitsNumber(Unit.UnitType type) => Army.Params.GetArmyUnitsNumber(type);
-        private static int MaxUnits(Unit.UnitType type) => Army.Params.GetArmyMaxUnitsNumber(type);
+        private static int UnitsNumber(Unit.UnitType type) =>
+            Army.Params.GetArmyUnitsNumber(type);
+        private static int MaxUnits(Unit.UnitType type) =>
+            Army.Params.GetArmyMaxUnitsNumber(type);
 
         public static void LoadArmySize(int points, string armyName)
         {
