@@ -446,9 +446,10 @@ namespace WarhammerArmyAssembler.Interface
             return (height * captionLines.Length) + bottomPadding + fixPadding;
         }
 
-        private static double AddButtonPart(string caption, double[] margins, double actualPrevPartWidth,
-            string id, Brush background, double? partWidth = null, bool enabled = true, bool countable = false,
-            bool withoutBorder = false, bool disabledBorder = false)
+        private static double AddButtonPart(string caption, double[] margins,
+            double actualPrevPartWidth, string id, Brush background, double? partWidth = null,
+            bool enabled = true, bool countable = false, bool withoutBorder = false,
+            bool disabledBorder = false)
         {
             Label newPart = new Label
             {
@@ -467,6 +468,8 @@ namespace WarhammerArmyAssembler.Interface
             else if (!countable && enabled)
                 newPart.MouseDown += AddOption_Click;
 
+            double leftMargin = Math.Ceiling(margins[0] + 2 + actualPrevPartWidth);
+
             if ((!String.IsNullOrEmpty(caption) || disabledBorder) && !withoutBorder)
             {
                 Border border = new Border
@@ -476,14 +479,15 @@ namespace WarhammerArmyAssembler.Interface
                     Background = background,
                     Child = newPart,
                 };
-                border.Margin = Changes.Thick(newPart, Math.Ceiling(margins[0] + 2 + actualPrevPartWidth), margins[1] + 20);
+
+                border.Margin = Changes.Thick(newPart, leftMargin, margins[1] + 20);
                 border.Width = partWidth ?? (countable ? 51 : 77);
 
                 Changes.main.unitDetail.Children.Add(border);
             }
             else
             {
-                newPart.Margin = Changes.Thick(newPart, Math.Ceiling(margins[0] + 2 + actualPrevPartWidth), margins[1] + 21);
+                newPart.Margin = Changes.Thick(newPart, leftMargin, margins[1] + 21);
                 Changes.main.unitDetail.Children.Add(newPart);
             }
             
@@ -492,11 +496,15 @@ namespace WarhammerArmyAssembler.Interface
             return newPart.ActualWidth;
         }
 
-        private static void AddButtonAllParts(string captionFirst, string captionSecond, Brush backgroundFirst, 
-            Brush backgroundSecond, double[] margins, string id, bool enabled = true)
+        private static void AddButtonAllParts(string captionFirst, string captionSecond,
+            Brush backgroundFirst, Brush backgroundSecond, double[] margins, string id,
+            bool enabled = true)
         {
-            double actualWidth = AddButtonPart(captionFirst, margins, 0, id, backgroundFirst, enabled: enabled);
-            AddButtonPart(captionSecond, margins, actualWidth, id, backgroundSecond, enabled: enabled, disabledBorder: !enabled);
+            double actualWidth = AddButtonPart(captionFirst, margins, 0,
+                id, backgroundFirst, enabled: enabled);
+
+            AddButtonPart(captionSecond, margins, actualWidth, id, backgroundSecond,
+                enabled: enabled, disabledBorder: !enabled);
         }
 
         private static void AddButtonsCountable(string caption, Brush backFirst, Brush backSecond,
@@ -510,9 +518,10 @@ namespace WarhammerArmyAssembler.Interface
                 maxByDependency = (int)((int)unitParam.GetValue(unit) / option.Countable.Ratio);
             }
 
-            bool canBeReducedByMin = (option.Countable.Value > option.Countable.Min);
-            bool canBeReducedByNullable = (option.Countable.Min > 0) && option.Countable.Nullable;
-            bool canBeReduced = ((option.Countable.Value > 0) && (canBeReducedByMin || canBeReducedByNullable)) && enabled;
+            bool byMin = (option.Countable.Value > option.Countable.Min);
+            bool byNullable = (option.Countable.Min > 0) && option.Countable.Nullable;
+            bool byMinOrNullable = byMin || byNullable;
+            bool canBeReduced = ((option.Countable.Value > 0) && byMinOrNullable) && enabled;
 
             double left = AddButtonPart("-", margins, 0, id,
                 (canBeReduced ? backFirst : Brushes.Gainsboro), enabled: canBeReduced, countable: true);
@@ -520,9 +529,9 @@ namespace WarhammerArmyAssembler.Interface
             left += AddButtonPart(option.Countable.Value.ToString(),
                 margins, left, id, backSecond, enabled: enabled, countable: true, withoutBorder: true);
 
-            bool canByIncreasedByDependency = ((maxByDependency == 0) || (option.Countable.Value < maxByDependency));
-            bool canBeIncreasedByMaxParam = ((option.Countable.Max == 0) || (option.Countable.Value < option.Countable.Max));
-            bool canBeIncreased = canByIncreasedByDependency && canBeIncreasedByMaxParam && enabled;
+            bool byDependency = (maxByDependency == 0) || (option.Countable.Value < maxByDependency);
+            bool byMaxParam = (option.Countable.Max == 0) || (option.Countable.Value < option.Countable.Max);
+            bool canBeIncreased = byDependency && byMaxParam && enabled;
 
             AddButtonPart("+", margins, left, id, (canBeIncreased ? backFirst : Brushes.Gainsboro),
                 enabled: canBeIncreased, countable: true);
@@ -552,6 +561,7 @@ namespace WarhammerArmyAssembler.Interface
             }
 
             if (option.Countable != null)
+            {
                 AddButtonsCountable(
                     caption: option.Countable.Value.ToString(),
                     backFirst: ArmyBook.Data.BackColor,
@@ -561,8 +571,9 @@ namespace WarhammerArmyAssembler.Interface
                     margins: margins,
                     id: id,
                     enabled: optionIsEnabled);
-
+            }
             else if (!optionIsEnabled)
+            {
                 AddButtonAllParts(
                     captionFirst: String.Empty,
                     captionSecond: String.Empty,
@@ -571,8 +582,9 @@ namespace WarhammerArmyAssembler.Interface
                     margins: margins,
                     id: id,
                     enabled: false);
-
+            }
             else if (option.Realised)
+            {
                 AddButtonAllParts(
                     captionFirst: ArmyBook.Data.DropStyle,
                     captionSecond: String.Empty,
@@ -580,8 +592,9 @@ namespace WarhammerArmyAssembler.Interface
                     backgroundSecond: ArmyBook.Data.FrontColor,
                     margins: margins,
                     id: id);
-
+            }
             else
+            {
                 AddButtonAllParts(
                     captionFirst: String.Empty,
                     captionSecond: ArmyBook.Data.AddStyle,
@@ -589,6 +602,7 @@ namespace WarhammerArmyAssembler.Interface
                     backgroundSecond: Brushes.Silver,
                     margins: margins,
                     id: id);
+            }
 
             return height;
         }
