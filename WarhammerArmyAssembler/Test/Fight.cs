@@ -208,7 +208,9 @@ namespace WarhammerArmyAssembler.Test
             };
 
             if (unit.Name == enemy.Name)
+            {
                 enemy.Name += " (enemy)";
+            }
 
             if (originalUnitMount != null)
             {
