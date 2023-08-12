@@ -12,7 +12,8 @@ namespace WarhammerArmyAssembler.Test
 
         public static int lastDice = 0;
 
-        public static bool CheckReroll(Dictionary<string, Types> unitRerolls, Unit unit, Types diceType, int dice)
+        public static bool CheckReroll(Dictionary<string, Types> unitRerolls,
+            Unit unit, Types diceType, int dice)
         {
             if (String.IsNullOrEmpty(unit.Reroll))
                 return false;
@@ -35,8 +36,10 @@ namespace WarhammerArmyAssembler.Test
                 string rerollType = unitReroll.Trim().Replace($"({strParam})", String.Empty);
 
                 foreach (string reroll in unitRerolls.Keys.ToList())
+                {
                     if ((rerollType == reroll) && (unitRerolls[reroll] == diceType))
                         return true;
+                }
             }
 
             return false;
@@ -79,10 +82,12 @@ namespace WarhammerArmyAssembler.Test
         public static int GetRankBonus(Unit unit) =>
             !unit.StrengthInNumbers ? 0 : Unit.ParamNormalization((unit.GetRank() - 1), onlyZeroCheck: true);
 
-        public static bool Roll(Unit unit, Types diceType, Unit enemy, int? conditionParam,
-            int diceNum = 1, int round = 2, bool breakTest = false, bool hiddenDice = false, bool paramTest = false)
+        public static bool Roll(Unit unit, Types diceType, Unit enemy,
+            int? conditionParam, int diceNum = 1, int round = 2, bool breakTest = false,
+            bool hiddenDice = false, bool paramTest = false)
         {
-            return Roll(unit, diceType, enemy, conditionParam, out int _, diceNum, round, breakTest, hiddenDice, paramTest);
+            return Roll(unit, diceType, enemy, conditionParam, out int _,
+                diceNum, round, breakTest, hiddenDice, paramTest);
         }
 
         public static bool Roll(Unit unit, string lineDiceType, Unit enemy, int? conditionParam,
@@ -190,6 +195,7 @@ namespace WarhammerArmyAssembler.Test
             else if (canBeRerolled || mustBeRerolled)
             {
                 result = RollAll(diceType, unitTestPassed, diceNum, enemy: hisOpponent);
+
                 testPassed = TestPassedByDice(unit, enemy, result,
                     condition, diceType, out string addReroll, breakTest, paramTest);
 
