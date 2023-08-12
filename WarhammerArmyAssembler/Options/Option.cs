@@ -320,16 +320,24 @@ namespace WarhammerArmyAssembler
             OnlyRuleOption = this.OnlyRuleOption,
         };
 
-        public Dictionary<int, Option> AllRunicVersions() =>
-            ArmyBook.Data.Artefact
+        public Dictionary<int, Option> AllRunicVersions()
+        {
+            Dictionary<int, Option> options = ArmyBook.Data.Artefact
                 .Where(x => x.Value.Name == this.Name)
                 .ToDictionary(x => x.Value.Runic, x => x.Value);
 
-        public List<Option> AllRandomByGroup() =>
-            ArmyBook.Data.Artefact
+            return options;
+        }
+
+        public List<Option> AllRandomByGroup()
+        {
+            List<Option> options = ArmyBook.Data.Artefact
                 .Where(x => x.Value.RandomGroup == this.RandomGroup)
                 .Select(x => x.Value)
                 .ToList();
+
+            return options;
+        }
 
         public int GetWizardLevelBonus() =>
             this.Countable.Value - (this.Countable.Nullable && (this.Countable.Value > 0) ? 1 : 0);
@@ -361,10 +369,11 @@ namespace WarhammerArmyAssembler
         public bool IsMagicItem()
         {
             bool weapons = this.Type == OptionType.Weapon || this.Type == OptionType.Info;
-            bool armour = this.Type == OptionType.Armour || this.Type == OptionType.Shield || this.Type == OptionType.Additional;
+            bool armour = this.Type == OptionType.Armour || this.Type == OptionType.Shield;
+            bool additional = this.Type == OptionType.Additional;
             bool otherStuffs = this.Type == OptionType.Arcane || this.Type == OptionType.Banner;
 
-            return weapons || armour || otherStuffs;
+            return weapons || armour || additional || otherStuffs;
         }
 
         public bool IsPowers() =>
@@ -451,8 +460,10 @@ namespace WarhammerArmyAssembler
                 return true;
 
             foreach (Option option in unit.Options.Where(x => x.IsActual()))
+            {
                 if (TypeAndPointsSatisfy(option.MagicItemsType, option.MagicItems, unit.MagicItemCount))
                     return true;
+            }
 
             return false;
         }
