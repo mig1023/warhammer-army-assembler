@@ -9,7 +9,8 @@ namespace WarhammerArmyAssembler.ArmyBook
 {
     class XmlBook
     {
-        private static Dictionary<string, List<string>> HomologousSeries = new Dictionary<string, List<string>>();
+        private static Dictionary<string, List<string>> HomologousSeries =
+            new Dictionary<string, List<string>>();
 
         private static void AddHomologue(string head, string file)
         {
@@ -24,7 +25,8 @@ namespace WarhammerArmyAssembler.ArmyBook
             }
         }
 
-        public static List<string> GetHomologue(string army, string unit, string homologue, bool isHero)
+        public static List<string> GetHomologue(string army,
+            string unit, string homologue, bool isHero)
         {
             List<string> images = new List<string>();
 
