@@ -44,8 +44,12 @@ namespace WarhammerArmyAssembler.Interface
             WarhammerArmyAssembler.Test.Fight.TestByName(testType);
         }
 
-        public static string GetFullConsoleText() => new TextRange(Changes.main.testConsole.Document.ContentStart,
-            Changes.main.testConsole.Document.ContentEnd).Text;
+        public static string GetFullConsoleText()
+        {
+            TextPointer startPos = Changes.main.testConsole.Document.ContentStart;
+            TextPointer endPos = Changes.main.testConsole.Document.ContentEnd;
+            return new TextRange(startPos, endPos).Text;
+        }
 
         private static void LoadSpecialRules(Unit unitForLoad, TextBlock target, bool onlyUnitRules = false)
         {
@@ -103,9 +107,18 @@ namespace WarhammerArmyAssembler.Interface
             Unit unitLoad = WarhammerArmyAssembler.Test.Data.unit;
             Unit mountLoad = WarhammerArmyAssembler.Test.Data.unitMount;
             LoadUnitParamInInterface(unitLoad, mountLoad, Changes.main.unitGrid);
-            LoadSpecialRules(unitForLoad: WarhammerArmyAssembler.Test.Data.unit, target: main.specialRulesTest, onlyUnitRules: true);
 
-            foreach (Label label in new List<Label> { main.startFullTest, main.startStatisticTest, main.startBattleRoyale })
+            LoadSpecialRules(unitForLoad: WarhammerArmyAssembler.Test.Data.unit,
+                target: main.specialRulesTest, onlyUnitRules: true);
+
+            List<Label> labels = new List<Label>
+            {
+                main.startFullTest,
+                main.startStatisticTest,
+                main.startBattleRoyale
+            }; 
+
+            foreach (Label label in labels)
             {
                 label.Foreground = ArmyBook.Data.FrontColor;
                 label.BorderBrush = ArmyBook.Data.FrontColor;
@@ -178,7 +191,13 @@ namespace WarhammerArmyAssembler.Interface
             if (!showLinesToConsole)
                 return;
 
-            WarhammerArmyAssembler.Test.Data.testConsole.Add(new Text { Content = line, Color = color });
+            Text newText = new Text
+            {
+                Content = line,
+                Color = color
+            };
+
+            WarhammerArmyAssembler.Test.Data.testConsole.Add(newText);
         }
 
         public static void FromConsoleToOutput(string line, Brush color = null)
