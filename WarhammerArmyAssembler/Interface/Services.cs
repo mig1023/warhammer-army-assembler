@@ -27,7 +27,8 @@ namespace WarhammerArmyAssembler.Interface
         public static Brush BrushFromXml(XmlNode path) =>
             (SolidColorBrush)new BrushConverter().ConvertFromString($"#{path.InnerText}");
 
-        public static int CalcPercent(double x, double y) => (int)Math.Round((x * 100) / y);
+        public static int CalcPercent(double x, double y) =>
+            (int)Math.Round((x * 100) / y);
 
         public static string[] WordSplit(string caption, int partLength = 35)
         {
@@ -41,7 +42,9 @@ namespace WarhammerArmyAssembler.Interface
             foreach (string word in caption.Split(' '))
             {
                 if ((part.Length + word.Length) < partLength)
+                {
                     part += (String.IsNullOrEmpty(part) ? word : " " + word);
+                }
                 else
                 {
                     parts.Add(part);
@@ -60,8 +63,10 @@ namespace WarhammerArmyAssembler.Interface
             int rotateAngle = (int)rotate;
 
             foreach (int angle in ArmyBook.Constants.ArmySizeAngles.Keys)
+            {
                 if (angle >= rotateAngle)
-                   return ArmyBook.Constants.ArmySizeAngles[angle];
+                    return ArmyBook.Constants.ArmySizeAngles[angle];
+            }
 
             return 4000;
         }
@@ -69,8 +74,10 @@ namespace WarhammerArmyAssembler.Interface
         public static double AngleCalculator(int points)
         {
             foreach (int angle in ArmyBook.Constants.ArmySizeAngles.Keys)
+            {
                 if (ArmyBook.Constants.ArmySizeAngles[angle] >= points)
                     return angle;
+            }
 
             return 160;
         }
