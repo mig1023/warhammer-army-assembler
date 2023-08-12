@@ -122,7 +122,7 @@ namespace WarhammerArmyAssembler.ArmyBook
         public static string FindNameInAttributes(string name, string attributesLine)
         {
             List<string> attributes = attributesLine
-                .Split(';')
+                .Split(new string[] { ";", "\n" }, StringSplitOptions.RemoveEmptyEntries)
                 .Select(x => x.Trim())
                 .ToList();
 

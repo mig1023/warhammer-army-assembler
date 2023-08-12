@@ -692,7 +692,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             bool typesIncluded = false;
 
             List<string> attributeLines = attributes
-                .Split(';')
+                .Split(new string[] { ";", "\n" }, StringSplitOptions.RemoveEmptyEntries)
                 .Select(x => x.Trim('\n'))
                 .Where(x => !String.IsNullOrWhiteSpace(x))
                 .ToList();
