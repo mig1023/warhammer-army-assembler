@@ -106,10 +106,12 @@ namespace WarhammerArmyAssembler.Interface
                             if (head == "COMMAND" && !option.Command)
                                 continue;
 
-                            if (head == ArmyBook.Data.MagicItemsStyle && !option.MagicItemsPoints && (!option.IsMagicItem() || ((option.Points <= 0) && !option.Honours)))
+                            bool noMagicOrHonours = !option.IsMagicItem() || ((option.Points <= 0) && !option.Honours);
+
+                            if (headIsMagic && !option.MagicItemsPoints && noMagicOrHonours)
                                 continue;
 
-                            if ((head == ArmyBook.Data.MagicPowersStyle) && !option.IsPowers())
+                            if (headIsPowers && !option.IsPowers())
                                 continue;
 
                             margins = CheckColumn(margins, ref lastColumnMaxWidth);
@@ -139,8 +141,9 @@ namespace WarhammerArmyAssembler.Interface
                                 !option.Command && option.SpecialRuleDescription.Length == 0;
 
                             bool thisIsSpecRule = option.IsSpecaialRule();
+                            bool thisIsEqOrSpec = thisIsStandartEquip || thisIsSpecRule;
 
-                            if (head == "WEAPONS & ARMOUR" && (thisIsStandartEquip || thisIsSpecRule) && !thisIsRuleOrMount)
+                            if (head == "WEAPONS & ARMOUR" && thisIsEqOrSpec && !thisIsRuleOrMount)
                                 continue;
 
                             if (option.NativeArmour && unit.IsArmourOptionAdded())
@@ -162,13 +165,19 @@ namespace WarhammerArmyAssembler.Interface
 
         public static void AddOptionsList(int unitID, Unit unit)
         {
-            double[] margins = new double[] { Changes.main.unitName.Margin.Left, Changes.main.unitName.Margin.Top + 35 };
+            double[] margins = new double[]
+            {
+                Changes.main.unitName.Margin.Left,
+                Changes.main.unitName.Margin.Top + 35
+            };
 
             List<FrameworkElement> elementsForRemoving = new List<FrameworkElement>();
 
             foreach (FrameworkElement element in Changes.main.unitDetail.Children)
+            {
                 if (element.Name != "closeUnitDetail" && element.Name != "unitName")
                     elementsForRemoving.Add(element);
+            }
 
             foreach (FrameworkElement element in elementsForRemoving)
                 Changes.main.unitDetail.Children.Remove(element);
@@ -190,30 +199,52 @@ namespace WarhammerArmyAssembler.Interface
             }
 
             if (!unit.Character)
+            {
                 CreatePersonificationField(lastColumnMaxWidth, unitID);
+            }
 
             if (unit.ExistsOptions())
-                margins = CreateColumn("OPTION", margins, unitID, unit, ref notFirstColumn, ref lastColumnMaxWidth);
+            {
+                margins = CreateColumn("OPTION", margins, unitID, unit,
+                    ref notFirstColumn, ref lastColumnMaxWidth);
+            }
 
             if (unit.ExistsCommand())
-                margins = CreateColumn("COMMAND", margins, unitID, unit, ref notFirstColumn, ref lastColumnMaxWidth);
+            {
+                margins = CreateColumn("COMMAND", margins, unitID, unit,
+                    ref notFirstColumn, ref lastColumnMaxWidth);
+            }
 
             if (unit.ExistsMagicItems() || (Army.Data.Units[unitID].GetUnitMagicPoints() > 0))
-                margins = CreateColumn(ArmyBook.Data.MagicItemsStyle, margins, unitID, unit, ref notFirstColumn, ref lastColumnMaxWidth);
+            {
+                margins = CreateColumn(ArmyBook.Data.MagicItemsStyle,
+                    margins, unitID, unit, ref notFirstColumn, ref lastColumnMaxWidth);
+            }
 
             if ((unit.GetUnitMagicPowersPoints() > 0) || (unit.GetMagicPowersCount() > 0))
-                margins = CreateColumn(ArmyBook.Data.MagicPowersStyle, margins, unitID, unit, ref notFirstColumn, ref lastColumnMaxWidth);
+            {
+                margins = CreateColumn(ArmyBook.Data.MagicPowersStyle,
+                    margins, unitID, unit, ref notFirstColumn, ref lastColumnMaxWidth);
+            }
 
             if (unit.ExistsEquipmentsItems())
-                margins = CreateColumn("WEAPONS & ARMOUR", margins, unitID, unit, ref notFirstColumn, ref lastColumnMaxWidth);
+            {
+                margins = CreateColumn("WEAPONS & ARMOUR", margins, unitID, unit,
+                    ref notFirstColumn, ref lastColumnMaxWidth);
+            }
 
             if (unit.GetSpecialRules().Count > 0)
-                margins = CreateColumn("SPECIAL RULES", margins, unitID, unit, ref notFirstColumn, ref lastColumnMaxWidth);
+            {
+                margins = CreateColumn("SPECIAL RULES", margins, unitID, unit,
+                    ref notFirstColumn, ref lastColumnMaxWidth);
+            }
 
             Changes.main.unitDetail.Width = margins[0] + lastColumnMaxWidth + 25;
 
             if (Changes.main.unitDetail.Width > Changes.main.unitDetailScroll.Width)
+            {
                 Changes.main.unitDetailScroll.HorizontalScrollBarVisibility = ScrollBarVisibility.Visible;
+            }
         }
 
         private static void CreatePersonificationField(double lastColumnMaxWidth, int unitID)
