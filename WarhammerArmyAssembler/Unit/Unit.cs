@@ -622,7 +622,7 @@ namespace WarhammerArmyAssembler
         private void SetUnitParamByOption(string paramName, bool directModification = false)
         {
             bool value = RuleFromAnyOption(paramName, out string stringValue,
-                out int intValue, directModification: directModification);
+                out int intValue, directMods: directModification);
 
             if (!value)
                 return;
@@ -1057,7 +1057,8 @@ namespace WarhammerArmyAssembler
             return param;
         }
 
-        private bool GetUnitValueTrueOrFalse(object unitValue, out string additionalParam, out int intValue)
+        private bool GetUnitValueTrueOrFalse(object unitValue,
+            out string additionalParam, out int intValue)
         {
             additionalParam = String.Empty;
             intValue = 0;
@@ -1082,15 +1083,21 @@ namespace WarhammerArmyAssembler
             }
         }
 
-        public bool RuleFromAnyOption(string name, out string additionalParam, out int intValue,
-            bool onlyUnitParam = false, bool directModification = false)
+        public bool RuleFromAnyOption(string name, out string additionalParam,
+            out int intValue, bool onlyUnitParam = false, bool directMods = false)
         {
             object property = typeof(Unit).GetProperty(name).GetValue(this);
-            bool anyIsTrue = GetUnitValueTrueOrFalse(property, out string lineParamValue, out int intParamValue);
+
+            bool anyIsTrue = GetUnitValueTrueOrFalse(property,
+                out string lineParamValue, out int intParamValue);
 
             if (!onlyUnitParam)
             {
-                foreach (Option option in Options.Where(x => !x.IsOption() || x.Realised))
+                List<Option> options = Options
+                    .Where(x => !x.IsOption() || x.Realised)
+                    .ToList();
+
+                foreach (Option option in options)
                 {
                     PropertyInfo optionField = typeof(Option).GetProperty(name);
 
@@ -1098,21 +1105,27 @@ namespace WarhammerArmyAssembler
                         out string lineOptionValue, out int intOptionValue);
 
                     anyIsTrue = fromParamValue || anyIsTrue;
+                    bool impactHits = ((int)property > 0) || option.ImpactHitByFront > 0;
+                    bool lineOption = !String.IsNullOrEmpty(lineOptionValue);
 
-                    if ((name == "ImpactHitByFront") && (((int)property > 0) || option.ImpactHitByFront > 0))
+                    if ((name == "ImpactHitByFront") && impactHits)
                     {
                         intParamValue = GetFront();
                         anyIsTrue = true;
                     }
-                    else if ((name == "Reroll") && !directModification && fromParamValue && !String.IsNullOrEmpty(lineOptionValue))
+                    else if ((name == "Reroll") && !directMods && fromParamValue && lineOption)
                     {
                         string[] allRerolls = lineOptionValue.Split(';');
 
                         foreach (string reroll in allRerolls)
                         {
-                            string secondElement = String.IsNullOrEmpty(lineParamValue) ? String.Empty : "; ";
+                            string secondElement = String.IsNullOrEmpty(lineParamValue) ?
+                                String.Empty : "; ";
+
                             string[] rerollsParams = reroll.Split('(');
-                            lineParamValue += $"{secondElement}{SpecialRules.RerollsLines[rerollsParams[0]]}";
+
+                            lineParamValue += $"{secondElement}" +
+                                $"{SpecialRules.RerollsLines[rerollsParams[0]]}";
 
                             if (rerollsParams.Length > 1)
                                 lineParamValue += "(" + rerollsParams[1];
@@ -1184,14 +1197,33 @@ namespace WarhammerArmyAssembler
             if (MountOn > 0)
                 rules.Add(Army.Data.Units[MountOn].Name);
 
-            foreach (Option option in Options.Where(x => x.Realised && x.SpecialRuleDescription.Length > 0))
-                if (!withoudWizards || (option.WizardTo <= 0 && option.AddToWizard <= 0 && !(option.Countable?.ExportToWizardLevel ?? false)))
-                    rules.Add(option.Name);
+            List<Option> options = Options
+                .Where(x => x.Realised && x.SpecialRuleDescription.Length > 0)
+                .ToList();
 
-            foreach (KeyValuePair<string, string> specialRule in SpecialRules.All) 
-                if (RuleFromAnyOption(specialRule.Key, out string additionalParam, out int intParam, onlyUnitParam: onlyUnitParam))
-                    if (!SpecialRules.IncompatibleRules(specialRule.Key, this))
-                        rules.Add(specialRule.Value.Replace("[X]", (intParam > 0 ? intParam.ToString() : additionalParam)));
+            foreach (Option option in options)
+            {
+                bool wizExport = option.Countable?.ExportToWizardLevel ?? false;
+                bool noWizardBonus = option.WizardTo <= 0 && option.AddToWizard <= 0;
+
+                if (!withoudWizards || (noWizardBonus && !wizExport))
+                    rules.Add(option.Name);
+            }
+
+            foreach (KeyValuePair<string, string> specialRule in SpecialRules.All)
+            {
+                bool isRuled = RuleFromAnyOption(specialRule.Key, out string additionalParam,
+                    out int intParam, onlyUnitParam: onlyUnitParam);
+
+                if (!isRuled)
+                    continue;
+
+                if (SpecialRules.IncompatibleRules(specialRule.Key, this))
+                    continue;
+
+                string paramValue = intParam > 0 ? intParam.ToString() : additionalParam;
+                rules.Add(specialRule.Value.Replace("[X]", paramValue));
+            }
 
             Test.Param.Describe(ParamTests, ref rules);
 
