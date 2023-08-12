@@ -831,7 +831,9 @@ namespace WarhammerArmyAssembler
 
         public void AddOption(int optionID)
         {
-            Option option = this.Options.Where(x => x.ID == optionID).FirstOrDefault();
+            Option option = this.Options
+                .Where(x => x.ID == optionID)
+                .FirstOrDefault();
 
             if (option == null)
                 return;
@@ -845,10 +847,13 @@ namespace WarhammerArmyAssembler
                 Option artefact = ArmyBook.Data.Artefact[option.ID];
 
                 if (artefact.TypeUnitIncrese && (this.Type == Unit.UnitType.Special))
+                {
                     this.Type = Unit.UnitType.Core;
-
+                }
                 else if (artefact.TypeUnitIncrese && (this.Type == Unit.UnitType.Rare))
+                {
                     this.Type = Unit.UnitType.Special;
+                }
 
                 if (option.Virtue)
                 {
@@ -859,19 +864,26 @@ namespace WarhammerArmyAssembler
             else
             {
                 if (option.Realised)
+                {
                     option.Realised = false;
+                }
                 else
                 {
-                    double optionPoints = option.PerModel ? option.Points * this.Size : option.Points;
+                    double optionPoints = option.PerModel ?
+                        option.Points * this.Size : option.Points;
 
                     if (!Army.Checks.IsArmyUnitsPointsPercentOk(this.Type, option.Points, 0))
                     {
-                        Interface.Changes.Error($"The {this.UnitTypeName()} has reached a point cost limit");
+                        Interface.Changes.Error($"The {this.UnitTypeName()} " +
+                            $"has reached a point cost limit");
+
                         return;
                     }
                     else if (!Interface.Checks.EnoughUnitPointsForAddOption(optionPoints))
                     {
-                        Interface.Changes.Error($"Not enough points to add {this.UnitTypeName()}");
+                        Interface.Changes.Error($"Not enough points " +
+                            $"to add {this.UnitTypeName()}");
+
                         return;
                     }
                     else
@@ -919,21 +931,30 @@ namespace WarhammerArmyAssembler
 
             foreach (Option option in Options)
             {
+                bool named = !String.IsNullOrEmpty(option.Name);
                 bool thisIsRealised = (option.Realised || option.IsMagicItem()) && option.Points != 0;
                 bool thisIsNotMountOrFC = !(option.Mount || option.Command);
                 bool wizard = option.WizardTo > 0 || option.AddToWizard > 0;
 
-                if (!String.IsNullOrEmpty(option.Name) && thisIsRealised && thisIsNotMountOrFC && !wizard)
+                if (named && thisIsRealised && thisIsNotMountOrFC && !wizard)
                     equipment += $"{option.FullName()}; ";
             }
 
-            foreach (Option option in Options.Where(x => (x.Countable != null) && (x.Countable.Value > 0)))
+            List<Option> countableOptions = Options
+                .Where(x => (x.Countable != null) && (x.Countable.Value > 0))
+                .ToList();
+
+            foreach (Option option in countableOptions)
             {
                 if (!option.Countable?.ExportToWizardLevel ?? false)
                     equipment += $"{option.Countable.Value} {option.Name}; ";
             }
 
-            foreach (Option option in Options.Where(x => !String.IsNullOrEmpty(x.Name) && x.IsPowers()))
+            List<Option> powersOptions = Options
+                .Where(x => !String.IsNullOrEmpty(x.Name) && x.IsPowers())
+                .ToList();
+
+            foreach (Option option in powersOptions)
                 equipment += $"{option.Name}; ";
 
             if (!String.IsNullOrEmpty(equipment))
