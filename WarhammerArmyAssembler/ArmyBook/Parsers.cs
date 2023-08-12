@@ -88,8 +88,15 @@ namespace WarhammerArmyAssembler.ArmyBook
             List<string> allSlots = new List<string>();
 
             foreach (XmlNode xmlSlot in xmlNode.SelectNodes("Slots"))
-                foreach (string slot in xmlSlot.InnerText.Split(',').Select(x => x.Trim()))
+            {
+                List<string> slots = xmlSlot.InnerText
+                    .Split(',')
+                    .Select(x => x.Trim())
+                    .ToList();
+
+                foreach (string slot in slots)
                     allSlots.Add(slot);
+            }
 
             return allSlots;
         }
@@ -114,7 +121,9 @@ namespace WarhammerArmyAssembler.ArmyBook
             if (max != null)
             {
                 if (max.Attributes["Dependency"] != null)
+                {
                     countable.Dependency = max.Attributes["Dependency"].InnerText;
+                }
 
                 if (max.Attributes["Ratio"] != null)
                 {
@@ -138,10 +147,10 @@ namespace WarhammerArmyAssembler.ArmyBook
                 Param newParamTest = new Param { Type = xmlParamTest.Attributes["Profile"].Value };
 
                 bool success = Enum.TryParse(xmlParamTest.Attributes["Bet"].Value, out Param.TestType bet);
-                newParamTest.Bet = (success ? bet : Param.TestType.Wound);
+                newParamTest.Bet = success ? bet : Param.TestType.Wound;
 
                 success = Enum.TryParse(xmlParamTest.Attributes["Context"].Value, out Param.ContextType context);
-                newParamTest.Context = (success ? context : Param.ContextType.Round);
+                newParamTest.Context = success ? context : Param.ContextType.Round;
 
                 XmlNode xmlRepeat = xmlParamTest.Attributes["Repeat"];
                 if (xmlRepeat != null)
@@ -150,7 +159,9 @@ namespace WarhammerArmyAssembler.ArmyBook
                     newParamTest.Repeat = (success ? repeat : Param.RepeatType.Normal);
                 }
                 else
+                {
                     newParamTest.Repeat = Param.RepeatType.Normal;
+                }
 
                 newParamTest.MountsOnly = xmlParamTest.Attributes["MountsOnly"] != null;
 
