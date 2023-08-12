@@ -32,7 +32,15 @@ namespace WarhammerArmyAssembler
                 double y1 = 475 + (85 * Math.Sin(i * pi));
                 double y2 = 475 + (91 * Math.Sin(i * pi));
 
-                Line newLine = new Line { X1 = x1, Y1 = y1, X2 = x2, Y2 = y2, Stroke = Brushes.LightGray };
+                Line newLine = new Line
+                {
+                    X1 = x1,
+                    Y1 = y1,
+                    X2 = x2,
+                    Y2 = y2,
+                    Stroke = Brushes.LightGray
+                };
+
                 menuArmybookPlace.Children.Add(newLine);
             } 
         }
