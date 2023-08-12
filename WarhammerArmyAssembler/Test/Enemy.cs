@@ -24,9 +24,15 @@ namespace WarhammerArmyAssembler
 
         public static Enemy ByName(string enemyName)
         {
-            foreach (List<Enemy> enemyList in EnemiesDirectories.Values)
-                foreach (Enemy enemy in enemyList.Where(x => x.Fullname() == enemyName))
+            foreach (List<Enemy> enemiesDirectory in EnemiesDirectories.Values)
+            {
+                List<Enemy> enemies = enemiesDirectory
+                    .Where(x => x.Fullname() == enemyName)
+                    .ToList();
+
+                foreach (Enemy enemy in enemies)
                     return enemy.SetID();
+            }
 
             return null;
         }
