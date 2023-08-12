@@ -23,10 +23,14 @@ namespace WarhammerArmyAssembler
 
             armyMainLabelPlace.SizeChanged += armyMainLabelPlace_SizeChanged;
 
-            List<string> allXmlFiles = ArmyBook.XmlBook.FindAllXmlFiles(AppDomain.CurrentDomain.BaseDirectory);
+            List<string> allXmlFiles = ArmyBook.XmlBook
+                .FindAllXmlFiles(AppDomain.CurrentDomain.BaseDirectory);
 
             if (allXmlFiles.Count > 0)
-                Interface.Changes.CurrentSelectedArmy = allXmlFiles[Interface.Services.Rand.Next(allXmlFiles.Count)];
+            {
+                Interface.Changes.CurrentSelectedArmy =
+                    allXmlFiles[Interface.Services.Rand.Next(allXmlFiles.Count)];
+            }
 
             Interface.Changes.LoadAllArmy(allXmlFiles);
             Interface.Changes.PreviewArmyList();
@@ -55,10 +59,16 @@ namespace WarhammerArmyAssembler
             TreeView armyList = sender as TreeView;
 
             if (armyList.SelectedItem is Unit)
-                ChangeArmyListDetail((armyList.SelectedItem as Unit).ID, (armyList.SelectedItem as Unit).GroupBold);
+            {
+                ChangeArmyListDetail((armyList.SelectedItem as Unit).ID,
+                    (armyList.SelectedItem as Unit).GroupBold);
+            }
 
             if (armyList.SelectedItem is Option)
-                ChangeArmyListDetail((armyList.SelectedItem as Option).ID, (armyList.SelectedItem as Option).GroupBold);
+            {
+                ChangeArmyListDetail((armyList.SelectedItem as Option).ID,
+                    (armyList.SelectedItem as Option).GroupBold);
+            }
         }
 
         private void UnitInArmyList_MouseDown(object sender, MouseButtonEventArgs e)
@@ -147,10 +157,12 @@ namespace WarhammerArmyAssembler
             
             armybookArtefactDetail.Height = armyUnitDescription.Margin.Top + 
                 descrHeight + specHeight + 20;
+
             armybookDetail.Height = armybookArtefactDetail.Height + paramsHeight;
 
             double top = armyUnitDescription.Margin.Top + 35;
             detailUnitGridBorder.Margin = Interface.Changes.Thick(armybookDetail, left: 20, top: top);
+
             top += armyUnitDescription.ActualHeight + detailUnitGrid.ActualHeight - 5;
             armyUnitSpecific.Margin = Interface.Changes.Thick(armybookDetail, left: 20, top: top);
 
@@ -227,6 +239,7 @@ namespace WarhammerArmyAssembler
             Unit u = e.Row.Item as Unit;
 
             double diff = u.GetUnitPoints() - Army.Data.Units[u.ID].GetUnitPoints();
+            bool armyPercentOk = Army.Checks.IsArmyUnitsPointsPercentOk(u.Type, diff, u.StaticPoints);
 
             if (!Interface.Checks.EnoughPointsForEditUnit(u.ID, u.Size))
             {
@@ -234,15 +247,18 @@ namespace WarhammerArmyAssembler
             }
             else if ((u.MaxSize != 0) && (u.Size > u.MaxSize))
             {
-                u.Size = ErrorAndReturnSizeBack("Unit size exceeds the maximum allowed", u.ID);
+                u.Size = ErrorAndReturnSizeBack("Unit size exceeds " +
+                    "the maximum allowed", u.ID);
             }
             else if (u.Size < u.MinSize)
             {
-                u.Size = ErrorAndReturnSizeBack("Unit size is less than the minimum allowed", u.ID);
+                u.Size = ErrorAndReturnSizeBack("Unit size is less " +
+                    "than the minimum allowed", u.ID);
             }
-            else if ((u.Size > Army.Data.Units[u.ID].Size) && (!Army.Checks.IsArmyUnitsPointsPercentOk(u.Type, diff, u.StaticPoints)))
+            else if ((u.Size > Army.Data.Units[u.ID].Size) && (!armyPercentOk))
             {
-                u.Size = ErrorAndReturnSizeBack($"The {u.UnitTypeName()} has reached a point cost limit", u.ID);
+                u.Size = ErrorAndReturnSizeBack($"The {u.UnitTypeName()} " +
+                    $"has reached a point cost limit", u.ID);
             }
             else
             {
@@ -292,14 +308,14 @@ namespace WarhammerArmyAssembler
             if (container == null)
                 return;
 
-            DependencyObject clickedColumn = (DependencyObject)e.OriginalSource;
+            DependencyObject clicked = (DependencyObject)e.OriginalSource;
 
-            while ((clickedColumn != null) && !(clickedColumn is DataGridCell) && !(clickedColumn is DataGridColumnHeader))
-                clickedColumn = VisualTreeHelper.GetParent(clickedColumn);
+            while ((clicked != null) && !(clicked is DataGridCell) && !(clicked is DataGridColumnHeader))
+                clicked = VisualTreeHelper.GetParent(clicked);
 
-            if (clickedColumn != null && clickedColumn is DataGridCell)
+            if (clicked != null && clicked is DataGridCell)
             {
-                int clickedColumnNum = (clickedColumn as DataGridCell).Column.DisplayIndex;
+                int clickedColumnNum = (clicked as DataGridCell).Column.DisplayIndex;
 
                 if (clickedColumnNum == 1 || clickedColumnNum == 3)
                     return;
