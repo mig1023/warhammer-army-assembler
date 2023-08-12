@@ -38,10 +38,10 @@ namespace WarhammerArmyAssembler.Interface
             {
                 Unit unit = entry.Clone();
 
-                if (unit.StaticPoints == 0)
-                    unit.PointsView = $" {unit.Points} pts";
-                else
-                    unit.PointsView = $" {unit.Points} pts (+{unit.StaticPoints} pts)";
+                unit.PointsView = $" {unit.Points} pts";
+
+                if (unit.StaticPoints != 0)
+                    unit.PointsView += $" (+{unit.StaticPoints} pts)";
 
                 unit.InterfaceColor = ArmyBook.Data.FrontColor;
 
