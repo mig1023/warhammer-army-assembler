@@ -284,13 +284,17 @@ namespace WarhammerArmyAssembler
             foreach (Option option in Options)
             {
                 if (option.MagicItemsPoints && option.Realised)
+                {
                     alreayUsed += option.Points;
-
+                }
                 else if (option.IsMagicItem() && (MagicItemCount <= 0))
+                {
                     alreayUsed += option.Points;
-
+                }
                 else if (option.IsMagicItem() && (MagicItemCount > 0) && (option.Points > 0))
+                {
                     alreayUsed += 1;
+                }
             }
 
             return alreayUsed;
@@ -468,32 +472,48 @@ namespace WarhammerArmyAssembler
 
         private bool OptionTypeAlreadyUsed(Option option, ref bool alreadyArmour, ref bool alreadyShield)
         {
+            bool optionType = option.Type == Option.OptionType.Option;
+            bool armourType = option.Type == Option.OptionType.Armour;
+            bool shieldType = option.Type == Option.OptionType.Shield;
+            bool containsArmour = ContainsCaseless(option.Name, "Armour");
+            bool containsShield = ContainsCaseless(option.Name, "Shield");
+
             if (option.NativeArmour && IsArmourOptionAdded())
+            {
                 return true;
-
-            else if (alreadyArmour && (option.Type == Option.OptionType.Option) && ContainsCaseless(option.Name, "Armour"))
+            }
+            else if (alreadyArmour && optionType && containsArmour)
+            {
                 return true;
-
-            else if ((option.Type == Option.OptionType.Option) && ContainsCaseless(option.Name, "Armour"))
+            }
+            else if (optionType && containsArmour)
+            {
                 alreadyArmour = true;
-
-            else if (alreadyShield && (option.Type == Option.OptionType.Option) && ContainsCaseless(option.Name, "Shield"))
+            }
+            else if (alreadyShield && optionType && containsShield)
+            {
                 return true;
-
-            else if ((option.Type == Option.OptionType.Option) && ContainsCaseless(option.Name, "Shield"))
+            }
+            else if (optionType && containsShield)
+            {
                 alreadyShield = true;
-
-            else if (alreadyArmour && (option.Type == Option.OptionType.Armour))
+            }
+            else if (alreadyArmour && armourType)
+            {
                 return true;
-
-            else if (option.Type == Option.OptionType.Armour)
+            }
+            else if (armourType)
+            {
                 alreadyArmour = true;
-
-            else if (alreadyShield && (option.Type == Option.OptionType.Shield))
+            }
+            else if (alreadyShield && shieldType)
+            {
                 return true;
-
-            else if (option.Type == Option.OptionType.Shield)
+            }
+            else if (shieldType)
+            {
                 alreadyShield = true;
+            }
 
             return false;
         }
