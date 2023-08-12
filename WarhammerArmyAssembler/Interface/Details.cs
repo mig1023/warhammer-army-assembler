@@ -249,7 +249,8 @@ namespace WarhammerArmyAssembler.Interface
 
         private static void CreatePersonificationField(double lastColumnMaxWidth, int unitID)
         {
-            double personificationWidth = Changes.main.unitName.Margin.Left + Changes.main.unitName.ActualWidth + 5;
+            double personificationWidth = Changes.main.unitName.Margin.Left +
+                Changes.main.unitName.ActualWidth + 5;
 
             if (lastColumnMaxWidth > 0)
                 personificationWidth += lastColumnMaxWidth;
@@ -260,7 +261,9 @@ namespace WarhammerArmyAssembler.Interface
                 Foreground = ArmyBook.Data.FrontColor,
             };
 
-            newOption.Margin = Changes.Thick(newOption, personificationWidth, Changes.main.unitName.Margin.Top);
+            newOption.Margin = Changes.Thick(newOption,
+                personificationWidth, Changes.main.unitName.Margin.Top);
+
             Changes.main.unitDetail.Children.Add(newOption);
             Changes.main.UpdateLayout();
 
@@ -273,11 +276,17 @@ namespace WarhammerArmyAssembler.Interface
             };
 
             if (String.IsNullOrEmpty(Army.Data.Units[unitID].Personification))
+            {
                 personificationName.Visibility = Visibility.Hidden;
+            }
             else
+            {
                 personificationName.Text = Army.Data.Units[unitID].Personification;
+            }
 
-            personificationName.Margin = Changes.Thick(personificationName, personificationWidth, Changes.main.unitName.Margin.Top);
+            personificationName.Margin = Changes.Thick(personificationName,
+                personificationWidth, Changes.main.unitName.Margin.Top);
+
             personificationName.KeyUp += (sender, e) =>
             {
                 Army.Data.Units[unitID].Personification = (sender as TextBox).Text;
@@ -291,8 +300,9 @@ namespace WarhammerArmyAssembler.Interface
             {
                 personificationName.Visibility = Visibility.Visible;
 
-                Application.Current.Dispatcher.BeginInvoke(new Action(() =>
-                    { personificationName.Focus(); }), System.Windows.Threading.DispatcherPriority.Render);
+                Application.Current.Dispatcher.BeginInvoke(
+                    new Action(() => { personificationName.Focus(); }),
+                    System.Windows.Threading.DispatcherPriority.Render);
             };
         }
 
@@ -341,9 +351,10 @@ namespace WarhammerArmyAssembler.Interface
             AddOptionsList(unitID, unit);
         }
 
-        private static double AddLabel(string caption, double[] margins, double height, ref double lastColumnMaxWidth,
-            bool selected = false, double points = 0, bool perModel = false, bool bold = false, string addLine = "",
-            int fixPadding = 0, bool enabled = true)
+        private static double AddLabel(string caption, double[] margins,
+            double height, ref double lastColumnMaxWidth, bool selected = false,
+            double points = 0, bool perModel = false, bool bold = false,
+            string addLine = "", int fixPadding = 0, bool enabled = true)
         {
             Label newOption = new Label();
 
@@ -352,17 +363,28 @@ namespace WarhammerArmyAssembler.Interface
             newOption.Content = String.Empty;
 
             foreach (string line in captionLines)
-                newOption.Content += (String.IsNullOrEmpty(newOption.Content.ToString()) ? String.Empty : Environment.NewLine + "   ") + line;
+            {
+                string newLine = Environment.NewLine + "   ";
+                bool emptyContent = String.IsNullOrEmpty(newOption.Content.ToString());
+
+                newOption.Content += (emptyContent ? String.Empty : newLine) + line;
+            }
 
             newOption.Margin = Changes.Thick(newOption, margins[0], margins[1]);
 
             if (!enabled)
+            {
                 newOption.Foreground = Brushes.Gray;
+            }
             else if (selected)
+            {
                 newOption.Foreground = ArmyBook.Data.BackColor;
+            }
 
             if (selected || bold)
+            {
                 newOption.FontWeight = FontWeights.Bold;
+            }
 
             if (bold)
             {
@@ -380,14 +402,17 @@ namespace WarhammerArmyAssembler.Interface
                 double leftPadding = (points > 0 ? -5 : 5);
 
                 bool pointsNeed = (points > 0) || (points < 0);
+                string content = points.ToString() + " pts" + (perModel ? "/m" : String.Empty);
+                Brush color = !enabled || selected ? Brushes.Gray : ArmyBook.Data.FrontColor;
 
                 Label optionPoints = new Label
                 {
-                    Content = (pointsNeed ? points.ToString() + " pts" + (perModel ? "/m" : String.Empty) : addLine),
-                    Foreground = (!enabled || selected ? Brushes.Gray : ArmyBook.Data.FrontColor),
+                    Content = (pointsNeed ? content : addLine),
+                    Foreground = color,
                 };
 
-                optionPoints.Margin = Changes.Thick(optionPoints, margins[0] + newOption.ActualWidth + leftPadding, margins[1]);
+                double marginLeft = margins[0] + newOption.ActualWidth + leftPadding;
+                optionPoints.Margin = Changes.Thick(optionPoints, marginLeft, margins[1]);
 
                 Changes.main.unitDetail.Children.Add(optionPoints);
                 Changes.main.UpdateLayout();
@@ -412,7 +437,9 @@ namespace WarhammerArmyAssembler.Interface
             }
 
             if (actualWidth > lastColumnMaxWidth)
+            {
                 lastColumnMaxWidth = actualWidth;
+            }
 
             double bottomPadding = (captionLines.Length > 1 ? 5 : 0);
 
