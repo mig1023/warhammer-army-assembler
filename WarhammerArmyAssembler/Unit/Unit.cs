@@ -539,9 +539,13 @@ namespace WarhammerArmyAssembler
             Profile paramValue = (Profile)typeof(Unit).GetProperty(name).GetValue(unit);
 
             if ((paramValue == null) && reversParam)
+            {
                 return String.Empty;
+            }
             else if (paramValue == null)
+            {
                 return "-";
+            }
 
             if (paramValue.Value > 100)
                 return GetRandomAttacksLine(paramValue.Value);
@@ -582,7 +586,9 @@ namespace WarhammerArmyAssembler
                             newValue = optionValue;
                     }
                     else
+                    {
                         newValue -= (7 - optionValue);
+                    }
                 }
                 else if (optionValue != 0)
                 {
@@ -615,19 +621,24 @@ namespace WarhammerArmyAssembler
 
         private void SetUnitParamByOption(string paramName, bool directModification = false)
         {
-            bool value = RuleFromAnyOption(paramName, out string stringValue, out int intValue, directModification: directModification);
+            bool value = RuleFromAnyOption(paramName, out string stringValue,
+                out int intValue, directModification: directModification);
 
             if (!value)
                 return;
 
             if (intValue > 0)
+            {
                 typeof(Unit).GetProperty(paramName).SetValue(this, intValue);
-
+            }
             else if (!String.IsNullOrEmpty(stringValue))
+            {
                 typeof(Unit).GetProperty(paramName).SetValue(this, stringValue);
-
+            }
             else
+            {
                 typeof(Unit).GetProperty(paramName).SetValue(this, value);
+            }
         }
 
         private SolidColorBrush ColorByMods(string newParamLine)
@@ -720,8 +731,10 @@ namespace WarhammerArmyAssembler
             };
 
             foreach (KeyValuePair<int, int> r in ratio)
+            {
                 if (this.Size >= r.Key)
                     frontSize = r.Value;
+            }
 
             return frontSize;
         }
@@ -736,7 +749,8 @@ namespace WarhammerArmyAssembler
             if (front < 5)
                 return 1;
 
-            int ranks = (this.Wounds.Value / front) + (this.Wounds.Value % front >= 5 ? 1 : 0);
+            bool largeFront = this.Wounds.Value % front >= 5;
+            int ranks = (this.Wounds.Value / front) + (largeFront ? 1 : 0);
 
             if (ranks > 3)
                 return 3;
@@ -744,7 +758,8 @@ namespace WarhammerArmyAssembler
             return ranks;
         }
 
-        public Option GetCurrentRunicItemByName(string name) => Options.Where(x => x.Name == name).FirstOrDefault();
+        public Option GetCurrentRunicItemByName(string name) =>
+            Options.Where(x => x.Name == name).FirstOrDefault();
 
         public int GetCurrentRunicItemsByCount()
         {
@@ -775,7 +790,9 @@ namespace WarhammerArmyAssembler
 
         public void ChangeCountableOption(int optionID, string direction)
         {
-            Option option = this.Options.Where(x => x.ID == optionID).FirstOrDefault();
+            Option option = this.Options
+                .Where(x => x.ID == optionID)
+                .FirstOrDefault();
 
             if (option == null)
                 return;
@@ -783,23 +800,32 @@ namespace WarhammerArmyAssembler
             if (direction == "-")
             {
                 if ((option.Countable.Value == option.Countable.Min) && option.Countable.Nullable)
+                {
                     option.Countable.Value = 0;
-                else 
+                }
+                else
+                {
                     option.Countable.Value -= 1;
+                }
             }
             else
             {
                 if (!Army.Checks.IsArmyUnitsPointsPercentOk(this.Type, option.Points, 0))
+                {
                     Interface.Changes.Error($"The {this.UnitTypeName()} has reached a point cost limit");
-
+                }
                 else if (!Interface.Checks.EnoughUnitPointsForAddOption(option.Points))
+                {
                     Interface.Changes.Error($"Not enough points to add {this.UnitTypeName()}");
-
+                }
                 else if (option.Countable.Nullable && (option.Countable.Value == 0) && (option.Countable.Min > 1))
+                {
                     option.Countable.Value = option.Countable.Min;
-
+                }
                 else
+                {
                     option.Countable.Value += 1;
+                }
             }
         }
 
