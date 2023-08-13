@@ -58,14 +58,10 @@ namespace WarhammerArmyAssembler.Interface
                 main.ArmyList.Items.Add(unitType);
             }
 
-            List<string> artefactsTypes = new List<string>();
-
-            List<Option> allArtefacts = ArmyBook.Data.Artefact.Values
-                .Where(x => !artefactsTypes.Contains(x.ArtefactGroup))
+            List<string> artefactsTypes = ArmyBook.Data.Artefact.Values
+                .Select(x => x.ArtefactGroup)
+                .Distinct()
                 .ToList();
-
-            foreach (Option entry in allArtefacts)
-                artefactsTypes.Add(entry.ArtefactGroup);
 
             string lastRandomGroup = String.Empty;
 
