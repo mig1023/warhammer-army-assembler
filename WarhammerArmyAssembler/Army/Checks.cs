@@ -62,17 +62,17 @@ namespace WarhammerArmyAssembler.Army
             [Unit.UnitType.Rare] = ArmyBook.Constants.Quarter,
         };
 
-        public static bool IsArmyUnitsPointsPercentOk(Unit.UnitType type, double points, double staticPoints)
+        public static bool IsArmyUnitsPointsPercentOk(Unit.UnitType type, double points, double prepayment)
         {
             Dictionary<Unit.UnitType, double> units = UnitsPointsPercent();
 
             int twentyFivePercent = (int)(Data.MaxPoints * ArmyBook.Constants.Quarter);
 
             if (type == Unit.UnitType.Lord || type == Unit.UnitType.Hero || type == Unit.UnitType.Rare)
-                return units[type] + points + staticPoints <= twentyFivePercent;
+                return units[type] + points + prepayment <= twentyFivePercent;
 
             if (type == Unit.UnitType.Special)
-                return units[type] + points + staticPoints <= (twentyFivePercent * 2);
+                return units[type] + points + prepayment <= (twentyFivePercent * 2);
 
             return true;
         }

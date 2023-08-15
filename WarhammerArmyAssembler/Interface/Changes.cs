@@ -199,7 +199,7 @@ namespace WarhammerArmyAssembler.Interface
                 string type = unit.IsHero() ? "hero" : "unit";
                 Error($"Not enough points to add a {type}");
             }
-            else if (!Army.Checks.IsArmyUnitsPointsPercentOk(unit.Type, unit.Points, unit.StaticPoints))
+            else if (!Army.Checks.IsArmyUnitsPointsPercentOk(unit.Type, unit.Points, unit.Prepayment))
             {
                 string type = unit.UnitTypeName();
                 Error($"The {type} has reached a point cost limit");
@@ -232,7 +232,7 @@ namespace WarhammerArmyAssembler.Interface
             {
                 Error("The hero already has a mount");
             }
-            else if (!Army.Checks.IsArmyUnitsPointsPercentOk(currentUnit.Type, points, currentUnit.StaticPoints))
+            else if (!Army.Checks.IsArmyUnitsPointsPercentOk(currentUnit.Type, points, currentUnit.Prepayment))
             {
                 string type = currentUnit.UnitTypeName();
                 Error($"The {type} has reached a point cost limit");

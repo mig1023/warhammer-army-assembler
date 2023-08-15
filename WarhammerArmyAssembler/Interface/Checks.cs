@@ -7,7 +7,7 @@ namespace WarhammerArmyAssembler.Interface
         public static bool EnoughPointsForAddUnit(int id)
         {
             Unit unit = ArmyBook.Data.Units[id];
-            double points = unit.StaticPoints + (unit.Size * unit.Points);
+            double points = unit.Prepayment + (unit.Size * unit.Points);
             int maxPoints = Army.Params.GetArmyMaxPoints();
             double armyPoint = Army.Params.GetArmyPoints();
 
@@ -67,8 +67,8 @@ namespace WarhammerArmyAssembler.Interface
         public static bool EnoughPointsForEditUnit(int id, int newSize)
         {
             Unit unit = Army.Data.Units[id];
-            double newPrice = unit.StaticPoints + (newSize * unit.Points);
-            double currentPrice = unit.StaticPoints + (unit.Size * unit.Points);
+            double newPrice = unit.Prepayment + (newSize * unit.Points);
+            double currentPrice = unit.Prepayment + (unit.Size * unit.Points);
             double actualPoints = Army.Params.GetArmyMaxPoints() - Army.Params.GetArmyPoints();
 
             return (newPrice - currentPrice) <= actualPoints;

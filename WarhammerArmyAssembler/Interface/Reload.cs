@@ -40,8 +40,8 @@ namespace WarhammerArmyAssembler.Interface
 
                 unit.PointsView = $" {unit.Points} pts";
 
-                if (unit.StaticPoints != 0)
-                    unit.PointsView += $" (+{unit.StaticPoints} pts)";
+                if (unit.Prepayment != 0)
+                    unit.PointsView += $" (+{unit.Prepayment} pts)";
 
                 unit.InterfaceColor = ArmyBook.Data.FrontColor;
 

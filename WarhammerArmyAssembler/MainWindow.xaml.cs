@@ -239,7 +239,7 @@ namespace WarhammerArmyAssembler
             Unit u = e.Row.Item as Unit;
 
             double diff = u.GetUnitPoints() - Army.Data.Units[u.ID].GetUnitPoints();
-            bool armyPercentOk = Army.Checks.IsArmyUnitsPointsPercentOk(u.Type, diff, u.StaticPoints);
+            bool armyPercentOk = Army.Checks.IsArmyUnitsPointsPercentOk(u.Type, diff, u.Prepayment);
 
             if (!Interface.Checks.EnoughPointsForEditUnit(u.ID, u.Size))
             {

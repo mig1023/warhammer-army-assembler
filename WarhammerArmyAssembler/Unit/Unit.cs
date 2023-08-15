@@ -71,7 +71,7 @@ namespace WarhammerArmyAssembler
         public bool Singleton { get; set; }
 
         public double Points { get; set; }
-        public double StaticPoints { get; set; }
+        public double Prepayment { get; set; }
         public string PointsView { get; set; }
 
         public string Description { get; set; }
@@ -197,7 +197,7 @@ namespace WarhammerArmyAssembler
 
         public double GetUnitPoints()
         {
-            double points = StaticPoints + (Size * Points);
+            double points = Prepayment + (Size * Points);
 
             foreach (Option option in Options)
             {
@@ -349,7 +349,7 @@ namespace WarhammerArmyAssembler
                 ModelsInPack = this.ModelsInPack,
                 Singleton = this.Singleton,
                 Points = this.Points,
-                StaticPoints = this.StaticPoints,
+                Prepayment = this.Prepayment,
                 MountOn = this.MountOn,
                 MountInit = this.MountInit,
                 Description = this.Description,
