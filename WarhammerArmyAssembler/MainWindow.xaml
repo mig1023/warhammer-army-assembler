@@ -192,9 +192,9 @@
                     </Border>
                     <TextBlock x:Name="specialRulesTest" Text="" Canvas.Left="37" TextWrapping="Wrap" Canvas.Top="173"/>
                     <TextBlock x:Name="enemyGroupText" Text="Enemy type:" Canvas.Left="37" FontSize="16" TextWrapping="Wrap" Canvas.Top="193"/>
-                    <ComboBox x:Name="enemyGroup" Height="29" Canvas.Left="37" Canvas.Top="216" Width="279" FontSize="16" SelectionChanged="enemyGroup_SelectionChanged"/>
+                    <ComboBox x:Name="enemyGroup" Height="29" Canvas.Left="37" Canvas.Top="216" Width="279" FontSize="18" FontFamily="Courier New" VerticalContentAlignment="Center" SelectionChanged="enemyGroup_SelectionChanged"/>
                     <TextBlock x:Name="enemyForTestText" Text="Enemy for test:" Canvas.Left="37" FontSize="16" TextWrapping="Wrap" Canvas.Top="253"/>
-                    <ComboBox x:Name="enemyForTest" Height="29" Canvas.Left="37" Canvas.Top="276" Width="279" FontSize="16" SelectionChanged="enemyForTest_SelectionChanged"/>
+                    <ComboBox x:Name="enemyForTest" Height="29" Canvas.Left="37" Canvas.Top="276" Width="279" FontSize="18" FontFamily="Courier New" VerticalContentAlignment="Center" SelectionChanged="enemyForTest_SelectionChanged"/>
                     <Label x:Name="enemyTestUnit" Visibility="Hidden" Width="Auto" Content="" Canvas.Left="37" Canvas.Top="316" FontSize="22"/>
                     <Border x:Name="enemyGridContainer" Visibility="Hidden" BorderBrush="Black" BorderThickness="1" Canvas.Left="37" Canvas.Top="366">
                         <Grid x:Name="enemyGrid" Height="66" Width="531" ShowGridLines="True">
