@@ -84,5 +84,38 @@ namespace WarhammerArmyAssembler.Interface
 
         public static TextWrapping ChangeTextWrapping(TextBlock text) =>
             text.TextWrapping == TextWrapping.Wrap ? TextWrapping.NoWrap : TextWrapping.Wrap;
+
+        private static Dictionary<int, int> TabsbySizeData(bool unit)
+        {
+            if (unit)
+            {
+                return new Dictionary<int, int>
+                {
+                    [4] = 4,
+                    [11] = 3,
+                    [18] = 2,
+                };
+            }
+            else
+            {
+                return new Dictionary<int, int>
+                {
+                    [7] = 4,
+                    [14] = 3,
+                    [20] = 2,
+                };
+            }
+        }
+
+        public static string TabsBySize(int length, int size)
+        {
+            bool thisIsUnit = size > 0;
+
+            foreach (KeyValuePair<int, int> tab in TabsbySizeData(thisIsUnit))
+                if (length < tab.Key)
+                    return new string('\t', tab.Value);
+
+            return "\t";
+        }
     }
 }

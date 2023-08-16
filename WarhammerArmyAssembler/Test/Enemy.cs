@@ -14,12 +14,16 @@ namespace WarhammerArmyAssembler
         public Enemy(string enemyName, string armybook, int size) =>
             ArmyBook.Load.ArmyUnitOnly(armybook, enemyName, this, ArmyBook.Load.CommonXmlOption(null), size);
 
+
+
         public string Fullname()
         {
+            string tabs = Interface.Services.TabsBySize(this.Name.Length, this.Size);
+
             if (this.Size > 1)
-                return $"{this.Size} {this.Name} ({this.Armybook})";
+                return $"{this.Size} {this.Name}{tabs}({this.Armybook}) " + this.Name.Length.ToString();
             else
-                return $"{this.Name} ({this.Armybook})";
+                return $"{this.Name}{tabs}({this.Armybook}) " + this.Name.Length.ToString();
         }
 
         public static Enemy ByName(string enemyName)
