@@ -61,6 +61,7 @@ namespace WarhammerArmyAssembler
             ["FirstWoundDiscount"] = "Discounts the first wound",
             ["DogsOfWar"] = "Dogs of War",
             ["NotALeader"] = "Not a leader: can't be General, other models can never use this character's Leadership",
+            ["MagicResistance"] = "Magic resistance ([X])"
         };
 
         public static List<string> UnitParam = new List<string> {

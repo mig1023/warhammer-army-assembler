@@ -159,6 +159,7 @@ namespace WarhammerArmyAssembler
         public MagicItemsTypes MagicItemsType { get; set; }
         public int MagicPowers { get; set; }
         public int MagicPowersCount { get; set; }
+        public int MagicResistance { get; set; }
 
         public int MountOn { get; set; }
         public string MountInit { get; set; }
@@ -423,6 +424,7 @@ namespace WarhammerArmyAssembler
                 MagicItemsType = this.MagicItemsType,
                 MagicPowers = this.MagicPowers,
                 MagicPowersCount = this.MagicPowersCount,
+                MagicResistance = this.MagicResistance,
 
                 SizableType = this.SizableType,
                 VisibleType = this.VisibleType,

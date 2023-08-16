@@ -148,6 +148,7 @@ namespace WarhammerArmyAssembler
         public int LeadershipTo { get; set; }
         public int ArmourTo { get; set; }
         public int WizardTo { get; set; }
+        public int MagicResistance { get; set; }
 
         public int AddToModelsInPack { get; set; }
         public bool Command { get; set; }
@@ -304,6 +305,7 @@ namespace WarhammerArmyAssembler
             LeadershipTo = this.LeadershipTo,
             ArmourTo = this.ArmourTo,
             WizardTo = this.WizardTo,
+            MagicResistance = this.MagicResistance,
 
             AddToModelsInPack = this.AddToModelsInPack,
             Command = this.Command,

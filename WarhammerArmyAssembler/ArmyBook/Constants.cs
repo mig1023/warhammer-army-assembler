@@ -102,6 +102,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             "WardForLastWound",
             "FirstWoundDiscount",
             "DogsOfWar",
+            "MagicResistance",
         };
 
         public static List<string> OptionProperties = new List<string> {
@@ -181,6 +182,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             "PersonifiedCommander",
             "Mount",
             "OnlyRuleOption",
+            "MagicResistance",
         };
 
         public static Dictionary<int, int> ArmySizeAngles = new Dictionary<int, int>
