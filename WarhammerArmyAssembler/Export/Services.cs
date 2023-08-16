@@ -59,6 +59,9 @@ namespace WarhammerArmyAssembler.Export
 
             foreach (Option option in unit.Options)
             {
+                if (option.Countable == null)
+                    continue;
+
                 bool exportSize = option.Countable.ExportToUnitSize;
                 bool isValued = option.Countable.Value > 0;
 
