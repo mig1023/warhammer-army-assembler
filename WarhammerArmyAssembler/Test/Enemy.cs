@@ -21,9 +21,9 @@ namespace WarhammerArmyAssembler
             string tabs = Interface.Services.TabsBySize(this.Name.Length, this.Size);
 
             if (this.Size > 1)
-                return $"{this.Size} {this.Name}{tabs}({this.Armybook}) " + this.Name.Length.ToString();
+                return $"{this.Size} {this.Name}{tabs}{this.Armybook}";
             else
-                return $"{this.Name}{tabs}({this.Armybook}) " + this.Name.Length.ToString();
+                return $"{this.Name}{tabs}{this.Armybook}";
         }
 
         public static Enemy ByName(string enemyName)

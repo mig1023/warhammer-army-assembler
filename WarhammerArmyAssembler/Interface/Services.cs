@@ -109,7 +109,13 @@ namespace WarhammerArmyAssembler.Interface
 
         public static string TabsBySize(int length, int size)
         {
-            bool thisIsUnit = size > 0;
+            bool thisIsUnit = size > 1;
+
+            if (thisIsUnit && (length == 11) && (size < 10))
+                return new string('\t', 3);
+
+            if (thisIsUnit && (length == 17) && (size > 9))
+                return new string('\t', 1);
 
             foreach (KeyValuePair<int, int> tab in TabsbySizeData(thisIsUnit))
                 if (length < tab.Key)
