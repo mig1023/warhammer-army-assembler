@@ -496,7 +496,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             string imageByPath = StringParse(xmlUnit["Image"]);
 
             if (!String.IsNullOrEmpty(imageByPath))
-                return FullImagePath(imageByPath);
+                return FullImagePath(imageByPath, path);
 
             string imageByName = ImagePathByName(xmlUnit, path);
 
