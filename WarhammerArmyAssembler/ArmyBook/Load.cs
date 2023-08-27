@@ -480,8 +480,10 @@ namespace WarhammerArmyAssembler.ArmyBook
             newUnit.ArmyColor = (SolidColorBrush)Data.FrontColor;
             newUnit.TooltipColor = (SolidColorBrush)Data.TooltipColor;
 
+            string pathToImage = newUnit.DogsOfWar ? XmlBook.DogsOfWarImages : String.Empty;
+
             newUnit.Image = TryFindImage(xmlUnit, newUnit,
-                path: String.Empty, out bool anotherEdition);
+                path: pathToImage, out bool anotherEdition);
 
             newUnit.ImageFromAnotherEdition = anotherEdition;
 

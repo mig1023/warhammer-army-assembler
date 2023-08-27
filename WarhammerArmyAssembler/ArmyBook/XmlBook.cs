@@ -12,6 +12,8 @@ namespace WarhammerArmyAssembler.ArmyBook
         private static Dictionary<string, List<string>> HomologousSeries =
             new Dictionary<string, List<string>>();
 
+        public static string DogsOfWarImages = String.Empty;
+
         private static void AddHomologue(string head, string file)
         {
             if (HomologousSeries.ContainsKey(head))
@@ -118,6 +120,9 @@ namespace WarhammerArmyAssembler.ArmyBook
             Constants.EnemiesOptionPath = FindXmlFileByName(programDirectory, "Enemies.xml");
             Constants.DogOfWarPath = FindXmlFileByName(programDirectory, "DogsOfWar.xml");
 
+            if (!String.IsNullOrEmpty(Constants.DogOfWarPath))
+                DogsOfWarImages = Path.GetDirectoryName(Constants.DogOfWarPath) + "\\Images\\";
+
             SortedDictionary<string, string> files = new SortedDictionary<string, string>();
 
             try
@@ -141,7 +146,7 @@ namespace WarhammerArmyAssembler.ArmyBook
 
                     XmlNode armyName = Services.Intro(xmlFile, "Info/Army");
 
-                    if ((armyName == null) || (armyName.InnerText == "Dogs of War"))
+                    if (armyName == null)
                         continue;
 
                     XmlNode armyInternal = Services.Intro(xmlFile, "Internal");
