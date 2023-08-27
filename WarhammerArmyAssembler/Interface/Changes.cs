@@ -881,7 +881,8 @@ namespace WarhammerArmyAssembler.Interface
                 main.enemyGridContainer,
                 main.enemyGroupText,
                 main.enemyGroup,
-                main.startBattleRoyale
+                main.startBattleRoyale,
+                main.currentTest
             };
 
             foreach (FrameworkElement element in elements)
