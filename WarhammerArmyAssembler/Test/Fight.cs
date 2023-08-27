@@ -46,9 +46,9 @@ namespace WarhammerArmyAssembler.Test
             int len = name.Length + 6;
             string firestLineFix = (current == 0 ? "\n" : String.Empty);
 
-            Data.Console(Data.supplText, $"\n\t{new String('/', len)}\n{firestLineFix}");
-            Data.Console(Data.supplText, $"\t// {name.ToUpper()} //\n");
-            Data.Console(Data.supplText, $"\t{new String('/', len)}\n\n\n");
+            Data.Console(Data.supplText, $"\n{new String('/', len)}\n{firestLineFix}");
+            Data.Console(Data.supplText, $"// {name.ToUpper()} //\n");
+            Data.Console(Data.supplText, $"{new String('/', len)}\n\n");
         }
 
         public static void BattleRoyaleTest(Unit unit, Unit unitMount, IProgress<string> progress)
