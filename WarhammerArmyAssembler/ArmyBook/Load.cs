@@ -508,15 +508,29 @@ namespace WarhammerArmyAssembler.ArmyBook
             if (newUnit == null)
                 return String.Empty;
 
+            anotherEdition = true;
+
+            string imageByNameInOthers = ImagePathByName(xmlUnit, OthersImageFolder(path));
+
+            if (!String.IsNullOrEmpty(imageByNameInOthers))
+                return imageByNameInOthers;
+
             string imageByHomologue = Interface.Changes.TryHomologueImage(newUnit);
 
             if (!String.IsNullOrEmpty(imageByHomologue))
-            {
-                anotherEdition = true;
                 return imageByHomologue;
-            }
 
             return String.Empty;
+        }
+
+        private static string OthersImageFolder(string path)
+        {
+            List<string> pathsFolders = CurrentImageFolder(path)
+                .Split(new string[] { "\\" }, StringSplitOptions.RemoveEmptyEntries)
+                .ToList();
+
+            pathsFolders[pathsFolders.Count - 1] = "Others";
+            return String.Join("\\", pathsFolders) + "\\";
         }
 
         private static string ImagePathByName(XmlNode xmlUnit, string imagePath = "")
@@ -531,13 +545,11 @@ namespace WarhammerArmyAssembler.ArmyBook
             return File.Exists(pathByName) ? pathByName : String.Empty;
         }
 
-        private static string FullImagePath(string image, string imagePath = "")
-        {
-            string path = String.IsNullOrEmpty(imagePath) ?
-                Army.Data.UnitsImagesDirectory : imagePath;
+        private static string FullImagePath(string image, string path = "") =>
+            $"{CurrentImageFolder(path)}{image}.jpg";
 
-            return $"{path}{image}.jpg";
-        }
+        private static string CurrentImageFolder(string path) =>
+            String.IsNullOrEmpty(path) ? Army.Data.UnitsImagesDirectory : path;
 
         private static string AddCommonXmlSpecialRules(string specialRule) =>
             Constants.CommonXmlSpecialRules[specialRule];
