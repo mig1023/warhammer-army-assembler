@@ -495,10 +495,15 @@ namespace WarhammerArmyAssembler.ArmyBook
         {
             anotherEdition = false;
 
-            string imageByPath = StringParse(xmlUnit["Image"]);
+            string imageByTag = StringParse(xmlUnit["Image"]);
 
-            if (!String.IsNullOrEmpty(imageByPath))
-                return FullImagePath(imageByPath, path);
+            if (!String.IsNullOrEmpty(imageByTag))
+            {
+                string directPath = FullImagePath(imageByTag, path);
+
+                if (!String.IsNullOrEmpty(directPath))
+                    return directPath;
+            }
 
             string imageByName = ImagePathByName(xmlUnit, path);
 
@@ -507,13 +512,6 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             if (newUnit == null)
                 return String.Empty;
-
-            anotherEdition = true;
-
-            string imageByNameInOthers = ImagePathByName(xmlUnit, OthersImageFolder(path));
-
-            if (!String.IsNullOrEmpty(imageByNameInOthers))
-                return imageByNameInOthers;
 
             string imageByHomologue = Interface.Changes.TryHomologueImage(newUnit);
 
@@ -540,13 +538,23 @@ namespace WarhammerArmyAssembler.ArmyBook
                 .ToTitleCase(StringParse(xmlUnit["Name"])
                 .ToLower());
 
-            string pathByName = FullImagePath(name.Replace(" ", String.Empty), imagePath);
-
-            return File.Exists(pathByName) ? pathByName : String.Empty;
+            return FullImagePath(name.Replace(" ", String.Empty), imagePath);
         }
 
-        private static string FullImagePath(string image, string path = "") =>
-            $"{CurrentImageFolder(path)}{image}.jpg";
+        private static string FullImagePath(string image, string path = "")
+        {
+            string directPath = $"{CurrentImageFolder(path)}{image}.jpg";
+
+            if (File.Exists(directPath))
+                return directPath;
+
+            string othersPath = $"{OthersImageFolder(path)}{image}.jpg";
+
+            if (File.Exists(othersPath))
+                return othersPath;
+
+            return String.Empty;
+        }
 
         private static string CurrentImageFolder(string path) =>
             String.IsNullOrEmpty(path) ? Army.Data.UnitsImagesDirectory : path;
