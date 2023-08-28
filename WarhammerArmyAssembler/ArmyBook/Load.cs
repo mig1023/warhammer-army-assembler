@@ -499,13 +499,13 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             if (!String.IsNullOrEmpty(imageByTag))
             {
-                string directPath = FullImagePath(imageByTag, path);
+                string imagePath = FullImagePath(imageByTag, ref anotherEdition, path);
 
-                if (!String.IsNullOrEmpty(directPath))
-                    return directPath;
+                if (!String.IsNullOrEmpty(imagePath))
+                    return imagePath;
             }
 
-            string imageByName = ImagePathByName(xmlUnit, path);
+            string imageByName = ImagePathByName(xmlUnit, ref anotherEdition, path);
 
             if (!String.IsNullOrEmpty(imageByName))
                 return imageByName;
@@ -516,7 +516,10 @@ namespace WarhammerArmyAssembler.ArmyBook
             string imageByHomologue = Interface.Changes.TryHomologueImage(newUnit);
 
             if (!String.IsNullOrEmpty(imageByHomologue))
+            {
+                anotherEdition = true;
                 return imageByHomologue;
+            }
 
             return String.Empty;
         }
@@ -531,17 +534,17 @@ namespace WarhammerArmyAssembler.ArmyBook
             return String.Join("\\", pathsFolders) + "\\";
         }
 
-        private static string ImagePathByName(XmlNode xmlUnit, string imagePath = "")
+        private static string ImagePathByName(XmlNode xmlUnit, ref bool anotherEdition, string path = "")
         {
             string name = CultureInfo.CurrentCulture
                 .TextInfo
                 .ToTitleCase(StringParse(xmlUnit["Name"])
                 .ToLower());
 
-            return FullImagePath(name.Replace(" ", String.Empty), imagePath);
+            return FullImagePath(name.Replace(" ", String.Empty), ref anotherEdition, path);
         }
 
-        private static string FullImagePath(string image, string path = "")
+        private static string FullImagePath(string image, ref bool anotherEdition, string path = "")
         {
             string directPath = $"{CurrentImageFolder(path)}{image}.jpg";
 
@@ -551,7 +554,10 @@ namespace WarhammerArmyAssembler.ArmyBook
             string othersPath = $"{OthersImageFolder(path)}{image}.jpg";
 
             if (File.Exists(othersPath))
+            {
+                anotherEdition = true;
                 return othersPath;
+            }
 
             return String.Empty;
         }
