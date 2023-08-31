@@ -285,7 +285,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             Data.DemonicMortal = BoolParse(Services.Intro(xmlFile, "DemonicMortal"));
 
             string path = Path.GetDirectoryName(xmlFileName);
-            XmlNode folder = xmlFile.SelectSingleNode("ArmyBook/Introduction/Styles/Images/Folders/Units");
+            XmlNode folder = Services.Intro(xmlFile, "Styles/Images/Folders/Units");
             Army.Data.UnitsImagesDirectory = $"{path}\\Images\\{StringParse(folder)}\\";
 
             Interface.Mod.SetArmyGridAltColor(Data.GridColor);

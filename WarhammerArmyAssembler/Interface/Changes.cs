@@ -425,18 +425,25 @@ namespace WarhammerArmyAssembler.Interface
             }
         }
 
-        private static BitmapImage GetImage(string imageName, string armyName)
-        {
-            string path = Path.GetDirectoryName(armyName);
-            return new BitmapImage(new Uri($"{path}\\Images\\{imageName}"));
-        }
+        private static BitmapImage GetImage(string imageName) =>
+            new BitmapImage(new Uri(imageName));
 
-        public static void LoadArmyImage(XmlNode imageName, string armyName)
+        public static void LoadArmyImage(XmlNode imageName, string armyName) =>
+            main.armySymbol.Source = GetImage(ImagesFilesName(imageName, armyName, "Symbol.png"));
+
+        private static string ImagesFilesName(XmlNode imageName, string armyName, string defaultName)
         {
-            if (imageName != null)
-                main.armySymbol.Source = GetImage(imageName.InnerText, armyName);
+            if (imageName == null)
+            {
+                return String.Empty;
+            }
             else
-                main.armySymbol.Source = null;
+            {
+                string path = Path.GetDirectoryName(armyName);
+                string line = imageName.InnerText;
+                string name = String.IsNullOrEmpty(line) ? defaultName : line;
+                return $"{path}\\Images\\{name}";
+            }
         }
 
         public static bool ConfirmedDataCleaning()
@@ -476,12 +483,13 @@ namespace WarhammerArmyAssembler.Interface
             XmlDocument xmlFile = new XmlDocument();
             xmlFile.Load(armyName);
 
-            string armyFile = Intro(xmlFile, "Styles/Images/Files/Cover").InnerText;
-            changeArmybook.imageArmybook.Source = GetImage(armyFile, armyName);
-
             string edition = Intro(xmlFile, "Info/Edition").InnerText;
             changeArmybook.listArmybookVer.Content = $"{edition}th edition";
             changeArmybook.UpdateLayout();
+
+            XmlNode cover = Intro(xmlFile, "Styles/Images/Files/Cover");
+            changeArmybook.imageArmybook.Source = GetImage(
+                ImagesFilesName(cover, armyName, $"Cover{edition}.png"));
 
             Brush mainColor = Services.BrushFromXml(StyleColor(xmlFile, "Front"));
 
@@ -578,9 +586,18 @@ namespace WarhammerArmyAssembler.Interface
                 XmlDocument xmlFile = new XmlDocument();
                 xmlFile.Load(armyName);
 
-                XmlNode armyFile = Intro(xmlFile, "Styles/Images/Files/Cover");
-                string path = Path.GetDirectoryName(armyName);
-                string source = $"{path}\\Images\\{armyFile.InnerText}";
+                string head = StringParse(Intro(xmlFile, "Info/Army")).ToUpper();
+                string edition = StringParse(Intro(xmlFile, "Info/Edition"));
+                string description = StringParse(Intro(xmlFile, "Info/Description"));
+                string authors = StringParse(Intro(xmlFile, "Info/Authors"));
+                int released = IntParse(Intro(xmlFile, "Info/Released"));
+
+                Brush backColor = Services.BrushFromXml(StyleColor(xmlFile, "Tooltip"));
+                Brush lineColor = Services.BrushFromXml(StyleColor(xmlFile, "Front"));
+
+                XmlNode cover = Intro(xmlFile, "Styles/Images/Files/Cover");
+                //string path = Path.GetDirectoryName(armyName);
+                string source = ImagesFilesName(cover, armyName, $"Cover{edition}.png");
 
                 Image newImage = new Image()
                 {
@@ -589,25 +606,9 @@ namespace WarhammerArmyAssembler.Interface
                     Stretch = Stretch.UniformToFill,
                 };
 
-                string head = StringParse(Intro(xmlFile, "Info/Army")).ToUpper();
-                string edition = StringParse(Intro(xmlFile, "Info/Edition"));
-                string description = StringParse(Intro(xmlFile, "Info/Description"));
-                string authors = StringParse(Intro(xmlFile, "Info/Authors"));
-                int released = IntParse(Intro(xmlFile, "Info/Released"));
-                string illustration = StringParse(Intro(xmlFile, "Styles/Images/Files/Illustration"));
-
-                Brush backColor = Services.BrushFromXml(StyleColor(xmlFile, "Tooltip"));
-                Brush lineColor = Services.BrushFromXml(StyleColor(xmlFile, "Front"));
-
-                if (String.IsNullOrEmpty(illustration))
-                {
-                    illustration = source;
-                }
-                else
-                {
-                    string picturePath = Path.GetDirectoryName(armyName);
-                    illustration = $"{picturePath}\\Images\\{illustration}";
-                }
+                XmlNode illustrationNode = Intro(xmlFile, "Styles/Images/Files/Illustration");
+                string illustration = ImagesFilesName(illustrationNode, armyName, $"Illustration{edition}.jpg");
+                //string illustration = $"{path}\\Images\\{pictureFile}";
 
                 int armyEdition = int.Parse(edition);
 
