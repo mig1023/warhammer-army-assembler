@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Windows.Media;
 
 namespace WarhammerArmyAssembler.Army
 {
@@ -190,14 +191,21 @@ namespace WarhammerArmyAssembler.Army
             return newUnit;
         }
 
+        private static Unit ArmyCategoryUnit(string name) => new Unit()
+        {
+            Name = name,
+            TooltipColor = (SolidColorBrush)ArmyBook.Data.TooltipColor,
+            Description = name
+        };
+
         public static List<Unit> GetArmyCategories() => new List<Unit>
         {
-            new Unit() { Name = "Lords" },
-            new Unit() { Name = "Heroes" },
-            new Unit() { Name = "Core" },
-            new Unit() { Name = "Special" },
-            new Unit() { Name = "Rare" },
-            new Unit() { Name = "Dogs of War" },
+            ArmyCategoryUnit("Lords"),
+            ArmyCategoryUnit("Heroes"),
+            ArmyCategoryUnit("Core"),
+            ArmyCategoryUnit("Special"),
+            ArmyCategoryUnit("Rare"),
+            ArmyCategoryUnit("Dogs of War"),
         };
 
         public static Unit GetArmyGeneral() =>
