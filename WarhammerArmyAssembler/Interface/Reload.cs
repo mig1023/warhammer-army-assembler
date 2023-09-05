@@ -67,7 +67,7 @@ namespace WarhammerArmyAssembler.Interface
 
             foreach (string artefactType in artefactsTypes)
             {
-                Option artefacts = new Option() { Name = artefactType };
+                Option artefacts = Army.Params.GetCategoryArtefact(artefactType);
 
                 foreach (Option entry in ArmyBook.Data.Artefact.Values)
                 {

@@ -191,21 +191,28 @@ namespace WarhammerArmyAssembler.Army
             return newUnit;
         }
 
-        private static Unit ArmyCategoryUnit(string name) => new Unit()
+        private static Unit GetCategoryUnit(string name) => new Unit()
         {
             Name = name,
             TooltipColor = (SolidColorBrush)ArmyBook.Data.TooltipColor,
-            Description = name
+            Description = name.ToUpper()
+        };
+
+        public static Option GetCategoryArtefact(string name) => new Option()
+        {
+            Name = name,
+            TooltipColor = (SolidColorBrush)ArmyBook.Data.TooltipColor,
+            Description = name.ToUpper()
         };
 
         public static List<Unit> GetArmyCategories() => new List<Unit>
         {
-            ArmyCategoryUnit("Lords"),
-            ArmyCategoryUnit("Heroes"),
-            ArmyCategoryUnit("Core"),
-            ArmyCategoryUnit("Special"),
-            ArmyCategoryUnit("Rare"),
-            ArmyCategoryUnit("Dogs of War"),
+            GetCategoryUnit("Lords"),
+            GetCategoryUnit("Heroes"),
+            GetCategoryUnit("Core"),
+            GetCategoryUnit("Special"),
+            GetCategoryUnit("Rare"),
+            GetCategoryUnit("Dogs of War"),
         };
 
         public static Unit GetArmyGeneral() =>
