@@ -1227,12 +1227,16 @@ namespace WarhammerArmyAssembler
                 rules.Add(specialRule.Value.Replace("[X]", paramValue));
             }
 
-            Test.Param.Describe(ParamTests, ref rules);
-
-            if (!onlyUnitParam)
+            if (ParamTests != null)
             {
-                foreach (Option option in Options)
-                    Test.Param.Describe(option.ParamTests, ref rules);
+                Test.Param.Describe(ParamTests, ref rules);
+
+                if (!onlyUnitParam)
+                {
+                    foreach (Option option in Options)
+                        if (option.ParamTests != null)
+                            Test.Param.Describe(option.ParamTests, ref rules);
+                }
             }
 
             List<Option> specialRules = Options

@@ -72,9 +72,10 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <Image x:Name="armyUnitImage" Grid.Row="0" Grid.Column="0" Margin="30" Stretch="Uniform" />
-                    <Canvas x:Name="armybookDetail" Grid.Row="0" Grid.Column="1" Height="300" VerticalAlignment="Center" Background="White">
-                        <Label x:Name="armyUnitName" FontSize="28" Content="" Width="Auto" Margin="18,5"/>
-                        <TextBlock x:Name="armyUnitDescription" Height="Auto" TextWrapping="Wrap" Margin="20,85"/>
+                    <!--<Canvas x:Name="armybookDetail" Grid.Row="0" Grid.Column="1" Height="300" VerticalAlignment="Center" Background="White">-->
+                    <StackPanel x:Name="armybookDetail" Grid.Row="0" Grid.Column="1" Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Left" Background="White">
+                        <Label x:Name="armyUnitName" FontSize="28" Content=""/>
+                        <TextBlock x:Name="armyUnitDescription" Height="Auto" TextWrapping="Wrap"/>
                         <Border x:Name="detailUnitGridBorder" BorderBrush="Black" BorderThickness="1">
                             <Grid x:Name="detailUnitGrid" ShowGridLines="True">
                                 <Grid.RowDefinitions>
@@ -114,9 +115,11 @@
                                 <Label Content="{Binding Leadership.View}" Template="{StaticResource detailProfile}" Grid.Row="1" Grid.Column="8"/>
                             </Grid>
                         </Border>
-                        <TextBlock x:Name="profileMods" Height="Auto" Margin="20,105"/>
-                        <TextBlock x:Name="armyUnitSpecific" Height="Auto" Width="200" TextWrapping="Wrap" Margin="20,105"/>
-                    </Canvas>
+                        <TextBlock x:Name="profileMods" Height="Auto"/>
+                        <TextBlock x:Name="armyUnitSpecific" Height="Auto" Width="200" TextWrapping="Wrap"/>
+                        <TextBlock x:Name="specialRules"  Height="Auto" Width="400" TextWrapping="Wrap"/>
+                    </StackPanel>
+                    <!--</Canvas>-->
                 </Grid>
             </ScrollViewer>
 

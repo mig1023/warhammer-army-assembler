@@ -146,36 +146,36 @@ namespace WarhammerArmyAssembler
 
             UpdateLayout();
 
-            double descrHeight = armyUnitDescription.ActualHeight > 0 ?
-                armyUnitDescription.ActualHeight : 20;
+            //double descrHeight = armyUnitDescription.ActualHeight > 0 ?
+            //    armyUnitDescription.ActualHeight : 20;
 
-            double specHeight = armyUnitSpecific.ActualHeight > 0 ?
-                armyUnitSpecific.ActualHeight : 20;
+            //double specHeight = armyUnitSpecific.ActualHeight > 0 ?
+            //    armyUnitSpecific.ActualHeight : 20;
 
-            double paramsHeight = detailUnitGrid.ActualHeight > 0 ?
-                detailUnitGrid.ActualHeight : 20;
+            //double paramsHeight = detailUnitGrid.ActualHeight > 0 ?
+            //    detailUnitGrid.ActualHeight : 20;
             
-            armybookArtefactDetail.Height = armyUnitDescription.Margin.Top + 
-                descrHeight + specHeight + 20;
+            //armybookArtefactDetail.Height = armyUnitDescription.Margin.Top + 
+            //    descrHeight + specHeight + 20;
 
-            armybookDetail.Height = armybookArtefactDetail.Height + paramsHeight;
+            //armybookDetail.Height = armybookArtefactDetail.Height + paramsHeight +500;
 
-            double top = armyUnitDescription.Margin.Top + 35;
-            detailUnitGridBorder.Margin = Interface.Changes.Thick(armybookDetail, left: 20, top: top);
+            //double top = armyUnitDescription.Margin.Top + 35;
+            //detailUnitGridBorder.Margin = Interface.Changes.Thick(armybookDetail, left: 20, top: top);
 
-            top += armyUnitDescription.ActualHeight + detailUnitGrid.ActualHeight - 5;
-            armyUnitSpecific.Margin = Interface.Changes.Thick(armybookDetail, left: 20, top: top);
+            //top += armyUnitDescription.ActualHeight + detailUnitGrid.ActualHeight - 5;
+            //armyUnitSpecific.Margin = Interface.Changes.Thick(armybookDetail, left: 20, top: top);
 
-            double detailGridSubline = detailUnitGridBorder.Margin.Top + detailUnitGridBorder.ActualHeight;
+            //double detailGridSubline = detailUnitGridBorder.Margin.Top + detailUnitGridBorder.ActualHeight;
 
-            profileMods.Margin = Interface.Changes.Thick(detailUnitGridBorder, 
-                left: 230, top: detailGridSubline);
+            //profileMods.Margin = Interface.Changes.Thick(detailUnitGridBorder, 
+            //    left: 230, top: detailGridSubline);
 
             armyUnitSpecific.Foreground = ArmyBook.Data.FrontColor;
 
-            top = armyArtefactDescription.Margin.Top + armyArtefactDescription.ActualHeight + 15;
-            armyArtefactSpecific.Margin = Interface.Changes.Thick(armyArtefactSpecific, 
-                left: 20, top: top);
+            //top = armyArtefactDescription.Margin.Top + armyArtefactDescription.ActualHeight + 15;
+            //armyArtefactSpecific.Margin = Interface.Changes.Thick(armyArtefactSpecific, 
+            //    left: 20, top: top);
             armyArtefactSpecific.Foreground = ArmyBook.Data.FrontColor;
         }
 
