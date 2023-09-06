@@ -914,14 +914,27 @@ namespace WarhammerArmyAssembler
         }
 
         public string GetSpecialRulesLine(bool withCommandData = false,
-            bool onlyUnitParam = false, bool withoutWizards = false)
+            bool onlyUnitParam = false, bool withoutWizards = false,
+            bool detail = false)
         {
             string rules = withCommandData ? GetCommandGroupLine() : String.Empty;
+            int index = 0;
+
+            if (detail)
+                rules += "Special rules:\n";
 
             foreach (string rule in GetSpecialRules(onlyUnitParam, withoutWizards))
-                rules += $"{rule}; ";
+            {
+                index += 1;
 
-            if (!String.IsNullOrEmpty(rules))
+                if (detail)
+                    rules += $"{index}. {rule}\n";
+                else
+                    rules += $"{rule}; ";
+            }
+                
+
+            if (!detail && !String.IsNullOrEmpty(rules))
                 rules = rules.Remove(rules.Length - 2);
 
             return rules;

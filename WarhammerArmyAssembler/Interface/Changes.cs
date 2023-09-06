@@ -826,7 +826,7 @@ namespace WarhammerArmyAssembler.Interface
             main.armyUnitName.Content = unit.Name.ToUpper();
             main.armyUnitDescription.Text = unit.Description;
             main.armyUnitSpecific.Text = unit.SelfDescription();
-            main.specialRules.Text = unit.GetSpecialRulesLine();
+            main.specialRules.Text = unit.GetSpecialRulesLine(detail: true);
             main.detailUnitGrid.DataContext = unit.GetOptionRules(out bool hasMods);
 
             main.UpdateLayout();

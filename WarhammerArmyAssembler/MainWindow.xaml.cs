@@ -146,36 +146,7 @@ namespace WarhammerArmyAssembler
 
             UpdateLayout();
 
-            //double descrHeight = armyUnitDescription.ActualHeight > 0 ?
-            //    armyUnitDescription.ActualHeight : 20;
-
-            //double specHeight = armyUnitSpecific.ActualHeight > 0 ?
-            //    armyUnitSpecific.ActualHeight : 20;
-
-            //double paramsHeight = detailUnitGrid.ActualHeight > 0 ?
-            //    detailUnitGrid.ActualHeight : 20;
-            
-            //armybookArtefactDetail.Height = armyUnitDescription.Margin.Top + 
-            //    descrHeight + specHeight + 20;
-
-            //armybookDetail.Height = armybookArtefactDetail.Height + paramsHeight +500;
-
-            //double top = armyUnitDescription.Margin.Top + 35;
-            //detailUnitGridBorder.Margin = Interface.Changes.Thick(armybookDetail, left: 20, top: top);
-
-            //top += armyUnitDescription.ActualHeight + detailUnitGrid.ActualHeight - 5;
-            //armyUnitSpecific.Margin = Interface.Changes.Thick(armybookDetail, left: 20, top: top);
-
-            //double detailGridSubline = detailUnitGridBorder.Margin.Top + detailUnitGridBorder.ActualHeight;
-
-            //profileMods.Margin = Interface.Changes.Thick(detailUnitGridBorder, 
-            //    left: 230, top: detailGridSubline);
-
             armyUnitSpecific.Foreground = ArmyBook.Data.FrontColor;
-
-            //top = armyArtefactDescription.Margin.Top + armyArtefactDescription.ActualHeight + 15;
-            //armyArtefactSpecific.Margin = Interface.Changes.Thick(armyArtefactSpecific, 
-            //    left: 20, top: top);
             armyArtefactSpecific.Foreground = ArmyBook.Data.FrontColor;
         }
 
@@ -369,9 +340,6 @@ namespace WarhammerArmyAssembler
 
             double margin = e.NewSize.Width - closeErrorDetail.Width - 10;
             closeErrorDetail.Margin = new Thickness(Interface.Changes.ZeroFuse(margin), 10, 0, 0);
-
-            foreach (TextBlock text in new List<TextBlock> { armyUnitDescription, armyUnitSpecific })
-                text.Width = Interface.Changes.ZeroFuse((e.NewSize.Width/2) - 75);
 
             foreach (TextBlock text in new List<TextBlock> { armyArtefactDescription, armyArtefactSpecific })
                 text.Width = Interface.Changes.ZeroFuse(e.NewSize.Width - 75);
