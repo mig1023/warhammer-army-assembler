@@ -72,7 +72,7 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <Image x:Name="armyUnitImage" Grid.Row="0" Grid.Column="0" Margin="30" Stretch="Uniform" />
-                    <StackPanel x:Name="armybookDetail" Grid.Row="0" Grid.Column="1" Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Left" Background="White" Margin="0, 0, 25, 0">
+                    <StackPanel x:Name="armybookDetail" Grid.Row="0" Grid.Column="1" Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="0, 0, 35, 0">
                         <Label x:Name="armyUnitName" FontSize="28" Content="" HorizontalAlignment="Left"/>
                         <TextBlock x:Name="armyUnitDescription" Height="Auto" Margin="0, 25" TextWrapping="Wrap"/>
                         <Border x:Name="detailUnitGridBorder" BorderBrush="Black" BorderThickness="1">
