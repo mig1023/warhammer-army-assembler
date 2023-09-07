@@ -345,5 +345,20 @@ namespace WarhammerArmyAssembler.ArmyBook
                 element.GetType().GetProperty(name).SetValue(element, propetyValue);
             }
         }
+
+        private static string TitleCase(string line) =>
+            System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(line.ToLower());
+
+        public static string CamelNameParse(string name)
+        {
+            List<string> multiWords = Regex
+                .Split(name, @"(?<!^)(?=[A-Z])")
+                .ToList();
+
+            if (multiWords.Count < 2)
+                return name;
+            else
+                return String.Join(" ", multiWords);
+        }
     }
 }
