@@ -81,7 +81,7 @@
 	</Introduction>
 	<Content>
 		<Artefacts>
-			<Weapons Name="Virtues of the Chivalric Knight">
+			<Virtues Name="Virtues of the Chivalric Knight">
 				<Weapon>
 					<Name>Virtue of the Penitent</Name>
 					<Virtue/>
@@ -183,8 +183,8 @@
 					<Rule>Peasant units within 12" of him may use his Leadership</Rule>
 					<Description>The Knight may be fielded on foot. In addition, if he is not the army's General, Peasant units within 12" of him may use his Leadership, rather than the normal distance of 6"</Description>
 				</Weapon>
-			</Weapons>
-			<CommonItems Name="Common magic items">
+			</Virtues>
+			<Commons Name="Common magic items">
 				<SwordOfStriking Points="30"/>
 				<SwordOfBattle Points="25"/>
 				<SwordOfMight Points="20"/>
@@ -195,8 +195,8 @@
 				<DispellScroll Points="25"/>
 				<PowerStone Points="25"/>
 				<WarBanner Points="25"/>
-			</CommonItems>
-			<Weapons Name="Magic Weapons">
+			</Commons>
+			<MagicWeapons>
 				<Weapon>
 					<Name>The Silver Lance of the Blessed</Name>
 					<Points>65</Points>
@@ -268,8 +268,8 @@
 					<Rule>Once per game, may make a breath attack from the tip of the lance at Strength 3 provided he is not in close combat</Rule>
 					<Description>The bearer has +2 Strength on the charge when mounted. In addition, once per game, the model wielding the Wyrmlance may make a breath attack from the tip of the lance at Strength 3 provided he is not in close combat. Furthermore, all attacks made by the Wyrmlance count as flaming attacks</Description>
 				</Weapon>
-			</Weapons>
-			<MagicArmour>
+			</MagicWeapons>
+			<MagicArmours>
 				<Armour>
 					<Name>Gilded Cuirass</Name>
 					<Points>55</Points>
@@ -321,7 +321,7 @@
 					<Rule>Any unengaged Ore or Goblin unit within 12" that must take an Animosity test fails it on a 1-2 instead of a 1</Rule>
 					<Description>Gives a 6+ Armour save and may be combined with other armour as normal. Any unengaged Ore or Goblin unit within 12" that must take an Animosity test fails it on a 1-2 instead of a 1</Description>
 				</Shield>
-			</MagicArmour>
+			</MagicArmours>
 			<Talismans>
 				<Additional>
 					<Name>Sirienne's Locket</Name>
@@ -408,7 +408,7 @@
 					<Description>Any challenge issued by the bearer of the Gauntlet of the Duel cannot be refused</Description>
 				</Additional>
 			</EnchantedItems>
-			<ArcaneItems>
+			<Arcanes Name="Arcane items">
 				<Arcane>
 					<Name>The Silver Mirror</Name>
 					<Points>40</Points>
@@ -446,8 +446,8 @@
 					<Rule>This is used before rolling the dice to cast or dispel a spell: after the dice are rolled, the player may add +1 to the result of one dice, one use only</Rule>
 					<Description>One use only. This is used before rolling the dice to cast or dispel a spell. After the dice are rolled, the player may add +1 to the result of one dice. This may cause Irresistible Force or prevent a Miscast</Description>
 				</Arcane>
-			</ArcaneItems>
-			<Group Name="Magic Banners">
+			</Arcanes>
+			<MagicBanners>
 				<Banner>
 					<Name>Banner of the Lady</Name>
 					<Points>100</Points>
@@ -490,7 +490,7 @@
 					<Rule>The enemy cannot choose the stand and shoot reaction</Rule>
 					<Description>The enemy cannot choose the stand and shoot reaction against the unit carrying the Banner</Description>
 				</Banner>
-			</Group>
+			</MagicBanners>
 		</Artefacts>
 		<Heroes>
 			<Lord>
