@@ -214,18 +214,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 string value = option.InnerText;
 
                 if (String.IsNullOrEmpty(value))
-                    value = Parsers.CamelNameParse(option.Name);
-                if (String.IsNullOrEmpty(value))
-                {
-                    List<string> multiWords = Regex
-                        .Split(option.Name, @"(?<!^)(?=[A-Z])")
-                        .ToList();
-
-                    if (multiWords.Count < 2)
-                        value = option.Name;
-                    else
-                        value = String.Join(" ", multiWords);
-                };
+                    value = Services.CamelNameSplit(option.Name, raw: true);
                 
                 ruleList.Add(option.Name, value);
             }
@@ -307,7 +296,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 string groupName = xmlArtefactGroup.Attributes["Name"]?.Value ?? String.Empty;
 
                 if (String.IsNullOrEmpty(groupName))
-                    groupName = Parsers.CamelNameParse(xmlArtefactGroup.Name);
+                    groupName = Services.CamelNameSplit(xmlArtefactGroup.Name);
 
                 foreach (XmlNode xmlArtefact in xmlArtefactGroup.SelectNodes("*"))
                 {
