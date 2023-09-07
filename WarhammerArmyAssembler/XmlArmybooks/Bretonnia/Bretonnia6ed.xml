@@ -269,7 +269,7 @@
 					<Description>The bearer has +2 Strength on the charge when mounted. In addition, once per game, the model wielding the Wyrmlance may make a breath attack from the tip of the lance at Strength 3 provided he is not in close combat. Furthermore, all attacks made by the Wyrmlance count as flaming attacks</Description>
 				</Weapon>
 			</Weapons>
-			<Armours Name="Magic Armour">
+			<MagicArmour>
 				<Armour>
 					<Name>Gilded Cuirass</Name>
 					<Points>55</Points>
@@ -321,8 +321,8 @@
 					<Rule>Any unengaged Ore or Goblin unit within 12" that must take an Animosity test fails it on a 1-2 instead of a 1</Rule>
 					<Description>Gives a 6+ Armour save and may be combined with other armour as normal. Any unengaged Ore or Goblin unit within 12" that must take an Animosity test fails it on a 1-2 instead of a 1</Description>
 				</Shield>
-			</Armours>
-			<Group Name="Talismans">
+			</MagicArmour>
+			<Talismans>
 				<Additional>
 					<Name>Sirienne's Locket</Name>
 					<Points>55</Points>
@@ -361,8 +361,8 @@
 					<ImmuneToPoison/>
 					<Description>Poisoned attacks do not wound automatically against a character with the Mantle. In addition, the special rules for Killing Blow-have no effect on the character</Description>
 				</Additional>
-			</Group>
-			<Group Name="Enchanted Items">
+			</Talismans>
+			<EnchantedItems>
 				<Additional>
 					<Name>Falcon-horn of Fredemund</Name>
 					<Points>45</Points>
@@ -407,7 +407,7 @@
 					<Rule>Any challenge issued cannot be refused</Rule>
 					<Description>Any challenge issued by the bearer of the Gauntlet of the Duel cannot be refused</Description>
 				</Additional>
-			</Group>
+			</EnchantedItems>
 			<Group Name="Arcane Items">
 				<Arcane>
 					<Name>The Silver Mirror</Name>
