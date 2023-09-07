@@ -298,7 +298,7 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             LoadDogsOfWar(Army.Data.Internal);
 
-            foreach (XmlNode xmlArtefactGroup in xmlFile.SelectNodes("ArmyBook/Content/Artefacts/Group"))
+            foreach (XmlNode xmlArtefactGroup in xmlFile.SelectNodes("ArmyBook/Content/Artefacts/*"))
             {
                 string groupName = xmlArtefactGroup.Attributes["Name"].Value;
 
