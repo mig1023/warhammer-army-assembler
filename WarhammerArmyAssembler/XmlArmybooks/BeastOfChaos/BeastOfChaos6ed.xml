@@ -127,7 +127,7 @@
 	</Introduction>
 	<Content>
 		<Artefacts>
-			<CommonItems Name="Common magic items">
+			<Commons Name="Common magic items">
 				<SwordOfStriking Points="30"/>
 				<SwordOfBattle Points="25"/>
 				<SwordOfMight Points="20"/>
@@ -138,8 +138,8 @@
 				<DispellScroll Points="25"/>
 				<PowerStone Points="25"/>
 				<WarBanner Points="25"/>
-			</CommonItems>
-			<Group Name="Magic Weapons">
+			</Commons>
+			<MagicWeapons>
 				<Weapon>
 					<Name>Axes of Khorgor</Name>
 					<Points>65</Points>
@@ -183,7 +183,7 @@
 					<Rule>Rolls of 6 to wound allow no Armour saves</Rule>
 					<Description>Rolls of 6 to wound with this weapon allow no Armour saves</Description>
 				</Weapon>
-			</Group>
+			</MagicWeapons>
 			<Group Name="Magic Armour">
 				<Additional>
 					<Name>Pelt of The Dark Young</Name>
