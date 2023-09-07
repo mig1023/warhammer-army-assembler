@@ -300,7 +300,10 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             foreach (XmlNode xmlArtefactGroup in xmlFile.SelectNodes("ArmyBook/Content/Artefacts/*"))
             {
-                string groupName = xmlArtefactGroup.Attributes["Name"].Value;
+                string groupName = xmlArtefactGroup.Attributes["Name"]?.Value ?? String.Empty;
+
+                if (String.IsNullOrEmpty(groupName))
+                    groupName = xmlArtefactGroup.Name;
 
                 foreach (XmlNode xmlArtefact in xmlArtefactGroup.SelectNodes("*"))
                 {
