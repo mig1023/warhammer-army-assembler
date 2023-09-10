@@ -296,7 +296,10 @@ namespace WarhammerArmyAssembler.ArmyBook
                 string groupName = xmlArtefactGroup.Attributes["Name"]?.Value ?? String.Empty;
 
                 if (String.IsNullOrEmpty(groupName))
-                    groupName = Services.CamelNameSplit(xmlArtefactGroup.Name);
+                {
+                    bool common = xmlArtefactGroup.Name.StartsWith("Common");
+                    groupName = Services.CamelNameSplit(xmlArtefactGroup.Name, pathetic: !common);
+                }
 
                 foreach (XmlNode xmlArtefact in xmlArtefactGroup.SelectNodes("*"))
                 {

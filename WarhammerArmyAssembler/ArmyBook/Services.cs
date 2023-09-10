@@ -92,7 +92,8 @@ namespace WarhammerArmyAssembler.ArmyBook
             return new String(upper);
         }
 
-        public static string CamelNameSplit(string name, bool raw = false)
+        public static string CamelNameSplit(string name,
+            bool raw = false, bool pathetic = false)
         {
             List<string> multiWords = Regex
                 .Split(name, @"(?<!^)(?=[A-Z])")
@@ -106,6 +107,11 @@ namespace WarhammerArmyAssembler.ArmyBook
             else if (raw)
             {
                 return String.Join(" ", multiWords);
+            }
+            else if (pathetic)
+            {
+                for (int i = 0; i < multiWords.Count; i++)
+                    multiWords[i] = CaptalLetter(multiWords[i]);
             }
             else if (multiWords[1] == "of")
             {
