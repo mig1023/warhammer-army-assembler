@@ -79,6 +79,7 @@
                             <Grid x:Name="detailUnitGrid" ShowGridLines="True">
                                 <Grid.RowDefinitions>
                                     <RowDefinition/>
+                                    <RowDefinition/>
                                     <RowDefinition Height="35"/>
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
@@ -103,15 +104,25 @@
                                 <Label Content="Attacks" Template="{StaticResource detailLtlProfile}" Grid.Row="0" Grid.Column="7"/>
                                 <Label Content="Leadership" Template="{StaticResource detailLtlProfile}" Grid.Row="0" Grid.Column="8"/>
 
-                                <Label Content="{Binding Movement.View}" Template="{StaticResource detailProfile}" Grid.Row="1" Grid.Column="0"/>
-                                <Label Content="{Binding WeaponSkill.View}" Template="{StaticResource detailProfile}" Grid.Row="1" Grid.Column="1"/>
-                                <Label Content="{Binding BallisticSkill.View}" Template="{StaticResource detailProfile}" Grid.Row="1" Grid.Column="2"/>
-                                <Label Content="{Binding Strength.View}" Template="{StaticResource detailProfile}" Grid.Row="1" Grid.Column="3"/>
-                                <Label Content="{Binding Toughness.View}" Template="{StaticResource detailProfile}" Grid.Row="1" Grid.Column="4"/>
-                                <Label Content="{Binding Wounds.View}" Template="{StaticResource detailProfile}" Grid.Row="1" Grid.Column="5"/>
-                                <Label Content="{Binding Initiative.View}" Template="{StaticResource detailProfile}" Grid.Row="1" Grid.Column="6"/>
-                                <Label Content="{Binding Attacks.View}" Template="{StaticResource detailProfile}" Grid.Row="1" Grid.Column="7"/>
-                                <Label Content="{Binding Leadership.View}" Template="{StaticResource detailProfile}" Grid.Row="1" Grid.Column="8"/>
+                                <Label Content="M" Template="{StaticResource detailProfile}" Foreground="{Binding ArmyColor}" Grid.Row="1" Grid.Column="0"/>
+                                <Label Content="WS" Template="{StaticResource detailProfile}" Foreground="{Binding ArmyColor}" Grid.Row="1" Grid.Column="1"/>
+                                <Label Content="BS" Template="{StaticResource detailProfile}" Foreground="{Binding ArmyColor}" Grid.Row="1" Grid.Column="2"/>
+                                <Label Content="S" Template="{StaticResource detailProfile}" Foreground="{Binding ArmyColor}" Grid.Row="1" Grid.Column="3"/>
+                                <Label Content="T" Template="{StaticResource detailProfile}" Foreground="{Binding ArmyColor}" Grid.Row="1" Grid.Column="4"/>
+                                <Label Content="W" Template="{StaticResource detailProfile}" Foreground="{Binding ArmyColor}" Grid.Row="1" Grid.Column="5"/>
+                                <Label Content="I" Template="{StaticResource detailProfile}" Foreground="{Binding ArmyColor}" Grid.Row="1" Grid.Column="6"/>
+                                <Label Content="A" Template="{StaticResource detailProfile}" Foreground="{Binding ArmyColor}" Grid.Row="1" Grid.Column="7"/>
+                                <Label Content="Ld" Template="{StaticResource detailProfile}" Foreground="{Binding ArmyColor}"  Grid.Row="1" Grid.Column="8"/>
+                                
+                                <Label Content="{Binding Movement.View}" Template="{StaticResource detailProfile}" Grid.Row="2" Grid.Column="0"/>
+                                <Label Content="{Binding WeaponSkill.View}" Template="{StaticResource detailProfile}" Grid.Row="2" Grid.Column="1"/>
+                                <Label Content="{Binding BallisticSkill.View}" Template="{StaticResource detailProfile}" Grid.Row="2" Grid.Column="2"/>
+                                <Label Content="{Binding Strength.View}" Template="{StaticResource detailProfile}" Grid.Row="2" Grid.Column="3"/>
+                                <Label Content="{Binding Toughness.View}" Template="{StaticResource detailProfile}" Grid.Row="2" Grid.Column="4"/>
+                                <Label Content="{Binding Wounds.View}" Template="{StaticResource detailProfile}" Grid.Row="2" Grid.Column="5"/>
+                                <Label Content="{Binding Initiative.View}" Template="{StaticResource detailProfile}" Grid.Row="2" Grid.Column="6"/>
+                                <Label Content="{Binding Attacks.View}" Template="{StaticResource detailProfile}" Grid.Row="2" Grid.Column="7"/>
+                                <Label Content="{Binding Leadership.View}" Template="{StaticResource detailProfile}" Grid.Row="2" Grid.Column="8"/>
                             </Grid>
                         </Border>
                         <TextBlock x:Name="profileMods" Height="Auto" Margin="0, 5, 20, 0" HorizontalAlignment="Right"/>
