@@ -341,9 +341,6 @@ namespace WarhammerArmyAssembler
             double margin = e.NewSize.Width - closeErrorDetail.Width - 10;
             closeErrorDetail.Margin = new Thickness(Interface.Changes.ZeroFuse(margin), 10, 0, 0);
 
-            foreach (TextBlock text in new List<TextBlock> { armyArtefactDescription, armyArtefactSpecific })
-                text.Width = Interface.Changes.ZeroFuse(e.NewSize.Width - 75);
-
             if (Interface.Changes.mainMenuIsOpen)
                 Interface.Changes.MainMenu();
         }

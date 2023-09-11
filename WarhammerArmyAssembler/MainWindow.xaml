@@ -55,11 +55,11 @@
             </Label>
 
             <ScrollViewer x:Name="armybookArtefactDetailScroll" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" VerticalScrollBarVisibility="Auto" Margin="25,0" Background="White">
-                <Canvas x:Name="armybookArtefactDetail" Height="300" VerticalAlignment="Center" Margin="0,20" Background="White">
-                    <Label x:Name="armyArtefactName" Content="" FontSize="34" Width="Auto" Margin="18,5"/>
-                    <TextBlock x:Name="armyArtefactDescription" FontSize="16" Height="Auto" Width="Auto" TextWrapping="Wrap" Margin="20,85"/>
+                <StackPanel x:Name="armybookArtefactDetail" Height="300" VerticalAlignment="Center" Margin="35" Background="White">
+                    <Label x:Name="armyArtefactName" Content="" FontSize="34" Width="Auto" Margin="0,5"  HorizontalAlignment="Left"/>
+                    <TextBlock x:Name="armyArtefactDescription" FontSize="16" Height="Auto" Width="Auto" TextWrapping="Wrap" Margin="0,5"/>
                     <TextBlock x:Name="armyArtefactSpecific" FontSize="16" Height="Auto" Width="Auto" TextWrapping="Wrap"/>
-                </Canvas>
+                </StackPanel>
             </ScrollViewer>
             
             <ScrollViewer x:Name="armybookDetailScroll" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" VerticalScrollBarVisibility="Auto" Margin="25,0" Background="White">
