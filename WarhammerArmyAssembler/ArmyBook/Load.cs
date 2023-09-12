@@ -99,7 +99,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 Unit enemy = LoadUnit(0, unit, xmlFile, target, enemyCommonXmlOption);
 
                 enemy.Armybook = xmlFile
-                    .SelectSingleNode("ArmyBook/Introduction/Info/Army")
+                    .SelectSingleNode("ArmyBook/Introduction/Imprint/Army")
                     .InnerText;
 
                 if (unit["Mount"] != null)
@@ -264,9 +264,9 @@ namespace WarhammerArmyAssembler.ArmyBook
             XmlNode armyFile = Services.Intro(xmlFile, "Styles/Images/Files/Symbol");
             Interface.Changes.LoadArmyImage(armyFile, xmlFileName);
 
-            Army.Data.Name = LoadString(xmlFile, "Info/Army");
+            Army.Data.Name = LoadString(xmlFile, "Imprint/Army");
             Army.Data.Internal = LoadString(xmlFile, "Internal");
-            Army.Data.ArmyEdition = LoadInt(xmlFile, "Info/Edition");
+            Army.Data.ArmyEdition = LoadInt(xmlFile, "Imprint/Edition");
 
             Data.FrontColor = LoadColor(xmlFile, "Front");
             Data.BackColor = LoadColor(xmlFile, "Back");

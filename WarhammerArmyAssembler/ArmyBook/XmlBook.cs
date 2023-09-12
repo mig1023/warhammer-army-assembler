@@ -144,13 +144,13 @@ namespace WarhammerArmyAssembler.ArmyBook
                         continue;
                     }
 
-                    XmlNode armyName = Services.Intro(xmlFile, "Info/Army");
+                    XmlNode armyName = Services.Intro(xmlFile, "Imprint/Army");
 
                     if (armyName == null)
                         continue;
 
                     XmlNode armyInternal = Services.Intro(xmlFile, "Internal");
-                    XmlNode armyEdition = Services.Intro(xmlFile, "Info/Edition");
+                    XmlNode armyEdition = Services.Intro(xmlFile, "Imprint/Edition");
                     string armyOrderName = armyInternal.InnerText;
 
                     if (ChangeArmybookWindow.sortedByEditions)

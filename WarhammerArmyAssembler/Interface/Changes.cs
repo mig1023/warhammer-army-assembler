@@ -483,7 +483,7 @@ namespace WarhammerArmyAssembler.Interface
             XmlDocument xmlFile = new XmlDocument();
             xmlFile.Load(armyName);
 
-            string edition = Intro(xmlFile, "Info/Edition").InnerText;
+            string edition = Intro(xmlFile, "Imprint/Edition").InnerText;
             changeArmybook.listArmybookVer.Content = $"{edition}th edition";
             changeArmybook.UpdateLayout();
 
@@ -586,11 +586,11 @@ namespace WarhammerArmyAssembler.Interface
                 XmlDocument xmlFile = new XmlDocument();
                 xmlFile.Load(armyName);
 
-                string head = StringParse(Intro(xmlFile, "Info/Army")).ToUpper();
-                string edition = StringParse(Intro(xmlFile, "Info/Edition"));
-                string description = StringParse(Intro(xmlFile, "Info/Description"));
-                string authors = StringParse(Intro(xmlFile, "Info/Authors"));
-                int released = IntParse(Intro(xmlFile, "Info/Released"));
+                string head = StringParse(Intro(xmlFile, "Imprint/Army")).ToUpper();
+                string edition = StringParse(Intro(xmlFile, "Imprint/Edition"));
+                string description = StringParse(Intro(xmlFile, "Imprint/Description"));
+                string authors = StringParse(Intro(xmlFile, "Imprint/Authors"));
+                int released = IntParse(Intro(xmlFile, "Imprint/Released"));
 
                 Brush backColor = Services.BrushFromXml(StyleColor(xmlFile, "Tooltip"));
                 Brush lineColor = Services.BrushFromXml(StyleColor(xmlFile, "Front"));
