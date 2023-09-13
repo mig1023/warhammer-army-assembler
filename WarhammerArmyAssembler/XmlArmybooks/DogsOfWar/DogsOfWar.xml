@@ -46,6 +46,17 @@
 					</Armour>
 				</Equipments>
 			</Mount>
+			<Mount>
+				<Name>Cold One</Name>
+				<Profile M='8' WS='3' BS='0' S='4' T='4' W='1' I='1' A='2' Ld='3'/>
+				<SpecialRules>
+					<Fear/>
+					<Stupidity/>
+				</SpecialRules>
+				<Equipments>
+					<ThickSkinned/>
+				</Equipments>
+			</Mount>
 		</Mounts>
 		<Units>
 			<Rare>
@@ -412,6 +423,26 @@
 					<HandWeapon>Choppa</HandWeapon>
 					<Crossbow/>
 					<HeavyArmour/>
+				</Equipments>
+			</Rare>
+			<Rare>
+				<Name>Tichi-Huichi's Raiders</Name>
+				<Hire>!Bretonnia, Chaos, Skaven, Vampires, TombKings</Hire>
+				<Points>22</Points>
+				<Prepayment>250</Prepayment>
+				<Size>6-20</Size>
+				<Profile M='6' WS='2' BS='3' S='3' T='2' W='1' I='4' A='1' Ld='6' AS="4"/>
+				<SpecialRules>
+					<DogsOfWar/>
+					<ColdBlooded/>
+					<Original>
+						<Rule>Blessed by the Old Ones</Rule>
+					</Original>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon/>
+					<Spears/>
+					<Shield/>
 				</Equipments>
 			</Rare>
 		</Units>
