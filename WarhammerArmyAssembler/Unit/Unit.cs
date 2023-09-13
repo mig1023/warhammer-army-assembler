@@ -148,6 +148,7 @@ namespace WarhammerArmyAssembler
         public int WardForLastWound { get; set; }
         public bool FirstWoundDiscount { get; set; }
         public bool DogsOfWar { get; set; }
+        public bool CloseTreeView { get; set; }
 
         public List<Test.Param> ParamTests { get; set; }
 
@@ -414,6 +415,7 @@ namespace WarhammerArmyAssembler
                 WardForLastWound = this.WardForLastWound,
                 FirstWoundDiscount = this.FirstWoundDiscount,
                 DogsOfWar = this.DogsOfWar,
+                CloseTreeView = this.CloseTreeView,
 
                 ParamTests = Test.Param.Clone(this.ParamTests),
 

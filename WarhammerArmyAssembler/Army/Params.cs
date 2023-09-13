@@ -191,11 +191,12 @@ namespace WarhammerArmyAssembler.Army
             return newUnit;
         }
 
-        private static Unit GetCategoryUnit(string name) => new Unit()
+        private static Unit GetCategoryUnit(string name, bool close = false) => new Unit()
         {
             Name = name,
             TooltipColor = (SolidColorBrush)ArmyBook.Data.TooltipColor,
-            Description = name.ToUpper()
+            Description = name.ToUpper(),
+            CloseTreeView = close,
         };
 
         public static Option GetCategoryArtefact(string name) => new Option()
@@ -212,7 +213,7 @@ namespace WarhammerArmyAssembler.Army
             GetCategoryUnit("Core"),
             GetCategoryUnit("Special"),
             GetCategoryUnit("Rare"),
-            GetCategoryUnit("Dogs of War"),
+            GetCategoryUnit("Dogs of War", close: true),
         };
 
         public static Unit GetArmyGeneral() =>

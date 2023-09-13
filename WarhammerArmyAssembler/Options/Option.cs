@@ -117,6 +117,7 @@ namespace WarhammerArmyAssembler
         public bool NotALeader { get; set; }
         public bool NativeArmour { get; set; }
         public bool DogsOfWar { get; set; }
+        public bool CloseTreeView { get; set; }
         public bool General { get; set; }
 
         public List<Test.Param> ParamTests { get; set; }
@@ -268,6 +269,7 @@ namespace WarhammerArmyAssembler
             TypeUnitIncrese = this.TypeUnitIncrese,
             NativeArmour = this.NativeArmour,
             DogsOfWar = this.DogsOfWar,
+            CloseTreeView = this.CloseTreeView,
             General = this.General,
 
             Lance = this.Lance,
@@ -357,13 +359,13 @@ namespace WarhammerArmyAssembler
             string describe = String.Empty;
 
             if (!String.IsNullOrEmpty(Only))
-                describe += $"\nOnly for: {Only}";
+                describe += $"Only for: {Only}\n";
 
             if (OnlyOneInArmy)
-                describe += "\nOnly one in army";
+                describe += "Only one in army\n";
 
             if (OnlyOneSuchUnits)
-                describe += "\nOnly one for each type units";
+                describe += "Only one for each type units\n";
 
             return describe;
         }

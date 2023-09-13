@@ -352,7 +352,11 @@
                         </TreeView.Resources>
                         <TreeView.ItemContainerStyle>
                             <Style TargetType="TreeViewItem">
-                                <Setter Property="TreeViewItem.IsExpanded" Value="True"/>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding CloseTreeView}" Value="False">
+                                        <Setter Property="TreeViewItem.IsExpanded" Value="True"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
                             </Style>
                         </TreeView.ItemContainerStyle>
                         <TreeView.ItemTemplate>
