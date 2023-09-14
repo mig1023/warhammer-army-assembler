@@ -939,6 +939,18 @@ namespace WarhammerArmyAssembler
             if (!detail && !String.IsNullOrEmpty(rules))
                 rules = rules.Remove(rules.Length - 2);
 
+            if (detail)
+            {
+                index = 0;
+                rules += "\nEquipments:\n";
+
+                foreach (Option option in Options.Where(x => (x.IsEquipment())))
+                {
+                    index += 1;
+                    rules += $"{index}. {option.Name}\n";
+                }
+            }
+
             return rules;
         }
 
