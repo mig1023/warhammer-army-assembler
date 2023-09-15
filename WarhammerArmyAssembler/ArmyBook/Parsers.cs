@@ -324,6 +324,19 @@ namespace WarhammerArmyAssembler.ArmyBook
             return xmlNode;
         }
 
+        public static string ImageFolderParser(XmlDocument xmlFile)
+        {
+            string folder = StringParse(Services.Intro(xmlFile, "Styles/Images/Folders/Units"));
+
+            if (String.IsNullOrEmpty(folder))
+            {
+                int edition = IntParse(Services.Intro(xmlFile, "Imprint/Edition"));
+                folder = $"{edition}edition";
+            }
+
+            return folder;
+        }
+
         public static void SetProperty(object element, XmlNode value, string name, string byAttr = "")
         {
             XmlNode xmlNode = null;
