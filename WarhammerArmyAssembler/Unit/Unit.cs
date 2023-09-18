@@ -149,6 +149,8 @@ namespace WarhammerArmyAssembler
         public bool FirstWoundDiscount { get; set; }
         public bool DogsOfWar { get; set; }
         public bool CloseTreeView { get; set; }
+        public bool Scout { get; set; }
+        public bool Scouts { get; set; }
 
         public List<Test.Param> ParamTests { get; set; }
 
@@ -416,6 +418,8 @@ namespace WarhammerArmyAssembler
                 FirstWoundDiscount = this.FirstWoundDiscount,
                 DogsOfWar = this.DogsOfWar,
                 CloseTreeView = this.CloseTreeView,
+                Scout = this.Scout,
+                Scouts = this.Scouts,
 
                 ParamTests = Test.Param.Clone(this.ParamTests),
 
@@ -934,7 +938,6 @@ namespace WarhammerArmyAssembler
                 else
                     rules += $"{rule}; ";
             }
-                
 
             if (!detail && !String.IsNullOrEmpty(rules))
                 rules = rules.Remove(rules.Length - 2);

@@ -119,6 +119,8 @@ namespace WarhammerArmyAssembler
         public bool DogsOfWar { get; set; }
         public bool CloseTreeView { get; set; }
         public bool General { get; set; }
+        public bool Scout { get; set; }
+        public bool Scouts { get; set; }
 
         public List<Test.Param> ParamTests { get; set; }
 
@@ -271,6 +273,8 @@ namespace WarhammerArmyAssembler
             DogsOfWar = this.DogsOfWar,
             CloseTreeView = this.CloseTreeView,
             General = this.General,
+            Scout = this.Scout,
+            Scouts = this.Scouts,
 
             Lance = this.Lance,
             Flail = this.Flail,
