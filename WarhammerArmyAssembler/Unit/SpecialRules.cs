@@ -64,6 +64,7 @@ namespace WarhammerArmyAssembler
             ["MagicResistance"] = "Magic resistance ([X])",
             ["Scout"] = "Scout",
             ["Scouts"] = "Scouts",
+            ["FastCavalry"] = "Fast Cavalry",
         };
 
         public static List<string> UnitParam = new List<string> {

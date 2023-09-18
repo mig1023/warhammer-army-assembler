@@ -151,6 +151,7 @@ namespace WarhammerArmyAssembler
         public bool CloseTreeView { get; set; }
         public bool Scout { get; set; }
         public bool Scouts { get; set; }
+        public bool FastCavalry { get; set; }
 
         public List<Test.Param> ParamTests { get; set; }
 
@@ -420,6 +421,7 @@ namespace WarhammerArmyAssembler
                 CloseTreeView = this.CloseTreeView,
                 Scout = this.Scout,
                 Scouts = this.Scouts,
+                FastCavalry = this.FastCavalry,
 
                 ParamTests = Test.Param.Clone(this.ParamTests),
 

@@ -105,6 +105,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             "MagicResistance",
             "Scout",
             "Scouts",
+            "FastCavalry",
         };
 
         public static List<string> OptionProperties = new List<string> {
