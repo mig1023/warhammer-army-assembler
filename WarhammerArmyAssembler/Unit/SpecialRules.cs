@@ -28,7 +28,6 @@ namespace WarhammerArmyAssembler
             ["Flail"] = "Flail",
             ["Frenzy"] = "Frenzy",
             ["General"] = String.Empty,
-            ["Giant"] = String.Empty,
             ["Hate"] = "Hate",
             ["HeroicKillingBlow"] = "Heroic Killing Blow",
             ["HitFirst"] = "Hit First",
@@ -40,11 +39,7 @@ namespace WarhammerArmyAssembler
             ["ImpactHitByFront"] = "Impact Hit ([X])",
             ["KillingBlow"] = "Killing Blow",
             ["Lance"] = "Lance",
-            ["LargeBase"] = String.Empty,
-            ["MagicPowers"] = String.Empty,
-            ["MagicPowersCount"] = String.Empty,
             ["MagicResistance"] = "Magic resistance ([X])",
-            ["MagicResistance"] = String.Empty,
             ["MultiWounds"] = "Multiple wounds ([X])",
             ["MurderousProwess"] = "Murderous Prowess",
             ["NoArmour"] = "No Armour",
@@ -72,7 +67,6 @@ namespace WarhammerArmyAssembler
             ["WardForFirstWound"] = "Ward save [X]+ for first wound",
             ["WardForLastWound"] = "Ward save [X]+ for last wound",
             ["WoundOn"] = "Wound on [X]+",
-
         };
 
         public static List<string> UnitParam = new List<string> {
