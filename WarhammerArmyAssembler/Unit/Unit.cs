@@ -1246,6 +1246,9 @@ namespace WarhammerArmyAssembler
 
             foreach (KeyValuePair<string, string> specialRule in SpecialRules.All)
             {
+                if (String.IsNullOrEmpty(specialRule.Value))
+                    continue;
+
                 bool isRuled = RuleFromAnyOption(specialRule.Key, out string additionalParam,
                     out int intParam, onlyUnitParam: onlyUnitParam);
 

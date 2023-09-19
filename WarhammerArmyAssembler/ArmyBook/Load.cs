@@ -399,7 +399,7 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             if (additionalParam != null)
             {
-                foreach (string name in Constants.UnitProperties)
+                foreach (string name in SpecialRules.All.Keys)
                     SetProperty(newUnit, additionalParam, name);
 
                 if (Constants.CommonXmlSpecialRules != null)
