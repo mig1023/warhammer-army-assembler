@@ -213,7 +213,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 string value = option.InnerText;
 
                 if (String.IsNullOrEmpty(value))
-                    value = Services.CamelNameSplit(option.Name, raw: true);
+                    value = Services.CamelNameSplit(option.Name, pathetic: true);
                 
                 ruleList.Add(option.Name, value);
             }
