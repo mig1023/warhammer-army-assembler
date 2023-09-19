@@ -49,7 +49,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             ["Rare"] = "Units",
         };
 
-        public static bool IsPropertiesOnlyFor(string name, PropertyDiff diff)
+        private static bool IsPropertiesOnlyFor(string name, PropertyDiff diff)
         {
             if (!PropertiesDiff.ContainsKey(name))
                 return false;
@@ -61,8 +61,28 @@ namespace WarhammerArmyAssembler.ArmyBook
                 return true;
         }
 
-        public static List<string> GetPropertiesDiff(PropertyDiff diff) =>
-            PropertiesDiff.Where(x => x.Value == diff).Select(x => x.Key).ToList();
+        public static List<string> GetProperties(PropertyDiff diff)
+        {
+            List<string> properties = new List<string>();
+
+            PropertyDiff negativeDiff = diff == PropertyDiff.OnlyUnit ?
+                PropertyDiff.OnlyOption : PropertyDiff.OnlyUnit;
+
+            List<string> propertiesBySpecialRules = SpecialRules.All.Keys
+                .Where(x => !IsPropertiesOnlyFor(x, negativeDiff))
+                .ToList();
+
+            properties.AddRange(propertiesBySpecialRules);
+
+            List<string> propertiesByDiff = PropertiesDiff
+                .Where(x => x.Value == diff)
+                .Select(x => x.Key)
+                .ToList();
+
+            properties.AddRange(propertiesByDiff);
+
+            return properties;
+        }
 
         private static Dictionary<string, PropertyDiff> PropertiesDiff = new Dictionary<string, PropertyDiff>
         {

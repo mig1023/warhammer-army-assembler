@@ -399,11 +399,7 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             if (additionalParam != null)
             {
-                foreach (string name in SpecialRules.All.Keys)
-                    if (!Constants.IsPropertiesOnlyFor(name, Constants.PropertyDiff.OnlyOption))
-                        SetProperty(newUnit, additionalParam, name);
-
-                foreach (string name in Constants.GetPropertiesDiff(Constants.PropertyDiff.OnlyUnit))
+                foreach (string name in Constants.GetProperties(Constants.PropertyDiff.OnlyUnit))
                     SetProperty(newUnit, additionalParam, name);
 
                 if (Constants.CommonXmlSpecialRules != null)
@@ -846,11 +842,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 SetProperty(newOption, xmlNode, $"{name}To");
             }
 
-            foreach (string name in SpecialRules.All.Keys)
-                if (!Constants.IsPropertiesOnlyFor(name, Constants.PropertyDiff.OnlyUnit))
-                    SetProperty(newOption, xmlNode, name);
-
-            foreach (string name in Constants.GetPropertiesDiff(Constants.PropertyDiff.OnlyOption))
+            foreach (string name in Constants.GetProperties(Constants.PropertyDiff.OnlyOption))
                 SetProperty(newOption, xmlNode, name);
 
             newOption.Runic = RunicParse(xmlNode["Runic"]);
