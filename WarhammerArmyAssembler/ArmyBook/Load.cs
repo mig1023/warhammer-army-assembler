@@ -264,7 +264,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             Interface.Changes.LoadArmyImage(armyFile, xmlFileName);
 
             Army.Data.Name = LoadString(xmlFile, "Imprint/Army");
-            Army.Data.Internal = LoadString(xmlFile, "Internal");
+            Army.Data.Internal = LoadString(xmlFile, "Naming/Internal");
             Army.Data.ArmyEdition = LoadInt(xmlFile, "Imprint/Edition");
 
             Data.FrontColor = LoadColor(xmlFile, "Front");

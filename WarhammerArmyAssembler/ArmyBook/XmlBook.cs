@@ -149,7 +149,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                     if (armyName == null)
                         continue;
 
-                    XmlNode armyInternal = Services.Intro(xmlFile, "Internal");
+                    XmlNode armyInternal = Services.Intro(xmlFile, "Naming/Internal");
                     XmlNode armyEdition = Services.Intro(xmlFile, "Imprint/Edition");
                     string armyOrderName = armyInternal.InnerText;
 
