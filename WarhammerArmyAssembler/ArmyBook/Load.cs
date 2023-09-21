@@ -63,15 +63,16 @@ namespace WarhammerArmyAssembler.ArmyBook
         private static Brush LoadColor(XmlDocument xmlFile, string node) =>
             Interface.Services.BrushFromXml(Services.Intro(xmlFile, $"Styles/Colors/{node}"));
 
-        private static string LoadStyle(XmlDocument xmlFile, string node, string defaultValue) =>
-            xmlFile.SelectSingleNode($"ArmyBook/Introduction/Styles/{node}")?.InnerText ?? defaultValue;
+        private static string LoadNamingStyle(XmlDocument xmlFile,
+            string node, string defaultValue) =>
+            xmlFile.SelectSingleNode($"ArmyBook/Introduction/Naming/{node}")?.InnerText ?? defaultValue;
 
-        private static void LoadStyles(XmlDocument xmlFile)
+        private static void LoadNamingStyles(XmlDocument xmlFile)
         {
-            Data.AddStyle = LoadStyle(xmlFile, "Buttons/Add", defaultValue: "add");
-            Data.DropStyle = LoadStyle(xmlFile, "Buttons/Drop", defaultValue: "drop");
-            Data.MagicItemsStyle = LoadStyle(xmlFile, "MagicItems", defaultValue: "MAGIC ITEMS").ToUpper();
-            Data.MagicPowersStyle = LoadStyle(xmlFile, "MagicPowers", defaultValue: "MAGIC POWERS").ToUpper();
+            Data.AddStyle = LoadNamingStyle(xmlFile, "Buttons/Add", defaultValue: "add");
+            Data.DropStyle = LoadNamingStyle(xmlFile, "Buttons/Drop", defaultValue: "drop");
+            Data.MagicItemsStyle = LoadNamingStyle(xmlFile, "MagicItems", defaultValue: "MAGIC ITEMS").ToUpper();
+            Data.MagicPowersStyle = LoadNamingStyle(xmlFile, "MagicPowers", defaultValue: "MAGIC POWERS").ToUpper();
         }
 
         private static string UnitsPath(string pathLine, out string name)
@@ -264,8 +265,8 @@ namespace WarhammerArmyAssembler.ArmyBook
             Interface.Changes.LoadArmyImage(armyFile, xmlFileName);
 
             Army.Data.Name = LoadString(xmlFile, "Imprint/Army");
-            Army.Data.Internal = LoadString(xmlFile, "Naming/Internal");
             Army.Data.ArmyEdition = LoadInt(xmlFile, "Imprint/Edition");
+            Army.Data.Internal = LoadString(xmlFile, "Naming/Internal");
 
             Data.FrontColor = LoadColor(xmlFile, "Front");
             Data.BackColor = LoadColor(xmlFile, "Back");
@@ -282,7 +283,7 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             Interface.Mod.SetArmyGridAltColor(Data.GridColor);
 
-            LoadStyles(xmlFile);
+            LoadNamingStyles(xmlFile);
 
             LoadUnitsFromXml(xmlFile, "ArmyBook/Content/Units/*", ref Data.Units);
             LoadUnitsFromXml(xmlFile, "ArmyBook/Content/Heroes/*", ref Data.Units);
