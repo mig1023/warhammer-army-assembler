@@ -1058,7 +1058,7 @@ namespace WarhammerArmyAssembler
             int wizard = GetUnitWizard();
 
             if (wizard > 0)
-                describe += $"\nWizard: {wizard}";
+                describe += $"\nWizard: Level {wizard}";
 
             if (!String.IsNullOrEmpty(Group))
                 describe += $"\nGroup: {Group}";
