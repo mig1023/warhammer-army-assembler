@@ -366,7 +366,7 @@
                                         <ToolTipService.ToolTip>
                                             <ToolTip Background="{Binding TooltipColor}" MaxWidth="300" Padding="0">
                                                 <StackPanel>
-                                                    <TextBlock Text="{Binding Description}" TextWrapping="Wrap" Padding="8"/>
+                                                    <TextBlock Text="{Binding Description}" FontSize="11" LineStackingStrategy="BlockLineHeight" LineHeight="13" TextWrapping="Wrap" Padding="8"/>
                                                     <Image Source="{Binding Image}"/>
                                                 </StackPanel>
                                             </ToolTip>
