@@ -7,7 +7,7 @@ using System.Windows.Media;
 
 namespace WarhammerArmyAssembler
 {
-    public class Option : INotifyPropertyChanged
+    public class Option : SpecialRules, INotifyPropertyChanged
     {
         public enum OptionType
         {
@@ -58,70 +58,13 @@ namespace WarhammerArmyAssembler
         public bool MagicItemsPoints { get; set; }
 
         public string PointsView { get; set; }
-
         public string Description { get; set; }
-
-        public string Group { get; set; }
-        public bool AutoHit { get; set; }
-        public bool AutoWound { get; set; }
-        public bool AutoDeath { get; set; }
-        public bool HitFirst { get; set; }
-        public bool HitLast { get; set; }
-        public bool KillingBlow { get; set; }
-        public int ExtendedKillingBlow { get; set; }
-        public bool HeroicKillingBlow { get; set; }
-        public bool PoisonAttack { get; set; }
-        public string MultiWounds { get; set; }
-        public bool NoArmour { get; set; }
-        public bool NoWard { get; set; }
-        public bool NoKillingBlow { get; set; }
-        public bool NoMultiWounds { get; set; }
-        public int ArmourPiercing { get; set; }
-        public string Reroll { get; set; }
-        public bool Regeneration { get; set; }
-        public int ExtendedRegeneration { get; set; }
-        public bool ImmuneToPsychology { get; set; }
-        public bool ImmuneToPoison { get; set; }
-        public bool Stubborn { get; set; }
-        public bool Hate { get; set; }
-        public bool Fear { get; set; }
-        public bool Terror { get; set; }
-        public bool Frenzy { get; set; }
-        public bool BloodFrenzy { get; set; }
-        public bool Unbreakable { get; set; }
-        public bool ColdBlooded { get; set; }
-        public bool Stupidity { get; set; }
-        public bool Undead { get; set; }
-        public bool StrengthInNumbers { get; set; }
-        public string ImpactHit { get; set; }
-        public int ImpactHitByFront { get; set; }
-        public bool SteamTank { get; set; }
-        public bool Lance { get; set; }
-        public bool Flail { get; set; }
-        public int ChargeStrengthBonus { get; set; }
-        public bool Resolute { get; set; }
-        public bool PredatoryFighter { get; set; }
-        public bool MurderousProwess { get; set; }
         public bool BigWeapon { get; set; }
-        public bool Bloodroar { get; set; }
-        public int AddToHit { get; set; }
-        public int SubOpponentToHit { get; set; }
-        public int AddToWound { get; set; }
-        public int SubOpponentToWound { get; set; }
-        public int HitOn { get; set; }
-        public int OpponentHitOn { get; set; }
-        public int WoundOn { get; set; }
-        public int WardForFirstWound { get; set; }
-        public int WardForLastWound { get; set; }
-        public bool FirstWoundDiscount { get; set; }
+
         public bool NotALeader { get; set; }
         public bool NativeArmour { get; set; }
-        public bool DogsOfWar { get; set; }
-        public bool CloseTreeView { get; set; }
+
         public bool General { get; set; }
-        public bool Scout { get; set; }
-        public bool Scouts { get; set; }
-        public bool FastCavalry { get; set; }
 
         public List<Test.Param> ParamTests { get; set; }
 
