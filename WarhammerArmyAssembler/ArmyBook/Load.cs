@@ -63,8 +63,7 @@ namespace WarhammerArmyAssembler.ArmyBook
         private static Brush LoadColor(XmlDocument xmlFile, string node) =>
             Interface.Services.BrushFromXml(Services.Intro(xmlFile, $"Styles/Colors/{node}"));
 
-        private static string LoadNamingStyle(XmlDocument xmlFile,
-            string node, string defaultValue) =>
+        private static string LoadNamingStyle(XmlDocument xmlFile, string node, string defaultValue) =>
             xmlFile.SelectSingleNode($"ArmyBook/Introduction/Naming/{node}")?.InnerText ?? defaultValue;
 
         private static void LoadNamingStyles(XmlDocument xmlFile)

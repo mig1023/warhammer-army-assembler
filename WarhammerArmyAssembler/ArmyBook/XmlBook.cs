@@ -128,7 +128,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             try
             {
                 List<string> filesList = Directory.GetFiles(programDirectory,
-                    "*ed.xml", SearchOption.AllDirectories).ToList();
+                    "*edition.xml", SearchOption.AllDirectories).ToList();
 
                 foreach (string file in filesList)
                 {
