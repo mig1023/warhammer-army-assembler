@@ -266,7 +266,7 @@ namespace WarhammerArmyAssembler
             foreach (Option option in Options)
             {
                 if (!option.IsOption() || option.IsActual())
-                    wizard += option.AddToWizard;
+                    wizard += option.AddTo["Wizard"];
 
                 if ((option.Countable != null) && (option.Countable.ExportToWizardLevel))
                     wizard += option.GetWizardLevelBonus();
@@ -517,32 +517,43 @@ namespace WarhammerArmyAssembler
                 if (OptionTypeAlreadyUsed(option, ref alreadyArmour, ref alreadyShield))
                     continue;
 
-                int optionToValue = PropertyByName($"{name}To", option);
-
-                if (optionToValue > 0)
+                if (option.ChangeTo.ContainsKey(name))
+                {
+                    int optionToValue = option.ChangeTo[name];
                     return optionToValue.ToString() + (reversParam ? "+" : "*");
-
-                int optionValue = PropertyByName($"AddTo{name}", option);
-
-                if ((optionValue != 0) && reversParam)
-                {
-                    if (newValue == null)
-                        newValue = 7;
-
-                    if (doNotCombine)
-                    {
-                        if (optionValue < newValue)
-                            newValue = optionValue;
-                    }
-                    else
-                    {
-                        newValue -= (7 - optionValue);
-                    }
                 }
-                else if (optionValue != 0)
+
+                //int optionToValue = PropertyByName($"{name}To", option);
+
+                //if (optionToValue > 0)
+                //    return optionToValue.ToString() + (reversParam ? "+" : "*");
+
+                //int optionValue = PropertyByName($"AddTo{name}", option);
+
+                if (option.AddTo.ContainsKey(name))
                 {
-                    paramModView += '*';
-                    newValue = ParamNormalization((int)newValue + optionValue);
+                    int optionValue = option.ChangeTo[name];
+
+                    if ((optionValue != 0) && reversParam)
+                    {
+                        if (newValue == null)
+                            newValue = 7;
+
+                        if (doNotCombine)
+                        {
+                            if (optionValue < newValue)
+                                newValue = optionValue;
+                        }
+                        else
+                        {
+                            newValue -= (7 - optionValue);
+                        }
+                    }
+                    else if (optionValue != 0)
+                    {
+                        paramModView += '*';
+                        newValue = ParamNormalization((int)newValue + optionValue);
+                    }
                 }
             }
 
@@ -558,15 +569,15 @@ namespace WarhammerArmyAssembler
             return newValue.ToString() + paramModView;
         }
 
-        private int PropertyByName(string name, Option option)
-        {
-            PropertyInfo optionToParam = typeof(Option).GetProperty(name);
+        //private int PropertyByName(string name, Option option)
+        //{
+        //    PropertyInfo optionToParam = typeof(Option).GetProperty(name);
 
-            if (optionToParam == null)
-                return 0;
-            else
-                return (int)optionToParam.GetValue(option);
-        }
+        //    if (optionToParam == null)
+        //        return 0;
+        //    else
+        //        return (int)optionToParam.GetValue(option);
+        //}
 
         private void SetUnitParamByOption(string paramName, bool directModification = false)
         {
@@ -907,7 +918,7 @@ namespace WarhammerArmyAssembler
                 bool named = !String.IsNullOrEmpty(option.Name);
                 bool thisIsRealised = (option.Realised || option.IsMagicItem()) && option.Points != 0;
                 bool thisIsNotMountOrFC = !(option.Mount || option.Command);
-                bool wizard = option.WizardTo > 0 || option.AddToWizard > 0;
+                bool wizard = option.ChangeTo["WizardTo"] > 0 || option.AddTo["Wizard"] > 0;
 
                 if (named && thisIsRealised && thisIsNotMountOrFC && !wizard)
                     equipment += $"{option.FullName()}; ";
@@ -1177,7 +1188,7 @@ namespace WarhammerArmyAssembler
             foreach (Option option in options)
             {
                 bool wizExport = option.Countable?.ExportToWizardLevel ?? false;
-                bool noWizardBonus = option.WizardTo <= 0 && option.AddToWizard <= 0;
+                bool noWizardBonus = option.ChangeTo["Wizard"] <= 0 && option.AddTo["Wizard"] <= 0;
 
                 if (!withoudWizards || (noWizardBonus && !wizExport))
                     rules.Add(option.Name);

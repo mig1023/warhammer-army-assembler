@@ -836,10 +836,13 @@ namespace WarhammerArmyAssembler.ArmyBook
                 newOption.DependencyGroup = String.IsNullOrEmpty(group) ? "Default" : group;
             }
 
+            newOption.AddTo = new Dictionary<string, int>();
+            newOption.ChangeTo = new Dictionary<string, int>();
+
             foreach (string name in Constants.ProfilesNames.Keys)
             {
-                SetProperty(newOption, xmlNode, $"AddTo{name}");
-                SetProperty(newOption, xmlNode, $"{name}To");
+                SetProperty(newOption.AddTo, xmlNode, $"AddTo{name}");
+                SetProperty(newOption.ChangeTo, xmlNode, $"{name}To");
             }
 
             foreach (string name in Constants.GetProperties(Constants.PropertyDiff.OnlyOption))

@@ -64,33 +64,36 @@ namespace WarhammerArmyAssembler
 
         public List<Test.Param> ParamTests { get; set; }
 
-        public int AddToMovement { get; set; }
-        public int AddToWeaponSkill { get; set; }
-        public int AddToBallisticSkill { get; set; }
-        public int AddToStrength { get; set; }
-        public int AddToToughness { get; set; }
-        public int AddToWounds { get; set; }
-        public int AddToInitiative { get; set; }
-        public int AddToAttacks { get; set; }
-        public int AddToLeadership { get; set; }
-        public int AddToArmour { get; set; }
-        public int AddToWard { get; set; }
-        public int AddToCast { get; set; }
-        public int AddToDispell { get; set; }
-        public int AddToWizard { get; set; }
-        public string AddToCloseCombat { get; set; }
+        public Dictionary<string, int> AddTo { get; set; }
+        public Dictionary<string, int> ChangeTo { get; set; }
 
-        public int MovementTo { get; set; }
-        public int WeaponSkillTo { get; set; }
-        public int BallisticSkillTo { get; set; }
-        public int StrengthTo { get; set; }
-        public int ToughnessTo { get; set; }
-        public int WoundsTo { get; set; }
-        public int InitiativeTo { get; set; }
-        public int AttacksTo { get; set; }
-        public int LeadershipTo { get; set; }
-        public int ArmourTo { get; set; }
-        public int WizardTo { get; set; }
+        //public int AddToMovement { get; set; }
+        //public int AddToWeaponSkill { get; set; }
+        //public int AddToBallisticSkill { get; set; }
+        //public int AddToStrength { get; set; }
+        //public int AddToToughness { get; set; }
+        //public int AddToWounds { get; set; }
+        //public int AddToInitiative { get; set; }
+        //public int AddToAttacks { get; set; }
+        //public int AddToLeadership { get; set; }
+        //public int AddToArmour { get; set; }
+        //public int AddToWard { get; set; }
+        //public int AddToCast { get; set; }
+        //public int AddToDispell { get; set; }
+        //public int AddToWizard { get; set; }
+        //public string AddToCloseCombat { get; set; }
+
+        //public int MovementTo { get; set; }
+        //public int WeaponSkillTo { get; set; }
+        //public int BallisticSkillTo { get; set; }
+        //public int StrengthTo { get; set; }
+        //public int ToughnessTo { get; set; }
+        //public int WoundsTo { get; set; }
+        //public int InitiativeTo { get; set; }
+        //public int AttacksTo { get; set; }
+        //public int LeadershipTo { get; set; }
+        //public int ArmourTo { get; set; }
+        //public int WizardTo { get; set; }
 
         public int AddToModelsInPack { get; set; }
         public bool Command { get; set; }
@@ -224,33 +227,33 @@ namespace WarhammerArmyAssembler
                 
             ParamTests = Test.Param.Clone(this.ParamTests),
 
-            AddToMovement = this.AddToMovement,
-            AddToWeaponSkill = this.AddToWeaponSkill,
-            AddToBallisticSkill = this.AddToBallisticSkill,
-            AddToStrength = this.AddToStrength,
-            AddToToughness = this.AddToToughness,
-            AddToWounds = this.AddToWounds,
-            AddToInitiative = this.AddToInitiative,
-            AddToAttacks = this.AddToAttacks,
-            AddToLeadership = this.AddToLeadership,
-            AddToArmour = this.AddToArmour,
-            AddToWard = this.AddToWard,
-            AddToCast = this.AddToCast,
-            AddToDispell = this.AddToDispell,
-            AddToWizard = this.AddToWizard,
-            AddToCloseCombat = this.AddToCloseCombat,
+            //AddToMovement = this.AddToMovement,
+            //AddToWeaponSkill = this.AddToWeaponSkill,
+            //AddToBallisticSkill = this.AddToBallisticSkill,
+            //AddToStrength = this.AddToStrength,
+            //AddToToughness = this.AddToToughness,
+            //AddToWounds = this.AddToWounds,
+            //AddToInitiative = this.AddToInitiative,
+            //AddToAttacks = this.AddToAttacks,
+            //AddToLeadership = this.AddToLeadership,
+            //AddToArmour = this.AddToArmour,
+            //AddToWard = this.AddToWard,
+            //AddToCast = this.AddToCast,
+            //AddToDispell = this.AddToDispell,
+            //AddToWizard = this.AddToWizard,
+            //AddToCloseCombat = this.AddToCloseCombat,
 
-            MovementTo = this.MovementTo,
-            WeaponSkillTo = this.WeaponSkillTo,
-            BallisticSkillTo = this.BallisticSkillTo,
-            StrengthTo = this.StrengthTo,
-            ToughnessTo = this.ToughnessTo,
-            WoundsTo = this.WoundsTo,
-            InitiativeTo = this.InitiativeTo,
-            AttacksTo = this.AttacksTo,
-            LeadershipTo = this.LeadershipTo,
-            ArmourTo = this.ArmourTo,
-            WizardTo = this.WizardTo,
+            //MovementTo = this.MovementTo,
+            //WeaponSkillTo = this.WeaponSkillTo,
+            //BallisticSkillTo = this.BallisticSkillTo,
+            //StrengthTo = this.StrengthTo,
+            //ToughnessTo = this.ToughnessTo,
+            //WoundsTo = this.WoundsTo,
+            //InitiativeTo = this.InitiativeTo,
+            //AttacksTo = this.AttacksTo,
+            //LeadershipTo = this.LeadershipTo,
+            //ArmourTo = this.ArmourTo,
+            //WizardTo = this.WizardTo,
             MagicResistance = this.MagicResistance,
 
             AddToModelsInPack = this.AddToModelsInPack,
