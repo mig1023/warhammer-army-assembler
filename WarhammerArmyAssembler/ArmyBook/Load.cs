@@ -391,7 +391,8 @@ namespace WarhammerArmyAssembler.ArmyBook
             XmlNode profile = xmlUnit["Profile"];
 
             foreach (string name in Constants.ProfilesNames.Keys)
-                SetProperty(newUnit, profile, name, byAttr: Constants.ProfilesNames[name]);
+                if (!String.IsNullOrEmpty(Constants.ProfilesNames[name]))
+                    SetProperty(newUnit, profile, name, byAttr: Constants.ProfilesNames[name]);
 
             newUnit.Ward = IntNullableParse(profile.Attributes["Ward"]);
             XmlNode additionalParam = xmlUnit["SpecialRules"];
@@ -839,7 +840,6 @@ namespace WarhammerArmyAssembler.ArmyBook
                 string group = StringParse(xmlNode["Dependency"]?.Attributes["Group"]);
                 newOption.DependencyGroup = String.IsNullOrEmpty(group) ? "Default" : group;
             }
-
 
             foreach (string name in Constants.ProfilesNames.Keys)
             {

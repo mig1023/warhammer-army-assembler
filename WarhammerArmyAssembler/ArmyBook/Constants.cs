@@ -37,6 +37,11 @@ namespace WarhammerArmyAssembler.ArmyBook
             ["Attacks"] = "A",
             ["Leadership"] = "Ld",
             ["Armour"] = "AS",
+
+            ["Cast"] = string.Empty,
+            ["Dispell"] = string.Empty,
+            ["Ward"] = string.Empty,
+            ["Wizard"] = string.Empty,
         };
 
         public static Dictionary<string, string> EnemyPathTypes = new Dictionary<string, string>
