@@ -105,7 +105,6 @@ namespace WarhammerArmyAssembler
         public MagicItemsTypes MagicItemsType { get; set; }
         public int MagicPowers { get; set; }
         public int MagicPowersCount { get; set; }
-        public int MagicResistance { get; set; }
 
         public int MountOn { get; set; }
         public string MountInit { get; set; }
@@ -116,8 +115,6 @@ namespace WarhammerArmyAssembler
         public bool Character { get; set; }
         public bool CurrentGeneral { get; set; }
         public bool WeaponTeam { get; set; }
-        public bool NotALeader { get; set; }
-        public bool General { get; set; }
         public int Chariot { get; set; }
 
         public List<Option> Options = new List<Option>();

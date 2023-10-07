@@ -64,6 +64,9 @@ namespace WarhammerArmyAssembler
         public bool Scout { get; set; }
         public bool Scouts { get; set; }
         public bool FastCavalry { get; set; }
+        public bool NotALeader { get; set; }
+        public bool General { get; set; }
+        public int MagicResistance { get; set; }
 
 
         public static Dictionary<string, string> All = new Dictionary<string, string>()

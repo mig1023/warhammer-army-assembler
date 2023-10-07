@@ -60,11 +60,7 @@ namespace WarhammerArmyAssembler
         public string PointsView { get; set; }
         public string Description { get; set; }
         public bool BigWeapon { get; set; }
-
-        public bool NotALeader { get; set; }
         public bool NativeArmour { get; set; }
-
-        public bool General { get; set; }
 
         public List<Test.Param> ParamTests { get; set; }
 
@@ -95,7 +91,6 @@ namespace WarhammerArmyAssembler
         public int LeadershipTo { get; set; }
         public int ArmourTo { get; set; }
         public int WizardTo { get; set; }
-        public int MagicResistance { get; set; }
 
         public int AddToModelsInPack { get; set; }
         public bool Command { get; set; }
