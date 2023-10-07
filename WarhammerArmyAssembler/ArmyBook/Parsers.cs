@@ -340,7 +340,20 @@ namespace WarhammerArmyAssembler.ArmyBook
         public static void SetProperty(Dictionary<string, int> list, XmlNode value, string name)
         {
             XmlNode xmlNode = XmlValueSemiParser(value, name);
-            list.Add(name, int.Parse(xmlNode.InnerText));
+
+            if (xmlNode == null)
+                return;
+
+            int newValue = int.Parse(xmlNode.InnerText);
+
+            if (name.StartsWith("AddTo"))
+            {
+                list.Add(name.Substring(5, name.Length - 5), newValue);
+            }
+            else
+            {
+                list.Add(name.Substring(0, name.Length - 2), newValue);
+            }
         }
 
         public static void SetProperty(object element, XmlNode value, string name, string byAttr = "")

@@ -266,7 +266,7 @@ namespace WarhammerArmyAssembler
             foreach (Option option in Options)
             {
                 if (!option.IsOption() || option.IsActual())
-                    wizard += option.AddTo["Wizard"];
+                    wizard += option.AddTo.ContainsKey("Wizard") ? option.AddTo["Wizard"] : 0;
 
                 if ((option.Countable != null) && (option.Countable.ExportToWizardLevel))
                     wizard += option.GetWizardLevelBonus();
@@ -523,16 +523,9 @@ namespace WarhammerArmyAssembler
                     return optionToValue.ToString() + (reversParam ? "+" : "*");
                 }
 
-                //int optionToValue = PropertyByName($"{name}To", option);
-
-                //if (optionToValue > 0)
-                //    return optionToValue.ToString() + (reversParam ? "+" : "*");
-
-                //int optionValue = PropertyByName($"AddTo{name}", option);
-
                 if (option.AddTo.ContainsKey(name))
                 {
-                    int optionValue = option.ChangeTo[name];
+                    int optionValue = option.AddTo[name];
 
                     if ((optionValue != 0) && reversParam)
                     {
@@ -568,16 +561,6 @@ namespace WarhammerArmyAssembler
 
             return newValue.ToString() + paramModView;
         }
-
-        //private int PropertyByName(string name, Option option)
-        //{
-        //    PropertyInfo optionToParam = typeof(Option).GetProperty(name);
-
-        //    if (optionToParam == null)
-        //        return 0;
-        //    else
-        //        return (int)optionToParam.GetValue(option);
-        //}
 
         private void SetUnitParamByOption(string paramName, bool directModification = false)
         {

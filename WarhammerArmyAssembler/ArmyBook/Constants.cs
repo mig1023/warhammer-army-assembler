@@ -95,11 +95,11 @@ namespace WarhammerArmyAssembler.ArmyBook
             ["MagicResistance"] = PropertyDiff.OnlyUnit,
             ["OpponentHitOn"] = PropertyDiff.OnlyUnit,
 
-            ["AddToCast"] = PropertyDiff.OnlyOption,
-            ["AddToDispell"] = PropertyDiff.OnlyOption,
+            //["AddToCast"] = PropertyDiff.OnlyOption,
+            //["AddToDispell"] = PropertyDiff.OnlyOption,
             ["AddToModelsInPack"] = PropertyDiff.OnlyOption,
-            ["AddToWard"] = PropertyDiff.OnlyOption,
-            ["AddToWizard"] = PropertyDiff.OnlyOption,
+            //["AddToWard"] = PropertyDiff.OnlyOption,
+            //["AddToWizard"] = PropertyDiff.OnlyOption,
             ["Command"] = PropertyDiff.OnlyOption,
             ["Group"] = PropertyDiff.OnlyOption,
             ["MagicItems"] = PropertyDiff.OnlyOption,
@@ -116,7 +116,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             ["RandomGroup"] = PropertyDiff.OnlyOption,
             ["TypeUnitIncrese"] = PropertyDiff.OnlyOption,
             ["Virtue"] = PropertyDiff.OnlyOption,
-            ["WizardTo"] = PropertyDiff.OnlyOption,
+            //["WizardTo"] = PropertyDiff.OnlyOption,
         };
 
         public static Dictionary<int, int> ArmySizeAngles = new Dictionary<int, int>

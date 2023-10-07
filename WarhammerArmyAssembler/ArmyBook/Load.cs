@@ -578,6 +578,8 @@ namespace WarhammerArmyAssembler.ArmyBook
                 Type = Option.OptionType.Info,
                 Category = Option.OptionCategory.SpecialRule,
                 SpecialRuleDescription = new string[] { rule },
+                AddTo = new Dictionary<string, int>(),
+                ChangeTo = new Dictionary<string, int>(),
             };
 
             return newOption;
@@ -812,6 +814,8 @@ namespace WarhammerArmyAssembler.ArmyBook
                 MagicItemsType = MagicItemsTypeParse(xmlNode["MagicItemsType"]),
                 ArtefactGroup = artefactGroup ?? String.Empty,
                 TooltipColor = (SolidColorBrush)Data.TooltipColor,
+                AddTo = new Dictionary<string, int>(),
+                ChangeTo = new Dictionary<string, int>(),
             };
 
             if (xmlNode["PointsPerModel"] != null)
@@ -836,8 +840,6 @@ namespace WarhammerArmyAssembler.ArmyBook
                 newOption.DependencyGroup = String.IsNullOrEmpty(group) ? "Default" : group;
             }
 
-            newOption.AddTo = new Dictionary<string, int>();
-            newOption.ChangeTo = new Dictionary<string, int>();
 
             foreach (string name in Constants.ProfilesNames.Keys)
             {

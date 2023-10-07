@@ -108,8 +108,7 @@ namespace WarhammerArmyAssembler.Army
 
                 foreach (Option option in unit.Options.Where(x => x.IsActual()))
                 {
-                    if (option.AddToLeadership > 0)
-                        unitLeadership += option.AddToLeadership;
+                    unitLeadership += option.AddTo.ContainsKey("Leadership") ? option.AddTo["Leadership"] : 0;
 
                     if (option.NotALeader)
                         notALeader = true;

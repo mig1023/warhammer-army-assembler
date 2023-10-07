@@ -105,7 +105,7 @@ namespace WarhammerArmyAssembler.Army
                 foreach (Option option in entry.Options)
                 {
                     if (option.IsActual())
-                        cast += option.AddToCast;
+                        cast += option.AddTo.ContainsKey("Cast") ? option.AddTo["Cast"] : 0;
 
                     if ((option.Countable != null) && (option.Countable.ExportToWizardLevel))
                         cast += option.GetWizardLevelBonus();
@@ -141,7 +141,7 @@ namespace WarhammerArmyAssembler.Army
                 foreach (Option option in entry.Options)
                 {
                     if (option.IsActual())
-                        dispell += option.AddToDispell;
+                        dispell += option.AddTo.ContainsKey("Dispell") ? option.AddTo["Dispell"] : 0;
                 }
             }
 
@@ -203,7 +203,9 @@ namespace WarhammerArmyAssembler.Army
         {
             Name = name,
             TooltipColor = (SolidColorBrush)ArmyBook.Data.TooltipColor,
-            Description = name.ToUpper()
+            Description = name.ToUpper(),
+            AddTo = new Dictionary<string, int>(),
+            ChangeTo = new Dictionary<string, int>(),
         };
 
         public static List<Unit> GetArmyCategories() => new List<Unit>
