@@ -132,20 +132,6 @@ namespace WarhammerArmyAssembler
             ["WoundOn"] = "Wound on [X]+",
         };
 
-        public static List<string> UnitParam = new List<string> {
-            "Movement",
-            "WeaponSkill",
-            "BallisticSkill",
-            "Strength",
-            "Toughness",
-            "Wounds",
-            "Initiative",
-            "Attacks",
-            "Leadership",
-            "Armour",
-            "Ward"
-        };
-
         public static Dictionary<string, string> RerollsLines = new Dictionary<string, string>
         {
             ["OpponentToHit"] = "opponent re-roll all succeful rolls to Hit",

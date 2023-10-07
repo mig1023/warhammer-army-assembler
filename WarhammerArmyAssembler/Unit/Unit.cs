@@ -604,7 +604,12 @@ namespace WarhammerArmyAssembler
             Unit unit = this.Clone();
             hasMods = false;
 
-            foreach (string name in SpecialRules.UnitParam)
+            List<string> unitsParams = ArmyBook.Constants.ProfilesNames
+                .Keys
+                .Where(x => !String.IsNullOrEmpty(ArmyBook.Constants.ProfilesNames[x]))
+                .ToList();
+
+            foreach (string name in unitsParams)
             {
                 bool reverse = name == "Armour" || name == "Ward";
                 bool mount = name == "Armour";

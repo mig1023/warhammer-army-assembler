@@ -37,10 +37,10 @@ namespace WarhammerArmyAssembler.ArmyBook
             ["Attacks"] = "A",
             ["Leadership"] = "Ld",
             ["Armour"] = "AS",
+            ["Ward"] = "Ward",
 
             ["Cast"] = string.Empty,
             ["Dispell"] = string.Empty,
-            ["Ward"] = string.Empty,
             ["Wizard"] = string.Empty,
         };
 
