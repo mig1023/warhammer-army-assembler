@@ -311,11 +311,6 @@ namespace WarhammerArmyAssembler
 
         public bool IsUsableByUnit(Unit unit, bool addOption = true, bool dragOverCheck = false)
         {
-            string group = ArmyBook.Services.ExistsInOnly(Only, unit.GetGroup());
-
-            if (!String.IsNullOrEmpty(Only) && (group != unit.GetGroup()))
-                return false;
-
             if ((Runic > 0) && dragOverCheck)
             {
                 Dictionary<int, Option> versions = AllRunicVersions();
