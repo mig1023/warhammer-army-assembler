@@ -885,13 +885,16 @@ namespace WarhammerArmyAssembler
             if (detail)
             {
                 index = 0;
-                rules += "\nEquipments:\n";
+                string equipments = "\nEquipments:\n";
 
                 foreach (Option option in Options.Where(x => (x.IsEquipment())))
                 {
                     index += 1;
-                    rules += $"{index}. {option.Name}\n";
+                    equipments += $"{index}. {option.Name}\n";
                 }
+
+                if (index > 0)
+                    rules += equipments;
             }
 
             return rules;
