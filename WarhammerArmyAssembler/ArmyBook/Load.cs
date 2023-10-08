@@ -830,7 +830,11 @@ namespace WarhammerArmyAssembler.ArmyBook
                 newOption.VirtueOriginalPoints = DoubleParse(xmlNode["Points"]);
             }
 
-            if (category != Option.OptionCategory.Nope)
+            if (BoolParse(xmlNode["TechnicalElement"]))
+            {
+                newOption.Category = Option.OptionCategory.Nope;
+            }
+            else if (category != Option.OptionCategory.Nope)
             {
                 newOption.Category = category;
             }

@@ -20,6 +20,7 @@ namespace WarhammerArmyAssembler.ArmyBook
         {
             XmlNode nodeName = xml.CreateNode(XmlNodeType.Element, "AdditionalAttackByFrenzy", String.Empty);
             AppendXmlNode(xml, nodeName, "AddToAttacks", "1");
+            AppendXmlNode(xml, nodeName, "TechnicalElement", "true");
 
             return nodeName;
         }
