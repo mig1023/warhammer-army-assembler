@@ -9,12 +9,17 @@ namespace WarhammerArmyAssembler.ArmyBook
 {
     class Services
     {
+        public static void AppendXmlNode(XmlDocument xml, XmlNode nodeName, string name, string value)
+        {
+            XmlNode nodeParam = xml.CreateNode(XmlNodeType.Element, name, String.Empty);
+            nodeParam.InnerText = value;
+            nodeName.AppendChild(nodeParam);
+        }
+
         public static XmlNode AddFrenzyAttack(XmlDocument xml)
         {
             XmlNode nodeName = xml.CreateNode(XmlNodeType.Element, "AdditionalAttackByFrenzy", String.Empty);
-            XmlNode nodeParam = xml.CreateNode(XmlNodeType.Element, "AddToAttacks", String.Empty);
-            nodeParam.InnerText = "1";
-            nodeName.AppendChild(nodeParam);
+            AppendXmlNode(xml, nodeName, "AddToAttacks", "1");
 
             return nodeName;
         }
@@ -22,9 +27,7 @@ namespace WarhammerArmyAssembler.ArmyBook
         public static XmlNode CreateRuleOnlyOption(XmlDocument xml, string rule)
         {
             XmlNode nodeName = xml.CreateNode(XmlNodeType.Element, rule, String.Empty);
-            XmlNode nodeParam = xml.CreateNode(XmlNodeType.Element, "OnlyRuleOption", String.Empty);
-            nodeParam.InnerText = "true";
-            nodeName.AppendChild(nodeParam);
+            AppendXmlNode(xml, nodeName, "OnlyRuleOption", "true");
 
             return nodeName;
         }
