@@ -168,7 +168,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 }
                 else
                 {
-                    title = Services.CamelNameSplit(option.Name);
+                    title = Services.CamelNameSplit(option.Name, pathetic: true);
                 }
 
                 string value = $"{title}|{option.InnerText}";
