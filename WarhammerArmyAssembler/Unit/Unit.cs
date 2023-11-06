@@ -918,7 +918,10 @@ namespace WarhammerArmyAssembler
                 bool named = !String.IsNullOrEmpty(option.Name);
                 bool thisIsRealised = (option.Realised || option.IsMagicItem()) && option.Points != 0;
                 bool thisIsNotMountOrFC = !(option.Mount || option.Command);
-                bool wizard = option.ChangeTo["WizardTo"] > 0 || option.AddTo["Wizard"] > 0;
+
+                bool wizardTo = option.ChangeTo.ContainsKey("WizardTo") && option.ChangeTo["WizardTo"] > 0;
+                bool addTo = option.AddTo.ContainsKey("WizardTo") && option.AddTo["Wizard"] > 0;
+                bool wizard = wizardTo || addTo;
 
                 if (named && thisIsRealised && thisIsNotMountOrFC && !wizard)
                     equipment += $"{option.FullName()}; ";
