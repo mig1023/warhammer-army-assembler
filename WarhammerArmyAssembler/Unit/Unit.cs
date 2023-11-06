@@ -864,28 +864,37 @@ namespace WarhammerArmyAssembler
             bool detail = false)
         {
             string rules = withCommandData ? GetCommandGroupLine() : String.Empty;
+            string specialRules = String.Empty;
             int index = 0;
-
-            if (detail)
-                rules += "Special rules:\n";
 
             foreach (string rule in GetSpecialRules(onlyUnitParam, withoutWizards))
             {
                 index += 1;
 
                 if (detail)
-                    rules += $"{index}. {rule}\n";
+                    specialRules += $"{index}. {rule}\n";
                 else
-                    rules += $"{rule}; ";
+                    specialRules += $"{rule}; ";
+            }
+
+            if (detail && !String.IsNullOrEmpty(specialRules))
+            {
+                rules += $"Special rules:\n{specialRules}\n";
+            }
+            else
+            {
+                rules += specialRules;
             }
 
             if (!detail && !String.IsNullOrEmpty(rules))
+            {
                 rules = rules.Remove(rules.Length - 2);
+            }
 
             if (detail)
             {
                 index = 0;
-                string equipments = "\nEquipments:\n";
+                string equipments = "Equipments:\n";
 
                 foreach (Option option in Options.Where(x => (x.IsEquipment())))
                 {
