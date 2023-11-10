@@ -330,7 +330,7 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             if (String.IsNullOrEmpty(folder))
             {
-                int edition = IntParse(Services.Intro(xmlFile, "Imprint/Edition"));
+                int edition = IntParse(Services.Intro(xmlFile, "Info/Edition"));
                 folder = $"{edition}edition";
             }
 
