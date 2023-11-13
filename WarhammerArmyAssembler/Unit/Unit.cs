@@ -1169,7 +1169,7 @@ namespace WarhammerArmyAssembler
             string rulesLine = String.Empty;
 
             foreach (string rule in rules)
-                rulesLine += "{rule}; ";
+                rulesLine += $"{rule}; ";
 
             return rulesLine;
         }
