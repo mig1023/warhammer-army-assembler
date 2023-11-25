@@ -909,6 +909,9 @@ namespace WarhammerArmyAssembler
             return rules;
         }
 
+        private bool WizardBonus(Dictionary<string, int> changes, string line) =>
+            changes.ContainsKey(line) && changes[line] > 0;
+
         public string GetEquipmentLine()
         {
             string equipment = GetCommandGroupLine();
@@ -918,10 +921,7 @@ namespace WarhammerArmyAssembler
                 bool named = !String.IsNullOrEmpty(option.Name);
                 bool thisIsRealised = (option.Realised || option.IsMagicItem()) && option.Points != 0;
                 bool thisIsNotMountOrFC = !(option.Mount || option.Command);
-
-                bool wizardTo = option.ChangeTo.ContainsKey("WizardTo") && option.ChangeTo["WizardTo"] > 0;
-                bool addTo = option.AddTo.ContainsKey("WizardTo") && option.AddTo["Wizard"] > 0;
-                bool wizard = wizardTo || addTo;
+                bool wizard = WizardBonus(option.ChangeTo, "WizardTo") || WizardBonus(option.AddTo, "Wizard");
 
                 if (named && thisIsRealised && thisIsNotMountOrFC && !wizard)
                     equipment += $"{option.FullName()}; ";
@@ -1191,7 +1191,9 @@ namespace WarhammerArmyAssembler
             foreach (Option option in options)
             {
                 bool wizExport = option.Countable?.ExportToWizardLevel ?? false;
-                bool noWizardBonus = option.ChangeTo["Wizard"] <= 0 && option.AddTo["Wizard"] <= 0;
+
+                bool noWizardBonus = WizardBonus(option.ChangeTo, "WizardTo") ||
+                    WizardBonus(option.AddTo, "Wizard");
 
                 if (!withoudWizards || (noWizardBonus && !wizExport))
                     rules.Add(option.Name);
