@@ -856,6 +856,7 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             newOption.Runic = RunicParse(xmlNode["Runic"]);
             newOption.Description = StringParse(xmlNode["Description"]);
+            newOption.Lore = StringParse(xmlNode["Lore"]);
             newOption.SpecialRuleDescription = AllStringParse(xmlNode, "Rule");
 
             if (Constants.CommonXmlSpecialRules != null)

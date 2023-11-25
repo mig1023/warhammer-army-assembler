@@ -57,6 +57,7 @@
             <ScrollViewer x:Name="armybookArtefactDetailScroll" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" VerticalScrollBarVisibility="Auto" Margin="25,0,0,0" Background="White">
                 <StackPanel x:Name="armybookArtefactDetail" Height="Auto" VerticalAlignment="Center" Margin="35" Background="White">
                     <Label x:Name="armyArtefactName" Content="" FontSize="34" Width="Auto" Margin="0"  HorizontalAlignment="Left"/>
+                    <TextBlock x:Name="armyArtefactLore" FontSize="16" FontStyle="Italic" Height="Auto" Width="Auto" TextWrapping="Wrap" Margin="0,20,0,0"/>
                     <TextBlock x:Name="armyArtefactDescription" FontSize="16" Height="Auto" Width="Auto" TextWrapping="Wrap" Margin="0,20,0,20"/>
                     <TextBlock x:Name="armyArtefactSpecific" FontSize="16" Height="Auto" Width="Auto" TextWrapping="Wrap"/>
                 </StackPanel>
@@ -74,7 +75,7 @@
                     <Image x:Name="armyUnitImage" Grid.Row="0" Grid.Column="0" Margin="30" Stretch="Uniform" />
                     <StackPanel x:Name="armybookDetail" Grid.Row="0" Grid.Column="1" Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="0, 0, 35, 0">
                         <Label x:Name="armyUnitName" FontSize="28" Margin="0, 15, 0, 0" Content="" HorizontalAlignment="Left"/>
-                        <TextBlock x:Name="armyUnitDescription" Height="Auto" Margin="0, 25" TextWrapping="Wrap"/>
+                        <TextBlock x:Name="armyUnitDescription" Height="Auto" FontStyle="Italic" Margin="0, 25" TextWrapping="Wrap"/>
                         <Border x:Name="detailUnitGridBorder" BorderBrush="Black" BorderThickness="1">
                             <Grid x:Name="detailUnitGrid" ShowGridLines="True">
                                 <Grid.RowDefinitions>

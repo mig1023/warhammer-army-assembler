@@ -785,8 +785,9 @@ namespace WarhammerArmyAssembler.Interface
                 Option option = obj as Option;
 
                 main.armyArtefactName.Content = option.Name.ToUpper();
-                main.armyArtefactDescription.Text = option.Description;
                 main.armyArtefactSpecific.Text = option.SelfDescription();
+                main.armyArtefactLore.Text = option.Lore;
+                main.armyArtefactDescription.Text = option.Description;
             }
 
             main.armyArtefactName.Foreground = Brushes.White;
