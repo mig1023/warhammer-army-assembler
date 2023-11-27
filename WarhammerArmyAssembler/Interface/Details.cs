@@ -60,8 +60,12 @@ namespace WarhammerArmyAssembler.Interface
                 margins[1] += 10;
 
             margins = CheckColumn(margins, ref lastColumnMaxWidth, header: true, newColumn: notFirstColumn);
-            margins[1] += AddLabel(head, margins, 25, ref lastColumnMaxWidth, bold: true, addLine:
-                GetMagicPointsString(unitID, head), fixPadding: 10);
+
+            string columnHead = Interface.Changes.DescriptionHead(head);
+            string magicPoints = GetMagicPointsString(unitID, head);
+
+            margins[1] += AddLabel(columnHead, margins, 25, ref lastColumnMaxWidth,
+                bold: true, addLine: magicPoints, fixPadding: 10);
 
             int mountAlreadyOn = (unit.MountOn > 0 ? unit.GetMountOption() : 0);
 
@@ -340,7 +344,7 @@ namespace WarhammerArmyAssembler.Interface
 
         public static void UpdateUnitDescription(int unitID, Unit unit)
         {
-            Changes.main.unitName.Content = unit.Name.ToUpper();
+            Changes.main.unitName.Content = Interface.Changes.DescriptionHead(unit.Name);
 
             Changes.main.unitName.Foreground = Brushes.White;
             Changes.main.unitName.Background = ArmyBook.Data.FrontColor;

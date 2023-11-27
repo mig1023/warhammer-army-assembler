@@ -770,13 +770,16 @@ namespace WarhammerArmyAssembler.Interface
             return element;
         }
 
+        public static string DescriptionHead(string name) =>
+            $" {name.ToUpper()} ";
+
         public static void SetContentDescription(object obj)
         {
             if (obj is Unit)
             {
                 Unit unit = obj as Unit;
 
-                main.armyArtefactName.Content = unit.Name.ToUpper();
+                main.armyArtefactName.Content = DescriptionHead(unit.Name);
                 main.armyArtefactDescription.Text = unit.Description;
                 main.armyArtefactSpecific.Text = unit.SelfDescription();
             }
@@ -784,7 +787,7 @@ namespace WarhammerArmyAssembler.Interface
             {
                 Option option = obj as Option;
 
-                main.armyArtefactName.Content = option.Name.ToUpper();
+                main.armyArtefactName.Content = DescriptionHead(option.Name);
                 main.armyArtefactSpecific.Text = option.SelfDescription();
                 main.armyArtefactLore.Text = option.Lore;
                 main.armyArtefactDescription.Text = option.Description;
@@ -824,7 +827,7 @@ namespace WarhammerArmyAssembler.Interface
 
         public static void SetContentDescriptionWithImage(Unit unit)
         {
-            main.armyUnitName.Content = unit.Name.ToUpper();
+            main.armyUnitName.Content = DescriptionHead(unit.Name);
             main.armyUnitDescription.Text = unit.Description;
             main.armyUnitSpecific.Text = unit.SelfDescription();
             main.specialRules.Text = unit.GetSpecialRulesLine(detail: true);
