@@ -782,6 +782,7 @@ namespace WarhammerArmyAssembler.Interface
                 main.armyArtefactName.Content = DescriptionHead(unit.Name);
                 main.armyArtefactDescription.Text = unit.Description;
                 main.armyArtefactSpecific.Text = unit.SelfDescription();
+                main.armyArtefactLore.Visibility = Visibility.Collapsed;
             }
             else
             {
@@ -789,8 +790,18 @@ namespace WarhammerArmyAssembler.Interface
 
                 main.armyArtefactName.Content = DescriptionHead(option.Name);
                 main.armyArtefactSpecific.Text = option.SelfDescription();
-                main.armyArtefactLore.Text = option.Lore;
                 main.armyArtefactDescription.Text = option.Description;
+
+                if (String.IsNullOrWhiteSpace(option.Lore))
+                {
+                    main.armyArtefactLore.Visibility = Visibility.Collapsed;
+                }
+                else
+                {
+                    string point = option.Lore.EndsWith(".") ? String.Empty : ".";
+                    main.armyArtefactLore.Text = $"{option.Lore}{point}";
+                    main.armyArtefactLore.Visibility = Visibility.Visible;
+                }
             }
 
             main.armyArtefactName.Foreground = Brushes.White;
