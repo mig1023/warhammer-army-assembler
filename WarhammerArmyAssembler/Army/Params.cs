@@ -208,15 +208,22 @@ namespace WarhammerArmyAssembler.Army
             ChangeTo = new Dictionary<string, int>(),
         };
 
-        public static List<Unit> GetArmyCategories() => new List<Unit>
+        public static List<Unit> GetArmyCategories()
         {
-            GetCategoryUnit("Lords"),
-            GetCategoryUnit("Heroes"),
-            GetCategoryUnit("Core"),
-            GetCategoryUnit("Special"),
-            GetCategoryUnit("Rare"),
-            GetCategoryUnit("Dogs of War", close: true),
-        };
+            List<Unit> categories = new List<Unit>
+            {
+                GetCategoryUnit("Lords"),
+                GetCategoryUnit("Heroes"),
+                GetCategoryUnit("Core"),
+                GetCategoryUnit("Special"),
+                GetCategoryUnit("Rare"),
+            };
+
+            if (!ArmyBook.Data.NoDogsOfWar)
+                categories.Add(GetCategoryUnit("Dogs of War", close: true));
+
+            return categories;
+        }
 
         public static Unit GetArmyGeneral() =>
             Data.Units.Values.Where(x => x.CurrentGeneral).FirstOrDefault();

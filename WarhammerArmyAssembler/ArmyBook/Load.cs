@@ -237,6 +237,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                 Enemy.Add(attr["Path"], attr["Size"], attr["Type"]);
             }
         }
+
         private static void LoadDogsOfWar(string army)
         {
             XmlDocument dogsFile = new XmlDocument();
@@ -275,6 +276,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             Data.Upgraded = Services.StyleColor(xmlFile, "Upgraded").InnerText;
 
             Data.DemonicMortal = BoolParse(Services.Intro(xmlFile, "DemonicMortal"));
+            Data.NoDogsOfWar = BoolParse(Services.Intro(xmlFile, "NoDogsOfWar"));
 
             string path = Path.GetDirectoryName(xmlFileName);
             string folder = Parsers.ImageFolderParser(xmlFile);

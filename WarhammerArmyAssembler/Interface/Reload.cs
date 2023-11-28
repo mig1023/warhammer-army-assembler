@@ -38,6 +38,9 @@ namespace WarhammerArmyAssembler.Interface
             {
                 Unit unit = entry.Clone();
 
+                if (ArmyBook.Data.NoDogsOfWar && unit.DogsOfWar)
+                    continue;
+
                 unit.PointsView = $" {unit.Points} pts";
 
                 if (unit.Prepayment != 0)

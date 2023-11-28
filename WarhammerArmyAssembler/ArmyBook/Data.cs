@@ -33,5 +33,6 @@ namespace WarhammerArmyAssembler.ArmyBook
 
         public static bool DemonicMortal = false;
         public static bool DemonicAlreadyReplaced = false;
+        public static bool NoDogsOfWar = false;
     }
 }
