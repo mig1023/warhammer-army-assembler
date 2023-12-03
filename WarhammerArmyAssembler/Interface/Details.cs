@@ -157,7 +157,9 @@ namespace WarhammerArmyAssembler.Interface
                                 continue;
 
                             margins = CheckColumn(margins, ref lastColumnMaxWidth);
-                            margins[1] += AddLabel(option.Name, margins, 15, ref lastColumnMaxWidth, fixPadding: 5);
+
+                            margins[1] += AddLabel(option.Name, margins, 15, ref lastColumnMaxWidth,
+                                fixPadding: 5, tooltip: option.Description);
                         }
 
                         notFirstColumn = true;
@@ -355,16 +357,37 @@ namespace WarhammerArmyAssembler.Interface
             AddOptionsList(unitID, unit);
         }
 
-        private static double AddLabel(string caption, double[] margins,
-            double height, ref double lastColumnMaxWidth, bool selected = false,
-            double points = 0, bool perModel = false, bool bold = false,
-            string addLine = "", int fixPadding = 0, bool enabled = true)
+        private static double AddLabel(string caption, double[] margins, double height,
+            ref double lastColumnMaxWidth, bool selected = false, double points = 0,
+            bool perModel = false, bool bold = false, string addLine = "",
+            int fixPadding = 0, bool enabled = true, string tooltip = "")
         {
-            Label newOption = new Label();
+            Label newOption = new Label
+            {
+                Content = String.Empty,
+            };
+
+            if (!String.IsNullOrEmpty(tooltip))
+            {
+                TextBlock text = new TextBlock
+                {
+                    Text = tooltip,
+                    FontSize = 11,
+                    LineStackingStrategy = LineStackingStrategy.BlockLineHeight,
+                    LineHeight = 13,
+                    TextWrapping = TextWrapping.Wrap,
+                    Padding = new Thickness(4),
+                };
+
+                newOption.ToolTip = new ToolTip
+                {
+                    Content = text,
+                    Background = (SolidColorBrush)ArmyBook.Data.TooltipColor,
+                    MaxWidth = 300,
+                };
+            }
 
             string[] captionLines = Services.WordSplit(caption);
-
-            newOption.Content = String.Empty;
 
             foreach (string line in captionLines)
             {
@@ -554,7 +577,7 @@ namespace WarhammerArmyAssembler.Interface
                 optionIsEnabled = false;
 
             AddLabel(caption, margins, height, ref lastColumnMaxWidth, option.Realised, option.Points,
-                option.PerModel, enabled: optionIsEnabled);
+                option.PerModel, enabled: optionIsEnabled, tooltip: option.Description);
 
             if (option.IsMagicItem() || option.IsPowers())
             {
