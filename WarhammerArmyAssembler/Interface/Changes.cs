@@ -781,6 +781,7 @@ namespace WarhammerArmyAssembler.Interface
 
                 main.armyArtefactName.Content = DescriptionHead(unit.Name);
                 main.armyArtefactDescription.Text = unit.Description;
+                main.armyArtefactDescription.Foreground = ArmyBook.Data.BackColor;
                 main.armyArtefactSpecific.Text = unit.SelfDescription();
                 main.armyArtefactLore.Visibility = Visibility.Collapsed;
             }
@@ -801,6 +802,7 @@ namespace WarhammerArmyAssembler.Interface
                     string point = option.Lore.EndsWith(".") ? String.Empty : ".";
                     main.armyArtefactLore.Text = $"{option.Lore}{point}";
                     main.armyArtefactLore.Visibility = Visibility.Visible;
+                    main.armyArtefactLore.Foreground = ArmyBook.Data.BackColor;
                 }
             }
 
