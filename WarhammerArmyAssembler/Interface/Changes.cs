@@ -773,6 +773,15 @@ namespace WarhammerArmyAssembler.Interface
         public static string DescriptionHead(string name) =>
             $" {name.ToUpper()} ";
 
+        private static bool EndWithPointAlready(string line)
+        {
+            bool point = line.EndsWith(".");
+            bool question = line.EndsWith("?");
+            bool exclamation = line.EndsWith("!");
+
+            return point || question || exclamation;
+        }
+
         public static void SetContentDescription(object obj)
         {
             if (obj is Unit)
@@ -799,7 +808,7 @@ namespace WarhammerArmyAssembler.Interface
                 }
                 else
                 {
-                    string point = option.Lore.EndsWith(".") ? String.Empty : ".";
+                    string point = EndWithPointAlready(option.Lore) ? String.Empty : ".";
                     main.armyArtefactLore.Text = $"{option.Lore}{point}";
                     main.armyArtefactLore.Visibility = Visibility.Visible;
                     main.armyArtefactLore.Foreground = ArmyBook.Data.BackColor;
