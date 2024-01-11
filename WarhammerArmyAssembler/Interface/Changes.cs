@@ -789,7 +789,7 @@ namespace WarhammerArmyAssembler.Interface
                 Unit unit = obj as Unit;
 
                 main.armyArtefactName.Content = DescriptionHead(unit.Name);
-                main.armyArtefactDescription.Text = unit.Description;
+                main.armyArtefactDescription.Text = unit.Lore;
                 main.armyArtefactDescription.Foreground = ArmyBook.Data.BackColor;
                 main.armyArtefactSpecific.Text = unit.SelfDescription();
                 main.armyArtefactLore.Visibility = Visibility.Collapsed;
@@ -850,7 +850,7 @@ namespace WarhammerArmyAssembler.Interface
         public static void SetContentDescriptionWithImage(Unit unit)
         {
             main.armyUnitName.Content = DescriptionHead(unit.Name);
-            main.armyUnitDescription.Text = unit.Description;
+            main.armyUnitDescription.Text = unit.Lore;
             main.armyUnitDescription.Foreground = ArmyBook.Data.BackColor;
             main.armyUnitSpecific.Text = unit.SelfDescription();
             main.specialRules.Text = unit.GetSpecialRulesLine(detail: true);

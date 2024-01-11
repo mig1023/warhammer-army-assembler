@@ -350,10 +350,10 @@ namespace WarhammerArmyAssembler.ArmyBook
         private static Unit LoadUnit(int id, XmlNode xmlUnit, XmlDocument xml,
             Unit target = null, Dictionary<string, string> enemyCommonXmlOption = null)
         {
-            string description = StringParse(xmlUnit["Description"]);
+            string lore = StringParse(xmlUnit["Lore"]);
 
-            if (String.IsNullOrEmpty(description))
-                description = StringParse(xmlUnit["Name"]);
+            if (String.IsNullOrEmpty(lore))
+                lore = StringParse(xmlUnit["Name"]);
 
             Unit newUnit = target ?? new Unit();
 
@@ -370,7 +370,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             newUnit.MountOn = IntParse(xmlUnit["MountOn"]);
             newUnit.MountInit = StringParse(xmlUnit["Mount"]);
             newUnit.ModelsInPack = IntParse(xmlUnit["ModelsInPack"], byDefault: 1);
-            newUnit.Description = description;
+            newUnit.Lore = lore;
             newUnit.Character = BoolParse(xmlUnit["Character"]);
             newUnit.WeaponTeam = BoolParse(xmlUnit["WeaponTeam"]);
             newUnit.Chariot = IntParse(xmlUnit["Chariot"]);

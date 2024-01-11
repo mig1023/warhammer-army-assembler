@@ -195,7 +195,7 @@ namespace WarhammerArmyAssembler.Army
         {
             Name = name,
             TooltipColor = (SolidColorBrush)ArmyBook.Data.TooltipColor,
-            Description = name.ToUpper(),
+            Lore = name.ToUpper(),
             CloseTreeView = close,
         };
 

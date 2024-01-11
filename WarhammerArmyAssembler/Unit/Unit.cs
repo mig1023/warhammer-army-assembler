@@ -73,7 +73,7 @@ namespace WarhammerArmyAssembler
         public double Prepayment { get; set; }
         public string PointsView { get; set; }
 
-        public string Description { get; set; }
+        public string Lore { get; set; }
 
         public Profile Movement { get; set; }
         public Profile WeaponSkill { get; set; }
@@ -296,7 +296,7 @@ namespace WarhammerArmyAssembler
                 Prepayment = this.Prepayment,
                 MountOn = this.MountOn,
                 MountInit = this.MountInit,
-                Description = this.Description,
+                Lore = this.Lore,
 
                 Wizard = this.Wizard,
 
