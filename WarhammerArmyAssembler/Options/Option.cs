@@ -121,6 +121,7 @@ namespace WarhammerArmyAssembler
             Type = this.Type,
             Category = this.Category,
             Description = this.Description,
+            Lore = this.Lore,
             SpecialRuleDescription = this.SpecialRuleDescription,
             Realised = this.Realised,
             Multiple = this.Multiple,
