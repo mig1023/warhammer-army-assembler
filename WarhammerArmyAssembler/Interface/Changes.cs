@@ -1001,7 +1001,9 @@ namespace WarhammerArmyAssembler.Interface
                 setting.IsChecked = settings[settingName] == "True";
             }
 
+            settingsWindow.CloseSettings.Background = ArmyBook.Data.FrontColor;
             settingsWindow.Show();
+
             Move(MovingType.ToMain, menu: true);
         }
     }
