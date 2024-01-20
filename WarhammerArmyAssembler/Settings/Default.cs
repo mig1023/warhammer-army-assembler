@@ -13,7 +13,7 @@ namespace WarhammerArmyAssembler.Settings
                 Group = "ARMY CHECKS",
                 Type = Setting.Types.checkbox,
                 Default = "True"
-            }
+            },
         };
 
         public static List<Setting> List() =>

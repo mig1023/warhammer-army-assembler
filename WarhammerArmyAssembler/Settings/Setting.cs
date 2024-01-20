@@ -11,6 +11,8 @@ namespace WarhammerArmyAssembler.Settings
         public string Name { get; set; }
 
         public string Group { get; set; }
+
+        public string Options { get; set; }
         
         public Types Type { get; set; }
 
