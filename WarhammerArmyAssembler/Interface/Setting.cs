@@ -56,11 +56,6 @@ namespace WarhammerArmyAssembler.Interface
         private static UIElement CreateCombobox(Settings.Setting setting,
             Dictionary<string, string> settings)
         {
-            Label label = new Label
-            {
-                Content = setting.Name,
-            };
-
             ComboBox comboBox = new ComboBox
             {
                 Name = setting.ID,
@@ -73,15 +68,7 @@ namespace WarhammerArmyAssembler.Interface
 
             comboBox.SelectionChanged += (sender, args) => Setting_Change(setting.ID, comboBox);
 
-            StackPanel panel = new StackPanel
-            {
-                Orientation = Orientation.Vertical,
-            };
-
-            panel.Children.Add(label);
-            panel.Children.Add(comboBox);
-
-            return panel;
+            return comboBox;
         }
 
         private static void SettingText_Change(string name, TextBox textBox) =>
@@ -90,11 +77,6 @@ namespace WarhammerArmyAssembler.Interface
         private static UIElement CreateInput(Settings.Setting setting,
             Dictionary<string, string> settings)
         {
-            Label label = new Label
-            {
-                Content = setting.Name,
-            };
-
             TextBox textBox = new TextBox
             {
                 Name = setting.ID,
@@ -103,13 +85,23 @@ namespace WarhammerArmyAssembler.Interface
 
             textBox.TextChanged += (sender, args) => SettingText_Change(setting.ID, textBox);
 
+            return textBox;
+        }
+
+        private static UIElement WithBorder(string name, UIElement element)
+        {
+            Label label = new Label
+            {
+                Content = name,
+            };
+
             StackPanel panel = new StackPanel
             {
                 Orientation = Orientation.Vertical,
             };
 
             panel.Children.Add(label);
-            panel.Children.Add(textBox);
+            panel.Children.Add(element);
 
             return panel;
         }
@@ -130,11 +122,11 @@ namespace WarhammerArmyAssembler.Interface
                 }
                 else if (setting.Type == Settings.Setting.Types.combobox)
                 {
-                    control = CreateCombobox(setting, settings);
+                    control = WithBorder(setting.Name, CreateCombobox(setting, settings));
                 }
                 else if (setting.Type == Settings.Setting.Types.input)
                 {
-                    control = CreateInput(setting, settings);
+                    control = WithBorder(setting.Name, CreateInput(setting, settings));
                 }
 
                 Border border = new Border
