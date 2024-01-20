@@ -19,6 +19,8 @@ namespace WarhammerArmyAssembler
         {
             InitializeComponent();
 
+            Settings.ConfigFile.Load();
+
             List<int> spaces = new List<int> { 10, 80, 90, 100, 170, 220, 260, 270, 280, 320 };
             double pi = Math.PI / 180;
 

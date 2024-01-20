@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Text;
 using System.IO;
+using System;
 
 namespace WarhammerArmyAssembler.Settings
 {
@@ -27,10 +28,10 @@ namespace WarhammerArmyAssembler.Settings
 
         async public static void Load()
         {
+            Values.Clean();
+
             if (!File.Exists(CONFIG_NAME))
                 return;
-
-            Values.Clean();
 
             using (FileStream config = File.OpenRead(CONFIG_NAME))
             {
@@ -44,6 +45,9 @@ namespace WarhammerArmyAssembler.Settings
 
                 foreach (string setting in settings)
                 {
+                    if (String.IsNullOrWhiteSpace(setting))
+                        continue;
+
                     List<string> parts = setting
                         .Split('=')
                         .Select(x => x.Trim())
