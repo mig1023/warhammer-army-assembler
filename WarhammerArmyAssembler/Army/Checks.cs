@@ -117,7 +117,7 @@ namespace WarhammerArmyAssembler.Army
             bool coreNumberProblem =
                 Params.GetArmyUnitsNumber(Unit.UnitType.Core) < Params.GetArmyMaxUnitsNumber(Unit.UnitType.Core);
 
-            if (coreNumberProblem && !Settings.Values.Get("DontCheckNumberOfCore"))
+            if (coreNumberProblem && !Settings.Values.IsTrue("DontCheckNumberOfCore"))
                 return "Not enough core unit in army";
 
             if (Params.GetArmyUnitsNumber(Unit.UnitType.Hero) + Params.GetArmyUnitsNumber(Unit.UnitType.Lord) <= 0)

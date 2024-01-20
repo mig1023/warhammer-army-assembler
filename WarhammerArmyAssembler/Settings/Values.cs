@@ -10,7 +10,7 @@ namespace WarhammerArmyAssembler.Settings
         public Values() =>
             Clean();
 
-        public static string GetLine(string name)
+        public static string Get(string name)
         {
             if (Settings.ContainsKey(name))
                 return Settings[name];
@@ -18,9 +18,9 @@ namespace WarhammerArmyAssembler.Settings
                 return String.Empty;
         }
 
-        public static bool Get(string name)
+        public static bool IsTrue(string name)
         {
-            string value = GetLine(name);
+            string value = Get(name);
             return !(String.IsNullOrWhiteSpace(value) || (value == "False"));
         }
 
