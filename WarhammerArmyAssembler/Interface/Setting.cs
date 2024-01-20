@@ -84,6 +84,36 @@ namespace WarhammerArmyAssembler.Interface
             return panel;
         }
 
+        private static void SettingText_Change(string name, TextBox textBox) =>
+            Settings.Values.Set(name, textBox.Text);
+
+        private static UIElement CreateInput(Settings.Setting setting,
+            Dictionary<string, string> settings)
+        {
+            Label label = new Label
+            {
+                Content = setting.Name,
+            };
+
+            TextBox textBox = new TextBox
+            {
+                Name = setting.ID,
+                Text = ChosenElement(setting.ID, settings, setting.Default),
+            };
+
+            textBox.TextChanged += (sender, args) => SettingText_Change(setting.ID, textBox);
+
+            StackPanel panel = new StackPanel
+            {
+                Orientation = Orientation.Vertical,
+            };
+
+            panel.Children.Add(label);
+            panel.Children.Add(textBox);
+
+            return panel;
+        }
+
         public static void ShowSettingsWindow()
         {
             CleanSettings();
@@ -102,7 +132,10 @@ namespace WarhammerArmyAssembler.Interface
                 {
                     control = CreateCombobox(setting, settings);
                 }
-                // else
+                else if (setting.Type == Settings.Setting.Types.input)
+                {
+                    control = CreateInput(setting, settings);
+                }
 
                 Border border = new Border
                 {
