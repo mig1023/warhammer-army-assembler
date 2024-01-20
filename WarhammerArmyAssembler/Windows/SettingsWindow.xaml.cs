@@ -11,18 +11,6 @@ namespace WarhammerArmyAssembler
             InitializeComponent();
         }
 
-        private void Setting_Checked(object sender, RoutedEventArgs e)
-        {
-            CheckBox checkbox = sender as CheckBox;
-            Settings.Values.Set(checkbox.Name, "True");
-        }
-
-        private void Setting_Unchecked(object sender, RoutedEventArgs e)
-        {
-            CheckBox checkbox = sender as CheckBox;
-            Settings.Values.Set(checkbox.Name, "False");
-        }
-
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             e.Cancel = true;

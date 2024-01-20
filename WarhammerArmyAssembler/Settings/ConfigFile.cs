@@ -25,8 +25,20 @@ namespace WarhammerArmyAssembler.Settings
 
             using (TextWriter config = new StreamWriter(CONFIG_NAME))
             {
-                foreach (KeyValuePair<string, string> setting in Values.All())
-                    config.WriteLine($"{setting.Key} = {setting.Value}");
+                Dictionary<string, string> values = Values.All();
+
+                string group = String.Empty;
+
+                foreach (Setting setting in Default.List())
+                {
+                    if (!values.ContainsKey(setting.ID))
+                        continue;
+
+                    if (String.IsNullOrEmpty(group) || (group != setting.Group))
+                        config.WriteLine($"[{setting.Group}]");
+
+                    config.WriteLine($"{setting.ID} = {values[setting.ID]}");
+                }   
             }
         }
 
@@ -49,7 +61,7 @@ namespace WarhammerArmyAssembler.Settings
 
                 foreach (string setting in settings)
                 {
-                    if (String.IsNullOrWhiteSpace(setting))
+                    if (String.IsNullOrWhiteSpace(setting) || !setting.Contains("="))
                         continue;
 
                     List<string> parts = setting

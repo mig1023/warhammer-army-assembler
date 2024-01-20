@@ -10,7 +10,7 @@ namespace WarhammerArmyAssembler.Settings
             {
                 ID = "CheckNumberOfCore",
                 Name = "Check the number of Core units",
-                Group = "Checks",
+                Group = "ARMY CHECKS",
                 Type = Setting.Types.checkbox,
                 Default = "True"
             }
