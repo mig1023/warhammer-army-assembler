@@ -990,21 +990,5 @@ namespace WarhammerArmyAssembler.Interface
 
             armyUnitTest_Resize();
         }
-
-        public static void ShowSettingsWindow()
-        {
-            Dictionary<string, string> settings = Settings.Values.All();
-
-            foreach (string settingName in settings.Keys)
-            {
-                CheckBox setting = (CheckBox)settingsWindow.FindName(settingName);
-                setting.IsChecked = settings[settingName] == "True";
-            }
-
-            settingsWindow.CloseSettings.Background = ArmyBook.Data.FrontColor;
-            settingsWindow.Show();
-
-            Move(MovingType.ToMain, menu: true);
-        }
     }
 }

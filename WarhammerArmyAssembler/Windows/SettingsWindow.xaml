@@ -16,7 +16,10 @@
                     </Label.LayoutTransform>
                 </Label>
             </Border>
-            <CheckBox Name="DontCheckNumberOfCore" Content="Don't check the number of Core units" HorizontalAlignment="Left" Height="18" VerticalAlignment="Top" Width="229" Checked="Setting_Checked" Unchecked="Setting_Unchecked"/>
+            <StackPanel Name="SettingsPanel" Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Top">
+                
+            </StackPanel>
+            <!--<CheckBox Name="DontCheckNumberOfCore" Content="Don't check the number of Core units" HorizontalAlignment="Left" Height="18" VerticalAlignment="Top" Width="229" Checked="Setting_Checked" Unchecked="Setting_Unchecked"/>-->
         </StackPanel>
     </Grid>
 </Window>

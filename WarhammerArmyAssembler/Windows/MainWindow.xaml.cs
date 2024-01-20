@@ -430,7 +430,7 @@ namespace WarhammerArmyAssembler
             Interface.Changes.CheckAndExportTo(toPDF: false);
 
         public void showSettingsWindow_MouseDown(object sender, MouseButtonEventArgs e) =>
-            Interface.Changes.ShowSettingsWindow();
+            Interface.Setting.ShowSettingsWindow();
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
