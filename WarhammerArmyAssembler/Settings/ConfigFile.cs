@@ -9,6 +9,7 @@ namespace WarhammerArmyAssembler.Settings
     class ConfigFile
     {
         const string CONFIG_NAME = "WarhammerArmyAssembler.config";
+        const string BACKUP_NAME = CONFIG_NAME + "_backup";
 
         public static void Save()
         {
@@ -16,7 +17,10 @@ namespace WarhammerArmyAssembler.Settings
 
             if (File.Exists(CONFIG_NAME))
             {
-                backupConfig.MoveTo(CONFIG_NAME + "_backup");
+                if (File.Exists(BACKUP_NAME))
+                    File.Delete(BACKUP_NAME);
+
+                backupConfig.MoveTo(BACKUP_NAME);
             }
 
             using (TextWriter config = new StreamWriter(CONFIG_NAME))

@@ -13,16 +13,12 @@ namespace WarhammerArmyAssembler
         private void Setting_Checked(object sender, RoutedEventArgs e)
         {
             CheckBox checkbox = sender as CheckBox;
-            MessageBox.Show("+" + checkbox.Name);
-
             Settings.Values.Set(checkbox.Name, "True");
         }
 
         private void Setting_Unchecked(object sender, RoutedEventArgs e)
         {
             CheckBox checkbox = sender as CheckBox;
-            MessageBox.Show("-" + checkbox.Name);
-
             Settings.Values.Set(checkbox.Name, "False");
         }
 
