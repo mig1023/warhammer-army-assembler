@@ -20,6 +20,7 @@ namespace WarhammerArmyAssembler.Interface
     {
         public static MainWindow main = null;
         public static ChangeArmybookWindow changeArmybook = new ChangeArmybookWindow();
+        public static SettingsWindow settingsWindow = new SettingsWindow();
         public static ObservableCollection<Unit> ArmyInInterface = new ObservableCollection<Unit>();
 
         public static object DragSender = null;
@@ -290,6 +291,7 @@ namespace WarhammerArmyAssembler.Interface
                 ["Export Army to PDF"] = main.saveArmyToPDF_MouseDown,
                 ["Export Army to PDF (light)"] = main.saveArmyToPDF_light_MouseDown,
                 ["Export Army to TXT"] = main.saveArmyToTXT_MouseDown,
+                ["Settings"] = main.showSettingsWindow_MouseDown,
                 ["Exit"] = main.closeWindow_MouseLeftButtonDown,
                 ["Close"] = main.closeMainMenu_MouseDown,
             };
@@ -987,6 +989,12 @@ namespace WarhammerArmyAssembler.Interface
                 element.Width = ZeroFuse(e.NewSize.Width - 120);
 
             armyUnitTest_Resize();
+        }
+
+        public static void ShowSettingsWindow()
+        {
+            settingsWindow.Show();
+            Move(MovingType.ToMain, menu: true);
         }
     }
 }

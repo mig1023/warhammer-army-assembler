@@ -69,12 +69,17 @@
     <Compile Include="Army\Checks.cs" />
     <Compile Include="Army\Mod.cs" />
     <Compile Include="Army\Params.cs" />
-    <Compile Include="ChangeArmybookWindow.xaml.cs">
+    <Compile Include="Windows\ChangeArmybookWindow.xaml.cs">
       <DependentUpon>ChangeArmybookWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Interface\Info.cs" />
     <Compile Include="Interface\Text.cs" />
     <Compile Include="Options\Countable.cs" />
+    <Compile Include="Windows\SettingsWindow.xaml.cs">
+      <DependentUpon>SettingsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\ConfigFile.cs" />
+    <Compile Include="Settings\Values.cs" />
     <Compile Include="Test\Dice.cs" />
     <Compile Include="Export\Text.cs" />
     <Compile Include="Export\Services.cs" />
@@ -95,11 +100,11 @@
     <Compile Include="Unit\Profile.cs" />
     <Compile Include="Unit\SpecialRules.cs" />
     <Compile Include="Unit\Unit.cs" />
-    <Page Include="ChangeArmybookWindow.xaml">
+    <Page Include="Windows\ChangeArmybookWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainWindow.xaml">
+    <Page Include="Windows\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -107,10 +112,14 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="Windows\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Windows\SettingsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -146,6 +155,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
