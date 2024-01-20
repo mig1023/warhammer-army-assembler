@@ -106,15 +106,38 @@ namespace WarhammerArmyAssembler.Interface
             return panel;
         }
 
+        private static UIElement GroupHeader(string name) => new Border
+        {
+            Padding = new Thickness(25,25,0,0),
+            Child = new Label
+            {
+                Content = name,
+                FontSize = 20,
+                FontWeight = FontWeights.UltraLight,
+                Foreground = ArmyBook.Data.FrontColor,
+            }
+        }; 
+
         public static void ShowSettingsWindow()
         {
             CleanSettings();
 
             Dictionary<string, string> settings = Settings.Values.All();
 
+            string group = String.Empty;
+
             foreach (Settings.Setting setting in Settings.Default.List())
             {
                 UIElement control = null;
+
+                if (String.IsNullOrEmpty(group) || (group != setting.Group))
+                {
+                    group = setting.Group;
+                    UIElement header = GroupHeader(group);
+
+                    controls.Add(header);
+                    Changes.settingsWindow.SettingsPanel.Children.Add(header);
+                }
 
                 if (setting.Type == Settings.Setting.Types.checkbox)
                 {

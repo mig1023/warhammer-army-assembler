@@ -16,7 +16,7 @@ namespace WarhammerArmyAssembler
             e.Cancel = true;
             this.Visibility = Visibility.Hidden;
 
-            Settings.ConfigFile.Save();
+            Settings.Storage.Save();
         }
 
         private void Close_Click(object sender, MouseButtonEventArgs e) =>
@@ -29,6 +29,11 @@ namespace WarhammerArmyAssembler
 
             if (this.Visibility == Visibility.Visible)
                 this.DragMove();
+        }
+
+        private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            TestScroll.Width = e.NewSize.Width - 29;
         }
     }
 }
