@@ -14,8 +14,6 @@ namespace WarhammerArmyAssembler
         public Enemy(string enemyName, string armybook, int size) =>
             ArmyBook.Load.ArmyUnitOnly(armybook, enemyName, this, ArmyBook.Load.CommonXmlOption(null), size);
 
-
-
         public string Fullname()
         {
             string tabs = Interface.Services.TabsBySize(this.Name.Length, this.Size);
@@ -84,7 +82,10 @@ namespace WarhammerArmyAssembler
             if (!EnemiesDirectories.ContainsKey(enemyType))
                 EnemiesDirectories[enemyType] = new List<Enemy>();
 
-            EnemiesDirectories[enemyType].Add(new Enemy(enemy, armybook, sizeExist ? size : 0));
+            Enemy newEnemy = new Enemy(enemy, armybook, sizeExist ? size : 0);
+
+            if ((newEnemy != null) && !String.IsNullOrEmpty(newEnemy.Name))
+                EnemiesDirectories[enemyType].Add(newEnemy);
         }
     }
 }
