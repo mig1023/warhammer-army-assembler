@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Windows.Media;
 using System.Threading.Tasks;
 
@@ -35,10 +36,45 @@ namespace WarhammerArmyAssembler.Test
                 await Task.Run(() => Fight.FullTest(Data.unit, Data.unitMount, Data.enemy, Data.enemyMount));
             }
 
-            foreach (Interface.Text line in Data.testConsole)
-                Interface.Test.FromConsoleToOutput(line.Content, line.Color);
+            Interface.Test.ConsoleChange(start: true);
 
+            foreach (Interface.Text line in OutputCompact(Data.testConsole))
+                Interface.Test.FromConsoleToOutput(line.Content, line.Color);
+          
+            Interface.Test.ConsoleChange(start: false);
             Interface.Test.VisibilityTest();
+        }
+
+        private static List<Interface.Text> OutputCompact(List<Interface.Text> console)
+        {
+            StringBuilder content = new StringBuilder();
+            List<Interface.Text> consoleOutput = new List<Interface.Text>();
+
+            Brush lastColor = console.First().Color;
+            Interface.Text lastText = new Interface.Text();
+
+            foreach (Interface.Text text in console)
+            {
+                if (lastColor == text.Color)
+                {
+                    content.Append(text.Content);
+                }
+                else
+                {
+                    lastText.Content = content.ToString();
+                    lastText.Color = lastColor;
+
+                    consoleOutput.Add(lastText);
+
+                    content.Clear();
+                    content.Append(text.Content);
+                    lastColor = text.Color;
+
+                    lastText = new Interface.Text();
+                }
+            }
+
+            return consoleOutput;
         }
 
         private static void EnemiesGroupBox(string name, int current)
@@ -46,9 +82,9 @@ namespace WarhammerArmyAssembler.Test
             int len = name.Length + 6;
             string firestLineFix = (current == 0 ? "\n" : String.Empty);
 
-            Data.Console(Data.supplText, $"\n{new String('/', len)}\n{firestLineFix}");
+            Data.Console(Data.supplText, $"\n{new String('/', len)}\n");
             Data.Console(Data.supplText, $"// {name.ToUpper()} //\n");
-            Data.Console(Data.supplText, $"{new String('/', len)}\n\n");
+            Data.Console(Data.supplText, $"{new String('/', len)}\n\n{firestLineFix}");
         }
 
         public static void BattleRoyaleTest(Unit unit, Unit unitMount, IProgress<string> progress)

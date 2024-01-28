@@ -200,6 +200,14 @@ namespace WarhammerArmyAssembler.Interface
             WarhammerArmyAssembler.Test.Data.testConsole.Add(newText);
         }
 
+        public static void ConsoleChange(bool start)
+        {
+            if (start)
+                Changes.main.testConsole.BeginChange();
+            else
+                Changes.main.testConsole.EndChange();
+        }
+
         public static void FromConsoleToOutput(string line, Brush color = null)
         {
             RichTextBox box = Changes.main.testConsole;
