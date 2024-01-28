@@ -150,6 +150,8 @@ namespace WarhammerArmyAssembler.Test
 
                 if (result[0] > 0)
                     Data.Console(Data.text, $"\nNobody win: {(double)result[0] / 10:f1}%");
+
+                Data.Console(Data.text, "\n\n");
             }
 
             WinDefeatScale(result[1], result[2]);
