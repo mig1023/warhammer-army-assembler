@@ -114,13 +114,16 @@ namespace WarhammerArmyAssembler.Army
 
         public static string ArmyProblems()
         {
-            bool coreNumberProblem =
-                Params.GetArmyUnitsNumber(Unit.UnitType.Core) < Params.GetArmyMaxUnitsNumber(Unit.UnitType.Core);
+            int coreCount = Params.GetArmyUnitsNumber(Unit.UnitType.Core);
+            int coreMax = Params.GetArmyMaxUnitsNumber(Unit.UnitType.Core);
 
-            if (coreNumberProblem && Settings.Values.IsTrue("CheckNumberOfCore"))
+            if ((coreCount < coreMax) && Settings.Values.IsTrue("CheckNumberOfCore"))
                 return "Not enough core unit in army";
 
-            if (Params.GetArmyUnitsNumber(Unit.UnitType.Hero) + Params.GetArmyUnitsNumber(Unit.UnitType.Lord) <= 0)
+            int characters = Params.GetArmyUnitsNumber(Unit.UnitType.Hero) +
+                Params.GetArmyUnitsNumber(Unit.UnitType.Lord);
+
+            if ((characters <= 0) && Settings.Values.IsTrue("CheckNumberOfCharacter"))
                 return "Not enough characters in army";
             
             return String.Empty;

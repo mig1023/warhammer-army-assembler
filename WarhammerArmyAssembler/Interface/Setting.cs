@@ -40,8 +40,11 @@ namespace WarhammerArmyAssembler.Interface
                 IsChecked = IsSettingCheckboxTrue(setting.ID, settings, setting.Default),
             };
 
-            checkbox.Checked += (sender, args) => Setting_CheckedChange(setting.ID, true);
-            checkbox.Unchecked += (sender, args) => Setting_CheckedChange(setting.ID, false);
+            checkbox.Checked += (sender, args) => 
+                Setting_CheckedChange(setting.ID, true);
+
+            checkbox.Unchecked += (sender, args) =>
+                Setting_CheckedChange(setting.ID, false);
 
             return checkbox;
         }
@@ -136,6 +139,7 @@ namespace WarhammerArmyAssembler.Interface
                     UIElement header = GroupHeader(group);
 
                     controls.Add(header);
+                    DockPanel.SetDock(header, Dock.Top);
                     Changes.settingsWindow.SettingsPanel.Children.Add(header);
                 }
 
@@ -154,11 +158,12 @@ namespace WarhammerArmyAssembler.Interface
 
                 Border border = new Border
                 {
-                    Padding = new Thickness(25,10,0,0),
+                    Padding = new Thickness(25,10,50,0),
                     Child = control,
                 };
 
                 controls.Add(border);
+                DockPanel.SetDock(border, Dock.Top);
                 Changes.settingsWindow.SettingsPanel.Children.Add(border);
             }
 
