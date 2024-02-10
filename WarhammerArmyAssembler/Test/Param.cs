@@ -14,9 +14,7 @@ namespace WarhammerArmyAssembler.Test
         public ContextType Context { get; set; }
         public RepeatType Repeat { get; set; }
         public bool MountsOnly { get; set; }
-
         public bool UsedAlready { get; set; }
-
 
         public static List<Param> Clone(List<Param> allParams)
         {
@@ -76,31 +74,31 @@ namespace WarhammerArmyAssembler.Test
 
             string newLine = testCount >= 1 ? "\n" : "\n\n";
             string startLine = roundFormat ? " --> " : newLine;
-            Data.Console(Data.text, $"{startLine}{unit.Name} must pass {param} test ");
+            Data.Console(Data.Text, $"{startLine}{unit.Name} must pass {param} test ");
 
             Profile paramProfile = (Profile)typeof(Unit).GetProperty(param).GetValue(unit);
             int diceNum = ((param == "Leadership") ? 2 : 1);
 
             if (Dice.Roll(unit, param, opponent, paramProfile.Value, diceNum, paramTest: true))
             {
-                Data.Console(Data.goodText, " --> passed");
+                Data.Console(Data.GoodText, " --> passed");
             }
             else
             {
                 switch (test)
                 {
                     case TestType.Pass:
-                        Data.Console(Data.badText, " --> pass this round");
+                        Data.Console(Data.BadText, " --> pass this round");
                         unit.PassThisRound = true;
                         break;
 
                     case TestType.Wound:
-                        Data.Console(Data.badText, " --> WOUND");
+                        Data.Console(Data.BadText, " --> WOUND");
                         unit.Wounds.Value -= 1;
                         break;
 
                     case TestType.Death:
-                        Data.Console(Data.badText, " --> SLAIN");
+                        Data.Console(Data.BadText, " --> SLAIN");
                         unit.Wounds.Value = 0;
                         unit.WoundedWithKillingBlow = true;
                         break;

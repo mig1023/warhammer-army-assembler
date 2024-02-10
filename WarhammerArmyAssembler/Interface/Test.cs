@@ -4,6 +4,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
 using System.Windows.Media;
+using WarhammerArmyAssembler.Test;
 
 namespace WarhammerArmyAssembler.Interface
 {
@@ -36,12 +37,11 @@ namespace WarhammerArmyAssembler.Interface
             Changes.armyUnitTest_Resize();
         }
 
-        public static void startTest(WarhammerArmyAssembler.Test.Data.TestTypes testType)
+        public static void Start(Data.TestTypes testType)
         {
             CleanConsole();
             Changes.armyUnitTest_Resize();
-
-            WarhammerArmyAssembler.Test.Fight.TestByName(testType);
+            Fight.TestByName(testType);
         }
 
         public static string GetFullConsoleText()
@@ -84,7 +84,7 @@ namespace WarhammerArmyAssembler.Interface
 
         public static void TestCanvasPrepare(Unit unit)
         {
-            WarhammerArmyAssembler.Test.Data.PrepareUnit(unit);
+            Data.PrepareUnit(unit);
 
             MainWindow main = Changes.main;
 
@@ -103,12 +103,12 @@ namespace WarhammerArmyAssembler.Interface
 
             main.startBattleRoyale.Visibility = Visibility.Visible;
 
-            main.armyTestUnit.Content = WarhammerArmyAssembler.Test.Data.unit.Name;
-            Unit unitLoad = WarhammerArmyAssembler.Test.Data.unit;
-            Unit mountLoad = WarhammerArmyAssembler.Test.Data.unitMount;
+            main.armyTestUnit.Content = Data.CurrentUnit.Name;
+            Unit unitLoad = Data.CurrentUnit;
+            Unit mountLoad = Data.CurrentUnitMount;
             LoadUnitParamInInterface(unitLoad, mountLoad, Changes.main.unitGrid);
 
-            LoadSpecialRules(unitForLoad: WarhammerArmyAssembler.Test.Data.unit,
+            LoadSpecialRules(unitForLoad: Data.CurrentUnit,
                 target: main.specialRulesTest, onlyUnitRules: true);
 
             List<Label> labels = new List<Label>
@@ -160,14 +160,14 @@ namespace WarhammerArmyAssembler.Interface
             if (String.IsNullOrEmpty(SelectedEnemy()))
                 return;
 
-            WarhammerArmyAssembler.Test.Data.PrepareEnemy(SelectedEnemy());
+            Data.PrepareEnemy(SelectedEnemy());
 
             Changes.main.enemyTestUnit.Content = Enemy.ByName(SelectedEnemy()).Name;
 
-            Unit enemyLoad = WarhammerArmyAssembler.Test.Data.enemy;
-            Unit mountLoad = WarhammerArmyAssembler.Test.Data.enemyMount;
+            Unit enemyLoad = Data.CurrentEnemy;
+            Unit mountLoad = Data.CurrentEnemyMount;
             LoadUnitParamInInterface(enemyLoad, mountLoad, Changes.main.enemyGrid);
-            LoadSpecialRules(unitForLoad: WarhammerArmyAssembler.Test.Data.enemy, target: Changes.main.specialRulesEnemyTest, onlyUnitRules: true);
+            LoadSpecialRules(unitForLoad: Data.CurrentEnemy, target: Changes.main.specialRulesEnemyTest, onlyUnitRules: true);
 
             Changes.armyUnitTest_Resize();
         }
@@ -197,7 +197,7 @@ namespace WarhammerArmyAssembler.Interface
                 Color = color
             };
 
-            WarhammerArmyAssembler.Test.Data.testConsole.Add(newText);
+            Data.TextConsole.Add(newText);
         }
 
         public static void ConsoleChange(bool start)

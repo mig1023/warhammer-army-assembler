@@ -16,29 +16,29 @@ namespace WarhammerArmyAssembler.Test
 
         public static async void TestByName(Data.TestTypes testType)
         {
-            Data.testConsole.Clear();
+            Data.TextConsole.Clear();
 
             Progress<string> current = new Progress<string>();
             current.ProgressChanged += (sender, args) => Interface.Changes.main.currentTest.Content = args.ToString();
 
             Interface.Test.VisibilityTest(before: true);
 
-            if (testType == Data.TestTypes.battleRoyale)
+            if (testType == Data.TestTypes.BattleRoyale)
             {
-                await Task.Run(() => Fight.BattleRoyaleTest(Data.unit, Data.unitMount, current));
+                await Task.Run(() => Fight.BattleRoyaleTest(Data.CurrentUnit, Data.CurrentUnitMount, current));
             }
-            else if (testType == Data.TestTypes.statisticTest)
+            else if (testType == Data.TestTypes.StatisticTest)
             {
-                await Task.Run(() => Fight.StatisticTest(Data.unit, Data.unitMount, Data.enemy, Data.enemyMount));
+                await Task.Run(() => Fight.StatisticTest(Data.CurrentUnit, Data.CurrentUnitMount, Data.CurrentEnemy, Data.CurrentEnemyMount));
             }
             else
             {
-                await Task.Run(() => Fight.FullTest(Data.unit, Data.unitMount, Data.enemy, Data.enemyMount));
+                await Task.Run(() => Fight.FullTest(Data.CurrentUnit, Data.CurrentUnitMount, Data.CurrentEnemy, Data.CurrentEnemyMount));
             }
 
             Interface.Test.ConsoleChange(start: true);
 
-            foreach (Interface.Text line in OutputCompact(Data.testConsole))
+            foreach (Interface.Text line in OutputCompact(Data.TextConsole))
                 Interface.Test.FromConsoleToOutput(line.Content, line.Color);
           
             Interface.Test.ConsoleChange(start: false);
@@ -82,9 +82,9 @@ namespace WarhammerArmyAssembler.Test
             int len = name.Length + 6;
             string firestLineFix = (current == 0 ? "\n" : String.Empty);
 
-            Data.Console(Data.supplText, $"\n{new String('/', len)}\n");
-            Data.Console(Data.supplText, $"// {name.ToUpper()} //\n");
-            Data.Console(Data.supplText, $"{new String('/', len)}\n\n{firestLineFix}");
+            Data.Console(Data.SupplText, $"\n{new String('/', len)}\n");
+            Data.Console(Data.SupplText, $"// {name.ToUpper()} //\n");
+            Data.Console(Data.SupplText, $"{new String('/', len)}\n\n{firestLineFix}");
         }
 
         public static void BattleRoyaleTest(Unit unit, Unit unitMount, IProgress<string> progress)
@@ -138,20 +138,20 @@ namespace WarhammerArmyAssembler.Test
 
             if (royalNotation)
             {
-                Data.Console(Data.text, $"vs {enemy.Name}: " +
+                Data.Console(Data.Text, $"vs {enemy.Name}: " +
                     $"win: {(double)result[1] / 10:f1}% " +
                     $"defeat: {((double)result[2] / 10):f1}%\n");
             }
             else
             {
-                Data.Console(Data.text, $"{unit.Name} " +
+                Data.Console(Data.Text, $"{unit.Name} " +
                     $"win: {(double)result[1] / 10:f1}%" +
                     $"\n{enemy.Name} win: {((double)result[2] / 10):f1}%");
 
                 if (result[0] > 0)
-                    Data.Console(Data.text, $"\nNobody win: {(double)result[0] / 10:f1}%");
+                    Data.Console(Data.Text, $"\nNobody win: {(double)result[0] / 10:f1}%");
 
-                Data.Console(Data.text, "\n\n");
+                Data.Console(Data.Text, "\n\n");
             }
 
             WinDefeatScale(result[1], result[2]);
@@ -159,27 +159,27 @@ namespace WarhammerArmyAssembler.Test
 
         private static void ScaleLine(string marker, int len, string el)
         {
-            Data.Console(Data.supplText, marker);
+            Data.Console(Data.SupplText, marker);
 
             for (int i = 0; i < len; i++)
-                Data.Console(Data.supplText, el);
+                Data.Console(Data.SupplText, el);
         }
 
         private static void ScaleDraw()
         {
-            Data.Console(Data.text, "\n");
+            Data.Console(Data.Text, "\n");
 
             ScaleLine("0%", 46, " ");
             ScaleLine("50%", 45, " ");
-            Data.Console(Data.supplText, "100%");
+            Data.Console(Data.SupplText, "100%");
 
-            Data.Console(Data.text, "\n");
+            Data.Console(Data.Text, "\n");
 
             ScaleLine("+", 48, "-");
             ScaleLine("+", 49, "-");
-            Data.Console(Data.supplText, "+");
+            Data.Console(Data.SupplText, "+");
 
-            Data.Console(Data.text, "\n");
+            Data.Console(Data.Text, "\n");
         }
 
         private static void WinDefeatLine(int columns, Brush scaleColor, bool floor = false)
@@ -195,10 +195,10 @@ namespace WarhammerArmyAssembler.Test
         {
             ScaleDraw();
 
-            WinDefeatLine(win, Data.goodText);
-            WinDefeatLine(defeat, Data.badText, floor: true);
+            WinDefeatLine(win, Data.GoodText);
+            WinDefeatLine(defeat, Data.BadText, floor: true);
 
-            Data.Console(Data.text, "\n\n");
+            Data.Console(Data.Text, "\n\n");
         }
 
         private static void InitRoundWounds(List<Unit> opponents, ref Dictionary<int, int> roundWounds)
@@ -266,8 +266,8 @@ namespace WarhammerArmyAssembler.Test
             }
 
             string testHead = $"{unit.Name} vs {enemy.Name}";
-            Data.Console(Data.text, testHead);
-            Data.Console(Data.supplText, $"\n{new string('-', testHead.Length)}");
+            Data.Console(Data.Text, testHead);
+            Data.Console(Data.SupplText, $"\n{new string('-', testHead.Length)}");
 
             Dictionary<int, int> roundWounds = new Dictionary<int, int>();
             InitRoundWounds(participants, ref roundWounds);
@@ -279,7 +279,7 @@ namespace WarhammerArmyAssembler.Test
             {
                 round += 1;
 
-                Data.Console(Data.supplText, $"\n\nround: {round}\n");
+                Data.Console(Data.SupplText, $"\n\nround: {round}\n");
 
                 foreach (Unit u in new List<Unit> { unit, enemy })
                     UnitRoundShow(u, u == unit);
@@ -307,7 +307,7 @@ namespace WarhammerArmyAssembler.Test
                     Unit opponent = SelectOpponent(participants, u);
 
                     if ((participants.Count > 2) && (actor.Wounds.Value > 0))
-                        Data.Console(Data.supplText, $"\n\n{actor.Name} chose {opponent.Name} as his opponent");
+                        Data.Console(Data.SupplText, $"\n\n{actor.Name} chose {opponent.Name} as his opponent");
 
                     int woundsAtStartOfRound = opponent.Wounds.Value;
 
@@ -339,10 +339,10 @@ namespace WarhammerArmyAssembler.Test
                         Regeneration(opponent, (woundsAtStartOfRound - opponent.Wounds.Value));
 
                     if (opponent.Wounds.Value <= 0)
-                        Data.Console(Data.badText, $"\n\n{opponent.Name} SLAIN");
+                        Data.Console(Data.BadText, $"\n\n{opponent.Name} SLAIN");
                 }
 
-                Data.Console(Data.text, "\n");
+                Data.Console(Data.Text, "\n");
 
                 Dictionary<int, int> battleResult = new Dictionary<int, int>(roundWounds);
 
@@ -379,7 +379,7 @@ namespace WarhammerArmyAssembler.Test
                                 if (u.Key.Mount != null)
                                     u.Key.Mount.Wounds.Value = 0;
 
-                                Data.Console(Data.text, "\n");
+                                Data.Console(Data.Text, "\n");
                             }
 
                             draw = false;
@@ -390,25 +390,25 @@ namespace WarhammerArmyAssembler.Test
                     }
 
                     if (draw)
-                        Data.Console(Data.goodText, "\nThe round ended in a draw");
+                        Data.Console(Data.GoodText, "\nThe round ended in a draw");
                 }
             }
 
-            Data.Console(Data.text, "\nEnd: ");
+            Data.Console(Data.Text, "\nEnd: ");
 
             if (IsThisUnitDeath(enemy))
             {
-                Data.Console(Data.text, $"{unit.Name} win");
+                Data.Console(Data.Text, $"{unit.Name} win");
                 return 1;
             }
             else if (IsThisUnitDeath(unit))
             {
-                Data.Console(Data.text, $"{enemy.Name} win");
+                Data.Console(Data.Text, $"{enemy.Name} win");
                 return 2;
             }
             else
             {
-                Data.Console(Data.text, $"{unit.Name} and {enemy.Name} failed to kill each other");
+                Data.Console(Data.Text, $"{unit.Name} and {enemy.Name} failed to kill each other");
                 return 0;
             }
         }
@@ -440,7 +440,7 @@ namespace WarhammerArmyAssembler.Test
 
         private static void AddRoundBonus(string unitName, string bonusName, ref int roundBonus, int bonus)
         {
-            Data.Console(Data.supplText, $"\n{unitName} have +{bonus} battle result bonus by {bonusName}");
+            Data.Console(Data.SupplText, $"\n{unitName} have +{bonus} battle result bonus by {bonusName}");
             roundBonus += 1;
         }
 
@@ -494,7 +494,7 @@ namespace WarhammerArmyAssembler.Test
 
             do
             {
-                randomOpponent = participants[Data.rand.Next(participants.Count)];
+                randomOpponent = participants[Data.Rand.Next(participants.Count)];
 
                 if ((randomOpponent.TestType != unit.TestType) && (randomOpponent.Wounds.Value > 0))
                     canBeOpponent = true;
@@ -513,7 +513,7 @@ namespace WarhammerArmyAssembler.Test
             if (unit.Frenzy)
             {
                 string blood = unit.BloodFrenzy ? "blood " : String.Empty;
-                Data.Console(Data.supplText, $"\n{unit.Name} --> is {blood}frenzy");
+                Data.Console(Data.SupplText, $"\n{unit.Name} --> is {blood}frenzy");
             }
 
             int deathInRound = death[unit.ID];
@@ -532,7 +532,7 @@ namespace WarhammerArmyAssembler.Test
             {
                 unitFront -= deathInRound;
                 string multiple = deathInRound > 1 ? "s" : String.Empty;
-                Data.Console(Data.supplText, $"\n\n-{deathInRound} unit{multiple} in {unit.Name} front");
+                Data.Console(Data.SupplText, $"\n\n-{deathInRound} unit{multiple} in {unit.Name} front");
             }
 
             if (unit.IsUnit())
@@ -565,12 +565,12 @@ namespace WarhammerArmyAssembler.Test
             int attacks = int.Parse(param[2].ToString());
 
             for (int i = 0; i < dices; i++)
-                attacks += Data.rand.Next(diceSize) + 1;
+                attacks += Data.Rand.Next(diceSize) + 1;
 
             if (current == 0)
-                Data.Console(Data.supplText, "\n");
+                Data.Console(Data.SupplText, "\n");
 
-            Data.Console(Data.supplText, $"\n{unitName} attacks for " +
+            Data.Console(Data.SupplText, $"\n{unitName} attacks for " +
                 $"{Unit.GetRandomAttacksLine(attackNum)}: {attacks}");
 
             return attacks;
@@ -583,7 +583,7 @@ namespace WarhammerArmyAssembler.Test
 
             unit.Frenzy = false;
             unit.Attacks.Value -= 1;
-            Data.Console(Data.supplText, $"\n{unit.Name} lost his frenzy");
+            Data.Console(Data.SupplText, $"\n{unit.Name} lost his frenzy");
         }
 
         private static bool BecameBloodFrenzy(ref Unit unit)
@@ -593,7 +593,7 @@ namespace WarhammerArmyAssembler.Test
 
             unit.Frenzy = true;
             unit.Attacks.Value += 1;
-            Data.Console(Data.supplText, $" <-- {unit.Name} become subject to blood frenzy");
+            Data.Console(Data.SupplText, $" <-- {unit.Name} become subject to blood frenzy");
 
             return true;
         }
@@ -611,29 +611,29 @@ namespace WarhammerArmyAssembler.Test
 
             Unit terrorSource = (((enemyFriend != null) && !enemy.Terror) ? enemyFriend : enemy);
 
-            Data.Console(Data.text, $"\n\n{unit.Name} " +
+            Data.Console(Data.Text, $"\n\n{unit.Name} " +
                 $"try to resist of terror by {terrorSource.Name} ");
 
             if (unit.Unbreakable)
             {
-                Data.Console(Data.goodText, " --> autopassed (unbreakable)");
+                Data.Console(Data.GoodText, " --> autopassed (unbreakable)");
             }
             else if (unit.ImmuneToPsychology || unit.Undead || unit.Stupidity)
             {
-                Data.Console(Data.goodText, " --> autopassed (immune to psychology)");
+                Data.Console(Data.GoodText, " --> autopassed (immune to psychology)");
             }
             else if (unit.Frenzy)
             {
-                Data.Console(Data.goodText, " --> autopassed (frenzy)");
+                Data.Console(Data.GoodText, " --> autopassed (frenzy)");
             }
             else if (Dice.Roll(unit, Dice.Types.LD, terrorSource, unit.Leadership.Value, 2))
             {
-                Data.Console(Data.goodText, " --> passed");
+                Data.Console(Data.GoodText, " --> passed");
             }
             else
             {
                 unit.Wounds.Value = 0;
-                Data.Console(Data.badText, " --> fail");
+                Data.Console(Data.BadText, " --> fail");
             }
 
             return unit;
@@ -648,7 +648,7 @@ namespace WarhammerArmyAssembler.Test
             bool steamImpactHit = impactHit && unit.SteamTank;
 
             if (nobodyDeath && !steamImpactHit && !afterSteamTankAttack && (attackNumber > 0)) 
-                Data.Console(Data.text, "\n");
+                Data.Console(Data.Text, "\n");
 
             for (int i = 0; i < attackNumber; i++)
             {
@@ -662,14 +662,14 @@ namespace WarhammerArmyAssembler.Test
                 if ((enemy.Wounds.Value < wounded) && !enemy.WoundedWithKillingBlow)
                 {
                     wounded = enemy.Wounds.Value;
-                    Data.Console(Data.supplText, $", only {wounded} can be inflicted");
+                    Data.Console(Data.SupplText, $", only {wounded} can be inflicted");
                 }
 
                 enemy.Wounds.Value -= wounded;
 
                 if (additionalAttack)
                 {
-                    Data.Console(Data.supplText, $" <-- {unit.Name} have additional " +
+                    Data.Console(Data.SupplText, $" <-- {unit.Name} have additional " +
                         $"attack by predatory fighter rule");
 
                     attackNumber += 1;
@@ -688,7 +688,7 @@ namespace WarhammerArmyAssembler.Test
 
         private static void Regeneration(Unit unit, int roundWounds)
         {
-            Data.Console(Data.text, "\n");
+            Data.Console(Data.Text, "\n");
 
             int regeneration = (unit.ExtendedRegeneration > 0 ? unit.ExtendedRegeneration : 4);
 
@@ -697,28 +697,28 @@ namespace WarhammerArmyAssembler.Test
                 string regenarationRate = regeneration == 4 ?
                     $"({regeneration}+) " : String.Empty;
 
-                Data.Console(Data.text, $"\n{unit.Name} --> regeneration ({regeneration}+) ");
+                Data.Console(Data.Text, $"\n{unit.Name} --> regeneration ({regeneration}+) ");
 
                 if (Dice.Roll(unit, Dice.Types.REGENERATION, unit, regeneration))
                 {
-                    Data.Console(Data.goodText, " --> success");
+                    Data.Console(Data.GoodText, " --> success");
                     unit.Wounds.Value += 1;
                 }
                 else
                 {
-                    Data.Console(Data.badText, " --> fail");
+                    Data.Console(Data.BadText, " --> fail");
                 }
             }
         }
 
         private static void ShowRoundOrder(List<Unit> allParticipants)
         {
-            Data.Console(Data.supplText, "\nround fight order:");
+            Data.Console(Data.SupplText, "\nround fight order:");
 
             foreach (Unit u in allParticipants)
             {
                 string participant = u == allParticipants[0] ? String.Empty : " -->";
-                Data.Console(Data.supplText, $"{participant} {u.Name}");
+                Data.Console(Data.SupplText, $"{participant} {u.Name}");
             }
         }
 
@@ -773,13 +773,13 @@ namespace WarhammerArmyAssembler.Test
             Unit enemy = units[2];
             Unit enemyFriend = units[3];
 
-            Data.Console(Data.text, $"\n{unit.Name} break test --> ");
+            Data.Console(Data.Text, $"\n{unit.Name} break test --> ");
 
             int temoraryLeadership = unit.Leadership.Value;
 
             if (unit.Stubborn)
             {
-                Data.Console(Data.text, "stubborn --> ");
+                Data.Console(Data.Text, "stubborn --> ");
             }
             else
             {
@@ -809,29 +809,29 @@ namespace WarhammerArmyAssembler.Test
 
             if (unit.Unbreakable)
             {
-                Data.Console(Data.text, "unbreakable");
+                Data.Console(Data.Text, "unbreakable");
             }
             else if (thereAreMoreOfThem && (enemyFearOrTerror || enemyMountFearOrTerror) && !itNotFear)
             {
                 string enemyName = enemyFearOrTerror ? enemy.Name : enemyFriend.Name;
-                Data.Console(Data.badText, $"autobreak by {enemyName} fear");
+                Data.Console(Data.BadText, $"autobreak by {enemyName} fear");
                 return true;
             }
             else
             {
                 if (Dice.Roll(unit, Dice.Types.LD, enemy, temoraryLeadership, out int dice, diceNum: 2, breakTest: true))
                 {
-                    Data.Console(Data.goodText, " --> passed");
+                    Data.Console(Data.GoodText, " --> passed");
                 }
                 else
                 {
-                    Data.Console(Data.badText, " --> fail");
+                    Data.Console(Data.BadText, " --> fail");
 
                     if (unit.Undead)
                     {
                         int additionalWounds = (dice - temoraryLeadership);
 
-                        Data.Console(Data.badText, $" --> {additionalWounds} additional wounds");
+                        Data.Console(Data.BadText, $" --> {additionalWounds} additional wounds");
 
                         if (unit.Wounds.Value < additionalWounds)
                             additionalWounds = unit.Wounds.Value;
@@ -865,10 +865,10 @@ namespace WarhammerArmyAssembler.Test
             if ((unit.Wounds.Value > 0) && (enemy.Wounds.Value > 0))
             {
                 string spacer = !impactHit ? " " : String.Empty;
-                Data.Console(Data.text, $"\n{unit.Name} --> hit{spacer}");
+                Data.Console(Data.Text, $"\n{unit.Name} --> hit{spacer}");
 
                 if (impactHit)
-                    Data.Console(Data.supplText, $" ({impactLine} impact hit)");
+                    Data.Console(Data.SupplText, $" ({impactLine} impact hit)");
 
                 int diceForHit = 0;
 
@@ -882,7 +882,7 @@ namespace WarhammerArmyAssembler.Test
                     if (enemy.Wounds.Value <= 0)
                         return woundsAtStart;
 
-                    Data.Console(Data.text, " --> wound ");
+                    Data.Console(Data.Text, " --> wound ");
 
                     if (
                         (PoisonedAttack(unit, enemy, impactHit) || Wound(unit, enemy, round))
@@ -895,13 +895,13 @@ namespace WarhammerArmyAssembler.Test
                     ) {
                         if (attackWithKillingBlow && enemy.IsHeroOrHisMount())
                         {
-                            Data.Console(Data.badText, $" --> {enemy.Name} SLAIN");
+                            Data.Console(Data.BadText, $" --> {enemy.Name} SLAIN");
                             enemy.WoundedWithKillingBlow = true;
                             return enemy.Wounds.Value;
                         }
                         else
                         {
-                            Data.Console(Data.badText, $" --> {enemy.Name} WOUND");
+                            Data.Console(Data.BadText, $" --> {enemy.Name} WOUND");
 
                             Param.Tests(ref enemy, unit, context: Param.ContextType.Wound);
 
@@ -912,7 +912,7 @@ namespace WarhammerArmyAssembler.Test
                         }
                     }
                 }
-                Data.Console(Data.goodText, " --> fail");
+                Data.Console(Data.GoodText, " --> fail");
             }
             return 0;
         }
@@ -952,7 +952,7 @@ namespace WarhammerArmyAssembler.Test
                 RandomParamValues(param, out int diceNumber, out int diceSize, out int addSomething);
 
                 for (int i = 0; i < diceNumber; i++)
-                    randomParam += Data.rand.Next(diceSize) + 1 + addSomething;
+                    randomParam += Data.Rand.Next(diceSize) + 1 + addSomething;
             }
 
             return randomParam;
@@ -962,7 +962,7 @@ namespace WarhammerArmyAssembler.Test
         {
             if (unit.AutoDeath)
             {
-                Data.Console(Data.text, " <-- lose all wounds");
+                Data.Console(Data.Text, " <-- lose all wounds");
                 return enemy.Wounds.Value;
             }
 
@@ -971,11 +971,11 @@ namespace WarhammerArmyAssembler.Test
 
             int multiwounds = RandomParamParse(unit.MultiWounds);
 
-            Data.Console(Data.text, $" <-- {multiwounds} multiple wounds");
+            Data.Console(Data.Text, $" <-- {multiwounds} multiple wounds");
 
             if (enemy.FirstWoundDiscount)
             {
-                Data.Console(Data.text, " <-- first wound discount");
+                Data.Console(Data.Text, " <-- first wound discount");
 
                 enemy.FirstWoundDiscount = false;
 
@@ -991,7 +991,7 @@ namespace WarhammerArmyAssembler.Test
                 return false;
 
             attackIsPoisoned = true;
-            Data.Console(Data.text, "(poison)");
+            Data.Console(Data.Text, "(poison)");
             return true;  
         }
 
@@ -1008,13 +1008,13 @@ namespace WarhammerArmyAssembler.Test
             {
                 attackWithKillingBlow = true;
                 string heroic = unit.HeroicKillingBlow ? "heroic " : String.Empty;
-                Data.Console(Data.text, " --> {heroic}killing blow");
+                Data.Console(Data.Text, " --> {heroic}killing blow");
                 return true;
             }
 
             if ((enemy.Armour != null) && !enemy.Armour.Null && !unit.NoArmour)
             {
-                Data.Console(Data.text, " --> AS ");
+                Data.Console(Data.Text, " --> AS ");
             }
                 
             return false;
@@ -1027,7 +1027,7 @@ namespace WarhammerArmyAssembler.Test
 
             if (unit.AutoHit || enemy.SteamTank)
             {
-                Data.Console(Data.text, "(autohit)");
+                Data.Console(Data.Text, "(autohit)");
                 return true;
             }
             else if (unit.HitOn > 0)
@@ -1069,7 +1069,7 @@ namespace WarhammerArmyAssembler.Test
 
             if (unit.AutoWound)
             {
-                Data.Console(Data.text, "(autowound)");
+                Data.Console(Data.Text, "(autowound)");
                 return true;
             }
             else if (unit.WoundOn > 0)
@@ -1094,7 +1094,7 @@ namespace WarhammerArmyAssembler.Test
             }
             else if ((strength + 2) < enemy.Toughness.Value)
             {
-                Data.Console(Data.supplText, "(impossible)");
+                Data.Console(Data.SupplText, "(impossible)");
                 return false;
             }
 
@@ -1124,7 +1124,7 @@ namespace WarhammerArmyAssembler.Test
             if (!enemy.FirstWoundDiscount || !String.IsNullOrEmpty(unit.MultiWounds))
                 return true;
 
-            Data.Console(Data.text, " --> first wound discount");
+            Data.Console(Data.Text, " --> first wound discount");
 
             enemy.FirstWoundDiscount = false;
 
@@ -1147,7 +1147,7 @@ namespace WarhammerArmyAssembler.Test
             if ((ward <= 0) || unit.NoWard)
                 return true;
 
-            Data.Console(Data.text, " --> ward ");
+            Data.Console(Data.Text, " --> ward ");
 
             bool wardFail = Dice.Roll(unit, Dice.Types.WARD, enemy, ward);
 
@@ -1174,7 +1174,7 @@ namespace WarhammerArmyAssembler.Test
             string bothLine = !String.IsNullOrEmpty(uLine) &&
                 !String.IsNullOrEmpty(uMount) ? " + " : String.Empty;
 
-            Data.Console(Data.supplText, $"{uLine}{bothLine}{uMount}" +
+            Data.Console(Data.SupplText, $"{uLine}{bothLine}{uMount}" +
                 $"{(firstLine ? ", " : String.Empty)}");
         }
     }

@@ -487,13 +487,13 @@ namespace WarhammerArmyAssembler
             Interface.Test.LoadEnemyGroups();
 
         private void startFullTest_MouseDown(object sender, MouseButtonEventArgs e) =>
-            Interface.Test.startTest(Test.Data.TestTypes.fullTest);
+            Interface.Test.Start(Test.Data.TestTypes.FullTest);
 
         private void startStatisticTest_MouseDown(object sender, MouseButtonEventArgs e) =>
-            Interface.Test.startTest(Test.Data.TestTypes.statisticTest);
+            Interface.Test.Start(Test.Data.TestTypes.StatisticTest);
 
         private void startBattleRoyale_MouseDown(object sender, MouseButtonEventArgs e) =>
-            Interface.Test.startTest(Test.Data.TestTypes.battleRoyale);
+            Interface.Test.Start(Test.Data.TestTypes.BattleRoyale);
 
         private void specialRule_MouseDown(object sender, MouseButtonEventArgs e)
         {

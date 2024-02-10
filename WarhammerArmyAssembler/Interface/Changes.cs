@@ -94,7 +94,7 @@ namespace WarhammerArmyAssembler.Interface
             {
                 List<Option> group = artefact.AllRandomByGroup();
 
-                do id = group[WarhammerArmyAssembler.Test.Data.rand.Next(0, group.Count)].ID;
+                do id = group[WarhammerArmyAssembler.Test.Data.Rand.Next(0, group.Count)].ID;
                 while (Army.Data.Units[unitID].Options.Where(x => x.ID == id).Count() > 0);
             }
             else if (artefact.Runic > 0)
@@ -568,7 +568,7 @@ namespace WarhammerArmyAssembler.Interface
         public static void RandomArmy()
         {
             string randomArmy = allArmies
-                .ElementAt(WarhammerArmyAssembler.Test.Data.rand.Next(0, allArmies.Count))
+                .ElementAt(WarhammerArmyAssembler.Test.Data.Rand.Next(0, allArmies.Count))
                 .Key;
 
             SetArmySelected(allArmies[randomArmy]);
