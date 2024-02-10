@@ -15,7 +15,7 @@ namespace WarhammerArmyAssembler.Settings
             if (Settings.ContainsKey(name))
                 return Settings[name];
             else
-                return String.Empty;
+                return Default.Get(name);
         }
 
         public static bool IsTrue(string name)

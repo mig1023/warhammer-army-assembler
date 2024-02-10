@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace WarhammerArmyAssembler.Settings
 {
@@ -23,6 +24,9 @@ namespace WarhammerArmyAssembler.Settings
                 Default = "True"
             },
         };
+
+        public static string Get(string name) =>
+            listOfSettings.Where(x => x.ID == name).FirstOrDefault().Default;
 
         public static List<Setting> List() =>
             new List<Setting>(listOfSettings);
