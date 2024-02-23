@@ -38,7 +38,10 @@ namespace WarhammerArmyAssembler.Interface
             {
                 Unit unit = entry.Clone();
 
-                if (ArmyBook.Data.NoDogsOfWar && unit.DogsOfWar)
+                bool noDogs = ArmyBook.Data.NoDogsOfWar ||
+                    !Settings.Values.IsTrue("DogsOfWarEnabled");
+
+                if (noDogs && unit.DogsOfWar)
                     continue;
 
                 unit.PointsView = $" {unit.Points} pts";

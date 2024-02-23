@@ -23,6 +23,14 @@ namespace WarhammerArmyAssembler.Settings
                 Type = Setting.Types.checkbox,
                 Default = "True"
             },
+            new Setting
+            {
+                ID = "DogsOfWarEnabled",
+                Name = "Enable Dogs of War",
+                Group = "DOGS OF WAR",
+                Type = Setting.Types.checkbox,
+                Default = "True"
+            },
         };
 
         public static string Get(string name) =>

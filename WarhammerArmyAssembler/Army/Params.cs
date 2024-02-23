@@ -219,7 +219,7 @@ namespace WarhammerArmyAssembler.Army
                 GetCategoryUnit("Rare"),
             };
 
-            if (!ArmyBook.Data.NoDogsOfWar)
+            if (!ArmyBook.Data.NoDogsOfWar && Settings.Values.IsTrue("DogsOfWarEnabled"))
                 categories.Add(GetCategoryUnit("Dogs of War", close: true));
 
             return categories;
