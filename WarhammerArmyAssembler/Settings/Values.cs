@@ -10,13 +10,8 @@ namespace WarhammerArmyAssembler.Settings
         public Values() =>
             Clean();
 
-        public static string Get(string name)
-        {
-            if (Settings.ContainsKey(name))
-                return Settings[name];
-            else
-                return Default.Get(name);
-        }
+        public static string Get(string name) =>
+            Settings.ContainsKey(name) ? Settings[name] : Default.Get(name);
 
         public static bool IsTrue(string name)
         {
@@ -27,13 +22,8 @@ namespace WarhammerArmyAssembler.Settings
         public static string Set(string name, string value) =>
             Settings[name] = value;
 
-        public static Dictionary<string, string> All()
-        {
-            if (Settings != null)
-                return new Dictionary<string, string>(Settings);
-            else
-                return new Dictionary<string, string>();
-        }
+        public static Dictionary<string, string> All() =>
+            new Dictionary<string, string>(Settings);
 
         public static void Clean() =>
             Settings = new Dictionary<string, string>();
