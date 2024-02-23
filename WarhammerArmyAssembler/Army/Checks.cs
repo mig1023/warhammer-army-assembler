@@ -82,6 +82,9 @@ namespace WarhammerArmyAssembler.Army
 
         public static bool IsArmyDublicationOk(Unit unit)
         {
+            if (!Settings.Values.IsTrue("CheckOfDublication"))
+                return true;
+
             int alreadyInArmy = Data.Units.Values.Where(x => x.ID == unit.ID).Count();
 
             int limitForArmy = -1;

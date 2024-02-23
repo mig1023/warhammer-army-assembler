@@ -49,6 +49,14 @@ namespace WarhammerArmyAssembler.Settings
             },
             new Setting
             {
+                ID = "CheckOfDublication",
+                Name = "Check for invalid duplication of units",
+                Group = "ARMY CHECKS",
+                Type = Setting.Types.checkbox,
+                Default = "True"
+            },
+            new Setting
+            {
                 ID = "DogsOfWarEnabled",
                 Name = "Enable Dogs of War",
                 Group = "DOGS OF WAR",
