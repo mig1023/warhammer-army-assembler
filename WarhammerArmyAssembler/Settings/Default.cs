@@ -25,6 +25,14 @@ namespace WarhammerArmyAssembler.Settings
             },
             new Setting
             {
+                ID = "CheckNumberOfUnits",
+                Name = "Check the number of heroes and units by types",
+                Group = "ARMY CHECKS",
+                Type = Setting.Types.checkbox,
+                Default = "True"
+            },
+            new Setting
+            {
                 ID = "DogsOfWarEnabled",
                 Name = "Enable Dogs of War",
                 Group = "DOGS OF WAR",

@@ -186,11 +186,13 @@ namespace WarhammerArmyAssembler.Interface
             bool allSlotFail = allHeroes >= Army.Params.GetArmyMaxUnitsNumber(Unit.UnitType.Hero);
             bool lordInHeroSlot = (unit.Type == Unit.UnitType.Hero) && allSlotFail;
 
+            bool noCheckUnits = !Settings.Values.IsTrue("CheckNumberOfUnits");
+
             if (unit.Character && Army.Checks.IsUnitExistInArmyByArmyBookID(id))
             {
                 Error("Personalities cannot be repeated");
             }
-            else if ((!slotExists && !coreUnit) || lordInHeroSlot)
+            else if (((!slotExists && !coreUnit) || lordInHeroSlot) && !noCheckUnits)
             {
                 string type = unit.IsHero() ? "heroes" : "units";
                 Error($"The number of {type} of this type has been exhausted.");
