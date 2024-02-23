@@ -31,6 +31,15 @@ namespace WarhammerArmyAssembler.Settings
                 Type = Setting.Types.checkbox,
                 Default = "True"
             },
+            new Setting
+            {
+                ID = "DogsOfWarType",
+                Name = "Unit type of Dogs of War",
+                Group = "DOGS OF WAR",
+                Type = Setting.Types.combobox,
+                Options = "Core, Special, Rare",
+                Default = "Rare"
+            },
         };
 
         public static string Get(string name) =>
