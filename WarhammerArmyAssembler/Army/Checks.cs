@@ -64,6 +64,9 @@ namespace WarhammerArmyAssembler.Army
 
         public static bool IsArmyUnitsPointsPercentOk(Unit.UnitType type, double points, double prepayment)
         {
+            if (!Settings.Values.IsTrue("CheckOfRatio"))
+                return true;
+
             Dictionary<Unit.UnitType, double> units = UnitsPointsPercent();
 
             int twentyFivePercent = (int)(Data.MaxPoints * ArmyBook.Constants.Quarter);

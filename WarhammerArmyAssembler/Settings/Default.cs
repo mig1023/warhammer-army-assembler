@@ -41,6 +41,14 @@ namespace WarhammerArmyAssembler.Settings
             },
             new Setting
             {
+                ID = "CheckOfRatio",
+                Name = "Check the ratio of unit types",
+                Group = "ARMY CHECKS",
+                Type = Setting.Types.checkbox,
+                Default = "True"
+            },
+            new Setting
+            {
                 ID = "DogsOfWarEnabled",
                 Name = "Enable Dogs of War",
                 Group = "DOGS OF WAR",
