@@ -26,22 +26,18 @@ namespace WarhammerArmyAssembler.Settings
             using (TextWriter config = new StreamWriter(CONFIG_NAME))
             {
                 Dictionary<string, string> values = Values.All();
+                Dictionary<string, List<Setting>> settings = Default.All();
 
-                string group = String.Empty;
-
-                foreach (Setting setting in Default.List())
+                foreach (string group in settings.Keys)
                 {
-                    if (!values.ContainsKey(setting.ID))
-                        continue;
+                    config.WriteLine($"[{group}]");
 
-                    if (String.IsNullOrEmpty(group) || (group != setting.Group))
+                    foreach (Setting setting in settings[group])
                     {
-                        config.WriteLine($"[{setting.Group}]");
-                        group = setting.Group;
+                        if (values.ContainsKey(setting.ID))
+                            config.WriteLine($"{setting.ID} = {values[setting.ID]}");
                     }
-
-                    config.WriteLine($"{setting.ID} = {values[setting.ID]}");
-                }   
+                }  
             }
         }
 

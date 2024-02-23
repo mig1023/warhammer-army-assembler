@@ -16,6 +16,11 @@ namespace WarhammerArmyAssembler.Settings
         
         public Types Type { get; set; }
 
-        public string Default { get; set; }
+        private string _default;
+        public string Default
+        {
+            get => String.IsNullOrEmpty(_default) ? "True" : _default;
+            set { _default = value; }
+        }
     }
 }

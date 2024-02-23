@@ -125,46 +125,43 @@ namespace WarhammerArmyAssembler.Interface
         {
             CleanSettings();
 
-            Dictionary<string, string> settings = Settings.Values.All();
+            Dictionary<string, string> values = Settings.Values.All();
+            Dictionary<string, List<Settings.Setting>> settings = Settings.Default.All();
 
-            string group = String.Empty;
-
-            foreach (Settings.Setting setting in Settings.Default.List())
+            foreach (string group in settings.Keys)
             {
-                UIElement control = null;
+                UIElement header = GroupHeader(group);
+                controls.Add(header);
+                DockPanel.SetDock(header, Dock.Top);
+                Changes.settingsWindow.SettingsPanel.Children.Add(header);
 
-                if (String.IsNullOrEmpty(group) || (group != setting.Group))
+                foreach (Settings.Setting setting in settings[group])
                 {
-                    group = setting.Group;
-                    UIElement header = GroupHeader(group);
+                    UIElement control = null;
 
-                    controls.Add(header);
-                    DockPanel.SetDock(header, Dock.Top);
-                    Changes.settingsWindow.SettingsPanel.Children.Add(header);
+                    if (setting.Type == Settings.Setting.Types.checkbox)
+                    {
+                        control = CreateCheckBox(setting, values);
+                    }
+                    else if (setting.Type == Settings.Setting.Types.combobox)
+                    {
+                        control = WithBorder(setting.Name, CreateCombobox(setting, values));
+                    }
+                    else if (setting.Type == Settings.Setting.Types.input)
+                    {
+                        control = WithBorder(setting.Name, CreateInput(setting, values));
+                    }
+
+                    Border border = new Border
+                    {
+                        Padding = new Thickness(25, 10, 50, 0),
+                        Child = control,
+                    };
+
+                    controls.Add(border);
+                    DockPanel.SetDock(border, Dock.Top);
+                    Changes.settingsWindow.SettingsPanel.Children.Add(border);
                 }
-
-                if (setting.Type == Settings.Setting.Types.checkbox)
-                {
-                    control = CreateCheckBox(setting, settings);
-                }
-                else if (setting.Type == Settings.Setting.Types.combobox)
-                {
-                    control = WithBorder(setting.Name, CreateCombobox(setting, settings));
-                }
-                else if (setting.Type == Settings.Setting.Types.input)
-                {
-                    control = WithBorder(setting.Name, CreateInput(setting, settings));
-                }
-
-                Border border = new Border
-                {
-                    Padding = new Thickness(25,10,50,0),
-                    Child = control,
-                };
-
-                controls.Add(border);
-                DockPanel.SetDock(border, Dock.Top);
-                Changes.settingsWindow.SettingsPanel.Children.Add(border);
             }
 
             Changes.settingsWindow.CloseSettings.Background = ArmyBook.Data.FrontColor;
