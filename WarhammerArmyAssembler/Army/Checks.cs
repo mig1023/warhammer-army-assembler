@@ -98,8 +98,18 @@ namespace WarhammerArmyAssembler.Army
             return limitForArmy < 0 ? true : (alreadyInArmy < limitForArmy);
         }
 
-        public static bool IsArmyUnitMaxLimitOk(Unit newUnit) =>
-            !newUnit.Singleton || !(Data.Units.Values.Where(x => x.ID == newUnit.ID).FirstOrDefault() != null);
+        public static bool IsArmyUnitMaxLimitOk(Unit newUnit)
+        {
+            if (!Settings.Values.IsTrue("CheckOfSingletons"))
+                return true;
+
+            bool alreadyAdded = Data.Units.Values
+                .Where(x => x.ID == newUnit.ID)
+                .FirstOrDefault() != null;
+
+            return !newUnit.Singleton || !alreadyAdded;
+        }
+            
 
         public static int OptionsAlreadyUsed(string optionName, int requestFromUnit, string unitName, bool byUnitType)
         {
