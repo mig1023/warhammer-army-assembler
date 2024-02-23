@@ -33,6 +33,14 @@ namespace WarhammerArmyAssembler.Settings
             },
             new Setting
             {
+                ID = "CheckOfPoints",
+                Name = "Check the strict sufficiency of points",
+                Group = "ARMY CHECKS",
+                Type = Setting.Types.checkbox,
+                Default = "True"
+            },
+            new Setting
+            {
                 ID = "DogsOfWarEnabled",
                 Name = "Enable Dogs of War",
                 Group = "DOGS OF WAR",

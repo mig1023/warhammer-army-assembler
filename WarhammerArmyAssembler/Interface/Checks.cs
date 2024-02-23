@@ -6,6 +6,9 @@ namespace WarhammerArmyAssembler.Interface
     {
         public static bool EnoughPointsForAddUnit(int id)
         {
+            if (!Settings.Values.IsTrue("CheckOfPoints"))
+                return true;
+
             Unit unit = ArmyBook.Data.Units[id];
             double points = unit.Prepayment + (unit.Size * unit.Points);
             int maxPoints = Army.Params.GetArmyMaxPoints();
@@ -14,11 +17,19 @@ namespace WarhammerArmyAssembler.Interface
             return points <= (maxPoints - armyPoint);
         }
 
-        public static bool EnoughUnitPointsForAddOption(double points) =>
-            points <= (Army.Params.GetArmyMaxPoints() - Army.Params.GetArmyPoints());
+        public static bool EnoughUnitPointsForAddOption(double points)
+        {
+            if (!Settings.Values.IsTrue("CheckOfPoints"))
+                return true;
+
+            return points <= (Army.Params.GetArmyMaxPoints() - Army.Params.GetArmyPoints());
+        }
 
         public static bool EnoughPointsForAddArtefact(int id, double pointsPenalty)
         {
+            if (!Settings.Values.IsTrue("CheckOfPoints"))
+                return true;
+
             double artefactPoints = ArmyBook.Data.Artefact[id].Points - pointsPenalty;
             double armyPoints = Army.Params.GetArmyMaxPoints() - Army.Params.GetArmyPoints();
 
@@ -29,6 +40,9 @@ namespace WarhammerArmyAssembler.Interface
             Unit unit, bool addOption = true, double pointsPenalty = 0)
         {
             if (!ArmyBook.Data.Artefact.ContainsKey(artefactID))
+                return true;
+
+            if (!Settings.Values.IsTrue("CheckOfPoints"))
                 return true;
 
             bool isPowers = ArmyBook.Data.Artefact[artefactID].IsPowers();
@@ -66,6 +80,9 @@ namespace WarhammerArmyAssembler.Interface
 
         public static bool EnoughPointsForEditUnit(int id, int newSize)
         {
+            if (!Settings.Values.IsTrue("CheckOfPoints"))
+                return true;
+
             Unit unit = Army.Data.Units[id];
             double newPrice = unit.Prepayment + (newSize * unit.Points);
             double currentPrice = unit.Prepayment + (unit.Size * unit.Points);
