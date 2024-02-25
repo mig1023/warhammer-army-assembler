@@ -115,9 +115,9 @@
 				<Weapon>
 					<Name>The Mace of Helsturm</Name>
 					<Points>50</Points>
-					<AddToStrength Val="10"/>
-					<AttacksTo Val="1"/>
-					<MultiWounds Val="D3"/>
+					<AddToStrength>10</AddToStrength>
+					<AttacksTo>1</AttacksTo>
+					<MultiWounds>D3</MultiWounds>
 					<HitLast/>
 					<Lore>The first Grand Theogonist, Johann Helsturm, used this double-handed mace in battle. It is said that his faith in Sigmar was strong enough to shatter the walls of a castle, and that the mace retains a portion of that holy might to this day. When wielded by a warrior whose devotion is beyond reproach, the head of this weapon burns so brightly it bursts into flame. As the mace is swung overhead, it leaves twin trails of fire in its wake, and when it smashes its foes, it hits with the force of a meteor strike</Lore>
 					<Description>Always Strikes Last. Requires Two Hands. The wielder of this weapon strikes at +2 Strength in close combat. Instead of attacking normally, the bearer can choose to forfeit all of his normal Attacks to make a single, special Attack (which still has the Always Strikes Last special rule). If this Attack hits, it is resolved at Strength 10 and has both the Flaming Attacks and Multiple Wounds (D3) special rules</Description>
@@ -125,15 +125,15 @@
 				<Armour>
 					<Name>Armour of Meteoric Iron</Name>
 					<Points>50</Points>
-					<ArmourTo Val="1"/>
-					<AddToWard Val="6"/>
+					<ArmourTo>1</ArmourTo>
+					<AddToWard>6</AddToWard>
 					<Lore>Forged from a rare star-metal, it is said that no mortal blade can pierce the Armour of Meteoric Iron. Sword strikes, arrows, and even cannonballs, have all rebounded harmlessly against the Armour of Meteoric Iron, the Twin-Tailed Comet emblazoned on its breastplate not so much as scratched by the blows</Lore>
 					<Description>The Armour of Meteoric Iron grants the wearer both a 1+ armour save (that cannot be improved by any means) and a 6+ ward save</Description>
 				</Armour>
 				<Additional>
 					<Name>Helm of the Skavenslayer</Name>
 					<Points>15</Points>
-					<AddToArmour Val="6"/>
+					<AddToArmour>6</AddToArmour>
 					<Fear/>
 					<Rule>Causes Terror in all models in a Skaven army</Rule>
 					<Lore>The legendary helm of Count Mandred Skavenslayer was crafted from the skull of the Skaven warlord who fell at the Battle of the Howling Hills. Even after Mandred's assassination at the hands of the foul ratmen several decades later, it is said that a portion of his vengeful spirit lived on within the macabre helm, filling those who gaze upon its gruesome visage with fear and dread. Such is its reputation amongst the vile rat-spawn that the mere sight of the Skavenslayer's Helm drives them to frenetic action as they battle their instinctive fear and loathing of the object in equal measure</Lore>
@@ -142,8 +142,8 @@
 				<Additional>
 					<Name>The White Cloak of Ulric</Name>
 					<Points>50</Points>
-					<SubOpponentToHit Val="1"/>
-					<AddToWard Val="5"/>
+					<SubOpponentToHit>1</SubOpponentToHit>
+					<AddToWard>5</AddToWard>
 					<Rule>2+ Ward save against Flaming Attacks</Rule>
 					<Lore>This cloak is made from the pelt of a ferocious white wolf of Middenland and was blessed by the High Priest of Ulric. The White Cloak is thus imbued with the power of the god of winter and a magical aura of frost protects the wearer, freezing the sword arms of enemies and shielding him from the hottest flames</Lore>
 					<Description>Enemies in base contact with the wearer are at -1 to all rolls To Hit. In addition, the wearer has a 5+ ward save, increasing to a 2+ ward save against Wounds caused by Flaming Attacks</Description>
@@ -207,7 +207,7 @@
 				<Additional>
 					<Name>Helm of Discord</Name>
 					<Points>30</Points>
-					<AddToArmour Val="6"/>
+					<AddToArmour>6</AddToArmour>
 					<Test Bet="Pass" Context="Round" Profile="Leadership"/>
 					<Description>The wearer counts his armour save as being one point higher than normal. In addition, at the start of each Close Combat phase, choose an enemy character in base contact with the bearer or his unit. That character must immediately take a Leadership test. If the test is failed, the character succumbs to the helm's sibilant whispers of malice and jealousy. In this Close Combat phase, the victim cannot make attacks and is hit automatically</Description>
 				</Additional>
@@ -297,8 +297,8 @@
 					<FullPlateArmour/>
 					<Armour>
 						<Name>The Silver Seal</Name>
-						<AddToWard Val="4"/>
-						<MagicResistance Val="3"/>
+						<AddToWard>4</AddToWard>
+						<MagicResistance>3</MagicResistance>
 					</Armour>
 				</Equipments>
 				<Options>
@@ -313,7 +313,7 @@
 						<Name>Ghal Maraz</Name>
 						<NoArmour/>
 						<AutoWound/>
-						<MultiWounds Val="D3"/>
+						<MultiWounds>D3</MultiWounds>
 						<Points>30</Points>
 						<Dependency/>
 					</Option>
@@ -376,7 +376,7 @@
 					</Armour>
 					<Armour>
 						<Name>Amulet of Sea Gold</Name>
-						<MagicResistance Val="1"/>
+						<MagicResistance>1</MagicResistance>
 					</Armour>
 				</Equipments>
 			</Lord>
@@ -436,7 +436,7 @@
 					</HandWeapon>
 					<HandWeapon>
 						<Name>Hand weapon</Name>
-						<AddToAttacks Val="1"/>
+						<AddToAttacks>1</AddToAttacks>
 					</HandWeapon>
 					<FullPlateArmour/>
 					<Armour>
@@ -478,7 +478,7 @@
 							<On>Warhorse</On>
 						</Dependencies>
 						<Points>6</Points>
-						<AddToArmour Val="6"/>
+						<AddToArmour>6</AddToArmour>
 					</Option>
 				</Options>
 			</Lord>
@@ -501,7 +501,7 @@
 					<Mount Name="Warhorse" Points="18"/>
 					<Option>
 						<Name>Barding for Warhorse</Name>
-						<AddToArmour Val="6"/>
+						<AddToArmour>6</AddToArmour>
 						<Dependencies>
 							<On>Warhorse</On>
 						</Dependencies>
@@ -627,7 +627,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Massive warhammer</Name>
-						<AddToStrength Val="2"/>
+						<AddToStrength>2</AddToStrength>
 						<HitLast/>
 					</HandWeapon>
 					<HeavyArmour/>
@@ -769,7 +769,7 @@
 				<Profile M='4' WS='4' BS='4' S='4' T='4' W='2' I='4' A='2' Ld='8'/>
 				<SpecialRules>
 					<MagicItems Points="50" Type="Hero"/>
-					<MagicResistance Val="2"/>
+					<MagicResistance>2</MagicResistance>
 					<Original>
 						<Rule>Accusation</Rule>
 						<Rule>Grim Resolve</Rule>
@@ -804,7 +804,7 @@
 				<Name>Mechanical Steed</Name>
 				<Profile M='8' WS='1' BS='0' S='4' T='4' W='1' I='1' A='1' Ld='0'/>
 				<SpecialRules>
-					<ImpactHit Val="D3"/>
+					<ImpactHit>D3</ImpactHit>
 					<Original>Unreliable</Original>
 				</SpecialRules>
 			</Mount>
@@ -812,7 +812,7 @@
 				<Name>Demigryph</Name>
 				<Profile M='8' WS='4' BS='0' S='5' T='4' W='3' I='4' A='3' Ld='7'/>
 				<SpecialRules>
-					<ArmourPiercing Val="1"/>
+					<ArmourPiercing>1</ArmourPiercing>
 				</SpecialRules>
 			</Mount>
 			<Mount>
@@ -843,7 +843,7 @@
 				<Name>Celestail Hurricanum</Name>
 				<Profile M='8' WS='3' BS='3' S='5' T='5' W='5' I='3' A='1' Ld='7' AS='5'/>
 				<SpecialRules>
-					<AddToHit Val="1"/>
+					<AddToHit>1</AddToHit>
 					<LargeTarget/>
 					<Original>
 						<Rule>Locus of Azyr</Rule>
@@ -865,7 +865,7 @@
 				<Equipments>
 					<Arcane>
 						<Rule>All friendly units within 6" have a 6+ Ward save</Rule>
-						<AddToWard Val="6"/>
+						<AddToWard>6</AddToWard>
 					</Arcane>
 				</Equipments>
 			</Mount>
@@ -1117,7 +1117,7 @@
 					<Option>
 						<Name>Knights of the Inner Circle</Name>
 						<PointsPerModel>3</PointsPerModel>
-						<AddToStrength Val="1"/>
+						<AddToStrength>1</AddToStrength>
 						<OnlyOneInArmy/>
 					</Option>
 					<Command>
@@ -1171,7 +1171,7 @@
 					<Option>
 						<Name>Halberd</Name>
 						<Dependency/>
-						<AddToStrength Val="1"/>
+						<AddToStrength>1</AddToStrength>
 					</Option>
 					<Command>
 						<Champion Points="10" Name="Preceptor"/>
@@ -1282,7 +1282,7 @@
 					<Option>
 						<Name>Barding for Warhorse</Name>
 						<PointsPerModel>1</PointsPerModel>
-						<AddToArmour Val="6"/>
+						<AddToArmour>6</AddToArmour>
 					</Option>
 					<Command>
 						<Champion Points="10" Name="Sharpshooter"/>
@@ -1400,7 +1400,7 @@
 				<Lore>Celestial Hurricanum - similar to the Luminark of Hysh, this construct is of similar design but hails from the Celestial Wizards of the Celestial College. This Altar emits powerful energies from the Winds of Azyr, giving the wizard controlling it with unrivalled power over the heavens, where lightning bolts and meteorites crash towards their foes below in a hurricane of violence. The Orb of Sorcery that sits at the centre of the construct gathers these energies around it, eventually growing from a steady breeze to a mighty whirling hurricane. Such power is obsessively kept within the Celestial College, and it is rare indeed for these Altars to be deployed in battle.</Lore>
 				<Profile M='8' WS='3' BS='3' S='5' T='5' W='5' I='3' A='1' Ld='7' AS='5'/>
 				<SpecialRules>
-					<AddToHit Val="1"/>
+					<AddToHit>1</AddToHit>
 					<LargeTarget/>
 					<Original>
 						<Rule>Locus of Azyr</Rule>
@@ -1426,7 +1426,7 @@
 				</SpecialRules>
 				<Equipments>
 					<Arcane>
-						<AddToWard Val="6"/>
+						<AddToWard>6</AddToWard>
 						<Rule>All friendly units within 6" have a 6+ Ward save</Rule>
 					</Arcane>
 				</Equipments>
