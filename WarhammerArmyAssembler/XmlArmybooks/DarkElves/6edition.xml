@@ -86,7 +86,7 @@
 					<Only>Infantry</Only>
 					<Points>80</Points>
 					<Rule>Strength double that of his target's Toughness</Rule>
-					<WoundOn Val="2"/>
+					<WoundOn>2</WoundOn>
 					<HitLast/>
 					<Lore>The Executioner's Axe is a huge, black-bladed weapon bound with spells of dismemberment. A single blow from it can cut any opponent in half</Lore>
 					<Description>When rolling to wound in close combat and for armour save modifier purposes, the wielder counts as having a Strength double that of his target's Toughness. However, the Executioner's Axe is two-handed and the wielder always strikes last except in the turn he the turn he charges</Description>
@@ -114,7 +114,7 @@
 				<Weapon>
 					<Name>Crimson Death</Name>
 					<Points>35</Points>
-					<StrengthTo Val="6"/>
+					<StrengthTo>6</StrengthTo>
 					<Lore>This huge halberd was carried to battle by Dark Lord Khalak of Ghrond, the first Captain of the Black Guard. It has been passed down to every Captain to have succeeded him</Lore>
 					<Description>A model wielding Crimson Death always strikes with Strength 6. No other modifiers will ever reduce this. Requires two hands to use</Description>
 				</Weapon>
@@ -158,16 +158,16 @@
 				<Armour>
 					<Name>Armour of Living Death</Name>
 					<Points>100</Points>
-					<AddToArmour Val="5"/>
-					<AddToToughness Val="1"/>
-					<AddToWounds Val="1"/>
+					<AddToArmour>5</AddToArmour>
+					<AddToToughness>1</AddToToughness>
+					<AddToWounds>1</AddToWounds>
 					<Lore>It is claimed that anyone wearing this armour cannot die, sustained by its magical energy. Unfortunately, they cannot remove the armour, and are driven insane by its magic</Lore>
 					<Description>The Armour of Living Death counts as heavy armour, giving a 5+ armour save, which can be combined with other armour as normal. In addition, the model has +1 Toughness and +1 Wound</Description>
 				</Armour>
 				<Armour>
 					<Name>Armour of Eternal Servitude</Name>
 					<Points>60</Points>
-					<AddToArmour Val="6"/>
+					<AddToArmour>6</AddToArmour>
 					<Regeneration/>
 					<Lore>Oaths of loyalty and dedication to Khaine were sworn at the time of the armour's forging, and the wearer is granted extended life to serve their god</Lore>
 					<Description>This light armour gives a basic 6+ save, which can be combined with other armour as normal. In addition, the wearer can regenerate</Description>
@@ -175,7 +175,7 @@
 				<Shield>
 					<Name>Shield of Ghrond</Name>
 					<Points>30</Points>
-					<AddToArmour Val="6"/>
+					<AddToArmour>6</AddToArmour>
 					<Rule>All hits the character suffers will be resolved with -1 Strength</Rule>
 					<Lore>Shaped into the leering face of an Ice Daemon, the shield of Ghrond is imbued with the power of the magical North wind, which robs attacks of their force</Lore>
 					<Description>The Shield of Ghrond is treated like a normal shield, and in addition all hits the character suffers will be resolved with -1 Strength</Description>
@@ -183,14 +183,14 @@
 				<Armour>
 					<Name>Armour of Darkness</Name>
 					<Points>25</Points>
-					<ArmourTo Val="2"/>
+					<ArmourTo>2</ArmourTo>
 					<Lore>Forged from black meteoric steel, the Armour of Darkness is a magical suit almost impossible to pierce</Lore>
 					<Description>This armour includers a shield and gives a save of 2+ which cannot be improved in any way</Description>
 				</Armour>
 				<Armour>
 					<Name>Blood Armour</Name>
 					<Points>20</Points>
-					<AddToArmour Val="5"/>
+					<AddToArmour>5</AddToArmour>
 					<Rule>For every inflicted wound in close combat, armour save is improved by one point</Rule>
 					<Lore>When anointed with the blood of the foe, this armour becomes ever more endurable</Lore>
 					<Description>Blood Armour is treated as a suit of normal heavy armour (5+ save) and can be combined with other armour as normal. For every unsaved wound the wearer inflicts, their save is improuved by 1 (to 4+ then 3+, etc) up to maximum of 1+</Description>
@@ -200,7 +200,7 @@
 				<Additional>
 					<Name>Black Amulet</Name>
 					<Points>50</Points>
-					<AddToWard Val="5"/>
+					<AddToWard>5</AddToWard>
 					<Rule>If ward save test is passed, the attacking model suffers 1 wound instead (with no armour save allowed)</Rule>
 					<Lore>Carved from the tortured heartstone of a mountain drenched in Dark Magic, the Black Amulet is a lustrous polished stone of midnight hue. It is engraved with a single glowing rune, and into its ebony facets have been poured all the captured malice and spite that emanates from the chill lands of Naggaroth. To behold its darksome shape is to see despair made physical, it is to abandon even the merest memory of hope</Lore>
 					<Description>The wearer has a 5+ Ward save against close combat hits. If the wearer of the Black Amulet passes his Ward save then the attacking model suffers 1 wound instead (with no armour save allowed)</Description>
@@ -215,7 +215,7 @@
 				<Additional>
 					<Name>Crown of Black Iron</Name>
 					<Points>35</Points>
-					<AddToWard Val="5"/>
+					<AddToWard>5</AddToWard>
 					<Rule>Completely immune to the effects of Light Magic and High Magic</Rule>
 					<Lore>A dark crown, that will ensorcel the heart of those that bear it</Lore>
 					<Description>The character has a 5+ Ward save. In addition to this, the wearer is completely immune to the effects of Light Magic and High Magic spells. Note that this is not a Dispel and thus other models (excluding the character's mount) may be affected by High Magic and Light Magic.</Description>
@@ -223,7 +223,7 @@
 				<Additional>
 					<Name>Seal of Ghrond</Name>
 					<Points>25</Points>
-					<AddToDispell Val="1"/>
+					<AddToDispell>1</AddToDispell>
 					<Lore>This iron seal is blessed by the priestesses of Khaine to ward away hated magic</Lore>
 					<Description>The seal of Ghrond adds one dice to the Dispel dice pool of the army</Description>
 				</Additional>
@@ -276,7 +276,7 @@
 				<Arcane>
 					<Name>Darkstar Cloak</Name>
 					<Points>20</Points>
-					<AddToCast Val="1"/>
+					<AddToCast>1</AddToCast>
 					<Lore>Woven into the fabric of this cloak is the essence of a star stolen from the night sky of Nagarythe</Lore>
 					<Description>The cloak gives the Sorceress +1 power dice in each of her own Magic phase. Only she may use this extra dice</Description>
 				</Arcane>
@@ -293,14 +293,14 @@
 					<Name>Banner of Nagarythe</Name>
 					<Points>150</Points>
 					<Unbreakable/>
-					<AddToCloseCombat Val="1"/>
+					<AddToCloseCombat>1</AddToCloseCombat>
 					<Lore>During the Sundering, many of Nagarythe's treasures were lost in battle or destroyed by natural disaster. Those that remained were greedily seized upon by nobles of both allegiances. Some fell into the hands of the Aesanar, who hid them away from Malekith's forces, but the most important were taken by the Dark Elves. The Banner of Nagarythe is the greatest of all such treasures, woven through with silver thread and inlaid with pearls and diamonds. For the Dark Elves, the Banner of Nagarythe is a physical reminder of the injustices heaped upon them by the Phoenix Throne. Moreover, it is the personal standard of the Witch King proclaims his right to rule not only Naggaroth, but the ten kingdoms of Ulthuan as well. For their part, the Shadow Warriors of Nagarythe deem this banner too mired in corruption and betrayal to any longer have any wholesome purpose. They seek not its return, but its destruction</Lore>
 					<Description>This standard adds +1 to the combat resolution of all units withn 6" and the unit carrying the banner is Unbreakable</Description>
 				</Banner>
 				<Banner>
 					<Name>Hydra Banner</Name>
 					<Points>80</Points>
-					<AddToAttacks Val="1"/>
+					<AddToAttacks>1</AddToAttacks>
 					<Lore>Imbued with the magic of Hekarti the Hydra Queen, this banner quickens the reflexes so that those nearby strike with her own speed and savagery</Lore>
 					<Description>All models in the unit (including mounts) gain +1 Attack in the first round of any hand-to-hand combat</Description>
 				</Banner>
@@ -321,7 +321,7 @@
 				<Banner>
 					<Name>Standard of Slaughter</Name>
 					<Points>35</Points>
-					<AddToCloseCombat Val="D3"/>
+					<AddToCloseCombat>D3</AddToCloseCombat>
 					<Lore>Anointed with the blood of an Ulthuan Elf, this banner imbues its regiment with bitter determination</Lore>
 					<Description>The unit gains +D3 to its combat resolution the first time it charges</Description>
 				</Banner>
@@ -355,7 +355,7 @@
 					<Name>Dance of Doom</Name>
 					<Points>30</Points>
 					<Only>Khainite</Only>
-					<AddToWard Val="5"/>
+					<AddToWard>5</AddToWard>
 					<Lore>The sinuous Dance of Doom can enthrall even the most steely disciplined Swordmaster and be used to dodge the fastest shot or blow</Lore>
 					<Description>The model has a 5+ Ward save</Description>
 				</Additional>
@@ -371,7 +371,7 @@
 					<Name>Rune of Khaine</Name>
 					<Points>25</Points>
 					<Only>Khainite</Only>
-					<AddToAttacks Val="1"/>
+					<AddToAttacks>1</AddToAttacks>
 					<Rule>Must always pursue fleeing enemies</Rule>
 					<Lore>The Hag Queens burn the rune of the Lord of Murder upon the brow of the most zealous of killers</Lore>
 					<Description>The Rune of Khaine grants +1 Attack to its bearer. A model marked with the Rune of Khaine must always pursue fleeing enemies</Description>
@@ -428,13 +428,13 @@
 					</HandWeapon>
 					<HandWeapon>
 						<Name>Hand of Khaine</Name>
-						<StrengthTo Val="6"/>
+						<StrengthTo>6</StrengthTo>
 						<NoArmour/>
 					</HandWeapon>
 					<Armour>
 						<Name>Armour of Midnight</Name>
-						<AddToArmour Val="5"/>
-						<AddToWard Val="2"/>
+						<AddToArmour>5</AddToArmour>
+						<AddToWard>2</AddToWard>
 						<NoMultiWounds/>
 						<Rule>2+ Ward save against non-magical attacks</Rule>
 					</Armour>
@@ -459,12 +459,12 @@
 					<HandWeapon>
 						<Name>Heartrender</Name>
 						<KillingBlow/>
-						<AddToStrength Val="2"/>
+						<AddToStrength>2</AddToStrength>
 					</HandWeapon>
 					<Arcane>
 						<Name>Thousand and One Dark Blessing</Name>
-						<AddToWard Val="4"/>
-						<MagicResistance Val="1"/>
+						<AddToWard>4</AddToWard>
+						<MagicResistance>1</MagicResistance>
 					</Arcane>
 					<Arcane>
 						<Name>Enchanting Beauty</Name>
@@ -494,10 +494,10 @@
 					<HeavyArmour/>
 					<Demon>
 						<Name>Tz'arkan</Name>
-						<AddToWeaponSkill Val="1"/>
-						<AddToStrength Val="1"/>
-						<AddToToughness Val="2"/>
-						<AddToInitiative Val="2"/>
+						<AddToWeaponSkill>1</AddToWeaponSkill>
+						<AddToStrength>1</AddToStrength>
+						<AddToToughness>2</AddToToughness>
+						<AddToInitiative>2</AddToInitiative>
 						<Rule>If Malus is in base contact with a friendly model and not in contact with the enemy in any close combat phase, roll a D6: on a 4+ Tz'arkan's murderous rage drives Malus to attack his allies</Rule>
 					</Demon>
 				</Equipments>
@@ -679,7 +679,7 @@
 				<Name>Dark Pegasus</Name>
 				<Profile M='8' WS='3' BS='0' S='4' T='4' W='3' I='4' A='2' Ld='6'/>
 				<SpecialRules>
-					<ChargeStrengthBonus Val="1"/>
+					<ChargeStrengthBonus>1</ChargeStrengthBonus>
 					<Fly/>
 				</SpecialRules>
 			</Mount>
@@ -687,7 +687,7 @@
 				<Name>Dark Pegasus Sulephet</Name>
 				<Profile M='8' WS='3' BS='0' S='4' T='4' W='3' I='4' A='2' Ld='6'/>
 				<SpecialRules>
-					<ChargeStrengthBonus Val="1"/>
+					<ChargeStrengthBonus>1</ChargeStrengthBonus>
 					<Fly/>
 				</SpecialRules>
 			</Mount>
@@ -717,7 +717,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Scaly skin</Name>
-						<AddToArmour Val="3"/>
+						<AddToArmour>3</AddToArmour>
 					</Armour>
 				</Equipments>
 			</Mount>
@@ -735,7 +735,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Scaly skin</Name>
-						<AddToArmour Val="3"/>
+						<AddToArmour>3</AddToArmour>
 					</Armour>
 				</Equipments>
 			</Mount>
@@ -875,7 +875,7 @@
 					<Stupidity/>
 					<Fear/>
 					<LargeBase/>
-					<ImpactHit Val="D6"/>
+					<ImpactHit>D6</ImpactHit>
 					<HateHighElves/>
 					<Original>Chariot</Original>
 				</SpecialRules>
@@ -952,7 +952,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Vicious claws and temperament</Name>
-						<AddToAttacks Val="1"/>
+						<AddToAttacks>1</AddToAttacks>
 					</HandWeapon>
 				</Equipments>
 			</Special>
