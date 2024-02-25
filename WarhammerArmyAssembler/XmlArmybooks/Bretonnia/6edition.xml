@@ -122,9 +122,9 @@
 					<Virtue/>
 					<Points>35</Points>
 					<NotALeader/>
-					<AddToWeaponSkill Val="2"/>
-					<AddToInitiative Val="1"/>
-					<AddToAttacks Val="1"/>
+					<AddToWeaponSkill>2</AddToWeaponSkill>
+					<AddToInitiative>1</AddToInitiative>
+					<AddToAttacks>1</AddToAttacks>
 					<Lore>'Unmatched was Landuin of Mousillon's skill and prowess. His finesse with blade and lance were beyond compare and his bravery, horsemanship and chivalry above all others. Alas, Mousillon bath faded...'</Lore>
 					<Description>The Knight gains the following bonuses to his profile: +2 Weapon Skill, +1 Initiative, +1 Attack. He may not be the army's General (even if he has the highest Leadership) and any friendly unit (including other Knightly characters, or units using a Knight's Leadership) taking any form of Leadership test within 6" of this model suffers a -1 penalty to their Leadership</Description>
 				</Weapon>
@@ -148,7 +148,7 @@
 					<Name>Virtue of Duty</Name>
 					<Points>30</Points>
 					<NotALeader/>
-					<AddToCloseCombat Val="1"/>
+					<AddToCloseCombat>1</AddToCloseCombat>
 					<Lore>'Most loyal of Companions, brave Duke Thierulf of Lyonesse fought at his liege's side always, and did lament most painfully when the Breton did fall...'</Lore>
 					<Description>One per army. May not be taken by the General. For as long as the General is alive, the model with this Virtue adds +1 to the combat resolution of any fight of which he is a part</Description>
 				</Weapon>
@@ -180,7 +180,7 @@
 					<Name>Virtue of Purity</Name>
 					<Virtue/>
 					<Points>20</Points>
-					<AddToWard Val="5"/>
+					<AddToWard>5</AddToWard>
 					<Lore>'Chaste, honourable and untainted by notions of self-aggrandisement, Duke Rademund was one of the Lady's most virtuous champions, upholding her honour throughout the land'</Lore>
 					<Description>The Knight will always start the game with the Blessing of the Lady, even if the army did not pray. In addition, the Ward save which the Knight gains from the Blessing is always 5+, regardless of the Strength of the attack</Description>
 				</Weapon>
@@ -228,7 +228,7 @@
 					<Points>50</Points>
 					<OnlyGroup>QuestingVow</OnlyGroup>
 					<NoArmour/>
-					<AddToStrength Val="2"/>
+					<AddToStrength>2</AddToStrength>
 					<HitLast/>
 					<Rule>May be used a hand weapon or a great weapon, decided at the start of combat as normal</Rule>
 					<Lore>The Sword of the Quest, a large hand-and-a-half sword, has been passed down from knight to knight, and has been held by such figures as Percival of Lyonesse and Saint Balgar of Carcassonne. It is most often seen in the hands of Questing Knights</Lore>
@@ -239,7 +239,7 @@
 					<Points>40</Points>
 					<Only>GrailVow</Only>
 					<NoArmour/>
-					<WoundOn Val="3"/>
+					<WoundOn>3</WoundOn>
 					<Lore>On the eve of battle, a Grail Knight that kneels to pray beside a body of still water may be rewarded with the vision of a pale, slender hand emerging from the water, with the beautiful blade known as the Sword of the Lady's Champion grasped within its delicate fingers</Lore>
 					<Description>The character always counts their Strength as one higher than their target's Toughness, unless their Strength would normally be more than this. In effect this means that they will always wound opponents on at least a 3+. This modified Strength is also used to calculate Armour save modifiers</Description>
 				</Weapon>
@@ -262,7 +262,7 @@
 				<Weapon>
 					<Name>Birth-sword of Carcassonne</Name>
 					<Points>35</Points>
-					<AddToStrength Val="2"/>
+					<AddToStrength>2</AddToStrength>
 					<Reroll>OpponentToArmour</Reroll>
 					<Lore>At birth, all noble sons in the Dukedom of Carcassonne are made to touch a specially forged blade, their Birth-sword, and this weapon hangs above their cots until they reach an age when they can wield it. This mirrors the story of the original duke, Lambard, who was said to have grasped a sword even before suckling at his mother's bosom</Lore>
 					<Description>The sword acids +1 Strength to the bearer. Enemies wounded by the sword must re-roll any successful Armour saves</Description>
@@ -301,7 +301,7 @@
 					<Points>55</Points>
 					<Only>GrailVow</Only>
 					<Regeneration/>
-					<AddToArmour Val="5"/>
+					<AddToArmour>5</AddToArmour>
 					<Lore>This breastplate is inscribed with the words of the Grail Vow, and even in the brightest sunlight the delicate filigree letters glow. The most grievous of wounds will knit together as the Lady's favour shines upon the wearer</Lore>
 					<Description>Character with the Grail Vow only. This armour replaces the Knight's heavy armour, and gives a 5+ Armour save that can be combined with other equipment as normal. In addition, the wearer has Regeneration</Description>
 				</Armour>
@@ -309,7 +309,7 @@
 					<Name>Armour of the Midsummer Sun</Name>
 					<Points>45</Points>
 					<Rule>Opponents suffer a -1 penalty to all rolls to hit the wearer and his mount with missile weapons and in close combat</Rule>
-					<AddToArmour Val="5"/>
+					<AddToArmour>5</AddToArmour>
 					<Lore>This enchanted armour reflects and magnifies the light of the sun so that beams of light shimmer and burst from every surface as the knight gallops towards his foe</Lore>
 					<Description>This armour replaces the Knight's heavy armour, and gives a 5+ Armour save that may be combined with other armour as normal. Opponents suffer a -1 penalty to all rolls to hit the wearer and his mount with missile weapons and in close combat</Description>
 				</Armour>
@@ -317,15 +317,15 @@
 					<Name>The Grail Shield</Name>
 					<Points>35</Points>
 					<Only>GrailVow</Only>
-					<AddToArmour Val="6"/>
-					<AddToWard Val="4"/>
+					<AddToArmour>6</AddToArmour>
+					<AddToWard>4</AddToWard>
 					<Lore>The Grail Shield has been blessed by each of the Grail Companions. It is said that its bearer, always a Grail Knight, will not grow a day older whilst it is in his possession</Lore>
 					<Description>The shield provides a 6+ Armour save which may be combined with other armour as normal. The bearer's Ward save gained from the Blessing of the Lady is increased to 4+ against attacks of any Strength. If the model loses the Blessing, they lose this Ward save as normal</Description>
 				</Shield>
 				<Additional>
 					<Name>Gromril Great Helm</Name>
 					<Points>30</Points>
-					<AddToArmour Val="6"/>
+					<AddToArmour>6</AddToArmour>
 					<Reroll>ToArmour</Reroll>
 					<Lore>The ornate Gromril Great Helm was a gift from Dwarf King Grundhar Irongut after a group of Questing Knights broke a Greenskin siege of Karaz-a-Karak. It bears a potent rune of protection and in its long history it has never been tarnished</Lore>
 					<Description>Gives a 6+ Armour save and may be worn in addition to normal armour. The wearer may re-roll failed Armour saves</Description>
@@ -333,15 +333,15 @@
 				<Armour>
 					<Name>Armour of Agilulf</Name>
 					<Points>25</Points>
-					<AddToArmour Val="4"/>
-					<WeaponSkillTo Val="10"/>
+					<AddToArmour>4</AddToArmour>
+					<WeaponSkillTo>10</WeaponSkillTo>
 					<Lore>It is believed that the knight Agilulf once wore this armour, but in folklore it is claimed that Agilulf never actually existed, and that the armour was possessed of a will of its own. When the knight was slain, if indeed he was alive, the armour was found to be empty, and its shining brilliance gradually faded until it was its current, dark colour. Despite his mythical status amongst Bretonnia's lowborn, Agilulf did in fact exist. He was a renowned and mighty Grail Knight, held in high regard by Couronne's nobility. His armour was eventually re-forged into the Armour of Brilliance and is currently worn by King Louen Leoncoeur himself</Lore>
 					<Description>This armour replaces the Knight's heavy armour and includes a shield, giving a 4+ Armour save. The shield must be used at all times - so the wearer cannot use a weapon that requires two hands. In addition, the armour confers Weapon Skill 10 (which cannot be altered with other items. Virtues, etc) to whoever is wearing it</Description>
 				</Armour>
 				<Armour>
 					<Name>Cuirass of Fortune</Name>
 					<Points>20</Points>
-					<AddToArmour Val="5"/>
+					<AddToArmour>5</AddToArmour>
 					<Reroll>ToWound</Reroll>
 					<Lore>The Cuirass of Fortune is a remarkable piece of equipment forged by the mad artificer Gurdilloue the Blatantly Insane. Any who possess the armour not only find their blows more accurate, but also enjoy the favour of maidens and oddly generous merchants</Lore>
 					<Description>This armour replaces the Knight's heavy armour, and gives a 5+ Annour save which may be combined with other armour as normal. When rolling to wound in close combat, the Knight may re-roll any dice rolls of 1</Description>
@@ -349,7 +349,7 @@
 				<Shield>
 					<Name>Orcbane Shield</Name>
 					<Points>15</Points>
-					<AddToArmour Val="6"/>
+					<AddToArmour>6</AddToArmour>
 					<Rule>Any unengaged Ore or Goblin unit within 12" that must take an Animosity test fails it on a 1-2 instead of a 1</Rule>
 					<Lore>The Orcbane Shield has a huge and bloody maw sculpted to its front, and has become an icon of terror and confusion for the Greenskin tribes that assail Bretonnia</Lore>
 					<Description>Gives a 6+ Armour save and may be combined with other armour as normal. Any unengaged Ore or Goblin unit within 12" that must take an Animosity test fails it on a 1-2 instead of a 1</Description>
@@ -366,7 +366,7 @@
 				<Additional>
 					<Name>Token of the Damsel</Name>
 					<Points>35</Points>
-					<WardForFirstWound Val="2"/>
+					<WardForFirstWound>2</WardForFirstWound>
 					<Lore>On the eve of battle, noblewomen often give their favoured knight a Token of their support, such as a lock of hair, a ribbon or a brooch. The knight, often a Lord or Paladin, will carry these tokens with him, giving him strength in his time of need. Tokens given by Grail Damsels often carry powerful enchantments</Lore>
 					<Description>Against the first wounding hit suffered, the Knight gains a 2+ Ward save</Description>
 				</Additional>
@@ -374,7 +374,7 @@
 					<Name>Insignia of the Quest</Name>
 					<Points>30</Points>
 					<Only>QuestingVow</Only>
-					<WardForLastWound Val="3"/>
+					<WardForLastWound>3</WardForLastWound>
 					<Lore>Those valiant knights who have worn the Insignia of the Quest have almost all gone on to drink from the Grail - the Insignia is then handed down to another Questing Knight to aid him in his deeds</Lore>
 					<Description>If the hearer is ever reduced to 1 Wound, then the Knight instantly gains a 3+ Ward save. If the character suffers multiple wounds that would kill him hefore he has gained this Ward save (eg, if he has more than one wound left and is hit by a cannon ball), he will be reduced to 1 Wound, then may attempt his 3+ Ward save to stay alive and nullify any further wounds caused by the same hit</Description>
 				</Additional>
@@ -388,7 +388,7 @@
 				<Additional>
 					<Name>Dragon's Claw</Name>
 					<Points>25</Points>
-					<AddToWard Val="5"/>
+					<AddToWard>5</AddToWard>
 					<Lore>Cut from the corpse of the ferocious Dragon Malgrimace, the Dragon's Claw has been scrimshawed by the artisan Ellabeau and enchanted by the Damsels of the Lady. Its bearer can stride through a roaring inferno as if it were a pleasant summer breeze</Lore>
 					<Description>The bearer's Ward save gained from the Blessing of the Lady is increased to 5+ against attacks of any Strength. If the model loses the Blessing, then it loses this Ward save as normal. In addition, as long as the bearer has the Blessing, he is immune to lire based attacks (such as Dragon's breath. Warp-fire Throwers and spells from the Lore of Fire)</Description>
 				</Additional>
@@ -412,7 +412,7 @@
 				<Additional>
 					<Name>Holy Icon</Name>
 					<Points>40</Points>
-					<MagicResistance Val="3"/>
+					<MagicResistance>3</MagicResistance>
 					<Lore>This priceless Triptych depicts the aspects of the Lady and incorporates the Heraldry of Bretonnia. Any under the auspices of this artefact find themselves imbued with faith and become practically immune to hostile magic</Lore>
 					<Description>The Holy Icon gives the character Magic Resistance (3)</Description>
 				</Additional>
@@ -567,7 +567,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>The Dolorous Blade</Name>
-						<AddToStrength Val="2"/>
+						<AddToStrength>2</AddToStrength>
 						<Rule>The Dolorous Blade may be used in one of two ways. Either the Green Knight can use the Blade to gain +D6 Attacks, or it can be used to add +2 to his Strength. The Green Knight may change which method he is using to attack with in each Close Combat phase if he wishes to.</Rule>
 					</HandWeapon>
 					<HeavyArmour/>
@@ -586,7 +586,7 @@
 					<Slots>Hero</Slots>
 					<Fear/>
 					<Test Bet="Wound" Context="Round" Profile="Initiative"/>
-					<MagicResistance Val="3"/>
+					<MagicResistance>3</MagicResistance>
 					<Original>
 						<Rule>One model in the Bretonnian army may be given the Favour of the Fay, this model may add +1 on all rolls to hit in close combat; however, if the model loses the Blessing of the Lady, then both the Favoured model and the Fay Enchantress take a wound that cannot be saved by Armour or Ward saves</Rule>
 						<Rule>Bretonnian army does not need to pray at the start of the game to gain the Blessing of the Lady</Rule>
@@ -600,7 +600,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Girdle of Gold</Name>
-						<AddToWard Val="4"/>
+						<AddToWard>4</AddToWard>
 					</Armour>
 					<Arcane>
 						<Name>The Chalice of Potions</Name>
@@ -608,8 +608,8 @@
 					</Arcane>
 					<Arcane>
 						<Name>The Toad Familiar</Name>
-						<AddToCast Val="1"/>
-						<AddToDispell Val="1"/>
+						<AddToCast>1</AddToCast>
+						<AddToDispell>1</AddToDispell>
 					</Arcane>
 				</Equipments>
 			</Lord>
@@ -633,7 +633,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>The Sword of Couronne</Name>
-						<AddToStrength Val="1"/>
+						<AddToStrength>1</AddToStrength>
 					</HandWeapon>
 					<Lance/>
 					<Armour>
@@ -643,7 +643,7 @@
 					<HeavyArmour/>
 					<Armour>
 						<Name>The Lion's Shield</Name>
-						<AddToArmour Val="6"/>
+						<AddToArmour>6</AddToArmour>
 						<Rule>Louen has a Magic Resistance value equal to the total number of dice used in the casting of any spell that affects him</Rule>
 					</Armour>
 				</Equipments>
@@ -681,7 +681,7 @@
 				<Profile M='4' WS='3' BS='3' S='3' T='3' W='3' I='3' A='1' Ld='8'/>
 				<SpecialRules>
 					<MagicItems Points="100" Type="Wizard"/>
-					<MagicResistance Val="2"/>
+					<MagicResistance>2</MagicResistance>
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon/>
@@ -726,7 +726,7 @@
 				<Profile M='4' WS='3' BS='3' S='3' T='3' W='2' I='3' A='1' Ld='7'/>
 				<SpecialRules>
 					<MagicItems Points="50" Type="Wizard"/>
-					<MagicResistance Val="2"/>
+					<MagicResistance>2</MagicResistance>
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon/>
@@ -755,7 +755,7 @@
 				<Name>Silvaron</Name>
 				<Profile M='10' WS='5' BS='0' S='4' T='4' W='3' I='5' A='2' Ld='8'/>
 				<SpecialRules>
-					<ChargeStrengthBonus Val="2"/>
+					<ChargeStrengthBonus>2</ChargeStrengthBonus>
 					<Fear/>
 				</SpecialRules>
 			</Mount>
@@ -850,7 +850,7 @@
 					<HandWeapon/>
 					<HandWeapon>
 						<Name>Pole-arm</Name>
-						<AddToStrength Val="1"/>
+						<AddToStrength>1</AddToStrength>
 					</HandWeapon>
 					<LightArmour/>
 					<Shield/>
