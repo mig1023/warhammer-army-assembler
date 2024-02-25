@@ -124,7 +124,7 @@
 				<Additional>
 					<Name>The Black Amulet</Name>
 					<Points>60</Points>
-					<AddToWard Val="4"/>
+					<AddToWard>4</AddToWard>
 					<Rule>Any successful ward save while fighting in a challenge inflicts one Wound on the bearer's opponent with no Armour saves</Rule>
 					<Lore>Carved from the tortured heartstone of a mountain drenched in Dark Magic, the Black Amulet is a lustrous polished stone of midnight hue. It is engraved with a single glowing rune, and into its ebony facets have been poured all the captured malice and spite that emanates from the chill lands of Naggaroth. To behold its darksome shape is to see despair made physical, it is to abandon even the merest memory of hope</Lore>
 					<Description>The wearer of the Black Amulet has a 4+ ward save. Furthermore, each time the bearer of the Black Amulet makes a successful ward save while fighting in a challenge, the Black Amulet inflicts one Wound on the bearer's opponent. Armour saves cannot be taken against Wounds d by the Black Amulet</Description>
@@ -132,7 +132,7 @@
 				<Additional>
 					<Name>Ring Of Hotek</Name>
 					<Points>50</Points>
-					<MagicResistance Val="3"/>
+					<MagicResistance>3</MagicResistance>
 					<Rule>Any enemy Wizard that attempts to cast or target a spell on a unit within 6" of the bearer will suffer a miscast on a roll of double 1, as well as double 6</Rule>
 					<Lore>The Ring of Hotek is a magical trinket that not only protects against hostile sorcery, but punishes such casters with a greater chance of miscasting. Hotek was an outcast priest of Vaul. It was he who forged Malekith's rune-etched armour, and oversaw the creation of many of the Witch King's most terrible weapons. Renegade and turncoat though he was, Hotek was no fool. He knew that he lived only at Malekith's fickle pleasure, and so created for himself an armoury of defenses-both magical and mundane-with which he hoped to blunt the Witch King's wrath long enough to escape. Ultimately, Hotek did not perish at Malekith's hand, but was poisoned at Morathi's order. His armoury was broken up soon after, the scattered pieces changing hands with the ebb and flow of patronage and power. None of the artefacts have known as many masters as the Ring of Hotek, for this trinket of obsidian and black diamond is claimed to be the renegade priest's greatest work</Lore>
 					<Description>The bearer has the Magic Resistance (3) special rule. In addition, any enemy Wizard that attempts to cast or target a spell on a unit within 6" of the bearer will suffer a miscast on a roll of double 1, as well as double 6. Miscasts caused by a roll of double 1 do not benefit from irresistible force</Description>
@@ -195,7 +195,7 @@
 				<Additional>
 					<Name>Helm of Discord</Name>
 					<Points>30</Points>
-					<AddToArmour Val="6"/>
+					<AddToArmour>6</AddToArmour>
 					<Test Bet="Pass" Context="Round" Profile="Leadership"/>
 					<Lore>The battered Helm of Discord is a bronze helmet covered in withering symbols that both distract and unsettle any attacker</Lore>
 					<Description>The wearer counts his armour save as being one point higher than normal. In addition, at the start of each Close Combat phase, choose an enemy character in base contact with the bearer or his unit. That character must immediately take a Leadership test. If the test is failed, the character succumbs to the helm's sibilant whispers of malice and jealousy. In this Close Combat phase, the victim cannot make attacks and is hit automatically</Description>
@@ -300,15 +300,15 @@
 					</HandWeapon>
 					<Armour>
 						<Name>Armour of Midnight</Name>
-						<AddToArmour Val="5"/>
-						<AddToWard Val="2"/>
+						<AddToArmour>5</AddToArmour>
+						<AddToWard>2</AddToWard>
 						<Rule>2+ ward save against non-magical attacks</Rule>
 						<NoMultiWounds/>
 					</Armour>
 					<Armour>
 						<Name>Supreme Spellshield</Name>
-						<AddToArmour Val="6"/>
-						<MagicResistance Val="2"/>
+						<AddToArmour>6</AddToArmour>
+						<MagicResistance>2</MagicResistance>
 						<Rule>If a spell cast at Malekith is dispelled by a dispel roll, the caster suffers a D6 Strength 6 hits</Rule>
 					</Armour>
 					<Arcane>
@@ -342,8 +342,8 @@
 					</Arcane>
 					<Arcane>
 						<Name>Thousand and One Dark Blessing</Name>
-						<AddToWard Val="4"/>
-						<MagicResistance Val="2"/>
+						<AddToWard>4</AddToWard>
+						<MagicResistance>2</MagicResistance>
 					</Arcane>
 					<Option>
 						<Name>Heartrender and the Darksword</Name>
@@ -376,7 +376,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Deathsword and the Cursed Blade</Name>
-						<StrengthTo Val="10"/>
+						<StrengthTo>10</StrengthTo>
 					</HandWeapon>
 					<Arcane>
 						<Name>Amulet of Dark Fire</Name>
@@ -408,10 +408,10 @@
 					<HeavyArmour/>
 					<Demon>
 						<Name>Tz'arkan</Name>
-						<AddToWeaponSkill Val="1"/>
-						<AddToStrength Val="1"/>
-						<AddToToughness Val="2"/>
-						<AddToInitiative Val="2"/>
+						<AddToWeaponSkill>1</AddToWeaponSkill>
+						<AddToStrength>1</AddToStrength>
+						<AddToToughness>2</AddToToughness>
+						<AddToInitiative>2</AddToInitiative>
 						<Rule>Each time Malus Darkblade makes a To Hit roll of 1, a friendly model in base contact suffers an automatic hit at Malus Darkblade's Strength that must be re-rolled if it fails To Wound. Armour saves cannot be taken against Wounds Malus causes in this manner</Rule>
 					</Demon>
 				</Equipments>
@@ -530,7 +530,7 @@
 					<MurderousProwess/>
 					<PoisonAttack/>
 					<KillingBlow/>
-					<AddToWound Val="1"/>
+					<AddToWound>1</AddToWound>
 					<HateHighElves/>
 					<Original>
 						<Rule>Can choose to deploy 'hidden' within another friendly Dark Elf infantry unit, but not Harpies</Rule>
@@ -575,11 +575,11 @@
 					<HeavyArmour/>
 					<Armour>
 						<Name>Sea Dragon cloak</Name>
-						<AddToArmour Val="5"/>
+						<AddToArmour>5</AddToArmour>
 					</Armour>
 					<Armour>
 						<Name>Helm of the Kraken</Name>
-						<AddToArmour Val="6"/>
+						<AddToArmour>6</AddToArmour>
 						<Regeneration/>
 						<Terror/>
 					</Armour>
@@ -602,11 +602,11 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Crimson Death</Name>
-						<AddToStrength Val="2"/>
+						<AddToStrength>2</AddToStrength>
 					</HandWeapon>
 					<Armour>
 						<Name>The Armour of Grief</Name>
-						<AddToArmour Val="5"/>
+						<AddToArmour>5</AddToArmour>
 						<Rule>Each time a model makes a successful To Hit roll against Kouran Darkhand in close combat, the model that struck the blow immediately suffers a Strength 5 hit</Rule>
 					</Armour>
 				</Equipments>
@@ -620,7 +620,7 @@
 				<Profile M='5' WS='6' BS='6' S='4' T='3' W='2' I='7' A='3' Ld='9'/>
 				<SpecialRules>
 					<Fear/>
-					<ExtendedKillingBlow Val="5"/>
+					<ExtendedKillingBlow>5</ExtendedKillingBlow>
 					<MurderousProwess/>
 					<Frenzy/>
 					<HateHighElves/>
@@ -629,12 +629,12 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>The First Draich</Name>
-						<AddToStrength Val="2"/>
+						<AddToStrength>2</AddToStrength>
 						<HitLast/>
 					</HandWeapon>
 					<Armour>
 						<Name>Heavy armour</Name>
-						<AddToArmour Val="5"/>
+						<AddToArmour>5</AddToArmour>
 					</Armour>
 				</Equipments>
 			</Hero>
@@ -754,7 +754,7 @@
 						<Name>Manbane</Name>
 						<Dependency/>
 						<Points>20</Points>
-						<AddToWound Val="1"/>
+						<AddToWound>1</AddToWound>
 					</Option>
 				</Options>
 				<Equipments>
@@ -804,7 +804,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Scaly skin</Name>
-						<AddToArmour Val="3"/>
+						<AddToArmour>3</AddToArmour>
 					</Armour>
 				</Equipments>
 			</Mount>
@@ -822,7 +822,7 @@
 				<Options>
 					<Option>
 						<Name>Iron Hard Skin</Name>
-						<AddToArmour Val="4"/>
+						<AddToArmour>4</AddToArmour>
 						<Points>20</Points>
 					</Option>
 					<Option>
@@ -846,7 +846,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Scaly skin</Name>
-						<AddToArmour Val="3"/>
+						<AddToArmour>3</AddToArmour>
 					</Armour>
 				</Equipments>
 			</Mount>
@@ -861,7 +861,7 @@
 					<Fear/>
 					<LargeBase/>
 					<MurderousProwess/>
-					<ImpactHit Val="D6"/>
+					<ImpactHit>D6</ImpactHit>
 				</SpecialRules>
 			</Mount>
 			<Mount>
@@ -873,14 +873,14 @@
 					<HitFirst/>
 					<LargeBase/>
 					<MurderousProwess/>
-					<ImpactHit Val="D6"/>
+					<ImpactHit>D6</ImpactHit>
 				</SpecialRules>
 			</Mount>
 			<Mount>
 				<Name>Dark Pegasus</Name>
 				<Profile M='8' WS='3' BS='0' S='4' T='4' W='3' I='4' A='2' Ld='6'/>
 				<SpecialRules>
-					<ChargeStrengthBonus Val="1"/>
+					<ChargeStrengthBonus>1</ChargeStrengthBonus>
 					<Fly/>
 				</SpecialRules>
 			</Mount>
@@ -888,7 +888,7 @@
 				<Name>Dark Pegasus Sulephet</Name>
 				<Profile M='8' WS='4' BS='0' S='4' T='4' W='3' I='4' A='3' Ld='6'/>
 				<SpecialRules>
-					<ChargeStrengthBonus Val="1"/>
+					<ChargeStrengthBonus>1</ChargeStrengthBonus>
 					<Fly/>
 				</SpecialRules>
 			</Mount>
@@ -904,7 +904,7 @@
 					<LargeBase/>
 					<LargeTarget/>
 					<HateHighElves/>
-					<MagicResistance Val="1"/>
+					<MagicResistance>1</MagicResistance>
 					<Original>
 						<Rule>Scythes</Rule>
 						<Rule>Innate bound spell, Power level 3, Fury of Khaine is an augment spell that targets a single unit within 12", the target gains the Frenzy special rule until the start of the Cauldron of Blood's next Magic phase</Rule>
@@ -1007,7 +1007,7 @@
 					<LightArmour/>
 					<Armour>
 						<Name>Sea Dragon cloak</Name>
-						<AddToArmour Val="5"/>
+						<AddToArmour>5</AddToArmour>
 					</Armour>
 				</Equipments>
 				<Options>
@@ -1177,7 +1177,7 @@
 					<Fear/>
 					<LargeBase/>
 					<MurderousProwess/>
-					<ImpactHit Val="D6"/>
+					<ImpactHit>D6</ImpactHit>
 					<HateHighElves/>
 				</SpecialRules>
 				<Equipments>
@@ -1214,7 +1214,7 @@
 			<Special>
 				<Name>Reaper Bolt Thrower</Name>
 				<Points>70</Points>
-				<ModelsInPack Val="3"/>
+				<ModelsInPack>3</ModelsInPack>
 				<Lore>A deviation of the normal Elven Repeater Bolt Thrower, Reaper Bolt Throwers are used at sea to clear the decks of enemy vessels, and on land to scythe down ranks of enemy warriors. A mechanism of counterweights and cords allows the Reaper to shoot a hail of bolts, or a single missile with force enough to pierce a Dragon's hide. A Reaper's bolts are barbed and difficult to remove from the wounds they inflict.</Lore>
 				<Profile M='5' WS='4' BS='4' S='3' T='7' W='2' I='5' A='1' Ld='8'/>
 				<SpecialRules>
@@ -1248,7 +1248,7 @@
 					<HitFirst/>
 					<LargeBase/>
 					<MurderousProwess/>
-					<ImpactHit Val="D6"/>
+					<ImpactHit>D6</ImpactHit>
 					<HateHighElves/>
 				</SpecialRules>
 				<Equipments>
