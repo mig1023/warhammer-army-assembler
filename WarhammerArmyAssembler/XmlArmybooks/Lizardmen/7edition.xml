@@ -102,7 +102,7 @@
 				<Weapon>
 					<Name>Blade of Revered Tzanuki</Name>
 					<Points>65</Points>
-					<AddToStrength Val="1"/>
+					<AddToStrength>1</AddToStrength>
 					<NoArmour/>
 					<Lore>Said to be the weapon wielded by the Old One Tzunki, this exquisitely crafted weapon is is unbreakable, and bas survived the most intense dragonfire unscathed, remaining icy cold to the touch afterwards. Such is its craftsmanship that it hums as it cuts through the air</Lore>
 					<Description>+1 Strenght. No armour saves are allowed against attacks made by the Blade of Revered Tzanuki</Description>
@@ -110,7 +110,7 @@
 				<Weapon>
 					<Name>Scimitar of the Sun Resplendent</Name>
 					<Points>50</Points>
-					<AddToAttacks Val="2"/>
+					<AddToAttacks>2</AddToAttacks>
 					<Lore>As light as a dagger, this curved blade invigorates the wielder with the power of the sun, fuelling his charge with fiery vigour</Lore>
 					<Description>The wielder of this blade has +2 Attacks</Description>
 				</Weapon>
@@ -118,7 +118,7 @@
 					<Name>Stegadon War-spear</Name>
 					<Only>Skink, Mount</Only>
 					<Points>50</Points>
-					<ImpactHit Val="2D6+1"/>
+					<ImpactHit>2D6+1</ImpactHit>
 					<Lance/>
 					<Lore>The tip of this massive spear was carved from the born of the very first and greatest Stegadon to bear a war howdah. The gnarled horns of this beast, inlaid with magical runes, were said to be so bard they could shatter mountains with ease</Lore>
 					<Description>Lance. In addition, the bearer's mount inflicts 2D6+1 impact hits rather then the normal 1D6+1</Description>
@@ -133,7 +133,7 @@
 				<Weapon>
 					<Name>Piranha Blade</Name>
 					<Points>35</Points>
-					<MultiWounds Val="2"/>
+					<MultiWounds>2</MultiWounds>
 					<Lore>The blade of this weapon is inlaid with thousands of tiny barbed teeth that rip and tear anything that they touch</Lore>
 					<Description>Any unsaved wound inflicted by the Piranha Blade is multipled into two wounds</Description>
 				</Weapon>
@@ -157,7 +157,7 @@
 					<Name>Burning Blade of Chotec</Name>
 					<Points>20</Points>
 					<Rule>Flaming attacks</Rule>
-					<ArmourPiercing Val="2"/>
+					<ArmourPiercing>2</ArmourPiercing>
 					<Lore>An acrid smell of sulphur exudes from the barbed blades on this weapon. It passes easily through armour, blackening and buckling steel and causing searing wounds that blister and smoke</Lore>
 					<Description>Flaming attacks. Targets struck by the Burning of Chotek suffer a -2 penalty to their armour save in addition to any modifiers from the user's Strength</Description>
 				</Weapon>
@@ -167,8 +167,8 @@
 					<Name>Hide of the Cold Ones</Name>
 					<Only>Infantry</Only>
 					<Points>50</Points>
-					<AddToArmour Val="5"/>
-					<AddToToughness Val="1"/>
+					<AddToArmour>5</AddToArmour>
+					<AddToToughness>1</AddToToughness>
 					<Fear/>
 					<Stupidity/>
 					<Lore>Only the toughest of Saurus Warriors can don the Hide of the Cold Ones, making his appearance fearsome to behold. However, the hide exudes a toxic slime that slowly poisons the user and dulls his mind</Lore>
@@ -178,23 +178,23 @@
 					<Name>Sacred Stegadon Helm</Name>
 					<Only>Skink</Only>
 					<Points>50</Points>
-					<AddToArmour Val="6"/>
-					<AddToLeadership Val="1"/>
+					<AddToArmour>6</AddToArmour>
+					<AddToLeadership>1</AddToLeadership>
 					<Lore>This mighty horned bone helmet is a potent symbol of power and respect. Those who wear it are accorded much reverence, for it is said that only those chosen by the Old Ones can place it on their heads without being struck down</Lore>
 					<Description>Confers +1 to the model's armour save, which may be combined with other armour as normal. In addition, the helm adds +1 to the model's Leadership</Description>
 				</Additional>
 				<Shield>
 					<Name>Shield of the Mirrored Pool</Name>
 					<Points>30</Points>
-					<AddToArmour Val="6"/>
+					<AddToArmour>6</AddToArmour>
 					<Rule>Magic missile reflected on 2+</Rule>
 					<Description>Shield. Any magic missile that strikes the bearer or any unit he is with is reflected on the roll of 2+ on a D6. If the spell is reflected, the results of the magic missile are resolved against the caster of the spell or the unit the character is with. This in turn cannot be dispelled</Description>
 				</Shield>
 				<Shield>
 					<Name>The Mainming Shield</Name>
 					<Points>30</Points>
-					<AddToArmour Val="6"/>
-					<AddToAttacks Val="1"/>
+					<AddToArmour>6</AddToArmour>
+					<AddToAttacks>1</AddToAttacks>
 					<Lore>The face of this shield is dark and reflective, and ripples spread from its centre when it deflects blows. Hostile enemy magic is absorbed by this ancient piece of armour, and may be rebounded back at the caster</Lore>
 					<Description>Shield. The Mainming Shield confres +1 Attack to the bearer. This additional attack is worked out using the base Strength of the wielder, and counts as magical</Description>
 				</Shield>
@@ -219,7 +219,7 @@
 					<Name>Divine Plaque of Protection</Name>
 					<Only>Slann</Only>
 					<Points>30</Points>
-					<AddToWard Val="2"/>
+					<AddToWard>2</AddToWard>
 					<Lore>The Shield of the Old Ones grows more powerful under the influence of this glowing plaque, shining brightly and bursting into crackling sheets of lightning as it deflects incoming attacks</Lore>
 					<Description>The Slann's Shield of the Old Ones ward save in increased from 4+ to 2+ against the ranged attacks</Description>
 				</Arcane>
@@ -333,21 +333,21 @@
 				<Additional>
 					<Name>Aura of Quetzl</Name>
 					<Points>40</Points>
-					<SubOpponentToHit Val="1"/>
+					<SubOpponentToHit>1</SubOpponentToHit>
 					<Lore>Blessed by Quetzl, this string of beaded shells, feathers and bones is a powerful protective charm; surrounding the warrior in a miasma of dancing colour</Lore>
 					<Description>All close combat attacks made against the bearer suffer -1 to Hit</Description>
 				</Additional>
 				<Additional>
 					<Name>Glyph Necklace</Name>
 					<Points>30</Points>
-					<AddToWard Val="5"/>
+					<AddToWard>5</AddToWard>
 					<Lore>An ancient and potent token of protection, this necklace wards off attacks, causing enemies to fumble their blows or their strikes to glance off scales</Lore>
 					<Description>The character wearing this gains a 5+ ward save</Description>
 				</Additional>
 				<Additional>
 					<Name>Amulet of Itza</Name>
 					<Points>30</Points>
-					<WardForFirstWound Val="2"/>
+					<WardForFirstWound>2</WardForFirstWound>
 					<Lore>With the sound of a thunderclap, this amulet explodes into a million shards of crystal if the wearer is struck, leaving the warrior miraculously unharmed</Lore>
 					<Description>One use only. The character wearing this amulet has a 2+ ward save against the first wound suffered, after Armour saves have boon taken</Description>
 				</Additional>
@@ -426,7 +426,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Golden Death Mask</Name>
-						<SubOpponentToHit Val="1"/>
+						<SubOpponentToHit>1</SubOpponentToHit>
 					</HandWeapon>
 				</Equipments>
 			</Lord>
@@ -452,14 +452,14 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Cobra Mace of Mazdamundi</Name>
-						<AddToStrength Val="2"/>
+						<AddToStrength>2</AddToStrength>
 						<HitFirst/>
 						<PoisonAttack/>
 						<Rule>Destruction of magic weapons</Rule>
 					</HandWeapon>
 					<Armour>
 						<Name>Shield of the Old Ones</Name>
-						<AddToWard Val="4"/>
+						<AddToWard>4</AddToWard>
 					</Armour>
 					<Banner>
 						<Name>Sun Standard of Hexoatl</Name>
@@ -486,8 +486,8 @@
 					</HandWeapon>
 					<HandWeapon>
 						<Name>Revered Spear of Tlanxla</Name>
-						<AddToStrength Val="1"/>
-						<MultiWounds Val="2"/>
+						<AddToStrength>1</AddToStrength>
+						<MultiWounds>2</MultiWounds>
 					</HandWeapon>
 				</Equipments>
 			</Lord>
@@ -517,12 +517,12 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Blade of the Serpent's Tongue</Name>
-						<AddToAttacks Val="1"/>
+						<AddToAttacks>1</AddToAttacks>
 						<PoisonAttack/>
 					</HandWeapon>
 					<HandWeapon>
 						<Name>Plaque of Sotek</Name>
-						<AddToWard Val="5"/>
+						<AddToWard>5</AddToWard>
 					</HandWeapon>
 				</Equipments>
 			</Lord>
@@ -574,7 +574,7 @@
 					<SlannOption>
 						<Name>Unfathomable Presence</Name>
 						<Points>50</Points>
-						<MagicResistance Val="3"/>
+						<MagicResistance>3</MagicResistance>
 					</SlannOption>
 					<SlannOption>
 						<Name>Soul of Stone</Name>
@@ -586,7 +586,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Shield of the Old Ones</Name>
-						<AddToWard Val="4"/>
+						<AddToWard>4</AddToWard>
 					</Armour>
 				</Equipments>
 			</Lord>
@@ -633,7 +633,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>The Star-Stone Mace</Name>
-						<AddToStrength Val="2"/>
+						<AddToStrength>2</AddToStrength>
 						<Rule>Enemy magic weapon count as mundane</Rule>
 					</HandWeapon>
 					<Armour>
@@ -643,7 +643,7 @@
 					</Armour>
 					<Armour>
 						<Name>Key to the Eternity Chamber</Name>
-						<AddToWard Val="5"/>
+						<AddToWard>5</AddToWard>
 						<Rule>Enemy strikes last</Rule>
 					</Armour>
 				</Equipments>
@@ -666,12 +666,12 @@
 				<Equipments>
 					<Armour>
 						<Name>The Shield of Aeons</Name>
-						<AddToArmour Val="6"/>
+						<AddToArmour>6</AddToArmour>
 						<Rule>No benefits from charging Gar-Rok</Rule>
 					</Armour>
 					<HandWeapon>
 						<Name>The Mace of Ulamak</Name>
-						<AddToStrength Val="2"/>
+						<AddToStrength>2</AddToStrength>
 						<Reroll>ToHit</Reroll>
 					</HandWeapon>
 				</Equipments>
@@ -702,7 +702,7 @@
 					</Armour>
 					<Armour>
 						<Name>The Palanquin of Constellations</Name>
-						<AddToWard Val="5"/>
+						<AddToWard>5</AddToWard>
 						<Rule>Place in skinks second rank</Rule>
 					</Armour>
 				</Equipments>
@@ -731,9 +731,9 @@
 					</HandWeapon>
 					<Armour>
 						<Name>Mask of Heavens</Name>
-						<SubOpponentToHit Val="1"/>
-						<MagicResistance Val="1"/>
-						<AddToWard Val="6"/>
+						<SubOpponentToHit>1</SubOpponentToHit>
+						<MagicResistance>1</MagicResistance>
+						<AddToWard>6</AddToWard>
 					</Armour>
 				</Equipments>
 			</Hero>
@@ -747,7 +747,7 @@
 				<SpecialRules>
 					<ColdBlooded/>
 					<PoisonAttack/>
-					<SubOpponentToHit Val="1"/>
+					<SubOpponentToHit>1</SubOpponentToHit>
 					<Aquatic/>
 					<Scout/>
 					<Original>
@@ -863,7 +863,7 @@
 				<SpecialRules>
 					<Terror/>
 					<ColdBlooded/>
-					<MultiWounds Val="D3"/>
+					<MultiWounds>D3</MultiWounds>
 					<LargeBase/>
 					<BloodFrenzy/>
 					<UltimatePredator/>
@@ -880,7 +880,7 @@
 					<ImmuneToPsychology/>
 					<LargeBase/>
 					<LargeTarget/>
-					<ImpactHit Val="D6+1"/>
+					<ImpactHit>D6+1</ImpactHit>
 					<DozenUnitStrength/>
 				</SpecialRules>
 			</Mount>
@@ -895,7 +895,7 @@
 					<ImmuneToPsychology/>
 					<LargeBase/>
 					<LargeTarget/>
-					<ImpactHit Val="D6+1"/>
+					<ImpactHit>D6+1</ImpactHit>
 					<DozenUnitStrength/>
 				</SpecialRules>
 			</Mount>
@@ -910,7 +910,7 @@
 					<ImmuneToPsychology/>
 					<LargeBase/>
 					<LargeTarget/>
-					<ImpactHit Val="D6+1"/>
+					<ImpactHit>D6+1</ImpactHit>
 					<DozenUnitStrength/>
 				</SpecialRules>
 			</Mount>
@@ -920,7 +920,7 @@
 				<SpecialRules>
 					<Terror/>
 					<ColdBlooded/>
-					<MultiWounds Val="D3"/>
+					<MultiWounds>D3</MultiWounds>
 					<LargeBase/>
 					<BloodFrenzy/>
 					<UltimatePredator/>
@@ -1044,7 +1044,7 @@
 				<SpecialRules>
 					<ColdBlooded/>
 					<PoisonAttack/>
-					<SubOpponentToHit Val="1"/>
+					<SubOpponentToHit>1</SubOpponentToHit>
 					<Skirmishers/>
 					<Aquatic/>
 					<Scouts/>
@@ -1098,7 +1098,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Helberd</Name>
-						<AddToStrength Val="1"/>
+						<AddToStrength>1</AddToStrength>
 					</HandWeapon>
 					<HandWeapon/>
 					<LightArmour/>
@@ -1170,7 +1170,7 @@
 					<ImmuneToPsychology/>
 					<LargeBase/>
 					<LargeTarget/>
-					<ImpactHit Val="D6+1"/>
+					<ImpactHit>D6+1</ImpactHit>
 					<DozenUnitStrength/>
 				</SpecialRules>
 				<Equipments>
@@ -1190,7 +1190,7 @@
 					<ImmuneToPsychology/>
 					<LargeBase/>
 					<LargeTarget/>
-					<ImpactHit Val="D6+1"/>
+					<ImpactHit>D6+1</ImpactHit>
 					<DozenUnitStrength/>
 				</SpecialRules>
 				<Equipments>
@@ -1201,7 +1201,7 @@
 				<Name>Salamander Hunting Pack</Name>
 				<Points>75</Points>
 				<Size>1-3</Size>
-				<ModelsInPack Val="4"/>
+				<ModelsInPack>4</ModelsInPack>
 				<Image>Salamander</Image>
 				<Lore>Salamanders are giant, predatory creatures that stalk the swamplands and estuaries of Lustria’s jungles. Propelled by four thickly muscled legs and a powerful tail, they are swift-moving creatures whether on land or in water. Salamanders are voracious hunters, and their favoured method of catching prey is to swiftly close the distance, moving through underbrush or even submerged under water.</Lore>
 				<Profile M='6' WS='3' BS='3' S='5' T='4' W='3' I='4' A='2' Ld='6' AS='5'/>
@@ -1221,7 +1221,7 @@
 				<Name>Razordon Hunting Pack</Name>
 				<Points>75</Points>
 				<Size>1-3</Size>
-				<ModelsInPack Val="4"/>
+				<ModelsInPack>4</ModelsInPack>
 				<Lore>Barbed Razordons are covered with a profusion of great spines — hardened spikes made of bone that project menacingly out of their bodies. As a defensive protection, this razor-sharp body armour serves to deter all but the most determined of creatures, and even the most monstrous of Lustria’s many apex predators will think twice before attacking a Razordon.</Lore>
 				<Profile M='6' WS='3' BS='3' S='5' T='4' W='3' I='4' A='2' Ld='6' AS='5'/>
 				<SpecialRules>
