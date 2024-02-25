@@ -195,14 +195,14 @@
 					<Name>Impenetrable Hide</Name>
 					<Points>75</Points>
 					<RandomGroup>Exalted Gifts</RandomGroup>
-					<AddToToughness Val="2"/>
+					<AddToToughness>2</AddToToughness>
 					<Description>The Daemon has +2 Toughness</Description>
 				</Additional>
 				<Additional>
 					<Name>Massive Might</Name>
 					<Points>75</Points>
 					<RandomGroup>Exalted Gifts</RandomGroup>
-					<AddToStrength Val="3"/>
+					<AddToStrength>3</AddToStrength>
 					<Description>The Daemon has +3 Strength</Description>
 				</Additional>
 				<Additional>
@@ -216,7 +216,7 @@
 					<Name>Corpulence</Name>
 					<Points>50</Points>
 					<RandomGroup>Greater Gifts</RandomGroup>
-					<AddToWounds Val="2"/>
+					<AddToWounds>2</AddToWounds>
 					<Description>The Daemon has +1 Wound</Description>
 				</Additional>
 				<Additional>
@@ -236,14 +236,14 @@
 					<Name>Unbreakable Skin</Name>
 					<RandomGroup>Greater Gifts</RandomGroup>
 					<Points>50</Points>
-					<ArmourTo Val="2"/>
+					<ArmourTo>2</ArmourTo>
 					<Description>The Daemon has a 2+ armour save that cannot be improved by any means</Description>
 				</Additional>
 				<Additional>
 					<Name>Unholy Flurry</Name>
 					<Points>50</Points>
 					<RandomGroup>Greater Gifts</RandomGroup>
-					<AddToAttacks Val="2"/>
+					<AddToAttacks>2</AddToAttacks>
 					<Description>The Daemon has +2 Attacks</Description>
 				</Additional>
 				<Weapon>
@@ -256,21 +256,21 @@
 					<Name>Cleaving Blow</Name>
 					<Points>25</Points>
 					<RandomGroup>Lesser Gifts</RandomGroup>
-					<MultiWounds Val="2"/>
+					<MultiWounds>2</MultiWounds>
 					<Description>The Daemon's close combat attacks have the Multiple Wounds (2) special rule</Description>
 				</Weapon>
 				<Weapon>
 					<Name>Crushing Mass</Name>
 					<Points>25</Points>
 					<RandomGroup>Lesser Gifts</RandomGroup>
-					<ImpactHit Val="D3"/>
+					<ImpactHit>D3</ImpactHit>
 					<Description>The Daemon has the Impact Hits (D3) special rule</Description>
 				</Weapon>
 				<Weapon>
 					<Name>Dark Blessing</Name>
 					<Points>25</Points>
 					<RandomGroup>Lesser Gifts</RandomGroup>
-					<WardForFirstWound Val="2"/>
+					<WardForFirstWound>2</WardForFirstWound>
 					<Description>The Daemon has a 2+ ward save against the first Wound it suffers in the batde</Description>
 				</Weapon>
 				<Weapon>
@@ -322,7 +322,7 @@
 				<Weapon>
 					<Name>Blade of Blood</Name>
 					<Points>50</Points>
-					<AddToStrength Val="1"/>
+					<AddToStrength>1</AddToStrength>
 					<KillingBlow/>
 					<Lore>The weighty Blade of Blood trembles with a portion of Khorne's boundless rage; its strike crushes not only flesh and armour, but the victim's very soul as well</Lore>
 					<Description>Attacks made with the Blade of Blood are resolved at +1 Strength. They also have the Killing Blow special rule</Description>
@@ -360,7 +360,7 @@
 					<Name>Balesword</Name>
 					<Points>50</Points>
 					<PoisonAttack/>
-					<MultiWounds Val="D3"/>
+					<MultiWounds>D3</MultiWounds>
 					<Lore>Legend tells that there is one Balesword for each of Nurgle’s favoured plagues. Moreover, each blade is thought to have been congealed from the infected waste matter that each plague draws forth</Lore>
 					<Description>Attacks made with the Balesword have the Poisoned Attacks and Multiple Wounds (D3) special rules</Description>
 				</Weapon>
@@ -406,7 +406,7 @@
 				<Additional>
 					<Name>Helm of Discord</Name>
 					<Points>30</Points>
-					<AddToArmour Val="6"/>
+					<AddToArmour>6</AddToArmour>
 					<Test Bet="Pass" Context="Round" Profile="Leadership"/>
 					<Description>The wearer counts his armour save as being one point higher than normal. In addition, at the start of each Close Combat phase, choose an enemy character in base contact with the bearer or his unit. That character must immediately take a Leadership test. If the test is failed, the character succumbs to the helm's sibilant whispers of malice and jealousy. In this Close Combat phase, the victim cannot make attacks and is hit automatically</Description>
 				</Additional>
@@ -489,7 +489,7 @@
 					<LargeBase/>
 					<LargeTarget/>
 					<Daemonic/>
-					<MagicResistance Val="2"/>
+					<MagicResistance>2</MagicResistance>
 					<Original>
 						<Rule>Cannot lose his frenzy</Rule>
 						<Rule>While Skarbrand is alive, all units on the table (friendly and enemy) are subject to the rules for Hatred</Rule>
@@ -534,7 +534,7 @@
 				<Lore>Ku'gath Plaguefather, known also as the Foetid Brewmaster, the Plagueweaver, and also as the Rotting Poxmaker, is one of the most favoured of Nurgle's chosen. Whilst other Great Unclean Ones work to spread the plagues already extant, Ku'gath is fascinated by the breeding of new and virulent life.</Lore>
 				<Profile M='6' WS='6' BS='3' S='6' T='7' W='7' I='4' A='6' Ld='9'/>
 				<SpecialRules>
-					<SubOpponentToHit Val="1"/>
+					<SubOpponentToHit>1</SubOpponentToHit>
 					<Terror/>
 					<LargeBase/>
 					<LargeTarget/>
@@ -561,7 +561,7 @@
 					<Fly/>
 					<MagicItems Points="100" Type="Hero"/>
 					<Daemonic/>
-					<MagicResistance Val="2"/>
+					<MagicResistance>2</MagicResistance>
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon>Axe</HandWeapon>
@@ -588,17 +588,17 @@
 					<Option>
 						<Name>Wizard Level 3</Name>
 						<Points>35</Points>
-						<AddToWizard Val="1"/>
-						<AddToCast Val="1"/>
-						<AddToDispell Val="1"/>
+						<AddToWizard>1</AddToWizard>
+						<AddToCast>1</AddToCast>
+						<AddToDispell>1</AddToDispell>
 						<Dependency/>
 					</Option>
 					<Option>
 						<Name>Wizard Level 4</Name>
 						<Points>70</Points>
-						<AddToWizard Val="2"/>
-						<AddToCast Val="2"/>
-						<AddToDispell Val="1"/>
+						<AddToWizard>2</AddToWizard>
+						<AddToCast>2</AddToCast>
+						<AddToDispell>1</AddToDispell>
 						<Dependency/>
 					</Option>
 				</Options>
@@ -698,10 +698,10 @@
 				<Lore>U'Zhul, better known as Skulltaker, Khorne's Champion, Blooded Wanderer, and the Slayer of Kings, is the greatest of all Khorne's chosen Bloodletters. When not campaigning with his master's armies, Skulltaker roams the Realm of Chaos atop his mighty Juggernaut, Kuhl'tyran.</Lore>
 				<Profile M='4' WS='9' BS='0' S='6' T='4' W='2' I='9' A='4' Ld='8' AS='6' Ward='5'/>
 				<SpecialRules>
-					<ExtendedKillingBlow Val="5"/>
+					<ExtendedKillingBlow>5</ExtendedKillingBlow>
 					<Hate/>
 					<Daemonic/>
-					<MagicResistance Val="2"/>
+					<MagicResistance>2</MagicResistance>
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon>
@@ -711,7 +711,7 @@
 					</HandWeapon>
 					<Armour>
 						<Name>Cloak of Skulls</Name>
-						<AddToArmour Val="4"/>
+						<AddToArmour>4</AddToArmour>
 					</Armour>
 				</Equipments>
 				<Options>
@@ -735,7 +735,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Brass Collar of Bloody Vengeance</Name>
-						<MagicResistance Val="3"/>
+						<MagicResistance>3</MagicResistance>
 						<Rule>Any enemy Wizard that suffers a miscast within 12" takes a Strength 10 hit immediately before the miscast is resolved</Rule>
 					</Armour>
 				</Equipments>
@@ -784,7 +784,7 @@
 				<Lore>Epidemius, known also as the Maggot King, the Plagued Panjandrum and Reckoner of Mortality, is a Plaguebearer, Herald of Nurgle and Nurgle's chosen Tallyman, one of the seven Proctors of Pestilence and the cataloguer of all the Plaguelord's diseases. Epidemius' task is an unending one, and it generates a great deal of paperwork, so he rides a palanquin to share the burden - and to more easily force a path through Nurgle's hordes.</Lore>
 				<Profile WS="5" BS="5" S="5" T="5" W="2" I="4" A="3" Ld="8" Ward="5"/>
 				<SpecialRules>
-					<SubOpponentToHit Val="1"/>
+					<SubOpponentToHit>1</SubOpponentToHit>
 					<Daemonic/>
 					<Original>
 						<Rule>The Tally of Pestilence</Rule>
@@ -821,7 +821,7 @@
 				<SpecialRules>
 					<MagicItems Points="50" Type="Hero"/>
 					<Daemonic/>
-					<MagicResistance Val="1"/>
+					<MagicResistance>1</MagicResistance>
 				</SpecialRules>
 				<Options>
 					<Abjuration Points="30" Dependency="Skill"/>
@@ -866,7 +866,7 @@
 				<Lore>The Heralds of Nurgle are the Lesser Daemons of Nurgle known as Plaguebearers who have been granted a more exalted status and power among their peers by the Lord of Decay. Heralds of Nurgle are often granted leadership roles in Nurglish Daemonic armies.</Lore>
 				<Profile M='4' WS='5' BS='5' S='5' T='5' W='2' I='4' A='3' Ld='8'/>
 				<SpecialRules>
-					<SubOpponentToHit Val="1"/>
+					<SubOpponentToHit>1</SubOpponentToHit>
 					<MagicItems Points="50" Type="Wizard"/>
 					<Daemonic/>
 				</SpecialRules>
@@ -875,9 +875,9 @@
 						<Name>Wizard Level 1</Name>
 						<Points>35</Points>
 						<MagicItemsPoints/>
-						<AddToWizard Val="1"/>
-						<AddToCast Val="1"/>
-						<AddToDispell Val="1"/>
+						<AddToWizard>1</AddToWizard>
+						<AddToCast>1</AddToCast>
+						<AddToDispell>1</AddToDispell>
 					</Option>
 					<Virulence Points="40" Dependency="Skill"/>
 					<Fecundity Points="45" Dependency="Skill"/>
@@ -950,7 +950,7 @@
 				<Chariot>2</Chariot>
 				<Profile M='1' WS='4' BS='4' S='4' T='4' W='4' I='4' A='3' Ld='7'/>
 				<SpecialRules>
-					<ImpactHit Val="D6+1"/>
+					<ImpactHit>D6+1</ImpactHit>
 					<Fly/>
 					<Daemonic/>
 					<Original>
@@ -965,7 +965,7 @@
 				<Mount>Steed of Slaanesh</Mount>
 				<Profile M='10' WS='5' BS='4' S='3' T='4' W='4' I='5' A='4' Ld='7' AS='6' Ward='5'/>
 				<SpecialRules>
-					<ImpactHit Val="D6+1"/>
+					<ImpactHit>D6+1</ImpactHit>
 					<PoisonAttack/>
 					<Daemonic/>
 				</SpecialRules>
@@ -976,7 +976,7 @@
 				<Mount>Steed of Slaanesh</Mount>
 				<Profile M='10' WS='5' BS='4' S='3' T='4' W='8' I='5' A='4' Ld='7' AS='6' Ward='5'/>
 				<SpecialRules>
-					<ImpactHit Val="2D6+1"/>
+					<ImpactHit>2D6+1</ImpactHit>
 					<PoisonAttack/>
 					<Daemonic/>
 				</SpecialRules>
@@ -998,7 +998,7 @@
 				<Chariot>1</Chariot>
 				<Profile M='7' WS='5' BS='5' S='5' T='5' W='4' I='4' A='3' Ld='7' AS='3' Ward='5'/>
 				<SpecialRules>
-					<ImpactHit Val="D6+1"/>
+					<ImpactHit>D6+1</ImpactHit>
 					<KillingBlow/>
 					<Daemonic/>
 					<Original>
@@ -1018,7 +1018,7 @@
 				<Profile M='5' WS='5' BS='5' S='4' T='3' W='1' I='4' A='1' Ld='7' AS='6' Ward='5'/>
 				<SpecialRules>
 					<Daemonic/>
-					<MagicResistance Val="1"/>
+					<MagicResistance>1</MagicResistance>
 				</SpecialRules>
 				<Equipments>
 					<Hellblade/>
@@ -1103,7 +1103,7 @@
 				<Profile M='5' WS='5' BS='0' S='6' T='4' W='2' I='4' A='2' Ld='7' AS='5' Ward='5'/>
 				<SpecialRules>
 					<Daemonic/>
-					<MagicResistance Val="1"/>
+					<MagicResistance>1</MagicResistance>
 					<Original>
 						<Rule>Brass Behemoth</Rule>
 					</Original>
@@ -1128,7 +1128,7 @@
 				<Profile M='8' WS='5' BS='0' S='4' T='4' W='2' I='4' A='2' Ld='7' AS='6' Ward='5'/>
 				<SpecialRules>
 					<Daemonic/>
-					<MagicResistance Val="1"/>
+					<MagicResistance>1</MagicResistance>
 				</SpecialRules>
 				<Options>
 					<Ambushers PointsPerModel="3"/>
@@ -1237,7 +1237,7 @@
 				<Lore>Seeker Chariots, known also as Shrieking Shandredhans, Glorious Doomriders or Pallid Vanguards, are fast-moving Daemon Engines of Slaanesh. As the straining Steeds of Slaanesh urge the chariot to full speed, swirling shapes sear the air with unholy hues and the metal axles screech in a disharmony akin to the wailing of tormented souls.</Lore>
 				<Profile M='10' WS='5' BS='4' S='3' T='4' W='4' I='5' A='4' Ld='7' AS='6' Ward='5'/>
 				<SpecialRules>
-					<ImpactHit Val="D6+1"/>
+					<ImpactHit>D6+1</ImpactHit>
 					<PoisonAttack/>
 					<Daemonic/>
 				</SpecialRules>
@@ -1266,7 +1266,7 @@
 				<Lore>The Skull Cannons of Khorne, known also as Hellforged Bellowers, the Bonegrinders or the Clinkerfiends, are massive Daemon Engines of Khorne, large, wheeled constructs into which a Daemon has been bound, that fire fiery skulls at the foe. Legend tells that the Skull Cannons of Khorne were forged in the furnaces at the foot of the Blood God's throne in the Realm of Chaos and beaten into shape upon his mighty anvil.</Lore>
 				<Profile M='7' WS='5' BS='5' S='5' T='5' W='4' I='2' A='3' Ld='7' AS='3' Ward='5'/>
 				<SpecialRules>
-					<ImpactHit Val="D6+1"/>
+					<ImpactHit>D6+1</ImpactHit>
 					<LargeBase/>
 					<Original>
 						<Rule>Skull Cannon</Rule>
@@ -1284,7 +1284,7 @@
 				<Lore>Burning Chariots of Tzeentch are large Daemon Engines of Tzeentch which hurtle across the Realm of Chaos like incandescent meteors, bringing the Great Sorcerer's chosen emissaries to every corner of existence. As they blaze through the heavens of the mortal world, Chariots of Tzeentch are commonly mistaken for comets, which are in turn interpreted as omens of great events and terrible wars.</Lore>
 				<Profile M='1' WS='4' BS='4' S='4' T='4' W='4' I='4' A='3' Ld='7'/>
 				<SpecialRules>
-					<ImpactHit Val="D6+1"/>
+					<ImpactHit>D6+1</ImpactHit>
 					<Fly/>
 					<Daemonic/>
 					<Original>
@@ -1336,7 +1336,7 @@
 				<Lore>Seeker Chariots, known also as Shrieking Shandredhans, Glorious Doomriders or Pallid Vanguards, are fast-moving Daemon Engines of Slaanesh. As the straining Steeds of Slaanesh urge the chariot to full speed, swirling shapes sear the air with unholy hues and the metal axles screech in a disharmony akin to the wailing of tormented souls.</Lore>
 				<Profile M='10' WS='5' BS='4' S='3' T='4' W='8' I='5' A='4' Ld='7' AS='6' Ward='5'/>
 				<SpecialRules>
-					<ImpactHit Val="2D6+1"/>
+					<ImpactHit>2D6+1</ImpactHit>
 					<PoisonAttack/>
 					<Daemonic/>
 				</SpecialRules>
@@ -1350,7 +1350,7 @@
 				<Lore>The Hellflayers of Slaanesh, known also as Scented Harvesters, the Decadent Reavers or the Shred-Chain Sisters, are swift-moving Daemon Engines that ride hither and yon across the alabaster plains, their reaping blades cutting and slicing the distaff flesh into small pieces that Slaanesh's otherworldly flora can easily devour.</Lore>
 				<Profile M='10' WS='5' BS='4' S='3' T='4' W='4' I='5' A='4' Ld='7' AS='6' Ward='5'/>
 				<SpecialRules>
-					<ImpactHit Val="D6+1"/>
+					<ImpactHit>D6+1</ImpactHit>
 					<PoisonAttack/>
 					<Daemonic/>
 					<Original>Soulscent</Original>
