@@ -102,8 +102,8 @@
 				<Weapon>
 					<Name>The Fellblade</Name>
 					<Points>100</Points>
-					<StrengthTo Val="10"/>
-					<MultiWounds Val="D6"/>
+					<StrengthTo>10</StrengthTo>
+					<MultiWounds>D6</MultiWounds>
 					<Reroll>OpponentToWard</Reroll>
 					<Rule>Wound wielder with no armour save at the end of each turns on a 3+</Rule>
 					<Lore>This is the sword of swords that was created by the Skaven to destroy the greatest Necromancer to ever walk the world. Raw warpstone was smelted into stolen gromril. Incantations of doom were heaped upon the cursed blade. Death itself was bound to its cutting edge and any with eldritch sight can see the aura of power and ruin that surrounds the wicked creation. No foe can stand before it and even the wielder must succumb to its baleful effects</Lore>
@@ -119,16 +119,16 @@
 				<Weapon>
 					<Name>Warplock-augmented Weapon</Name>
 					<Points>45</Points>
-					<AddToStrength Val="1"/>
-					<AddToAttacks Val="1"/>
+					<AddToStrength>1</AddToStrength>
+					<AddToAttacks>1</AddToAttacks>
 					<Lore>This blade is attached to a warp generator that channels crackling energy along the weapon</Lore>
 					<Description>A Warplock Weapon adds +1 Strength and +1 Attack to any model so equipped</Description>
 				</Weapon>
 				<Weapon>
 					<Name>Blade of Corruption</Name>
 					<Points>35</Points>
-					<AddToStrength Val="1"/>
-					<MultiWounds Val="2"/>
+					<AddToStrength>1</AddToStrength>
+					<MultiWounds>2</MultiWounds>
 					<Rule>Wielder suffers 2 wounds if roll 2 or more rolls of To Hit</Rule>
 					<Lore>This sword has been left for 13 days in the dreaded Cauldron of One Thousand Poxes</Lore>
 					<Description>The wielder of this sword is granted +1 Strength to all Attacks. Any unsaved wound inflicted is multiplied to 2 wounds. If the wielder makes a to Hit roll that has two or more rolls of 1, the wielder immediately suffers a wound that miltiplied to 2 wounds. Other Attacks are carried out as normal</Description>
@@ -136,17 +136,17 @@
 				<Weapon>
 					<Name>Weeping Blade</Name>
 					<Points>30</Points>
-					<ArmourPiercing Val="1"/>
-					<MultiWounds Val="D3"/>
+					<ArmourPiercing>1</ArmourPiercing>
+					<MultiWounds>D3</MultiWounds>
 					<Lore>This weapon weeps a corrosive venom, that can melt through armour to help deliver the poisoned point</Lore>
 					<Description>The Weeping Blade has the Armour Piercing special rule. Each unsaved wound is multiplied to D3 wounds</Description>
 				</Weapon>
 				<Weapon>
 					<Name>Dwarfbane</Name>
 					<Points>25</Points>
-					<AddToStrength Val="1"/>
+					<AddToStrength>1</AddToStrength>
 					<Rule>Re-roll all failed to Wound rolls against Dwarfs</Rule>
-					<ArmourPiercing Val="1"/>
+					<ArmourPiercing>1</ArmourPiercing>
 					<Lore>Many weapons have been forged during the wars to wrest the Worlds Edge Mountains from the Dwarfs. Each is cruelly barbed and deadly</Lore>
 					<Description>The wielder of this sword is granted +1 Strength to all Attacks. Additionaly against Dwarfs, all hits are Armour Piercing and the user re-rolls all failed to Wound rolls</Description>
 				</Weapon>
@@ -162,7 +162,7 @@
 				<Armour>
 					<Name>Warpstone Armour</Name>
 					<Points>30</Points>
-					<AddToArmour Val="4"/>
+					<AddToArmour>4</AddToArmour>
 					<Rule>Strength 4 hit against enemy for each successful armour save</Rule>
 					<Lore>Wrought within the great warpforges underneath Skavenblight, this armour radiates an evil aura</Lore>
 					<Description>Warpstone Armour gives its wearer a 4+ armour save. For each successful armour save made by the bearer in close combat, the armour immediately inflicts a Strength 4 hit against the model that struck the blow. Any casualties caused will count towards combat resolution. Warpstone Armour can be worn by Clan Skryre Warlock Engineers</Description>
@@ -170,7 +170,7 @@
 				<Armour>
 					<Name>World's Edge Armour</Name>
 					<Points>25</Points>
-					<AddToArmour Val="4"/>
+					<AddToArmour>4</AddToArmour>
 					<Rule>First wound by Strength 6+ is discounted, but armour is completely destroyed</Rule>
 					<Lore>Many suits of Dwarf-forged gromril have fallen into the clutches of the Skaven. These mastercrafted pieces of plate are often recrafted to make a patchwork protection with other pieces of scavenged armour</Lore>
 					<Description>The armour gives its wearer a 4+ armour save. The first time the wearer is wounded by a Strength high enough to completely cancel his armour save, or is not permitted an armour save for any reason, the wound is discounted, but the armour is completely destroyed</Description>
@@ -178,7 +178,7 @@
 				<Shield>
 					<Name>Shield of Distraction</Name>
 					<Points>15</Points>
-					<AddToArmour Val="6"/>
+					<AddToArmour>6</AddToArmour>
 					<Rule>Any models in base contact suffer -1 Attack</Rule>
 					<Lore>Grimy and ill-kept, this shield bears tainted hides, grisly trophies, or runes that are painful to look upon</Lore>
 					<Description>Any models in base contact wishing to strike the bearer of this shield suffer -1 Attack, to a minimum of 1</Description>
@@ -188,7 +188,7 @@
 				<Additional>
 					<Name>Foul Pendant</Name>
 					<Points>30</Points>
-					<AddToWard Val="6"/>
+					<AddToWard>6</AddToWard>
 					<Lore>These take many forms - ratskull tokens, raw chunks of warpstone, or items bearing Skaven runes of power</Lore>
 					<Description>This wicked token of the Horned Rat’s power confers a 5+ ward save upon the bearer</Description>
 				</Additional>
@@ -225,8 +225,8 @@
 				<Arcane>
 					<Name>Scrying Stone</Name>
 					<Points>15</Points>
-					<AddToWard Val="3"/>
-					<WardForFirstWound Val="3"/>
+					<AddToWard>3</AddToWard>
+					<WardForFirstWound>3</WardForFirstWound>
 					<Lore>An orb made of the polished gallstones from the dreaded Blindwyrm of the underworld is said to be able to glimpse the future. At least on occasion, it seems to be true</Lore>
 					<Description>One use only. The bearer of this mystical ball gains a 3+ ward save against the first wound suffered. If the wound is saved because of the ward save of the Scrying Ball, the bearer will be subject to Stupidity in the following friendly turn as he awaits further helpful instructions from the mysterious globe</Description>
 				</Arcane>
@@ -323,7 +323,7 @@
 					<Name>Warlock optics</Name>
 					<Only>Skryre</Only>
 					<Points>20</Points>
-					<AddToBallisticSkill Val="1"/>
+					<AddToBallisticSkill>1</AddToBallisticSkill>
 					<Lore>This warp-enhanced seeing device allows a Warlock Engineer to focus on a foe clearly, even those partially hidden in cover</Lore>
 					<Description>A Warlock Engineer equipped with Warlock Optics adds +1 to his Ballistic Skill. Additionally, a model so equipped can see partially see through objects and so suffers no penalty for shooting at targets in cover</Description>
 				</Weapon>
@@ -384,7 +384,7 @@
 				<Banner>
 					<Name>Grand Banner of Clan Superiority</Name>
 					<Points>30</Points>
-					<AddToCloseCombat Val="D3"/>
+					<AddToCloseCombat>D3</AddToCloseCombat>
 					<Lore>These banners take as many forms as there are Warlord clans. Some are colossal totem-like trophy racks of enemy skulls, others rune-etched hide, or ragged shrouds magically emblazoned with clan signs</Lore>
 					<Description>In any combat in which a unit bearing a Grand Banner of Clan Superiority has more ranks than its opponents, the banner will add not 1 as per a normal banner, but instead a total of D3 to its bearer’s combat resolution. Roll at the end of each combat</Description>
 				</Banner>
@@ -433,7 +433,7 @@
 					<Frenzy/>
 					<Terror/>
 					<StrengthInNumbers/>
-					<SubOpponentToHit Val="1"/>
+					<SubOpponentToHit>1</SubOpponentToHit>
 					<ScurryAway/>
 					<Original>
 						<Rule>Plague Monks as Core units</Rule>
@@ -474,7 +474,7 @@
 					</HandWeapon>
 					<Armour>
 						<Rule>Blessing of the Horned Rat</Rule>
-						<AddToWard Val="4"/>
+						<AddToWard>4</AddToWard>
 						<Rule>Frendly model within 6" takes a wound instead</Rule>
 					</Armour>
 					<Armour>
@@ -507,9 +507,9 @@
 					<RangeWeapon>Warpfire Thrower, one use only, re-roll the artillery dice</RangeWeapon>
 					<Armour>
 						<Name>Iron Frame</Name>
-						<AddToStrength Val="3"/>
-						<AddToArmour Val="3"/>
-						<AddToWard Val="5"/>
+						<AddToStrength>3</AddToStrength>
+						<AddToArmour>3</AddToArmour>
+						<AddToWard>5</AddToWard>
 					</Armour>
 				</Equipments>
 			</Lord>
@@ -541,7 +541,7 @@
 					</HandWeapon>
 					<HandWeapon>
 						<Name>Whip of Domination</Name>
-						<AddToAttack Val="1"/>
+						<AddToAttack>1</AddToAttack>
 						<Rule>-2 enemy Leadership penalty after unsaved wound</Rule>
 					</HandWeapon>
 					<LightArmour/>
@@ -572,11 +572,11 @@
 					</HandWeapon>
 					<HandWeapon>
 						<Name>Additional blade</Name>
-						<AddToAttack Val="1"/>
+						<AddToAttack>1</AddToAttack>
 					</HandWeapon>
 					<Armour>
 						<Name>Warp-shared Armour</Name>
-						<AddToArmour Val="3"/>
+						<AddToArmour>3</AddToArmour>
 						<Rule>Strength 5 hit against the enemy for each succeful armour save</Rule>
 					</Armour>
 				</Equipments>
@@ -598,7 +598,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Doom Glaive</Name>
-						<MultiWounds Val="D3"/>
+						<MultiWounds>D3</MultiWounds>
 						<Rule>Each unsaved wound multiplied to D3 wound</Rule>
 					</HandWeapon>
 				</Equipments>
@@ -671,7 +671,7 @@
 					<HandWeapon>
 						<Name>Weeping Blade</Name>
 						<Rule>Armour Piercing</Rule>
-						<MultiWounds Val="D3"/>
+						<MultiWounds>D3</MultiWounds>
 						<Rule>Each unsaved wound is multiplied to D3 wounds</Rule>
 					</HandWeapon>
 					<RangeWeapon>Throwing stars</RangeWeapon>
@@ -681,7 +681,7 @@
 					</Armour>
 					<Armour>
 						<Rule>Dodge</Rule>
-						<AddToWard Val="4"/>
+						<AddToWard>4</AddToWard>
 					</Armour>
 				</Equipments>
 			</Hero>
@@ -707,7 +707,7 @@
 					<HandWeapon>Tail blade</HandWeapon>
 					<Armour>
 						<Name>Lucky Skullhelm</Name>
-						<AddToWard Val="4"/>
+						<AddToWard>4</AddToWard>
 						<Rule>Re-roll a dice once per game</Rule>
 					</Armour>
 				</Equipments>
@@ -736,7 +736,7 @@
 					<RangeWeapon>Throwing stars</RangeWeapon>
 					<Armour>
 						<Rule>Dodge</Rule>
-						<AddToWard Val="4"/>
+						<AddToWard>4</AddToWard>
 					</Armour>
 				</Equipments>
 			</Hero>
@@ -760,17 +760,17 @@
 					<Option>
 						<Name>Level 1 Wizard</Name>
 						<Points>50</Points>
-						<AddToCast Val="1"/>
-						<AddToDispell Val="1"/>
-						<AddToWizard Val="1"/>
+						<AddToCast>1</AddToCast>
+						<AddToDispell>1</AddToDispell>
+						<AddToWizard>1</AddToWizard>
 						<Dependency/>
 					</Option>
 					<Option>
 						<Name>Level 2 Wizard</Name>
 						<Points>85</Points>
-						<AddToCast Val="2"/>
-						<AddToDispell Val="1"/>
-						<AddToWizard Val="2"/>
+						<AddToCast>2</AddToCast>
+						<AddToDispell>1</AddToDispell>
+						<AddToWizard>2</AddToWizard>
 						<Dependency/>
 					</Option>
 					<WarlockWeapon Points="45"/>
@@ -822,8 +822,8 @@
 					<Option>
 						<Name>Level 2 Wizard</Name>
 						<Points>35</Points>
-						<AddToCast Val="1"/>
-						<AddToWizard Val="1"/>
+						<AddToCast>1</AddToCast>
+						<AddToWizard>1</AddToWizard>
 					</Option>
 					<Option>
 						<Name>Plague Censer</Name>
@@ -847,8 +847,8 @@
 					<LargeBase/>
 					<LargeTarget/>
 					<Unbreakable/>
-					<ImpactHit Val="D6"/>
-					<MagicResistance Val="2"/>
+					<ImpactHit>D6</ImpactHit>
+					<MagicResistance>2</MagicResistance>
 					<Original>
 						<Rule>Pushed into Battle</Rule>
 						<Rule>Ringing the Bell</Rule>
@@ -865,9 +865,9 @@
 					<Frenzy/>
 					<LargeBase/>
 					<LargeTarget/>
-					<ImpactHit Val="D6"/>
+					<ImpactHit>D6</ImpactHit>
 					<Unbreakable/>
-					<MagicResistance Val="2"/>
+					<MagicResistance>2</MagicResistance>
 					<Original>
 						<Rule>Billowing Death</Rule>
 						<Rule>Fuming Close Combat</Rule>
@@ -894,7 +894,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Borne Litter</Name>
-						<AddToArmour Val="6"/>
+						<AddToArmour>6</AddToArmour>
 					</Armour>
 				</Equipments>
 			</Mount>
@@ -1130,7 +1130,7 @@
 				<Name>Giant Rats</Name>
 				<Points>23</Points>
 				<Size>1+</Size>
-				<ModelsInPack Val="6"/>
+				<ModelsInPack>6</ModelsInPack>
 				<Lore>The most common and cheapest commodity Clan Moulder has to offer, these creatures might at a distance look like normal rats, but on closer inspection, they have a variety of mutations, a staple of Clan Moulder expertise. The Master-Moulders have long ago unlocked the secrets of breeding, mutating, and surgically augmenting the common rat into a fearsome beast. Standing bigger than the average dog, these rats have a variety of features that only increase their effectiveness in combat, including extra heads, over-sized incisors or claws, spiked tails, and even strong bony armour plates. The far more mutated ones have exposed ribs, massive boils, and even skinless flesh.</Lore>
 				<Profile M='6' WS='3' BS='1' S='3' T='3' W='5' I='5' A='5' Ld='5'/>
 				<SpecialRules>
@@ -1284,7 +1284,7 @@
 					<RangeWeapon>Jazzail</RangeWeapon>
 					<Armour>
 						<Name>Pavise</Name>
-						<AddToArmour Val="4"/>
+						<AddToArmour>4</AddToArmour>
 					</Armour>
 				</Equipments>
 				<Options>
@@ -1334,7 +1334,7 @@
 					<Stubborn/>
 					<LargeBase/>
 					<LargeTarget/>
-					<ImpactHit Val="D6"/>
+					<ImpactHit>D6</ImpactHit>
 					<HellPitAbomination/>
 					<Original>
 						<Rule>Shambling Horror</Rule>
@@ -1355,7 +1355,7 @@
 					<Terror/>
 					<LargeBase/>
 					<LargeTarget/>
-					<ImpactHit Val="D6+1"/>
+					<ImpactHit>D6+1</ImpactHit>
 					<Original>
 						<Rule>Grinding Down the Foe</Rule>
 						<Rule>Rolling Doom</Rule>
