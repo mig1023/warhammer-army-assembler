@@ -73,7 +73,7 @@
 					<Name>Blessed Spawning of Tzunki</Name>
 					<Points>5</Points>
 					<TypeUnitIncrese/>
-					<AddToInitiative Val="1"/>
+					<AddToInitiative>1</AddToInitiative>
 					<Rule>Aquatic</Rule>
 					<Lore>Strongly associated with water, those blessed by the Sacred Spawning of Tzunki sometimes have mottled sea-green skin hues, their claws are often webbed and they have powerful gills hidden in folds of skin on their necks</Lore>
 					<Description>Aquatic, +1 Initiative</Description>
@@ -82,7 +82,7 @@
 					<Name>Blessed Spawning of Sotek</Name>
 					<Points>20</Points>
 					<TypeUnitIncrese/>
-					<AddToAttacks Val="1"/>
+					<AddToAttacks>1</AddToAttacks>
 					<Lore>The favoured spawnings of Sotek, the serpent great-god, are infused with the vengeful deity's blood-fuelled anger, and will attack their foes with great fury. Blood red is the colour associated with Sotek, and the physical representation of his blessing can vary from red skin and scales, to subtle hues of red on the crests or even just red warpaint</Lore>
 					<Description>When the unit/character charges, they get +1 Attack for that round of combat</Description>
 				</Powers>
@@ -90,7 +90,7 @@
 					<Name>Blessed Spawning of Quetzl</Name>
 					<Points>15</Points>
 					<TypeUnitIncrese/>
-					<AddToArmour Val="1"/>
+					<AddToArmour>1</AddToArmour>
 					<Lore>The servants of Quetzl are tough and warlike, as befits the chosen of the Warrior God. Those spawnings that are blessed by the divine protector and warrior-god Quetzl have especially thick, toughened scales covering their bodies, and bony spurs often protrude from their forearms</Lore>
 					<Description>Scaly Skin save increased by +1</Description>
 				</Powers>
@@ -121,7 +121,7 @@
 					<Name>Blessed Spawning of Tepok</Name>
 					<Points>20</Points>
 					<TypeUnitIncrese/>
-					<AddToDispell Val="1"/>
+					<AddToDispell>1</AddToDispell>
 					<Lore>The blessing of inscrutable Tepok, the mysterious feathered-serpent god of the air and sacred places, manifests itself in the form of protection from harmful magic, and is often signified by the colour purple or deep blue</Lore>
 					<Description>The presence of the unit or character on the battlefield adds one dice to the player's Dispel dice pool</Description>
 				</Powers>
@@ -158,7 +158,7 @@
 					<Name>Cupped Hands of the Old Ones</Name>
 					<Only>Slann</Only>
 					<Points>50</Points>
-					<AddToWard Val="5"/>
+					<AddToWard>5</AddToWard>
 					<Lore>A sphere of glowing light extends around the bearer as the divine protection of the Old Ones deflects the uncontrolled maelstrom of magic</Lore>
 					<Description>The entire unit that is accompanying the Slann gains a 5+ Ward save. Note, however, that the unit does not get this increase against models that are attacking it in close combat, for they are slightiy inside the mystical shield</Description>
 				</Arcane>
@@ -174,8 +174,8 @@
 					<Name>Plaque of Dominion</Name>
 					<Only>Slann</Only>
 					<Points>50</Points>
-					<AddToCast Val="1"/>
-					<AddToDispell Val="1"/>
+					<AddToCast>1</AddToCast>
+					<AddToDispell>1</AddToDispell>
 					<Lore>Formed into the image of a grimacing face, this is a potent plaque that helps to boost the amount of magical energy that is attracted to the Slann. Those unwary of its power can go mad just by looking at the horrific visage of the plaque</Lore>
 					<Description>Adds an extra +1 dice to the Lizsmdmen player's Power dice and Dispel pools</Description>
 				</Arcane>
@@ -192,7 +192,7 @@
 				<Weapon>
 					<Name>Blade of Revered Tzanuki</Name>
 					<Points>65</Points>
-					<AddToStrength Val="1"/>
+					<AddToStrength>1</AddToStrength>
 					<NoArmour/>
 					<Lore>Said to be the weapon wielded by the Old One Tzunki himself, this exquisitively crafted weapon is made of a hard, black material. It is unbreakable, and has survived the most intense dragon fire unscathed, even remaining icy cold to the touch. Such is its craftsmanship and design that it hums as it cuts through the air</Lore>
 					<Description>+1 Strenght. No armour saves are allowed against attacks made by the Blade of Revered Tzanuki</Description>
@@ -200,7 +200,7 @@
 				<Weapon>
 					<Name>Scimitar of the Sun Resplendent</Name>
 					<Points>50</Points>
-					<AddToAttacks Val="2"/>
+					<AddToAttacks>2</AddToAttacks>
 					<Lore>As light as a dagger, this curved blade invigorates the wielder with the power of the sun. They are filled with energy and mighty powers of endurance, and a fiery anger overcomes them in battle so that they attack their foes with great fury</Lore>
 					<Description>The wielder of this blade has +2 Attacks</Description>
 				</Weapon>
@@ -214,7 +214,7 @@
 				<Weapon>
 					<Name>Piranha Blade</Name>
 					<Points>35</Points>
-					<MultiWounds Val="2"/>
+					<MultiWounds>2</MultiWounds>
 					<Lore>The blade of this weapon is inlaid with thousands of tiny barbed teeth that rip and tear anything that they touch, causing even minor wounds to become serious and often fatal</Lore>
 					<Description>Any unsaved wound inflicted by the Piranha Blade is multipled into two wounds</Description>
 				</Weapon>
@@ -245,7 +245,7 @@
 				<Weapon>
 					<Name>Burning Blade of Chotec</Name>
 					<Points>20</Points>
-					<ArmourPiercing Val="2"/>
+					<ArmourPiercing>2</ArmourPiercing>
 					<Rule>Flaming attacks</Rule>
 					<Lore>An acrid smell of sulphur exudes from the barbed blades on this weapon. It passes easily through armour, blackening and buckling steel and causing searing wounds that blister and smoke</Lore>
 					<Description>Targets struck by the Burning Blade of Chotec suffer a -2 penalty to their Armour save in addition to any modifiers from the user's Strength. All attacks made with this weapon count as flaming attacks</Description>
@@ -256,15 +256,15 @@
 					<Name>Sacred Stegadon Helm</Name>
 					<Only>Skink</Only>
 					<Points>40</Points>
-					<AddToArmour Val="6"/>
-					<AddToLeadership Val="1"/>
+					<AddToArmour>6</AddToArmour>
+					<AddToLeadership>1</AddToLeadership>
 					<Lore>This horned, bone helmet is a symbol of power and respect. Those who wear it are accorded much admiration and reverence, for it is said that only those chosen by the gods can place it on their heads without being struck down</Lore>
 					<Description>Confers +1 to the model's Armour save, which may be combined with other armour as normal. In addition, the helm adds +1 to the model's Leadership</Description>
 				</Additional>
 				<Shield>
 					<Name>Shield of the Mirrored Pool</Name>
 					<Points>30</Points>
-					<AddToArmour Val="6"/>
+					<AddToArmour>6</AddToArmour>
 					<Rule>Magic missile reflected on 2+</Rule>
 					<Lore>The face of this shield is dark and reflective, and ripples spread from its centre when it deflects blows. Hostile enemy magic is absorbed by this ancient piece of armour, and may be rebounded back at the caster</Lore>
 					<Description>The shield confers a +1 Armour save like a normal shield. In addition, any magic missile that strikes the bearer or any unit he is with is deflected on the roll of 4+ on a D6. If the spell is deflected, the results of the magic missile is resolved against the caster of the spell or the unit the character is with (following the normal targeting rules). This in turn cannot be dispelled</Description>
@@ -272,8 +272,8 @@
 				<Shield>
 					<Name>The Mainming Shield</Name>
 					<Points>30</Points>
-					<AddToArmour Val="6"/>
-					<AddToAttacks Val="1"/>
+					<AddToArmour>6</AddToArmour>
+					<AddToAttacks>1</AddToAttacks>
 					<Lore>This shield has been created more as a weapon than for protection, and the warrior using it can hack and slash with its barbed edges</Lore>
 					<Description>The shield confers a +1 Armour save like a normal shield. In addition, it confers +1 Attack to the model using it. This additional attack is worked out using the base Strength of the wielder, and counts as magical</Description>
 				</Shield>
@@ -305,7 +305,7 @@
 					<Name>Charm of the Jaguar Warrior</Name>
 					<Only>Infantry</Only>
 					<Points>20</Points>
-					<MovementTo Val="9"/>
+					<MovementTo>9</MovementTo>
 					<Lore>A small token depicting a snarling jaguar face with delicately inlaid eyes of amber, this charm gives the wearer the speed of a jaguar, allowing him to move swiftly through the jungle. Some say that the warrior seems to blur and shift between his true shape and that of a stalking jaguar</Lore>
 					<Description>The model's Movement is increased to 9</Description>
 				</Additional>
@@ -365,7 +365,7 @@
 				<Additional>
 					<Name>Amulet of Itza</Name>
 					<Points>40</Points>
-					<WardForFirstWound Val="2"/>
+					<WardForFirstWound>2</WardForFirstWound>
 					<Lore>With a burst of light and the sound of a thunder clap, this amulet explodes into a million shards of crystal if a true shot or blow comes near to harming the wearer. The amulet takes the brunt of the attack, leaving the warrior unharmed, but the amulet is destroyed in the process</Lore>
 					<Description>One use only. The character wearing this amulet has a 2+ ward save against the first wound suffered</Description>
 				</Additional>
@@ -379,7 +379,7 @@
 				<Additional>
 					<Name>Glyph Necklace</Name>
 					<Points>30</Points>
-					<AddToWard Val="5"/>
+					<AddToWard>5</AddToWard>
 					<Lore>An ancient and potent token of protection, this necklace wards off attacks directed at its wearer. Enemies fumble their blows, their strikes glance off scales and they cannot seem to manage to attack the bearer effectively</Lore>
 					<Description>The character wearing this gains a 5+ ward save</Description>
 				</Additional>
@@ -428,9 +428,9 @@
 					<ColdBlooded/>
 					<LargeBase/>
 					<Slots>Hero, Rare</Slots>
-					<AddToCast Val="1"/>
-					<AddToDispell Val="1"/>
-					<MagicResistance Val="2"/>
+					<AddToCast>1</AddToCast>
+					<AddToDispell>1</AddToDispell>
+					<MagicResistance>2</MagicResistance>
 					<Original>
 						<Rule>The Spirit of venerable Lord Kroak</Rule>
 						<Rule>No Miscast roll</Rule>
@@ -444,11 +444,11 @@
 				<Equipments>
 					<Armour>
 						<Name>Golden Death Mask</Name>
-						<SubOpponentToHit Val="1"/>
+						<SubOpponentToHit>1</SubOpponentToHit>
 					</Armour>
 					<AdditionalArmour>
 						<Name>Shield of the Old Ones</Name>
-						<AddToWard Val="3"/>
+						<AddToWard>3</AddToWard>
 					</AdditionalArmour>
 				</Equipments>
 			</Lord>
@@ -469,7 +469,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Revered Spear of Tlanxla</Name>
-						<AddToStrength Val="1"/>
+						<AddToStrength>1</AddToStrength>
 					</HandWeapon>
 					<RangeWeapon>
 						<Name>Hands of Gods</Name>
@@ -505,7 +505,7 @@
 					<Option>
 						<Name>Third Generation</Name>
 						<Slots>Hero</Slots>
-						<AddToWounds Val="1"/>
+						<AddToWounds>1</AddToWounds>
 						<Points>85</Points>
 						<Dependency/>
 						<Rule>No roll on the Miscast Table</Rule>
@@ -514,7 +514,7 @@
 					<Option>
 						<Name>Second Generation</Name>
 						<Slots>Hero, Rare</Slots>
-						<AddToWounds Val="2"/>
+						<AddToWounds>2</AddToWounds>
 						<Points>135</Points>
 						<Dependency/>
 						<Rule>No roll on the Miscast Table</Rule>
@@ -526,7 +526,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Shield of the Old Ones</Name>
-						<AddToWard Val="4"/>
+						<AddToWard>4</AddToWard>
 					</Armour>
 				</Equipments>
 			</Lord>
@@ -539,7 +539,7 @@
 				<Profile M='4' WS='6' BS='0' S='5' T='5' W='3' I='3' A='5' Ld='8' AS='5'/>
 				<SpecialRules>
 					<MagicItems Points="100" Type="Hero"/>
-					<MagicPowersCount Val="3"/>
+					<MagicPowersCount>3</MagicPowersCount>
 					<ColdBlooded/>
 				</SpecialRules>
 				<Options>
@@ -564,7 +564,7 @@
 				<Profile M='4' WS='5' BS='0' S='5' T='4' W='2' I='3' A='4' Ld='8' AS='5'/>
 				<SpecialRules>
 					<MagicItems Points="50" Type="Hero"/>
-					<MagicPowersCount Val="2"/>
+					<MagicPowersCount>2</MagicPowersCount>
 					<ColdBlooded/>
 				</SpecialRules>
 				<Options>
@@ -588,7 +588,7 @@
 				<Profile M='6' WS='4' BS='4' S='4' T='3' W='2' I='5' A='3' Ld='6'/>
 				<SpecialRules>
 					<MagicItems Points="50" Type="Hero"/>
-					<MagicPowersCount Val="1"/>
+					<MagicPowersCount>1</MagicPowersCount>
 					<ColdBlooded/>
 					<PoisonAttack/>
 					<Aquatic/>
@@ -615,7 +615,7 @@
 				<Profile M='6' WS='2' BS='3' S='3' T='2' W='2' I='4' A='1' Ld='5'/>
 				<SpecialRules>
 					<MagicItems Points="50" Type="Wizard"/>
-					<MagicPowersCount Val="1"/>
+					<MagicPowersCount>1</MagicPowersCount>
 					<ColdBlooded/>
 					<Aquatic/>
 				</SpecialRules>
@@ -646,7 +646,7 @@
 				<SpecialRules>
 					<Terror/>
 					<ColdBlooded/>
-					<MultiWounds Val="D3"/>
+					<MultiWounds>D3</MultiWounds>
 					<LargeBase/>
 					<BloodFrenzy/>
 					<Slots>Hero</Slots>
@@ -665,7 +665,7 @@
 				<Lore>Saurus are brutish yet disciplined creatures. Even unarmed, they are extremely dangerous — their sharp claws can gouge grooves into rock or tear out a foe’s throat with ease. Their muscular tails can smash a man’s ribcage and their mouths are full of enormous dagger-shaped teeth.</Lore>
 				<Profile M='4' WS='3' BS='0' S='4' T='4' W='1' I='1' A='2' Ld='8' AS='6'/>
 				<SpecialRules>
-					<MagicPowersCount Val="2"/>
+					<MagicPowersCount>2</MagicPowersCount>
 					<ColdBlooded/>
 				</SpecialRules>
 				<Equipments>
@@ -801,7 +801,7 @@
 				<SpecialRules>
 					<ColdBlooded/>
 					<PoisonAttack/>
-					<SubOpponentToHit Val="1"/>
+					<SubOpponentToHit>1</SubOpponentToHit>
 					<Skirmishers/>
 					<Aquatic/>
 					<Scouts/>
@@ -855,7 +855,7 @@
 					<ImmuneToPsychology/>
 					<LargeBase/>
 					<LargeTarget/>
-					<ImpactHit Val="D6+1"/>
+					<ImpactHit>D6+1</ImpactHit>
 					<Original>Unit Strength 8</Original>
 				</SpecialRules>
 				<Equipments>
@@ -866,7 +866,7 @@
 				<Name>Salamander Hunting Pack</Name>
 				<Points>65</Points>
 				<Size>1-3</Size>
-				<ModelsInPack Val="4"/>
+				<ModelsInPack>4</ModelsInPack>
 				<Image>Salamander</Image>
 				<Lore>Salamanders are giant, predatory creatures that stalk the swamplands and estuaries of Lustria’s jungles. Propelled by four thickly muscled legs and a powerful tail, they are swift-moving creatures whether on land or in water. Salamanders are voracious hunters, and their favoured method of catching prey is to swiftly close the distance, moving through underbrush or even submerged under water.</Lore>
 				<Profile M='6' WS='3' BS='3' S='5' T='4' W='3' I='4' A='2' Ld='5' AS='5'/>
