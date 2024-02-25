@@ -83,7 +83,7 @@
 				<Weapon>
 					<Name>Mawseeker</Name>
 					<Points>40</Points>
-					<AddToToughness Val="1"/>
+					<AddToToughness>1</AddToToughness>
 					<Stupidity/>
 					<Lore>A Mawseeker has completed the pilgrimage to the Great Maw and managed to find his way back. None who have seen the Maw come back unscathed, though, and even those tough enough to survive that deadly trip often return with part of themselves eaten away</Lore>
 					<Description>A Tyrant with the Mawseeker name has +1 Toughness on his profile. He also suffers from the Stupidity special rule</Description>
@@ -91,7 +91,7 @@
 				<Weapon>
 					<Name>Wallcrusher</Name>
 					<Points>30</Points>
-					<ImpactHit Val="2"/>
+					<ImpactHit>2</ImpactHit>
 					<Lore>Some Ogres are renowned for feats of brute smashing, such as bludgeoning their way through a skycastle wall using only their own formidable bulk. A Wallcrusher's gut bears many similarities to a boulder - as does his intellec</Lore>
 					<Description>Wallcrushers do one additional Impact Hit on a successful Ogre Charge. In addition, Wallcrushers ignore all the effects of obstacles when attacking units that are defending them -he is likely to barge through or smash it down on top of the foe. This does not benefit a unit he joins</Description>
 				</Weapon>
@@ -113,7 +113,7 @@
 				<Weapon>
 					<Name>Giantbreaker</Name>
 					<Points>25</Points>
-					<AddToStrength Val="1"/>
+					<AddToStrength>1</AddToStrength>
 					<Rule>May never refuse challenges, and neither he nor a unit he is with may choose to flee as a charge reaction</Rule>
 					<Lore>An Ogre that has led a Giant Hunt and successfully broken one of the towering brutes in hand-to-hand combat is hailed as a great warrior. Naturally, a Giantbreaker is an extremely strong Ogre and also one that is supremely confident in his own abilities</Lore>
 					<Description>A character with the Giantbreaker name has +1 Strength on his profile. He may never refuse challenges, and neither he nor a unit he is with may choose to flee as a charge reaction</Description>
@@ -121,7 +121,7 @@
 				<Weapon>
 					<Name>Deathcheater</Name>
 					<Points>20</Points>
-					<AddToStrength Val="1"/>
+					<AddToStrength>1</AddToStrength>
 					<Rule>Once per game, nominate one model in base contact that has hit the Deathcheater but not yet rolled To Wound: that model must re-roll all successful To Wound rolls this phase</Rule>
 					<Lore>An Ogre that has escaped certain doom is seen as being blessed by the Great Maw. How else could an Ogre live through a Rhinox stampede or survive a major avalanche? Not surprisingly, Ogres with the Deathcheater big name tend to have impressive scars</Lore>
 					<Description>Once per game, nominate one model in base contact that has hit the Deathcheater but not yet rolled To Wound. That model must re-roll all successful To Wound rolls this phase. This includes all rolls To Wound made by the model's mount, chariot or other extra attacks</Description>
@@ -129,7 +129,7 @@
 				<Weapon>
 					<Name>Longstrider</Name>
 					<Points>20</Points>
-					<AddToMovement Val="1"/>
+					<AddToMovement>1</AddToMovement>
 					<Lore>An Ogre with the big name Longstrider has hunted on the slopes of the mountains for decades, and is even capable of running down a sprinting ice elk. The first Hunter, Jhared the Red, was known as Jhared Longstrider until he slaughtered his own tribe</Lore>
 					<Description>A character with the Longstrider big name has +1 Movement on his profile</Description>
 				</Weapon>
@@ -153,7 +153,7 @@
 					<Name>Thundermace</Name>
 					<Points>85</Points>
 					<HitLast/>
-					<AddToStrength Val="2"/>
+					<AddToStrength>2</AddToStrength>
 					<Rule>Thundercrush Attack</Rule>
 					<Lore>A legendary weapon of old, the Thundermace is made from a great hunk taken from an unfeasibly large foundation stone from the base of a skycastle. The great weaponhead is bound with meteoric iron onto a long, stout tree trunk. When brought down over the head, the accumulated force of several tons of masonry explodes outward from the point of impact. It is said that the rumbling aftershocks of a blow from the Thundermace can be heard for miles and there have been several times in its storied history when particularly prodigious blows have started avalanches</Lore>
 					<Description>Always Strikes Last. Requires Two Hands. In close combat, the wielder of the Siegebreaker has +2 Strength. Roll To Hit against the enemy's Initiative instead of his Weapon Skill, and no Parry saves are allowed — it is impossible to deflect a blow from the weapon. In addition, when assaulting models in a building, the wielder can make a 'Siegebreaker Attack' instead of attacking normally in the Close Combat phase (though he may still Stomp). A Siegebreaker Attack inflicts D6 hits with a Strength equal to the height of the building in inches, up to a maximum Strength of 10 (so, for example, models in a building that is 6 inches high would suffer D6 Strength 6 hits). Measure from the base of the building to its highest point</Description>
@@ -162,7 +162,7 @@
 					<Name>Siegebreaker</Name>
 					<Points>85</Points>
 					<HitLast/>
-					<AddToStrength Val="2"/>
+					<AddToStrength>2</AddToStrength>
 					<Rule>Siegebreaker Attack</Rule>
 					<Lore>The origins of the two-handed obsidian club known as Siegebreaker are unknown, but many notorious Ogre Tyrants have famously wielded it down the ages. It is the very weapon Bruto Thundergut used to smash his way into many of the immense mountaintop fortresses of the Skytitans many thousands of years ago. Yet not all of the Siegebreaker's deeds are ancient legend; the leader of the Rockheart tribe smashed through the greenskin blockade of Death Pass, and only a few years ago it was used by Tyrant Lug Boulderhead to turn the Dwarf watchtower atop Ravenpeak into rubble - although Lug was subsequently buried</Lore>
 					<Description>Always Strikes Last. Requires Two Hands. In close combat, the wielder of the Siegebreaker has +2 Strength. Roll To Hit against the enemy's Initiative instead of his Weapon Skill, and no Parry saves are allowed — it is impossible to deflect a blow from the weapon. In addition, when assaulting models in a building, the wielder can make a 'Siegebreaker Attack' instead of attacking normally in the Close Combat phase (though he may still Stomp). A Siegebreaker Attack inflicts D6 hits with a Strength equal to the height of the building in inches, up to a maximum Strength of 10 (so, for example, models in a building that is 6 inches high would suffer D6 Strength 6 hits). Measure from the base of the building to its highest point</Description>
@@ -170,7 +170,7 @@
 				<Additional>
 					<Name>Gnoblar Thiefstone</Name>
 					<Points>45</Points>
-					<MagicResistance Val="2"/>
+					<MagicResistance>2</MagicResistance>
 					<Rule>Roll on the table when the model is deployed to see if the Thiefstone has helped them to 'find' any useful items</Rule>
 					<Lore>Although the tunnels beneath the Mountains of Mourn are dangerous, many Gnoblars risk them in order to search for thiefstones. Strangely enchanted rocks, thiefstones attract magical power, and with a brief pass of a thiefstone over a corpse, any item of any importance will quickly stick to the stone. It is common practice for Ogres who notice Gnoblars with thiefstones to relieve them of their heavy burden. An Ogre might dangle a thiefstone around his neck on a chain or rope or tie one to his weapon shaft, for you never know when such an item will come in handy</Lore>
 					<Description>A Gnoblar Thiefstone grants the bearer Magic Resistance (2). In addition, roll on the following table when the model is deployed to see if the Thiefstone has helped them to 'find' any useful items. Note that this may result in the bearer of the Thiefstone having two Magic Talismans (the Thiefstone and the item from the table). In addition, if the item that has been 'found' is being used by another character (friend or foe), then the other character loses the item — it's been stolen!\n\nD6 Item\n1 Nothing\n2 Luckstone\n3 Talisman of Protection\n4 The Other Trickster's Shard\n5 The Ruby Ring of Ruin\n6 Talisman of Preservation</Description>
@@ -178,15 +178,15 @@
 				<Additional>
 					<Name>Greedy Fist</Name>
 					<Points>40</Points>
-					<AddToStrength Val="1"/>
-					<AddToWard Val="6"/>
+					<AddToStrength>1</AddToStrength>
+					<AddToWard>6</AddToWard>
 					<Lore>All Ogres are in awe of the near-sentient gauntlet known as the Greedy Fist. On great occasions, but always after an especially monumental feat of violence occurs in a tribe's maw-pit - such as a spectacular guts-out challenge for Tyranthood or a particularly brutal pit-fight - a strange and wondrous thing has been known to happen. From out of the bones and broken bits that gather in the corners of any maw-pit, crawls a black ironfist, moving on its own, its articulated finger joints pulling it across the bloody ground. With punch-spikes of iron and tusk embedded into the knuckles, the formidable weapon drags itself to a worthy Ogre who may then claim it for a time</Lore>
 					<Description>The wearer has 4-1 Strength and a 6+ ward save. If a Magic Weapon inflicts a Wound that is saved by this ward save, its magical properties are consumed by the Greedy Fist; it is treated as a normal, non-magical weapon of the same type for the remainder of the game. If no type is listed, it is treated as a hand weapon. In addition, an enemy Wizard loses a Wizard level and a randomly selected spell each time they are hit by an Ogre wearing the Greedy Fist</Description>
 				</Additional>
 				<Armour>
 					<Name>Gut Maw</Name>
 					<Points>45</Points>
-					<AddToArmour Val="5"/>
+					<AddToArmour>5</AddToArmour>
 					<Terror/>
 					<Rule>Recovers one lost Wound (up to his starting number) for each unsaved Wound he causes in a challenge</Rule>
 					<Lore>The Gut Maw is a polished brass gut-plate with a set of huge iron jaws attached to it, blessed by several generations of Butchers and passed through clan to clan. Its jaws can open wide and swallow a foe in battle, and according to Ogres, the victim passes straight through and into the Great Maw itself. There it is consumed and the life force of those ingested by the Gut Maw is passed on to bolster its wearer</Lore>
@@ -258,7 +258,7 @@
 				<Additional>
 					<Name>Helm of Discord</Name>
 					<Points>30</Points>
-					<AddToArmour Val="6"/>
+					<AddToArmour>6</AddToArmour>
 					<Test Bet="Pass" Context="Round" Profile="Leadership"/>
 					<Description>The wearer counts his armour save as being one point higher than normal. In addition, at the start of each Close Combat phase, choose an enemy character in base contact with the bearer or his unit. That character must immediately take a Leadership test. If the test is failed, the character succumbs to the helm's sibilant whispers of malice and jealousy. In this Close Combat phase, the victim cannot make attacks and is hit automatically</Description>
 				</Additional>
@@ -347,13 +347,13 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Sceptre of the Titans</Name>
-						<StrengthTo Val="10"/>
-						<MultiWounds Val="D3"/>
+						<StrengthTo>10</StrengthTo>
+						<MultiWounds>D3</MultiWounds>
 					</HandWeapon>
 					<LightArmour/>
 					<Armour>
 						<Name>Overtyrant's Crown</Name>
-						<AddToWard Val="4"/>
+						<AddToWard>4</AddToWard>
 						<ImmuneToPsychology/>
 					</Armour>
 				</Equipments>
@@ -460,7 +460,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Great Gutgouger</Name>
-						<AddToStrength Val="1"/>
+						<AddToStrength>1</AddToStrength>
 						<HeroicKillingBlow/>
 					</HandWeapon>
 					<LightArmour/>
