@@ -147,7 +147,7 @@
 					<Name>Basha's Bloodaxe</Name>
 					<Only>Orc</Only>
 					<Points>50</Points>
-					<Flail Val="1"/>
+					<Flail>1</Flail>
 					<Frenzy/>
 					<Lore>Every Orc who bas come to wield this axe has been overwhelmed with an incredible (and to Orcs, wholly admirable) bloodlust that can only be quenched fry the wielder’s death</Lore>
 					<Description>Grants +1 Strength in the first round of combat. The wielder of this weapon is subject to Frenzy (D6 extra attacks). The wielder can never lose his Frenzy</Description>
@@ -177,7 +177,7 @@
 				<Weapon>
 					<Name>Ulag's Akrit axe</Name>
 					<Points>25</Points>
-					<AddToStrength Val="1"/>
+					<AddToStrength>1</AddToStrength>
 					<Reroll>ToHit</Reroll>
 					<Flail/>
 					<Lore>In battle this weapon writhes in the hands of the wielder, seemingly always hewing a shrewd idea of how best to strike the enemy</Lore>
@@ -204,9 +204,9 @@
 				<Weapon>
 					<Name>Mortog's best Basha</Name>
 					<Points>15</Points>
-					<AddToWeaponSkill Val="1"/>
-					<AddToStrength Val="1"/>
-					<AddToInitiative Val="1"/>
+					<AddToWeaponSkill>1</AddToWeaponSkill>
+					<AddToStrength>1</AddToStrength>
+					<AddToInitiative>1</AddToInitiative>
 					<Lore>Old Warboss Martog the Mauler had a vast collection of weapons - most of which were stolen from other owners. His most favourilist of all was a massive Dwaruen axe, heavy with runes and (since Martogs possession of it) Dwaruen blood</Lore>
 					<Description>The wielder of this blafe gains +1 Wepon Skill, +1 Strength and +1 Initiative</Description>
 				</Weapon>
@@ -214,7 +214,7 @@
 					<Name>Sneaky Skewerer</Name>
 					<Only>Goblin</Only>
 					<Points>10</Points>
-					<ArmourPiercing Val="3"/>
+					<ArmourPiercing>3</ArmourPiercing>
 					<Lore>Though crude enough to he readily recognisable as being born of Goblin craftsmanship, this sword has an unerring ability to find the vulnerable spot</Lore>
 					<Description>Wounds caused by this weapon suffer an additional -3 armour save modifier</Description>
 				</Weapon>
@@ -231,15 +231,15 @@
 				<Armour>
 					<Name>Armour of Gork</Name>
 					<Points>50</Points>
-					<AddToArmour Val="6"/>
-					<AddToToughness Val="1"/>
+					<AddToArmour>6</AddToArmour>
+					<AddToToughness>1</AddToToughness>
 					<Lore>If armour is made with the correct rituals instead of Just being bashed out of whatever hits of metal conic to band, it can be enchanted by a Shaman to offer a more formidable form of protection</Lore>
 					<Description>Light armour. The wearer has +1 Toughness</Description>
 				</Armour>
 				<Shield>
 					<Name>Spliteful shield</Name>
 					<Points>25</Points>
-					<AddToArmour Val="6"/>
+					<AddToArmour>6</AddToArmour>
 					<Rule>Strength 5 hit for each 1 on a enemy roll to Hit</Rule>
 					<Lore>This shield has razor-sharp teeth that snap and bite against unwary foes, making its hearer noticeably more dangerous and amused in equal measure</Lore>
 					<Description>Shield. Any foe that rolls a 1 when attempting to strike the bearer in close combat suffers a Strength 5 hit for each such roll</Description>
@@ -249,14 +249,14 @@
 				<Additional>
 					<Name>Effigy of Mork</Name>
 					<Points>35</Points>
-					<SubOpponentToHit Val="1"/>
+					<SubOpponentToHit>1</SubOpponentToHit>
 					<Lore>This ancient and slightly crumbly statue of Mork was formed from bis own dung (or so it is said) in some distant age. Though it has undoubtedly received several homegrown additions In more recent times</Lore>
 					<Description>All close combat attacks made against the bearer suffer -1 to Hit</Description>
 				</Additional>
 				<Additional>
 					<Name>Warboss Umm's Best Boss 'at</Name>
 					<Points>30</Points>
-					<AddToWard Val="5"/>
+					<AddToWard>5</AddToWard>
 					<Lore>This rune-encrusted and rather squashed looking helmet once belonged to a Dwarf king, or so legend tells</Lore>
 					<Description>Grants the rearer a 5+ Ward save</Description>
 				</Additional>
@@ -336,7 +336,7 @@
 					<Name>Ironback Boar</Name>
 					<Only>Orc</Only>
 					<Points>35</Points>
-					<ImpactHit Val="D3"/>
+					<ImpactHit>D3</ImpactHit>
 					<Lore>A bizarre mechanical contraption created by Chaos Dwarf engineers, this boar weighs even more than its living cousins and is fust as evil-tempered</Lore>
 					<Description>Boar. When charging, this steed does D3 Strength 5 impact hits in addition to its norman attack</Description>
 				</Weapon>
@@ -350,7 +350,7 @@
 				<Weapon>
 					<Name>Bigged's Kickin' boots</Name>
 					<Points>30</Points>
-					<AddToAttacks Val="1"/>
+					<AddToAttacks>1</AddToAttacks>
 					<Lore>Bigged, an old and boastful Orc, made bis last boast in front of an Empire cannon. Only bis boots were recovered - though bis vengeful spirit (and the odour of his feet) lingers on</Lore>
 					<Description>Grants the wearer +1 Atack on his profile</Description>
 				</Weapon>
@@ -482,13 +482,13 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Slagga's Slashas</Name>
-						<AddToAttacks Val="1"/>
+						<AddToAttacks>1</AddToAttacks>
 						<Reroll>ToHit</Reroll>
 					</HandWeapon>
 					<Armour>
 						<Name>Azhag's 'ard Amour</Name>
-						<AddToArmour Val="5"/>
-						<AddToWard Val="5"/>
+						<AddToArmour>5</AddToArmour>
+						<AddToWard>5</AddToWard>
 					</Armour>
 					<Crown>
 						<Name>The Crown of Sorcery</Name>
@@ -512,13 +512,13 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Gitsnik</Name>
-						<AddToStrength Val="2"/>
+						<AddToStrength>2</AddToStrength>
 						<HitFirst/>
 					</HandWeapon>
 					<Armour>
 						<Name>Blood-forged Armour</Name>
-						<AddToArmour Val="1"/>
-						<AddToWard Val="5"/>
+						<AddToArmour>1</AddToArmour>
+						<AddToWard>5</AddToWard>
 					</Armour>
 				</Equipments>
 			</Lord>
@@ -538,12 +538,12 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>The Axe of Grom</Name>
-						<AddToStrength Val="2"/>
-						<ExtendedKillingBlow Val="5"/>
+						<AddToStrength>2</AddToStrength>
+						<ExtendedKillingBlow>5</ExtendedKillingBlow>
 					</HandWeapon>
 					<Armour>
 						<Name>Lucky banner</Name>
-						<AddToWard Val="5"/>
+						<AddToWard>5</AddToWard>
 					</Armour>
 				</Equipments>
 			</Lord>
@@ -780,7 +780,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Scaly skin</Name>
-						<AddToArmour Val="4"/>
+						<AddToArmour>4</AddToArmour>
 					</Armour>
 				</Equipments>
 			</Mount>
@@ -829,7 +829,7 @@
 				<Name>Goblin Wolf Chariot</Name>
 				<Chariot>2</Chariot>
 				<Mount>Wolf</Mount>
-				<ModelsInPack Val="5"/>
+				<ModelsInPack>5</ModelsInPack>
 				<Profile M='9' WS='3' BS='0' S='3' T='4' W='3' I='3' A='1' AS='5'/>
 				<SpecialRules>
 					<FearElves/>
@@ -843,10 +843,10 @@
 				<Name>Orc Boar Chariot</Name>
 				<Chariot>2</Chariot>
 				<Mount>Boar</Mount>
-				<ModelsInPack Val="4"/>
+				<ModelsInPack>4</ModelsInPack>
 				<Profile M='7' WS='3' S='3' T='5' W='4' I='2' A='1' AS='4'/>
 				<SpecialRules>
-					<ImpactHit Val="D6"/>
+					<ImpactHit>D6</ImpactHit>
 					<TuskerCharge/>
 					<ScythedWheel/>
 				</SpecialRules> 
@@ -1125,12 +1125,12 @@
 				<Points>80</Points>
 				<Chariot>2</Chariot>
 				<Mount>Boar</Mount>
-				<ModelsInPack Val="4"/>
+				<ModelsInPack>4</ModelsInPack>
 				<Image>OrcChariot</Image>
 				<Lore>By lashing together roughly hewn logs, the otherwise dull-witted Orcs have managed to create through sheer luck and determination, crude yet formidable war chariots. With the weight of both the two Boars and the chariot itself, this shock cavalry has the potential to break apart even the thickest of enemy formations so long as the chariot still holds together.</Lore>
 				<Profile M='7' WS='3' S='3' T='5' W='4' I='2' A='1' Ld='7'/>
 				<SpecialRules>
-					<ImpactHit Val="D6"/>
+					<ImpactHit>D6</ImpactHit>
 					<TuskerCharge/>
 					<ScythedWheel/>
 				</SpecialRules>
@@ -1165,7 +1165,7 @@
 				<Name>Night Goblin Squig Herd</Name>
 				<Points>15</Points>
 				<Size>1+</Size>
-				<ModelsInPack Val="5"/>
+				<ModelsInPack>5</ModelsInPack>
 				<Image>SquigHerd</Image>
 				<Lore>In times of need, Night Goblins have been known to drive their Squig herds into battle with devastating effect. An unpredictable asset on the battlefield, the ferocity of the Squigs attacks usually outweighs the catastrophic outcome that would happen should these creatures be let loose without the guidance of a Squig Herder.</Lore>
 				<Profile M='6' WS='4' BS='0' S='5' T='3' W='1' I='3' A='2' Ld='5'/>
@@ -1187,16 +1187,16 @@
 				<Points>60</Points>
 				<Chariot>2</Chariot>
 				<Mount>Wolf</Mount>
-				<ModelsInPack Val="5"/>
+				<ModelsInPack>5</ModelsInPack>
 				<Image>GoblinChariot</Image>
 				<Lore>Of the same ramshackle design as the Boar Chariot, these less-durable yet faster moving chariots are instead drawn by two of the largest wolves within a tribe, and are directed into battle where they can be used as a firing platform or to smash open enemy formations.</Lore>
 				<Profile M='9' WS='3' S='3' T='4' W='3' I='2' A='1' Ld='6'/>
 				<SpecialRules>
-					<ImpactHit Val="D6"/>
+					<ImpactHit>D6</ImpactHit>
 					<FearElves/>
 					<ScythedWheel/>
 					<Original>
-						<AddToArmour Val="5"/>
+						<AddToArmour>5</AddToArmour>
 					</Original>
 				</SpecialRules>
 				<Equipments>
@@ -1212,7 +1212,7 @@
 			<Special>
 				<Name>Goblin Rock Lobber</Name>
 				<Points>70</Points>
-				<ModelsInPack Val="3"/>
+				<ModelsInPack>3</ModelsInPack>
 				<Image>RockLobber</Image>
 				<Lore>A primitive version of the Trebuchet, the Orcs and Goblins were first introduced to catapults shortly after they encountered the Dwarfs. These siegecrafts are deployed singularly or in batteries to help soften up enemy formations, smash defensive positions, or to toss Orc warriors over the battlements and into the city. Due to the technicality of the siegecraft, they are often handled by a crew of Goblins rather then Orcs.</Lore>
 				<Profile WS='2' BS='3' S='3' T='7' W='3' I='2' A='1' Ld='6'/>
@@ -1230,7 +1230,7 @@
 			<Special>
 				<Name>Goblin Spear Chukka</Name>
 				<Points>35</Points>
-				<ModelsInPack Val="3"/>
+				<ModelsInPack>3</ModelsInPack>
 				<Image>SpearChukka</Image>
 				<Lore>A primitive version of the ballista or spear thrower, this artillery piece has been used extensively by the Orcs and Goblins as a way to impale large monsters from a safe distance. Made from gathered material such as wood, metal and bone, these Ballistas are easily built, easily transported and easily maintained, making them a popular choice for many types of Warbosses.</Lore>
 				<Profile WS='2' BS='3' S='3' T='7' W='3' I='2' A='1' Ld='6'/>
@@ -1270,7 +1270,7 @@
 			<Rare>
 				<Name>Goblin Doom Diver Catapult</Name>
 				<Points>80</Points>
-				<ModelsInPack Val="3"/>
+				<ModelsInPack>3</ModelsInPack>
 				<Image>DoomDiverCatapult</Image>
 				<Lore>First developed as a means for nomadic Goblin tribes to scout the surrounding areas of their territory, the Doom Diver Catapult have since been used extensively as long-range artillery. A Goblin known as Doom Diver would be used live ammunition for this artillery piece, where the Goblin's leathery wings allow it to glide to a specific target where he may impale his victim with the top of his pointy helmet.</Lore>
 				<Profile WS='2' BS='3' S='3' T='7' W='3' I='2' A='1' Ld='6'/>
@@ -1291,7 +1291,7 @@
 					<ImmuneToPsychology/>
 					<Stubborn/>
 					<LargeBase/>
-					<ImpactHit Val="D6"/>
+					<ImpactHit>D6</ImpactHit>
 					<Original>
 						<Rule>Chariot</Rule>
 						<Rule>Pedal Faster</Rule>
