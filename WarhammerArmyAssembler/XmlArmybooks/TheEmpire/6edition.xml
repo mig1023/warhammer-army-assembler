@@ -104,9 +104,9 @@
 				<Weapon>
 					<Name>The Mace of Helsturm</Name>
 					<Points>65</Points>
-					<StrengthTo Val="10"/>
-					<AttacksTo Val="1"/>
-					<MultiWounds Val="D6"/>
+					<StrengthTo>10</StrengthTo>
+					<AttacksTo>1</AttacksTo>
+					<MultiWounds>D6</MultiWounds>
 					<Lore>This mace was used in battle by tbe first Tbeogonist, Johann Heist rum. It is said that it can shatter the very walls of a castle</Lore>
 					<Description>The bearer can forfeit all of his normal Attacks to make only one Attack. Roll to hit normally. If this one Attack hits, the hit is resolved at Strength 10 and causes D6 wounds</Description>
 				</Weapon>
@@ -119,7 +119,7 @@
 				<Weapon>
 					<Name>Sword of Sigismund</Name>
 					<Points>50</Points>
-					<AddToStrength Val="1"/>
+					<AddToStrength>1</AddToStrength>
 					<HitFirst/>
 					<Lore>This sword, wielded in the crusades by tbe Grand Master of tbe Knights Panther, once belonged to Emperor Sigismund</Lore>
 					<Description>The wielder of this sword has +1 Strength and always strikes first in close combat, even before enemies that have charged. If the bearer is fighting another enemy who is also entitled to strike first (because of spells, special abilities, etc), then resolve attacks in Initiative order. If Initiative values are equal, roll a dice to determine who strikes first</Description>
@@ -127,14 +127,14 @@
 				<Weapon>
 					<Name>Sword of Righteous Steel</Name>
 					<Points>45</Points>
-					<HitOn Val="2"/>
+					<HitOn>2</HitOn>
 					<Lore>Swords made of steel can he blessed by a priest of Sigmar to enhance the fighting skills of their wielder</Lore>
 					<Description>The wielder always hits any opponent on a 2+, regardless of relative Weapon Skills. This cannot be modified in any way</Description>
 				</Weapon>
 				<Weapon>
 					<Name>Sword of Power</Name>
 					<Points>40</Points>
-					<AddToStrength Val="2"/>
+					<AddToStrength>2</AddToStrength>
 					<Lore>The wielder of this weapon is bestowed with supernatural strength</Lore>
 					<Description>The sword confers +2 Strength to all close combat attacks made by the character fighting with it</Description>
 				</Weapon>
@@ -161,7 +161,7 @@
 				<Weapon>
 					<Name>Wyrmslayer Sword</Name>
 					<Points>20</Points>
-					<WoundOn Val="4"/>
+					<WoundOn>4</WoundOn>
 					<Lore>The Wyrmslayer Sword has been the doom of many monsters menacing the lands of the Empire</Lore>
 					<Description>Hits from this sword wound any opponent on a roll of 4+ (unless the wielder's Strength would make this less). Armour saves apply as normal, modified by the Strength of the character, but Large Targets lose their armour save due to the scaly skin special rule against hits from this sword</Description>
 				</Weapon>
@@ -170,7 +170,7 @@
 				<Armour>
 					<Name>The Gilded Armour</Name>
 					<Points>50</Points>
-					<AddToArmour Val="5"/>
+					<AddToArmour>5</AddToArmour>
 					<Test Bet="Pass" Context="ArmourSave" Profile="Strength"/>
 					<Lore>This golden suit of armour was a gift from the Elves of IHthuan to Magnus the Pious after the Great War against Chaos. Any weapon brought to bear against the wearer is repelled by an invisible force</Lore>
 					<Description>Counts as heavy armour (armour save 5+) which can be combined with other equipment normally. Models attacking the wearer in close combat must pass a Strength test before rolling to hit for every Attack directed at the target (ie, roll equal to or less than its Strength on a D6, a 6 always fails). If the test is failed, the Attack is lost</Description>
@@ -178,7 +178,7 @@
 				<Armour>
 					<Name>Dawn Armour</Name>
 					<Points>40</Points>
-					<AddToArmour Val="4"/>
+					<AddToArmour>4</AddToArmour>
 					<Reroll>ToArmour</Reroll>
 					<Lore>An armour of burnished Estalian steel, enchanted by Gold Wizards so that any damage suffered by it disappears</Lore>
 					<Description>Counts as full plate armour (armour save 4+) which can be combined with other equipment normally. In addition the model can re-roll any failed armour save</Description>
@@ -186,15 +186,15 @@
 				<Armour>
 					<Name>Armour of Tarnus</Name>
 					<Points>35</Points>
-					<AddToArmour Val="6"/>
-					<AddToWard Val="5"/>
+					<AddToArmour>6</AddToArmour>
+					<AddToWard>5</AddToWard>
 					<Lore>This armour was worn by the warrior-wizard Frederick von Tarnus</Lore>
 					<Description>Counts as light armour (armour save 6+) which can be combined with other equipment normally. If the wearer fails his armour save, he may make a 5+ Ward save. Wizards can wear this armour and cast spells</Description>
 				</Armour>
 				<Shield>
 					<Name>Shield of the Gorgon</Name>
 					<Points>35</Points>
-					<AddToArmour Val="6"/>
+					<AddToArmour>6</AddToArmour>
 					<Rule>Can force one model in base contact to lose one Attack</Rule>
 					<Lore>The hideous bead of the mythical creature known as the Gorgon is depicted on this shield in such detail that it seems alive. Even the fiercest enemies try to avoid its gaze which is rumoured to turn living creatures to stone</Lore>
 					<Description>This shield confers a 6+ armour save which can he combined with other equipment normally. The wearer can force one model in base contact to lose one Attack. In the case of models with different Attacks (eg, mounted models) the wearer chooses which Attack is lost. Special Attacks (like those of a Giant, impact hits and anything not included in the Attacks value on a model's profile) are not affected</Description>
@@ -202,14 +202,14 @@
 				<Armour>
 					<Name>Armour of Meteoric Iron</Name>
 					<Points>30</Points>
-					<ArmourTo Val="1"/>
+					<ArmourTo>1</ArmourTo>
 					<Lore>This suit of armour, forged by the Dwarf Smiths of Zbufhar long ago, is today held in the Imperial armoury at Altdorf</Lore>
 					<Description>This suit of armour gives the bearer a 1+ armour save which cannot be improved by any means</Description>
 				</Armour>
 				<Shield>
 					<Name>Bronze Shield</Name>
 					<Points>25</Points>
-					<AddToArmour Val="6"/>
+					<AddToArmour>6</AddToArmour>
 					<Rule>Ignores the first hit in the battle from shooting or close combat</Rule>
 					<Lore>A shield made of bronze can carry a powerful enchantment of protection, hut only for a short time</Lore>
 					<Description>This shield gives a 6+ armour save which can be combined with other equipment normally. Also, the bearer ignores the first hit in the battle suffered from shooting or close combat</Description>
@@ -217,7 +217,7 @@
 				<Additional>
 					<Name>Helm of the Skaven Slayer</Name>
 					<Points>20</Points>
-					<AddToArmour Val="6"/>
+					<AddToArmour>6</AddToArmour>
 					<Rule>Causes Fear in all models in a Skaven army</Rule>
 					<Lore>The legendary helm of Count Mandred Skaven Slayer, this relic fills the rat-spawn with dread</Lore>
 					<Description>This helm confers a 6+ armour save which can be combined with other equipment normally (including normal armour and a shield). In addition, the wearer causes Fear in all models in a Skaven army</Description>
@@ -227,7 +227,7 @@
 				<Additional>
 					<Name>Shroud of Magnus</Name>
 					<Points>60</Points>
-					<AddToWard Val="5"/>
+					<AddToWard>5</AddToWard>
 					<Rule>Totally immune to Dark, Skaven and Chaos magic, even if cast with Irresistible force</Rule>
 					<Lore>This shroud was laid upon the body of Magnus the Pious after his death. On it one can still see the features of the Saviour of the Empire</Lore>
 					<Description>This item gives a 5+ Ward save. A model carrying the Shroud and his mount are totally immune to Dark, Skaven and Chaos magic, even if cast with Irresistible force. Note that the spell will not be dispelled and that other models in a unit the character is with will be affected normally</Description>
@@ -242,14 +242,14 @@
 				<Additional>
 					<Name>Holy Relic</Name>
 					<Points>45</Points>
-					<AddToWard Val="4"/>
+					<AddToWard>4</AddToWard>
 					<Lore>The most famous holy relic in the Empire is the icon of Sigmar carried by the Arch-Lector of Main</Lore>
 					<Description>The Holy Relic gives its bearer a 4+ Ward save</Description>
 				</Additional>
 				<Additional>
 					<Name>The White Cloak</Name>
 					<Points>35</Points>
-					<AddToWard Val="5"/>
+					<AddToWard>5</AddToWard>
 					<Rule>Immune to all cold-based spells attacks</Rule>
 					<Lore>This cloak has been enchanted by Ar-Ulric, the High Priest of the Sect of Ulric, the god of winter and war</Lore>
 					<Description>This item gives a 5+ Ward save. Also, the wearer is immune to all cold-based spells attacks (White Dragon's breath, etc)</Description>
@@ -264,7 +264,7 @@
 				<Additional>
 					<Name>The Crimson Amulet</Name>
 					<Points>20</Points>
-					<AddToWard Val="6"/>
+					<AddToWard>6</AddToWard>
 					<Rule>Automatically passes any characteristic tests he has to take (except Leadership tests)</Rule>
 					<Lore>Legends say that the hearer of this pendant is capable of exceptional feats of strength and agility</Lore>
 					<Description>This item gives a 6+ ward save. The wearer automatically passes any characteristic tests he has to take (except Leadership tests)</Description>
@@ -420,7 +420,7 @@
 				<Banner>
 					<Name>Standard of Arcane Warding</Name>
 					<Points>40</Points>
-					<MagicResistance Val="2"/>
+					<MagicResistance>2</MagicResistance>
 					<Lore>This magic banner absorbs the power of hostile spells and discharges it into the ground</Lore>
 					<Description>This banner gives two extra dice to all Dispel rolls against enemy spells which would affect the unit</Description>
 				</Banner>
@@ -451,7 +451,7 @@
 				<SpecialRules>
 					<Fear/>
 					<Slots>Hero</Slots>
-					<AddToDispell Val="2"/>
+					<AddToDispell>2</AddToDispell>
 					<Original>
 						<Rule>When he joins a unit, even characters in the unit and models who are normally Immune to Psychology will share Luihor's burning hatred for all blasphemies against Sigmar</Rule>
 						<Rule>Cannot join units of Knights of the White Wolf</Rule>
@@ -461,7 +461,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Two-handed hammer</Name>
-						<AddToStrength Val="2"/>
+						<AddToStrength>2</AddToStrength>
 						<HitLast/>
 					</HandWeapon>
 					<HeavyArmour/>
@@ -548,7 +548,7 @@
 					<Option>
 						<Name>Cavalry hammer</Name>
 						<HitLast/>
-						<AddToStrength Val="2"/>
+						<AddToStrength>2</AddToStrength>
 						<Points>6</Points>
 					</Option>
 				</Options>
@@ -609,7 +609,7 @@
 				<SpecialRules>
 					<Hate/>
 					<MagicItems Points="50" Type="Hero"/>
-					<AddToDispell Val="1"/>
+					<AddToDispell>1</AddToDispell>
 					<Original>Prayer of Sigmar</Original>
 				</SpecialRules>
 				<Equipments>
@@ -618,14 +618,14 @@
 				<Options>
 					<Option>
 						<Name>Two-handed warhammer</Name>
-						<AddToStrength Val="2"/>
+						<AddToStrength>2</AddToStrength>
 						<HitLast/>
 						<Points>4</Points>
 						<Dependency Group="Weapon"/>
 					</Option>
 					<Option>
 						<Name>Second warhammer</Name>
-						<AddToAttacks Val="1"/>
+						<AddToAttacks>1</AddToAttacks>
 						<Points>4</Points>
 						<Dependency Group="Weapon"/>
 					</Option>
@@ -886,7 +886,7 @@
 					<Option>
 						<Name>Knights of the Inner Circle</Name>
 						<PointsPerModel>3</PointsPerModel>
-						<AddToStrength Val="1"/>
+						<AddToStrength>1</AddToStrength>
 						<OnlyOneInArmy/>
 					</Option>
 					<Command>
@@ -909,7 +909,7 @@
 					<HandWeapon>
 						<Name>Cavalry hammer</Name>
 						<HitLast/>
-						<AddToStrength Val="2"/>
+						<AddToStrength>2</AddToStrength>
 					</HandWeapon>
 					<FullPlateArmour/>
 				</Equipments>
@@ -917,7 +917,7 @@
 					<Option>
 						<Name>Knights of the Inner Circle</Name>
 						<PointsPerModel>3</PointsPerModel>
-						<AddToStrength Val="1"/>
+						<AddToStrength>1</AddToStrength>
 					</Option>
 					<Command>
 						<Musician Points="8"/>
