@@ -77,7 +77,7 @@
 					<Name>Destroyer of Eternities</Name>
 					<Points>70</Points>
 					<Only>Infantry</Only>
-					<AddToStrength Val="2"/>
+					<AddToStrength>2</AddToStrength>
 					<KillingBlow/>
 					<Lore>The bloodthirsty King Nekhesh first wielded this massive, ornate blade in battle, smashing his foes in all directions and severing limbs and heads with each sweeping blow. The blade destroys the very souls of those it slays, leaving them with no chance of reaching the afterlife. It was thus greatly feared in ancient Nehekhara, where to be killed with it was deemed a fate infinitely worse than death. The sword was also used to ritually execute captured foes of the King. Due to the power imbued through magical incantations, it can cleave through armor, muscle, and bone with ease</Lore>
 					<Description>Counts as a great weapon and has the Killing Blow special ability. The player may choose to attack normally with the Destroyer of Kternities or make a special attack. If the special attack is chosen, all enemy models that are touching the Tomb King take two automatic hits. These hits do benefit from the special rules for great weapons and Killing blow. If a target is riding a monster or a chariot, then both take two automatic hits. In a challenge, only the model engaged in the challenge counts as being in contact with the Tomb King</Description>
@@ -85,7 +85,7 @@
 				<Weapon>
 					<Name>Crook and Flail of Radiance</Name>
 					<Points>50</Points>
-					<AddToAttacks Val="1"/>
+					<AddToAttacks>1</AddToAttacks>
 					<HitFirst/>
 					<Lore>These gleaming, golden weapons represent the high status of the bearer, and all in his presence are humbled by the aura of majesty these weapons convey. Only the most powerful and influential leaders, from the Tomb Kings and the Tomb Princes, can bear these sacred symbols of rulership</Lore>
 					<Description>+1 Attack. Always strikes first. If another character has this ability, then resolve the order of attacks in Initiative order. Requires two hands</Description>
@@ -109,7 +109,7 @@
 					<Name>Flail of Skulls</Name>
 					<Points>45</Points>
 					<Flail/>
-					<MultiWounds Val="2"/>
+					<MultiWounds>2</MultiWounds>
 					<Lore>The Flail of Skulls is made from the gilded skulls of conquered enemies, most often kings. Enemies struck by the skulls are lacerated and savaged by their sharpened teeth and bleed profusely from their wounds</Lore>
 					<Description>Counts as a flail. Each unsaved wound becomes two wounds</Description>
 				</Weapon>
@@ -134,7 +134,7 @@
 				<Armour>
 					<Name>Armour of Eternity</Name>
 					<Points>70</Points>
-					<AddToArmour Val="6"/>
+					<AddToArmour>6</AddToArmour>
 					<Reroll>OpponentToWound</Reroll>
 					<Lore>Forged from the bronze of Mahrak and, cooled in the blood of the giant Lybrasian Scorpion and gilded with red and gold from Lahmia, the ancient breastplate known as the Armour of Eternity can turn aside even the strongest blow</Lore>
 					<Description>Enemy models must re-roll successful rolls to wound against the character. Counts as light armour</Description>
@@ -142,7 +142,7 @@
 				<Armour>
 					<Name>Scorpion Armour</Name>
 					<Points>40</Points>
-					<AddToArmour Val="5"/>
+					<AddToArmour>5</AddToArmour>
 					<Rule>The character can never suffer more than one wound due to combat resolution</Rule>
 					<Lore>The Scorpion Armour is decorated with designs of the Scorpion God, and is infused with protective energies</Lore>
 					<Description>The character can never suffer more than one wound due to combat resolution (after any modifiers for being within 12" of the Battle Standard, etc). If the wearer is with a unit, no more than half the wounds suffered due to combat resolution can be allocated against the character. For example, if the unit suffers four wounds, two wounds are lost by the unit and two wounds are allocated to the character of which one is ignored. Counts as heavy armour</Description>
@@ -150,15 +150,15 @@
 				<Armour>
 					<Name>Armour of the Ages</Name>
 					<Points>35</Points>
-					<AddToArmour Val="5"/>
-					<AddToWounds Val="1"/>
+					<AddToArmour>5</AddToArmour>
+					<AddToWounds>1</AddToWounds>
 					<Lore>The Armour of the Ages imbues its wearer with the ability to continue fighting even when horrendously injured</Lore>
 					<Description>Counts as heavy armour. The bearer gains +1 Wound</Description>
 				</Armour>
 				<Shield>
 					<Name>Shield of Ptra</Name>
 					<Points>15</Points>
-					<AddToArmour Val="6"/>
+					<AddToArmour>6</AddToArmour>
 					<Rule>If the character makes an Armour save, any enemy unit in base contact reduces its WS to 1 for the remainder of the combat round</Rule>
 					<Lore>The mystical Shield of Ptra contains the energy of the Sun God Ptra, unleashed in a blinding flash of light</Lore>
 					<Description>Counts as a shield. If the bearer makes an Armour save, any enemy unit in base contact reduces its WS to 1 for the remainder of the combat round</Description>
@@ -168,7 +168,7 @@
 				<Additional>
 					<Name>Golden Ankhra</Name>
 					<Points>45</Points>
-					<AddToWard Val="4"/>
+					<AddToWard>4</AddToWard>
 					<Lore>Shaped in the Nehekharan symbol of eternity, the talisman known as the Golden Ankhra surrounds the wearer with protective energies</Lore>
 					<Description>The model has a 4+ Ward save</Description>
 				</Additional>
@@ -207,7 +207,7 @@
 				<Additional>
 					<Name>Blue Khepra</Name>
 					<Points>40</Points>
-					<MagicResistance Val="2"/>
+					<MagicResistance>2</MagicResistance>
 					<Lore>Fashioned from exotic sapphires and crafted in the shape of the flesh-eating, skull-carapaced Khepra beetle, this ornate brooch protects the wearer from baleful magical energies</Lore>
 					<Description>The bearer and the unit he joins have Magic Resistance (2)</Description>
 				</Additional>
@@ -228,7 +228,7 @@
 				<Additional>
 					<Name>Chariot of Fire</Name>
 					<Points>25</Points>
-					<ImpactHit Val="D6+1"/>
+					<ImpactHit>D6+1</ImpactHit>
 					<Rule>Flaming Impact Hits attacks</Rule>
 					<Lore>The wheels and scythes of the mighty hero's chariot blaze with mystical flames</Lore>
 					<Description>Character in chariot only. The character's chariot does D6+1 impacts hits rather than D3. Impact hits from the Chariot of Fire count as both magical attacks and flaming attacks</Description>
@@ -374,12 +374,12 @@
 					</HandWeapon>
 					<Armour>
 						<Name>The Armour of Golden Magnificence</Name>
-						<AddToArmour Val="2"/>
+						<AddToArmour>2</AddToArmour>
 						<Rule>Armour saving is nerev modified to worse than a 4+, even of hit by attack that normally allows no Armour save</Rule>
 					</Armour>
 					<Armour>
 						<Name>The Crown of Nehekhara</Name>
-						<AddToWard Val="4"/>
+						<AddToWard>4</AddToWard>
 						<Terror/>
 					</Armour>
 				</Equipments>
@@ -529,17 +529,17 @@
 			<Mount>
 				<Name>Chariot</Name>
 				<Chariot>2</Chariot>
-				<ModelsInPack Val="3"/>
+				<ModelsInPack>3</ModelsInPack>
 				<Profile M='8' WS='3' BS='2' S='3' T='4' W='3' I='2' A='2' Ld='7' AS='4'/>
 				<SpecialRules>
-					<ImpactHit Val="D6+1"/>
+					<ImpactHit>D6+1</ImpactHit>
 					<Undead/>
 				</SpecialRules>
 			</Mount>
 			<Mount>
 				<Name>Casket of Soul</Name>
 				<Chariot>1</Chariot>
-				<ModelsInPack Val="3"/>
+				<ModelsInPack>3</ModelsInPack>
 				<Profile M='4' WS='3' BS='3' S='6' T='4' W='2' I='3' A='4' Ld='8'/>
 				<SpecialRules>
 					<Terror/>
@@ -649,11 +649,11 @@
 				<Size>3-12</Size>
 				<Chariot>2</Chariot>
 				<Mount>Skeletal Steed</Mount>
-				<ModelsInPack Val="4"/>
+				<ModelsInPack>4</ModelsInPack>
 				<Lore>The Skeleton Chariots of the Tomb Kings Charioteer Legions are considered the pride of Nehekhara's army. Their advance is heralded by a cloud of dust thrown high into the air as they drive across the sands. Moments later, units of these deadly machines crest the dunes, their wheels whirring as they careen towards their foe. The legions impact with bone-shattering force, wave after wave of chariots crushing bodies beneath heavy wheels as their Undead crew lay about the disorientated foe with lethal effect.</Lore>
 				<Profile M='8' WS='3' BS='2' S='3' T='4' W='3' I='2' A='2' Ld='7' AS='4'/>
 				<SpecialRules>
-					<ImpactHit Val="D6+1"/>
+					<ImpactHit>D6+1</ImpactHit>
 					<Undead/>
 					<Original>Light Chariots</Original>
 				</SpecialRules>
@@ -708,7 +708,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Huge ritual blades</Name>
-						<AddToStrength Val="2"/>
+						<AddToStrength>2</AddToStrength>
 						<HitLast/>
 					</HandWeapon>
 				</Equipments>
@@ -737,7 +737,7 @@
 					<PoisonAttack/>
 					<LargeBase/>
 					<FromBelow/>
-					<MagicResistance Val="1"/>
+					<MagicResistance>1</MagicResistance>
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon>Stinging tail and wicked claws</HandWeapon>
@@ -746,7 +746,7 @@
 			<Rare>
 				<Name>Screaming Skull Catapult</Name>
 				<Points>90</Points>
-				<ModelsInPack Val="4"/>
+				<ModelsInPack>4</ModelsInPack>
 				<Lore>The Screaming Skull Catapults of a Tomb King's eternal army are akin to the stone throwers of other races, but instead of flinging rocks at the foe, they throw volleys of flaming skulls. The Liche Priests cast terrible curses upon every one of these skulls, enchanting them so that they scream hideously as they are hurled through the air, rising to a deafening crescendo just before they strike their target.</Lore>
 				<Profile M='4' WS='2' BS='2' S='3' T='7' W='3' I='2' A='1' Ld='5'/>
 				<SpecialRules>
