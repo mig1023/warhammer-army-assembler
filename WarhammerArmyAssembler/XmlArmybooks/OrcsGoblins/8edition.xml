@@ -144,18 +144,18 @@
 				<Weapon>
 					<Name>Bashas Axe of Stunty Smashin'</Name>
 					<Points>50</Points>
-					<ArmourPiercing Val="2"/>
-					<AddToStrength Val="1"/>
-					<AddToAttacks Val="1"/>
+					<ArmourPiercing>2</ArmourPiercing>
+					<AddToStrength>1</AddToStrength>
+					<AddToAttacks>1</AddToAttacks>
 					<Lore>Basha's Axe of Stunty Smashin' is a weapon battered and stained through long years of hard use. While it shows evidence of many rough 'improvements', the core of its broad-headed blade and cutting edge is of a pure and untarnished metal, much like the expertly wrought master weapons forged by the Dwarf Runesmiths at the height of their powers. The rest of the chunky weapon is bash and cobbled together from other metals. It is a blade that slices armour with its razor edge, before punching through it with its hefty bulk. Bathed in the spiteful magics of the Night Goblins, it is a weapon to bring home all their curses upon the stunties</Lore>
 					<Description>The wielder of this weapon has the Armour Piercing special rule, and adds +1 to both his Attacks and Strength in close combat. This bonus is doubled if the wielder is in base contact with a model of Dwarfs. In addition, the wielder causes Fear in models of Dwarf army</Description>
 				</Weapon>
 				<Armour>
 					<Name>Armour of Gork</Name>
 					<Points>50</Points>
-					<AddToArmour Val="5"/>
-					<AddToToughness Val="1"/>
-					<ImpactHit Val="D6"/>
+					<AddToArmour>5</AddToArmour>
+					<AddToToughness>1</AddToToughness>
+					<ImpactHit>D6</ImpactHit>
 					<Lore>Bashed together out of the blackest of metals underground, together with the reforged suits of slain stunties, this armour is thick and heavy. It wasn't until the blessing of Gork was bestowed upon it that the suit of armour became so formidable. Now, imbued with the brutal and aggressive spirit of the most ruthless and fightiest of Greenskin gods, it is fit for a king amongst Warbosses. The Armour of Gork gives its wearer an iron belligerence that steels his resolve, even as it hardens his hide</Lore>
 					<Description>Heavy Armour. The wearer has +D3 Toughness. Roll to determine the armour's effectiveness the first time the wearer is hit each turn, and use the result for the rest of the turn. In addition, the wearer has the Impact Hits (D6) special rule</Description>
 				</Armour>
@@ -163,14 +163,14 @@
 					<Name>Lucky Shrunken Head</Name>
 					<Points>50</Points>
 					<Only>Orc</Only>
-					<AddToWard Val="5"/>
+					<AddToWard>5</AddToWard>
 					<Lore>Small and gruesomely shriveled, like some over-ripened fruit, only a powerful enemy can be turned into the right kind of Shrunken Head. There are few charms as potent, but it can be made stronger still by the application of the correct rituals, shuffling dances and chants. Orcs have known this magic for as long as there have been Orcs. Some have forgotten, but the Savage Orc Shamans have not. When the crude stitches that keep the mouth sewn shut quiver, and the long-closed eyelids twitch, then the spell has worked. It is no minor charm, but a Lucky Shrunken Head. The old ways are best</Lore>
 					<Description>The Lucky Shrunken Head can only be taken by a Savage Ore Shaman or Great Shaman. It increases the Warpaint save of the bearer and any unit he joins from 6+ to 5+. If Wurrzag is in the unit, his Warpaint save is increased to 4+</Description>
 				</Arcane>
 				<Banner>
 					<Name>Morks War Banner</Name>
 					<Points>100</Points>
-					<AddToWard Val="5"/>
+					<AddToWard>5</AddToWard>
 					<Rule>A unit with Mork's War Banner has Magic Resistance(D6). Roll to determine the effectiveness of the banner the first time the unit needs to take any saving throws against spells in a turn. The result is used for all such saves made that turn</Rule>
 					<Lore>After powerful rituals and plenty of Shaman mumbo-jumbo, this banner was left leaning against an idol of Mork. There, under the totem's stony gaze, the banner has absorbed a fraction of the great Mork's mighty and indomitable spirit. This great green blessing drifts over and protects any that march under the banner's aura. The puny spells of enemy Wizards will be confounded - 'outclevered' by Mork's cunning. So strong is Mork that the enchanted weapons and items of foes become feeble in his merest presence. Good ol' Mork</Lore>
 					<Description>A unit with Mork's War Banner has Magic Resistance (D6). Roll to determine the effectiveness of the banner the first time the unit needs to take any saving throws against spells in a turn. The result is used for all such saves made that turn. In addition, all magic items belonging to enemy models that are in base contact with the bearer do not work (if an enemy in base contact has an item that would stop the banner from working, then roll off to see which item takes precedence)</Description>
@@ -230,7 +230,7 @@
 				<Additional>
 					<Name>Helm of Discord</Name>
 					<Points>30</Points>
-					<AddToArmour Val="6"/>
+					<AddToArmour>6</AddToArmour>
 					<Test Bet="Pass" Context="Round" Profile="Leadership"/>
 					<Description>The wearer counts his armour save as being one point higher than normal. In addition, at the start of each Close Combat phase, choose an enemy character in base contact with the bearer or his unit. That character must immediately take a Leadership test. If the test is failed, the character succumbs to the helm's sibilant whispers of malice and jealousy. In this Close Combat phase, the victim cannot make attacks and is hit automatically</Description>
 				</Additional>
@@ -324,7 +324,7 @@
 						<Name>Morglor The Mangler</Name>
 						<HitFirst/>
 						<NoArmour/>
-						<MultiWounds Val="D3"/>
+						<MultiWounds>D3</MultiWounds>
 					</HandWeapon>
 					<HeavyArmour/>
 				</Equipments>
@@ -348,8 +348,8 @@
 					</HandWeapon>
 					<Armour>
 						<Name>Azhag's 'Ard Armour</Name>
-						<AddToArmour Val="5"/>
-						<AddToWard Val="5"/>
+						<AddToArmour>5</AddToArmour>
+						<AddToWard>5</AddToWard>
 					</Armour>
 					<Crown>
 						<Name>The Crown of Sorcery</Name>
@@ -374,13 +374,13 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Gitsnik</Name>
-						<AddToStrength Val="2"/>
+						<AddToStrength>2</AddToStrength>
 						<HitFirst/>
 					</HandWeapon>
 					<Armour>
 						<Name>Blood-forged Armour</Name>
-						<AddToArmour Val="1"/>
-						<AddToWard Val="5"/>
+						<AddToArmour>1</AddToArmour>
+						<AddToWard>5</AddToWard>
 					</Armour>
 				</Equipments>
 			</Lord>
@@ -398,7 +398,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Bonewood Staff</Name>
-						<MagicResistance Val="3"/>
+						<MagicResistance>3</MagicResistance>
 						<Rule>Wurrzag may re-roll miscast results</Rule>
 					</HandWeapon>
 					<HandWeapon>
@@ -411,7 +411,7 @@
 					</Armour>
 					<Armour>
 						<Name>Warpaint of Wurrzag</Name>
-						<AddToWard Val="5"/>
+						<AddToWard>5</AddToWard>
 					</Armour>
 				</Equipments>
 			</Lord>
@@ -433,13 +433,13 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Axe of Grom</Name>
-						<AddToStrength Val="2"/>
+						<AddToStrength>2</AddToStrength>
 						<KillingBlow/>
 						<Rule>Killing Blow on a 5+ against Elves</Rule>
 					</HandWeapon>
 					<Armour>
 						<Name>Lucky banner</Name>
-						<AddToWard Val="5"/>
+						<AddToWard>5</AddToWard>
 					</Armour>
 				</Equipments>
 			</Lord>
@@ -510,7 +510,7 @@
 					<Choppa/>
 					<Armour>
 						<Name>Warpaint</Name>
-						<AddToWard Val="6"/>
+						<AddToWard>6</AddToWard>
 					</Armour>
 				</Equipments>
 				<Options>
@@ -540,7 +540,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>A huge array of weapons</Name>
-						<AddToStrength Val="2"/>
+						<AddToStrength>2</AddToStrength>
 						<Flail/>
 					</HandWeapon>
 					<HeavyArmour/>
@@ -638,7 +638,7 @@
 					<Choppa/>
 					<Armour>
 						<Name>Warpaint</Name>
-						<AddToWard Val="6"/>
+						<AddToWard>6</AddToWard>
 					</Armour>
 				</Equipments>
 				<Options>
@@ -708,7 +708,7 @@
 					</RangeWeapon>
 					<Armour>
 						<Name>Stinky Pelt</Name>
-						<AddToArmour Val="4"/>
+						<AddToArmour>4</AddToArmour>
 					</Armour>
 				</Equipments>
 			</Hero>
@@ -730,7 +730,7 @@
 					<HandWeapon>
 						<Name>Fangspike</Name>
 						<PoisonAttack/>
-						<MultiWounds Val="D3"/>
+						<MultiWounds>D3</MultiWounds>
 					</HandWeapon>
 					<RangeWeapon>
 						<Name>Stig of Snarla</Name>
@@ -780,7 +780,7 @@
 					<Choppa/>
 					<Armour>
 						<Name>Warpaint</Name>
-						<AddToWard Val="6"/>
+						<AddToWard>6</AddToWard>
 					</Armour>
 				</Equipments>
 				<Options>
@@ -810,7 +810,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>A huge array of weapons</Name>
-						<AddToStrength Val="2"/>
+						<AddToStrength>2</AddToStrength>
 						<Flail/>
 					</HandWeapon>
 					<HeavyArmour/>
@@ -909,7 +909,7 @@
 					<Choppa/>
 					<Armour>
 						<Name>Warpaint</Name>
-						<AddToWard Val="6"/>
+						<AddToWard>6</AddToWard>
 					</Armour>
 				</Equipments>
 				<Options>
@@ -1010,7 +1010,7 @@
 				<Profile M='3D6' WS='4' BS='0' S='5' T='4' W='3' I='3' A='3' Ld='3'/>
 				<SpecialRules>
 					<ImmuneToPsychology/>
-					<ImpactHit Val="1"/>
+					<ImpactHit>1</ImpactHit>
 					<LargeBase/>
 					<Original>
 						<Rule>A Great Cave Squig that is used as a mount for a character may re-roll the Random Movement roll as long as the character is still alive. If the character joins a unit of Squig Hoppers then you may re-roll the Random Movement roll for the whole unit</Rule>
@@ -1023,7 +1023,7 @@
 				<Profile M='3D6' WS='4' BS='0' S='5' T='3' W='1' I='3' A='2' Ld='3'/>
 				<SpecialRules>
 					<ImmuneToPsychology/>
-					<ImpactHit Val="1"/>
+					<ImpactHit>1</ImpactHit>
 					<LargeBase/>
 				</SpecialRules>
 			</Mount>
@@ -1074,10 +1074,10 @@
 				<Name>Goblin Wolf Chariot</Name>
 				<Chariot>2</Chariot>
 				<Mount>Giant Wolf</Mount>
-				<ModelsInPack Val="5"/>
+				<ModelsInPack>5</ModelsInPack>
 				<Profile M='9' WS='3' BS='0' S='3' T='4' W='3' I='3' A='1' Ld='6' AS='5'/>
 				<SpecialRules>
-					<ImpactHit Val="D6+1"/>
+					<ImpactHit>D6+1</ImpactHit>
 					<ScythedWheel/>
 				</SpecialRules>
 			</Mount>
@@ -1085,10 +1085,10 @@
 				<Name>Orc Boar Chariot</Name>
 				<Chariot>2</Chariot>
 				<Mount>War Boar</Mount>
-				<ModelsInPack Val="4"/>
+				<ModelsInPack>4</ModelsInPack>
 				<Profile M='7' WS='3' BS='3' S='3' T='5' W='4' I='2' A='2' Ld='7' AS='4'/>
 				<SpecialRules>
-					<ImpactHit Val="D6+1"/>
+					<ImpactHit>D6+1</ImpactHit>
 					<SizeMatters/>
 					<TuskerCharge/>
 					<ScythedWheel/>
@@ -1124,8 +1124,8 @@
 					<Option>
 						<Name>Big'Uns</Name>
 						<PointsPerModel>2</PointsPerModel>
-						<AddToWeaponSkill Val="1"/>
-						<AddToStrength Val="1"/>
+						<AddToWeaponSkill>1</AddToWeaponSkill>
+						<AddToStrength>1</AddToStrength>
 						<OnlyOneInArmy/>
 						<MagicItems Points="50" Type="Unit"/>
 					</Option>
@@ -1181,7 +1181,7 @@
 					<Choppa/>
 					<Armour>
 						<Name>Warpaint</Name>
-						<AddToWard Val="6"/>
+						<AddToWard>6</AddToWard>
 					</Armour>
 				</Equipments>
 				<Options>
@@ -1323,7 +1323,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>A huge array of weapons</Name>
-						<AddToStrength Val="2"/>
+						<AddToStrength>2</AddToStrength>
 						<Flail/>
 					</HandWeapon>
 					<HeavyArmour/>
@@ -1383,7 +1383,7 @@
 					<Choppa/>
 					<Armour>
 						<Name>Warpaint</Name>
-						<AddToWard Val="6"/>
+						<AddToWard>6</AddToWard>
 					</Armour>
 				</Equipments>
 				<Options>
@@ -1403,11 +1403,11 @@
 				<Points>85</Points>
 				<Chariot>2</Chariot>
 				<Mount>War Boar</Mount>
-				<ModelsInPack Val="4"/>
+				<ModelsInPack>4</ModelsInPack>
 				<Lore>By lashing together roughly hewn logs, the otherwise dull-witted Orcs have managed to create through sheer luck and determination, crude yet formidable war chariots. With the weight of both the two Boars and the chariot itself, this shock cavalry has the potential to break apart even the thickest of enemy formations so long as the chariot still holds together.</Lore>
 				<Profile M='7' WS='3' BS='3' S='3' T='5' W='4' I='2' A='2' Ld='7' AS='4'/>
 				<SpecialRules>
-					<ImpactHit Val="D6+1"/>
+					<ImpactHit>D6+1</ImpactHit>
 					<SizeMatters/>
 					<TuskerCharge/>
 					<ScythedWheel/>
@@ -1425,11 +1425,11 @@
 				<Points>50</Points>
 				<Chariot>2</Chariot>
 				<Mount>Giant Wolf</Mount>
-				<ModelsInPack Val="5"/>
+				<ModelsInPack>5</ModelsInPack>
 				<Lore>Of the same ramshackle design as the Boar Chariot, these less-durable yet faster moving chariots are instead drawn by two of the largest wolves within a tribe, and are directed into battle where they can be used as a firing platform or to smash open enemy formations.</Lore>
 				<Profile M='9' WS='2' BS='3' S='3' T='4' W='3' I='2' A='3' Ld='6' AS='5'/>
 				<SpecialRules>
-					<ImpactHit Val="D6+1"/>
+					<ImpactHit>D6+1</ImpactHit>
 					<FearElves/>
 					<ScythedWheel/>
 				</SpecialRules>
@@ -1446,7 +1446,7 @@
 			<Rare>
 				<Name>Goblin Spear Chukka</Name>
 				<Points>35</Points>
-				<ModelsInPack Val="3"/>
+				<ModelsInPack>3</ModelsInPack>
 				<Lore>A primitive version of the ballista or spear thrower, this artillery piece has been used extensively by the Orcs and Goblins as a way to impale large monsters from a safe distance. Made from gathered material such as wood, metal and bone, these Ballistas are easily built, easily transported and easily maintained, making them a popular choice for many types of Warbosses.</Lore>
 				<Profile M='4' WS='2' BS='3' S='3' T='7' W='3' I='2' A='1' Ld='6'/>
 				<SpecialRules>
@@ -1486,7 +1486,7 @@
 				<Name>Night Goblin Squig Herd</Name>
 				<Points>3</Points>
 				<Size>4+</Size>
-				<ModelsInPack Val="2"/>
+				<ModelsInPack>2</ModelsInPack>
 				<Lore>In times of need, Night Goblins have been known to drive their Squig herds into battle with devastating effect. An unpredictable asset on the battlefield, the ferocity of the Squigs attacks usually outweighs the catastrophic outcome that would happen should these creatures be let loose without the guidance of a Squig Herder.</Lore>
 				<Profile M='4' WS='2' BS='3' S='3' T='3' W='1' I='3' A='1' Ld='5'/>
 				<SpecialRules>
@@ -1544,7 +1544,7 @@
 			<Rare>
 				<Name>Goblin Rock Lobber</Name>
 				<Points>85</Points>
-				<ModelsInPack Val="3"/>
+				<ModelsInPack>3</ModelsInPack>
 				<Image>RockLabber</Image>
 				<Lore>A primitive version of the Trebuchet, the Orcs and Goblins were first introduced to catapults shortly after they encountered the Dwarfs. These siegecrafts are deployed singularly or in batteries to help soften up enemy formations, smash defensive positions, or to toss Orc warriors over the battlements and into the city. Due to the technicality of the siegecraft, they are often handled by a crew of Goblins rather then Orcs.</Lore>
 				<Profile M='4' WS='2' BS='3' S='3' T='7' W='3' I='2' A='1' Ld='6'/>
@@ -1562,7 +1562,7 @@
 			<Rare>
 				<Name>Doom Diver Catapult</Name>
 				<Points>80</Points>
-				<ModelsInPack Val="3"/>
+				<ModelsInPack>3</ModelsInPack>
 				<Lore>First developed as a means for nomadic Goblin tribes to scout the surrounding areas of their territory, the Doom Diver Catapult have since been used extensively as long-range artillery. A Goblin known as Doom Diver would be used live ammunition for this artillery piece, where the Goblin's leathery wings allow it to glide to a specific target where he may impale his victim with the top of his pointy helmet.</Lore>
 				<Profile M='4' WS='2' BS='3' S='3' T='7' W='3' I='2' A='1' Ld='6'/>
 				<SpecialRules>
@@ -1582,7 +1582,7 @@
 					<Unbreakable/>
 					<Stubborn/>
 					<LargeBase/>
-					<ImpactHit Val="D6"/>
+					<ImpactHit>D6</ImpactHit>
 					<Original>
 						<Rule>Chariot</Rule>
 						<Rule>Unstable</Rule>
@@ -1605,7 +1605,7 @@
 				<Name>Arachnarok Spider</Name>
 				<Points>290</Points>
 				<Mount>Forest Goblin Crew</Mount>
-				<ModelsInPack Val="9"/>
+				<ModelsInPack>9</ModelsInPack>
 				<Image>Arachnarok</Image>
 				<Lore>Arachnarok Spiders is a truly gigantic creature, able to overpower even formidable foes such as Giants and corrupted Cygors in single combat. These creatures live within the deepest forests, where Forest Goblins worship each one as a living god. In battle, these creatures act as a mobile platform from which Goblins can shoot at their enemy from a safe and elevated position.</Lore>
 				<Profile M='4' WS='2' BS='3' S='3' T='7' W='3' I='2' A='1' Ld='6' AS='4'/>
@@ -1615,7 +1615,7 @@
 					<LargeBase/>
 					<LargeTarget/>
 					<PoisonAttack/>
-					<MultiWounds Val="D6"/>
+					<MultiWounds>D6</MultiWounds>
 					<Terror/>
 					<ForestStrider/>
 					<ObstacleStrider/>
@@ -1638,7 +1638,7 @@
 				<Lore>A Mangler Squig is essentially two Giant Squigs changed together and probed towards the enemy lines. Pushed into a berserk fury by his caretakers, these two Squigs would begin to swirl themselves into a tumbling motion that can produce an impact of such spectacular proportions, that it can shatter enemy formations in a whirlwind of carnage.</Lore>
 				<Profile M='3D6' WS='0' BS='0' S='6' T='4' W='3' I='3' A='0' Ld='3'/>
 				<SpecialRules>
-					<ImpactHit Val="1"/>
+					<ImpactHit>1</ImpactHit>
 					<Original>
 						<Rule>If the Mangier Squigs' move would bring them into contact with another unit, then they move through rather than stopping. If the Mangier Squigs' move would end within a unit, then they automatically bounce through the it - place the Mangier Squigs 1" beyond the unit, in the direction in which they were moving. When Mangier Squigs move through a unit (friend or foe) they inflict 2D6 Strength 6 Armour Piercing hits</Rule>
 						<Rule>Mangier Squigs that make a Ker-Splat! attack go wild, their Night Goblin crew being either pulped to death or too busy holding on to even attempt to control the Squigs' direction. Once Mangier Squigs have Gone Crazy they will move in a random direction when they move in the Compulsory Moves sub-phase</Rule>
@@ -1660,7 +1660,7 @@
 					<Regeneration/>
 					<LargeBase/>
 					<TrollVomit/>
-					<MagicResistance Val="2"/>
+					<MagicResistance>2</MagicResistance>
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon>Bone, club or bit of tree</HandWeapon>
@@ -1678,7 +1678,7 @@
 					<Fear/>
 					<Regeneration/>
 					<LargeBase/>
-					<SubOpponentToHit Val="1"/>
+					<SubOpponentToHit>1</SubOpponentToHit>
 					<TrollVomit/>
 				</SpecialRules>
 				<Equipments>
