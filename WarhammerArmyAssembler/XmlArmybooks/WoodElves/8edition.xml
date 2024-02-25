@@ -104,8 +104,8 @@
 				<Armour>
 					<Name>The Helm of the Hunt</Name>
 					<Points>20</Points>
-					<AddToArmour Val="6"/>
-					<AddToWeaponSkill Val="1"/>
+					<AddToArmour>6</AddToArmour>
+					<AddToWeaponSkill>1</AddToWeaponSkill>
 					<Rule>Devastating Charge</Rule>
 					<Lore>Gwythraul, Lord of Nine Crags, is a celebratedfigure in Athel Loren, his deeds recounted as a mixture of history and wine-blurred myth. Bidden to journey within the Dreaming Wood by the goddess Lileath, he first travelled the twelve realms in search of enchanted treasures that would ensure survival in that Daemon-haunted land. In each realm, Gwythraul performed a quest of the ruler’s choosing, deeds ranging from the destruction ofBeastlord Brokar, to altering the course of the River Brilienne. Laden with magical heirlooms, Gwythraul at last entered the Dreaming Wood, and was lost for many generations. Only one item — the Helm of the Hunt, Orion’s last remnant ofa mortal life — survived Gwythraul’s journey, and only the bravest have dared don it thereafter. Legend counts Gwythraul’s quest as successful, though it is silent on its goal, and on the fate ofthe other treasures</Lore>
 					<Description>The wearer of the Helm of the Hunt counts his armour save as being one point higher than normal. Furthermore, the Helm of the Hunt grants the bearer the Devastating Charge special rule and +1 Weapon Skill on a turn in which he charges into combat</Description>
@@ -137,7 +137,7 @@
 				<Banner>
 					<Name>The Banner of the Eternal Queen</Name>
 					<Points>100</Points>
-					<MagicResistance Val="3"/>
+					<MagicResistance>3</MagicResistance>
 					<Rule>Once per game, all models in the same unit as the Banner of the Eternal Queen have the Unbreakable special rule until the end of turn, or until the bearer is slain</Rule>
 					<Lore>This banner was woven by no lesser hand than that of Ariel, Mage Queen of Athel Loren. The magic ofher touch lingers in every gossamer thread, protecting her kinsfolk from the onset of foul sorcery. It is said that those who fight beneath the Banner of the Eternal Queen can hear Ariel’s voice whispering in their minds, filling them with courage in the face of impossible odds</Lore>
 					<Description>The bearer has the Magic Resistance (3) special rule. In addition, once per game, all models in the same unit as the Banner of the Eternal Queen have the Unbreakable special rule until the end of turn, or until the bearer is slain (whichever comes first). Declare you are using this ability at the start of any turn</Description>
@@ -180,7 +180,7 @@
 				<Additional>
 					<Name>Helm of Discord</Name>
 					<Points>30</Points>
-					<AddToArmour Val="6"/>
+					<AddToArmour>6</AddToArmour>
 					<Test Bet="Pass" Context="Round" Profile="Leadership"/>
 					<Description>The wearer counts his armour save as being one point higher than normal. In addition, at the start of each Close Combat phase, choose an enemy character in base contact with the bearer or his unit. That character must immediately take a Leadership test. If the test is failed, the character succumbs to the helm's sibilant whispers of malice and jealousy. In this Close Combat phase, the victim cannot make attacks and is hit automatically</Description>
 				</Additional>
@@ -278,13 +278,13 @@
 					</RangeWeapon>
 					<Armour>
 						<Name>Cloak of Isha</Name>
-						<AddToWard Val="5"/>
-						<MagicResistance Val="2"/>
+						<AddToWard>5</AddToWard>
+						<MagicResistance>2</MagicResistance>
 						<Rule>At the start of each of your turns, roll a D6. On a score of 6, Orion regains a Wound lost earlier in the battle</Rule>
 					</Armour>
 					<Armour>
 						<Name>Horn of the Wild Hunt</Name>
-						<AddToWard Val="5"/>
+						<AddToWard>5</AddToWard>
 						<Rule>At the start of each turn, the Horn of the Wild Hunt grants the Devastating Charge special rule to Orion, his unit, and all friendly Wood Elf units within 6"</Rule>
 					</Armour>
 				</Equipments>
@@ -414,17 +414,17 @@
 						<Name>Wizard Level 3</Name>
 						<Points>35</Points>
 						<Dependency/>
-						<AddToCast Val="1"/>
-						<AddToDispell Val="1"/>
-						<AddToWizard Val="1"/>
+						<AddToCast>1</AddToCast>
+						<AddToDispell>1</AddToDispell>
+						<AddToWizard>1</AddToWizard>
 					</Option>
 					<Option>
 						<Name>Wizard Level 4</Name>
 						<Points>70</Points>
 						<Dependency/>
-						<AddToCast Val="2"/>
-						<AddToDispell Val="1"/>
-						<AddToWizard Val="2"/>
+						<AddToCast>2</AddToCast>
+						<AddToDispell>1</AddToDispell>
+						<AddToWizard>2</AddToWizard>
 					</Option>
 					<Strangleroots Points="20"/>
 				</Options>
@@ -526,9 +526,9 @@
 					<Option>
 						<Name>Wizard Level 1</Name>
 						<Points>35</Points>
-						<AddToCast Val="1"/>
-						<AddToDispell Val="1"/>
-						<AddToWizard Val="1"/>
+						<AddToCast>1</AddToCast>
+						<AddToDispell>1</AddToDispell>
+						<AddToWizard>1</AddToWizard>
 						<Rule>Use Lore of Shadow</Rule>
 					</Option>
 					<AsraiLongbow Points="5"/>
@@ -583,7 +583,7 @@
 			</Mount>
 			<Mount>
 				<Name>Hound of Orion</Name>
-				<ModelsInPack Val="2"/>
+				<ModelsInPack>2</ModelsInPack>
 				<Profile M='9' WS='4' BS='0' S='4' T='4' W='2' I='4' A='2' Ld='6'/>
 				<Equipments/>
 				<SpecialRules>
@@ -605,7 +605,7 @@
 				<Name>Warhawk</Name>
 				<Profile M='1' WS='4' BS='0' S='4' T='4' W='3' I='5' A='2' Ld='5'/>
 				<SpecialRules>
-					<ArmourPiercing Val="1"/>
+					<ArmourPiercing>1</ArmourPiercing>
 					<KillingBlow/>
 					<FlyingCavalry/>
 					<ForestStalker/>
@@ -623,7 +623,7 @@
 				<Name>Great Stag</Name>
 				<Profile M='9' WS='5' BS='0' S='5' T='4' W='3' I='4' A='2' Ld='7'/>
 				<SpecialRules>
-					<ImpactHit Val="D3"/>
+					<ImpactHit>D3</ImpactHit>
 					<Fear/>
 					<LargeBase/>
 				</SpecialRules>
@@ -635,7 +635,7 @@
 					<Fear/>
 					<LargeBase/>
 					<ForestStalker/>
-					<MagicResistance Val="2"/>
+					<MagicResistance>2</MagicResistance>
 					<Original>
 						<Rule>A Unicorn's close combat attacks have a +2 Strength bonus on a turn in which it charges</Rule>
 					</Original>
