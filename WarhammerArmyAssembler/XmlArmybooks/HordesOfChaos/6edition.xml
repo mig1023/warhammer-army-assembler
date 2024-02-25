@@ -139,7 +139,7 @@
 					<Name>Hellfire sword</Name>
 					<Points>75</Points>
 					<Only>Mortal</Only>
-					<MultiWounds Val="D6"/>
+					<MultiWounds>D6</MultiWounds>
 					<NoArmour/>
 					<Rule>Flaming attacks</Rule>
 					<Lore>The blade known as the Hellfire Sword was made from a single, searing flame that was hammered into material form and quenched in the blood of a fire-djinn. Those struck by it are set ablaze and may explode as their blood turns to liquid fire. The Hellfire Sword was first wielded by the Chaos Lord Garathor but, over time, it consumed his lifeforce until nought remained within his armour but ash. When the Hellfire Sword was prised from Garathor's ruined gauntlet years later, it flared so hotly that it fused into its new owner’s hand. Eventually, this fool’s spirit was also consumed, and the cycle began anew. Since its creation, a hundred mortals have borne this flame-wreathed blade, unaware of their doom until it was too late</Lore>
@@ -149,9 +149,9 @@
 					<Name>Chaos Runesword</Name>
 					<Points>70</Points>
 					<Only>Mortal</Only>
-					<AddToWeaponSkill Val="1"/>
-					<AddToStrength Val="1"/>
-					<AddToAttacks Val="1"/>
+					<AddToWeaponSkill>1</AddToWeaponSkill>
+					<AddToStrength>1</AddToStrength>
+					<AddToAttacks>1</AddToAttacks>
 					<Lore>This evil sword was forged by the deluded Dwarf Runesmith Grugni Ironheart, a secret and embittered worshipper of the Chaos gods.[1a] The Witch Hunter Victor Saltzpyre believes there are seven in existence</Lore>
 					<Description>The wielder gains +1 Weapon Skill, +1 Strength and +1 Attack</Description>
 				</Weapon>
@@ -159,7 +159,7 @@
 					<Name>Whip of Pleasure</Name>
 					<Points>50</Points>
 					<HitFirst/>
-					<AddToAttacks Val="1"/>
+					<AddToAttacks>1</AddToAttacks>
 					<Only>Mortal</Only>
 					<Dependencies>
 						<On>Mark of Slaanesh</On>
@@ -179,7 +179,7 @@
 					<Name>Rending sword</Name>
 					<Points>40</Points>
 					<Only>Mortal</Only>
-					<MultiWounds Val="D3"/>
+					<MultiWounds>D3</MultiWounds>
 					<Rule>Wounded model loses not one but D3 wounds</Rule>
 					<Lore>This sword has a series of gnarled teeth instead of an edged blade. When it’s swung, the sword growls and snarls like a beast hungry for flesh. The Rending Sword is a hungry sword. If it isn’t fed at least once per day, the sword sprouts a pair of arms and legs and runs off to feast on its own, usually the companions of the wielder</Lore>
 					<Description>A model wounded by the Rending Sword (after saves, etc) loses not one but D3 wounds</Description>
@@ -225,8 +225,8 @@
 				<Shield>
 					<Name>Spelleater Shield</Name>
 					<Points>75</Points>
-					<AddToArmour Val="6"/>
-					<MagicResistance Val="2"/>
+					<AddToArmour>6</AddToArmour>
+					<MagicResistance>2</MagicResistance>
 					<Rule>Roll a D6 each time a spell is dispelled. On a roll of 4+ the spell is destroyed and the enemy Wizard may not cast it for the rest of the battle.</Rule>
 					<Only>Mortal</Only>
 					<Lore>The Spelleater Shield is made from daemonhide and adorned with symbols of power. When spells are cast against the bearer, it drains away their power</Lore>
@@ -235,7 +235,7 @@
 				<Shield>
 					<Name>Chaos Runeshield</Name>
 					<Points>50</Points>
-					<AddToArmour Val="6"/>
+					<AddToArmour>6</AddToArmour>
 					<Rule>Runeshiel negates the power of any magic weapons carried by models in base contac.</Rule>
 					<Only>Mortal</Only>
 					<Lore>The Chaos Runeshield is covered with writhing carvings that have the power to destroy enemy magic</Lore>
@@ -244,8 +244,8 @@
 				<Armour>
 					<Name>Armour of Tortured Souls</Name>
 					<Points>40</Points>
-					<AddToArmour Val="4"/>
-					<AddToToughness Val="1"/>
+					<AddToArmour>4</AddToArmour>
+					<AddToToughness>1</AddToToughness>
 					<Only>Mortal</Only>
 					<Lore>This suit of armour is fully enclosed. Nothing remains of the wearer except his spirit and the spirits of those who wore the armour before him</Lore>
 					<Description>The Armour of Tortured Souls is a suit of Chaos armour. The wearer counts as having +1 Toughness against mundane attacks (not against spells, magic items, etc)</Description>
@@ -253,7 +253,7 @@
 				<Armour>
 					<Name>Armour of Damnation</Name>
 					<Points>30</Points>
-					<AddToArmour Val="4"/>
+					<AddToArmour>4</AddToArmour>
 					<Reroll>OpponentToHit</Reroll>
 					<Lore>This highly ornate suit of Chaos armour shimmers with unnatural energies that distort the position of the wearer so that enemy's blows miss their mark</Lore>
 					<Description>The Armour of Damnation is a suit of Chaos armour. In addition, any model attacking the wearer in close combat must re-roll successful rolls to hit</Description>
@@ -261,7 +261,7 @@
 				<Shield>
 					<Name>Bone Shield</Name>
 					<Points>30</Points>
-					<AddToArmour Val="6"/>
+					<AddToArmour>6</AddToArmour>
 					<Rule>Strength 4 hit for each successful armour save</Rule>
 					<Only>Mortal</Only>
 					<Lore>Bone Shield discharges a magic blast every time it is struck, rebounding the enemy's blows back at him</Lore>
@@ -270,7 +270,7 @@
 				<Armour>
 					<Name>Crimson Armour of Dargan</Name>
 					<Points>20</Points>
-					<AddToArmour Val="4"/>
+					<AddToArmour>4</AddToArmour>
 					<Test Bet="Pass" Context="Round" Profile="Leadership"/>
 					<Only>Mortal</Only>
 					<Lore>The Crimson Armour of Dargan emits a searing heat which blinds and burns those who dare raise a blade against it</Lore>
@@ -312,7 +312,7 @@
 					<Name>Gaze of the Gods</Name>
 					<Points>30</Points>
 					<Only>Mortal</Only>
-					<AddToWard Val="3"/>
+					<AddToWard>3</AddToWard>
 					<Rule>If the model is fleeing at the start of a Chaos Magic phase he is turned into a Chaos Spawn</Rule>
 					<Lore>This wrought iron pendant shows that the wearer is particularly favoured and watched by the gods of Chaos. They will protect him if he serves them well, but if he fails them, he will be punished</Lore>
 					<Description>The model gains a 4+ Ward save. If the model is fleeing at the start of a Chaos Magic phase, for any reason, the wrath of the Chaos gods is immediately visited upon him and he is turned into a Chaos Spawn, with the same number of wounds remaining as the character had. If you do not have a Spawn model to replace the character then he simply counts as slain. For Victory points purposes, the character is not counted as slain or below half Wounds unless the Spawn he has turned into is slain or is below half Wounds</Description>
@@ -324,7 +324,7 @@
 						<On>Mark of Khorne</On>
 					</Dependencies>
 					<Only>Mortal</Only>
-					<MagicResistance Val="2"/>
+					<MagicResistance>2</MagicResistance>
 					<Lore>Collars of Khorne are among the many gifts granted by the Blood God to his greatest Champions. Hence, many of his minions, including Daemons and Chaos Beasts, wear them as well, all to better spread the destruction of their vicious master. Certainly the Flesh Hounds of Khorne wear such things, as do many other followers, though these may be mere emulations of the style of their god's servants.\n\nThe Collars are forged in the heat of the Blood God's rage at the very foot of the Skull Throne. Thus empowered, these studded bands render their wearers all but immune to the effects of hostile magic, for Khorne loathes to see his chosen servants felled by the perfidious practice of the arcane. All Flesh Hounds wear an ornate Collar of Khorne about their scaled necks, for Khorne favours his Flesh Hounds above all the other Daemons in his service.\n\nA Champion can obtain the Collar by besting a Flesh Hound in unarmed combat and thus winning the right to wear the beast's rune-etched collar around his own neck.[4a] These foul collars are studded with spikes on the outside and inside. Made from interlinked pieces of iron and brass, the spikes are always covered in old blood and bits of skin and hair. When worn, the spikes burrow into the flesh, infusing the wearer with the protection of Khorne, giving the wearer a strong resistance to spells. Once donned, however, the Collar may never be removed. If worn by someone other than whom the Collar was bestowed upon, that individual suffers mutation, or worse, becomes a Chaos Spawn</Lore>
 					<Description>The model has Magic Resistance (2)</Description>
 				</Additional>
@@ -352,8 +352,8 @@
 					<Name>Power Familiar</Name>
 					<Points>50</Points>
 					<Only>Mortal</Only>
-					<AddToCast Val="1"/>
-					<AddToDispell Val="1"/>
+					<AddToCast>1</AddToCast>
+					<AddToDispell>1</AddToDispell>
 					<Lore>A Power Familiar is a familiar that attracts magic power to its owner, who cannot be one of the Blood Dragons</Lore>
 					<Description>The Familiar adds one dice to both the Power dice and Dispel dice pool of the bearer's side</Description>
 				</Arcane>
@@ -404,9 +404,9 @@
 					<Dependencies>
 						<On>Mark of Khorne</On>
 					</Dependencies>
-					<AddToWizard Val="1"/>
-					<AddToCast Val="1"/>
-					<AddToDispell Val="1"/>
+					<AddToWizard>1</AddToWizard>
+					<AddToCast>1</AddToCast>
+					<AddToDispell>1</AddToDispell>
 					<Lore>Red leather and steel fittings protect the pale vellum pages of this massive tome, known as the Book of Secrets. The exterior is covered in strange glyphs and runes of the Arcane Language of Magic. Those who can read it get a sense of what this volume contains: the exploitation of the Winds of Magic.\n\nTo use this Grimoire, the user must spend three weeks studying the arcane words within. At the end of this time, he may use the book to cast spells from the Lore of Death, Fire, or Shadow. His ability to use magic is amplified while the tome remains in hand. But when he casts spells using this book, he risks suffering from the Curse of Tzeentch. What's worse, each time this book is used to cast a spell, the wielder resolve is tested against mutation. Furthermore, if a servant of Khorne (cultist or Champion) attempts to use this book, the Blood God immediately destroys the wayward mortal</Lore>
 					<Description>The bearer is a Level 1 Sorcerer and knows a random spell from the Lore of Fire, Shadow or Death (Chaos player's choice). If the bearer miscasts, roll twice on the Miscast table and apply both results</Description>
 				</Additional>
@@ -583,7 +583,7 @@
 					<Dependencies>
 						<On>Mark of Khorne</On>
 					</Dependencies>
-					<MagicResistance Val="2"/>
+					<MagicResistance>2</MagicResistance>
 					<Lore>The Daemon wears a heavy, studded, brass collar as a mark of Khorne's protection against the use of magic against it</Lore>
 					<Description>The model has Magic Resistance (2)</Description>
 				</Weapon>
@@ -605,7 +605,7 @@
 					<Dependencies>
 						<On>Mark of Khorne</On>
 					</Dependencies>
-					<ArmourTo Val="4"/>
+					<ArmourTo>4</ArmourTo>
 					<Lore>The Daemon wears armour fashioned from unholy materials unknown to mortals</Lore>
 					<Description>The Daemon has an armour save of 4+ in addition to its Daemonic aura</Description>
 				</Additional>
@@ -616,7 +616,7 @@
 					<Dependencies>
 						<On>Mark of Khorne</On>
 					</Dependencies>
-					<AddToStrength Val="1"/>
+					<AddToStrength>1</AddToStrength>
 					<Lore>The Daemon has been blessed with monstrous strength</Lore>
 					<Description>The Daemon has +1 Strength on its profile</Description>
 				</Weapon>
@@ -674,7 +674,7 @@
 					<Dependencies>
 						<On>Mark of Nurgle</On>
 					</Dependencies>
-					<SubOpponentToHit Val="1"/>
+					<SubOpponentToHit>1</SubOpponentToHit>
 					<Lore>A swarm of flies envelopes the Daemon, distracting the enemy by flying into eyes, ears and mouths, and crawling under armour and clothing</Lore>
 					<Description>Any unit in close combat with one or more models with a Cloud of Flies suffers a -1 modifier on its rolls to hit</Description>
 				</Additional>
@@ -751,7 +751,7 @@
 				<SpecialRules>
 					<ImmuneToPsychology/>
 					<Slots>Hero</Slots>
-					<MagicResistance Val="2"/>
+					<MagicResistance>2</MagicResistance>
 					<Original>
 						<Rule>Archaon's army must include at least one unit of Knights of Chaos, and they must be upgraded to Chosen status</Rule>
 					</Original>
@@ -760,11 +760,11 @@
 					<HandWeapon>
 						<Name>The Slayer of Kings</Name>
 						<NoArmour/>
-						<AddToAttacks Val="5"/>
+						<AddToAttacks>5</AddToAttacks>
 					</HandWeapon>
 					<Armour>
 						<Name>The Armour of Morkar</Name>
-						<ArmourTo Val="1"/>
+						<ArmourTo>1</ArmourTo>
 					</Armour>
 					<Armour>
 						<Name>The Crown of Domination</Name>
@@ -772,7 +772,7 @@
 					</Armour>
 					<Armour>
 						<Name>The Eye of Sheerian</Name>
-						<AddToWard Val="3"/>
+						<AddToWard>3</AddToWard>
 					</Armour>
 				</Equipments>
 			</Lord>
@@ -816,7 +816,7 @@
 					<LargeTarget/>
 					<Fly/>
 					<Daemonic/>
-					<MagicResistance Val="2"/>
+					<MagicResistance>2</MagicResistance>
 					<Original>
 						<Rule>Ward save cannot be used against magical attacks</Rule>
 					</Original>
@@ -828,11 +828,11 @@
 					</HandWeapon>
 					<Armour>
 						<Name>Armour of Khorne</Name>
-						<AddToArmour Val="4"/>
+						<AddToArmour>4</AddToArmour>
 					</Armour>
 					<Arcane>
 						<Name>Might of Khorne</Name>
-						<AddToStrength Val="1"/>
+						<AddToStrength>1</AddToStrength>
 					</Arcane>
 				</Equipments>
 			</Lord>
@@ -888,7 +888,7 @@
 					<Slots>Hero, Rare</Slots>
 					<LargeBase/>
 					<LargeTarget/>
-					<SubOpponentToHit Val="1"/>
+					<SubOpponentToHit>1</SubOpponentToHit>
 					<Daemonic/>
 					<Original>In Chaos player's Shooting phase if Daemon is not in combat it may unleash Stream of Corruption - Breath attack, Strength 3 with -2 armour saving throw modifier</Original>
 				</SpecialRules>
@@ -1019,9 +1019,9 @@
 					<Option>
 						<Name>Level 2 Sorcerer</Name>
 						<Points>40</Points>
-						<AddToCast Val="2"/>
-						<AddToDispell Val="1"/>
-						<AddToWizard Val="2"/>
+						<AddToCast>2</AddToCast>
+						<AddToDispell>1</AddToDispell>
+						<AddToWizard>2</AddToWizard>
 						<Dependencies>
 							<Off>Mark of Tzeentch</Off>
 						</Dependencies>
@@ -1115,7 +1115,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Scaly skin</Name>
-						<AddToArmour Val="3"/>
+						<AddToArmour>3</AddToArmour>
 					</Armour>
 				</Equipments>
 			</Mount>
@@ -1296,7 +1296,7 @@
 				<Profile M='4' WS='5' BS='0' S='5' T='3' W='1' I='4' A='1' Ld='8'/>
 				<SpecialRules>
 					<Frenzy/>
-					<MagicResistance Val="1"/>
+					<MagicResistance>1</MagicResistance>
 				</SpecialRules>
 				<Equipments>
 					<LightArmour/>
@@ -1321,7 +1321,7 @@
 					<Frenzy/>
 					<NoCoreSlot/>
 					<FastCavalry/>
-					<MagicResistance Val="2"/>
+					<MagicResistance>2</MagicResistance>
 				</SpecialRules>
 				<Equipments>
 					<Mark>Mark of Khorne</Mark>
@@ -1335,7 +1335,7 @@
 				<Lore>Plaguebearers, known also as the Tainted Ones, the One-Eyed Rotters, Horned Rotbags, Maggotkin, Rotbearers and the Tallymen of Plagues, are the rank and file of Nurgle's legions, crafted from the soul-stuff of mortals who have been slain by Nurgle's Rot.</Lore>
 				<Profile M='4' WS='4' BS='0' S='4' T='4' W='1' I='4' A='1' Ld='8'/>
 				<SpecialRules>
-					<SubOpponentToHit Val="1"/>
+					<SubOpponentToHit>1</SubOpponentToHit>
 					<Original>Breath attack Strength 3 with a -2 armour modifier</Original>
 				</SpecialRules>
 				<Equipments>
@@ -1351,7 +1351,7 @@
 				<Lore>Nurglings are the very image of Nurgle himself, having friendly, mischievous faces and bloated, green bodies fitted with disproportionate limbs. The only difference is their size. A Nurgling is no taller than a foot high. These foul things inhabit the bodies of larger Daemons, preferably the Great Unclean Ones who spawn them.</Lore>
 				<Profile M='4' WS='3' BS='0' S='3' T='3' W='4' I='2' A='4' Ld='8'/>
 				<SpecialRules>
-					<SubOpponentToHit Val="1"/>
+					<SubOpponentToHit>1</SubOpponentToHit>
 					<Original>Swarn</Original>
 				</SpecialRules>
 				<Equipments>
