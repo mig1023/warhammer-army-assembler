@@ -92,7 +92,7 @@
 				<Powers>
 					<Name>Curse of the Revenant</Name>
 					<Points>55</Points>
-					<AddToWounds Val="1"/>
+					<AddToWounds>1</AddToWounds>
 					<Lore>Through magic, bloodletting or sheer force of will, the strength of this Vampire to survive the centuries is beyond compare</Lore>
 					<Description>This Vampire has +1 Wound on his profile</Description>
 				</Powers>
@@ -163,7 +163,7 @@
 				<Powers>
 					<Name>Master Strike</Name>
 					<Points>15</Points>
-					<AttacksTo Val="1"/>
+					<AttacksTo>1</AttacksTo>
 					<HeroicKillingBlow/>
 					<Lore>So strong is this lord of the night that a well-placed blow from his sword can bring low even the mightiest foe</Lore>
 					<Description>The Vampire may exchange all of his Attacks for a single Attack with the Heroic Killing Blow special rule</Description>
@@ -171,7 +171,7 @@
 				<Powers>
 					<Name>Dread Knight</Name>
 					<Points>10</Points>
-					<AddToWeaponSkill Val="2"/>
+					<AddToWeaponSkill>2</AddToWeaponSkill>
 					<Rule>Unless he is part of a combat containing Krell or a Vampiric character with higher Leadership, he must always issue a challenge when possible, and must answer any challenge issued by the enemy</Rule>
 					<Lore>This Vampire has followed the path of the warrior to its ultimate conclusion, taking up arms in dark mockery of a knightly vow</Lore>
 					<Description>The Vampire has +2 Weapon Skill. In addition, unless he is part of a combat containing Krell or a Vampiric character with higher Leadership, he must always issue a challenge when possible, and must answer any challenge issued by the enemy</Description>
@@ -198,7 +198,7 @@
 				<Armour>
 					<Name>Nightshroud</Name>
 					<Points>40</Points>
-					<AddToArmour Val="6"/>
+					<AddToArmour>6</AddToArmour>
 					<Rule>Enemy models in base contact lose all Strength bonuses conferred from normal and magical weapons, and have the Always Strikes Last special rule</Rule>
 					<Lore>Ensorcelled in pitch darkness in the heart of Castle Drachenfels, the Nightshroud owes more to the otherworld than to reality. Originally fashioned from the death-raiments of King Pharatohep, the Nightshroud has since been soaked in the blood of sorcerers and witches. The aura of gloom that clings to it is so strong it can physically manifest, lashing out with shadowy tendrils that grapple with all those who would strike the wearer</Lore>
 					<Description>The Nightshroud adds +1 to the bearer's armour save. Furthermore, enemy models in base contact with the wearer lose all Strength bonuses conferred from normal and magical weapons, and have the Always Strikes Last special rule</Description>
@@ -282,7 +282,7 @@
 				<Additional>
 					<Name>Helm of Discord</Name>
 					<Points>30</Points>
-					<AddToArmour Val="6"/>
+					<AddToArmour>6</AddToArmour>
 					<Test Bet="Pass" Context="Round" Profile="Leadership"/>
 					<Description>The wearer counts his armour save as being one point higher than normal. In addition, at the start of each Close Combat phase, choose an enemy character in base contact with the bearer or his unit. That character must immediately take a Leadership test. If the test is failed, the character succumbs to the helm's sibilant whispers of malice and jealousy. In this Close Combat phase, the victim cannot make attacks and is hit automatically</Description>
 				</Additional>
@@ -376,13 +376,13 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Blood Drinker</Name>
-						<AddToStrength Val="1"/>
+						<AddToStrength>1</AddToStrength>
 						<Rule>Restores lost Wounds on a score of 4+ for the purposes of The Hunger special rule</Rule>
 					</HandWeapon>
 					<HeavyArmour/>
 					<Armour>
 						<Name>Carstein Ring</Name>
-						<AddToWard Val="4"/>
+						<AddToWard>4</AddToWard>
 						<Rule>The first time Vlad is removed from play, roll a D6 at the end of the phase: on a score of 2+ the vampire is immediately returned to 'life' with a single Wound</Rule>
 					</Armour>
 				</Equipments>
@@ -414,8 +414,8 @@
 					</HandWeapon>
 					<Armour>
 						<Name>Armour of Templehof</Name>
-						<AddToArmour Val="5"/>
-						<AddToWounds Val="2"/>
+						<AddToArmour>5</AddToArmour>
+						<AddToWounds>2</AddToWounds>
 					</Armour>
 				</Equipments>
 				<Options>
@@ -440,7 +440,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Chaos Tomb Blade</Name>
-						<AddToAttacks Val="2"/>
+						<AddToAttacks>2</AddToAttacks>
 						<Rule>If Kemmler is in a unit of Skeleton Warriors or Grave Guard, for each model he slays in close combat, an extra model is added to his unit following the rules for Resurrecting Fallen Warriors</Rule>
 					</HandWeapon>
 					<HandWeapon>
@@ -586,14 +586,14 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>The Black Axe of Krell</Name>
-						<AddToStrength Val="2"/>
-						<MultiWounds Val="D3"/>
+						<AddToStrength>2</AddToStrength>
+						<MultiWounds>D3</MultiWounds>
 						<HitLast/>
 						<Rule>Any model taking an unsaved Wound must roll a D6 at the start of each of its subsequent turns: if the result is higher than the number of Wounds it has remaining, that model suffers an additional Wound with no armour saves allowed</Rule>
 					</HandWeapon>
 					<Armour>
 						<Name>Armour of the Barrows</Name>
-						<AddToArmour Val="4"/>
+						<AddToArmour>4</AddToArmour>
 						<Rule>If an enemy with a magic weapon wounds Krell in close combat and Krell passes his armour save, that magic weapon's abilities are nullified</Rule>
 					</Armour>
 				</Equipments>
@@ -618,7 +618,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Sword of Waldenhof</Name>
-						<MultiWounds Val="2"/>
+						<MultiWounds>2</MultiWounds>
 					</HandWeapon>
 					<HandWeapon/>
 					<HeavyArmour/>
@@ -807,7 +807,7 @@
 						<Name>Sword-claws</Name>
 						<Command/>
 						<Points>10</Points>
-						<ArmourPiercing Val="1"/>
+						<ArmourPiercing>1</ArmourPiercing>
 					</Option>
 				</Options>
 			</Mount>
@@ -1014,7 +1014,7 @@
 				<Options>
 					<Option>
 						<Name>Skeletal Steed barding</Name>
-						<AddToArmour Val="6"/>
+						<AddToArmour>6</AddToArmour>
 						<PointsPerModel>3</PointsPerModel>
 					</Option>
 					<Option>
