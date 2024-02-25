@@ -96,7 +96,7 @@
 				<Weapon>
 					<Name>Blade of Leaping Gold</Name>
 					<Points>70</Points>
-					<AddToAttacks Val="3"/>
+					<AddToAttacks>3</AddToAttacks>
 					<Rule>Any roll of 6 To Wound ignores armour saves</Rule>
 					<Lore>A more finely balanced sword than this was never made. With this sword, Alcandor of Cothique singlehandedly held the gates of Tor Estara for seven days. Mentheus, right hand of Morvael the Impetuous, wielded it until his death upon the walls of Anlec, having spilled more Dark Elf blood than any other since the time of Tethlis the Slayer. An ordinary blade would be dulled by such a roster of endless war, but this sword has never lost its edge. To the valiant, it lends supernatural speed and vigour; to the craven and corrupt, it brings only swift death</Lore>
 					<Description>The Blade of Leaping Gold grants the wielder +3 Attacks. In addition, any roll of 6 To Wound made with the Blade of Leaping Gold ignores armour saves</Description>
@@ -105,7 +105,7 @@
 					<Name>Star Lance</Name>
 					<Only>Mount</Only>
 					<Points>30</Points>
-					<ChargeStrengthBonus Val="3"/>
+					<ChargeStrengthBonus>3</ChargeStrengthBonus>
 					<Rule>Armour saves cannot be taken on the turn he charges</Rule>
 					<Lore>The Star Lance was created at the command of Aenarion the Defender and gifted to the nobles of Caledor for their unfailing courage. Forged from the metal of a fallen star, this weapon's graceful lines belie the formidable power it grants its wielder. Since the days of its making, the Star Lance has seen battle in the service of every Phoenix King, carried to war each time by a trueblood hero of Caledorian descent. Legend has it that the Star Lance strikes with the wrath of a mighty Star Dragon, and cannot be unmade whilst the fires of Vaul's Anvil still smoulder</Lore>
 					<Description>Mounted character only. The Star Lance can only be used in a turn in which the bearer makes a successful charge. Attacks with the Star Lance are resolved at +3 Strength, and armour saves cannot be taken against Wounds caused by the Star Lance. If the bearer did not make a successful charge this turn, or if his mount has been slain, he must instead fight using another weapon</Description>
@@ -119,8 +119,8 @@
 				<Armour>
 					<Name>Armour of Caledor</Name>
 					<Points>25</Points>
-					<ArmourTo Val="2"/>
-					<AddToWard Val="6"/>
+					<ArmourTo>2</ArmourTo>
+					<AddToWard>6</AddToWard>
 					<Rule>Fireborn</Rule>
 					<Lore>This armour is the heirloom of the house of Caledor, the greatest of all the Dragon Princes. For well over four thousand years the masters of the house of Caledor has worn this armour in battle. It is a suit of Ithilmar, unsurpassed in its beauty, lightweight and flexible, and yet stronger than any armour made of mortal steel. However, the Armour of Caledor is not a single suit. Rather, it is an amalgam of components gathered across the millennia. Every piece of the Armour of Caledor has been taken from the recovered fragments of now-lost armour that was once worn by a mighty Caledorian hero. The gorget, for example, was worn by Caledor the Conqueror during the War of Blood Gorge, whilst the left vambrace belonged to Maldrik Firesworn, Saviour of the Silver Isles. The chestplate still bears the scars earned when it preserved Alkar Dragonhelm from the poisoned daggers of the Khainite Assassin Master, Halkir Venomheart. There are many more such tales, for every scale and plate has earned its place in Elven history many times over. When a noble of Caledor dons this armour, his resolve and fortune are redoubled. Some say this is merely a noble heart rising to the challenge of his forebears, but others claim it is nothing less than the power of the ancestors themselves flowing through him</Lore>
 					<Description>The Armour of Caledor grants the wearer a 2+ Armour save that cannot be improved by any means. In addition, the Armour of Caledor grants the bearer a 6+ Ward save and the Fireborn special ride</Description>
@@ -129,7 +129,7 @@
 					<Name>Shadow Armour</Name>
 					<Points>25</Points>
 					<Only>Infantry</Only>
-					<AddToArmour Val="5"/>
+					<AddToArmour>5</AddToArmour>
 					<Scout/>
 					<Rule>Strider</Rule>
 					<Lore>The Shadow Armour was crafted with skills now lost to the High Elves. Some believe it was forged in the hidden camps of Shadow Warriors, whilst others hint it is not of Elf make at all, but a gift from Loec, the trickster god. The shimmering armour weighs almost nothing and exists somewhere between the real world and that of magic, allowing its wearer to pass all but unseen by mortal eyes. The first to don it was Prince Temakador, one of the handful of nobles who saw Aethis' reign for the folly it was and fought a bitter campaign of ambush and sabotage against the Dark Elves as the Phoenix Court descended into complacency. Many times did Aethis' agents seek Temakador's arrest, but each time he was thought cornered, he melded into the darkness and slipped away</Lore>
@@ -138,7 +138,7 @@
 				<Shield>
 					<Name>Shield of the Merwyrm</Name>
 					<Points>15</Points>
-					<AddToArmour Val="6"/>
+					<AddToArmour>6</AddToArmour>
 					<Rule>Parry save of 4+</Rule>
 					<Lore>In the murky deeps far below Lothern's Emerald Gate slumbers Amanar, ancient protector of the city. Only in hours of greatest need does the merwyrm rouse and rise to the surface to consume those who would bring about Lothern's ruin. The records kept in the Glittering Tower tell that Amanar has manifested but three times in recorded history. The first was during the Daemon invasion, where he swallowed whole a legion that laid siege to the city. The second came during the Sundering, where his broad back held Lothern high above the tidal waves that swamped Ulthuan. The third, and to date final, appearance of Amanar came during the Great Incursion. With a great sweep of his tail, he scattered much of the Dark Elf army; then, ignoring the pinpricks of their blades, he turned and bore the Black Ark Intolerable Delight beneath the waves, never to be seen again. No sight has there been of Amanar since that day, but a single great scale was recovered after the battle was done, which now forms the unbreakable heart of this shield</Lore>
 					<Description>Shield. Unless he is fighting with a weapon that has the Requires Two Hands special rule, the bearer of the Shield of the Merwyrm has a parry save of 4+ (even if he's fighting with a magic weapon)</Description>
@@ -146,7 +146,7 @@
 				<Additional>
 					<Name>Golden Crown of Atrazar</Name>
 					<Points>10</Points>
-					<WardForFirstWound Val="2"/>
+					<WardForFirstWound>2</WardForFirstWound>
 					<Lore>This golden circlet, studded with rare and magical gems, radiates an aura that protects its wearer from harm. No mere gemstones are set about this circlet, but brilliantly polished shards taken from waystones all across Ulthuan. Thus can the bearer of the Golden Crown draw upon the magics of the Great Vortex to guard himself from harm. Few wear the Golden Crown for long, however, for the spirits of the dead hang heavy about its brow, and their whispered praises and encouragements would inflate the wearer's pride to epic proportions, driving even the noblest mortal into a dangerous, self-obsessing madness</Lore>
 					<Description>One use only. The Golden Crown of Atrazar bestows a 2+ Ward save against the first wounding hit suffered by the wearer (which cancels out not only the Wound, but also any Killing Blow or Multiple Wounds special rules the attack has) after which its power fades and it cannot be used again during the game</Description>
 				</Additional>
@@ -226,7 +226,7 @@
 				<Additional>
 					<Name>Helm of Discord</Name>
 					<Points>30</Points>
-					<AddToArmour Val="6"/>
+					<AddToArmour>6</AddToArmour>
 					<Test Bet="Pass" Context="Round" Profile="Leadership"/>
 					<Description>The wearer counts his armour save as being one point higher than normal. In addition, at the start of each Close Combat phase, choose an enemy character in base contact with the bearer or his unit. That character must immediately take a Leadership test. If the test is failed, the character succumbs to the helm's sibilant whispers of malice and jealousy. In this Close Combat phase, the victim cannot make attacks and is hit automatically</Description>
 				</Additional>
@@ -314,19 +314,19 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Sunfang</Name>
-						<AddToStrength Val="3"/>
+						<AddToStrength>3</AddToStrength>
 						<Rule>Flaming Attacks</Rule>
 						<Rule>Once per battle, Tyrion can make a Strength 4 Breath Weapon attack with Flaming Attacks special rule</Rule>
 					</HandWeapon>
 					<Armour>
 						<Name>Dragon Armour of Aenarion</Name>
-						<ArmourTo Val="1"/>
-						<AddToWard Val="4"/>
+						<ArmourTo>1</ArmourTo>
+						<AddToWard>4</AddToWard>
 					</Armour>
 					<Armour>
 						<Name>Heart of Avelorn</Name>
-						<MagicResistance Val="2"/>
-						<WardForLastWound Val="2"/>
+						<MagicResistance>2</MagicResistance>
+						<WardForLastWound>2</WardForLastWound>
 					</Armour>
 				</Equipments>
 			</Lord>
@@ -347,7 +347,7 @@
 					<HandWeapon>
 						<Name>Sword of Teclis</Name>
 						<NoArmour/>
-						<WoundOn Val="2"/>
+						<WoundOn>2</WoundOn>
 					</HandWeapon>
 					<Arcane>
 						<Name>The Moon Staff of Lileath</Name>
@@ -355,9 +355,9 @@
 					</Arcane>
 					<Arcane>
 						<Name>The War Crown</Name>
-						<AddToWizard Val="1"/>
-						<AddToCast Val="1"/>
-						<AddToDispell Val="1"/>
+						<AddToWizard>1</AddToWizard>
+						<AddToCast>1</AddToCast>
+						<AddToDispell>1</AddToDispell>
 					</Arcane>
 					<Arcane>
 						<Name>Scroll of Hoeth</Name>
@@ -393,21 +393,21 @@
 					<HandWeapon>
 						<Name>Fangsword of Eltharion</Name>
 						<NoArmour/>
-						<AddToStrength Val="2"/>
+						<AddToStrength>2</AddToStrength>
 					</HandWeapon>
 					<Longbow/>
 					<HeavyArmour/>
 					<Armour>
 						<Name>Helm of Yvresse</Name>
-						<AddToArmour Val="6"/>
-						<AddToWard Val="5"/>
+						<AddToArmour>6</AddToArmour>
+						<AddToWard>5</AddToWard>
 					</Armour>
 					<Arcane>
 						<Name>Talisman of Hoeth</Name>
 						<Rule>Magic Resitance(1)</Rule>
-						<AddToWizard Val="2"/>
-						<AddToCast Val="2"/>
-						<AddToDispell Val="1"/>
+						<AddToWizard>2</AddToWizard>
+						<AddToCast>2</AddToCast>
+						<AddToDispell>1</AddToDispell>
 					</Arcane>
 				</Equipments>
 			</Lord>
@@ -438,7 +438,7 @@
 					</Arcane>
 					<Arcane>
 						<Name>Stone of Midnight</Name>
-						<AddToWard Val="4"/>
+						<AddToWard>4</AddToWard>
 						<Rule>Anyone shooting at Alith Anar suffers an additional penalty of -1 on the roll to hit</Rule>
 					</Arcane>
 				</Equipments>
@@ -467,7 +467,7 @@
 					<HandWeapon/>
 					<Armour>
 						<Name>The Shieldstone of Isha</Name>
-						<AddToWard Val="5"/>
+						<AddToWard>5</AddToWard>
 					</Armour>
 					<Arcane>
 						<Name>Star of Avelorn</Name>
@@ -567,7 +567,7 @@
 					<MagicItems Points="100" Type="Hero"/>
 					<ValourOfAge/>
 					<MartialProwess/>
-					<MagicResistance Val="2"/>
+					<MagicResistance>2</MagicResistance>
 				</SpecialRules>
 				<Equipments>
 					<Halberd/>
@@ -615,12 +615,12 @@
 					<HandWeapon>
 						<Name>Chayal</Name>
 						<KillingBlow/>
-						<AddToStrength Val="2"/>
+						<AddToStrength>2</AddToStrength>
 					</HandWeapon>
 					<HeavyArmour/>
 					<Armour>
 						<Name>Pelt of Charandis</Name>
-						<AddToArmour Val="6"/>
+						<AddToArmour>6</AddToArmour>
 						<ImmuneToPoison/>
 						<Rule>3+ Armour save against shooting attacks</Rule>
 					</Armour>
@@ -637,13 +637,13 @@
 					<HitFirst/>
 					<ValourOfAge/>
 					<MartialProwess/>
-					<MagicResistance Val="1"/>
+					<MagicResistance>1</MagicResistance>
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon>
 						<Name>The Phoenix Blade</Name>
-						<AddToStrength Val="1"/>
-						<MultiWounds Val="D3"/>
+						<AddToStrength>1</AddToStrength>
+						<MultiWounds>D3</MultiWounds>
 						<Rule>Flaming attacks</Rule>
 					</HandWeapon>
 					<HeavyArmour/>
@@ -848,7 +848,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Scaly skin</Name>
-						<AddToArmour Val="3"/>
+						<AddToArmour>3</AddToArmour>
 					</Armour>
 				</Equipments>
 			</Mount>
@@ -865,7 +865,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Scaly skin</Name>
-						<AddToArmour Val="3"/>
+						<AddToArmour>3</AddToArmour>
 					</Armour>
 				</Equipments>
 			</Mount>
@@ -883,7 +883,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Scaly skin</Name>
-						<AddToArmour Val="3"/>
+						<AddToArmour>3</AddToArmour>
 					</Armour>
 				</Equipments>
 			</Mount>
@@ -1080,7 +1080,7 @@
 					<HitFirst/>
 					<LargeBase/>
 					<Stubborn/>
-					<ImpactHit Val="D6"/>
+					<ImpactHit>D6</ImpactHit>
 					<ValourOfAge/>
 					<Original>Chariot</Original>
 				</SpecialRules>
@@ -1249,7 +1249,7 @@
 				<SpecialRules>
 					<HitFirst/>
 					<LargeBase/>
-					<ImpactHit Val="D6"/>
+					<ImpactHit>D6</ImpactHit>
 					<ValourOfAge/>
 					<Original>Chariot</Original>
 				</SpecialRules>
