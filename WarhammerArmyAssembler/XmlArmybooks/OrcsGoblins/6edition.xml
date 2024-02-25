@@ -141,21 +141,21 @@
 				<Weapon>
 					<Name>Basha's Big Aхе of Bashin'</Name>
 					<Points>50</Points>
-					<AddToAttacks Val="2"/>
+					<AddToAttacks>2</AddToAttacks>
 					<Lore>This legendary axe is all that is left of the once mighty Basha Warboss of the Iron Skullz after he stood rather too close to a drunken giant at the Battle of Grim's Crag</Lore>
 					<Description>The axe gives the wielder +2 Attacks in close combat</Description>
 				</Weapon>
 				<Weapon>
 					<Name>Hacka's Sword of Hacking</Name>
 					<Points>45</Points>
-					<HitOn Val="2"/>
+					<HitOn>2</HitOn>
 					<Lore>It was said mostly by Hacka that he fought alongside Azhag and was the one who first proclaimed him the Slaughterer. He also mentioned single handedly killing Sigmar and being a drinking buddy of Gork (or possibly Mork). Whatever the truth Hacka acquired this slender and rather Elven looking sword from somewhere strange and nobody ever felt much like asking where. Not after the last time anyway</Lore>
 					<Description>Ihe Sword of Hackin' hits on 2+ regardless of the wielder's WS</Description>
 				</Weapon>
 				<Weapon>
 					<Name>Fumpa's Club of Fumpin'</Name>
 					<Points>40</Points>
-					<AddToStrength Val="2"/>
+					<AddToStrength>2</AddToStrength>
 					<Lore>Since the dawn of last Thursday Fumpa's club has been the traditional symbol of leadership amongst the Blacknose tribe. Of course, to start with there were a few who didn't see it like that, but they've all since been, er, convinced</Lore>
 					<Description>The Club of Fumpin confers +2 Strength to all close combat attacks made by the character fighting with it</Description>
 				</Weapon>
@@ -170,7 +170,7 @@
 					<Name>Porko's Pigstikka</Name>
 					<Only>Mount</Only>
 					<Points>40</Points>
-					<ChargeStrengthBonus Val="1"/>
+					<ChargeStrengthBonus>1</ChargeStrengthBonus>
 					<Rule>+1 Strength extra Attack per rank in the enemy unit (up to a maximum of +3)</Rule>
 					<Lore>Most of the many spears that have been used by Porko's Boar Boyz lie shattered on the battlefields of the Old World, but not this one. In battle the gleaming point of the Pigstikka pierces enemy armour with ease skewering several foes with one strike ready for later as Porko used to say referring to the traditional after battle barbecue</Lore>
 					<Description>The Pigstikka gives the wielder +1 Strength on the turn he charges. In addition, on the turn he charges he also gets one extra Attack per rank in the enemy unit (up to a maximum of +3)</Description>
@@ -202,7 +202,7 @@
 				<Armour>
 					<Name>Armour of Protectyness</Name>
 					<Points>60</Points>
-					<AddToArmour Val="5"/>
+					<AddToArmour>5</AddToArmour>
 					<FirstWoundDiscount/>
 					<Lore>It s not often that Gobbos get to name magical items and this is why. The Armour of Protectyness was quenched in the blood of a Troll and has gained some of its regenerative powers</Lore>
 					<Description>Counts as wearing armour (5+ armour save) which can be combined with other equipment normally. Also, the wearer discounts the first wound he suffers</Description>
@@ -210,23 +210,23 @@
 				<Armour>
 					<Name>Armour of Mork</Name>
 					<Points>50</Points>
-					<AddToArmour Val="5"/>
-					<MagicResistance Val="2"/>
+					<AddToArmour>5</AddToArmour>
+					<MagicResistance>2</MagicResistance>
 					<Lore>Armour made with the aid of a Shaman (as one of the ingredients) is a strong defence against enemy magic</Lore>
 					<Description>Counts as wearing armour (5+ armour save) which can be combined with other equipment normally. Also gives the wearer and the unit he is with Magic Resistance (2)</Description>
 				</Armour>
 				<Shield>
 					<Name>Ironskin Shield</Name>
 					<Points>50</Points>
-					<AddToArmour Val="6"/>
-					<AddToWard Val="4"/>
+					<AddToArmour>6</AddToArmour>
+					<AddToWard>4</AddToWard>
 					<Lore>This ancient iron bound shield is rusty and battered but its experience in battle gives the bearer much protection</Lore>
 					<Description>Counts as a shield (6+ armour save) which can be combined with other equipment normally. Also gives the bearer a 4+ Ward save</Description>
 				</Shield>
 				<Armour>
 					<Name>Armour of Gork</Name>
 					<Points>35</Points>
-					<AddToArmour Val="5"/>
+					<AddToArmour>5</AddToArmour>
 					<Reroll>ToArmour</Reroll>
 					<Lore>If armour is made with the correct rituals instead of just being bashed out of whatever bits of metal come to hand, it can be enchanted by a Shaman to offer extra protection</Lore>
 					<Description>Counts as wearing armour (5+ armour save) which can be combined with other equipment normally. The wearer may re-roll failed armour saves</Description>
@@ -234,7 +234,7 @@
 				<Shield>
 					<Name>Ugbkag's Lucky Shield</Name>
 					<Points>30</Points>
-					<AddToArmour Val="6"/>
+					<AddToArmour>6</AddToArmour>
 					<Rule>Discounts the first hit suffered in the battle</Rule>
 					<Lore>Ugbrag had this shield made for him by a captured Dwarf smith, but the smith 'forgot' to tell him that the enchantment only worked once in each battle</Lore>
 					<Description>Counts as a shield (6+ armour save) which can be combined with other equipment normally. Also, the bearer discounts the first hit suffered in the battle</Description>
@@ -243,7 +243,7 @@
 					<Name>Drog's Dead 'Ard Armour</Name>
 					<Points>30</Points>
 					<Only>Orc</Only>
-					<ArmourTo Val="6"/>
+					<ArmourTo>6</ArmourTo>
 					<Lore>Drog was one of the first Black Orcs to be seen to the west of the Worlds Edge Mountains and his battle scarred armour was made to an unusual design by unknown hands</Lore>
 					<Description>Gives the wearer a 1+ armour save that cannot be improved</Description>
 				</Armour>
@@ -251,8 +251,8 @@
 					<Name>Nobbla's 'Elmet</Name>
 					<Points>20</Points>
 					<Only>Goblin</Only>
-					<AddToArmour Val="6"/>
-					<AddToWard Val="6"/>
+					<AddToArmour>6</AddToArmour>
+					<AddToWard>6</AddToWard>
 					<Lore>Given that it was made by Gobbos Nobbla's ‘Elmet is a fantastic piece of workmanship given that it was made by Gobbos</Lore>
 					<Description>Gives the wearer a 6+ armour save and may be worn in addition to normal armour. Also gives the wearer a 6+ Ward save</Description>
 				</Additional>
@@ -268,14 +268,14 @@
 				<Additional>
 					<Name>Warboss Umm's Best Big Boss's 'at</Name>
 					<Points>30</Points>
-					<AddToWard Val="5"/>
+					<AddToWard>5</AddToWard>
 					<Lore>Originally this rune-encrusted and rather squashed looking helmet belonged to a Dwarf king or so legend tells Although it is a boon in combat it is far from infallible as its change in ownership attests</Lore>
 					<Description>Magical Boss's 'at wot protects you - giz you a 5+ Ward save dunnit. May be worn in addition to normal or magical armour</Description>
 				</Additional>
 				<Armour>
 					<Name>Magical Warpaint</Name>
 					<Points>25</Points>
-					<AddToWard Val="5"/>
+					<AddToWard>5</AddToWard>
 					<Lore>Some of the more reclusive and frequently madder Sat age Orc Shamans know the secret of preparing magical warpaint that is much more effective than the coloured mud that the warriors usually daub themselves with</Lore>
 					<Description>Savage Orcs only. If the wearer fails his armour save, he may make a 5+ Ward save. A model cannot wear any armour (not even magical) if it has the Magical Warpaint, though it may carry a shield</Description>
 				</Armour>
@@ -337,7 +337,7 @@
 					<Name>Warboss Imbad's Iron Gnashas</Name>
 					<Only>Orc</Only>
 					<Points>50</Points>
-					<AddToAttacks Val="1"/>
+					<AddToAttacks>1</AddToAttacks>
 					<KillingBlow/>
 					<Lore>A huge metal jaw plate that belonged to the infamous Imbad - his psychotic spirit lives on within it</Lore>
 					<Description>The character wearing the Gnashas gains +1 Attack in close combat. This additional attack counts as being made with the Killing Blow special ability</Description>
@@ -346,14 +346,14 @@
 					<Name>Effigy of Mork</Name>
 					<Only>Orc</Only>
 					<Points>40</Points>
-					<SubOpponentToHit Val="1"/>
+					<SubOpponentToHit>1</SubOpponentToHit>
 					<Lore>This ancient and slightly crumbly statue of Mork was formed from his own dung (or so they say) in some distant age. It has been credited with many different magical effects over the years, but whatever its power enemy warriors with a sense of smell recoil from its intense Orcyness</Lore>
 					<Description>Savage Orcs only. All close combat attacks that are made against the bearer are at -1 to hit</Description>
 				</Additional>
 				<Weapon>
 					<Name>Bigged's 'Ed Kickin Boots</Name>
 					<Points>40</Points>
-					<AddToAttacks Val="1"/>
+					<AddToAttacks>1</AddToAttacks>
 					<Lore>Bigged - an old and boastful Orc - made his last boast in front of an Empire cannon. Only his boots w ere recovered. His vengeful spirit lives on (the odour of his feet lingers forever)</Lore>
 					<Description>Iron-shod unpleasantness. In close combat the wearer gets one additional automatic hit at his basic Strength value in addition to his normal Attacks</Description>
 				</Weapon>
@@ -376,7 +376,7 @@
 					<Name>'Edbuttin' 'At</Name>
 					<Only>Orc</Only>
 					<Points>25</Points>
-					<AddToAttacks Val="1"/>
+					<AddToAttacks>1</AddToAttacks>
 					<Rule>One extra Attack with the Killing Blow special ability</Rule>
 					<Lore>'Eadbuttin contests are an old Orc favourite for resolving disputes and the greenskins aren't above a bit of magical cheating to help them win</Lore>
 					<Description>May only be used in challenges. The wearer gets one extra Attack, made before all other blows are struck. This Attack is made with the Killing Blow special ability and is resolved at the wearer's normal Strength. Even if the opponent is killed by the 'eadbutt, the character wearing the 'At should still make his remaining attacks to calculate overkill for combat resolution</Description>
@@ -394,7 +394,7 @@
 				<Banner>
 					<Name>Mork's Spirit-Totem</Name>
 					<Points>75</Points>
-					<MagicResistance Val="1"/>
+					<MagicResistance>1</MagicResistance>
 					<Rule>An anempt to dispel any enemy spell that isn't cast at the unit gains +1 to its Dispel roll</Rule>
 					<Rule>No enemy Wizard in contact with the unit</Rule>
 					<Lore>Morks Spirit-Totem is a flag or more often a carved effigy of the great god Mork. Through the totem's eyes he watches over the greenskins and protects them from bad spirits confounding the sorcery of enemy wizards</Lore>
@@ -404,7 +404,7 @@
 					<Name>Rowdy Grott's Big Red Raggedy Banner</Name>
 					<Only>Goblin</Only>
 					<Points>75</Points>
-					<AddToLeadership Val="1"/>
+					<AddToLeadership>1</AddToLeadership>
 					<Lore>The big red raggedy banner belonged to the rabble rousing Rowdy Grott Rowdy was an uppity Orc runtling who led a revolt of grotty Gobbos, Snots and litl'uns against his biggers and betters</Lore>
 					<Description>Common Goblins (including characters) in a unit with Rowdy Grott's Big Red Raggedy Banner get a +1 Leadership bonus up to a maximum value of 9</Description>
 				</Banner>
@@ -426,7 +426,7 @@
 				<Banner>
 					<Name>Gork's WAAAGH! banner</Name>
 					<Points>30</Points>
-					<AddToMovement Val="1"/>
+					<AddToMovement>1</AddToMovement>
 					<Lore>On the eve of battle the Greenskin shamans invoke the spirit of the great god Gork before the tribe's mighty Waaagh! banner. The banner is liberally daubed with vast quantities of Orc dung blood and spittle which will serve to absorb the battle thirst of Gork. The shamans whirl and dance insanely howling and gabbling in spirit talk all night long as the Waaagh! banner slowly grows in power. It also acquires a unique odour which is an unmistakable mark of tribal recognition</Lore>
 					<Description>The unit that carries Gork's Waaagh! banner adds +1 to its Movement value (i.e. +1" on its normal move and +2" on its charge and march) so long as it moves towards the closest enemy by the shortest route</Description>
 				</Banner>
@@ -466,7 +466,7 @@
 					<Hate/>
 					<ImmuneToPsychology/>
 					<General/>
-					<AddToCloseCombat Val="2"/>
+					<AddToCloseCombat>2</AddToCloseCombat>
 					<Slots>Hero, Special</Slots>
 					<IgnoreGreenskinPanic/>
 					<QuellAnimosity/>
@@ -474,17 +474,17 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Gitsnik</Name>
-						<AddToStrength Val="2"/>
+						<AddToStrength>2</AddToStrength>
 						<HitFirst/>
 					</HandWeapon>
 					<Armour>
 						<Name>Blood-forged Armour</Name>
-						<AddToArmour Val="1"/>
-						<AddToWard Val="5"/>
+						<AddToArmour>1</AddToArmour>
+						<AddToWard>5</AddToWard>
 					</Armour>
 					<Armour>
 						<Name>Mork's All-Seeing Eye</Name>
-						<MagicResistance Val="1"/>
+						<MagicResistance>1</MagicResistance>
 					</Armour>
 				</Equipments>
 			</Lord>
@@ -521,7 +521,7 @@
 					</Armour>
 					<Armour>
 						<Name>Warpaint</Name>
-						<AddToWard Val="5"/>
+						<AddToWard>5</AddToWard>
 					</Armour>
 				</Equipments>
 			</Lord>
@@ -926,7 +926,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Scaly skin</Name>
-						<AddToArmour Val="4"/>
+						<AddToArmour>4</AddToArmour>
 					</Armour>
 				</Equipments>
 			</Mount>
@@ -1220,7 +1220,7 @@
 				<Name>Night Goblin Squig Herd</Name>
 				<Points>16</Points>
 				<Size>5+</Size>
-				<ModelsInPack Val="2"/>
+				<ModelsInPack>2</ModelsInPack>
 				<Singleton/>
 				<Image>SquigHerd</Image>
 				<Lore>In times of need, Night Goblins have been known to drive their Squig herds into battle with devastating effect. An unpredictable asset on the battlefield, the ferocity of the Squigs attacks usually outweighs the catastrophic outcome that would happen should these creatures be let loose without the guidance of a Squig Herder.</Lore>
@@ -1250,12 +1250,12 @@
 				<Points>80</Points>
 				<Chariot>2</Chariot>
 				<Mount>Boar</Mount>
-				<ModelsInPack Val="4"/>
+				<ModelsInPack>4</ModelsInPack>
 				<Image>OrcChariot</Image>
 				<Lore>By lashing together roughly hewn logs, the otherwise dull-witted Orcs have managed to create through sheer luck and determination, crude yet formidable war chariots. With the weight of both the two Boars and the chariot itself, this shock cavalry has the potential to break apart even the thickest of enemy formations so long as the chariot still holds together.</Lore>
 				<Profile M='7' WS='3' BS='0' S='3' T='5' W='4' I='2' A='1' Ld='7' AS='4'/>
 				<SpecialRules>
-					<ImpactHit Val="D6"/>
+					<ImpactHit>D6</ImpactHit>
 					<TuskerCharge/>
 					<Original>Scythed wheel</Original>
 				</SpecialRules>
@@ -1272,12 +1272,12 @@
 				<Points>60</Points>
 				<Chariot/>
 				<Mount>Wolf</Mount>
-				<ModelsInPack Val="5"/>
+				<ModelsInPack>5</ModelsInPack>
 				<Image>WolfChariot</Image>
 				<Lore>Of the same ramshackle design as the Boar Chariot, these less-durable yet faster moving chariots are instead drawn by two of the largest wolves within a tribe, and are directed into battle where they can be used as a firing platform or to smash open enemy formations.</Lore>
 				<Profile M='9' WS='3' BS='0' S='3' T='4' W='3' I='2' A='1' Ld='6' AS='5'/>
 				<SpecialRules>
-					<ImpactHit Val="D6"/>
+					<ImpactHit>D6</ImpactHit>
 					<Original>Scythed wheel</Original>
 				</SpecialRules>
 				<Equipments>
@@ -1293,7 +1293,7 @@
 			<Special>
 				<Name>Goblin Rock Lobber</Name>
 				<Points>70</Points>
-				<ModelsInPack Val="3"/>
+				<ModelsInPack>3</ModelsInPack>
 				<Image>RockLobber</Image>
 				<Lore>A primitive version of the Trebuchet, the Orcs and Goblins were first introduced to catapults shortly after they encountered the Dwarfs. These siegecrafts are deployed singularly or in batteries to help soften up enemy formations, smash defensive positions, or to toss Orc warriors over the battlements and into the city. Due to the technicality of the siegecraft, they are often handled by a crew of Goblins rather then Orcs.</Lore>
 				<Profile M='0' WS='2' BS='3' S='3' T='7' W='3' I='2' A='1' Ld='6'/>
@@ -1310,7 +1310,7 @@
 			<Special>
 				<Name>Goblin Spear Chukka</Name>
 				<Points>35</Points>
-				<ModelsInPack Val="3"/>
+				<ModelsInPack>3</ModelsInPack>
 				<Image>SpearChukka</Image>
 				<Lore>A primitive version of the ballista or spear thrower, this artillery piece has been used extensively by the Orcs and Goblins as a way to impale large monsters from a safe distance. Made from gathered material such as wood, metal and bone, these Ballistas are easily built, easily transported and easily maintained, making them a popular choice for many types of Warbosses.</Lore>
 				<Profile M='0' WS='2' BS='3' S='3' T='7' W='3' I='2' A='1' Ld='6'/>
@@ -1345,7 +1345,7 @@
 			<Rare>
 				<Name>Goblin Doom Diver Catapult</Name>
 				<Points>80</Points>
-				<ModelsInPack Val="3"/>
+				<ModelsInPack>3</ModelsInPack>
 				<Image>DoomDiver</Image>
 				<Lore>First developed as a means for nomadic Goblin tribes to scout the surrounding areas of their territory, the Doom Diver Catapult have since been used extensively as long-range artillery. A Goblin known as Doom Diver would be used live ammunition for this artillery piece, where the Goblin's leathery wings allow it to glide to a specific target where he may impale his victim with the top of his pointy helmet.</Lore>
 				<Profile M='0' WS='2' BS='3' S='3' T='7' W='3' I='2' A='1' Ld='6'/>
@@ -1367,7 +1367,7 @@
 				<SpecialRules>
 					<Unbreakable/>
 					<LargeBase/>
-					<ImpactHit Val="D6"/>
+					<ImpactHit>D6</ImpactHit>
 					<Original>Snotling Pump Wagon</Original>
 				</SpecialRules>
 				<Equipments>
