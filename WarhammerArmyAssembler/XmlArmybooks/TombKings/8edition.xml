@@ -79,7 +79,7 @@
 					<Name>Destroyer of Eternities</Name>
 					<Points>80</Points>
 					<Only>Infantry</Only>
-					<AddToStrength Val="2"/>
+					<AddToStrength>2</AddToStrength>
 					<HeroicKillingBlow/>
 					<Lore>The bloodthirsty King Nekhesh was the first to wield this massive, ornate blade in battle, severing limbs and heads with every sweeping blow. Imbued with powerful incantations, the blade of this weapon is impossibly sharp and can cleave through armour, flesh and bone with equal ease. Furthermore, this weapon is said to destroy the souls of its victims, thereby denying them any hope of reaching the afterlife. The Destroyer of Eternities was thus greatly feared in ancient Nehekhara, and to be slain by its cursed blade was considered a fate infinitely worse than mere death</Lore>
 					<Description>Tomb King on foot only. Attacks made with the Destroyer of Eternities are at +2 Strength, and have the Heroic Killing Blow special rule. The wielder can choose to exchange all of his Attacks to make a special 'Sweeping Attack' - if he does so, all enemy models in base contact with the wielder suffer a single automatic hit (also at +2 Strength and with Heroic Killing Blow). If a target is a character riding a chariot or monster, then both the rider and mount each take a single automatic hit. In a challenge, only the models engaged in the challenge count as being in base contact with the Tomb King</Description>
@@ -161,7 +161,7 @@
 				<Additional>
 					<Name>Helm of Discord</Name>
 					<Points>30</Points>
-					<AddToArmour Val="6"/>
+					<AddToArmour>6</AddToArmour>
 					<Test Bet="Pass" Context="Round" Profile="Leadership"/>
 					<Description>The wearer counts his armour save as being one point higher than normal. In addition, at the start of each Close Combat phase, choose an enemy character in base contact with the bearer or his unit. That character must immediately take a Leadership test. If the test is failed, the character succumbs to the helm's sibilant whispers of malice and jealousy. In this Close Combat phase, the victim cannot make attacks and is hit automatically</Description>
 				</Additional>
@@ -266,8 +266,8 @@
 					</Armour>
 					<Armour>
 						<Name>The Scarab Brooch of Usirian</Name>
-						<AddToWard Val="4"/>
-						<MagicResistance Val="1"/>
+						<AddToWard>4</AddToWard>
+						<MagicResistance>1</MagicResistance>
 					</Armour>
 				</Equipments>
 			</Lord>
@@ -321,8 +321,8 @@
 					</RangeWeapon>
 					<Arcana>
 						<Name>The Liber Mortis</Name>
-						<AddToCast Val="1"/>
-						<AddToWizard Val="1"/>
+						<AddToCast>1</AddToCast>
+						<AddToWizard>1</AddToWizard>
 					</Arcana>
 				</Equipments>
 				<Options>
@@ -485,7 +485,7 @@
 					<HandWeapon/>
 					<HandWeapon>
 						<Name>Whip</Name>
-						<AddToAttacks Val="1"/>
+						<AddToAttacks>1</AddToAttacks>
 					</HandWeapon>
 					<LightArmour/>
 				</Equipments>
@@ -580,7 +580,7 @@
 					<HandWeapon/>
 					<HandWeapon>
 						<Name>Whip</Name>
-						<AddToAttacks Val="1"/>
+						<AddToAttacks>1</AddToAttacks>
 					</HandWeapon>
 					<LightArmour/>
 				</Equipments>
@@ -642,10 +642,10 @@
 				<Name>Skeleton Chariot</Name>
 				<Size>3+</Size>
 				<Chariot>2</Chariot>
-				<ModelsInPack Val="4"/>
+				<ModelsInPack>4</ModelsInPack>
 				<Profile M='8' WS='2' BS='2' S='3' T='4' W='3' I='2' A='2' Ld='7' AS='4'/>
 				<SpecialRules>
-					<ImpactHit Val="D6+1"/>
+					<ImpactHit>D6+1</ImpactHit>
 					<Undead/>
 				</SpecialRules>
 			</Mount>
@@ -775,12 +775,12 @@
 				<Size>3+</Size>
 				<Chariot>2</Chariot>
 				<Mount>Skeletal Steed</Mount>
-				<ModelsInPack Val="4"/>
+				<ModelsInPack>4</ModelsInPack>
 				<Image>Chariots</Image>
 				<Lore>The Skeleton Chariots of the Tomb Kings Charioteer Legions are considered the pride of Nehekhara's army. Their advance is heralded by a cloud of dust thrown high into the air as they drive across the sands. Moments later, units of these deadly machines crest the dunes, their wheels whirring as they careen towards their foe. The legions impact with bone-shattering force, wave after wave of chariots crushing bodies beneath heavy wheels as their Undead crew lay about the disorientated foe with lethal effect.</Lore>
 				<Profile M='8' WS='3' BS='2' S='3' T='4' W='3' I='2' A='2' Ld='7' AS='4'/>
 				<SpecialRules>
-					<ImpactHit Val="D6+1"/>
+					<ImpactHit>D6+1</ImpactHit>
 					<Undead/>
 					<Original>
 						<Rule>Characters in a Tomb Kings army that have a chariot (including Settra the Imperishable's Chariot of the Gods) can join a unit of Skeleton Chariots. They can remain with the unit even if their mount is destroyed but, if they subsequently leave the unit whilst on foot, they will not be able to rejoin it, or join another unit of Skeleton Chariots</Rule>
@@ -864,7 +864,7 @@
 					<KillingBlow/>
 					<PoisonAttack/>
 					<LargeBase/>
-					<MagicResistance Val="1"/>
+					<MagicResistance>1</MagicResistance>
 					<Original>
 						<Rule>Ambushers special rule</Rule>
 					</Original>
@@ -890,14 +890,14 @@
 				<Options>
 					<Option>
 						<Name>Great bow</Name>
-						<AddToStrength Val="-2"/>
+						<AddToStrength>-2</AddToStrength>
 						<HitLast/>
 						<Dependency/>
 					</Option>
 					<Option>
 						<Name>Additional hand weapon</Name>
-						<AddToStrength Val="-2"/>
-						<AddToAttacks Val="1"/>
+						<AddToStrength>-2</AddToStrength>
+						<AddToAttacks>1</AddToAttacks>
 						<Dependency/>
 					</Option>
 					<Command>
@@ -1038,7 +1038,7 @@
 			<Rare>
 				<Name>Screaming Skull Catapult</Name>
 				<Points>90</Points>
-				<ModelsInPack Val="4"/>
+				<ModelsInPack>4</ModelsInPack>
 				<Mount>Skeleton Crew</Mount>
 				<Lore>The Screaming Skull Catapults of a Tomb King's eternal army are akin to the stone throwers of other races, but instead of flinging rocks at the foe, they throw volleys of flaming skulls. The Liche Priests cast terrible curses upon every one of these skulls, enchanting them so that they scream hideously as they are hurled through the air, rising to a deafening crescendo just before they strike their target.</Lore>
 				<Profile M='4' WS='2' BS='2' S='3' T='7' W='3' I='2' A='1' Ld='5'/>
@@ -1058,7 +1058,7 @@
 			<Rare>
 				<Name>Casket of Souls</Name>
 				<Points>135</Points>
-				<ModelsInPack Val="4"/>
+				<ModelsInPack>4</ModelsInPack>
 				<Mount>Casket Guard</Mount>
 				Casketa of Souls are mighty magical sarcophagus used by the Tomb Kings to capture and then summon forth the spirits of those that have tried to defile the lands of Nehekhara only to die a horrid and agonising death. At the heart of each tomb of the mightiest kings there lies a casket, sealed with pitch and inscribed with hieroglyphs of malediction and warning. Within this sacred sarcophagus reside the tormented souls of those who have committed the sacrilege of inciting a Tomb King's wrath.
 				<Profile T="10" W="3"/>
