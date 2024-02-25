@@ -135,7 +135,7 @@
 				<Weapon>
 					<Name>Hellfire sword</Name>
 					<Points>75</Points>
-					<MultiWounds Val="D3+1"/>
+					<MultiWounds>D3+1</MultiWounds>
 					<Rule>Flaming attacks</Rule>
 					<Lore>This blade was made from a single, searing flame that was hammered into material form and quenched in the blood of a fire-djinn. Its fierce heat is released upon its victims as each blow is struck</Lore>
 					<Description>Flaming attacks. Each unsaved wound caused by the Hellfire Sword causes not one but D3+1 wounds</Description>
@@ -143,7 +143,7 @@
 				<Weapon>
 					<Name>Sword of Change</Name>
 					<Points>65</Points>
-					<AddToStrength Val="1"/>
+					<AddToStrength>1</AddToStrength>
 					<Rule>Every time an enemy character or monster takes an unsaved wound it must take a Toughness test: if the test is failed, the victim becomes a repulsive Spawn-thing, all enemy models in base contact with the victim take a S4 hit, the victim is then removed from play</Rule>
 					<Lore>The Sword of Change has the power to reduce those it pierces into mindless, flailing mounds of flesh</Lore>
 					<Description>Confers +1 Strength. Every time an enemy character or monster takes an unsaved wound from the Sword of Change it must take a Toughness test. If the test is failed, the victim becomes a repulsive Spawn-thing. All enemy models in base contact with the victim take a S4 hit as the Spawn-thing flails wildly in its death throes (unsaved wounds will count towards combat resolution). The victim is then removed from play</Description>
@@ -151,9 +151,9 @@
 				<Weapon>
 					<Name>Chaos Runesword</Name>
 					<Points>50</Points>
-					<AddToWeaponSkill Val="1"/>
-					<AddToStrength Val="1"/>
-					<AddToAttacks Val="1"/>
+					<AddToWeaponSkill>1</AddToWeaponSkill>
+					<AddToStrength>1</AddToStrength>
+					<AddToAttacks>1</AddToAttacks>
 					<Lore>These evil blades were forged from black gromril by the Dwarf Runesmith Grugni Ironheart, a secret worshipper of the Chaos Gods</Lore>
 					<Description>The wielder gains +1 Weapon Skill, +1 Strength and +1 Attack</Description>
 				</Weapon>
@@ -190,7 +190,7 @@
 					<Name>Axe of Khorn</Name>
 					<Points>45</Points>
 					<KillingBlow/>
-					<AddToStrength Val="1"/>
+					<AddToStrength>1</AddToStrength>
 					<Lore>This blood{orged axe is a sign of Khorne's favour, and unerringly severs heads so that yet more skulls might be laid at Khorne's feet</Lore>
 					<Description>This axe confers +1 Strength and the Killing Blow special rule upon the bearer</Description>
 				</Weapon>
@@ -228,15 +228,15 @@
 				<Armour>
 					<Name>Skinhidden Plate</Name>
 					<Points>60</Points>
-					<AddToArmour Val="4"/>
-					<AddToToughness Val="1"/>
+					<AddToArmour>4</AddToArmour>
+					<AddToToughness>1</AddToToughness>
 					<Lore>Over time this armour has sank beneath the skin of the wearer, giving him a terribly distorted appearance but dramatically increased resilience</Lore>
 					<Description>Chaos armour. The Skinhidden Plate confers +1 Toughness upon the wearer</Description>
 				</Armour>
 				<Shield>
 					<Name>Chaos Runeshield</Name>
 					<Points>50</Points>
-					<AddToArmour Val="6"/>
+					<AddToArmour>6</AddToArmour>
 					<Rule>Negates the power of any magic or runic weapons carried by models in base contact</Rule>
 					<Lore>This shield was created by bitter Chaos Dwarf forgemasters as a defence against the runeweapons of the sons of Grungni</Lore>
 					<Description>Shield. Negates the power of any magic or runic weapons carried by models in base contact - treat them as ordinary non-magical weapons of their type</Description>
@@ -244,7 +244,7 @@
 				<Armour>
 					<Name>Armour of Damnation</Name>
 					<Points>45</Points>
-					<AddToArmour Val="4"/>
+					<AddToArmour>4</AddToArmour>
 					<Reroll>OpponentToHit</Reroll>
 					<Lore>This ornate suit of Chaos armour shimmers with the eldritch energies of the Chaos Wastes, distorting the wearer's outline and clouding its foes' minds</Lore>
 					<Description>Chaos armour. Any model striking the wearer in close combat must re-roll successful rolls to hit</Description>
@@ -252,7 +252,7 @@
 				<Armour>
 					<Name>Crimson Armour of Dargan</Name>
 					<Points>40</Points>
-					<AddToArmour Val="4"/>
+					<AddToArmour>4</AddToArmour>
 					<NoKillingBlow/>
 					<NoMultiWounds/>
 					<Lore>The rich crimson metal of this armour flares into a storm of blood-coloured light when its wearer wills it, dazzling those who would strike him a mortal blow</Lore>
@@ -261,15 +261,15 @@
 				<Armour>
 					<Name>Armour of Morrslieb</Name>
 					<Points>35</Points>
-					<AddToArmour Val="4"/>
-					<AddToWard Val="4"/>
+					<AddToArmour>4</AddToArmour>
+					<AddToWard>4</AddToWard>
 					<Lore>This artefact was not forged but hewn from rock; rock that was once part of the Chaos moon Morrslieb</Lore>
 					<Description>Chaos armour. Confers a 4+ Ward save against non-magical attacks</Description>
 				</Armour>
 				<Armour>
 					<Name>The Bronze Armour of Zhrakk</Name>
 					<Points>15</Points>
-					<AddToArmour Val="4"/>
+					<AddToArmour>4</AddToArmour>
 					<ImmuneToPsychology/>
 					<NoKillingBlow/>
 					<NotALeader/>
@@ -310,8 +310,8 @@
 				<Weapon>
 					<Name>Collar of Khorne</Name>
 					<Points>25</Points>
-					<AddToWard Val="6"/>
-					<MagicResistance Val="2"/>
+					<AddToWard>6</AddToWard>
+					<MagicResistance>2</MagicResistance>
 					<Lore>The Champion has bested a Flesh Hound of Khorne in unarmed combat and won the right to wear the beast's rune-etched collar around his own neck</Lore>
 					<Description>The model with the Collar of Khorne has Magic Resistance (2) and a 6+ Ward save</Description>
 				</Weapon>
@@ -357,7 +357,7 @@
 				<Arcane>
 					<Name>Power Familiar</Name>
 					<Points>25</Points>
-					<AddToCast Val="1"/>
+					<AddToCast>1</AddToCast>
 					<Lore>The Familiar acts as a tiny magnet for the inconstant zephyrs that power its master's spells</Lore>
 					<Description>The familiar adds one power dice to its owner's pool during each friendly Magic phase</Description>
 				</Arcane>
@@ -398,7 +398,7 @@
 					<Dependencies>
 						<Off>Mark of Khorne</Off>
 					</Dependencies>
-					<AddToCast Val="1"/>
+					<AddToCast>1</AddToCast>
 					<Rule>Knows a random spell from the Lore of Fire, Shadow or Death (player's choice)</Rule>
 					<Rule>Roll 1D6+1 instead of 2D6 on the Miscast table</Rule>
 					<Lore>Tbe Book of Secrets contains many dark truths, but all too often the price of such knowledge is life itsel</Lore>
@@ -499,10 +499,10 @@
 				<Profile M='4' WS='9' BS='5' S='5' T='5' W='4' I='7' A='5' Ld='10'/>
 				<SpecialRules>
 					<ImmuneToPsychology/>
-					<SubOpponentToHit Val="1"/>
+					<SubOpponentToHit>1</SubOpponentToHit>
 					<ImmuneToPoison/>
 					<EyeOfGods/>
-					<MagicResistance Val="2"/>
+					<MagicResistance>2</MagicResistance>
 					<Original>
 						<Rule>+1 to cast all spells</Rule>
 						<Rule>Troops within 18" may use his Leadership instead of the normal 12"</Rule>
@@ -518,7 +518,7 @@
 					</HandWeapon>
 					<Armour>
 						<Name>The Armour of Morkar</Name>
-						<ArmourTo Val="1"/>
+						<ArmourTo>1</ArmourTo>
 						<Rule>No attack against him may ever have a better chance to wound him than a 3+ roll</Rule>
 					</Armour>
 					<Armour>
@@ -528,7 +528,7 @@
 					</Armour>
 					<Armour>
 						<Name>The Eye of Sheerian</Name>
-						<AddToWard Val="3"/>
+						<AddToWard>3</AddToWard>
 					</Armour>
 				</Equipments>
 			</Lord>
@@ -555,7 +555,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Mark of Tzeentch</Name>
-						<AddToWard Val="6"/>
+						<AddToWard>6</AddToWard>
 					</Armour>
 				</Equipments>
 			</Lord>
@@ -577,11 +577,11 @@
 					<HandWeapon>
 						<Name>Sliverslash</Name>
 						<HitFirst/>
-						<AddToAttacks Val="2"/>
+						<AddToAttacks>2</AddToAttacks>
 					</HandWeapon>
 					<Armour>
 						<Name>Auric Armour</Name>
-						<AddToArmour Val="1"/>
+						<AddToArmour>1</AddToArmour>
 						<Regeneration/>
 					</Armour>
 					<Shield/>
@@ -612,11 +612,11 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Starcrusher</Name>
-						<MultiWounds Val="D3"/>
+						<MultiWounds>D3</MultiWounds>
 					</HandWeapon>
 					<Armour>
 						<Name>Armour of the Storm</Name>
-						<AddToArmour Val="5"/>
+						<AddToArmour>5</AddToArmour>
 						<Rule>If any lightning-based spell targets a unit within 12" of Kholek, the spell's effects are redirected toward Kholek instead</Rule>
 					</Armour>
 				</Equipments>
@@ -639,13 +639,13 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>The Spear Slaupnir</Name>
-						<ArmourPiercing Val="1"/>
-						<ChargeStrengthBonus Val="2"/>
+						<ArmourPiercing>1</ArmourPiercing>
+						<ChargeStrengthBonus>2</ChargeStrengthBonus>
 						<KillingBlow/>
 					</HandWeapon>
 					<Armour>
 						<Name>The Scarlet Armour</Name>
-						<AddToArmour Val="3"/>
+						<AddToArmour>3</AddToArmour>
 						<Rule>Armour reduces the Strength of any attack against Valkia by 1 (to a minimum of 1)</Rule>
 					</Armour>
 					<Armour>
@@ -676,7 +676,7 @@
 					<ChaosArmour/>
 					<Armour>
 						<Name>Mark of Tzeentch</Name>
-						<AddToWard Val="6"/>
+						<AddToWard>6</AddToWard>
 					</Armour>
 				</Equipments>
 			</Lord>
@@ -773,7 +773,7 @@
 				<Lore>Festus is a Chaos Sorcerer and Exalted Champion of Nurgle. Festus was a once-famous Imperial physician of Nordland who sold his soul to Nurgle in exchange for the knowledge of how to cure all disease. The knowledge corrupted him and transformed him into a madman who now seeks only to learn enough to spread the plagues and diseases he once combatted. Festus now travels the roads of the Old World accompanied by an army in the service of Nurgle. He has been known to take captives to serve as test subjects for his latest pestilential concoctions.</Lore>
 				<Profile M='4' WS='4' BS='2' S='4' T='4' W='2' I='2' A='2' Ld='8'/>
 				<SpecialRules>
-					<ExtendedRegeneration Val="5"/>
+					<ExtendedRegeneration>5</ExtendedRegeneration>
 					<WillOfChaos/>
 					<EyeOfGods/>
 					<Original>When making a pursuit move, Festus and any unit he is with will only pursue 1D6" as they begin to bind their captives; enemy units caught by Festus or his unit are worth double victory points</Original>
@@ -920,7 +920,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Scaly skin</Name>
-						<AddToArmour Val="3"/>
+						<AddToArmour>3</AddToArmour>
 					</Armour>
 				</Equipments>
 			</Mount>
@@ -965,7 +965,7 @@
 				<Profile M='7' WS='5' BS='0' S='5' T='4' W='1' I='2' A='2' Ld='7' AS='4'/>
 				<SpecialRules>
 					<Fear/>
-					<MagicResistance Val="1"/>
+					<MagicResistance>1</MagicResistance>
 					<Original>
 						<Rule>Breath Behemoth</Rule>
 					</Original>
@@ -1249,7 +1249,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Ensorcelled weapon</Name>
-						<AddToStrength Val="1"/>
+						<AddToStrength>1</AddToStrength>
 					</HandWeapon>
 					<ChaosArmour/>
 					<Shield/>
