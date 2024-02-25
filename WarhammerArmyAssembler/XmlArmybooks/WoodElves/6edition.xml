@@ -138,7 +138,7 @@
 				<Weapon>
 					<Name>An Annoyance of Netlings</Name>
 					<Points>25</Points>
-					<OpponentHitOn Val="6"/>
+					<OpponentHitOn>6</OpponentHitOn>
 					<Lore>These spites commonly take the form of spider-like creatures, scurrying over their host with feverish abandon. Any enemy that attempts to strike a being that is under the protection of Netlings is likely to find their weapon snagged in a web of magical filaments</Lore>
 					<Description>In a challenge, any enemy attempting to strike a character with an Annoyance of Netlings will only hit on 6+</Description>
 				</Weapon>
@@ -160,7 +160,7 @@
 					<Name>A Cluster of Radiants</Name>
 					<Points>25</Points>
 					<Only>Treemen</Only>
-					<AddToDispell Val="1"/>
+					<AddToDispell>1</AddToDispell>
 					<Lore>Radiants are unusual glowing Spites that usually manifest as little more than a blurred shape of pure light, though they appear in all manner of colours. They are often seen circling the most ancient of trees, and will shy away from Elves or other mortal creatures. Sometimes they will take more solid form, and appear like small Elven figures. They act as sponges for magical energy, sapping the power of enemy mages</Lore>
 					<Description>Treemen Ancients and Branchwraiths only. A character with Radiants may add one extra dice to their Dispel pool in their opponent's Magic phase</Description>
 				</Weapon>
@@ -242,7 +242,7 @@
 				<Weapon>
 					<Name>Rageth's Wildfire Blades</Name>
 					<Points>10</Points>
-					<AddToAttacks Val="1"/>
+					<AddToAttacks>1</AddToAttacks>
 					<Rule>Flaming attacks</Rule>
 					<Lore>When drawn, the blades of these swords burn with a magical flame that cannot be extinguished</Lore>
 					<Description>Counts as two hand weapons. Any attacks made with these weapons count as Flaming</Description>
@@ -259,7 +259,7 @@
 				<Armour>
 					<Name>The Oaken Armour</Name>
 					<Points>50</Points>
-					<AddToArmour Val="6"/>
+					<AddToArmour>6</AddToArmour>
 					<Regeneration/>
 					<Lore>Said to have been crafted by Daith himself, this armour binds the lifeforce of its bearer to that of Athel Loren, keeping them safe from harm</Lore>
 					<Description>Counts as light armour (6+ Armour Save) that can be combined with other equipment as normal. The Oaken Armour gives the wearer the Regeneration ability</Description>
@@ -267,7 +267,7 @@
 				<Armour>
 					<Name>Railarian's Mantle</Name>
 					<Points>50</Points>
-					<AddToArmour Val="6"/>
+					<AddToArmour>6</AddToArmour>
 					<Rule>4+ Ward Save within 6" of a Wood</Rule>
 					<Lore>Woven and bound by the oldest of Branchwraiths for the first Elven guardian of the sacred trees, this armour is only gifted to one chosen by Athel Loren itself</Lore>
 					<Description>Counts as light armour (6+ Armour Save) that can be combined with other equipment as normal. If the wearer is within 6" of a Wood he receives a 4+ Ward Save</Description>
@@ -275,7 +275,7 @@
 				<Armour>
 					<Name>Armour of the Fey</Name>
 					<Points>35</Points>
-					<AddToArmour Val="6"/>
+					<AddToArmour>6</AddToArmour>
 					<Rule>4+ Ward Save against any magical close combat attacks</Rule>
 					<Lore>In Bretonnia, there are tales of a solitary Elf knight who, when brought to battle, could not be slain for his armour kept him safe against the lances and magical blades of his foes. Ultimately, so the tale recounts, this knight was slain by a peasant woman whom he had lured away from Iter family — his throat cut by a simple knife</Lore>
 					<Description>Counts as light armour (6+ Armour Save) that can be combined with other equipment as normal. Against any magical close combat attacks, the wearer receives a 4+ Ward Save</Description>
@@ -283,7 +283,7 @@
 				<Additional>
 					<Name>The Helm of the Hunt</Name>
 					<Points>20</Points>
-					<AddToArmour Val="6"/>
+					<AddToArmour>6</AddToArmour>
 					<Rule>+1 Attack and +1 Weapon Skill in charge</Rule>
 					<Lore>This enchanted helm imbues the wearer with the spirit and fury of Orion</Lore>
 					<Description>This helm confers a 6+ Armour Save that can be combined with other equipment as normal (including normal armour and a shield). When the character charges he receives +1 Attack and +1 Weapon Skill for that round of combat</Description>
@@ -292,7 +292,7 @@
 					<Name>Briarsheath</Name>
 					<Points>20</Points>
 					<Only>Infantry</Only>
-					<AddToArmour Val="6"/>
+					<AddToArmour>6</AddToArmour>
 					<Rule>Enemies wishing to target the model with a shooting attack suffer an additional -1 to hit penalty</Rule>
 					<Lore>The writhing thorns and brambles of this armour work their way into the bearer's surroundings, rendering him invisible to all but the most observant foe</Lore>
 					<Description>Counts as light armour (6+ Armour Save) that can be combined with other equipment as normal. Enemies wishing to target the model wearing the Briarsheath with a shooting attack suffer an additional -1 to hit penalty. This is increased to -2 if the wearer is within a wood</Description>
@@ -302,7 +302,7 @@
 				<Additional>
 					<Name>The Rhymer's Harp</Name>
 					<Points>75</Points>
-					<AddToWard Val="5"/>
+					<AddToWard>5</AddToWard>
 					<Rule>May move through all kinds of difficult terrain without penalty</Rule>
 					<Lore>Yimas the Rhymer was a renowned songsmith of Athel Loren, whose errantries at the side of Naieth the Prophetess have long since passed into folklore. Though their journeys were many and dangerous, the enchanted notes of Yimas’s harp granted them speed and sanctuary</Lore>
 					<Description>This item bestows a 5+ Ward Save on the bearer, their mount, and any unit they join. In addition, the bearer, their mount, and any unit they join may move through all kinds of difficult terrain without penalty</Description>
@@ -310,7 +310,7 @@
 				<Additional>
 					<Name>Amaranthine Brooch</Name>
 					<Points>35</Points>
-					<AddToWard Val="3"/>
+					<AddToWard>3</AddToWard>
 					<Rule>Ward Save cannot be used against magical attacks</Rule>
 					<Lore>Fashioned from the petals of a flower that endures throughout all the seasons, the magic of this brooch can sustain the wearer no matter how grievous his wounds</Lore>
 					<Description>Grants the bearer a 3+ Ward Save that cannot be used against magical attacks</Description>
@@ -326,7 +326,7 @@
 				<Additional>
 					<Name>Stone of the Crystal Mere</Name>
 					<Points>30</Points>
-					<AddToWard Val="3"/>
+					<AddToWard>3</AddToWard>
 					<Rule>If Ward Save is ever failed, then the Ward Save is lost for the rest of the game</Rule>
 					<Lore>The stone is a beautiful, faultless crystal that was plucked from a deep river bed and gifted to the warrior hero Naithal. It protects the bearer from harm, but is fragile and will shatter into a million pieces should it fail in its purpose</Lore>
 					<Description>The bearer of the stone gains a 3+ Ward Save, as does any creature ridden by the bearer. However, if this Ward Save is ever failed, then the stone shatters and the Ward Save is lost for the rest of the game</Description>
@@ -342,14 +342,14 @@
 				<Additional>
 					<Name>Stone of Rebirth</Name>
 					<Points>30</Points>
-					<WardForLastWound Val="2"/>
+					<WardForLastWound>2</WardForLastWound>
 					<Lore>Blessed by the wardens of Athel Loren’s innergroves, the Stone of Rebirth bestows its bearer with the promise that life shall spring anew from death</Lore>
 					<Description>When the wearer is reduced to one Wound this item bestows a 2+ Ward Save</Description>
 				</Additional>
 				<Additional>
 					<Name>The Fimbulwinter Shard</Name>
 					<Points>25</Points>
-					<SubOpponentToHit Val="1"/>
+					<SubOpponentToHit>1</SubOpponentToHit>
 					<Rule>Any creatures with the Forest Spirit special rule suffer from Stupidity while the bearer is within 6"</Rule>
 					<Lore>The very air itself is chilled by the presence of this ancient talisman whose runes proclaim a time in which all life is lost beneath a blanket of ice</Lore>
 					<Description>Opponents suffer a -1 to hit the bearer and his mount in close combat. Any creatures with the Forest Spirit special rule suffer from Stupidity while the bearer is within 6"</Description>
@@ -535,11 +535,11 @@
 					</RangeWeapon>
 					<Armour>
 						<Name>Cloak of Isha</Name>
-						<AddToDispell Val="2"/>
+						<AddToDispell>2</AddToDispell>
 					</Armour>
 					<Armour>
 						<Name>Horn of the Wild Hunt</Name>
-						<AddToWard Val="5"/>
+						<AddToWard>5</AddToWard>
 						<Rule>Then Orion declare a first charge in game, all enemies within 18" must take a Panic test</Rule>
 					</Armour>
 				</Equipments>
@@ -567,7 +567,7 @@
 					<General/>
 					<Reroll>ToHit</Reroll>
 					<Original>
-						<AddToDispell Val="2"/>
+						<AddToDispell>2</AddToDispell>
 						<Rule>Spirit-walker</Rule>
 						<Rule>For each wounds suffers, she gains an additional attack for remainder of the game</Rule>
 						<Rule>Drycha's army</Rule>
@@ -737,7 +737,7 @@
 				<Profile M='10' WS='5' BS='0' S='4' T='4' W='3' I='5' A='2' Ld='8'/>
 				<SpecialRules>
 					<LargeBase/>
-					<MagicResistance Val="2"/>
+					<MagicResistance>2</MagicResistance>
 					<Original>
 						<Rule>Impale</Rule>
 					</Original>
@@ -818,7 +818,7 @@
 					<HandWeapon>Eternal Guard weapon</HandWeapon>
 					<Armour>
 						<Name>Eternal Guard armour</Name>
-						<AddToArmour Val="5"/>
+						<AddToArmour>5</AddToArmour>
 					</Armour>
 				</Equipments>
 				<Options>
@@ -859,7 +859,7 @@
 				<SpecialRules>
 					<ImmuneToPsychology/>
 					<Skirmishers/>
-					<MagicResistance Val="1"/>
+					<MagicResistance>1</MagicResistance>
 					<Original>
 						<Rule>Shadow Dances of Loec</Rule>
 					</Original>
@@ -907,7 +907,7 @@
 					<HitFirst/>
 					<Fear/>
 					<Frenzy/>
-					<MagicResistance Val="1"/>
+					<MagicResistance>1</MagicResistance>
 					<FastCavalry/>
 					<Original>
 						<Rule>The Wild Hunt</Rule>
