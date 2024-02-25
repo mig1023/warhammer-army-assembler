@@ -110,35 +110,35 @@
 				<Additional>
 					<Name>Many-Limbed Fiend</Name>
 					<Points>20</Points>
-					<AddToAttacks Val="1"/>
+					<AddToAttacks>1</AddToAttacks>
 					<Lore>The Beastman has sprouted additional arms, allowing him to unleash yet more carnage upon the battlefield</Lore>
 					<Description>The model may make a bonus attack in addition to his normal attacks. This bonus attack is always at the model's basic Strength and is never augmented by equipment or magic weapons</Description>
 				</Additional>
 				<Additional>
 					<Name>Gouge-Tusks</Name>
 					<Points>15</Points>
-					<ArmourPiercing Val="1"/>
+					<ArmourPiercing>1</ArmourPiercing>
 					<Lore>The Beastman's lower incisors have grown into sharp or excessively large tusks</Lore>
 					<Description>All of the model's close combat attacks are armour piercing</Description>
 				</Additional>
 				<Additional>
 					<Name>Gnarled Hide</Name>
 					<Points>15</Points>
-					<AddToArmour Val="5"/>
+					<AddToArmour>5</AddToArmour>
 					<Lore>The Beastman's skin has encysted, forming a layer of crusty natural armour as tough as chainmail</Lore>
 					<Description>The model has a scaly skin save of 5+, which is cumulative with other armour as normal</Description>
 				</Additional>
 				<Additional>
 					<Name>Rune of The True Beast</Name>
 					<Points>15</Points>
-					<SubOpponentToHit Val="1"/>
+					<SubOpponentToHit>1</SubOpponentToHit>
 					<Lore>The bearer was born with a rare and potent rune marked on his flesh, a sigil of pure savagery that marks the individual out as nothing more than a ravenous mass of muscle and fangs. Even the strongest beast will cower before the unbridled ferocity of this raging predator</Lore>
 					<Description>Ridden monsters, monsters, the steeds pulling chariots, cavalry mounts and swarms suffer -1 To Hit the model bearing the Rune of the True Beast in close combat, although their riders may attack as normal</Description>
 				</Additional>
 				<Additional>
 					<Name>Uncanny Senses</Name>
 					<Points>10</Points>
-					<AddToInitiative Val="1"/>
+					<AddToInitiative>1</AddToInitiative>
 					<Lore>The Dark Gods have gifted the Beastman with acute senses, additional eyes or even an extra bead, granting it unnaturally fast reactions</Lore>
 					<Description>The model has +1 Initiative</Description>
 				</Additional>
@@ -169,7 +169,7 @@
 				<Weapon>
 					<Name>Stonecrusher Mace</Name>
 					<Points>65</Points>
-					<AddToStrength Val="3"/>
+					<AddToStrength>3</AddToStrength>
 					<Rule>When rolling To Wound against war machines and chariots or buildings, the character's Strength is increased to 10</Rule>
 					<Lore>A great blunt weapon with an iron beast-head at its tip, the Stonecrusher Mace has become a symbol of the Beastmen's eternal desire to unmake that which Man has made, and cast down his civilisation so that no stone is left standing upon another</Lore>
 					<Description>Stonecrusher Mace confers +3 Strength. When rolling To Wound against war machines and chariots (including War Altars, War Shrines, Steam Tanks and Corpse Carts, and so on) or buildings, the character's Strength is increased to 10</Description>
@@ -194,7 +194,7 @@
 					<Name>Axes of Khorgor</Name>
 					<Points>40</Points>
 					<Terror/>
-					<AddToAttacks Val="1"/>
+					<AddToAttacks>1</AddToAttacks>
 					<Reroll>ToHit</Reroll>
 					<Lore>One of the greatest Champions of the Beastmen ever to walk the Old World was a vicious brute named Khorgor. A vile thing, it's said he butchered hundreds of Humans. So wanton was he in his killing, he decorated his horns with the entrails of the dead. Whilst a great warrior in his own right, he was aided by a pair of blasphemous axes that could hew through armour and flesh with ease. So powerful was he when armed with these axes, no other Beastman could stand against him. But as with all things, Khorgor passed from this world and ownership of these terrible weapons changed hands many times, moving from successor to successor</Lore>
 					<Description>Requires two hands. The bearer gains +1 Attack and may re-roll any missed To Hit rolls in close combat</Description>
@@ -225,7 +225,7 @@
 				<Armour>
 					<Name>Blade-Blunter Armour</Name>
 					<Points>50</Points>
-					<AddToArmour Val="5"/>
+					<AddToArmour>5</AddToArmour>
 					<Rule>At the end of each round of close combat, roll a D6 for each magic weapon that hit the wearer of the armour: on the result of a 2+, the enemy item loses its special rules and ceases to count as a magic weapon</Rule>
 					<Lore>The Blade-Blunter Armour is encrusted with a vivid patina of corrosion and decay, cursed by a Bray-Shaman so that it spread to any blade that it strikes. Even the keenest weapon is blunted, dulled or shattered upon striking the armour</Lore>
 					<Description>Heavy armour. At the end of each round of close combat, roll a D6 for each magic weapon that hit the wearer of the armour. On the result of a 2+, the enemy item loses its special rules and ceases to count as a magic weapon. Instead it will count as a normal weapon of its type for the remainder of the battle</Description>
@@ -233,7 +233,7 @@
 				<Armour>
 					<Name>Trollhide</Name>
 					<Points>50</Points>
-					<AddToArmour Val="6"/>
+					<AddToArmour>6</AddToArmour>
 					<Regeneration/>
 					<Lore>The Trollhide confers some of the more gruesome abilities of its former occupant to the wearer</Lore>
 					<Description>Light armour. The wearer gains the Regeneration rule</Description>
@@ -241,7 +241,7 @@
 				<Armour>
 					<Name>Pelt of The Shadowgave</Name>
 					<Points>45</Points>
-					<AddToArmour Val="6"/>
+					<AddToArmour>6</AddToArmour>
 					<Rule>All shooting attacks directed at the character or his unit are at -1 To Hit</Rule>
 					<Rule>Spells that target the character or his unit deduct 2 from the casting roll</Rule>
 					<Lore>The Pelt of the Shadowgave is shrouded in sorcerous tendrils of darkness that gather darkness to both the wearer and those Beastmen that walk in his dark-shrouded footsteps</Lore>
@@ -250,7 +250,7 @@
 				<Armour>
 					<Name>Blackened Plate</Name>
 					<Points>20</Points>
-					<AddToArmour Val="5"/>
+					<AddToArmour>5</AddToArmour>
 					<Rule>2+ Ward save against all flaming attacks</Rule>
 					<Rule>Models in any unit that he is with have a 4+ Ward save against flaming attacks</Rule>
 					<Lore>This battered suit of ramshackle plate mail, the Blackened Plate, is blackened with the soot of burning palaces and temples. It is said that the wearer can walk through the fiercest conflagration unharmed</Lore>
@@ -259,7 +259,7 @@
 				<Additional>
 					<Name>Ramhorn Helm</Name>
 					<Points>15</Points>
-					<AddToArmour Val="6"/>
+					<AddToArmour>6</AddToArmour>
 					<Rule>For every armour save he passes, the character may immediately make a bonus attack at his basic Strength</Rule>
 					<Lore>This ornate headdress has two great curving ram horns that spiral and tighten around the wearer's own horns, allowing the bearer to deliver a devastating headbutt to any enemy that lowers his guard</Lore>
 					<Description>6+ armour save. This may be combined with other armour as normal. For every armour save he passes, the bearer may immediately make a bonus attack at his basic Strength</Description>
@@ -312,7 +312,7 @@
 				<Additional>
 					<Name>Eye of Night</Name>
 					<Points>45</Points>
-					<MagicResistance Val="2"/>
+					<MagicResistance>2</MagicResistance>
 					<Rule>If an enemy Wizard within 24" attempts to cast a spell from the Lore of Life, the Lore of Heavens or the Lore of Light and suffers a miscast, you may force them to re-roll the result on the Miscast table</Rule>
 					<Lore>The Eye of Night is a black stone charm worn about the neck of the bearer. Its inky depths creep outward to envelop its bearer, protecting him from the effects of certain types of baleful energy and turning the power of the Winds of Magic against their caster</Lore>
 					<Description>The Eye of Night grants the bearer Magic Resistance (2). In addition, if an enemy Wizard within 24" attempts to cast a spell from the Lore of Life, the Lore of Heavens or the Lore of Light and suffers a miscast, you may force them to re-roll the result on the Miscast table</Description>
@@ -359,7 +359,7 @@
 				<Banner>
 					<Name>The Beast Banner</Name>
 					<Points>75</Points>
-					<AddToStrength Val="1"/>
+					<AddToStrength>1</AddToStrength>
 					<Rule>Unit have a +1 bonus to Strength</Rule>
 					<Lore>This ancient banner is stitched together from the skins of defeated enemies. Only the flayed skins of the most powerful foes are used, for the Beastmen become imbued with the power of their conquests</Lore>
 					<Description>The bearer and any unit he has joined have a +1 bonus to their Strength</Description>
@@ -406,7 +406,7 @@
 					</HandWeapon>
 					<Armour>
 						<Name>The Dark Mail</Name>
-						<AddToArmour Val="2"/>
+						<AddToArmour>2</AddToArmour>
 						<Rule>The Dark Mail negates the power of any magic or runic weapons carried by models in base contact - treat them as ordinary non-magical weapons of their type</Rule>
 					</Armour>
 				</Equipments>
@@ -475,7 +475,7 @@
 				<SpecialRules>
 					<Fear/>
 					<Frenzy/>
-					<ImpactHit Val="D3+1"/>
+					<ImpactHit>D3+1</ImpactHit>
 					<Bloodgreed/>
 					<Original>
 						<Rule>Any unit accompanied is also subject to Frenzy, but not to the Primal Fury rule</Rule>
@@ -521,7 +521,7 @@
 				<SpecialRules>
 					<Fear/>
 					<Frenzy/>
-					<ImpactHit Val="D3"/>
+					<ImpactHit>D3</ImpactHit>
 					<MagicItems Points="100" Type="Hero"/>
 					<Bloodgreed/>
 					<Original>Any unit accompanied is also subject to Frenzy, but not to the Primal Fury rule</Original>
@@ -606,7 +606,7 @@
 				</Options>
 				<SpecialRules>
 					<PrimalFury/>
-					<MagicResistance Val="2"/>
+					<MagicResistance>2</MagicResistance>
 					<Original>
 						<Rule>Every unit, friend or foe, within 12" of Moonclaw at the start of their turn must take a Stupidity test</Rule>
 						<Rule>At the beginning of the game, secretly roll a D3 and record the number, in the turn that corresponds to this number, Morrslieb is full: for the entire duration of that turn Moonclaw has a +2 bonus to his casting rolls, he may make D3 shooting attacks resolved as if he were a stone thrower for that turn only, any results of a misfire cause a single wound upon Moonclaw that cannot be saved by any means</Rule>
@@ -648,7 +648,7 @@
 				<SpecialRules>
 					<Fear/>
 					<Frenzy/>
-					<ImpactHit Val="D3"/>
+					<ImpactHit>D3</ImpactHit>
 					<MagicItems Points="50" Type="Hero"/>
 					<Bloodgreed/>
 					<Original>Any unit accompanied is also subject to Frenzy, but not to the Primal Fury rule</Original>
@@ -708,7 +708,7 @@
 				<Mount>Tuskgor</Mount>
 				<Profile M='7' WS='4' BS='3' S='4' T='4' W='4' I='3' A='2' Ld='7' AS='4'/>
 				<SpecialRules>
-					<ImpactHit Val="D6+1"/>
+					<ImpactHit>D6+1</ImpactHit>
 				</SpecialRules>
 			</Mount>
 			<Mount>
@@ -725,7 +725,7 @@
 				<Profile M='7' WS='4' BS='3' S='5' T='5' W='5' I='3' A='2' Ld='7' AS='4'/>
 				<SpecialRules>
 					<Fear/>
-					<ImpactHit Val="D6+1"/>
+					<ImpactHit>D6+1</ImpactHit>
 					<Original>Thunderous Charge</Original>
 				</SpecialRules>
 			</Mount>
@@ -819,7 +819,7 @@
 				<Lore>The chariots of the Beastmen are ramshackle constructions, built from heavy pieces of lumbar scavenged from the ruins of Man's buildings. Drawn by Tuskgors, whose brute strength and ferocity far outmatch that of mere horses, a Beastmen chariot inflicts terrible damage as it charges into the foe.</Lore>
 				<Profile M='7' WS='4' BS='3' S='4' T='4' W='4' I='3' A='2' Ld='7' AS='4'/>
 				<SpecialRules>
-					<ImpactHit Val="D6+1"/>
+					<ImpactHit>D6+1</ImpactHit>
 					<PrimalFury/>
 					<Original>Chariot</Original>
 				</SpecialRules>
@@ -850,7 +850,7 @@
 				<Profile M='6' WS='4' BS='3' S='5' T='4' W='3' I='3' A='3' Ld='7'/>
 				<SpecialRules>
 					<Fear/>
-					<ImpactHit Val="1"/>
+					<ImpactHit>1</ImpactHit>
 					<Bloodgreed/>
 				</SpecialRules>
 				<Equipments>
@@ -952,7 +952,7 @@
 				<Profile M='7' WS='4' BS='3' S='5' T='5' W='5' I='3' A='2' Ld='7' AS='4'/>
 				<SpecialRules>
 					<Fear/>
-					<ImpactHit Val="D6+1"/>
+					<ImpactHit>D6+1</ImpactHit>
 					<PrimalFury/>
 					<Original>
 						<Rule>Chariot</Rule>
@@ -988,7 +988,7 @@
 					<LargeTarget/>
 					<Stubborn/>
 					<ImmuneToPsychology/>
-					<MagicResistance Val="2"/>
+					<MagicResistance>2</MagicResistance>
 					<Original>
 						<Rule>When fighting enemy Wizards, models with any sort of magic item or magical attacks, Undead, or creatures with a ward save, the Cygor may re-roll any failed To Hit rolls</Rule>
 						<Rule>Hurl Attack</Rule>
