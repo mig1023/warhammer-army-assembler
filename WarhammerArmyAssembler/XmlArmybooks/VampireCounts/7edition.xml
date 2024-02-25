@@ -106,8 +106,8 @@
 				<Powers>
 					<Name>Dark Acolyte</Name>
 					<Points>30</Points>
-					<AddToCast Val="1"/>
-					<AddToWizard Val="1"/>
+					<AddToCast>1</AddToCast>
+					<AddToWizard>1</AddToWizard>
 					<Lore>All Undead creatures are steeped in Dark Magic, and Vampires are no different. Some increase their powers through years of study and practise</Lore>
 					<Description>This Vampire has an additional Magic level</Description>
 				</Powers>
@@ -143,8 +143,8 @@
 				<Powers>
 					<Name>Avatar of Death</Name>
 					<Points>20</Points>
-					<AddToArmour Val="5"/>
-					<AddToStrength Val="2"/>
+					<AddToArmour>5</AddToArmour>
+					<AddToStrength>2</AddToStrength>
 					<Lore>Trained by the best swordsmen of different periods and cultures, the Vampire has become a deadly warrior capable of slaying the most monstrous of foes</Lore>	
 					<Description>The Vampire wears heavy armour and is armed with either a great weapon, hand weapon and shield or two hand weapons</Description>
 				</Powers>
@@ -152,7 +152,7 @@
 					<Name>Dread Knight</Name>
 					<Points>25</Points>
 					<Lance/>
-					<ArmourTo Val="2"/>
+					<ArmourTo>2</ArmourTo>
 					<Lore>There are armour-clad Vampire Knights in the world, pursuing their martial glories with deathless vigour. Most famous are the Blood Dragons, but not all the deadly horsemen of the Old World were trained within Blood Keep</Lore>
 					<Description>The Vampire has a lance, heavy armour, a shield and rides a barded Nightmare</Description>
 				</Powers>
@@ -165,7 +165,7 @@
 				<Powers>
 					<Name>Walking Death</Name>
 					<Points>25</Points>
-					<AddToCloseCombat Val="1"/>
+					<AddToCloseCombat>1</AddToCloseCombat>
 					<Lore>So powerful is the unholy presence of the Vampire that mere mortals are forced to flee in dread</Lore>
 					<Description>The presence of one or more Vampires with this power in a combat adds +1 to their side's combat resolution</Description>
 				</Powers>
@@ -226,8 +226,8 @@
 					<Name>The Black Axe of Krell</Name>
 					<Points>50</Points>
 					<Only>Wight King</Only>
-					<AddToStrength Val="2"/>
-					<MultiWounds Val="D3"/>
+					<AddToStrength>2</AddToStrength>
+					<MultiWounds>D3</MultiWounds>
 					<HitLast/>
 					<Test Bet="Wound" Context="Wound" Profile="Toughness"/>
 					<Lore>When the Black Axe bites into flesh it leaves behind shards that eat their way to the victim's heart</Lore>
@@ -273,25 +273,25 @@
 				<Armour>
 					<Name>Walach's Bloody Hauberk</Name>
 					<Points>45</Points>
-					<AddToArmour Val="4"/>
-					<AddToWard Val="5"/>
+					<AddToArmour>4</AddToArmour>
+					<AddToWard>5</AddToWard>
 					<Lore>Once belonging to one of the greatest slaughterers of all time, vile magic has fused the blood of Walach's victims into this armour's enchantments, providing a shielding aura made of the souls of the damned</Lore>
 					<Description>The wearer has a 4+ armour save that may be combined with steeds, shield, etc. Walach's Bloody Hauberk also confers a 5+ ward save</Description>
 				</Armour>
 				<Armour>
 					<Name>The Accursed Armour</Name>
 					<Points>25</Points>
-					<AddToArmour Val="5"/>
-					<AddToToughness Val="1"/>
-					<AddToWeaponSkill Val="-3"/>
-					<AddToInitiative Val="-3"/>
+					<AddToArmour>5</AddToArmour>
+					<AddToToughness>1</AddToToughness>
+					<AddToWeaponSkill>-3</AddToWeaponSkill>
+					<AddToInitiative>-3</AddToInitiative>
 					<Lore>Some strange flaw in the enchantment of this armour renders the wearer considerably more resilient whilst robbing them of dexterity</Lore>
 					<Description>Heavy armour. The wearer has +1 Toughness, but suffers -3 Weapon Skill and -3 Initiative</Description>
 				</Armour>
 				<Armour>
 					<Name>The Flayed Hauberk</Name>
 					<Points>25</Points>
-					<ArmourTo Val="2"/>
+					<ArmourTo>2</ArmourTo>
 					<Lore>The design of this virulent crimson armour makes the wearer appear disturbingly similar to a flayed and abused cadaver</Lore>
 					<Description>The Flayed Hauberk grants the wearer a 2+ armour save that cannot be improved by any means (shield, mount and so on)</Description>
 				</Armour>
@@ -299,7 +299,7 @@
 					<Name>Armour of Night</Name>
 					<Only>Infantry</Only>
 					<Points>25</Points>
-					<AddToArmour Val="5"/>
+					<AddToArmour>5</AddToArmour>
 					<Rule>Enemies suffer a -2 to hit penalty</Rule>
 					<Lore>This black-enamelled armour swathes the wearer in an impenetrable cloud of darkness</Lore>
 					<Description>Models on foot only. Heavy armour. As long as the wearer is on his own, enemies suffer a -2 to hit penalty when shooting at him</Description>
@@ -308,7 +308,7 @@
 					<Name>Nightshroud</Name>
 					<Only>Infantry</Only>
 					<Points>20</Points>
-					<AddToArmour Val="6"/>
+					<AddToArmour>6</AddToArmour>
 					<Rule>Enemy models lose all charging bonuses, lose the Always Strikes First rule</Rule>
 					<Lore>Tendrils of shadow entangle all those who would strike the wearer of this armour, grappling with their swordarms and slowing their attacks</Lore>
 					<Description>Light armour. Enemy models wishing to attack the wearer lose all charging bonuses, lose the Always Strikes First rule (if diey have it) and have their Initiative reduced to 1</Description>
@@ -317,7 +317,7 @@
 					<Name>The Cadaverous Cuirass</Name>
 					<Only>Vampire</Only>
 					<Points>15</Points>
-					<AddToArmour Val="5"/>
+					<AddToArmour>5</AddToArmour>
 					<NoKillingBlow/>
 					<ImmuneToPoison/>
 					<Lore>The Vampire's exposed heart is protected by a cage of enchanted gold</Lore>
@@ -354,7 +354,7 @@
 					<Name>Talisman of the Lycni</Name>
 					<Only>Vampire</Only>
 					<Points>10</Points>
-					<MovementTo Val="9"/>
+					<MovementTo>9</MovementTo>
 					<Lore>The energy of this amulet allows the bearer to unleash the power of the beast that lurks deep inside its soul</Lore>
 					<Description>A Vampire with the Talisman of the Lycni has a Movement value of 9</Description>
 				</Weapon>
@@ -371,7 +371,7 @@
 				<Additional>
 					<Name>Crown of the Damned</Name>
 					<Points>35</Points>
-					<AddToWard Val="4"/>
+					<AddToWard>4</AddToWard>
 					<Stupidity/>
 					<Lore>The bearer draws revitalising energies from the spirits imprisoned within the Crown, but at times their eternal wailing can be overpowering</Lore>
 					<Description>Grants the bearer a 4+ ward save, but the bearer is subject to Stupidity</Description>
@@ -386,7 +386,7 @@
 				<Additional>
 					<Name>The Gem of Blood</Name>
 					<Points>25</Points>
-					<WardForFirstWound Val="2"/>
+					<WardForFirstWound>2</WardForFirstWound>
 					<Lore>An ancient relic of Nehekhara, this cursed gem is extremely dangerous for the bearer's opponents, but it it will eventually be the undoing of its master</Lore>
 					<Description>When the wearer suffers its first wound in close combat (before saves, Killing Blow, multiple Wounds, etc), the gem activates. Roll a dice. On a roll of a 1 the wearer suffers the Wound as normal, and an additional Wound with no armour save allowed. On a 2+ the Wound is saved, and is rebounded onto the model that caused it, with no armour save allowed</Description>
 				</Additional>
@@ -524,7 +524,7 @@
 					<Terror/>
 					<Undead/>
 					<Reroll>ToWound</Reroll>
-					<AddToCloseCombat Val="1"/>
+					<AddToCloseCombat>1</AddToCloseCombat>
 					<Original>Enemy within 6" are at -1 Ld</Original>
 				</SpecialRules>
 				<Equipments>
@@ -560,7 +560,7 @@
 					</HandWeapon>
 					<Armour>
 						<Name>Armour of Templehof</Name>
-						<AddToWounds Val="2"/>
+						<AddToWounds>2</AddToWounds>
 					</Armour>
 				</Equipments>
 				<Options>
@@ -603,7 +603,7 @@
 				<SpecialRules>
 					<Undead/>
 					<MagicItems Count="1" Type="Hero"/>
-					<AddToCloseCombat Val="1"/>
+					<AddToCloseCombat>1</AddToCloseCombat>
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon>
@@ -635,7 +635,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Sword of Waldenhof</Name>
-						<MultiWounds Val="2"/>
+						<MultiWounds>2</MultiWounds>
 					</HandWeapon>
 					<HeavyArmour/>
 				</Equipments>
@@ -954,7 +954,7 @@
 				<Options>
 					<Option>
 						<Name>Skeletal Steed barding</Name>
-						<AddToArmour Val="6"/>
+						<AddToArmour>6</AddToArmour>
 						<PointsPerModel>4</PointsPerModel>
 					</Option>
 					<Command>
