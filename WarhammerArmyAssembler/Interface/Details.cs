@@ -41,13 +41,13 @@ namespace WarhammerArmyAssembler.Interface
         {
             Unit unit = Army.Data.Units[unitID];
 
-            if (head == ArmyBook.Data.MagicItemsStyle)
+            if (head == ArmyBook.Data.ItemsStyle)
                 return $"{unit.MagicPointsAlreadyUsed()} / {unit.GetUnitMagicPoints()}";
 
-            if ((head == ArmyBook.Data.MagicPowersStyle) && (unit.MagicPowersCount > 0))
+            if ((head == ArmyBook.Data.PowersStyle) && (unit.MagicPowersCount > 0))
                 return $"{unit.MagicPowersCountAlreadyUsed()} / {unit.GetMagicPowersCount()}";
 
-            if (head == ArmyBook.Data.MagicPowersStyle)
+            if (head == ArmyBook.Data.PowersStyle)
                 return $"{unit.MagicPowersPointsAlreadyUsed()} / {unit.GetUnitMagicPowersPoints()}";
 
             return String.Empty;
@@ -88,8 +88,8 @@ namespace WarhammerArmyAssembler.Interface
             else
             {
                 bool magicItemsPointsExists = unit.Options.Where(x => x.MagicItemsPoints).Count() > 0;
-                bool headIsPowers = head == ArmyBook.Data.MagicPowersStyle;
-                bool headIsMagic = head == ArmyBook.Data.MagicItemsStyle;
+                bool headIsPowers = head == ArmyBook.Data.PowersStyle;
+                bool headIsMagic = head == ArmyBook.Data.ItemsStyle;
                 bool magicPowersDontExists = !unit.ExistsMagicPowers() && headIsPowers;
 
                 if ((!unit.ExistsMagicItems() && headIsMagic && !magicItemsPointsExists) || magicPowersDontExists)
@@ -223,13 +223,13 @@ namespace WarhammerArmyAssembler.Interface
 
             if (unit.ExistsMagicItems() || (Army.Data.Units[unitID].GetUnitMagicPoints() > 0))
             {
-                margins = CreateColumn(ArmyBook.Data.MagicItemsStyle,
+                margins = CreateColumn(ArmyBook.Data.ItemsStyle,
                     margins, unitID, unit, ref notFirstColumn, ref lastColumnMaxWidth);
             }
 
             if ((unit.GetUnitMagicPowersPoints() > 0) || (unit.GetMagicPowersCount() > 0))
             {
-                margins = CreateColumn(ArmyBook.Data.MagicPowersStyle,
+                margins = CreateColumn(ArmyBook.Data.PowersStyle,
                     margins, unitID, unit, ref notFirstColumn, ref lastColumnMaxWidth);
             }
 
