@@ -70,8 +70,8 @@ namespace WarhammerArmyAssembler.ArmyBook
         {
             Data.AddStyle = LoadNamingStyle(xmlFile, "Buttons/Add", defaultValue: "add");
             Data.DropStyle = LoadNamingStyle(xmlFile, "Buttons/Drop", defaultValue: "drop");
-            Data.MagicItemsStyle = LoadNamingStyle(xmlFile, "Items", defaultValue: "MAGIC ITEMS").ToUpper();
-            Data.MagicPowersStyle = LoadNamingStyle(xmlFile, "Powers", defaultValue: "MAGIC POWERS").ToUpper();
+            Data.ItemsStyle = LoadNamingStyle(xmlFile, "Items", defaultValue: "MAGIC ITEMS").ToUpper();
+            Data.PowersStyle = LoadNamingStyle(xmlFile, "Powers", defaultValue: "MAGIC POWERS").ToUpper();
         }
 
         private static string UnitsPath(string pathLine, out string name)
