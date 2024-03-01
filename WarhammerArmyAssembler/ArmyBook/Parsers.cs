@@ -244,7 +244,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             if ((xmlNode.ParentNode?.Name == "Options") || (xmlNode.ParentNode?.Name == "Command"))
                 return success ? value : Option.OptionType.Option;
             else
-                return success && (value == OptionType.Armour) ? value : OptionType.Info;
+                return success ? value : OptionType.Info;
                 
         }
 
