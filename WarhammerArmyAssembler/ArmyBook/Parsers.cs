@@ -28,7 +28,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             if (xmlNode == null)
                 return 0;
 
-            string valueAttr = xmlNode.Attributes["Val"]?.InnerText ?? String.Empty;
+            string valueAttr = xmlNode.InnerText ?? String.Empty;
             bool success = int.TryParse(valueAttr, out int value);
 
             return (success ? value : Constants.SingleRunicItem);
