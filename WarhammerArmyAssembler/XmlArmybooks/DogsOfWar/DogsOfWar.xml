@@ -68,7 +68,7 @@
 			<Lord>
 				<Name>Mercenary General</Name>
 				<Hire>*</Hire>
-				<Points>114</Points>
+				<Points>90</Points>
 				<Lore>The Mercenary General is a bold adventurer and hard-bitten campaigner. He fights for money, for conquest and for the love of battle. This gallant figure leads the Dogs of War in pursuit of victory and plunder!</Lore>
 				<Profile M='4' WS='6' BS='6' S='4' T='4' W='3' I='6' A='4' Ld='10'/>
 				<SpecialRules>
@@ -76,18 +76,47 @@
 					<MagicItems Count="3" Type="Hero"/>
 				</SpecialRules>
 				<Options>
-					<Mount Name="Mercenary warhorse" Points="7"/>
-					<Lance Points="2" Only="Mount"/>
+					<Mount Name="Mercenary warhorse" Points="15"/>
+					<Flail Points="3" Dependency="Weapon"/>
+					<Halberd Points="6" Dependency="Weapon"/>
+					<Longbow Points="15" Dependency="RangeWeapon"/>
+					<Crossbow Points="15" Dependency="RangeWeapon"/>
 					<Option>
 						<Name>Pistol</Name>
-						<Points>2</Points>
+						<Points>10</Points>
 					</Option>
+					<LightArmour Points="3" Dependency="Armour"/>
+					<HeavyArmour Points="6" Dependency="Armour"/>
+					<Shield Points="3"/>
+					<Lance Points="6" Only="Mount"/>
 				</Options>
 				<Equipments>
 					<HandWeapon/>
-					<HeavyArmour/>
-					<Shield/>
 				</Equipments>
+			</Lord>
+			<Lord>
+				<Name>Paymaster</Name>
+				<Points>55</Points>
+				<Lore>The Paymaster is the keeper of the army's pay chest, and that makes his a vary popular fellow.</Lore>
+				<Profile M='4' WS='4' BS='4' S='4' T='4' W='2' I='4' A='2' Ld='8'/>
+				<SpecialRules>
+					<MagicItems Points="100" Type="Wizard"/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon/>
+				</Equipments>
+				<Options>
+					<Mount Name="Mercenary warhorse" Points="15"/>
+					<AdditionalWeapon Points="4" Dependency="Weapon"/>
+					<GreatWeapon Points="4" Dependency="Weapon"/>
+					<Flail Points="2" Dependency="Weapon"/>
+					<Halberd Points="4" Dependency="Weapon"/>
+					<Longbow Points="10" Dependency="RangeWeapon"/>
+					<Crossbow Points="10" Dependency="RangeWeapon"/>
+					<LightArmour Points="2" Dependency="Armour"/>
+					<HeavyArmour Points="4" Dependency="Armour"/>
+					<Shield Points="2"/>
+				</Options>
 			</Lord>
 		</Heroes>
 		<Units>
