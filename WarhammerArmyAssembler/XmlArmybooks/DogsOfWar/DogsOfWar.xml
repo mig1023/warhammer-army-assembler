@@ -27,6 +27,13 @@
 				<Profile M='8' WS='0' BS='0' S='3' T='3' W='1' I='3' A='0' Ld='5'/>
 			</Mount>
 			<Mount>
+				<Name>Mercenary warhorse</Name>
+				<Profile M='8' WS='3' BS='0' S='3' T='3' W='1' I='3' A='1' Ld='5'/>
+				<Equipments>
+					<MountAndBarding/>
+				</Equipments>
+			</Mount>
+			<Mount>
 				<Name>Deathfang</Name>
 				<Profile M='6' WS='7' BS='0' S='7' T='7' W='8' I='5' A='8' Ld='8'/>
 				<SpecialRules>
@@ -57,6 +64,32 @@
 				</Equipments>
 			</Mount>
 		</Mounts>
+		<Heroes>
+			<Lord>
+				<Name>Mercenary General</Name>
+				<Hire>*</Hire>
+				<Points>114</Points>
+				<Lore>The Mercenary General is a bold adventurer and hard-bitten campaigner. He fights for money, for conquest and for the love of battle. This gallant figure leads the Dogs of War in pursuit of victory and plunder!</Lore>
+				<Profile M='4' WS='6' BS='6' S='4' T='4' W='3' I='6' A='4' Ld='10'/>
+				<SpecialRules>
+					<DogsOfWar/>
+					<MagicItems Count="3" Type="Hero"/>
+				</SpecialRules>
+				<Options>
+					<Mount Name="Mercenary warhorse" Points="7"/>
+					<Lance Points="2" Only="Mount"/>
+					<Option>
+						<Name>Pistol</Name>
+						<Points>2</Points>
+					</Option>
+				</Options>
+				<Equipments>
+					<HandWeapon/>
+					<HeavyArmour/>
+					<Shield/>
+				</Equipments>
+			</Lord>
+		</Heroes>
 		<Units>
 			<Rare>
 				<Name>Braganza's Basiegers</Name>
