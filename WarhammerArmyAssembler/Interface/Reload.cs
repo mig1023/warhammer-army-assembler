@@ -38,21 +38,36 @@ namespace WarhammerArmyAssembler.Interface
             {
                 Unit unit = entry.Clone();
 
-                bool noDogs = ArmyBook.Data.NoDogsOfWar ||
-                    !Settings.Values.IsTrue("DogsOfWarEnabled");
+                bool noDogsUnits = !unit.IsHero() &&
+                    (ArmyBook.Data.NoDogsOfWar || !Settings.Values.IsTrue("DogsOfWarEnabled"));
 
-                if (noDogs && unit.DogsOfWar)
+                bool noDogsCharacter = unit.IsHero() &&
+                    (ArmyBook.Data.NoDogsOfWar || !Settings.Values.IsTrue("DogsOfWarCharacter"));
+
+                if ((noDogsUnits || noDogsCharacter) && unit.DogsOfWar)
                     continue;
 
+                unit.InterfaceColor = ArmyBook.Data.FrontColor;
                 unit.PointsView = $" {unit.Points} pts";
 
-                if (unit.Prepayment != 0)
-                    unit.PointsView += $" (+{unit.Prepayment} pts)";
+                int category = (int)unit.Type;
 
-                unit.InterfaceColor = ArmyBook.Data.FrontColor;
+                if (unit.IsHero() && unit.DogsOfWar)
+                {
+                    category = unit.Type == Unit.UnitType.Lord ? 2 : 3;
+                }
+                else if (unit.DogsOfWar)
+                {
+                    string a_tmp = unit.Name;
 
-                int category = unit.DogsOfWar ?
-                    ArmyBook.Constants.DogsOfWarCategory : (int)unit.Type;
+                    if (unit.Prepayment != 0)
+                        unit.PointsView += $" (+{unit.Prepayment} pts)";
+
+                    category = ArmyBook.Constants.DogsOfWarCategory;
+                }
+
+                if (!unit.IsHero() && Settings.Values.IsTrue("DogsOfWarCharacter"))
+                    category += 2;
 
                 categories[category].Items.Add(unit);
             }

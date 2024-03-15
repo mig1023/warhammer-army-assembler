@@ -242,8 +242,12 @@ namespace WarhammerArmyAssembler.ArmyBook
         {
             XmlDocument dogsFile = new XmlDocument();
             dogsFile.Load(Constants.DogOfWarPath);
+            
             LoadUnitsFromXml(dogsFile, "ArmyBook/Content/Units/*", ref Data.Units, army);
             LoadUnitsFromXml(dogsFile, "ArmyBook/Content/Mounts/*", ref Data.Mounts);
+
+            if (Settings.Values.IsTrue("DogsOfWarCharacter"))
+                LoadUnitsFromXml(dogsFile, "ArmyBook/Content/Heroes/*", ref Data.Units, army);
         }
 
         public static void Armybook(string xmlFileName)
@@ -486,8 +490,12 @@ namespace WarhammerArmyAssembler.ArmyBook
             if (newUnit.DogsOfWar)
             {
                 pathToImage = XmlBook.DogsOfWarImages;
-                string dogsType = Settings.Values.Get("DogsOfWarType");
-                newUnit.Type = (Unit.UnitType)Enum.Parse(typeof(Unit.UnitType), dogsType);
+
+                if (!newUnit.IsHero())
+                {
+                    string dogsType = Settings.Values.Get("DogsOfWarType");
+                    newUnit.Type = (Unit.UnitType)Enum.Parse(typeof(Unit.UnitType), dogsType);
+                }
             }
 
             newUnit.Image = TryFindImage(xmlUnit, newUnit,

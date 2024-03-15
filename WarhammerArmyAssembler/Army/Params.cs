@@ -214,10 +214,19 @@ namespace WarhammerArmyAssembler.Army
             {
                 GetCategoryUnit("Lords"),
                 GetCategoryUnit("Heroes"),
+            };
+
+            if (!ArmyBook.Data.NoDogsOfWar && Settings.Values.IsTrue("DogsOfWarCharacter"))
+            {
+                categories.Add(GetCategoryUnit("Lords (Dogs of War)", close: true));
+                categories.Add(GetCategoryUnit("Heroes (Dogs of War)", close: true));
+            }
+
+            categories.AddRange(new List<Unit> {
                 GetCategoryUnit("Core"),
                 GetCategoryUnit("Special"),
                 GetCategoryUnit("Rare"),
-            };
+            });
 
             if (!ArmyBook.Data.NoDogsOfWar && Settings.Values.IsTrue("DogsOfWarEnabled"))
                 categories.Add(GetCategoryUnit("Dogs of War", close: true));

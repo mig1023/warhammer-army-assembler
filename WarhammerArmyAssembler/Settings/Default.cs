@@ -57,8 +57,15 @@ namespace WarhammerArmyAssembler.Settings
                 new Setting
                 {
                     ID = "DogsOfWarEnabled",
-                    Name = "Enable Dogs of War",
+                    Name = "Enable units in other armies",
                     Type = Setting.Types.checkbox,
+                },
+                new Setting
+                {
+                    ID = "DogsOfWarCharacter",
+                    Name = "Enable characters in other armies",
+                    Type = Setting.Types.checkbox,
+                    Default = "False",
                 },
                 new Setting
                 {
