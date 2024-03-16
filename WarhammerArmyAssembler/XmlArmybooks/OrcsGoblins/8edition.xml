@@ -35,30 +35,33 @@
 				<Drop>ta hell dis!</Drop>
 			</Buttons>
 		</Naming>
-		<Magic>
-			<Name>Spells of the Da Big Waaagh!</Name>
-			<Options>Spells of the Little Waaagh!</Options>
+		<Magics>
 			<Magic>
-				<Spell Name="Brain Bursta" Cast="6"/>
-				<Spell Name="Gaze of Mork" Cast="7"/>
-				<Spell Name="Fist of Gork" Cast="8"/>
-				<Spell Name="The Hand of Gork" Cast="9"/>
-				<Spell Name="'Eadbutt" Cast="9"/>
-				<Spell Name="'Ere We Go!" Cast="11"/>
-				<Spell Name="Foot of Gork" Cast="15"/>
+				<Name>Spells of the Da Big Waaagh!</Name>
+				<Spells>
+					<Spell Name="Brain Bursta" Cast="6"/>
+					<Spell Name="Gaze of Mork" Cast="7"/>
+					<Spell Name="Fist of Gork" Cast="8"/>
+					<Spell Name="The Hand of Gork" Cast="9"/>
+					<Spell Name="'Eadbutt" Cast="9"/>
+					<Spell Name="'Ere We Go!" Cast="11"/>
+					<Spell Name="Foot of Gork" Cast="15"/>
+				</Spells>
 			</Magic>
-			<Enemy>Wood Elves, The Lore of High Magic</Enemy>
-			<Dispell>
-				<Spell Name="Apotheosis" Cast="7"/>
-				<Spell Name="Hand of Glory" Cast="7"/>
-				<Spell Name="Walk Between Worlds" Cast="7"/>
-				<Spell Name="Drain magic" Cast="9"/>
-				<Spell Name="Soul Quench" Cast="10"/>
-				<Spell Name="Tempest" Cast="14"/>
-				<Spell Name="Arcane Unforging" Cast="15"/>
-				<Spell Name="Fiery convocation" Cast="21"/>
-			</Dispell>
-		</Magic>
+			<Enemy>
+				<Name>Wood Elves, The Lore of High Magic</Name>
+				<Dispells>
+					<Spell Name="Apotheosis" Cast="7"/>
+					<Spell Name="Hand of Glory" Cast="7"/>
+					<Spell Name="Walk Between Worlds" Cast="7"/>
+					<Spell Name="Drain magic" Cast="9"/>
+					<Spell Name="Soul Quench" Cast="10"/>
+					<Spell Name="Tempest" Cast="14"/>
+					<Spell Name="Arcane Unforging" Cast="15"/>
+					<Spell Name="Fiery convocation" Cast="21"/>
+				</Dispells>
+			</Enemy>
+		</Magics>
 		<Local>
 			<SpecialRules>
 				<FearElves/>
