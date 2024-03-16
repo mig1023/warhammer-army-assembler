@@ -31,28 +31,31 @@
 			<Internal>TombKings</Internal>
 			<Items>Treasures of The Necropolis</Items>
 		</Naming>
-		<Magic>
-			<Name>The Lore of Nehekhara</Name>
-			<Options>Lore of Light, Death</Options>
+		<Magics>
 			<Magic>
-				<Spell Name="Incantation of Cursed Blades" Cast="7"/>
-				<Spell Name="Incantation of Protection" Cast="9"/>
-				<Spell Name="Incantation of Righteous Smiting" Cast="9"/>
-				<Spell Name="Incantation of Vengeance" Cast="10"/>
-				<Spell Name="Incantation of Desiccation" Cast="11"/>
-				<Spell Name="Incantation of the Skullstorm" Cast="15"/>
+				<Name>The Lore of Nehekhara</Name>
+				<Spells>
+					<Spell Name="Incantation of Cursed Blades" Cast="7"/>
+					<Spell Name="Incantation of Protection" Cast="9"/>
+					<Spell Name="Incantation of Righteous Smiting" Cast="9"/>
+					<Spell Name="Incantation of Vengeance" Cast="10"/>
+					<Spell Name="Incantation of Desiccation" Cast="11"/>
+					<Spell Name="Incantation of the Skullstorm" Cast="15"/>
+				</Spells>
 			</Magic>
-			<Enemy>Vampire Counts, The Lore of the Vampires</Enemy>
-			<Dispell>
-				<Spell Name="Invocation of Nehek" Cast="8"/>
-				<Spell Name="Vanhel's Danse Macabre" Cast="8"/>
-				<Spell Name="Hellish Vigour" Cast="10"/>
-				<Spell Name="Gaze of Nagash" Cast="11"/>
-				<Spell Name="Raise Dead" Cast="11"/>
-				<Spell Name="Curse of Years" Cast="14"/>
-				<Spell Name="Wind of Undeath" Cast="17"/>
-			</Dispell>
-		</Magic>
+			<Enemy>
+				<Name>Vampire Counts, The Lore of the Vampires</Name>
+				<Dispells>
+					<Spell Name="Invocation of Nehek" Cast="8"/>
+					<Spell Name="Vanhel's Danse Macabre" Cast="8"/>
+					<Spell Name="Hellish Vigour" Cast="10"/>
+					<Spell Name="Gaze of Nagash" Cast="11"/>
+					<Spell Name="Raise Dead" Cast="11"/>
+					<Spell Name="Curse of Years" Cast="14"/>
+					<Spell Name="Wind of Undeath" Cast="17"/>
+				</Dispells>
+			</Enemy>
+		</Magics>
 		<Local>
 			<SpecialRules>
 				<Flammable/>
