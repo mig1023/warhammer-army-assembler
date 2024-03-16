@@ -31,27 +31,30 @@
 			<Internal>Beasts</Internal>
 			<Items>Trophies of the Beasts</Items>
 		</Naming>
-		<Magic>
-			<Name>Gifts of The Plagued One</Name>
-			<Options>Lore of Tzeentch, Slaanesh</Options>
+		<Magics>
 			<Magic>
-				<Spell Name="Magnificent Buboes" Cast="6"/>
-				<Spell Name="Favoured Poxes" Cast="7"/>
-				<Spell Name="Effulgent Boils" Cast="8"/>
-				<Spell Name="Glistening Scabs" Cast="9"/>
-				<Spell Name="Glorious Afflictions" Cast="10"/>
-				<Spell Name="Sumptuous Pestilience" Cast="11"/>
+				<Name>Gifts of The Plagued One</Name>
+				<Spells>
+					<Spell Name="Magnificent Buboes" Cast="6"/>
+					<Spell Name="Favoured Poxes" Cast="7"/>
+					<Spell Name="Effulgent Boils" Cast="8"/>
+					<Spell Name="Glistening Scabs" Cast="9"/>
+					<Spell Name="Glorious Afflictions" Cast="10"/>
+					<Spell Name="Sumptuous Pestilience" Cast="11"/>
+				</Spells>
 			</Magic>
-			<Enemy>Wood Elves, Lore of Athel Loren</Enemy>
-			<Dispell>
-				<Spell Name="Tree Singing" Cast="6"/>
-				<Spell Name="Fury of the Forest" Cast="8"/>
-				<Spell Name="The Hidden Path" Cast="9"/>
-				<Spell Name="The Twilight Host" Cast="10"/>
-				<Spell Name="Ariel's Blessing" Cast="11"/>
-				<Spell Name="The Call of the Hunt" Cast="13"/>
-			</Dispell>
-		</Magic>
+			<Enemy>
+				<Name>Wood Elves, Lore of Athel Loren</Name>
+				<Dispells>
+					<Spell Name="Tree Singing" Cast="6"/>
+					<Spell Name="Fury of the Forest" Cast="8"/>
+					<Spell Name="The Hidden Path" Cast="9"/>
+					<Spell Name="The Twilight Host" Cast="10"/>
+					<Spell Name="Ariel's Blessing" Cast="11"/>
+					<Spell Name="The Call of the Hunt" Cast="13"/>
+				</Dispells>
+			</Enemy>
+		</Magics>
 		<Local>
 			<SpecialRules>
 				<Raiders/>
