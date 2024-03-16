@@ -94,13 +94,14 @@
 					<HandWeapon/>
 				</Equipments>
 			</Lord>
-			<Lord>
+			<Hero>
 				<Name>Paymaster</Name>
+				<Hire>*</Hire>
 				<Points>55</Points>
 				<Lore>The Paymaster is the keeper of the army's pay chest, and that makes his a vary popular fellow.</Lore>
 				<Profile M='4' WS='4' BS='4' S='4' T='4' W='2' I='4' A='2' Ld='8'/>
 				<SpecialRules>
-					<MagicItems Points="100" Type="Wizard"/>
+					<DogsOfWar/>
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon/>
@@ -117,7 +118,7 @@
 					<HeavyArmour Points="4" Dependency="Armour"/>
 					<Shield Points="2"/>
 				</Options>
-			</Lord>
+			</Hero>
 		</Heroes>
 		<Units>
 			<Rare>
