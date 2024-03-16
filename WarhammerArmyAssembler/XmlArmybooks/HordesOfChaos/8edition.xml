@@ -32,29 +32,32 @@
 			<Items>Dread Artefacts</Items>
 			<Powers>Chaos mutation</Powers>
 		</Naming>
-		<Magic>
-			<Name>The Lore of Nurgle</Name>
-			<Options>Lore of Death, Fire, Metal, Shadow</Options>
+		<Magics>
 			<Magic>
-				<Spell Name="Miasma of Pestilence" Cast="5"/>
-				<Spell Name="Ream of Corruption" Cast="7"/>
-				<Spell Name="Blades of Putrefaction" Cast="8"/>
-				<Spell Name="Curse of The Leper" Cast="10"/>
-				<Spell Name="Rancid Visitations" Cast="10"/>
-				<Spell Name="Fleshy Abundance" Cast="11"/>
-				<Spell Name="Plague Wind" Cast="15"/>
+				<Name>The Lore of Nurgle</Name>
+				<Spells>
+					<Spell Name="Miasma of Pestilence" Cast="5"/>
+					<Spell Name="Ream of Corruption" Cast="7"/>
+					<Spell Name="Blades of Putrefaction" Cast="8"/>
+					<Spell Name="Curse of The Leper" Cast="10"/>
+					<Spell Name="Rancid Visitations" Cast="10"/>
+					<Spell Name="Fleshy Abundance" Cast="11"/>
+					<Spell Name="Plague Wind" Cast="15"/>
+				</Spells>
 			</Magic>
-			<Enemy>The Empire, The Lore of Fire</Enemy>
-			<Dispell>
-				<Spell Name="Fireball" Cast="7"/>
-				<Spell Name="Cascading Fire-Cloak" Cast="7"/>
-				<Spell Name="Flaming Sword of Rhuin" Cast="10"/>
-				<Spell Name="The Burning Head" Cast="12"/>
-				<Spell Name="Piercing Bolts of Burning" Cast="12"/>
-				<Spell Name="Fulminating Flame Cage" Cast="13"/>
-				<Spell Name="Flame Storm" Cast="15"/>
-			</Dispell>
-		</Magic>
+			<Enemy>
+				<Name>The Empire, The Lore of Fire</Name>
+				<Dispells>
+					<Spell Name="Fireball" Cast="7"/>
+					<Spell Name="Cascading Fire-Cloak" Cast="7"/>
+					<Spell Name="Flaming Sword of Rhuin" Cast="10"/>
+					<Spell Name="The Burning Head" Cast="12"/>
+					<Spell Name="Piercing Bolts of Burning" Cast="12"/>
+					<Spell Name="Fulminating Flame Cage" Cast="13"/>
+					<Spell Name="Flame Storm" Cast="15"/>
+				</Dispells>
+			</Enemy>
+		</Magics>
 		<Local>
 			<SpecialRules>
 				<DaemonicAttacks/>
