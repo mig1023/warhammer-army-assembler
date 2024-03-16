@@ -31,18 +31,20 @@
 			<Internal>Dwarfs</Internal>
 			<Items>Runic Magic</Items>
 		</Naming>
-		<Magic>
+		<Magics>
 			<Magic/>
-			<Enemy>Skaven, Skaven Spell List</Enemy>
-			<Dispell>
-				<Spell Name="Skitterleap" Cast="6"/>
-				<Spell Name="Warp Lightning" Cast="7"/>
-				<Spell Name="Vermintide" Cast="9"/>
-				<Spell Name="Pestilent Breath" Cast="10"/>
-				<Spell Name="Death Frenzy" Cast="11"/>
-				<Spell Name="Plague" Cast="15"/>
-			</Dispell>
-		</Magic>
+			<Enemy>
+				<Name>Skaven, Skaven Spell List</Name>
+				<Dispells>
+					<Spell Name="Skitterleap" Cast="6"/>
+					<Spell Name="Warp Lightning" Cast="7"/>
+					<Spell Name="Vermintide" Cast="9"/>
+					<Spell Name="Pestilent Breath" Cast="10"/>
+					<Spell Name="Death Frenzy" Cast="11"/>
+					<Spell Name="Plague" Cast="15"/>
+				</Dispells>
+			</Enemy>
+		</Magics>
 		<Local>
 			<SpecialRules>
 				<WarMachine/>
