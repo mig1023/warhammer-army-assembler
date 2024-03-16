@@ -32,27 +32,30 @@
 			<Internal>WarriorOfChaos</Internal>
 			<Items>Deamonic Gifts</Items>
 		</Naming>
-		<Magic>
-			<Name>Lore of Nurgle</Name>
-			<Options>Lore of Tzeentch, Slaanesh, Death, Fire, Shadow</Options>
+		<Magics>
 			<Magic>
-				<Spell Name="Magnificent Buboes" Cast="6"/>
-				<Spell Name="Favoured Poxes" Cast="7"/>
-				<Spell Name="Effulgent Boils" Cast="8"/>
-				<Spell Name="Glistening Scabs" Cast="9"/>
-				<Spell Name="Glorious Afflictions" Cast="10"/>
-				<Spell Name="Sumptuous Pestilience" Cast="11"/>
+				<Name>Lore of Nurgle</Name>
+				<Spells>
+					<Spell Name="Magnificent Buboes" Cast="6"/>
+					<Spell Name="Favoured Poxes" Cast="7"/>
+					<Spell Name="Effulgent Boils" Cast="8"/>
+					<Spell Name="Glistening Scabs" Cast="9"/>
+					<Spell Name="Glorious Afflictions" Cast="10"/>
+					<Spell Name="Sumptuous Pestilience" Cast="11"/>
+				</Spells>
 			</Magic>
-			<Enemy>The Empire, The Lore of Fire</Enemy>
-			<Dispell>
-				<Spell Name="Fire Ball" Cast="7"/>
-				<Spell Name="Flaming Sword of Rhuin" Cast="8"/>
-				<Spell Name="Fiery Blast" Cast="10"/>
-				<Spell Name="Burning Head" Cast="11"/>
-				<Spell Name="Conflagration of Doom" Cast="13"/>
-				<Spell Name="Wall of Fire" Cast="14"/>
-			</Dispell>
-		</Magic>
+			<Enemy>
+				<Name>The Empire, The Lore of Fire</Name>
+				<Dispells>
+					<Spell Name="Fire Ball" Cast="7"/>
+					<Spell Name="Flaming Sword of Rhuin" Cast="8"/>
+					<Spell Name="Fiery Blast" Cast="10"/>
+					<Spell Name="Burning Head" Cast="11"/>
+					<Spell Name="Conflagration of Doom" Cast="13"/>
+					<Spell Name="Wall of Fire" Cast="14"/>
+				</Dispells>
+			</Enemy>
+		</Magics>
 		<Local>
 			<SpecialRules>
 				<Daemonic/>
