@@ -31,27 +31,30 @@
 			<Internal>Daemons</Internal>
 			<Items>Daemonic Gifts</Items>
 		</Naming>
-		<Magic>
-			<Name>The Daemon Lore of Tzeentch</Name>
-			<Options>Lore of Nurgle, Slaanesh</Options>
+		<Magics>
 			<Magic>
-				<Spell Name="Boon of Tzeentch" Cast="3"/>
-				<Spell Name="Flickering Fire of Tzeentch" Cast="4"/>
-				<Spell Name="Glean Magic" Cast="7"/>
-				<Spell Name="Gift of Chaos" Cast="9"/>
-				<Spell Name="Bolt of Change" Cast="12"/>
-				<Spell Name="Tzeentch's Firestorm" Cast="13"/>
+				<Name>The Daemon Lore of Tzeentch</Name>
+				<Spells>
+					<Spell Name="Boon of Tzeentch" Cast="3"/>
+					<Spell Name="Flickering Fire of Tzeentch" Cast="4"/>
+					<Spell Name="Glean Magic" Cast="7"/>
+					<Spell Name="Gift of Chaos" Cast="9"/>
+					<Spell Name="Bolt of Change" Cast="12"/>
+					<Spell Name="Tzeentch's Firestorm" Cast="13"/>
+				</Spells>
 			</Magic>
-			<Enemy>Lizardmen, The Lore of Heaven</Enemy>
-			<Dispell>
-				<Spell Name="Portent of Far" Cast="7"/>
-				<Spell Name="Second Sign of Amul" Cast="7"/>
-				<Spell Name="Forked Lightning" Cast="8"/>
-				<Spell Name="Celestail Shield" Cast="9"/>
-				<Spell Name="Uranon's Thunder Bolt" Cast="11"/>
-				<Spell Name="The Comet of Cassanora" Cast="13"/>
-			</Dispell>
-		</Magic>
+			<Enemy>
+				<Name>Lizardmen, The Lore of Heaven</Name>
+				<Dispells>
+					<Spell Name="Portent of Far" Cast="7"/>
+					<Spell Name="Second Sign of Amul" Cast="7"/>
+					<Spell Name="Forked Lightning" Cast="8"/>
+					<Spell Name="Celestail Shield" Cast="9"/>
+					<Spell Name="Uranon's Thunder Bolt" Cast="11"/>
+					<Spell Name="The Comet of Cassanora" Cast="13"/>
+				</Dispells>
+			</Enemy>
+		</Magics>
 		<Local>
 			<SpecialRules>
 				<Daemonic/>
