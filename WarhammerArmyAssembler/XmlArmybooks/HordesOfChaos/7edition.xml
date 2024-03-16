@@ -31,27 +31,30 @@
 			<Internal>WarriorOfChaos</Internal>
 			<Items>Gifts of the Gods</Items>
 		</Naming>
-		<Magic>
-			<Name>The Lore of Nurgle</Name>
-			<Options>Lore of Death, Fire, Shadow, Heavens</Options>
+		<Magics>
 			<Magic>
-				<Spell Name="Magnificent Buboes" Cast="5"/>
-				<Spell Name="Fleshy Abundance" Cast="7"/>
-				<Spell Name="Plague Squall" Cast="8"/>
-				<Spell Name="Cloying Quagmire" Cast="9"/>
-				<Spell Name="Curse of the Leper" Cast="10"/>
-				<Spell Name="Rot, Glorious Rot" Cast="12"/>
+				<Name>The Lore of Nurgle</Name>
+				<Spells>
+					<Spell Name="Magnificent Buboes" Cast="5"/>
+					<Spell Name="Fleshy Abundance" Cast="7"/>
+					<Spell Name="Plague Squall" Cast="8"/>
+					<Spell Name="Cloying Quagmire" Cast="9"/>
+					<Spell Name="Curse of the Leper" Cast="10"/>
+					<Spell Name="Rot, Glorious Rot" Cast="12"/>
+				</Spells>
 			</Magic>
-			<Enemy>The Empire, Lore of Fire</Enemy>
-			<Dispell>
-				<Spell Name="Fireball" Cast="7"/>
-				<Spell Name="Flaming Sword of Rhuin" Cast="7"/>
-				<Spell Name="The Burning Head" Cast="10"/>
-				<Spell Name="Fiery Blast" Cast="10"/>
-				<Spell Name="Conflagration of Doom" Cast="13"/>
-				<Spell Name="Wall of Fire" Cast="14"/>
-			</Dispell>
-		</Magic>
+			<Enemy>
+				<Name>The Empire, Lore of Fire</Name>
+				<Dispells>
+					<Spell Name="Fireball" Cast="7"/>
+					<Spell Name="Flaming Sword of Rhuin" Cast="7"/>
+					<Spell Name="The Burning Head" Cast="10"/>
+					<Spell Name="Fiery Blast" Cast="10"/>
+					<Spell Name="Conflagration of Doom" Cast="13"/>
+					<Spell Name="Wall of Fire" Cast="14"/>	
+				</Dispells>
+			</Enemy>
+		</Magics>
 		<Local>
 			<SpecialRules>
 				<WillOfChaos>The Will of Chaos</WillOfChaos>
