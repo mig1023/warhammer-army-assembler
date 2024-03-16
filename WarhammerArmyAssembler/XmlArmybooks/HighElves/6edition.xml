@@ -31,27 +31,30 @@
 			<Internal>HighElves</Internal>
 			<Items>Vaul's Forge</Items>
 		</Naming>
-		<Magic>
-			<Name>High Magic Spells</Name>
-			<Options>Any of eight Lore of Battle Magic</Options>
+		<Magics>
 			<Magic>
-				<Spell Name="Walk Between Worlds" Cast="4"/>
-				<Spell Name="Curse of Arrow Attraction" Cast="6"/>
-				<Spell Name="Fortune is Fickle" Cast="7"/>
-				<Spell Name="Fury of Khaine" Cast="8"/>
-				<Spell Name="Flame of the Phoenix" Cast="11"/>
-				<Spell Name="Vaul's Unmaking" Cast="12"/>
+				<Name>High Magic Spells</Name>
+				<Spells>
+					<Spell Name="Walk Between Worlds" Cast="4"/>
+					<Spell Name="Curse of Arrow Attraction" Cast="6"/>
+					<Spell Name="Fortune is Fickle" Cast="7"/>
+					<Spell Name="Fury of Khaine" Cast="8"/>
+					<Spell Name="Flame of the Phoenix" Cast="11"/>
+					<Spell Name="Vaul's Unmaking" Cast="12"/>
+				</Spells>
 			</Magic>
-			<Enemy>Dark Elves, Dark Magic</Enemy>
-			<Dispell>
-				<Spell Name="Nagaelythe the Chillwind" Cast="7"/>
-				<Spell Name="Doombolt of Kharaidon" Cast="8"/>
-				<Spell Name="Chroesh Word of Pain" Cast="10"/>
-				<Spell Name="Anchan-Rogar the Soul Stealer" Cast="11"/>
-				<Spell Name="Lamehk's Dominion" Cast="12"/>
-				<Spell Name="Arnizipal's Black Horror" Cast="14"/>
-			</Dispell>
-		</Magic>
+			<Enemy>
+				<Name>Dark Elves, Dark Magic</Name>
+				<Dispells>
+					<Spell Name="Nagaelythe the Chillwind" Cast="7"/>
+					<Spell Name="Doombolt of Kharaidon" Cast="8"/>
+					<Spell Name="Chroesh Word of Pain" Cast="10"/>
+					<Spell Name="Anchan-Rogar the Soul Stealer" Cast="11"/>
+					<Spell Name="Lamehk's Dominion" Cast="12"/>
+					<Spell Name="Arnizipal's Black Horror" Cast="14"/>
+				</Dispells>
+			</Enemy>
+		</Magics>
 		<Local>
 			<SpecialRules>
 				<ThreeRanks>Fight in three ranks with spears</ThreeRanks>
