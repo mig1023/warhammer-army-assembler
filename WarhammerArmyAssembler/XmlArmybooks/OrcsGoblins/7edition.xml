@@ -35,27 +35,30 @@
 				<Drop>ta hell dis!</Drop>
 			</Buttons>
 		</Naming>
-		<Magic>
-			<Name>Spells of the Big Waaagh!</Name>
-			<Options>Spells of the Little Waaagh!</Options>
+		<Magics>
 			<Magic>
-				<Spell Name="Gaze of Mork" Cast="5"/>
-				<Spell Name="'Eadbutt" Cast="6"/>
-				<Spell Name="Bash 'em ladz" Cast="6"/>
-				<Spell Name="Fist of Gork" Cast="8"/>
-				<Spell Name="Gork's warpath" Cast="10"/>
-				<Spell Name="Waaagh!" Cast="12"/>
+				<Name>Spells of the Big Waaagh!</Name>
+				<Spells>
+					<Spell Name="Gaze of Mork" Cast="5"/>
+					<Spell Name="'Eadbutt" Cast="6"/>
+					<Spell Name="Bash 'em ladz" Cast="6"/>
+					<Spell Name="Fist of Gork" Cast="8"/>
+					<Spell Name="Gork's warpath" Cast="10"/>
+					<Spell Name="Waaagh!" Cast="12"/>
+				</Spells>
 			</Magic>
-			<Enemy>Wood Elves, Lore of Athel Loren</Enemy>
-			<Dispell>
-				<Spell Name="Tree Singing" Cast="6"/>
-				<Spell Name="Fury of the Forest" Cast="8"/>
-				<Spell Name="The Hidden Path" Cast="9"/>
-				<Spell Name="The Twilight Host" Cast="10"/>
-				<Spell Name="Ariel's Blessing" Cast="11"/>
-				<Spell Name="The Call of the Hunt" Cast="13"/>
-			</Dispell>
-		</Magic>
+			<Enemy>
+				<Name>Wood Elves, Lore of Athel Loren</Name>
+				<Dispells>
+					<Spell Name="Tree Singing" Cast="6"/>
+					<Spell Name="Fury of the Forest" Cast="8"/>
+					<Spell Name="The Hidden Path" Cast="9"/>
+					<Spell Name="The Twilight Host" Cast="10"/>
+					<Spell Name="Ariel's Blessing" Cast="11"/>
+					<Spell Name="The Call of the Hunt" Cast="13"/>
+				</Dispells>
+			</Enemy>
+		</Magics>
 		<Local>
 			<SpecialRules>
 				<FearElves/>
