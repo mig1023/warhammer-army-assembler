@@ -32,30 +32,33 @@
 			<Items>Daemonic Gifts</Items>
 		</Naming>
 		<NoMagicItemsColumn/>
-		<Magic>
-			<Name>The Lore of Tzeentch</Name>
-			<Options>Lore of Nurgle, Slaanesh</Options>
+		<Magics>
 			<Magic>
-				<Spell Name="Blue Fire of Tzeentch" Cast="5"/>
-				<Spell Name="Treason of Tzeentch" Cast="7"/>
-				<Spell Name="Pink Fire of Tzeentch" Cast="8"/>
-				<Spell Name="Bolt of Change" Cast="8"/>
-				<Spell Name="Glean Magic" Cast="8"/>
-				<Spell Name="Tzeentch's Firestorm" Cast="13"/>
-				<Spell Name="Infernal Gateway" Cast="16"/>
+				<Name>The Lore of Tzeentch</Name>
+				<Spells>
+					<Spell Name="Blue Fire of Tzeentch" Cast="5"/>
+					<Spell Name="Treason of Tzeentch" Cast="7"/>
+					<Spell Name="Pink Fire of Tzeentch" Cast="8"/>
+					<Spell Name="Bolt of Change" Cast="8"/>
+					<Spell Name="Glean Magic" Cast="8"/>
+					<Spell Name="Tzeentch's Firestorm" Cast="13"/>
+					<Spell Name="Infernal Gateway" Cast="16"/>
+				</Spells>
 			</Magic>
-			<Enemy>Lizardmen, The Lore of Heaven</Enemy>
-			<Dispell>
-				<Spell Name="Apotheosis" Cast="7"/>
-				<Spell Name="Hand of Glory" Cast="7"/>
-				<Spell Name="Walk Between Worlds" Cast="7"/>
-				<Spell Name="Drain magic" Cast="9"/>
-				<Spell Name="Soul Quench" Cast="10"/>
-				<Spell Name="Tempest" Cast="14"/>
-				<Spell Name="Arcane Unforging" Cast="15"/>
-				<Spell Name="Fiery convocation" Cast="21"/>
-			</Dispell>
-		</Magic>
+			<Enemy>
+				<Name>Lizardmen, The Lore of Heaven</Name>
+				<Dispells>
+					<Spell Name="Apotheosis" Cast="7"/>
+					<Spell Name="Hand of Glory" Cast="7"/>
+					<Spell Name="Walk Between Worlds" Cast="7"/>
+					<Spell Name="Drain magic" Cast="9"/>
+					<Spell Name="Soul Quench" Cast="10"/>
+					<Spell Name="Tempest" Cast="14"/>
+					<Spell Name="Arcane Unforging" Cast="15"/>
+					<Spell Name="Fiery convocation" Cast="21"/>
+				</Dispells>
+			</Enemy>
+		</Magics>
 		<Local>
 			<SpecialRules>
 				<Daemonic/>
