@@ -35,27 +35,30 @@
 				<Drop>drop-drop</Drop>
 			</Buttons>
 		</Naming>
-		<Magic>
-			<Name>Spells of Ruin</Name>
-			<Options>Spells of Plague</Options>
+		<Magics>
 			<Magic>
-				<Spell Name="Skitterleap" Cast="5"/>
-				<Spell Name="Warp Lightning" Cast="6"/>
-				<Spell Name="Howling Warpgale" Cast="7"/>
-				<Spell Name="Death Frenzy" Cast="9"/>
-				<Spell Name="Scorch" Cast="10"/>
-				<Spell Name="Cracks Call" Cast="11"/>
+				<Name>Spells of Ruin</Name>
+				<Spells>
+					<Spell Name="Skitterleap" Cast="5"/>
+					<Spell Name="Warp Lightning" Cast="6"/>
+					<Spell Name="Howling Warpgale" Cast="7"/>
+					<Spell Name="Death Frenzy" Cast="9"/>
+					<Spell Name="Scorch" Cast="10"/>
+					<Spell Name="Cracks Call" Cast="11"/>
+				</Spells>
 			</Magic>
-			<Enemy>High Elves, High Magic</Enemy>
-			<Dispell>
-				<Spell Name="Shield of Saphery" Cast="7"/>
-				<Spell Name="Curse of Arrow Attraction" Cast="8"/>
-				<Spell Name="Courage of Aenarion" Cast="10"/>
-				<Spell Name="Fury of Khaine" Cast="10"/>
-				<Spell Name="Flame of the Phoenix" Cast="13"/>
-				<Spell Name="Vaul's Unmaking" Cast="14"/>
-			</Dispell>
-		</Magic>
+			<Enemy>
+				<Name>High Elves, High Magic</Name>
+				<Dispells>
+					<Spell Name="Shield of Saphery" Cast="7"/>
+					<Spell Name="Curse of Arrow Attraction" Cast="8"/>
+					<Spell Name="Courage of Aenarion" Cast="10"/>
+					<Spell Name="Fury of Khaine" Cast="10"/>
+					<Spell Name="Flame of the Phoenix" Cast="13"/>
+					<Spell Name="Vaul's Unmaking" Cast="14"/>
+				</Dispells>
+			</Enemy>
+		</Magics>
 		<Local>
 			<SpecialRules>
 				<ScurryAway>Scurry Away!</ScurryAway>
