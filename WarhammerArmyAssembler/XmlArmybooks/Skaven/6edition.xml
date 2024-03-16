@@ -35,26 +35,30 @@
 				<Drop>drop-drop</Drop>
 			</Buttons>
 		</Naming>
-		<Magic>
-			<Name>Skaven Spell List</Name>
+		<Magics>
 			<Magic>
-				<Spell Name="Skitterleap" Cast="4"/>
-				<Spell Name="Warp Lightning" Cast="5"/>
-				<Spell Name="Vermintide" Cast="7"/>
-				<Spell Name="Pestilent Breath" Cast="8"/>
-				<Spell Name="Death Frenzy" Cast="9"/>
-				<Spell Name="Plague" Cast="13"/>
+				<Name>Skaven Spell List</Name>
+				<Spells>
+					<Spell Name="Skitterleap" Cast="4"/>
+					<Spell Name="Warp Lightning" Cast="5"/>
+					<Spell Name="Vermintide" Cast="7"/>
+					<Spell Name="Pestilent Breath" Cast="8"/>
+					<Spell Name="Death Frenzy" Cast="9"/>
+					<Spell Name="Plague" Cast="13"/>
+				</Spells>
 			</Magic>
-			<Enemy>High Elves, High Magic Spells</Enemy>
-			<Dispell>
-				<Spell Name="Walk Between Worlds" Cast="6"/>
-				<Spell Name="Curse of Arrow Attraction" Cast="8"/>
-				<Spell Name="Fortune is Fickle" Cast="9"/>
-				<Spell Name="Fury of Khaine" Cast="10"/>
-				<Spell Name="Flame of the Phoenix" Cast="13"/>
-				<Spell Name="Vaul's Unmaking" Cast="14"/>
-			</Dispell>
-		</Magic>
+			<Enemy>
+				<Name>High Elves, High Magic Spells</Name>
+				<Dispells>
+					<Spell Name="Walk Between Worlds" Cast="6"/>
+					<Spell Name="Curse of Arrow Attraction" Cast="8"/>
+					<Spell Name="Fortune is Fickle" Cast="9"/>
+					<Spell Name="Fury of Khaine" Cast="10"/>
+					<Spell Name="Flame of the Phoenix" Cast="13"/>
+					<Spell Name="Vaul's Unmaking" Cast="14"/>
+				</Dispells>
+			</Enemy>
+		</Magics>
 		<Local>
 			<SpecialRules>
 				<MixedUnit/>
