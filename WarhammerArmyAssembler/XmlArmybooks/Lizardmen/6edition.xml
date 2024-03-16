@@ -32,27 +32,30 @@
 			<Items>Treasures of the Lost World</Items>
 			<Powers>Sacred Spawnings</Powers>
 		</Naming>
-		<Magic>
-			<Name>The Lore of Heaven</Name>
-			<Options>Any of eight Lore of Battle Magic</Options>
+		<Magics>
 			<Magic>
-				<Spell Name="Second Sign of Amul" Cast="5"/>
-				<Spell Name="Portent of Far" Cast="6"/>
-				<Spell Name="Forked Lightning" Cast="7"/>
-				<Spell Name="Uranon's Thunder Bolt" Cast="9"/>
-				<Spell Name="Storm of Cronos" Cast="9"/>
-				<Spell Name="The Comet of Cassanora" Cast="10"/>
+				<Name>The Lore of Heaven</Name>
+				<Spells>
+					<Spell Name="Second Sign of Amul" Cast="5"/>
+					<Spell Name="Portent of Far" Cast="6"/>
+					<Spell Name="Forked Lightning" Cast="7"/>
+					<Spell Name="Uranon's Thunder Bolt" Cast="9"/>
+					<Spell Name="Storm of Cronos" Cast="9"/>
+					<Spell Name="The Comet of Cassanora" Cast="10"/>
+				</Spells>
 			</Magic>
-			<Enemy>Warriors of Chaos, Lore of Nurgle</Enemy>
-			<Dispell>
-				<Spell Name="Magnificent Buboes" Cast="8"/>
-				<Spell Name="Favoured Poxes" Cast="9"/>
-				<Spell Name="Effulgent Boils" Cast="10"/>
-				<Spell Name="Glistening Scabs" Cast="11"/>
-				<Spell Name="Glorious Afflictions" Cast="12"/>
-				<Spell Name="Sumptuous Pestilience" Cast="13"/>
-			</Dispell>
-		</Magic>
+			<Enemy>
+				<Name>Warriors of Chaos, Lore of Nurgle</Name>
+				<Dispells>
+					<Spell Name="Magnificent Buboes" Cast="8"/>
+					<Spell Name="Favoured Poxes" Cast="9"/>
+					<Spell Name="Effulgent Boils" Cast="10"/>
+					<Spell Name="Glistening Scabs" Cast="11"/>
+					<Spell Name="Glorious Afflictions" Cast="12"/>
+					<Spell Name="Sumptuous Pestilience" Cast="13"/>
+				</Dispells>
+			</Enemy>
+		</Magics>
 		<Local>
 			<SpecialRules>
 				<Aquatic/>
