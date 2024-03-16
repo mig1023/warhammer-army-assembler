@@ -32,27 +32,30 @@
 			<Internal>Bretonnia</Internal>
 			<Items>Blessed Heirlooms</Items>
 		</Naming>
-		<Magic>
-			<Name>The Lore of Light</Name>
-			<Options>Lore of Beasts, Life, Heavens</Options>
+		<Magics>
 			<Magic>
-				<Spell Name="Pha's Illumination" Cast="5"/>
-				<Spell Name="Burning Gaze" Cast="5"/>
-				<Spell Name="Dazzling Brightness" Cast="6"/>
-				<Spell Name="Healing Hand" Cast="7"/>
-				<Spell Name="Guardian Light" Cast="8"/>
-				<Spell Name="Blinding Light" Cast="9"/>
+				<Name>The Lore of Light</Name>
+				<Spells>
+					<Spell Name="Pha's Illumination" Cast="5"/>
+					<Spell Name="Burning Gaze" Cast="5"/>
+					<Spell Name="Dazzling Brightness" Cast="6"/>
+					<Spell Name="Healing Hand" Cast="7"/>
+					<Spell Name="Guardian Light" Cast="8"/>
+					<Spell Name="Blinding Light" Cast="9"/>
+				</Spells>
 			</Magic>
-			<Enemy>Vampire Counts, The Black Art</Enemy>
-			<Dispell>
-				<Spell Name="Invocation of Nehek" Cast="5"/>
-				<Spell Name="Hand of Dust" Cast="9"/>
-				<Spell Name="Hellish Vigour" Cast="9"/>
-				<Spell Name="Gaze of Nagash" Cast="10"/>
-				<Spell Name="Vanhel's Danse Macabre" Cast="11"/>
-				<Spell Name="Curse of Years" Cast="12"/>
-			</Dispell>
-		</Magic>
+			<Enemy>
+				<Name>Vampire Counts, The Black Art</Name>
+				<Dispells>
+					<Spell Name="Invocation of Nehek" Cast="5"/>
+					<Spell Name="Hand of Dust" Cast="9"/>
+					<Spell Name="Hellish Vigour" Cast="9"/>
+					<Spell Name="Gaze of Nagash" Cast="10"/>
+					<Spell Name="Vanhel's Danse Macabre" Cast="11"/>
+					<Spell Name="Curse of Years" Cast="12"/>
+				</Dispells>
+			</Enemy>
+		</Magics>
 		<Local>
 			<SpecialRules>
 				<LeadershipOfKnight>May use the Leadership of any non-fleeing Knight within 6" of them; unit Standards do not confer any additional Victory Points if they are captured</LeadershipOfKnight>
