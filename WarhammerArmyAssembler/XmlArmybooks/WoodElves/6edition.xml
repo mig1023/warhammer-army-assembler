@@ -31,27 +31,30 @@
 			<Internal>WoodElves</Internal>
 			<Items>Heirlooms of Athel Loren</Items>
 		</Naming>
-		<Magic>
-			<Name>Lore of Athel Loren</Name>
-			<Options>Lore of Life, Beasts</Options>
+		<Magics>
 			<Magic>
-				<Spell Name="Tree Singing" Cast="4"/>
-				<Spell Name="Fury of the Forest" Cast="6"/>
-				<Spell Name="The Hidden Path" Cast="7"/>
-				<Spell Name="The Twilight Host" Cast="8"/>
-				<Spell Name="Ariel's Blessing" Cast="9"/>
-				<Spell Name="The Call of the Hunt" Cast="11"/>
+				<Name>Lore of Athel Loren</Name>
+				<Spells>
+					<Spell Name="Tree Singing" Cast="4"/>
+					<Spell Name="Fury of the Forest" Cast="6"/>
+					<Spell Name="The Hidden Path" Cast="7"/>
+					<Spell Name="The Twilight Host" Cast="8"/>
+					<Spell Name="Ariel's Blessing" Cast="9"/>
+					<Spell Name="The Call of the Hunt" Cast="11"/>
+				</Spells>
 			</Magic>
-			<Enemy>Beastmen, Gifts of The Plagued One</Enemy>
-			<Dispell>
-				<Spell Name="Magnificent Buboes" Cast="8"/>
-				<Spell Name="Favoured Poxes" Cast="9"/>
-				<Spell Name="Effulgent Boils" Cast="10"/>
-				<Spell Name="Glistening Scabs" Cast="11"/>
-				<Spell Name="Glorious Afflictions" Cast="12"/>
-				<Spell Name="Sumptuous Pestilience" Cast="13"/>
-			</Dispell>
-		</Magic>
+			<Enemy>
+				<Name>Beastmen, Gifts of The Plagued One</Name>
+				<Dispells>
+					<Spell Name="Magnificent Buboes" Cast="8"/>
+					<Spell Name="Favoured Poxes" Cast="9"/>
+					<Spell Name="Effulgent Boils" Cast="10"/>
+					<Spell Name="Glistening Scabs" Cast="11"/>
+					<Spell Name="Glorious Afflictions" Cast="12"/>
+					<Spell Name="Sumptuous Pestilience" Cast="13"/>
+				</Dispells>
+			</Enemy>
+		</Magics>
 		<Local>
 			<SpecialRules>
 				<Flammable/>
