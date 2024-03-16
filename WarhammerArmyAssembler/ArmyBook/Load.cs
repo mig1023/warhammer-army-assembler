@@ -318,30 +318,33 @@ namespace WarhammerArmyAssembler.ArmyBook
 
         private static void LoadMagic(XmlDocument xmlFile)
         {
-            XmlNode loreBook = xmlFile.SelectSingleNode("ArmyBook/Introduction/Magic");
+            string magics = "ArmyBook/Introduction/Magics";
+            XmlNode loreBook = xmlFile.SelectSingleNode(magics);
 
             if (loreBook == null)
                 return;
 
-            Data.MagicLoreName = StringParse(loreBook["Name"]);
-            Data.MagicOptions = StringParse(loreBook["Options"]);
+            foreach (XmlNode magic in xmlFile.SelectNodes($"{magics}/Magic"))
+            {
+                var spells = LoadSpells(magic.SelectSingleNode("Spells"));
+                Data.Magic.Add(StringParse(magic["Name"]), spells);
+            }
 
-            string enemyMagicLine = StringParse(loreBook["Enemy"]);
-            List<string> enemyMagic = enemyMagicLine.Split(',').Select(x => x.Trim()).ToList();
-
-            if (enemyMagic.Count < 2)
-                return;
-
-            Data.EnemyMagicName = enemyMagic[0];
-            Data.EnemyMagicLoreName = enemyMagic[1];
-
-            LoadSpells(xmlFile, "Magic", ref Data.Magic);
-            LoadSpells(xmlFile, "Dispell", ref Data.Dispell);
+            foreach (XmlNode magic in xmlFile.SelectNodes($"{magics}/Enemy"))
+            {
+                var dispells = LoadSpells(magic.SelectSingleNode("Dispells"));
+                Data.Dispell.Add(StringParse(magic["Name"]), dispells);
+            }
         }
 
-        private static void LoadSpells(XmlDocument xmlFile, string magic, ref Dictionary<string, int> spells)
+        private static Dictionary<string, int> LoadSpells(XmlNode xmlNode)
         {
-            foreach (XmlNode spell in xmlFile.SelectNodes($"ArmyBook/Introduction/Magic/{magic}/Spell"))
+            Dictionary<string, int> spells = new Dictionary<string, int>();
+
+            if (xmlNode == null)
+                return spells;
+
+            foreach (XmlNode spell in xmlNode.SelectNodes($"Spell"))
             {
                 if (!int.TryParse(spell.Attributes["Cast"]?.Value, out int spellDifficulty))
                     continue;
@@ -349,6 +352,8 @@ namespace WarhammerArmyAssembler.ArmyBook
                 string spellName = spell.Attributes["Name"].Value;
                 spells.Add(spellName, spellDifficulty);
             }
+
+            return spells;
         }
 
         private static Unit LoadUnit(int id, XmlNode xmlUnit, XmlDocument xml,

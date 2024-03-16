@@ -73,17 +73,33 @@ namespace WarhammerArmyAssembler.Interface
             if (ArmyBook.Data.Dispell.Count == 0)
                 return String.Empty;
 
-            var spellList = ArmyBook.Data.Dispell.
-                OrderBy(x => x.Value).
-                Select(x => $"~ {x.Value}+\t{x.Key} ({SpellDispell(x.Value)} dispells)");
+            string dispells = String.Empty;
+            int count = 1;
 
-            string lore = ArmyBook.Data.EnemyMagicLoreName;
-            string enemy = ArmyBook.Data.EnemyMagicName;
+            foreach (string dispell in ArmyBook.Data.Dispell.Keys)
+            {
+                List<string> dispellLine = dispell
+                    .Split(',')
+                    .Select(x => x.Trim())
+                    .ToList();
+
+                string lore = dispellLine[1];
+                string enemy = dispellLine[0];
+
+                var spellList = ArmyBook.Data.Dispell[dispell].
+                    OrderBy(x => x.Value).
+                    Select(x => $"~ {x.Value}+\t{x.Key} ({SpellDispell(x.Value)} dispells)");
+
+                dispells += SpellLine(spellList, count, $"{lore.ToUpper()}\nby {enemy}",
+                    ArmyBook.Data.Dispell.Count);
+
+                count += 1;
+            }
+            
             int dispScrolls = Army.Params.GetArmyDispellScroll();
-            string footer = dispScrolls > 0 ? $"\n\n\n+ {dispScrolls} Dispell Scrolls" : String.Empty;
-            string spells = String.Join("\n\n", spellList);
+            string footer = dispScrolls > 0 ? $"\n+ {dispScrolls} Dispell Scrolls\n\n\n" : String.Empty;
 
-            return $"ENEMY MAGIC:\n\n{lore}\nby {enemy}\n\n\n{spells}{footer}";
+            return $"{dispells}{footer}";
         }
 
         private static string SpellCast(int value) =>
@@ -91,21 +107,39 @@ namespace WarhammerArmyAssembler.Interface
 
         public static string ArmyCast()
         {
-            if (ArmyBook.Data.Magic.Count == 0)
+            if ((ArmyBook.Data.Magic.Count == 0) || (ArmyBook.Data.Magic.First().Value.Count == 0))
                 return "There is no traditional spell's magic model.";
 
-            var spellList = ArmyBook.Data.Magic.
-                OrderBy(x => x.Value).
-                Select(x =>$"{x.Value}+\t{x.Key} ({SpellCast(x.Value)} spells)");
+            string spells = String.Empty;
+            int count = 1;
 
-            string loreName = ArmyBook.Data.MagicLoreName.ToUpper();
-            string footer = String.Empty;
-            string spells = String.Join("\n\n", spellList);
+            foreach (string magic in ArmyBook.Data.Magic.Keys)
+            {
+                string loreName = magic.ToUpper();
 
-            if (!String.IsNullOrEmpty(ArmyBook.Data.MagicOptions))
-                footer = $"\n\n\nAnother magic options:\n{ArmyBook.Data.MagicOptions}";     
+                var spellList = ArmyBook.Data.Magic[magic].
+                    OrderBy(x => x.Value).
+                    Select(x => $"{x.Value}+\t{x.Key} ({SpellCast(x.Value)} spells)");
 
-            return $"{loreName}\n\n\n{spells}{footer}";
+                spells += SpellLine(spellList, count,
+                    loreName, ArmyBook.Data.Magic.Count);
+
+                count += 1;
+            }
+
+            return spells;
+        }
+
+        private static string SpellLine(IEnumerable<string> spellList,
+            int count, string loreName, int magicsCount)
+        {
+            bool largeMagic = magicsCount > 2;
+            string newLines = largeMagic ? "\n" : "\n\n";
+
+            string spell = String.Join(newLines, spellList);
+            string separator = count > 1 ? "\n\n" : String.Empty;
+
+            return $"{separator}{loreName}\n{newLines}{spell}{newLines}";
         }
 
         private static string CastingProbability(int difficulty, int cast)

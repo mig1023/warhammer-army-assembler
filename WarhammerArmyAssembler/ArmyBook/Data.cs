@@ -6,13 +6,11 @@ namespace WarhammerArmyAssembler.ArmyBook
 {
     public class Data
     {
-        public static string MagicLoreName = String.Empty;
-        public static string MagicOptions = String.Empty;
-        public static Dictionary<string, int> Magic = new Dictionary<string, int>();
+        public static Dictionary<string, Dictionary<string, int>> Magic =
+            new Dictionary<string, Dictionary<string, int>>();
 
-        public static string EnemyMagicLoreName = String.Empty;
-        public static string EnemyMagicName = String.Empty;
-        public static Dictionary<string, int> Dispell = new Dictionary<string, int>();
+        public static Dictionary<string, Dictionary<string, int>> Dispell =
+            new Dictionary<string, Dictionary<string, int>>();
 
         public static string AddStyle = String.Empty;
         public static string DropStyle = String.Empty;
