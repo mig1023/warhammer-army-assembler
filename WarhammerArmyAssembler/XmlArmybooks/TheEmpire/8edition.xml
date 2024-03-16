@@ -35,29 +35,32 @@
 				<Drop>yes, sir!</Drop>
 			</Buttons>
 		</Naming>
-		<Magic>
-			<Name>The Lore of Fire</Name>
-			<Options>Any of eight Lore of Battle Magic</Options>
+		<Magics>
 			<Magic>
-				<Spell Name="Fireball" Cast="5"/>
-				<Spell Name="Cascading Fire-Cloak" Cast="5"/>
-				<Spell Name="Flaming Sword of Rhuin" Cast="8"/>
-				<Spell Name="The Burning Head" Cast="10"/>
-				<Spell Name="Piercing Bolts of Burning" Cast="10"/>
-				<Spell Name="Fulminating Flame Cage" Cast="11"/>
-				<Spell Name="Flame Storm" Cast="13"/>
+				<Name>The Lore of Fire</Name>
+				<Spells>
+					<Spell Name="Fireball" Cast="5"/>
+					<Spell Name="Cascading Fire-Cloak" Cast="5"/>
+					<Spell Name="Flaming Sword of Rhuin" Cast="8"/>
+					<Spell Name="The Burning Head" Cast="10"/>
+					<Spell Name="Piercing Bolts of Burning" Cast="10"/>
+					<Spell Name="Fulminating Flame Cage" Cast="11"/>
+					<Spell Name="Flame Storm" Cast="13"/>
+				</Spells>
 			</Magic>
-			<Enemy>Daemons of Chaos, The Lore of Nurgle</Enemy>
-			<Dispell>
-				<Spell Name="Miasma of Pestilence" Cast="7"/>
-				<Spell Name="Ream of Corruption" Cast="9"/>
-				<Spell Name="Blades of Putrefaction" Cast="10"/>
-				<Spell Name="Curse of The Leper" Cast="12"/>
-				<Spell Name="Rancid Visitations" Cast="12"/>
-				<Spell Name="Fleshy Abundance" Cast="13"/>
-				<Spell Name="Plague Wind" Cast="17"/>
-			</Dispell>
-		</Magic>
+			<Enemy>
+				<Name>Daemons of Chaos, The Lore of Nurgle</Name>
+				<Dispells>
+					<Spell Name="Miasma of Pestilence" Cast="7"/>
+					<Spell Name="Ream of Corruption" Cast="9"/>
+					<Spell Name="Blades of Putrefaction" Cast="10"/>
+					<Spell Name="Curse of The Leper" Cast="12"/>
+					<Spell Name="Rancid Visitations" Cast="12"/>
+					<Spell Name="Fleshy Abundance" Cast="13"/>
+					<Spell Name="Plague Wind" Cast="17"/>
+				</Dispells>
+			</Enemy>
+		</Magics>
 		<Local>
 			<SpecialRules>
 				<Cannon/>
