@@ -35,27 +35,30 @@
 				<Drop>yes, sir!</Drop>
 			</Buttons>
 		</Naming>
-		<Magic>
-			<Name>Lore of Fire</Name>
-			<Options>Any of eight Lore of Battle Magic</Options>
+		<Magics>
 			<Magic>
-				<Spell Name="Fireball" Cast="5"/>
-				<Spell Name="Flaming Sword of Rhuin" Cast="5"/>
-				<Spell Name="The Burning Head" Cast="8"/>
-				<Spell Name="Fiery Blast" Cast="8"/>
-				<Spell Name="Conflagration of Doom" Cast="11"/>
-				<Spell Name="Wall of Fire" Cast="12"/>
+				<Name>Lore of Fire</Name>
+				<Spells>
+					<Spell Name="Fireball" Cast="5"/>
+					<Spell Name="Flaming Sword of Rhuin" Cast="5"/>
+					<Spell Name="The Burning Head" Cast="8"/>
+					<Spell Name="Fiery Blast" Cast="8"/>
+					<Spell Name="Conflagration of Doom" Cast="11"/>
+					<Spell Name="Wall of Fire" Cast="12"/>
+				</Spells>
 			</Magic>
-			<Enemy>Daemons of Chaos, The Lore of Nurgle</Enemy>
-			<Dispell>
-				<Spell Name="Magnificent Buboes" Cast="7"/>
-				<Spell Name="Fleshy Abundance" Cast="9"/>
-				<Spell Name="Plague Squall" Cast="10"/>
-				<Spell Name="Cloying Quagmire" Cast="11"/>
-				<Spell Name="Curse of the Leper" Cast="12"/>
-				<Spell Name="Rot, Glorious Rot" Cast="14"/>
-			</Dispell>
-		</Magic>
+			<Enemy>
+				<Name>Daemons of Chaos, The Lore of Nurgle</Name>
+				<Dispells>
+					<Spell Name="Magnificent Buboes" Cast="7"/>
+					<Spell Name="Fleshy Abundance" Cast="9"/>
+					<Spell Name="Plague Squall" Cast="10"/>
+					<Spell Name="Cloying Quagmire" Cast="11"/>
+					<Spell Name="Curse of the Leper" Cast="12"/>
+					<Spell Name="Rot, Glorious Rot" Cast="14"/>
+				</Dispells>
+			</Enemy>
+		</Magics>
 		<Local>
 			<SpecialRules>
 				<Cannon/>
