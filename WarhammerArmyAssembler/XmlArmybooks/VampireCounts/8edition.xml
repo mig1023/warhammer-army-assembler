@@ -31,29 +31,32 @@
 			<Internal>Vampires</Internal>
 			<Powers>Vampiric Powers</Powers>
 		</Naming>
-		<Magic>
-			<Name>The Lore of the Vampires</Name>
-			<Options>Lore of Death</Options>
+		<Magics>
 			<Magic>
-				<Spell Name="Invocation of Nehek" Cast="6"/>
-				<Spell Name="Vanhel's Danse Macabre" Cast="6"/>
-				<Spell Name="Hellish Vigour" Cast="8"/>
-				<Spell Name="Gaze of Nagash" Cast="9"/>
-				<Spell Name="Raise Dead" Cast="9"/>
-				<Spell Name="Curse of Years" Cast="12"/>
-				<Spell Name="Wind of Undeath" Cast="15"/>
+				<Name>The Lore of the Vampires</Name>
+				<Spells>
+					<Spell Name="Invocation of Nehek" Cast="6"/>
+					<Spell Name="Vanhel's Danse Macabre" Cast="6"/>
+					<Spell Name="Hellish Vigour" Cast="8"/>
+					<Spell Name="Gaze of Nagash" Cast="9"/>
+					<Spell Name="Raise Dead" Cast="9"/>
+					<Spell Name="Curse of Years" Cast="12"/>
+					<Spell Name="Wind of Undeath" Cast="15"/>
+				</Spells>
 			</Magic>
-			<Enemy>The Empire, The Lore of Fire</Enemy>
-			<Dispell>
-				<Spell Name="Fireball" Cast="7"/>
-				<Spell Name="Cascading Fire-Cloak" Cast="7"/>
-				<Spell Name="Flaming Sword of Rhuin" Cast="10"/>
-				<Spell Name="The Burning Head" Cast="12"/>
-				<Spell Name="Piercing Bolts of Burning" Cast="12"/>
-				<Spell Name="Fulminating Flame Cage" Cast="13"/>
-				<Spell Name="Flame Storm" Cast="15"/>
-			</Dispell>
-		</Magic>
+			<Enemy>
+				<Name>The Empire, The Lore of Fire</Name>
+				<Dispells>
+					<Spell Name="Fireball" Cast="7"/>
+					<Spell Name="Cascading Fire-Cloak" Cast="7"/>
+					<Spell Name="Flaming Sword of Rhuin" Cast="10"/>
+					<Spell Name="The Burning Head" Cast="12"/>
+					<Spell Name="Piercing Bolts of Burning" Cast="12"/>
+					<Spell Name="Fulminating Flame Cage" Cast="13"/>
+					<Spell Name="Flame Storm" Cast="15"/>
+				</Dispells>
+			</Enemy>
+		</Magics>
 		<Local>
 			<SpecialRules>
 				<Vampiric/>
