@@ -2,19 +2,19 @@
 <ArmyBook>
 	<Introduction>
 		<Info>
-			<Army>The Empire</Army>
+			<Army>Orcs and Goblins</Army>
 			<Edition>6</Edition>
 			<Released>2000</Released>
-			<Authors>Alessio Cavatore</Authors>
-			<Description>The Empire, sometimes referred to as the Empire of Man, is an electoral monarchy composed of feudal states that is the largest and most important of the Human nations in the Old World. It was forged by the warrior-king and ascended deity Sigmar from the primitive tribes of Human barbarians who inhabited what became the lands of the southern Empire more than 2500 years ago.\n\nAlthough not as skilled in craftsmanship as the Dwarfs or in magic as the High Elves, the people of the Empire are not beholden by the limits of tradition to the same extent as those elder races and continue to progress culturally, technologically and magically.\n\nHaving yet to succumb to any threat, external or internal, it is the faith, the sense of righteousness, and the unconquerable spirit of the realm's citizens which gives the Empire its strength, as well as the ruthless efficiency of its military and religious orders</Description>
+			<Authors>Rick Priestly and Jake Thornton</Authors>
+			<Description>The Greenskins are a highly primitive and warlike race of bestial humanoid barbarians and raiders that occupy much of the Eastern Hemisphere of the Warhammer World. The term "Greenskins" is a common collective description used by many civilised nations to refer to the forces of the Orcs and Goblins and other biologically related races. The broadest division is between the Orcs, who are strong, brutish, and savage warriors, and the Goblins, who are smaller and weaker, but cunning and conniving creatures.\n\nThe Greenskins are considered by many to be the scourge of all civilisation. These tribal warriors are extremely violent, raiding ceaselessly, carrying war and barbarism to all corners of the known world. Time and again, hordes of Greenskins would arise without warning and lay a great swath of destruction that has no direction or purpose other than simple violence. Indeed, the Greenskin race's single motive is violence, an ever increasing mass of warfare that has the potential to dominate and cover the entire world in a seething green tide</Description>
 		</Info>
 		<Styles>
 			<Colors>
-				<Front>8d1a1a</Front>
-				<Back>630101</Back>
-				<Grid>efdcdc</Grid>
-				<Tooltip>eec2c2</Tooltip>
-				<Upgraded>a16666, 823333, 721a1a</Upgraded>
+				<Front>6b8e6b</Front>
+				<Back>354735</Back>
+				<Grid>f4fff0</Grid>
+				<Tooltip>dafbce</Tooltip>
+				<Upgraded>a6bba6, 88a488, 799979</Upgraded>
 			</Colors>
 			<Images>
 				<Files>
@@ -28,55 +28,91 @@
 			</Images>
 		</Styles>
 		<Naming>
-			<Internal>Empire</Internal>
-			<Items>The Treasure Vaults</Items>
+			<Internal>Orcs</Internal>
+			<Items>Shiny stuff</Items>
 			<Buttons>
-				<Add>no, sir!</Add>
-				<Drop>yes, sir!</Drop>
+				<Add>dis iz mine!</Add>
+				<Drop>ta hell dis!</Drop>
 			</Buttons>
 		</Naming>
 		<Magics>
 			<Magic>
-				<Name>The Lore of Fire</Name>
+				<Name>Spells of the Big Waaagh!</Name>
 				<Spells>
-					<Spell Name="Fire Ball" Cast="5"/>
-					<Spell Name="Flaming Sword of Rhuin" Cast="6"/>
-					<Spell Name="Fiery Blast" Cast="8"/>
-					<Spell Name="Burning Head" Cast="9"/>
-					<Spell Name="Conflagration of Doom" Cast="11"/>
-					<Spell Name="Wall of Fire" Cast="12"/>
+					<Spell Name="Mork save us!" Cast="5"/>
+					<Spell Name="Gork'll fix it" Cast="6"/>
+					<Spell Name="Bash 'em ladz" Cast="7"/>
+					<Spell Name="The Foot of Gork" Cast="9"/>
+					<Spell Name="Gork's warpath" Cast="10"/>
+					<Spell Name="Waaagh!" Cast="12"/>
+				</Spells>
+			</Magic>
+			<Magic>
+				<Name>Spells of the Little Waaagh!</Name>
+				<Spells>
+					<Spell Name="Gaze of Mork" Cast="5"/>
+					<Spell Name="Fists of Gork" Cast="7"/>
+					<Spell Name="'Eadbutt" Cast="7"/>
+					<Spell Name="Brain Bursta" Cast="8"/>
+					<Spell Name="'Ere We Go!" Cast="9"/>
+					<Spell Name="The Hand of Gork" Cast="9"/>
 				</Spells>
 			</Magic>
 			<Enemy>
-				<Name>Daemons of Chaos, Lore of Nurgle</Name>
+				<Name>Wood Elves, Lore of Athel Loren</Name>
 				<Dispells>
-					<Spell Name="Magnificent Buboes" Cast="8"/>
-					<Spell Name="Favoured Poxes" Cast="9"/>
-					<Spell Name="Effulgent Boils" Cast="10"/>
-					<Spell Name="Glistening Scabs" Cast="11"/>
-					<Spell Name="Glorious Afflictions" Cast="12"/>
-					<Spell Name="Sumptuous Pestilience" Cast="13"/>
+					<Spell Name="Tree Singing" Cast="6"/>
+					<Spell Name="Fury of the Forest" Cast="8"/>
+					<Spell Name="The Hidden Path" Cast="9"/>
+					<Spell Name="The Twilight Host" Cast="10"/>
+					<Spell Name="Ariel's Blessing" Cast="11"/>
+					<Spell Name="The Call of the Hunt" Cast="13"/>
 				</Dispells>
 			</Enemy>
 		</Magics>
 		<Local>
 			<SpecialRules>
-				<Cannon/>
-				<Mortar/>
-				<Helblaster/>
+				<Animosity/>
+				<FearElves/>
+				<HateDwarfs/>
+				<TuskerCharge/>
+				<IgnoreGreenskinPanic/>
+				<QuellAnimosity/>
 			</SpecialRules>
 			<Options>
-				<Pistol/>
-				<Handgun/>
-				<FullPlateArmour>
-					AddToArmour: 4
-				</FullPlateArmour>
-				<Barding>
-					Name: Barding for Warhorse
-					AddToArmour: 6
-				</Barding>
-				<RepeaterPistol/>
-				<HochlandLongRifle/>
+				<Choppa/>
+				<GreatAxe>
+					AddToStrength: 2
+					HitLast
+				</GreatAxe>
+				<Warprint>
+					AddToWard: 6
+				</Warprint>
+				<Biguns>
+					Name: Big'Uns
+					AddToWeaponSkill: 1
+					AddToStrength: 1
+					OnlyOneInArmy
+				</Biguns>
+				<Nets/>
+				<ExtraOrc>
+					AddToModelsInPack: 1
+				</ExtraOrc>
+				<ExtraGoblin>
+					AddToModelsInPack: 1
+				</ExtraGoblin>
+				<ExtraWolf>
+					AddToModelsInPack: 1
+				</ExtraWolf>
+				<OrcBully>
+					AddToModelsInPack: 1
+				</OrcBully>
+				<StoneTroll>
+					MagicResistance: 2
+				</StoneTroll>
+				<RiverTroll>
+					SubOpponentToHit: 1
+				</RiverTroll>
 			</Options>
 		</Local>
 	</Introduction>
@@ -96,951 +132,1282 @@
 			</CommonMagicItems>
 			<MagicWeapons>
 				<Weapon>
-					<Name>Runefang</Name>
-					<Points>100</Points>
-					<Only>ElectorCount</Only>
-					<NoArmour/>
+					<Name>Battleaxe of the Last WAAAGH!</Name>
+					<Points>75</Points>
+					<Rule>+D6 Attacks</Rule>
+					<Lore>Revered subject of the Orc myth of the end of everything when Gork's (or possibly Mork's) chosen Best Boss Ragnar goes mad with an axe and destroys the whole world. This is the famous Orcish day of Ragnarork</Lore>
+					<Description>In close combat the bearer receives a potentially whopping +D6 Attacks - roll randomly each combat round to see just how crazed the wielder is that particular turn. On a 6 the favour of Gork (or possibly Mork) is withdrawn from the wielder oner his attacks have been resolved - the Battleaxe of the Last Waaagh! then ceases to work at the end of that Close Combat phase</Description>
+				</Weapon>
+				<Weapon>
+					<Name>Kleeva's Cleaver of Cleavage</Name>
+					<Points>75</Points>
 					<AutoWound/>
-					<Lore>The Runefangs were made at the dawn of time for Sigmar's twelve chieftains. Now they symbolise tbe status of Elector</Lore>
-					<Description>All hits from a Runefang wound automatically. No armour saves allowed</Description>
+					<Lore>Even for a simple instrument of hacking Kleeva's Cleaver is a brutal looking weapon</Lore>
+					<Description>All hits wound automatically. Armour saves are modified by the Strength of the bearer</Description>
 				</Weapon>
 				<Weapon>
-					<Name>The Mace of Helsturm</Name>
-					<Points>65</Points>
-					<StrengthTo>10</StrengthTo>
-					<AttacksTo>1</AttacksTo>
-					<MultiWounds>D6</MultiWounds>
-					<Lore>This mace was used in battle by tbe first Tbeogonist, Johann Heist rum. It is said that it can shatter the very walls of a castle</Lore>
-					<Description>The bearer can forfeit all of his normal Attacks to make only one Attack. Roll to hit normally. If this one Attack hits, the hit is resolved at Strength 10 and causes D6 wounds</Description>
-				</Weapon>
-				<Weapon>
-					<Name>Sword of Fate</Name>
+					<Name>Krumpa's Club of Crumpin'</Name>
 					<Points>50</Points>
-					<Rule>At the beginning of the battle, nominate one enemy character or monster. The sword counts as a magic sword with no particular bonuses against any other opponent, but attacks directed against the designated target will wound it on a 2+ and cause D3 wounds, with no armour saves allowed</Rule>
-					<Lore>The blade of this enchanted weapon was forged and enchanted to be the undoing of one specific foe</Lore>
+					<NoArmour/>
+					<Lore>This sacred weapon has been passed down the generations for more years than an Orc can count. Handed down from Boss Orc to Bigger-Orc-that-could-take-it-off-him, this rather well worn spiky club punches through armour with no problem</Lore>
+					<Description>The Club of Cnimpin' allows no armour saves</Description>
 				</Weapon>
 				<Weapon>
-					<Name>Sword of Sigismund</Name>
+					<Name>Basha's Big Aхе of Bashin'</Name>
 					<Points>50</Points>
-					<AddToStrength>1</AddToStrength>
-					<HitFirst/>
-					<Lore>This sword, wielded in the crusades by tbe Grand Master of tbe Knights Panther, once belonged to Emperor Sigismund</Lore>
-					<Description>The wielder of this sword has +1 Strength and always strikes first in close combat, even before enemies that have charged. If the bearer is fighting another enemy who is also entitled to strike first (because of spells, special abilities, etc), then resolve attacks in Initiative order. If Initiative values are equal, roll a dice to determine who strikes first</Description>
+					<AddToAttacks>2</AddToAttacks>
+					<Lore>This legendary axe is all that is left of the once mighty Basha Warboss of the Iron Skullz after he stood rather too close to a drunken giant at the Battle of Grim's Crag</Lore>
+					<Description>The axe gives the wielder +2 Attacks in close combat</Description>
 				</Weapon>
 				<Weapon>
-					<Name>Sword of Righteous Steel</Name>
+					<Name>Hacka's Sword of Hacking</Name>
 					<Points>45</Points>
 					<HitOn>2</HitOn>
-					<Lore>Swords made of steel can he blessed by a priest of Sigmar to enhance the fighting skills of their wielder</Lore>
-					<Description>The wielder always hits any opponent on a 2+, regardless of relative Weapon Skills. This cannot be modified in any way</Description>
+					<Lore>It was said mostly by Hacka that he fought alongside Azhag and was the one who first proclaimed him the Slaughterer. He also mentioned single handedly killing Sigmar and being a drinking buddy of Gork (or possibly Mork). Whatever the truth Hacka acquired this slender and rather Elven looking sword from somewhere strange and nobody ever felt much like asking where. Not after the last time anyway</Lore>
+					<Description>Ihe Sword of Hackin' hits on 2+ regardless of the wielder's WS</Description>
 				</Weapon>
 				<Weapon>
-					<Name>Sword of Power</Name>
+					<Name>Fumpa's Club of Fumpin'</Name>
 					<Points>40</Points>
 					<AddToStrength>2</AddToStrength>
-					<Lore>The wielder of this weapon is bestowed with supernatural strength</Lore>
-					<Description>The sword confers +2 Strength to all close combat attacks made by the character fighting with it</Description>
+					<Lore>Since the dawn of last Thursday Fumpa's club has been the traditional symbol of leadership amongst the Blacknose tribe. Of course, to start with there were a few who didn't see it like that, but they've all since been, er, convinced</Lore>
+					<Description>The Club of Fumpin confers +2 Strength to all close combat attacks made by the character fighting with it</Description>
 				</Weapon>
 				<Weapon>
-					<Name>Hammer of Judgement</Name>
-					<Points>25</Points>
-					<Test Bet="Wound" Context="Hit" Profile="Leadership"/>
-					<Lore>This mighty hammer was carried to battle by Frederick the Hold, great-grandfather of Kart Franz. Its strikes not only crush bones, hut evil spirits as well</Lore>
-					<Description>Models hit by this hammer must take a Leadership test for every hit suffered. If the test is failed, the hit wounds automatically and no armour save is allowed. If the test is passed, roll to wound and take armour saves as normal</Description>
+					<Name>Kurbog's Curmudgeonly Clobbera</Name>
+					<Points>40</Points>
+					<Rule>If an enemy model suffers one or more wounds (after saves) inflicted it may make no more Attacks in that combat engagement</Rule>
+					<Lore>The spite and lust for vengeance that ooze from this weapon leave those struck by it utterly dumbstruck and unwilling to attack lest they incur its wrath once more</Lore>
+					<Description>If an enemy model suffers one or more wounds (after saves) inflicted by the Curmudgeonly Clobbera it may make no more Attacks in that combat engagement. If the victim is mounted or rides a chariot, then only the rider monster that actuallv suffers the wound is 'clobbered' and not the entire model/mount/etc. Only one model ran be 'clobbered' at a time. Other models that are hit whilst one is 'clobbered' suffer wounds as normal but no additional effects</Description>
 				</Weapon>
 				<Weapon>
-					<Name>Dragon Bow</Name>
+					<Name>Porko's Pigstikka</Name>
+					<Only>Mount</Only>
+					<Points>40</Points>
+					<ChargeStrengthBonus>1</ChargeStrengthBonus>
+					<Rule>+1 Strength extra Attack per rank in the enemy unit (up to a maximum of +3)</Rule>
+					<Lore>Most of the many spears that have been used by Porko's Boar Boyz lie shattered on the battlefields of the Old World, but not this one. In battle the gleaming point of the Pigstikka pierces enemy armour with ease skewering several foes with one strike ready for later as Porko used to say referring to the traditional after battle barbecue</Lore>
+					<Description>The Pigstikka gives the wielder +1 Strength on the turn he charges. In addition, on the turn he charges he also gets one extra Attack per rank in the enemy unit (up to a maximum of +3)</Description>
+				</Weapon>
+				<Weapon>
+					<Name>Ulag's Akk'rit axe</Name>
+					<Points>35</Points>
+					<Reroll>ToHit</Reroll>
+					<Lore>This axe looks suspiciously clean for a greenskin item which gives away its magical nature. In battle it writhes in the hands, seeming always to have a better idea than the wielder of how to bit the enemy</Lore>
+					<Description>The wielder may re-roll any to hit rolls that miss</Description>
+				</Weapon>
+				<Weapon>
+					<Name>Duffa's Club of Duffin'</Name>
 					<Points>30</Points>
-					<Rule>The Dragon Bow has a range of 36" and Strength 6. Any hits from this bow count as being from a magical weapon</Rule>
-					<Lore>A relic from tbe ancient Elven colonies in the Old World, this bow enables the wielder to outshoot the best archers in tbe Empire</Lore>
+					<Rule>+3 Attacks once in the game</Rule>
+					<Lore>Duffa was Wollopa's sidekick until he was eaten by a Squig. Waking up inside the Squig's stomach was a bit of a shock and although he fought his way out he was never quite the same afterwards. It is said that this club retains some of his frenzy to escape even now</Lore>
+					<Description>Duffa's Club of Duffin' strikes with +3 Attacks once in the game. The Orc player must declare that he's using the extra Attacks before he makes any rolls to hit. All 3 Attacks have to be used at the same time and the bearer has to roll со hit as usual. Duffa's Club only works once in the game</Description>
 				</Weapon>
 				<Weapon>
-					<Name>Sword of Justice</Name>
-					<Points>25</Points>
-					<Reroll>ToWound</Reroll>
-					<Lore>The Sword of Justice is traditionally carried to battle by tbe Emperor's personal champion</Lore>
-					<Description>The bearer can re-roll To Wound failed rolls</Description>
-				</Weapon>
-				<Weapon>
-					<Name>Wyrmslayer Sword</Name>
-					<Points>20</Points>
-					<WoundOn>4</WoundOn>
-					<Lore>The Wyrmslayer Sword has been the doom of many monsters menacing the lands of the Empire</Lore>
-					<Description>Hits from this sword wound any opponent on a roll of 4+ (unless the wielder's Strength would make this less). Armour saves apply as normal, modified by the Strength of the character, but Large Targets lose their armour save due to the scaly skin special rule against hits from this sword</Description>
+					<Name>Wollopa's One Hit Wunda</Name>
+					<Only>Goblin</Only>
+					<Points>15</Points>
+					<Rule>+3 Strengthr once in the game</Rule>
+					<Lore>Around the campfire after the Orcs hate drunk too much fungus beer to clout them the Gobbos will talk in hushed tones of the rebellious Wollopa, of his tremendous weapon and his even more awesome ability to outrun even the fastest boar when he missed his target</Lore>
+					<Description>Wollopa's One Hit Wunda provides it user with +3S... but it only works once in the game. The player can decide to use the weapon after hits have been scored but before rolling for wounds. The +3S bonus applies to one hit that has been scored by the bearer that turn. Any other hits scored by the bearer are at normal Strength</Description>
 				</Weapon>
 			</MagicWeapons>
 			<MagicArmours>
 				<Armour>
-					<Name>The Gilded Armour</Name>
+					<Name>Armour of Protectyness</Name>
+					<Points>60</Points>
+					<AddToArmour>5</AddToArmour>
+					<FirstWoundDiscount/>
+					<Lore>It s not often that Gobbos get to name magical items and this is why. The Armour of Protectyness was quenched in the blood of a Troll and has gained some of its regenerative powers</Lore>
+					<Description>Counts as wearing armour (5+ armour save) which can be combined with other equipment normally. Also, the wearer discounts the first wound he suffers</Description>
+				</Armour>
+				<Armour>
+					<Name>Armour of Mork</Name>
 					<Points>50</Points>
 					<AddToArmour>5</AddToArmour>
-					<Test Bet="Pass" Context="ArmourSave" Profile="Strength"/>
-					<Lore>This golden suit of armour was a gift from the Elves of IHthuan to Magnus the Pious after the Great War against Chaos. Any weapon brought to bear against the wearer is repelled by an invisible force</Lore>
-					<Description>Counts as heavy armour (armour save 5+) which can be combined with other equipment normally. Models attacking the wearer in close combat must pass a Strength test before rolling to hit for every Attack directed at the target (ie, roll equal to or less than its Strength on a D6, a 6 always fails). If the test is failed, the Attack is lost</Description>
+					<MagicResistance>2</MagicResistance>
+					<Lore>Armour made with the aid of a Shaman (as one of the ingredients) is a strong defence against enemy magic</Lore>
+					<Description>Counts as wearing armour (5+ armour save) which can be combined with other equipment normally. Also gives the wearer and the unit he is with Magic Resistance (2)</Description>
 				</Armour>
+				<Shield>
+					<Name>Ironskin Shield</Name>
+					<Points>50</Points>
+					<AddToArmour>6</AddToArmour>
+					<AddToWard>4</AddToWard>
+					<Lore>This ancient iron bound shield is rusty and battered but its experience in battle gives the bearer much protection</Lore>
+					<Description>Counts as a shield (6+ armour save) which can be combined with other equipment normally. Also gives the bearer a 4+ Ward save</Description>
+				</Shield>
 				<Armour>
-					<Name>Dawn Armour</Name>
-					<Points>40</Points>
-					<AddToArmour>4</AddToArmour>
+					<Name>Armour of Gork</Name>
+					<Points>35</Points>
+					<AddToArmour>5</AddToArmour>
 					<Reroll>ToArmour</Reroll>
-					<Lore>An armour of burnished Estalian steel, enchanted by Gold Wizards so that any damage suffered by it disappears</Lore>
-					<Description>Counts as full plate armour (armour save 4+) which can be combined with other equipment normally. In addition the model can re-roll any failed armour save</Description>
-				</Armour>
-				<Armour>
-					<Name>Armour of Tarnus</Name>
-					<Points>35</Points>
-					<AddToArmour>6</AddToArmour>
-					<AddToWard>5</AddToWard>
-					<Lore>This armour was worn by the warrior-wizard Frederick von Tarnus</Lore>
-					<Description>Counts as light armour (armour save 6+) which can be combined with other equipment normally. If the wearer fails his armour save, he may make a 5+ Ward save. Wizards can wear this armour and cast spells</Description>
+					<Lore>If armour is made with the correct rituals instead of just being bashed out of whatever bits of metal come to hand, it can be enchanted by a Shaman to offer extra protection</Lore>
+					<Description>Counts as wearing armour (5+ armour save) which can be combined with other equipment normally. The wearer may re-roll failed armour saves</Description>
 				</Armour>
 				<Shield>
-					<Name>Shield of the Gorgon</Name>
-					<Points>35</Points>
-					<AddToArmour>6</AddToArmour>
-					<Rule>Can force one model in base contact to lose one Attack</Rule>
-					<Lore>The hideous bead of the mythical creature known as the Gorgon is depicted on this shield in such detail that it seems alive. Even the fiercest enemies try to avoid its gaze which is rumoured to turn living creatures to stone</Lore>
-					<Description>This shield confers a 6+ armour save which can he combined with other equipment normally. The wearer can force one model in base contact to lose one Attack. In the case of models with different Attacks (eg, mounted models) the wearer chooses which Attack is lost. Special Attacks (like those of a Giant, impact hits and anything not included in the Attacks value on a model's profile) are not affected</Description>
-				</Shield>
-				<Armour>
-					<Name>Armour of Meteoric Iron</Name>
+					<Name>Ugbkag's Lucky Shield</Name>
 					<Points>30</Points>
-					<ArmourTo>1</ArmourTo>
-					<Lore>This suit of armour, forged by the Dwarf Smiths of Zbufhar long ago, is today held in the Imperial armoury at Altdorf</Lore>
-					<Description>This suit of armour gives the bearer a 1+ armour save which cannot be improved by any means</Description>
-				</Armour>
-				<Shield>
-					<Name>Bronze Shield</Name>
-					<Points>25</Points>
 					<AddToArmour>6</AddToArmour>
-					<Rule>Ignores the first hit in the battle from shooting or close combat</Rule>
-					<Lore>A shield made of bronze can carry a powerful enchantment of protection, hut only for a short time</Lore>
-					<Description>This shield gives a 6+ armour save which can be combined with other equipment normally. Also, the bearer ignores the first hit in the battle suffered from shooting or close combat</Description>
+					<Rule>Discounts the first hit suffered in the battle</Rule>
+					<Lore>Ugbrag had this shield made for him by a captured Dwarf smith, but the smith 'forgot' to tell him that the enchantment only worked once in each battle</Lore>
+					<Description>Counts as a shield (6+ armour save) which can be combined with other equipment normally. Also, the bearer discounts the first hit suffered in the battle</Description>
 				</Shield>
+				<Armour>
+					<Name>Drog's Dead 'Ard Armour</Name>
+					<Points>30</Points>
+					<Only>Orc</Only>
+					<ArmourTo>6</ArmourTo>
+					<Lore>Drog was one of the first Black Orcs to be seen to the west of the Worlds Edge Mountains and his battle scarred armour was made to an unusual design by unknown hands</Lore>
+					<Description>Gives the wearer a 1+ armour save that cannot be improved</Description>
+				</Armour>
 				<Additional>
-					<Name>Helm of the Skaven Slayer</Name>
+					<Name>Nobbla's 'Elmet</Name>
 					<Points>20</Points>
+					<Only>Goblin</Only>
 					<AddToArmour>6</AddToArmour>
-					<Rule>Causes Fear in all models in a Skaven army</Rule>
-					<Lore>The legendary helm of Count Mandred Skaven Slayer, this relic fills the rat-spawn with dread</Lore>
-					<Description>This helm confers a 6+ armour save which can be combined with other equipment normally (including normal armour and a shield). In addition, the wearer causes Fear in all models in a Skaven army</Description>
+					<AddToWard>6</AddToWard>
+					<Lore>Given that it was made by Gobbos Nobbla's ‘Elmet is a fantastic piece of workmanship given that it was made by Gobbos</Lore>
+					<Description>Gives the wearer a 6+ armour save and may be worn in addition to normal armour. Also gives the wearer a 6+ Ward save</Description>
 				</Additional>
 			</MagicArmours>
 			<Talismans>
 				<Additional>
-					<Name>Shroud of Magnus</Name>
-					<Points>60</Points>
-					<AddToWard>5</AddToWard>
-					<Rule>Totally immune to Dark, Skaven and Chaos magic, even if cast with Irresistible force</Rule>
-					<Lore>This shroud was laid upon the body of Magnus the Pious after his death. On it one can still see the features of the Saviour of the Empire</Lore>
-					<Description>This item gives a 5+ Ward save. A model carrying the Shroud and his mount are totally immune to Dark, Skaven and Chaos magic, even if cast with Irresistible force. Note that the spell will not be dispelled and that other models in a unit the character is with will be affected normally</Description>
-				</Additional>
-				<Additional>
-					<Name>Jade Amulet</Name>
-					<Points>50</Points>
-					<FirstWoundDiscount/>
-					<Lore>The Grand Tbeogpnist sometimes grants a shard of the Jade Griffon, bis badge of office, as a reward for great services</Lore>
-					<Description>The model may ignore the first wound it suffers</Description>
-				</Additional>
-				<Additional>
-					<Name>Holy Relic</Name>
-					<Points>45</Points>
-					<AddToWard>4</AddToWard>
-					<Lore>The most famous holy relic in the Empire is the icon of Sigmar carried by the Arch-Lector of Main</Lore>
-					<Description>The Holy Relic gives its bearer a 4+ Ward save</Description>
-				</Additional>
-				<Additional>
-					<Name>The White Cloak</Name>
+					<Name>Sizzla's Shiny Baubles</Name>
 					<Points>35</Points>
+					<Rule>On 4+ reflect back the spell at the caster with all the normal effects</Rule>
+					<Lore>Sizzla was one of the less lucky Orc Shamans of Azhag's army and was turned to amethyst by an Empire Battle Wizard at the Battle of Osterwald. All that survived the transformation was a smelt pouch containing Sizzla's most treasured possessions his Shiny Baubles</Lore>
+					<Description>If you fail to dispel an enemy spell cast at the bearer or the unit he is with, or choose not to try, then you may attempt to reflect it back at the caster. You may even do this it the spell was cast with Irresistible Force. Roll D6 for each spell. On a 1-3, the Shiny Haubles do nothing and the spell takes effect as normal. On a 4+ the spell is reflected back at the caster with all the normal effects. The original caster may make one attempt to dispel his own spell (unless it was cast with Irresistible Force), just as if it had been cast at him. He may use Power dice to dispel with, or a magic item, Dispel Magic Scroll or whatever, exactly as normal</Description>
+				</Additional>
+				<Additional>
+					<Name>Warboss Umm's Best Big Boss's 'at</Name>
+					<Points>30</Points>
 					<AddToWard>5</AddToWard>
-					<Rule>Immune to all cold-based spells attacks</Rule>
-					<Lore>This cloak has been enchanted by Ar-Ulric, the High Priest of the Sect of Ulric, the god of winter and war</Lore>
-					<Description>This item gives a 5+ Ward save. Also, the wearer is immune to all cold-based spells attacks (White Dragon's breath, etc)</Description>
+					<Lore>Originally this rune-encrusted and rather squashed looking helmet belonged to a Dwarf king or so legend tells Although it is a boon in combat it is far from infallible as its change in ownership attests</Lore>
+					<Description>Magical Boss's 'at wot protects you - giz you a 5+ Ward save dunnit. May be worn in addition to normal or magical armour</Description>
+				</Additional>
+				<Armour>
+					<Name>Magical Warpaint</Name>
+					<Points>25</Points>
+					<AddToWard>5</AddToWard>
+					<Lore>Some of the more reclusive and frequently madder Sat age Orc Shamans know the secret of preparing magical warpaint that is much more effective than the coloured mud that the warriors usually daub themselves with</Lore>
+					<Description>Savage Orcs only. If the wearer fails his armour save, he may make a 5+ Ward save. A model cannot wear any armour (not even magical) if it has the Magical Warpaint, though it may carry a shield</Description>
+				</Armour>
+				<Additional>
+					<Name>Glowy Green Amulet</Name>
+					<Points>20</Points>
+					<Rule>May attempt to nullify any enemy spell cast: roll the same number of D6 as the caster used to cast the spell, if all are 2-6 then the Amulet dispels the spell, if one or more dice is a 1 then model is slain with no saves of any kind allowed</Rule>
+					<Lore>As it absorbs the force of incoming spells this small and unimposing amulet begins to glow ever more brightly. To most creatures this might be seen as a warning, but not to the Orcs who regard it as increasingly interesting. Eventually the power will be too much and it will burst immolating the bearer though the Amulet itself will be unharmed</Lore>
+					<Description>Instead of making a normal dispel attempt, a model with the Amulet may attempt to nullify any enemy spell cast at the bearer or the unit he is with. Roll the same number of D6 as the caster used to cast the spell. If all are 2-6 then the Amulet dispels the spell. However, if one or more dice is a 1 then the spell gets through as the Amulet overloads and explodes, killing the wearer outright (with no saves of any kind allowed). The Amulet cannot stop spells cast with Irresistible Force</Description>
 				</Additional>
 				<Additional>
-					<Name>Sigil of Sigmar</Name>
-					<Points>20</Points>
-					<Rule>+1 dice to all Dispel rolls against enemy spells that would affect character or the unit he is with</Rule>
-					<Lore>The symbol of Sigmar may take many forms such as a twin­tailed comet, hammer, crown or griffon</Lore>
-					<Description>The Sigil of Sigmar adds one extra dice to all Dispel rolls against enemy spells that would affect its wearer or the unit he is with</Description>
-				</Additional>
-				<Additional>
-					<Name>The Crimson Amulet</Name>
-					<Points>20</Points>
-					<AddToWard>6</AddToWard>
-					<Rule>Automatically passes any characteristic tests he has to take (except Leadership tests)</Rule>
-					<Lore>Legends say that the hearer of this pendant is capable of exceptional feats of strength and agility</Lore>
-					<Description>This item gives a 6+ ward save. The wearer automatically passes any characteristic tests he has to take (except Leadership tests)</Description>
+					<Name>The Collar of Zorga</Name>
+					<Points>15</Points>
+					<Test Bet="Pass" Context="Round" MountsOnly="true" Profile="Leadership"/>
+					<Lore>This studded collar is inscribed with ancient glyphs entwined with the shapes of mysterious beasts. The wearer can stare imperiously at any beast that dares confront him and say "Don't even fink about it!" or something like that and the beast cowers before him</Lore>
+					<Description>Monsters and mounts of any size must pass a Leadership test (on their own Leadership characteristic) to attack the wearer. If they fail, they may choose to attack another model instead. Roll once each close combat round</Description>
 				</Additional>
 			</Talismans>
 			<ArcaneItems>
 				<Arcane>
-					<Name>Grey Wand</Name>
+					<Name>Staff of Baduumm</Name>
 					<Points>50</Points>
-					<Rule>+1 to the casting attempts</Rule>
-					<Lore>The Archmage Ptolos of the Grey College won this wand at the Battle of Blood Keep</Lore>
-					<Description>Gives +1 to the Casting attempts made by the Wizard</Description>
+					<Rule>+1 to any casting attempts</Rule>
+					<Lore>This studded collar is inscribed with ancient glyphs entwined with the shapes of mysterious beasts. The wearer can stare imperiously at any beast that dares confront him and say "Don't even fink about it!" or something like that and the beast cowers before him</Lore>
+					<Description>The bearer adds +1 to the total of the Casting roll for every spell he attempts</Description>
 				</Arcane>
 				<Arcane>
-					<Name>Seal of Destruction</Name>
+					<Name>Buzgob's Knobbly Staff</Name>
 					<Points>50</Points>
-					<Rule>Once automatically dispel an enemy spell, on a 4+ the spell is removed from the caster's mind and he can no longer cast it</Rule>
-					<Lore>Once activated this seal can drain the knowledge of one spell front the mind of an enemy Wizard</Lore>
-					<Description>One use only. The seal has the same effect as a Dispel Scroll. In addition, roll a D6. On a result of 4+ the spell is removed from the caster's mind and he can no longer cast it. Spells cast from a bound item will only be removed on the result of a 6</Description>
+					<Rule>Once per Magic phase can re-roll all the Casting dice for a single spell</Rule>
+					<Lore>One day Buzgob the Orc Shaman went into the Great Green and never came back leaving only his staff behind. Tradition has it that his spirit lives on and can aid other Shamans who carry his knobbly staff</Lore>
+					<Description>Once per Magic phase the Shaman can re-roll all the Casting dice for a single spell. Note that he must re-roll all the dice and a Miscast on the first attempt is ignored if he re-rolls the dice</Description>
 				</Arcane>
 				<Arcane>
-					<Name>Rod of Power</Name>
-					<Points>45</Points>
-					<Rule>Can save up to three unused Power dice from the pool and store them, at the beginning of each successive magic phase roll a dice, if the result is equal or higher to the number of dice stored, add them to the Power dice pool</Rule>
-					<Lore>The Rod of Power absorbs magical energy which its bearer can use to boost his own spells</Lore>
-					<Description>At the end of each Magic phase, you can save up to three dice from your Power dice pool and store them in the Rod. At the beginning of the next Magic phase (yours or the enemy's), roll a dice. If the result is equal or higher to the number of Power dice stored, add them to your pool, if the result is lower than the number of dice stored, they are lost</Description>
-				</Arcane>
-				<Arcane>
-					<Name>Luckstone</Name>
+					<Name>Dangly Wotnotz</Name>
 					<Points>25</Points>
-					<Rule>Once per battle, can re-roll all of the dice rolled to cast or dispel</Rule>
-					<Lore>Charged with divinatory power, these stones are very useful when a Wizard is manipulating the delicate balance of the Winds of Magic</Lore>
-					<Description>One use only. Once per battle, the bearer can re-roll all of the dice rolled to cast or dispel a spell. This can effectively cancel a Miscast result, and cause Irresistible Force or a Miscast</Description>
+					<Rule>Once per game the bearer may use it to add +1 to a single dice of his Casting roll or his Dispel roll</Rule>
+					<Lore>This necklace made up of gnarled and splintered teeth bits of broken bone and shattered heads is riddled with sorcerous power</Lore>
+					<Description>Once per game the bearer may use it to add +1 to a single dice of his Casting roll or his Dispel roll. Decide after the dice have been rolled. Note that this can potentially either stop a Miscast or cause a spell to be cast with Irresistible Force</Description>
 				</Arcane>
 				<Arcane>
-					<Name>Crystal Ball</Name>
+					<Name>Ditto's Double Doin' Doo-Dahs</Name>
 					<Points>25</Points>
-					<Rule>The enemy must always reveal all the 'secrets' involving all units that are within 12" of the Wizard at any time</Rule>
-					<Lore>Nothing can be hidden from the inquisitive gaze of Wizards using this powerful scrying device</Lore>
-					<Description>The enemy must always reveal all the 'secrets' involving all units which are within 12" of the Wizard at any time. This includes which magic items are in the unit and who is carrying them, the presence of disguised Assassins, the number of Fanatics and everything else thai ihe player is not normally obliged to disclose to his opponent</Description>
+					<Rule>The bearer may attempt lo cast each of his spells up to twice per friendly Magic phase instead of just once</Rule>
+					<Lore>Rumour has it that the aged and half blind Ditto wasn't a very successful Shaman and had to cast everything twice to make it work. At least work on the right target</Lore>
+					<Description>The bearer may attempt lo cast each of his spells up to twice per friendly Magic phase instead of just once. Each attempt requires Power dice as normal - the Don-Dahs simply allow the option, they don't supply any power</Description>
 				</Arcane>
 				<Arcane>
-					<Name>Wizard's Staff</Name>
-					<Points>15</Points>
-					<Rule>Use one more dice than he is normally allowed to when casting a spell</Rule>
-					<Lore>Many Wizards of the Empire carry a staff as a mark of their office and as an aid to their sorcerous powers</Lore>
-					<Description>The Wizard's Staff allows the bearer to use one more dice from the Power dice pool than he is normally allowed to when casting a spell (eg. a level 1 Wizard will be able to use-up to three dice to cast spells)</Description>
+					<Name>Staff of Sneaky Stealin'</Name>
+					<Only>Goblin</Only>
+					<Points>25</Points>
+					<Rule>Once per battle, in a friendly Magic phase, may steal one dice from his opponent's Dispel pile and add it to his own Power dice pile</Rule>
+					<Lore>Goblins are well known for their ability to treat other peoples properly as their own and this generous trail even extends to magical power</Lore>
+					<Description>Once per battle, in a friendly Magic phase, the bearer may steal one dice from his opponent's Dispel pile and add it to his own Power dice pile (whatever colour the dice previously was, it now turns green)</Description>
 				</Arcane>
 			</ArcaneItems>
 			<EnchantedItems>
 				<Weapon>
-					<Name>Laurels of Victory</Name>
-					<Points>70</Points>
-					<Rule>Each wound caused will count as 2 Wounds when working out combat resolution</Rule>
-					<Lore>The most celebrated heroes of the Empire are decorated with golden laurels that are enchanted by the Imperial Wizards. The sight of a warrior wearing this symbol of victory causes most enemies to run for their lives</Lore>
-					<Description>Each wound caused by a model wearing the Laurels of Victory (but not those caused by his mount) will count as 2 Wounds when working out combat resolution. Note that you do not actually cause double wounds on your victim!</Description>
+					<Name>Warboss Imbad's Iron Gnashas</Name>
+					<Only>Orc</Only>
+					<Points>50</Points>
+					<AddToAttacks>1</AddToAttacks>
+					<KillingBlow/>
+					<Lore>A huge metal jaw plate that belonged to the infamous Imbad - his psychotic spirit lives on within it</Lore>
+					<Description>The character wearing the Gnashas gains +1 Attack in close combat. This additional attack counts as being made with the Killing Blow special ability</Description>
+				</Weapon>
+				<Additional>
+					<Name>Effigy of Mork</Name>
+					<Only>Orc</Only>
+					<Points>40</Points>
+					<SubOpponentToHit>1</SubOpponentToHit>
+					<Lore>This ancient and slightly crumbly statue of Mork was formed from his own dung (or so they say) in some distant age. It has been credited with many different magical effects over the years, but whatever its power enemy warriors with a sense of smell recoil from its intense Orcyness</Lore>
+					<Description>Savage Orcs only. All close combat attacks that are made against the bearer are at -1 to hit</Description>
+				</Additional>
+				<Weapon>
+					<Name>Bigged's 'Ed Kickin Boots</Name>
+					<Points>40</Points>
+					<AddToAttacks>1</AddToAttacks>
+					<Lore>Bigged - an old and boastful Orc - made his last boast in front of an Empire cannon. Only his boots w ere recovered. His vengeful spirit lives on (the odour of his feet lingers forever)</Lore>
+					<Description>Iron-shod unpleasantness. In close combat the wearer gets one additional automatic hit at his basic Strength value in addition to his normal Attacks</Description>
+				</Weapon>
+				<Additional>
+					<Name>Guzzia's Backbone Brew</Name>
+					<Points>35</Points>
+					<Rule>Once per battle Leadership value is boosted to 10</Rule>
+					<Lore>Brewed from dangerous narcotic mushrooms with extra chief spit and (most importantly) added backbone Guzzla's brew is the closest a greenskin gets to courage in a battle</Lore>
+					<Description>Thе character who carries this most potent of potions can take a swig when he or the unit that he is with is about to take a Leadership test. The character's Leadership value is immediately boosted to 10 when the test is taken. Unfortunately the effect of the brew is but momentary and the character's Leadership value reterns to normal thereafter. Guzzla's Backbone Brew can only be guzzled once - so you get just the one use - but the full Leadership value of 10 applies to any re-roll you might be entitled to should you be unfortunate enough to fail the first time. This bonus Leadership is modified by combat results, etc, as normal</Description>
+				</Additional>
+				<Weapon>
+					<Name>Mad Cap Mushrooms</Name>
+					<Only>Goblin</Only>
+					<Points>30</Points>
+					<Rule>If Fanatics hit a unit (from either side) on the turn they are released it suffers 2D6 hits instead of the usual 1D6</Rule>
+					<Lore>Many kinds of fungus grow in the dark dank caves of the Night Goblins, including the rare and treasured Mad Cap Mushrooms. These form part of the deadly brew that sends the Fanatics wild but only a small par. If they get a whole one each, they go really mad</Lore>
+					<Description>Night Goblins only. If the character is with a unit of Ntght Goblins when their Fanatics are released he may give them each a Mad Cap Mushrooms before they go whirling off. If they hit a unit (from either side) on the turn they are released it suffers 2D6 hits instead of the usual 1D6. Subsequent units encountered by each Fanatic are struck by 1D6 hits as usual</Description>
 				</Weapon>
 				<Weapon>
-					<Name>Rod of Command</Name>
-					<Points>50</Points>
-					<Rule>Once per battle, instead rolling the dice for Break test, the player can declare he is using Rod of Command and the character (and his unit) automatically passing Break test</Rule>
-					<Lore>When the battle seems lost, the bearer can summon the powers of the Rod to turn a rout into steadfast resistance</Lore>
-					<Description>One use only. The character and the unit he is with will automatically pass the first Break test they have to take, regardless of modifiers and even if they would normally automatically fail their test (for example, losing a round of combat against an opponent thai outnumbers them and causes fear). If the player forgets to use it, even if he rolls and passes the lest, the item is slill used up. Note that this item cannot he used by a character in the turn he re-fused a challenge and who is hiding at the back of the unit (who would pay heed to such a coward!)</Description>
+					<Name>'Edbuttin' 'At</Name>
+					<Only>Orc</Only>
+					<Points>25</Points>
+					<AddToAttacks>1</AddToAttacks>
+					<Rule>One extra Attack with the Killing Blow special ability</Rule>
+					<Lore>'Eadbuttin contests are an old Orc favourite for resolving disputes and the greenskins aren't above a bit of magical cheating to help them win</Lore>
+					<Description>May only be used in challenges. The wearer gets one extra Attack, made before all other blows are struck. This Attack is made with the Killing Blow special ability and is resolved at the wearer's normal Strength. Even if the opponent is killed by the 'eadbutt, the character wearing the 'At should still make his remaining attacks to calculate overkill for combat resolution</Description>
 				</Weapon>
-				<Additional>
-					<Name>The Silver Horn</Name>
-					<Points>45</Points>
-					<Rule>Bound spell, Power level 5, if successfully cast, all fleeing friendly units on the battlefield will rally immediately, regardless of the number of models left</Rule>
-					<Lore>This elegant hunting born contains a potent spell. Erlends who bear its note are filled with courage</Lore>
-					<Description>Bound spell, power level 5. The Silver Horn may cast its spell once per Empire Magic phase. The spell requires no Power dice to cast, all the power required is provided by the Horn itself. All friendly units that are fleeing anywhere on the battlefield will rally immediately</Description>
-				</Additional>
-				<Additional>
-					<Name>The Orb of Thunder</Name>
-					<Points>40</Points>
-					<Rule>Bound spell, Power level 4, when the Orb of Thunder spell is in play, flying creatures on the battlefield cannot fly and must move on the ground at their normal Movement rate, remains in play</Rule>
-					<Lore>The Orb of Thunder contains a powerful spell that wreaks turmoil in the air</Lore>
-					<Description>Bound spell, power level 4. The Orb of Thunder spell may be cast once per Empire Magic phase. The spell requires no Power dice to cast, all the power required is provided by the Orb Itself and the spell will last until dispelled. When the Orb of Thunder spell is in play, no flying creatures on the battlefield can use their ability to fly and will have to move on the ground at their normal Movement rate</Description>
-				</Additional>
-				<Additional>
-					<Name>Aldred's Casket of Sorcery</Name>
-					<Points>35</Points>
-					<Rule>Bound spell, power level variable: at the end of each of his Movement phases, may automatically remove and capture one randomly determined spell from an enemy Wizard in base contact with him, he can cast the captured spell in his own Magic phase by releasing it from the casket</Rule>
-					<Lore>The casket has the power to entrap and contain the power of magic forever</Lore>
-					<Description>Bound spell, power level variable. At the end of each of his Movement phases, the bearer may automatically remove and capture one randomly determined spell from an enemy Wizard in base contact with him. The bearer can cast the captured spell in his own Magic phase by releasing it from the casket. The spell is then removed from the game. No Power dice are required to cast the spell. Any number of spells may be captured by the casket, and the bearer can cast each one once, either over several Magic phases or all at the same time if he prefers. The Power Level of the spell cast by the casket will be equivalent to the score normally needed to cast the spell</Description>
-				</Additional>
-				<Additional>
-					<Name>Icon of Magnus</Name>
-					<Points>30</Points>
-					<Rule>Not affected by enemies that cause fear, faced with an enemy that causes terror, the character and the unit he is with only suffer fear, not terror</Rule>
-					<Lore>The presence of ibis revered relic among their ranks fills the soldiers with faith and strengthens their resolve. They will fight on even against the most dreadful of enemies</Lore>
-					<Description>Ihe character and the unit he is with are not affected by enemies that cause fear. Faced with an enemy that causes terror, the character and the unit he is with only suffer fear, not terror</Description>
-				</Additional>
-				<Additional>
-					<Name>Ring of Volans</Name>
-					<Points>30</Points>
-					<Rule>Bound spell, power level variable, one use only: choose one of the magic Lores in the Warhammer rulebook and randomly select one spell from that list to be held inside the Ring of Volans</Rule>
-					<Lore>Volans was the greatest of the pupils of Teclis. the founder of the Colleges of Magic</Lore>
-					<Description>One use only. Bound Spell: Power Level variable. Choose one of the magic Lores in the Warhammer rulebook and randomly select one spell from that list to be held inside the Ring of Volans. This spell may be cast in the Magic phase and requires no Power dice to cast, all the power required is provided by the Ring itself. The Power Level of the spell cast by the Ring will be equivalent to the score normally needed to cast the spell</Description>
-				</Additional>
-				<Additional>
-					<Name>Doomfire Ring</Name>
+				<Weapon>
+					<Name>Nibbla's 'Itty Ring</Name>
+					<Only>Orc</Only>
 					<Points>25</Points>
-					<Rule>Bound spell, Power level 3, a flaming magic missile spurts from the King in a straight line up to 18" long, striking the first unit in its path. The unit takes D6 Strength 3 hits</Rule>
-					<Lore>The Doomfire Ring, made of iron and rubies, contains a spell which allows its master to cast fire upon his enemies</Lore>
-					<Description>Bound Spell, Power Level 3. The Doomfire King may cast its Bound spell once per Magic phase like an ordinary spell. The spell requires no Power dice to cast, all the power required is provided by the Ring itself. A flaming magic missile spurts from the King in a straight line up to 18" long, striking the first unit in its path. The unit takes D6 Strength 3 hits</Description>
-				</Additional>
-				<Additional>
-					<Name>Van Horstmann's Speculum</Name>
-					<Points>25</Points>
-					<Rule>When the wearer fights a challenge he can 'swap' his base Weapon Skill, Strength, Toughness, Initiative and Attacks values with those of his enemy</Rule>
-					<Lore>This tiny mirror hangs around the wearer's neck and has the ability to reflect back the fighting qualities of an enemy</Lore>
-					<Description>When the wearer fights a challenge he can 'swap' his base Weapon Skill, Strength, Toughness, Initiative and Attacks values with those of his enemy. He can choose not to use the mirror, but if he does he must swap all these characteristics for the duration of the challenge. So, the wearer fights with his enemy's WS, S, T, I and A whilst his enemy fights with the wearer's WS, S, T, I and A</Description>
-				</Additional>
+					<Rule>Bound spell, Power level 3, 'Eadbutt spell</Rule>
+					<Lore>This crudely made gold ring has a huge green gemstone stuck to the lop and glows even in full daylight</Lore>
+					<Description>Bound spell, Power level 3, the 'Itty Ring may cast its Bound spell once per Magic phase like an ordinary spell. The spell require no Power dice to cast, all the power required is provided by the ring itself. The 'Itty Ring contains the 'Eadbutt spell</Description>
+				</Weapon>
 			</EnchantedItems>
 			<MagicStandards>
 				<Banner>
-					<Name>Imperial Banner</Name>
-					<Points>100</Points>
-					<Rule>All units within 12" can re-roll any failed Psychology test as well as tests to avoid pursuing a fleeing enemy</Rule>
-					<Lore>The flag with the blazon of the riding Emperor fills his troops with a supreme sense of duty and pride</Lore>
-					<Description>All units with at least one model within 12" of the Imperial Banner can re-roll any failed Psychology test as well as tests to avoid pursuing a fleeing enemy</Description>
+					<Name>Mork's Spirit-Totem</Name>
+					<Points>75</Points>
+					<MagicResistance>1</MagicResistance>
+					<Rule>An anempt to dispel any enemy spell that isn't cast at the unit gains +1 to its Dispel roll</Rule>
+					<Rule>No enemy Wizard in contact with the unit</Rule>
+					<Lore>Morks Spirit-Totem is a flag or more often a carved effigy of the great god Mork. Through the totem's eyes he watches over the greenskins and protects them from bad spirits confounding the sorcery of enemy wizards</Lore>
+					<Description>The unit carrying Mork's Spirit-Totem gains Magic Resistance (1). In addition, an anempt to dispel any enemy spell that isn't cast at the unit gains +1 to its Dispel roll. Finally, no enemy Wizard in contact with the unit carrying Mork's Spirit-Totem can a spell at all - good 'ol Mork stops 'em</Description>
 				</Banner>
 				<Banner>
-					<Name>Banner of Sigismund</Name>
+					<Name>Rowdy Grott's Big Red Raggedy Banner</Name>
+					<Only>Goblin</Only>
+					<Points>75</Points>
+					<AddToLeadership>1</AddToLeadership>
+					<Lore>The big red raggedy banner belonged to the rabble rousing Rowdy Grott Rowdy was an uppity Orc runtling who led a revolt of grotty Gobbos, Snots and litl'uns against his biggers and betters</Lore>
+					<Description>Common Goblins (including characters) in a unit with Rowdy Grott's Big Red Raggedy Banner get a +1 Leadership bonus up to a maximum value of 9</Description>
+				</Banner>
+				<Banner>
+					<Name>Bad Moon Banner</Name>
+					<Only>Goblin</Only>
 					<Points>60</Points>
 					<Stubborn/>
-					<Lore>Emperor Sigismund, the hero of the Siege of Altdorf, held this banner atop his palace. It survived the siege and was never touched by the Orcish invaders</Lore>
-					<Description>The unit is Stubborn</Description>
+					<Lore>The ancient Bad Moon banner is tattered and stained but is still much revered by the Night Goblins. Somehow the vile daylight seems less when you're next to the Banner and the mere thought of being back in a dank and smelly tunnel again fills the Night Goblins with renewed bravery. Of a sort</Lore>
+					<Description>The unit is stubborn</Description>
 				</Banner>
 				<Banner>
-					<Name>Banner of Ulric</Name>
-					<Points>50</Points>
-					<Only>WhiteWolf</Only>
-					<Rule>If a unit is charged by this unit it must take a Leadership test, if the test is fail, it must roll 6s to score hits in the first turn of close combat</Rule>
-					<Lore>This banner depicts the White Wolf of Ulric. It was carried at the Battle of Middenbeim. and afterwards was dipped in the blood of a mighty Daemon Prince</Lore>
-					<Description>If a unit is charged by a unit of Knights carrying this banner, then it must take a leadership test as soon as the Knights are determined to be within charge range. If the test is passed, the unit can light on as normal. If the unit fails its test, it must roll 6s to score hits in the first turn of close combat.\n\nIf a unit wishes to charge Knights carrying this banner, it must take a Leadership test. If the lest is failed, it may not charge or shoot and must remain stationary in that Movement phase. A unit normally not affected by fear is immune to ihe effects of this banner as well</Description>
-				</Banner>
-				<Banner>
-					<Name>Griffon Standard</Name>
-					<Points>50</Points>
-					<Rule>A unit counts double its rank bonus when it comes to working out combat results</Rule>
-					<Rule>Never pursue a fleeing enemy but will always hold its ground instead</Rule>
-					<Lore>The men of Reikland have carried this standard in many a battle. It rests in the Great Cathedral of Sigmar and is brought forth in times of war. A unit flying the Griffon Standard will resolutely stand its ground, lew foes can break them, no matter how many fall</Lore>
-					<Description>A unit carrying the Griffon Standard counts double its normal rank bonus when it comes to working out combat results. If in a single rank, it has no advantage. However, if the unit is in two ranks it receives +2, in three ranks +4, and in four ranks (the maximum bonus) +6.\n\nThe unit carrying the Griffon Standard will never pursue a fleeing enemy but will always hold its ground instead</Description>
-				</Banner>
-				<Banner>
-					<Name>Banner of Valour</Name>
+					<Name>Night Banner</Name>
 					<Points>40</Points>
-					<ImmuneToPsychology/>
-					<Lore>Held high by Solland's Greatswords in their renowned last stand against Orc invaders, and later recaptured by Karl Eranz himself this banner is a symbol of sacrifice and ultimate devotion to duty</Lore>
-					<Description>The unit is immune to panic</Description>
+					<Rule>Any missiles fired at the unit are at -1 to hit</Rule>
+					<Lore>The Night Banner surrounds the unit which has it in dimly shadowy darkness and darkly dim shadowyness</Lore>
+					<Description>Thanks to the darkness and shadowyness of it all not to mention the dimness, any missiles fired at the unit are at -1 to hit</Description>
 				</Banner>
 				<Banner>
-					<Name>Standard of Arcane Warding</Name>
-					<Points>40</Points>
-					<MagicResistance>2</MagicResistance>
-					<Lore>This magic banner absorbs the power of hostile spells and discharges it into the ground</Lore>
-					<Description>This banner gives two extra dice to all Dispel rolls against enemy spells which would affect the unit</Description>
+					<Name>Gork's WAAAGH! banner</Name>
+					<Points>30</Points>
+					<AddToMovement>1</AddToMovement>
+					<Lore>On the eve of battle the Greenskin shamans invoke the spirit of the great god Gork before the tribe's mighty Waaagh! banner. The banner is liberally daubed with vast quantities of Orc dung blood and spittle which will serve to absorb the battle thirst of Gork. The shamans whirl and dance insanely howling and gabbling in spirit talk all night long as the Waaagh! banner slowly grows in power. It also acquires a unique odour which is an unmistakable mark of tribal recognition</Lore>
+					<Description>The unit that carries Gork's Waaagh! banner adds +1 to its Movement value (i.e. +1" on its normal move and +2" on its charge and march) so long as it moves towards the closest enemy by the shortest route</Description>
 				</Banner>
 				<Banner>
-					<Name>Steel Standard</Name>
+					<Name>Guff's Flag</Name>
 					<Points>25</Points>
-					<Only>Knights</Only>
-					<Rule>The unit can add +D3 to its charge move</Rule>
-					<Lore>Created for the Knights of the Empire by the Gold College of Magic, this standard affects the heavy metal barding of the Knights' warhorses and makes it lighter</Lore>
-					<Description>The unit can add +D3 to its charge move. If the charge is failed, the unit will move forward 7" as normal</Description>
+					<Rule>May re-roll one failed Panic test during the battle</Rule>
+					<Lore>The lads that fight under the proud banner of Guff do not quail in the face of defeat, nor slacken their resolve when all about them run for the hills. Or so they say anyway. Some say this is because the flatulent Guff was such a valiant fighter, others that the lingering smell of the banner simply addles the brain</Lore>
+					<Description>The unit may re-roll one failed Panic test during the battle</Description>
 				</Banner>
 				<Banner>
-					<Name>Banner of Duty</Name>
+					<Name>Nogg's banner of Buthery</Name>
+					<Points>25</Points>
+					<Rule>+1 Attack, only one use for one turn</Rule>
+					<Lore>Nogg's notorious Banner of Butchery has been around so long, it has absorbed a great deal of primal Orcishness as well as huge quantities of blood</Lore>
+					<Description>The unit carrying the Banner of Butchery may, once during the battle, add +1 Attack tо each model fighting for that turn. In the case of mounted models only the rider gets the bonus, not the mount. Once used, the banner has no further effect</Description>
+				</Banner>
+				<Banner>
+					<Name>The Bashin' Flag of Bork</Name>
 					<Points>10</Points>
-					<Rule>The unit can re-roll any failed Rally test</Rule>
-					<Lore>This banner shines with a soothing light which reaches into the hearts of warriors in despair, filling them with inextinguishable courage and renewing tbeir will to fight on</Lore>
+					<Rule>Ignores the first failed Animosity roll of the game</Rule>
+					<Lore>Once carried beside Savage Orc Warchief Bork Crazy-Bear at the infamous Blood River massacre and barbecue. A little of the old chiefs legendary savagery lingers on in the blood-soaked fabric. His ancient spirit drives the greenies onwards and in their eagerness to get at their enemies they forget about attacking each other for a while at least</Lore>
+					<Description>The unit which carries the Bashin' Flag of Bork ignores the first failed Animosity roll of the game - it passes the test instead. Any further rolls are taken as normal (even the spirit of Bork Crazy-Bear can only do so much)</Description>
 				</Banner>
 			</MagicStandards>
 		</Artefacts>
 		<Heroes>
 			<Lord>
-				<Name>Luthor Huss</Name>
-				<Points>300</Points>
+				<Name>Grimgor Ironhide</Name>
+				<Group>Orc</Group>
+				<Points>400</Points>
 				<Character/>
-				<Mount>Warhorse</Mount>
-				<Lore>Luthor Huss known by some as the Prophet of Sigmar, is one of the Empire's most devout and zealous Warrior Priests across the land. His desire to smite chaos and all its forms drove this Warrior Priest to scorch the land of Beastmen tribes, Chaos cults, and Imperial corruption wherever he goes. Though his deeds were just, his actions have unveiled the corruption from within the Church of Sigmar itself, and it came to pass that an Arch Lector has asked the Grand Theogonist himself to excommunicate this man. Yet the Theogonist was a just man himself, and knew something about Luthor Huss that no one else knows about, and with a smile upon hearing his deeds, he dismisses the ordeal.</Lore>
-				<Profile M='3' WS='5' BS='3' S='4' T='4' W='3' I='5' A='3' Ld='9' AS='6' Ward='4'/>
+				<Image>Grimgor</Image>
+				<Lore>Grimgor Ironhide - is currently the single most violent Black Orc Warboss ever to exist. He leads tribes of vicious Orcs to lay waste all across the Old World.</Lore>
+				<Profile M='4' WS='8' BS='2' S='5' T='5' W='3' I='5' A='5' Ld='9'/>
 				<SpecialRules>
-					<Fear/>
-					<Slots>Hero</Slots>
-					<AddToDispell>2</AddToDispell>
-					<Original>
-						<Rule>When he joins a unit, even characters in the unit and models who are normally Immune to Psychology will share Luihor's burning hatred for all blasphemies against Sigmar</Rule>
-						<Rule>Cannot join units of Knights of the White Wolf</Rule>
-						<Rule>Can cast the Prayers as normal, but with a Power Level of 4</Rule>
-					</Original>
+					<Hate/>
+					<ImmuneToPsychology/>
+					<General/>
+					<AddToCloseCombat>2</AddToCloseCombat>
+					<Slots>Hero, Special</Slots>
+					<IgnoreGreenskinPanic/>
+					<QuellAnimosity/>
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon>
-						<Name>Two-handed hammer</Name>
+						<Name>Gitsnik</Name>
 						<AddToStrength>2</AddToStrength>
-						<HitLast/>
+						<HitFirst/>
 					</HandWeapon>
-					<HeavyArmour/>
+					<Armour>
+						<Name>Blood-forged Armour</Name>
+						<AddToArmour>1</AddToArmour>
+						<AddToWard>5</AddToWard>
+					</Armour>
+					<Armour>
+						<Name>Mork's All-Seeing Eye</Name>
+						<MagicResistance>1</MagicResistance>
+					</Armour>
 				</Equipments>
 			</Lord>
 			<Lord>
-				<Name>Balthasar Gelt</Name>
-				<Points>450</Points>
+				<Name>Wurrzag</Name>
 				<Wizard>4</Wizard>
-				<Mount>Pegasus</Mount>
+				<Points>500</Points>
+				<Lore>Wurrzag is a Savage Orc Shaman of mighty mystical powers. Known as "Da Great Green Prophet", he is guided along his path by the Greenskin gods.</Lore>
 				<Character/>
-				<Lore>Balthasar Gelt or with his full title, Supreme Patriarch Balthasar Gelt, is one of the Colleges of Magic's most powerful and skillful Wizards of the Gold College and some say, the entire city of Altdorf. Such is his skill in the art of magic that he managed to defeat the former Supreme Patriarch, Thyrus Gormann of the Bright Order, in single combat, replacing the long-standing prominence of Fire with that of Metal.</Lore>
-				<Profile M='4' WS='3' BS='3' S='3' T='4' W='3' I='3' A='1' Ld='9'/>
+				<Mount>Spleenrippa</Mount>
+				<Profile M='4' WS='3' BS='3' S='4' T='5' W='3' I='2' A='1' Ld='8'/>
 				<SpecialRules>
+					<Frenzy/>
+					<NotALeader/>
 					<Slots>Hero</Slots>
 					<Original>
-						<Rule>Knows all spell from lore of Metal</Rule>
-						<Rule>In the Shooting phase can throw a vial of highly acidic alchemical substances; it have range of 6" and wounding any target on a 4+, no armour saving allowed</Rule>
-						<Rule>Instead of throwing a vial, can heal one wound suffered by either Balthasar or his Pegasus</Rule>
+						<Rule>Adds +1 to the casting total of each spell he attempts</Rule>
+						<Rule>He cannot Miscast</Rule>
+						<Rule>An enemy mount or monster may only make half its normal number of Attacks (rounded down) when in base contact</Rule>
 					</Original>
 				</SpecialRules>
 				<Equipments>
-					<HandWeapon>Sword</HandWeapon>
 					<HandWeapon>
-						<Name>The Staff of Volans</Name>
-						<Rule>Immediately after rolling the dice to cast a spell or to dispel an enemy spell, can pick up one of the dice rolled and turn it so that its result is one higher than the number rolled.</Rule>
+						<Name>Bonewood Staff</Name>
+						<Rule>Bound spell, Power level 3, the staff contains a spell which turns Wurrzag's foes into Squigs</Rule>
+					</HandWeapon>
+					<HandWeapon>
+						<Name>The Power Squig</Name>
+						<Rule>At the end of either player's Magic phase, Wurrzag may store up to two unused dice from his pool in the Power Squig, in the next Magic phase these are released and added to the pool in addition to those he would normally have</Rule>
 					</HandWeapon>
 					<Armour>
-						<Name>The Gleaming Robe</Name>
-						<Rule>3+ Ward save against any missle attack</Rule>
+						<Name>Baleful Mask</Name>
+						<Rule>Bound spell, Power level 3, Gaze of Mork spell, requires no power dice to cast, all power is provided by the Mask itself</Rule>
 					</Armour>
 					<Armour>
-						<Name>Amulet of Sea Gold</Name>
-						<Rule>+1 dice to any attempt to dispel an enemy spell targeted at Balthasar or his mount or otherwise affecting them</Rule>
+						<Name>Warpaint</Name>
+						<AddToWard>5</AddToWard>
 					</Armour>
 				</Equipments>
 			</Lord>
 			<Lord>
-				<Name>Elector Count</Name>
-				<Points>80</Points>
-				<Lore>An Elector Count, also simply called an Elector, is the highest rank held by the nobility in the Empire of Man, second only to the emperor. An Elector Count, who may be male or female, is the feudal ruler of one of the Empire's constituent Electoral Provinces, the primary subdivisions of the realm. As the name suggests, each Elector Count possesses one vote which can be used to determine which candidate is elected to succeed to the Imperial throne upon the vacancy of its prior occupant.</Lore>
-				<Profile M='4' WS='5' BS='5' S='4' T='4' W='3' I='5' A='3' Ld='9'/>
+				<Name>Black Orc Warboss</Name>
+				<Group>Orc</Group>
+				<Points>135</Points>
+				<Lore>Orc Warboss - Are the biggest, meanest, and most strongest Orc within a tribe, being both the supreme tyrant and a hulking behemoth that is considered by himself to be the greatest Greenskin warrior around. These powerful individuals are relatively cunning and exceedingly powerful warriors, having fought and pummelled his way through his tribe's hierarchy by winning battles and killing every challenger that would dare to defy his tyranny. Equipped with powerful weapons and armour, these brutish warriors are near unstoppable upon the battlefield.</Lore>
+				<Profile M='4' WS='7' BS='3' S='5' T='5' W='3' I='4' A='4' Ld='9'/>
 				<SpecialRules>
 					<MagicItems Points="100" Type="Hero"/>
-					<Original>If an Elector Count is your General, one unit of State troops (Halberdiers, Handgunners, Swordsmen, Spearmen) can have a magic banner worth up to 50 pts.</Original>
+					<IgnoreGreenskinPanic/>
+					<QuellAnimosity/>
 				</SpecialRules>
 				<Equipments>
-					<HandWeapon/>
+					<Choppa/>
 				</Equipments>
 				<Options>
-					<Lance Points="6" Only="Mount" Dependency="Weapon"/>
-					<GreatWeapon Points="6" Dependency="Weapon"/>
-					<Pistol Points="10" Dependency="Weapon"/>
-					<Longbow Points="15" Dependency="Range"/>
-					<Handgun Points="15" Dependency="Range"/>
+					<AdditionalWeapon Points="6" Dependency="Weapon"/>
+					<GreatAxe Points="6" Dependency="Weapon"/>
+					<Spear Points="3" Only="Mount" Dependency="Weapon"/>
 					<LightArmour Points="3" Dependency="Armour"/>
 					<HeavyArmour Points="6" Dependency="Armour"/>
-					<FullPlateArmour Points="12" Dependency="Armour"/>
 					<Shield Points="3"/>
-					<Mount Name="Warhorse" Points="15"/>
-					<Barding Points="6" For="Warhorse"/>
-					<Mount Name="Pegasus" Points="50"/>
-					<Mount Name="Griffon" Points="200"/>
+					<Mount Name="Boar" Points="24"/>
+					<Mount Name="Wyvern" Points="230"/>
 				</Options>
 			</Lord>
 			<Lord>
-				<Name>Templar Grand Master</Name>
-				<Group>Knights</Group>
-				<Points>160</Points>
-				<Mount>Warhorse</Mount>
-				<Image>GrandMaster</Image>
-				<Lore>A Grand Master is a warrior and leader of unparalleled valour, having fought in dozens of battles from atop his great warhorse and whose military prowess is beyond question. These mighty warriors are the leaders of one of the many prestigious Knightly Orders that populate many of the Empire's lands, a position of power suited for only the most wisest and martialed member of their Order.</Lore>
-				<Profile M='4' WS='6' BS='3' S='4' T='4' W='3' I='6' A='4' Ld='9' AS='5'/>
+				<Name>Orc Warboss</Name>
+				<Group>Orc</Group>
+				<Points>110</Points>
+				<Lore>Orc Warboss - Are the biggest, meanest, and most strongest Orc within a tribe, being both the supreme tyrant and a hulking behemoth that is considered by himself to be the greatest Greenskin warrior around. These powerful individuals are relatively cunning and exceedingly powerful warriors, having fought and pummelled his way through his tribe's hierarchy by winning battles and killing every challenger that would dare to defy his tyranny. Equipped with powerful weapons and armour, these brutish warriors are near unstoppable upon the battlefield.</Lore>
+				<Profile M='4' WS='6' BS='3' S='4' T='5' W='3' I='4' A='4' Ld='9'/>
 				<SpecialRules>
 					<MagicItems Points="100" Type="Hero"/>
+					<IgnoreGreenskinPanic/>
+				</SpecialRules>
+				<Equipments>
+					<Choppa/>
+				</Equipments>
+				<Options>
+					<AdditionalWeapon Points="6" Dependency="Weapon"/>
+					<GreatAxe Points="6" Dependency="Weapon"/>
+					<Spear Points="3" Only="Mount" Dependency="Weapon"/>
+					<LightArmour Points="3"/>
+					<Shield Points="3"/>
+					<Mount Name="Boar" Points="24"/>
+					<Mount Name="Wyvern" Points="230"/>
+				</Options>
+			</Lord>
+			<Lord>
+				<Name>Savage Orc Warboss</Name>
+				<Group>Orc</Group>
+				<Points>125</Points>
+				<Image>SavageOrcBossWarboss</Image>
+				<Lore>Orc Warboss - Are the biggest, meanest, and most strongest Orc within a tribe, being both the supreme tyrant and a hulking behemoth that is considered by himself to be the greatest Greenskin warrior around. These powerful individuals are relatively cunning and exceedingly powerful warriors, having fought and pummelled his way through his tribe's hierarchy by winning battles and killing every challenger that would dare to defy his tyranny. Equipped with powerful weapons and armour, these brutish warriors are near unstoppable upon the battlefield.</Lore>
+				<Profile M='4' WS='6' BS='3' S='4' T='5' W='3' I='4' A='4' Ld='9'/>
+				<SpecialRules>
+					<Frenzy/>
+					<MagicItems Points="100" Type="Hero"/>
+					<IgnoreGreenskinPanic/>
+				</SpecialRules>
+				<Equipments>
+					<Choppa/>
+				</Equipments>
+				<Options>
+					<AdditionalWeapon Points="6" Dependency="Weapon"/>
+					<GreatAxe Points="6" Dependency="Weapon"/>
+					<Spear Points="3" Only="Mount" Dependency="Weapon"/>
+					<Shield Points="3"/>
+					<Warprint Points="12"/>
+					<Mount Name="Boar" Points="24"/>
+				</Options>
+			</Lord>
+			<Lord>
+				<Name>Orc Great Shaman</Name>
+				<Group>Orc</Group>
+				<Wizard>3</Wizard>
+				<Points>180</Points>
+				<Lore>These psychotic individuals are those few Orc Shamans within a tribe whom have managed to control and harness the spells of Da Big Waaagh! to a much greater effect. Great Shamans of the Orc tribes are amongst some of the most powerful spell-casters known to the greenskins, capable of everything from melting brains to summoning the great foot of the mighty Gork himself, in order to stamp out your foes.</Lore>
+				<Profile M='4' WS='3' BS='3' S='4' T='4' W='3' I='2' A='1' Ld='8'/>
+				<SpecialRules>
+					<MagicItems Points="100" Type="Wizard"/>
+				</SpecialRules>
+				<Equipments>
+					<Choppa/>
+				</Equipments>
+				<Options>
+					<Wizard Level="4" Points="35"/>
+					<Mount Name="Boar" Points="24"/>
+				</Options>
+			</Lord>
+			<Lord>
+				<Name>Savage Orc Great Shaman</Name>
+				<Group>Orc</Group>
+				<Wizard>3</Wizard>
+				<Points>190</Points>
+				<Lore>These psychotic individuals are those few Orc Shamans within a tribe whom have managed to control and harness the spells of Da Big Waaagh! to a much greater effect. Great Shamans of the Orc tribes are amongst some of the most powerful spell-casters known to the greenskins, capable of everything from melting brains to summoning the great foot of the mighty Gork himself, in order to stamp out your foes.</Lore>
+				<Profile M='4' WS='3' BS='3' S='4' T='4' W='3' I='2' A='1' Ld='8'/>
+				<SpecialRules>
+					<Frenzy/>
+					<MagicItems Points="100" Type="Wizard"/>
+				</SpecialRules>
+				<Equipments>
+					<Choppa/>
+				</Equipments>
+				<Options>
+					<Wizard Level="4" Points="35"/>
+					<Warprint Points="12"/>
+					<Mount Name="Boar" Points="24"/>
+				</Options>
+			</Lord>
+			<Lord>
+				<Name>Goblin Warboss</Name>
+				<Group>Goblin</Group>
+				<Points>65</Points>
+				<Lore>Are the biggest, cleverest, and most cunning Goblin within a tribe, whom are known to be an exceedingly crafty leader as well as a fairly adept strategist in both conventional and unconventional warfare. Instead of fighting their way into the top, most Goblins use a more subtle method to gain power, usually employing tactics such as assassination, backstabbing or poison to get the job done. As with any Warboss, these Goblins are often equipped with some of the finest weapons and armour within a tribe.</Lore>
+				<Profile M='4' WS='5' BS='3' S='4' T='4' W='3' I='4' A='4' Ld='8'/>
+				<SpecialRules>
+					<MagicItems Points="100" Type="Hero"/>
+					<FearElves/>
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon/>
-					<Lance/>
-					<FullPlateArmour/>
-					<Shield/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Cavalry hammer</Name>
-						<HitLast/>
-						<AddToStrength>2</AddToStrength>
-						<Points>6</Points>
-					</Option>
+					<AdditionalWeapon Points="6" Dependency="Weapon"/>
+					<GreatAxe Points="6" Dependency="Weapon"/>
+					<Spear Points="3" Only="Mount" Dependency="Weapon"/>
+					<LightArmour Points="3"/>
+					<Shield Points="3"/>
+					<Mount Name="Wolf" Points="18"/>
 				</Options>
 			</Lord>
 			<Lord>
-				<Name>Wizard Lord</Name>
-				<Points>175</Points>
+				<Name>Night Goblin Warboss</Name>
+				<Group>Goblin</Group>
+				<Points>55</Points>
+				<Lore>Are the biggest, cleverest, and most cunning Goblin within a tribe, whom are known to be an exceedingly crafty leader as well as a fairly adept strategist in both conventional and unconventional warfare. Instead of fighting their way into the top, most Goblins use a more subtle method to gain power, usually employing tactics such as assassination, backstabbing or poison to get the job done. As with any Warboss, these Goblins are often equipped with some of the finest weapons and armour within a tribe.</Lore>
+				<Profile M='4' WS='5' BS='3' S='4' T='4' W='3' I='5' A='4' Ld='7'/>
+				<SpecialRules>
+					<MagicItems Points="100" Type="Hero"/>
+					<FearElves/>
+					<HateDwarfs/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon/>
+				</Equipments>
+				<Options>
+					<AdditionalWeapon Points="6" Dependency="Weapon"/>
+					<GreatAxe Points="6" Dependency="Weapon"/>
+					<LightArmour Points="3"/>
+					<Shield Points="3"/>
+				</Options>
+			</Lord>
+			<Lord>
+				<Name>Goblin Great Shaman</Name>
+				<Group>Goblin</Group>
 				<Wizard>3</Wizard>
-				<Image>LordWizard</Image>
-				<Lore>A Wizard Lord is a highly prestigious rank within the Imperial Colleges of Magic that are second only to the Matriarch or Patriach of a Magic Order. A being of immense but unstable power, these mighty Men of the Empire are amongst the strongest particioner's of magic within the realms of Man. Such is their great knowledge at their perfered Magic Lore that these Wizards are accompanied by a whole cadre of lesser Wizards and Adepts, using their magical abilities to further augment the Wizard Lords already formidable powers into ever grander strenght.</Lore>
-				<Profile M='4' WS='3' BS='3' S='3' T='4' W='3' I='3' A='1' Ld='8'/>
+				<Points>155</Points>
+				<Lore>Like their larger Orc cousins, these Goblin Shamans have also mastered the use of spell-casting to a much greater effect then those amateur Goblin whom often die by the droves due to their inability to channel the spells of Da Little Waaagh! without exploding. Night Goblin Great Shamans are especially powerful individuals, for they are also expert potion brewers as well as powerful spell-caster.</Lore>
+				<Profile M='4' WS='2' BS='3' S='3' T='4' W='3' I='2' A='1' Ld='7'/>
 				<SpecialRules>
 					<MagicItems Points="100" Type="Wizard"/>
+					<FearElves/>
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon/>
 				</Equipments>
 				<Options>
 					<Wizard Level="4" Points="35"/>
-					<Mount Name="Warhorse" Points="15"/>
-					<Barding Points="6" For="Warhorse"/>
-					<Mount Name="Imperial Pegasus" Points="50"/>
+					<Mount Name="Wolf" Points="18"/>
+				</Options>
+			</Lord>
+			<Lord>
+				<Name>Night Goblin Great Shaman</Name>
+				<Group>Goblin</Group>
+				<Wizard>3</Wizard>
+				<Points>160</Points>
+				<Lore>Like their larger Orc cousins, these Goblin Shamans have also mastered the use of spell-casting to a much greater effect then those amateur Goblin whom often die by the droves due to their inability to channel the spells of Da Little Waaagh! without exploding. Night Goblin Great Shamans are especially powerful individuals, for they are also expert potion brewers as well as powerful spell-caster.</Lore>
+				<Profile M='4' WS='2' BS='3' S='3' T='4' W='3' I='3' A='1' Ld='6'/>
+				<SpecialRules>
+					<MagicItems Points="100" Type="Wizard"/>
+					<FearElves/>
+					<HateDwarfs/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon/>
+				</Equipments>
+				<Options>
+					<Wizard Level="4" Points="35"/>
 				</Options>
 			</Lord>
 			<Hero>
-				<Name>Captain</Name>
-				<Points>50</Points>
-				<Lore>A Captain of the Empire is a veteran military commander possessed of a variety of different formal titles who leads a smaller regiment or other unit of troops within an Imperial army. These leaders take to the field of battle whenever they can. Most of the men appointed by an Elector Count to serve as officers in their province's armies will also be nobles of the Empire, educated in martial pursuits from an early age, whilst others are simply high-born cowards with no courage or leadership.</Lore>
-				<Profile M='4' WS='5' BS='5' S='4' T='4' W='2' I='5' A='3' Ld='8'/>
+				<Name>Black Orc Big Boss</Name>
+				<Group>Orc</Group>
+				<Points>80</Points>
+				<Lore>These Orcs are often the leaders of a warband of Greenskin warriors, acting in a sense as a position of a sergeant or lieutenant to a Greenskin Warlord. Often times, these Big Bosses are also called Big Un's, Orcs whom have grown to an unnaturally large size, and are equipped with a horrific array of thick armour or powerful weapons.</Lore>
+				<Profile M='4' WS='6' BS='3' S='5' T='5' W='2' I='3' A='3' Ld='8'/>
 				<SpecialRules>
 					<MagicItems Points="50" Type="Hero"/>
+					<IgnoreGreenskinPanic/>
+					<QuellAnimosity/>
 				</SpecialRules>
 				<Equipments>
-					<HandWeapon/>
+					<Choppa/>
 				</Equipments>
 				<Options>
-					<Lance Points="4" Only="Mount" Dependency="Weapon"/>
-					<GreatWeapon Points="4" Dependency="Weapon"/>
-					<Halberd Points="4" Dependency="Weapon"/>
-					<Pistol Points="7" Dependency="Weapon"/>
-					<Longbow Points="10" Dependency="Range"/>
-					<Handgun Points="10" Dependency="Range"/>
-					<LightArmour Points="2" Dependency="Armour"/>
-					<HeavyArmour Points="4" Dependency="Armour"/>
-					<FullPlateArmour Points="8" Dependency="Armour"/>
-					<Shield Points="2"/>
-					<Mount Name="Warhorse" Points="10"/>
-					<Barding Points="4" For="Warhorse"/>
-					<Mount Name="Pegasus" Points="50"/>
-					<BattleStandardBearer Points="25"/>
-				</Options>
-			</Hero>
-			<Hero>
-				<Name>Warrior Priest</Name>
-				<Points>95</Points>
-				<Lore>Warrior Priests are a war-like sect of the Church of Sigmar who not only lead and inspire Imperial troops in battle, but also minister to their spiritual needs. On many an occasion a rousing speech by a Warrior Priest of Sigmar has restored the troops' faith, brought hope to a seemingly lost cause, or prevented a mutiny when the words of even the most respected commanders had fallen on frightened and angry ears. Warrior Priests of Sigmar normally wear mail or full plate armour underneath their holy vestments, wield the mighty warhammers that are the favoured weapon of Sigmar, and ride into battle atop powerful Imperial warhorses. Among the most commonly employed divine powers of a Warrior Priest are prayers.</Lore>
-				<Profile M='4' WS='4' BS='3' S='4' T='4' W='2' I='4' A='2' Ld='8'/>
-				<SpecialRules>
-					<Hate/>
-					<MagicItems Points="50" Type="Hero"/>
-					<AddToDispell>1</AddToDispell>
-					<Original>Prayer of Sigmar</Original>
-				</SpecialRules>
-				<Equipments>
-					<HandWeapon>Warhammer</HandWeapon>
-				</Equipments>
-				<Options>
-					<Option>
-						<Name>Two-handed warhammer</Name>
-						<AddToStrength>2</AddToStrength>
-						<HitLast/>
-						<Points>4</Points>
-						<Dependency Group="Weapon"/>
-					</Option>
-					<Option>
-						<Name>Second warhammer</Name>
-						<AddToAttacks>1</AddToAttacks>
-						<Points>4</Points>
-						<Dependency Group="Weapon"/>
-					</Option>
+					<AdditionalWeapon Points="4" Dependency="Weapon"/>
+					<GreatAxe Points="4" Dependency="Weapon"/>
+					<Spear Points="2" Only="Mount" Dependency="Weapon"/>
 					<LightArmour Points="2" Dependency="Armour"/>
 					<HeavyArmour Points="4" Dependency="Armour"/>
 					<Shield Points="2"/>
-					<Mount Name="Warhorse" Points="10"/>
-					<Barding Points="4" For="Warhorse"/>
+					<Mount Name="Boar" Points="16"/>
+					<BattleStandardBearer Points="25" Dependencies="Great axe, Additional weapon, Spear, Shield"/>
 				</Options>
 			</Hero>
 			<Hero>
-				<Name>Master Engineer</Name>
-				<Points>55</Points>
-				<Image>Engineer</Image>
-				<Lore>Empire Master Engineers are those select few individuals amongst many thousand that have the knowledge and skills to create, maintain and operate wonderous inventions of war in the battle against the Empire's foes. These Engineers are highly schooled in mathematics and engineering, having the skills to direct artillery pieces into position and calibrating them to their full potential.</Lore>
-				<Profile M='4' WS='3' BS='4' S='3' T='3' W='2' I='3' A='1' Ld='7'/>
+				<Name>Orc Big Boss</Name>
+				<Group>Orc</Group>
+				<Points>65</Points>
+				<Lore>These Orcs are often the leaders of a warband of Greenskin warriors, acting in a sense as a position of a sergeant or lieutenant to a Greenskin Warlord. Often times, these Big Bosses are also called Big Un's, Orcs whom have grown to an unnaturally large size, and are equipped with a horrific array of thick armour or powerful weapons.</Lore>
+				<Profile M='4' WS='5' BS='3' S='4' T='5' W='2' I='3' A='3' Ld='8'/>
 				<SpecialRules>
 					<MagicItems Points="50" Type="Hero"/>
-					<Original>
-						<Rule>Master of Ballistics</Rule>
-						<Rule>Extra Crewman</Rule>
-					</Original>
+					<IgnoreGreenskinPanic/>
 				</SpecialRules>
 				<Equipments>
-					<HandWeapon/>
+					<Choppa/>
 				</Equipments>
 				<Options>
-					<RepeaterPistol Points="10" Dependency="Range"/>
-					<Handgun Points="15" Dependency="Range"/>
-					<HochlandLongRifle Points="20" Dependency="Range"/>
+					<AdditionalWeapon Points="4" Dependency="Weapon"/>
+					<GreatAxe Points="4" Dependency="Weapon"/>
+					<Spear Points="2" Only="Mount" Dependency="Weapon"/>
 					<LightArmour Points="2"/>
-					<Mount Name="Warhorse" Points="10"/>
-					<Barding Points="4" For="Warhorse"/>
+					<Shield Points="2"/>
+					<Mount Name="Boar" Points="16"/>
+					<BattleStandardBearer Points="25" Dependencies="Great axe, Additional weapon, Spear, Shield"/>
 				</Options>
 			</Hero>
 			<Hero>
-				<Name>Battle Wizard</Name>
-				<Points>60</Points>
+				<Name>Savage Orc Big Boss</Name>
+				<Group>Orc</Group>
+				<Points>75</Points>
+				<Lore>These Orcs are often the leaders of a warband of Greenskin warriors, acting in a sense as a position of a sergeant or lieutenant to a Greenskin Warlord. Often times, these Big Bosses are also called Big Un's, Orcs whom have grown to an unnaturally large size, and are equipped with a horrific array of thick armour or powerful weapons.</Lore>
+				<Profile M='4' WS='5' BS='3' S='4' T='5' W='2' I='3' A='3' Ld='8'/>
+				<SpecialRules>
+					<Frenzy/>
+					<MagicItems Points="50" Type="Hero"/>
+					<IgnoreGreenskinPanic/>
+				</SpecialRules>
+				<Equipments>
+					<Choppa/>
+				</Equipments>
+				<Options>
+					<AdditionalWeapon Points="4" Dependency="Weapon"/>
+					<GreatAxe Points="4" Dependency="Weapon"/>
+					<Spear Points="2" Only="Mount" Dependency="Weapon"/>
+					<Warprint Points="8"/>
+					<Shield Points="2"/>
+					<Mount Name="Boar" Points="16"/>
+					<BattleStandardBearer Points="25" Dependencies="Great axe, Additional weapon, Spear, Shield"/>
+				</Options>
+			</Hero>
+			<Hero>
+				<Name>Orc Shaman</Name>
+				<Group>Orc</Group>
 				<Wizard>1</Wizard>
-				<Lore>Empire Battle Wizards are individuals with the knowledge and power of one of the great Winds of Magic, who has been schooled from one of the eight Colleges of Magic within the capital of Altdorf, and are now giving their services to the Empire.</Lore>
-				<Profile M='4' WS='3' BS='3' S='3' T='3' W='2' I='3' A='1' Ld='7'/>
+				<Points>65</Points>
+				<Lore>These psychotic individuals are those few Orc Shamans within a tribe whom have managed to control and harness the spells of Da Big Waaagh! to a much greater effect. Great Shamans of the Orc tribes are amongst some of the most powerful spell-casters known to the greenskins, capable of everything from melting brains to summoning the great foot of the mighty Gork himself, in order to stamp out your foes.</Lore>
+				<Profile M='4' WS='3' BS='3' S='3' T='4' W='2' I='2' A='1' Ld='7'/>
 				<SpecialRules>
 					<MagicItems Points="50" Type="Wizard"/>
+					<IgnoreGreenskinPanic/>
+				</SpecialRules>
+				<Equipments>
+					<Choppa/>
+				</Equipments>
+				<Options>
+					<Wizard Level="2" Points="35"/>
+					<Mount Name="Boar" Points="16"/>
+				</Options>
+			</Hero>
+			<Hero>
+				<Name>Savage Orc Shaman</Name>
+				<Group>Orc</Group>
+				<Wizard>1</Wizard>
+				<Points>67</Points>
+				<Lore>These psychotic individuals are those few Orc Shamans within a tribe whom have managed to control and harness the spells of Da Big Waaagh! to a much greater effect. Great Shamans of the Orc tribes are amongst some of the most powerful spell-casters known to the greenskins, capable of everything from melting brains to summoning the great foot of the mighty Gork himself, in order to stamp out your foes.</Lore>
+				<Profile M='4' WS='3' BS='3' S='3' T='4' W='2' I='2' A='1' Ld='7'/>
+				<SpecialRules>
+					<Frenzy/>
+					<MagicItems Points="50" Type="Wizard"/>
+					<IgnoreGreenskinPanic/>
+				</SpecialRules>
+				<Equipments>
+					<Choppa/>
+				</Equipments>
+				<Options>
+					<Wizard Level="2" Points="35"/>
+					<Warprint Points="8"/>
+					<Mount Name="Boar" Points="16"/>
+				</Options>
+			</Hero>
+			<Hero>
+				<Name>Goblin Big Boss</Name>
+				<Group>Goblin</Group>
+				<Points>35</Points>
+				<Lore>Orcs determine their hierarchy in a simple manner - the biggest and best fighter takes control. Goblins follow a less straightforward path to the top ranks, as they are both more devious and more cowardly than their brutish Orc cousins. Underhanded ploys and strategy are the preferred tactics for Goblins; although straight-up fighting is still an option, it is one that is typically left to the especially desperate. All Goblins use dirty tricks, with the best schemers being the most dangerous of their diminutive kind and the most likely to rise through the ranks. Those Goblins that make it to the very top are known as Big Bosses.</Lore>
+				<Profile M='4' WS='4' BS='3' S='4' T='4' W='2' I='3' A='3' Ld='7'/>
+				<SpecialRules>
+					<MagicItems Points="50" Type="Hero"/>
+					<FearElves/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon/>
+				</Equipments>
+				<Options>
+					<AdditionalWeapon Points="4" Dependency="Weapon"/>
+					<GreatAxe Points="4" Dependency="Weapon"/>
+					<Spear Points="3" Only="Mount" Dependency="Weapon"/>
+					<LightArmour Points="2"/>
+					<Shield Points="2"/>
+					<Mount Name="Wolf" Points="12"/>
+					<BattleStandardBearer Points="25" Dependencies="Great axe, Additional weapon, Spear, Shield"/>
+				</Options>
+			</Hero>
+			<Hero>
+				<Name>Night Goblin Big Boss</Name>
+				<Group>Goblin</Group>
+				<Points>30</Points>
+				<Lore>Orcs determine their hierarchy in a simple manner - the biggest and best fighter takes control. Goblins follow a less straightforward path to the top ranks, as they are both more devious and more cowardly than their brutish Orc cousins. Underhanded ploys and strategy are the preferred tactics for Goblins; although straight-up fighting is still an option, it is one that is typically left to the especially desperate. All Goblins use dirty tricks, with the best schemers being the most dangerous of their diminutive kind and the most likely to rise through the ranks. Those Goblins that make it to the very top are known as Big Bosses.</Lore>
+				<Profile M='4' WS='4' BS='3' S='4' T='4' W='2' I='4' A='3' Ld='6'/>
+				<SpecialRules>
+					<MagicItems Points="50" Type="Hero"/>
+					<FearElves/>
+					<HateDwarfs/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon/>
+				</Equipments>
+				<Options>
+					<AdditionalWeapon Points="4" Dependency="Weapon"/>
+					<GreatAxe Points="4" Dependency="Weapon"/>
+					<LightArmour PointsPerModel="2"/>
+					<Shield Points="2"/>
+					<BattleStandardBearer Points="25" Dependencies="Great axe, Additional weapon, Shield"/>
+				</Options>
+			</Hero>
+			<Hero>
+				<Name>Goblin Shaman</Name>
+				<Group>Goblin</Group>
+				<Wizard>1</Wizard>
+				<Points>55</Points>
+				<Lore>Like their larger Orc cousins, these Goblin Shamans have also mastered the use of spell-casting to a much greater effect then those amateur Goblin whom often die by the droves due to their inability to channel the spells of Da Little Waaagh! without exploding. Night Goblin Great Shamans are especially powerful individuals, for they are also expert potion brewers as well as powerful spell-caster.</Lore>
+				<Profile M='4' WS='2' BS='3' S='3' T='3' W='2' I='2' A='1' Ld='6'/>
+				<SpecialRules>
+					<MagicItems Points="50" Type="Wizard"/>
+					<FearElves/>
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon/>
 				</Equipments>
 				<Options>
 					<Wizard Level="2" Points="35"/>
-					<Mount Name="Warhorse" Points="10"/>
-					<Barding Points="4" For="Warhorse"/>
+					<Mount Name="Wolf" Points="12"/>
+				</Options>
+			</Hero>
+			<Hero>
+				<Name>Night Goblin Shaman</Name>
+				<Group>Goblin</Group>
+				<Wizard>1</Wizard>
+				<Points>60</Points>
+				<Lore>Like their larger Orc cousins, these Goblin Shamans have also mastered the use of spell-casting to a much greater effect then those amateur Goblin whom often die by the droves due to their inability to channel the spells of Da Little Waaagh! without exploding. Night Goblin Great Shamans are especially powerful individuals, for they are also expert potion brewers as well as powerful spell-caster.</Lore>
+				<Profile M='4' WS='2' BS='3' S='3' T='3' W='2' I='3' A='1' Ld='5'/>
+				<SpecialRules>
+					<MagicItems Points="50" Type="Wizard"/>
+					<FearElves/>
+					<HateDwarfs/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon/>
+				</Equipments>
+				<Options>
+					<Wizard Level="2" Points="35"/>
 				</Options>
 			</Hero>
 		</Heroes>
 		<Mounts>
 			<Mount>
-				<Name>Warhorse</Name>
-				<Profile M='8' WS='3' BS='0' S='3' T='3' W='1' I='3' A='1' Ld='5'/>
-			</Mount>
-			<Mount>
-				<Name>Griffon</Name>
-				<Profile M='6' WS='5' BS='0' S='5' T='5' W='4' I='5' A='4' Ld='7'/>
+				<Name>Wyvern</Name>
+				<Profile M='4' WS='5' BS='0' S='6' T='5' W='5' I='3' A='2' Ld='6'/>
 				<SpecialRules>
 					<Terror/>
+					<PoisonAttack/>
+					<LargeBase/>
 					<Fly/>
 					<LargeTarget/>
 				</SpecialRules>
+				<Equipments>
+					<Armour>
+						<Name>Scaly skin</Name>
+						<AddToArmour>4</AddToArmour>
+					</Armour>
+				</Equipments>
 			</Mount>
 			<Mount>
-				<Name>Pegasus</Name>
-				<Profile M='8' WS='3' BS='0' S='4' T='4' W='3' I='4' A='2' Ld='6'/>
+				<Name>Wolf</Name>
+				<Profile M='9' WS='3' BS='0' S='3' T='3' W='1' I='3' A='1' Ld='3'/>
+			</Mount>
+			<Mount>
+				<Name>Boar</Name>
+				<Profile M='7' WS='3' BS='0' S='3' T='4' W='1' I='3' A='1' Ld='3' AS='5'/>
 				<SpecialRules>
-					<Original>Fly</Original>
+					<TuskerCharge/>
 				</SpecialRules>
+				<Equipments>
+					<ThickSkinned/>
+				</Equipments>
+			</Mount>
+			<Mount>
+				<Name>Spleenrippa</Name>
+				<Profile M='7' WS='3' BS='0' S='4' T='4' W='1' I='2' A='1' Ld='3' AS='5'/>
+				<SpecialRules>
+					<TuskerCharge/>
+				</SpecialRules>
+				<Equipments>
+					<ThickSkinned/>
+				</Equipments>
 			</Mount>
 		</Mounts>
 		<Units>
 			<Core>
-				<Name>Halberdiers</Name>
-				<Points>6</Points>
-				<Size>10+</Size>
-				<Lore>Halberdiers are amongst the three most common infantry types fielded by the armies of the Empire. Equipped with a battle-worn halberd, these groups of line infantry are a powerful force on the battlefield, proving the Empire with both offensive and defensive capability with bone-crushing force.</Lore>
-				<Profile M='4' WS='3' BS='3' S='3' T='3' W='1' I='3' A='1' Ld='7'/>
-				<Equipments>
-					<HandWeapon/>
-					<Halberd/>
-					<LightArmour/>
-				</Equipments>
-				<Options>
-					<Shield PointsPerModel="1"/>
-					<Command>
-						<Musician Points="5"/>
-						<StandardBearer Points="10"/>
-						<Champion Points="10" Name="Sergeant"/>
-					</Command>
-				</Options>
-			</Core>
-			<Core>
-				<Name>Spearmen</Name>
-				<Points>6</Points>
-				<Size>10+</Size>
-				<Lore>Spearmen are amongst the three most common infantry types fielded by the armies of the Empire. Equipped with a spear and shield, the solid formation that this unit provides is highly adequate in defensive situations, providing the Empire with much-needed holding power.</Lore>
-				<Profile M='4' WS='3' BS='3' S='3' T='3' W='1' I='3' A='1' Ld='7'/>
-				<Equipments>
-					<HandWeapon/>
-					<Spear/>
-					<LightArmour/>
-				</Equipments>
-				<Options>
-					<Shield PointsPerModel="1"/>
-					<Command>
-						<Musician Points="5"/>
-						<StandardBearer Points="10"/>
-						<Champion Points="10" Name="Sergeant"/>
-					</Command>
-				</Options>
-			</Core>
-			<Core>
-				<Name>Swordmen</Name>
-				<Points>7</Points>
-				<Size>10+</Size>
-				<Lore>Swordsmen are amongst the three most common infantry types fielded by the armies of the Empire. Equipped with a sword, shield, and half-plate armor, these brave soldiers often engage the best enemy with both valor and courage. Due to their expertise with the sword and their flexible formation, the Swordsmen of the Empire provides the military with reliable offensive capability.</Lore>
-				<Profile M='4' WS='4' BS='3' S='3' T='3' W='1' I='4' A='1' Ld='7'/>
-				<Equipments>
-					<HandWeapon>Sword</HandWeapon>
-					<LightArmour/>
-					<Shield/>
-				</Equipments>
-				<Options>
-					<Command>
-						<Musician Points="5"/>
-						<StandardBearer Points="10"/>
-						<Champion Points="10" Name="Duellist"/>
-					</Command>
-				</Options>
-			</Core>
-			<Core>
-				<Name>Handgunners</Name>
-				<Points>8</Points>
-				<Size>10+</Size>
-				<Lore>Handgunners are one of the primaries ranged units of the Imperial army. Equipped with the loud and deadly handgun, these men are highly trained as a line-formation of missile support that can penetrate even the thickest of enemy armor. As such, they are the mainstay of most Imperial missile support.</Lore>
-				<Profile M='4' WS='3' BS='3' S='3' T='3' W='1' I='3' A='1' Ld='7'/>
-				<Equipments>
-					<HandWeapon/>
-					<RangeWeapon>Handgun</RangeWeapon>
-				</Equipments>
-				<Options>
-					<Command>
-						<Musician Points="5"/>
-						<StandardBearer Points="10"/>
-						<Champion Points="5" Name="Marksman"/>
-					</Command>
-					<Option>
-						<Name>Hochland long rifle for Marksman</Name>
-						<Dependencies>
-							<On>Marksman</On>
-							<Off>Repeater handgun for Marksman, Pistol for Marksman</Off>
-						</Dependencies>
-						<Points>20</Points>
-					</Option>
-					<Option>
-						<Name>Repeater handgun for Marksman</Name>
-						<Dependencies>
-							<On>Marksman</On>
-							<Off>Hochland long rifle for Marksman, Pistol for Marksman</Off>
-						</Dependencies>
-						<Points>15</Points>
-					</Option>
-					<Option>
-						<Name>Brace of pistols for Marksman</Name>
-						<Dependencies>
-							<On>Marksman</On>
-							<Off>Hochland long rifle for Marksman, Repeater handgun for Marksman</Off>
-						</Dependencies>
-						<Points>4</Points>
-					</Option>
-				</Options>
-			</Core>
-			<Core>
-				<Name>Free Companies</Name>
+				<Name>Orc Boyz</Name>
 				<Points>5</Points>
 				<Size>10+</Size>
-				<Image>FreeCompany</Image>
-				<Lore>A Free Company is a polite catch-all term to describe all sell-swords, mercenaries, cut-throats, and bandits paid to fight for the Empire and her armies. They are hardy fighters and are well-accustomed to the rigours of war, but are undisciplined and unruly, liable to cause more harm than good when roaming around in armed bands. An Elector Count might employ these men for military service, but must ensure such men are under close watch to prevent them from running amok in his lands.</Lore>
-				<Profile M='4' WS='3' BS='3' S='3' T='3' W='1' I='3' A='1' Ld='7'/>
+				<Lore>These hard-fighting warriors form the backbone of all Greenskin armies, and often does the bulk of the fighting upon the battlefield. Orc Boyz are generally just simple Orcs who have taken up arms to fight the enemy of his tribe with nothing but ramshackle armour and crude weaponry.</Lore>
+				<Profile M='4' WS='3' BS='3' S='3' T='4' W='1' I='2' A='1' Ld='7'/>
+				<SpecialRules>
+					<Animosity/>
+					<IgnoreGreenskinPanic/>
+				</SpecialRules>
 				<Equipments>
-					<TwoHandsWeapons/>
+					<Choppa/>
+					<LightArmour/>
+				</Equipments>
+				<Options>
+					<AdditionalWeapon PointsPerModel="2" Dependency="Weapon"/>
+					<Spear PointsPerModel="2" Dependency="Weapon"/>
+					<Shield PointsPerModel="1"/>
+					<Biguns PointsPerModel="2"/>
+					<Command>
+						<Musician Points="5"/>
+						<StandardBearer Points="10"/>
+						<Champion Points="13" Name="Boss"/>
+					</Command>
+				</Options>
+			</Core>
+			<Core>
+				<Name>Orc Arrer Boyz</Name>
+				<Points>7</Points>
+				<Size>10+</Size>
+				<Lore>Though most Orcs prefer the use of close-combat weapons, some Orcs and Savage Orcs have been known to bring bows into combat. Though they are notoriously inaccurate in their shots, the ferocity of their volleys prove adequate enough that they are conceived as a threat.</Lore>
+				<Profile M='4' WS='3' BS='3' S='3' T='4' W='1' I='2' A='1' Ld='7'/>
+				<SpecialRules>
+					<Animosity/>
+					<IgnoreGreenskinPanic/>
+				</SpecialRules>
+				<Equipments>
+					<Choppa/>
+					<Bow/>
 				</Equipments>
 				<Options>
 					<LightArmour PointsPerModel="1"/>
 					<Command>
 						<Musician Points="5"/>
 						<StandardBearer Points="10"/>
-						<Champion Points="10" Name="Sergeant"/>
+						<Champion Points="13" Name="Boss"/>
 					</Command>
 				</Options>
 			</Core>
 			<Core>
-				<Name>Archers</Name>
-				<Points>8</Points>
-				<Size>10-20</Size>
-				<Lore>Archers are an often irregular group of hunters and trappers that usually band together to form their own regiment of scouts and support units. The more experienced and exceptional hunters and archers hail from the woodland province of Hochland, where hunting is a very popular sport amongst both the nobility and commoner alike. These men are often fielded when regiments of crossbowmen and handgunners are in short supply.</Lore>
-				<Profile M='4' WS='3' BS='3' S='3' T='3' W='1' I='3' A='1' Ld='7'/>
+				<Name>Savage Orc Boyz</Name>
+				<Points>6</Points>
+				<Size>10+</Size>
+				<Image>SavageOrc</Image>
+				<Lore>Like all their kin, primitive tribes of Savage Orcs have been known to congregate alongside their peers and join in the carnage and plunder that is often rewarded upon joining a Waaagh! into battle. Equipped with nothing but tribal tattoos and crude weapons made of stone, bone or wood, these Orcs are nonetheless ferocious, if not unpredictable fighters.</Lore>
+				<Profile M='4' WS='3' BS='3' S='3' T='4' W='1' I='2' A='1' Ld='7'/>
 				<SpecialRules>
-					<Skirmishers/>
+					<Frenzy/>
+					<Animosity/>
+					<IgnoreGreenskinPanic/>
 				</SpecialRules>
 				<Equipments>
-					<HandWeapon/>
-					<Bow/>
+					<Choppa/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Huntsmens</Name>
-						<PointsPerModel>2</PointsPerModel>
-						<Scouts/>
-						<Rule>Longbow</Rule>
-						<OnlyOneInArmy/>
-					</Option>
-					<Command>
-						<Champion Points="5" Name="Marksman"/>
-					</Command>
-				</Options>
-			</Core>
-			<Core>
-				<Name>Crossbowmen</Name>
-				<Points>8</Points>
-				<Size>10+</Size>
-				<Lore>Crossbowmen are the least most common ranged units following the introduction of gunpowder weaponry. In the past, Crossbowmen provided the Empire with a stronger degree of peneration against heavily-armored foes. As of now, some provinces still retain the use of Crossbows as a substitute should Handguns be unavailable.</Lore>
-				<Profile M='4' WS='3' BS='3' S='3' T='3' W='1' I='3' A='1' Ld='7'/>
-				<Equipments>
-					<HandWeapon/>
-					<RangeWeapon>Crossbow</RangeWeapon>
-				</Equipments>
-				<Options>
+					<AdditionalWeapon PointsPerModel="2" Dependency="Weapon"/>
+					<Spear PointsPerModel="2" Dependency="Weapon"/>
+					<Bow PointsPerModel="3" Dependency="Weapon"/>
+					<Warprint PointsPerModel="3"/>
+					<Shield PointsPerModel="1"/>
+					<Biguns PointsPerModel="2"/>
 					<Command>
 						<Musician Points="5"/>
 						<StandardBearer Points="10"/>
-						<Champion Points="5" Name="Marksman"/>
+						<Champion Points="13" Name="Boss"/>
 					</Command>
 				</Options>
 			</Core>
 			<Core>
-				<Name>Knightly Orders</Name>
-				<Group>Knights</Group>
-				<Points>23</Points>
-				<Size>5+</Size>
-				<Mount>Warhorse</Mount>
-				<Image>KnightsOrders</Image>
-				<Lore>Knights are one of the most common cavalry troops deployed in battle. Many knights have a certain color scheme or heraldry that identifies them with either a knightly order or a noble household. They are considered heavy shock cavalry, wearing heavy plate armor and wielding lances and swords into battle. Knights tend to be born from the nobler families of the Empire, a tradition that is often kept and practiced by most Knightly Orders. Those of common birth who are exceptionally-skilled with a weapon often serves as sergeants and squires for their knights. Although not considered full brothers of their orders, sergeants and squires play vital roles in supporting the knights in battle, and are often equally respected for their prowess in battle.</Lore>
-				<Profile M='4' WS='4' BS='3' S='3' T='3' W='1' I='3' A='1' Ld='8' AS='5'/>
+				<Name>Goblins</Name>
+				<Points>2</Points>
+				<Size>20+</Size>
+				<Lore>These scrawny cowards forms the overall bulk of many Greenskin armies but often do the least amount of fighting. Weak and cowardice by nature, these mediocre warriors bring with them primitive hunting spears, broken swords, crude bows, and wooden shields into combat. What they lack in quality, they make up for with quantity.</Lore>
+				<Profile M='4' WS='2' BS='3' S='3' T='3' W='1' I='2' A='1' Ld='6'/>
+				<SpecialRules>
+					<Animosity/>
+					<FearElves/>
+				</SpecialRules>
 				<Equipments>
-					<Lance/>
 					<HandWeapon/>
-					<FullPlateArmour/>
 					<Shield/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Knights of the Inner Circle</Name>
-						<PointsPerModel>3</PointsPerModel>
-						<AddToStrength>1</AddToStrength>
-						<OnlyOneInArmy/>
-					</Option>
+					<Spear PointsPerModel="1" Dependency="Weapon"/>
+					<Bow PointsPerModel="1" Dependency="Weapon"/>
+					<LightArmour PointsPerModel="1"/>
 					<Command>
-						<Musician Points="8"/>
-						<StandardBearer Points="16" Magic="Type: Unit, Points: 50"/>
-						<Champion Points="16" Name="First Knight"/>
+						<Musician Points="4"/>
+						<StandardBearer Points="8"/>
+						<Champion Points="8" Name="Boss"/>
 					</Command>
 				</Options>
 			</Core>
 			<Core>
-				<Name>Knights of the White Wolf</Name>
-				<Group>WhiteWolf</Group>
-				<Points>25</Points>
+				<Name>Goblin Wolf Riders</Name>
+				<Points>10</Points>
 				<Size>5+</Size>
-				<Singleton/>
-				<Mount>Warhorse</Mount>
-				<Lore>The Order of the Knights of the White Wolf, or White Wolves as they are more commonly known, are the most infamous of all the Templar Orders under the worship and servitude of the Ar-Ulric and their God, Ulric, God of Wolves and Winter. Readily identified by their distinctive wolf pelts and their savage fighting-style, the Knights of the White Wolf are the most ancient and largest of the Templar Orders in the entire Old World, their founding dating back to the time of Ar-Ulric Wulcan, during the Age of Sigmar some 2,500 years ago. The Knights' wolf-skin cloaks, coupled with their long, often wild hair and beards, gives them a barbaric appearance similar to those of the first worshippers of Ulric, but in truth they are a highly disciplined and martial Order whose presence inspire both courage and savagery that rivals that of even the most blood-thirsty and savage of the Northmen Warriors.</Lore>
-				<Profile M='4' WS='4' BS='3' S='3' T='3' W='1' I='3' A='1' Ld='8' AS='5'/>
+				<Mount>Wolf</Mount>
+				<Lore>These Wolf Riders are the scourge of the open plains, where their swiftness and speed can outpace even the most determined Boar Boy within a matter of seconds. Equipped with either spears or composite bows, Wolf Rider serves as a dedicated force of scouts and skirmishers for many marauding Greenskin armies.</Lore>
+				<Profile M='9' WS='2' BS='3' S='3' T='3' W='1' I='2' A='1' Ld='6'/>
+				<SpecialRules>
+					<Animosity/>
+					<FearElves/>
+					<FastCavalry/>
+				</SpecialRules>
 				<Equipments>
-					<HandWeapon>
-						<Name>Cavalry hammer</Name>
-						<HitLast/>
-						<AddToStrength>2</AddToStrength>
-					</HandWeapon>
-					<FullPlateArmour/>
+					<HandWeapon/>
 				</Equipments>
 				<Options>
-					<Option>
-						<Name>Knights of the Inner Circle</Name>
-						<PointsPerModel>3</PointsPerModel>
-						<AddToStrength>1</AddToStrength>
-					</Option>
+					<Spear PointsPerModel="1"/>
+					<ShortBow PointsPerModel="2"/>
+					<LightArmour PointsPerModel="1"/>
 					<Command>
-						<Musician Points="8"/>
-						<StandardBearer Points="16" Magic="Type: Unit, Points: 50"/>
-						<Champion Points="16" Name="First Knight"/>
+						<Musician Points="6"/>
+						<StandardBearer Points="12"/>
+						<Champion Points="12" Name="Boss"/>
 					</Command>
 				</Options>
 			</Core>
-			<Special>
-				<Name>Greatswords</Name>
-				<Points>12</Points>
-				<Size>10+</Size>
-				<Singleton/>
-				<Lore>Greatswords are the elite infantry of the Imperial army. Operating as a crack fighting force, their main duty is the protection of their Elector Counts during the heat of battle, and to provide the Empire with dedicated shock infantry, often attacking the Empire's foes at their flanks, where their swordsmanship puts even the most battle-hardened foes to their knee's.</Lore>
-				<Profile M='4' WS='4' BS='4' S='3' T='3' W='1' I='3' A='1' Ld='8'/>
+			<Core>
+				<Name>Night Goblins</Name>
+				<Points>2</Points>
+				<Size>20+</Size>
+				<Lore>Living within the fungus infested tunnels of the Old World, the Night Goblins are renown for their consumption of madness-inducing fungus that gives them both the courage to fight against foes that the average Goblin would be too afraid of facing. Equipped with a variety of weapons such as nets, crude spears, and composite bows, these Night Goblins are ferocious tunnel-fighters.</Lore>
+				<Profile M='4' WS='2' BS='3' S='3' T='3' W='1' I='3' A='3' Ld='5'/>
 				<SpecialRules>
-					<Stubborn/>
+					<Animosity/>
+					<FearElves/>
+					<HateDwarfs/>
+					<Original>Netters</Original>
 				</SpecialRules>
 				<Equipments>
-					<GreatWeapon/>
 					<HandWeapon/>
-					<FullPlateArmour/>
+					<Shield/>
 				</Equipments>
 				<Options>
+					<Spear PointsPerModel="1" Dependency="Weapon"/>
+					<Bow PointsPerModel="1" Dependency="Weapon"/>
+					<Nets PointsPerModel="2"/>
+					<Option>
+						<Name>Fanatic</Name>
+						<Points>25</Points>
+						<Countable Min="0" Max="3">
+							<ExportToUnitSize/>
+						</Countable>
+					</Option>
+					<Command>
+						<Musician Points="4"/>
+						<StandardBearer Points="8"/>
+						<Champion Points="8" Name="Boss"/>
+					</Command>
+				</Options>
+			</Core>
+			<Core>
+				<Name>Snotling Swarm</Name>
+				<Points>25</Points>
+				<Size>2-10</Size>
+				<Singleton/>
+				<Lore>These small and dull-witted creatures are amongst the most mediocre of the Goblin race. Equipped with pathetic weapons such as tree branches, mushrooms or bits of bone, a horde of these little monsters are nothing more than a nuisance or a distraction to even the weakest enemies they face.</Lore>
+				<Profile M='4' WS='2' BS='0' S='2' T='2' W='3' I='3' A='3' Ld='10'/>
+				<SpecialRules>
+					<Unbreakable/>
+					<Original>
+						<Rule>Horde</Rule>
+						<Rule>Nobody Cares</Rule>
+					</Original>
+				</SpecialRules>
+			</Core>
+			<Special>
+				<Name>Black Orc Regiment</Name>
+				<Points>10</Points>
+				<Size>10+</Size>
+				<Singleton/>
+				<Image>BlackOrc</Image>
+				<Lore>These Orcs are amongst the biggest, meanest and most heavily-armoured of all Orcish warriors. Equipped with impossibly large and thick plates of black armour, and armed with weapons that can cleave a Knight in two, these warriors form the crack elite infantry of many Greenskin armies.</Lore>
+				<Profile M='4' WS='4' BS='3' S='4' T='4' W='1' I='2' A='1' Ld='8'/>
+				<SpecialRules>
+					<IgnoreGreenskinPanic/>
+					<QuellAnimosity/>
+				</SpecialRules>
+				<Equipments>
+					<Choppa/>
+					<HeavyArmour/>
+				</Equipments>
+				<Options>
+					<AdditionalWeapon Points="2" Dependency="Weapon"/>
+					<GreatAxe Points="2" Dependency="Weapon"/>
+					<Shield PointsPerModel="1"/>
 					<Command>
 						<Musician Points="6"/>
 						<StandardBearer Points="12" Magic="Type: Unit, Points: 50"/>
-						<Champion Points="12" Name="Count's Champion"/>
+						<Champion Points="15" Name="Back Orc Boss"/>
 					</Command>
 				</Options>
 			</Special>
 			<Special>
-				<Name>Pistoliers</Name>
-				<Points>19</Points>
+				<Name>Orc Boar Boyz</Name>
+				<Points>18</Points>
 				<Size>5+</Size>
-				<Mount>Warhorse</Mount>
-				<Lore>Pistoliers are agile light cavalry that are meant to support the armies of the Empire in their role as dedicated scouts and skirmishers. Equipped with light armor and a brace of pistol, these units can harass the enemy with a hail of bullets and can flee the scene to avoid any repercussions.</Lore>
-				<Profile M='4' WS='3' BS='3' S='3' T='3' W='1' I='3' A='1' Ld='7' AS='6'/>
+				<Mount>Boar</Mount>
+				<Lore>Only the most daring of Orcs have the capability to mount the savage War Boar into battle, for the animals hot-temper often results in the deaths of many Orcs who tries to ride them. In battle, mobs of Boar Boys fulfil the role of heavy cavalry.</Lore>
+				<Profile M='4' WS='3' BS='3' S='3' T='4' W='1' I='2' A='1' Ld='7' AS='5'/>
 				<SpecialRules>
-					<FastCavalry/>
+					<Animosity/>
+					<TuskerCharge/>
+					<IgnoreGreenskinPanic/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon/>
+					<Spear/>
+					<LightArmour/>
+					<Shield/>
+				</Equipments>
+				<Options>
+					<Biguns PointsPerModel="4"/>
+					<Command>
+						<Musician Points="7"/>
+						<StandardBearer Points="14" Magic="Type: Unit, Points: 50"/>
+						<Champion Points="17" Name="Boss"/>
+					</Command>
+				</Options>
+			</Special>
+			<Special>
+				<Name>Savage Orc Boar Boyz</Name>
+				<Points>14</Points>
+				<Size>5+</Size>
+				<Mount>Boar</Mount>
+				<Lore>Unlike Boar Boyz who subdue their mounts before riding them, the Savage Orcs have been known to ride these Boars whenever they are needed. In this instance, a Savage Orc would stalk a wild Boar, subdue it, and ride the beast into battle. This tactic often enrages the Boar into a berserk fury, making the charge of a Savage Orc Boar that more terrifying.</Lore>
+				<Profile M='4' WS='3' BS='3' S='3' T='4' W='1' I='2' A='1' Ld='7' AS='5'/>
+				<SpecialRules>
+					<Frenzy/>
+					<Animosity/>
+					<TuskerCharge/>
+					<IgnoreGreenskinPanic/>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon/>
+					<Shield/>
+				</Equipments>
+				<Options>
+					<Biguns PointsPerModel="4"/>
+					<Spear PointsPerModel="1"/>
+					<Warprint PointsPerModel="3"/>
+					<Command>
+						<Musician Points="7"/>
+						<StandardBearer Points="14" Magic="Type: Unit, Points: 50"/>
+						<Champion Points="17" Name="Boss"/>
+					</Command>
+				</Options>
+			</Special>
+			<Special>
+				<Name>Night Goblin Squig Herd</Name>
+				<Points>16</Points>
+				<Size>5+</Size>
+				<ModelsInPack>2</ModelsInPack>
+				<Singleton/>
+				<Image>SquigHerd</Image>
+				<Lore>In times of need, Night Goblins have been known to drive their Squig herds into battle with devastating effect. An unpredictable asset on the battlefield, the ferocity of the Squigs attacks usually outweighs the catastrophic outcome that would happen should these creatures be let loose without the guidance of a Squig Herder.</Lore>
+				<Profile M='2D6' WS='4' BS='0' S='5' T='3' W='1' I='3' A='2' Ld='5'/>
+				<SpecialRules>
+					<Animosity/>
+					<FearElves/>
+					<HateDwarfs/>
+					<Original>Squigs</Original>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon/>
+				</Equipments>
+				<Options>
+					<Option>
+						<Name>Squig Hopper</Name>
+						<PointsPerModel>18</PointsPerModel>
+						<Countable>
+							<MaxDependency Dependency="Size" Ratio="3"/>
+							<ExportToUnitSize/>
+						</Countable>
+					</Option>
+				</Options>
+			</Special>
+			<Special>
+				<Name>Orc Boar Chariot</Name>
+				<Points>80</Points>
+				<Chariot>2</Chariot>
+				<Mount>Boar</Mount>
+				<ModelsInPack>4</ModelsInPack>
+				<Image>OrcChariot</Image>
+				<Lore>By lashing together roughly hewn logs, the otherwise dull-witted Orcs have managed to create through sheer luck and determination, crude yet formidable war chariots. With the weight of both the two Boars and the chariot itself, this shock cavalry has the potential to break apart even the thickest of enemy formations so long as the chariot still holds together.</Lore>
+				<Profile M='7' WS='3' BS='0' S='3' T='5' W='4' I='2' A='1' Ld='7' AS='4'/>
+				<SpecialRules>
+					<ImpactHit>D6</ImpactHit>
+					<TuskerCharge/>
+					<Original>Scythed wheel</Original>
+				</SpecialRules>
+				<Equipments>
+					<Choppa/>
+					<Spear/>
+				</Equipments>
+				<Options>
+					<ExtraOrc Points="6"/>
+				</Options>
+			</Special>
+			<Special>
+				<Name>Goblin Wolf Chariot</Name>
+				<Points>60</Points>
+				<Chariot/>
+				<Mount>Wolf</Mount>
+				<ModelsInPack>5</ModelsInPack>
+				<Image>WolfChariot</Image>
+				<Lore>Of the same ramshackle design as the Boar Chariot, these less-durable yet faster moving chariots are instead drawn by two of the largest wolves within a tribe, and are directed into battle where they can be used as a firing platform or to smash open enemy formations.</Lore>
+				<Profile M='9' WS='3' BS='0' S='3' T='4' W='3' I='2' A='1' Ld='6' AS='5'/>
+				<SpecialRules>
+					<ImpactHit>D6</ImpactHit>
+					<Original>Scythed wheel</Original>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon/>
+					<ShortBow/>
+				</Equipments>
+				<Options>
+					<ExtraGoblin Points="3"/>
+					<ExtraWolf Points="7"/>
+					<Spear Points="3"/>
+				</Options>
+			</Special>
+			<Special>
+				<Name>Goblin Rock Lobber</Name>
+				<Points>70</Points>
+				<ModelsInPack>3</ModelsInPack>
+				<Image>RockLobber</Image>
+				<Lore>A primitive version of the Trebuchet, the Orcs and Goblins were first introduced to catapults shortly after they encountered the Dwarfs. These siegecrafts are deployed singularly or in batteries to help soften up enemy formations, smash defensive positions, or to toss Orc warriors over the battlements and into the city. Due to the technicality of the siegecraft, they are often handled by a crew of Goblins rather then Orcs.</Lore>
+				<Profile M='0' WS='2' BS='3' S='3' T='7' W='3' I='2' A='1' Ld='6'/>
+				<SpecialRules>
+					<Original>Rock Lobber</Original>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon/>
+				</Equipments>
+				<Options>
+					<OrcBully Points="5"/>
+				</Options>
+			</Special>
+			<Special>
+				<Name>Goblin Spear Chukka</Name>
+				<Points>35</Points>
+				<ModelsInPack>3</ModelsInPack>
+				<Image>SpearChukka</Image>
+				<Lore>A primitive version of the ballista or spear thrower, this artillery piece has been used extensively by the Orcs and Goblins as a way to impale large monsters from a safe distance. Made from gathered material such as wood, metal and bone, these Ballistas are easily built, easily transported and easily maintained, making them a popular choice for many types of Warbosses.</Lore>
+				<Profile M='0' WS='2' BS='3' S='3' T='7' W='3' I='2' A='1' Ld='6'/>
+				<SpecialRules>
+					<Original>Spear Chukka</Original>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon/>
+				</Equipments>
+				<Options>
+					<OrcBully Points="5"/>
+				</Options>
+			</Special>
+			<Rare>
+				<Name>Trolls</Name>
+				<Points>50</Points>
+				<Size>3+</Size>
+				<Lore>Trolls are huge humanoid monsters, as witlessly stupid as they are bone-crushingly powerful. They commonly join marauding Greenskin armies in the hopes of finding a meal to feed their ravenous appetite. On the field of battle, these Trolls are extremely tough to kill, and have been known to break apart enemy formations like a living battering ram.</Lore>
+				<Profile M='6' WS='3' BS='1' S='5' T='4' W='3' I='1' A='3' Ld='4'/>
+				<SpecialRules>
+					<Stupidity/>
+					<Fear/>
+					<Regeneration/>
+					<LargeBase/>
+					<Original>Troll Vomit</Original>
+				</SpecialRules>
+				<Options>
+					<StoneTroll PointsPerModel="5" Dependency="Type"/>
+					<RiverTroll PointsPerModel="10" Dependency="Type"/>
+				</Options>
+			</Rare>
+			<Rare>
+				<Name>Goblin Doom Diver Catapult</Name>
+				<Points>80</Points>
+				<ModelsInPack>3</ModelsInPack>
+				<Image>DoomDiver</Image>
+				<Lore>First developed as a means for nomadic Goblin tribes to scout the surrounding areas of their territory, the Doom Diver Catapult have since been used extensively as long-range artillery. A Goblin known as Doom Diver would be used live ammunition for this artillery piece, where the Goblin's leathery wings allow it to glide to a specific target where he may impale his victim with the top of his pointy helmet.</Lore>
+				<Profile M='0' WS='2' BS='3' S='3' T='7' W='3' I='2' A='1' Ld='6'/>
+				<SpecialRules>
+					<Original>Doom Diver Catapult</Original>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon/>
+				</Equipments>
+				<Options>
+					<OrcBully Points="5"/>
+				</Options>
+			</Rare>
+			<Rare>
+				<Name>Snotling Pump Wagon</Name>
+				<Points>40</Points>
+				<Lore>An odd contraption on wheels, this ramshackle chariot serves as a fighting platform for a whole warband of Snotling armed with a variety of weaponry. Equipped with spikes on the front and iron-shod wheels at the back, this massive chariot can be used extensively as a rumbling battering ram as well as a shooting platform.</Lore>
+				<Profile M='2D6' WS='2' BS='0' S='4' T='4' W='3' I='3' A='3' Ld='10' AS='6'/>
+				<SpecialRules>
+					<Unbreakable/>
+					<LargeBase/>
+					<ImpactHit>D6</ImpactHit>
+					<Original>Snotling Pump Wagon</Original>
+				</SpecialRules>
+				<Equipments>
+					<HandWeapon/>
+				</Equipments>
+			</Rare>
+			<Rare>
+				<Name>Giant</Name>
+				<Points>205</Points>
+				<Lore>On several occasions, a Greenskin tribe would often employ the service of a Giant by rewarding him with an abundant supply of food regularly. In combat, Giants would often charge mindlessly into the enemy front-lines, usually having a massive club or tree to be used as a weapon. Wearing little to no armour, Giants are highly susceptible to a concentrated volley of crossbows and archers, or a well-placed shot from a Great Cannon. Should the enemy lack missile capability, it is extremely hard to take down a Giant in close-quarters combat.</Lore>
+				<Profile M='6' WS='3' BS='3' S='6' T='5' W='6' I='3' A='0' Ld='10'/>
+				<SpecialRules>
+					<Terror/>
+					<Stubborn/>
+					<LargeBase/>
+					<LargeTarget/>
+					<Giant/>
+					<IgnoreGreenskinPanic/>
 					<Original>
-						<Rule>Fusillade</Rule>
+						<Rule>Fall Over</Rule>
+						<Rule>Giant Special Attacks</Rule>
 					</Original>
 				</SpecialRules>
 				<Equipments>
-					<HandWeapon>Two pistols</HandWeapon>
 					<HandWeapon/>
-					<LightArmour/>
 				</Equipments>
-				<Options>
-					<Command>
-						<Champion Points="7" Name="Marksman"/>				
-						<Option>
-							<Name>Repeater handgun for Marksman</Name>
-							<Dependencies>
-								<On>Marksman</On>
-								<Off>Repeater pistol for Marksman</Off>
-							</Dependencies>
-							<Points>15</Points>
-						</Option>
-						<Option>
-							<Name>Repeater pistol for Marksman</Name>
-							<Dependencies>
-								<On>Marksman</On>
-								<Off>Repeater handgun for Marksman</Off>
-							</Dependencies>
-							<Points>10</Points>
-						</Option>
-					</Command>
-				</Options>
-			</Special>
-			<Special>
-				<Name>Great Cannon</Name>
-				<Points>100</Points>
-				<Image>Cannon</Image>
-				<Lore>Great Cannons are one of the most common pieces of Imperial artillery, with the Dwarfs and the Empire being the largest producers of gunpowder in the entire Old World. Great Cannons are among the largest of the mobile cannons built and utilised by the Empire. Imperial cannons are made primarily at the Gunnery School of Nuln and it is from here that both the cannons and the crews that operate them come from. Most provinces of the Empire maintain an artillery train and many cities equipped themselves with varying sizes to defend their walls. Larger then other cannons, the Great Cannons can be somewhat unreliable and may misfire, wounding or even killing their crews, but their battlefield value in destroying entire ranks of enemies has ensured its continued service within the Empire warmachine.</Lore>
-				<Profile M='4' WS='3' BS='3' S='3' T='7' W='3' I='3' A='1' Ld='7'/>
-				<SpecialRules>
-					<Cannon/>
-				</SpecialRules>
-			</Special>
-			<Special>
-				<Name>Mortar</Name>
-				<Points>75</Points>
-				<Lore>Mortars are squat cannons that fire at a high angle, lobbing projectiles over troops or even tall walls. They fire an explosive shell which can cause severe damage to a tightly packed regiment of troops.</Lore>
-				<Profile M='4' WS='3' BS='3' S='3' T='7' W='3' I='3' A='1' Ld='7'/>
-				<SpecialRules>
-					<Mortar/>
-				</SpecialRules>
-			</Special>
-			<Rare>
-				<Name>Helblaster Volley Gun</Name>
-				<Points>125</Points>
-				<Image>Helblaster</Image>
-				<Lore>The Helblaster is an experimental artillery piece that was first created within the factories of Nuln by the famous inventor Von Meinkopt, a former engineer of the great School of Engineers. This infamous weapon has the ability to fire multiple cannon balls in a 3 round-burst, with enough strength in it to be able to tear whole regiments of men or beasts into limbs and torsos. However, it is also known for its unreliablity since the weapon regularly malfunctions or even explodes.</Lore>
-				<Profile M='4' WS='3' BS='3' S='3' T='7' W='3' I='3' A='1' Ld='7'/>
-				<SpecialRules>
-					<Helblaster/>
-				</SpecialRules>
-			</Rare>
-			<Rare>
-				<Name>Flagellants</Name>
-				<Points>11</Points>
-				<Size>5-30</Size>
-				<Singleton/>
-				<Lore>Flagellants are an unorganized grouping of warriors and fanatics that unofficially serve the Church of Sigmar and many of the Empire's army's during a campaign. Though not considered a traditional Empire military asset, these fanatics are nonetheless used by many Imperial Generals for their great ferocity and complete lack of fear in the heat of battle. However due to their insanity, they are often accompanied by a Warrior Priest from the clergy of Sigmar to ensure these men are put on a tight leash.</Lore>
-				<Profile M='4' WS='2' BS='2' S='3' T='4' W='1' I='3' A='1' Ld='10'/>
-				<SpecialRules>
-					<Unbreakable/>
-					<ImmuneToPsychology/>
-					<Original>Crazed</Original>
-				</SpecialRules>
-				<Equipments>
-					<Flail/>
-				</Equipments>
-				<Options>
-					<Command>
-						<Champion Points="12" Name="Prophet of Doom"/>
-					</Command>
-				</Options>
 			</Rare>
 		</Units>
 	</Content>
