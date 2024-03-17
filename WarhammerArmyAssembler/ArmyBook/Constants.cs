@@ -19,6 +19,7 @@ namespace WarhammerArmyAssembler.ArmyBook
         public static int SingleRunicItem = 1;
 
         public static string CommonXmlOptionPath { get; set; }
+        public static string CommonXmlMagicPath { get; set; }
         public static string EnemiesOptionPath { get; set; }
         public static string DogOfWarPath { get; set; }
 

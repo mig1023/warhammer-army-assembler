@@ -318,6 +318,21 @@ namespace WarhammerArmyAssembler.ArmyBook
 
         private static void LoadMagic(XmlDocument xmlFile)
         {
+            Dictionary<string, Dictionary<string, int>> commons =
+                new Dictionary<string, Dictionary<string, int>>();
+
+            XmlDocument xmlCommonMagic = new XmlDocument();
+            xmlCommonMagic.Load(Constants.CommonXmlMagicPath);
+
+            foreach (XmlNode common in xmlCommonMagic.SelectNodes("Magics/Magic"))
+            {
+                string name = StringParse(common["Name"]);
+                string edition = StringParse(common["Edition"]);
+                string magic = $"{name}-{edition}";
+
+                commons.Add(magic, LoadSpells(common.SelectSingleNode("Spells")));
+            }
+
             string magics = "ArmyBook/Introduction/Magics";
             XmlNode loreBook = xmlFile.SelectSingleNode(magics);
 
@@ -326,14 +341,30 @@ namespace WarhammerArmyAssembler.ArmyBook
 
             foreach (XmlNode magic in xmlFile.SelectNodes($"{magics}/Magic"))
             {
-                var spells = LoadSpells(magic.SelectSingleNode("Spells"));
-                Data.Magic.Add(StringParse(magic["Name"]), spells);
+                var spell = LoadSpellsFromSources(magic, "Spells", commons, out string name);
+                Data.Magic.Add(name, spell);
             }
 
             foreach (XmlNode magic in xmlFile.SelectNodes($"{magics}/Enemy"))
             {
-                var dispells = LoadSpells(magic.SelectSingleNode("Dispells"));
-                Data.Dispell.Add(StringParse(magic["Name"]), dispells);
+                var dispell = LoadSpellsFromSources(magic, "Dispells", commons, out string name);
+                Data.Dispell.Add(name, dispell);
+            }
+        }
+
+        private static Dictionary<string, int> LoadSpellsFromSources(XmlNode magic, string type,
+            Dictionary<string, Dictionary<string, int>> CommonXmlMagic, out string name)
+        {
+            if (magic["Name"] == null)
+            {
+                name = magic.InnerText;
+                string commonMagicName = $"{magic.InnerText}-{Army.Data.ArmyEdition}";
+                return CommonXmlMagic[commonMagicName];
+            }
+            else
+            {
+                name = magic["Name"].InnerText;
+                return LoadSpells(magic.SelectSingleNode(type));
             }
         }
 

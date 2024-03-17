@@ -116,6 +116,7 @@ namespace WarhammerArmyAssembler.ArmyBook
 
         private static SortedDictionary<string, string> FindAllXmlFilesInDirectories(string programDirectory)
         {
+            Constants.CommonXmlMagicPath = FindXmlFileByName(programDirectory, "CommonMagic.xml");
             Constants.CommonXmlOptionPath = FindXmlFileByName(programDirectory, "CommonXmlOption.xml");
             Constants.EnemiesOptionPath = FindXmlFileByName(programDirectory, "Enemies.xml");
             Constants.DogOfWarPath = FindXmlFileByName(programDirectory, "DogsOfWar.xml");
