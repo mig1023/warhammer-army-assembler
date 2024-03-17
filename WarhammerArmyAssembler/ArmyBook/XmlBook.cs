@@ -141,7 +141,9 @@ namespace WarhammerArmyAssembler.ArmyBook
                     }
                     catch (XmlException ex)
                     {
-                        MessageBox.Show(ex.Message, $"{Path.GetFileName(file)} xml error");
+                        MessageBox.Show($"Path: {Path.GetFullPath(file)}\n\n" +
+                            $"XML error: {ex.Message}", "Armybook XML file");
+
                         continue;
                     }
 
