@@ -38,11 +38,13 @@ namespace WarhammerArmyAssembler.Interface
             {
                 Unit unit = entry.Clone();
 
+                bool dogsCharsEnabled = Settings.Values.IsTrue("DogsOfWarCharacter");
+
                 bool noDogsUnits = !unit.IsHero() &&
                     (ArmyBook.Data.NoDogsOfWar || !Settings.Values.IsTrue("DogsOfWarEnabled"));
 
                 bool noDogsCharacter = unit.IsHero() &&
-                    (ArmyBook.Data.NoDogsOfWar || !Settings.Values.IsTrue("DogsOfWarCharacter"));
+                    (ArmyBook.Data.NoDogsOfWar || !dogsCharsEnabled);
 
                 if ((noDogsUnits || noDogsCharacter) && unit.DogsOfWar)
                     continue;
@@ -66,7 +68,7 @@ namespace WarhammerArmyAssembler.Interface
                     category = ArmyBook.Constants.DogsOfWarCategory;
                 }
 
-                if (!unit.IsHero() && Settings.Values.IsTrue("DogsOfWarCharacter"))
+                if (!unit.IsHero() && !ArmyBook.Data.NoDogsOfWar && dogsCharsEnabled)
                     category += 2;
 
                 categories[category].Items.Add(unit);
