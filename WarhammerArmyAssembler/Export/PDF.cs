@@ -19,7 +19,7 @@ namespace WarhammerArmyAssembler.Export
 
         static float currentY;
 
-        public static string SaveArmy(bool fullRules = false)
+        public static string SaveArmy()
         {
             string fileName = File.GetName("pdf");
 
@@ -50,7 +50,7 @@ namespace WarhammerArmyAssembler.Export
 
                     List<string> linesForEachUnit = new List<string> { unit.GetEquipmentLine() };
 
-                    if (fullRules)
+                    if (Settings.Values.IsTrue("ExportPDFExtended"))
                     {
                         linesForEachUnit.Add(unit.GetWizardLevelLine());
                         linesForEachUnit.Add(unit.GetSpecialRulesLine(withoutWizards: true));

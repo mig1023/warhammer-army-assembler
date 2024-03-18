@@ -75,6 +75,15 @@ namespace WarhammerArmyAssembler.Settings
                     Options = "Core, Special, Rare",
                     Default = "Rare"
                 },
+            },
+            ["EXPORT TO PDF"] = new List<Setting>
+            {
+                new Setting
+                {
+                    ID = "ExportPDFExtended",
+                    Name = "Extended unit data",
+                    Type = Setting.Types.checkbox,
+                },
             }
         };
 

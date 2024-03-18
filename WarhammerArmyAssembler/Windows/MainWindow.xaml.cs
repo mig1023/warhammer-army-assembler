@@ -421,9 +421,6 @@ namespace WarhammerArmyAssembler
             MessageBox.Show(Interface.Info.ArmyDispell());
 
         public void saveArmyToPDF_MouseDown(object sender, MouseButtonEventArgs e) =>
-            Interface.Changes.CheckAndExportTo(toPDF: true, fullRules: true);
-
-        public void saveArmyToPDF_light_MouseDown(object sender, MouseButtonEventArgs e) =>
             Interface.Changes.CheckAndExportTo(toPDF: true);
 
         public void saveArmyToTXT_MouseDown(object sender, MouseButtonEventArgs e) =>

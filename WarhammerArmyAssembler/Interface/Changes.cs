@@ -267,7 +267,7 @@ namespace WarhammerArmyAssembler.Interface
             Move(MovingType.ToTop, err: true);
         }
 
-        public static void CheckAndExportTo(bool toPDF = false, bool fullRules = false)
+        public static void CheckAndExportTo(bool toPDF = false)
         {
             if (!Army.Checks.IsArmyValid())
             {
@@ -275,7 +275,7 @@ namespace WarhammerArmyAssembler.Interface
             }
             else if (toPDF)
             {
-                Export.PDF.SaveArmy(fullRules);
+                Export.PDF.SaveArmy();
             }
             else
             {
@@ -291,7 +291,6 @@ namespace WarhammerArmyAssembler.Interface
             {
                 ["Change Armybook"] = main.toNewArmy_MouseDown,
                 ["Export Army to PDF"] = main.saveArmyToPDF_MouseDown,
-                ["Export Army to PDF (light)"] = main.saveArmyToPDF_light_MouseDown,
                 ["Export Army to TXT"] = main.saveArmyToTXT_MouseDown,
                 ["Settings"] = main.showSettingsWindow_MouseDown,
                 ["Exit"] = main.closeWindow_MouseLeftButtonDown,
