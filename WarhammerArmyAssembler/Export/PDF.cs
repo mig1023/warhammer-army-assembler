@@ -21,7 +21,7 @@ namespace WarhammerArmyAssembler.Export
 
         public static string SaveArmy(bool fullRules = false)
         {
-            string fileName = Services.GetFileName("pdf");
+            string fileName = File.GetName("pdf");
 
             currentY = MARGIN_TOP;
 
@@ -35,8 +35,8 @@ namespace WarhammerArmyAssembler.Export
             cb = writer.DirectContent;
             cb.SetColorFill(BaseColor.BLACK);
 
-            AddText(Services.AllArmyName(), fontSize: 20, lineHeight: 18, leftColumn: true);
-            AddText(Services.AllArmyPointsAndEdition(), fontSize: 12, lineHeight: 22, leftColumn: true);
+            AddText(Lines.AllArmyName(), fontSize: 20, lineHeight: 18, leftColumn: true);
+            AddText(Lines.AllArmyPointsAndEdition(), fontSize: 12, lineHeight: 22, leftColumn: true);
             AddText();
 
             List<Unit> armyByCategories = Army.Params.GetArmyUnitsByCategories();
@@ -45,8 +45,8 @@ namespace WarhammerArmyAssembler.Export
             {
                 foreach (Unit unit in unitType.Items)
                 {
-                    AddText($"{Services.UnitSizeIfNeed(unit)}", leftColumn: true, newLine: false);
-                    AddText($"{Services.GetUnitName(unit)}{Services.UnitPointsLine(unit)}", lineHeight: 10);
+                    AddText($"{Lines.UnitSizeIfNeed(unit)}", leftColumn: true, newLine: false);
+                    AddText($"{Lines.GetUnitName(unit)}{Lines.UnitPointsLine(unit)}", lineHeight: 10);
 
                     List<string> linesForEachUnit = new List<string> { unit.GetEquipmentLine() };
 
@@ -97,7 +97,7 @@ namespace WarhammerArmyAssembler.Export
 
             foreach (Unit entry in Army.Data.Units.Values)
             {
-                int unitSizeLen = Services.UnitSizeIfNeed(entry).Length;
+                int unitSizeLen = Lines.UnitSizeIfNeed(entry).Length;
 
                 if (maxLength < unitSizeLen)
                     maxLength = unitSizeLen;
