@@ -5,12 +5,12 @@ namespace WarhammerArmyAssembler.Export
 {
     class File
     {
-        static string ARMYLIST_DIR = "ArmyLists";
-
         public static string GetName(string fileType)
         {
-            if (!Directory.Exists(ARMYLIST_DIR))
-                Directory.CreateDirectory(ARMYLIST_DIR);
+            string armylistFolder = Settings.Values.Get("ExportPath");
+
+            if (!Directory.Exists(armylistFolder))
+                Directory.CreateDirectory(armylistFolder);
 
             int fileIndex = 0;
             string fileName = String.Empty;
@@ -23,7 +23,9 @@ namespace WarhammerArmyAssembler.Export
 
         private static string NewName(int newIndex, string fileType, out string newFileName)
         {
-            string name = ARMYLIST_DIR + '\\' +
+            string name =
+                Settings.Values.Get("ExportPath") +
+                '\\' +
                 Army.Data.Name.Replace(" ", "_") +
                 '_' +
                 Army.Data.MaxPoints.ToString();

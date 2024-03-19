@@ -115,6 +115,16 @@ namespace WarhammerArmyAssembler.Settings
                     Name = "Modified params",
                     Default = "False",
                 },
+            },
+            ["PATHS"] = new List<Setting>
+            {
+                new Setting
+                {
+                    ID = "ExportPath",
+                    Name = "Export PDF/TXT path",
+                    Type = Setting.Types.input,
+                    Default = "ArmyLists",
+                },
             }
         };
 
