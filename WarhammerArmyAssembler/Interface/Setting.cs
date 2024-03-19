@@ -84,6 +84,9 @@ namespace WarhammerArmyAssembler.Interface
             {
                 Name = setting.ID,
                 Text = ChosenElement(setting.ID, settings, setting.Default),
+                Height = 24,
+                VerticalContentAlignment = VerticalAlignment.Center,
+                Padding = new Thickness(5, 0, 0, 0)
             };
 
             textBox.TextChanged += (sender, args) => SettingText_Change(setting.ID, textBox);
@@ -95,7 +98,7 @@ namespace WarhammerArmyAssembler.Interface
         {
             Label label = new Label
             {
-                Content = name,
+                Content = $"{name}:",
             };
 
             StackPanel panel = new StackPanel
