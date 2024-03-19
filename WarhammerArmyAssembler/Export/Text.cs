@@ -28,8 +28,20 @@ namespace WarhammerArmyAssembler.Export
                     string sizeUnit = Lines.UnitSizeIfNeed(unit);
                     string nameUnit = Lines.GetUnitName(unit);
                     string pointsUnit = Lines.UnitPointsLine(unit);
-                    string equipment = Line(unit.GetEquipmentLine()); 
-                        
+                    string equipment = Line(unit.GetEquipmentLine());
+
+                    if (Settings.Values.IsTrue("ExportTXTWizardLevel"))
+                        equipment += Line(unit.GetWizardLevelLine());
+
+                    if (Settings.Values.IsTrue("ExportTXTSpecialRules"))
+                    {
+                        bool separateWizardLevel = Settings.Values.IsTrue("ExportPDFWizardLevel");
+                        equipment += Line(unit.GetSpecialRulesLine(withoutWizards: !separateWizardLevel));
+                    }
+
+                    if (Settings.Values.IsTrue("ExportTXTModifiedParams"))
+                        equipment += Line(unit.GetModifiedParamsLine());
+
                     Add(fileName, $"{sizeUnit}{nameUnit}{pointsUnit}{Line(equipment, end: true)}");
                 }
             }

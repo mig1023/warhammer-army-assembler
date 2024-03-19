@@ -97,6 +97,24 @@ namespace WarhammerArmyAssembler.Settings
                     ID = "ExportTXTInline",
                     Name = "Everything in one line",
                 },
+                new Setting
+                {
+                    ID = "ExportTXTWizardLevel",
+                    Name = "Wizard's levels",
+                    Default = "False",
+                },
+                new Setting
+                {
+                    ID = "ExportTXTSpecialRules",
+                    Name = "Unit/Characters Special rules",
+                    Default = "False",
+                },
+                new Setting
+                {
+                    ID = "ExportTXTModifiedParams",
+                    Name = "Modified params",
+                    Default = "False",
+                },
             }
         };
 

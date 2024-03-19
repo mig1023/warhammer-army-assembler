@@ -51,9 +51,7 @@ namespace WarhammerArmyAssembler.Export
                     List<string> linesForEachUnit = new List<string> { unit.GetEquipmentLine() };
 
                     if (Settings.Values.IsTrue("ExportPDFWizardLevel"))
-                    {
                         linesForEachUnit.Add(unit.GetWizardLevelLine());
-                    }
 
                     if (Settings.Values.IsTrue("ExportPDFSpecialRules"))
                     {
@@ -62,9 +60,7 @@ namespace WarhammerArmyAssembler.Export
                     }
 
                     if (Settings.Values.IsTrue("ExportPDFModifiedParams"))
-                    {
                         linesForEachUnit.Add(unit.GetModifiedParamsLine());
-                    }
 
                     foreach (string param in linesForEachUnit)
                     {
