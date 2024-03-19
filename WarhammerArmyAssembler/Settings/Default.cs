@@ -84,6 +84,12 @@ namespace WarhammerArmyAssembler.Settings
                     Name = "Wizard's levels",
                     Type = Setting.Types.checkbox,
                 },
+                new Setting
+                {
+                    ID = "ExportPDFSpecialRules",
+                    Name = "Unit/Characters Special rules",
+                    Type = Setting.Types.checkbox,
+                },
             }
         };
 
