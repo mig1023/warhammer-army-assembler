@@ -61,6 +61,11 @@ namespace WarhammerArmyAssembler.Export
                         linesForEachUnit.Add(unit.GetSpecialRulesLine(withoutWizards: !separateWizardLevel));
                     }
 
+                    if (Settings.Values.IsTrue("ExportPDFModifiedParams"))
+                    {
+                        linesForEachUnit.Add(unit.GetModifiedParamsLine());
+                    }
+
                     foreach (string param in linesForEachUnit)
                     {
                         List<string> lines = Interface.Services

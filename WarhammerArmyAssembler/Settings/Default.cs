@@ -90,6 +90,12 @@ namespace WarhammerArmyAssembler.Settings
                     Name = "Unit/Characters Special rules",
                     Type = Setting.Types.checkbox,
                 },
+                new Setting
+                {
+                    ID = "ExportPDFModifiedParams",
+                    Name = "Modified params",
+                    Type = Setting.Types.checkbox,
+                },
             }
         };
 
