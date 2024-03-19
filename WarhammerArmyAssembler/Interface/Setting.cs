@@ -127,6 +127,7 @@ namespace WarhammerArmyAssembler.Interface
 
             Dictionary<string, string> values = Settings.Values.All();
             Dictionary<string, List<Settings.Setting>> settings = Settings.Default.All();
+            UIElement last = null;
 
             foreach (string group in settings.Keys)
             {
@@ -161,8 +162,12 @@ namespace WarhammerArmyAssembler.Interface
                     controls.Add(border);
                     DockPanel.SetDock(border, Dock.Top);
                     Changes.settingsWindow.SettingsPanel.Children.Add(border);
+
+                    last = border;
                 }
             }
+
+            (last as Border).Padding = new Thickness(25, 10, 50, 25);
 
             Changes.settingsWindow.CloseSettings.Background = ArmyBook.Data.FrontColor;
             Changes.settingsWindow.Show();
