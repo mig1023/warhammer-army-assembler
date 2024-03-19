@@ -103,6 +103,25 @@
 					<HandWeapon/>
 				</Equipments>
 			</Lord>
+			<Lord>
+				<Name>Hireling Wizard Lord</Name>
+				<Hire>*</Hire>
+				<Points>175</Points>
+				<Wizard>3</Wizard>
+				<Lore>Hireling Wizards, also called Mercenary Wizards, are those practicioners of the magical arts who over the centuries have sold their services to the highest bidders on the battlefield and off.</Lore>
+				<Profile M='4' WS='3' BS='3' S='3' T='4' W='3' I='3' A='1' Ld='8'/>
+				<SpecialRules>
+					<DogsOfWar/>
+				</SpecialRules>
+				<Options>
+					<Mount Name="Mercenary warhorse" Points="15"/>
+					<Mount Name="Mercenary pegasus" Points="50"/>
+					<Wizard Level="4" Points="35"/>
+				</Options>
+				<Equipments>
+					<HandWeapon/>
+				</Equipments>
+			</Lord>
 			<Hero>
 				<Name>Paymaster</Name>
 				<Hire>*</Hire>
@@ -169,7 +188,6 @@
 				<Profile M='4' WS='3' BS='3' S='3' T='3' W='2' I='3' A='1' Ld='7'/>
 				<SpecialRules>
 					<DogsOfWar/>
-					<MagicItems Count="2" Type="Hero"/>
 				</SpecialRules>
 				<Options>
 					<Mount Name="Mercenary warhorse" Points="10"/>
