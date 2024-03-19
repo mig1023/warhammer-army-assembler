@@ -81,15 +81,18 @@ namespace WarhammerArmyAssembler.Export
                 }
             }
 
-            AddText(lineHeight: 8);
+            if (Settings.Values.IsTrue("ExportPDFFooter"))
+            {
+                AddText(lineHeight: 8);
 
-            double points = Army.Params.GetArmyPoints();
-            double size = Army.Params.GetArmySize();
-            double cast = Army.Params.GetArmyCast();
-            double dispell = Army.Params.GetArmyDispell();
+                double points = Army.Params.GetArmyPoints();
+                double size = Army.Params.GetArmySize();
+                double cast = Army.Params.GetArmyCast();
+                double dispell = Army.Params.GetArmyDispell();
 
-            AddText($"Points: {points} / Models: {size} / Cast: {cast} / Dispell: {dispell}",
-                fontSize: 12, lineHeight: 18, leftColumn: true);
+                AddText($"Points: {points} / Models: {size} / Cast: {cast} / Dispell: {dispell}",
+                    fontSize: 12, lineHeight: 18, leftColumn: true);
+            }
 
             document.Close();
             fs.Close();

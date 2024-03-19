@@ -96,6 +96,12 @@ namespace WarhammerArmyAssembler.Settings
                     Name = "Modified params",
                     Type = Setting.Types.checkbox,
                 },
+                new Setting
+                {
+                    ID = "ExportPDFFooter",
+                    Name = "Statistic footer",
+                    Type = Setting.Types.checkbox,
+                },
             }
         };
 
