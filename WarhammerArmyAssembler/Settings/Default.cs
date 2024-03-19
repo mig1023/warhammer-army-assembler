@@ -89,6 +89,14 @@ namespace WarhammerArmyAssembler.Settings
                     ID = "ExportPDFFooter",
                     Name = "Statistic footer",
                 },
+            },
+            ["EXPORT TO TXT"] = new List<Setting>
+            {
+                new Setting
+                {
+                    ID = "ExportTXTInline",
+                    Name = "Everything in one line",
+                },
             }
         };
 

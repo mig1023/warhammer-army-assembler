@@ -25,13 +25,12 @@ namespace WarhammerArmyAssembler.Export
 
                 foreach (Unit unit in units)
                 {
-                    string equipmentLine = unit.GetEquipmentLine();
                     string sizeUnit = Lines.UnitSizeIfNeed(unit);
                     string nameUnit = Lines.GetUnitName(unit);
                     string pointsUnit = Lines.UnitPointsLine(unit);
-                    string equipment = String.IsNullOrEmpty(equipmentLine) ? String.Empty : ": ";
-
-                    Add(fileName, $"{sizeUnit}{nameUnit}{pointsUnit}{equipment}{equipmentLine}");
+                    string equipment = Line(unit.GetEquipmentLine()); 
+                        
+                    Add(fileName, $"{sizeUnit}{nameUnit}{pointsUnit}{Line(equipment, end: true)}");
                 }
             }
 
@@ -49,7 +48,23 @@ namespace WarhammerArmyAssembler.Export
             return String.Empty;
         }
 
-        public static void Add(string fileName, string line = "")
+        private static string Line(string line, bool end = false)
+        {
+            if (String.IsNullOrEmpty(line))
+            {
+                return line;
+            }
+            else if (Settings.Values.IsTrue("ExportTXTInline"))
+            {
+                return end ? $": {line}" : $"{line};";
+            }
+            else
+            {
+                return end ? $"\n{line}" : $"\t{line}";
+            }
+        }
+
+        private static void Add(string fileName, string line = "")
         {
             using (StreamWriter sw = new StreamWriter(fileName, true))
                 sw.WriteLine(line);
