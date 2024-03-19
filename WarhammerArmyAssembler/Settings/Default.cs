@@ -13,43 +13,36 @@ namespace WarhammerArmyAssembler.Settings
                 {
                     ID = "CheckNumberOfCore",
                     Name = "Check the number of Core units",
-                    Type = Setting.Types.checkbox,
                 },
                 new Setting
                 {
                     ID = "CheckNumberOfCharacter",
                     Name = "Check the number of characters",
-                    Type = Setting.Types.checkbox,
                 },
                 new Setting
                 {
                     ID = "CheckNumberOfUnits",
                     Name = "Check the number of heroes and units by types",
-                    Type = Setting.Types.checkbox,
                 },
                 new Setting
                 {
                     ID = "CheckOfPoints",
                     Name = "Check the strict sufficiency of points",
-                    Type = Setting.Types.checkbox,
                 },
                 new Setting
                 {
                     ID = "CheckOfRatio",
                     Name = "Check the ratio of unit types",
-                    Type = Setting.Types.checkbox,
                 },
                 new Setting
                 {
                     ID = "CheckOfDublication",
                     Name = "Check for invalid duplication of units",
-                    Type = Setting.Types.checkbox,
                 },
                 new Setting
                 {
                     ID = "CheckOfSingletons",
                     Name = "Check the uniqueness of units",
-                    Type = Setting.Types.checkbox,
                 },
             },
             ["DOGS OF WAR"] = new List<Setting>
@@ -58,13 +51,11 @@ namespace WarhammerArmyAssembler.Settings
                 {
                     ID = "DogsOfWarEnabled",
                     Name = "Enable units in other armies",
-                    Type = Setting.Types.checkbox,
                 },
                 new Setting
                 {
                     ID = "DogsOfWarCharacter",
                     Name = "Enable characters in other armies",
-                    Type = Setting.Types.checkbox,
                     Default = "False",
                 },
                 new Setting
@@ -82,25 +73,21 @@ namespace WarhammerArmyAssembler.Settings
                 {
                     ID = "ExportPDFWizardLevel",
                     Name = "Wizard's levels",
-                    Type = Setting.Types.checkbox,
                 },
                 new Setting
                 {
                     ID = "ExportPDFSpecialRules",
                     Name = "Unit/Characters Special rules",
-                    Type = Setting.Types.checkbox,
                 },
                 new Setting
                 {
                     ID = "ExportPDFModifiedParams",
                     Name = "Modified params",
-                    Type = Setting.Types.checkbox,
                 },
                 new Setting
                 {
                     ID = "ExportPDFFooter",
                     Name = "Statistic footer",
-                    Type = Setting.Types.checkbox,
                 },
             }
         };

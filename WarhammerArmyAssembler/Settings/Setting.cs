@@ -13,8 +13,13 @@ namespace WarhammerArmyAssembler.Settings
         public string Group { get; set; }
 
         public string Options { get; set; }
-        
-        public Types Type { get; set; }
+
+        public Types? _type;
+        public Types? Type
+        {
+            get => _type == null ? Types.checkbox : _type;
+            set { _type = value; }
+        }
 
         private string _default;
         public string Default
