@@ -50,12 +50,8 @@ namespace WarhammerArmyAssembler.Export
 
                     List<string> linesForEachUnit = new List<string> { unit.GetEquipmentLine() };
 
-                    if (Settings.Values.IsTrue("ExportPDFExtended"))
-                    {
+                    if (Settings.Values.IsTrue("ExportPDFWizardLevel"))
                         linesForEachUnit.Add(unit.GetWizardLevelLine());
-                        linesForEachUnit.Add(unit.GetSpecialRulesLine(withoutWizards: true));
-                        linesForEachUnit.Add(unit.GetModifiedParamsLine());
-                    }
 
                     foreach (string param in linesForEachUnit)
                     {

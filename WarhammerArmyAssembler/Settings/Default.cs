@@ -80,8 +80,8 @@ namespace WarhammerArmyAssembler.Settings
             {
                 new Setting
                 {
-                    ID = "ExportPDFExtended",
-                    Name = "Extended unit data",
+                    ID = "ExportPDFWizardLevel",
+                    Name = "Wizard's levels",
                     Type = Setting.Types.checkbox,
                 },
             }
