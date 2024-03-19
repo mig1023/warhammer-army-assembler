@@ -34,6 +34,13 @@
 				</Equipments>
 			</Mount>
 			<Mount>
+				<Name>Mercenary pegasus</Name>
+				<Profile M='8' WS='3' BS='0' S='4' T='4' W='3' I='4' A='2' Ld='6'/>
+				<SpecialRules>
+					<Fly/>
+				</SpecialRules>
+			</Mount>
+			<Mount>
 				<Name>Deathfang</Name>
 				<Profile M='6' WS='7' BS='0' S='7' T='7' W='8' I='5' A='8' Ld='8'/>
 				<SpecialRules>
@@ -77,6 +84,9 @@
 				</SpecialRules>
 				<Options>
 					<Mount Name="Mercenary warhorse" Points="15"/>
+					<Mount Name="Mercenary pegasus" Points="50"/>
+					<Lance Points="6" Only="Mount" Dependency="MountWeapon"/>
+					<Spear Points="3" Only="Mount" Dependency="MountWeapon"/>
 					<Flail Points="3" Dependency="Weapon"/>
 					<Halberd Points="6" Dependency="Weapon"/>
 					<Longbow Points="15" Dependency="RangeWeapon"/>
@@ -88,7 +98,6 @@
 					<LightArmour Points="3" Dependency="Armour"/>
 					<HeavyArmour Points="6" Dependency="Armour"/>
 					<Shield Points="3"/>
-					<Lance Points="6" Only="Mount"/>
 				</Options>
 				<Equipments>
 					<HandWeapon/>
@@ -108,6 +117,9 @@
 				</Equipments>
 				<Options>
 					<Mount Name="Mercenary warhorse" Points="15"/>
+					<Mount Name="Mercenary pegasus" Points="50"/>
+					<Lance Points="6" Only="Mount" Dependency="MountWeapon"/>
+					<Spear Points="3" Only="Mount" Dependency="MountWeapon"/>
 					<AdditionalWeapon Points="4" Dependency="Weapon"/>
 					<GreatWeapon Points="4" Dependency="Weapon"/>
 					<Flail Points="2" Dependency="Weapon"/>
@@ -118,6 +130,35 @@
 					<HeavyArmour Points="4" Dependency="Armour"/>
 					<Shield Points="2"/>
 				</Options>
+			</Hero>
+			<Hero>
+				<Name>Mercenary Captain</Name>
+				<Hire>*</Hire>
+				<Points>50</Points>
+				<Lore>Mercenary captains are expert leaders of men, roguish and often loved by their soldiers.</Lore>
+				<Profile M='4' WS='5' BS='5' S='4' T='4' W='2' I='5' A='3' Ld='8'/>
+				<SpecialRules>
+					<DogsOfWar/>
+					<MagicItems Count="2" Type="Hero"/>
+				</SpecialRules>
+				<Options>
+					<Mount Name="Mercenary warhorse" Points="15"/>
+					<Mount Name="Mercenary pegasus" Points="50"/>
+					<Lance Points="6" Only="Mount" Dependency="MountWeapon"/>
+					<Spear Points="3" Only="Mount" Dependency="MountWeapon"/>
+					<AdditionalWeapon Points="4" Dependency="Weapon"/>
+					<GreatWeapon Points="4" Dependency="Weapon"/>
+					<Flail Points="2" Dependency="Weapon"/>
+					<Halberd Points="4" Dependency="Weapon"/>
+					<Longbow Points="10" Dependency="RangeWeapon"/>
+					<Crossbow Points="10" Dependency="RangeWeapon"/>
+					<LightArmour Points="2" Dependency="Armour"/>
+					<HeavyArmour Points="4" Dependency="Armour"/>
+					<Shield Points="2"/>
+				</Options>
+				<Equipments>
+					<HandWeapon/>
+				</Equipments>
 			</Hero>
 		</Heroes>
 		<Units>
