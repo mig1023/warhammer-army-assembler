@@ -68,11 +68,11 @@ namespace WarhammerArmyAssembler.Export
             }
             else if (Settings.Values.IsTrue("ExportTXTInline"))
             {
-                return end ? $": {line}" : $"{line};";
+                return end ? $":{line}" : $" {line};";
             }
             else
             {
-                return end ? $"\n{line}" : $"\t{line}";
+                return end ? $"{line}" : $"\n\t{line}";
             }
         }
 
