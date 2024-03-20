@@ -204,7 +204,7 @@ namespace WarhammerArmyAssembler.Army
         {
             Name = name,
             TooltipColor = (SolidColorBrush)ArmyBook.Data.TooltipColor,
-            Description = name.ToUpper(),
+            Lore = name.ToUpper(),
             AddTo = new Dictionary<string, int>(),
             ChangeTo = new Dictionary<string, int>(),
             GroupBold = true,
