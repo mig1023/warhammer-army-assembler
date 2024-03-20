@@ -49,14 +49,14 @@ namespace WarhammerArmyAssembler.Settings
             {
                 new Setting
                 {
-                    ID = "DogsOfWarEnabled",
-                    Name = "Enable units in other armies",
-                },
-                new Setting
-                {
                     ID = "DogsOfWarCharacter",
                     Name = "Enable characters in other armies",
                     Default = "False",
+                },
+                new Setting
+                {
+                    ID = "DogsOfWarEnabled",
+                    Name = "Enable units in other armies",
                 },
                 new Setting
                 {
