@@ -208,28 +208,38 @@ namespace WarhammerArmyAssembler.Army
             ChangeTo = new Dictionary<string, int>(),
         };
 
-        public static List<Unit> GetArmyCategories()
+        public static List<Unit> GetArmyCategories(bool withMercenary = false)
         {
             List<Unit> categories = new List<Unit>
             {
                 GetCategoryUnit("Lords"),
                 GetCategoryUnit("Heroes"),
-            };
-
-            if (!ArmyBook.Data.NoDogsOfWar && Settings.Values.IsTrue("DogsOfWarCharacter"))
-            {
-                categories.Add(GetCategoryUnit("Lords (Dogs of War)", close: true));
-                categories.Add(GetCategoryUnit("Heroes (Dogs of War)", close: true));
-            }
-
-            categories.AddRange(new List<Unit> {
                 GetCategoryUnit("Core"),
                 GetCategoryUnit("Special"),
                 GetCategoryUnit("Rare"),
-            });
+            };
 
-            if (!ArmyBook.Data.NoDogsOfWar && Settings.Values.IsTrue("DogsOfWarEnabled"))
-                categories.Add(GetCategoryUnit("Dogs of War", close: true));
+            bool noDogsForArmybook = ArmyBook.Data.NoDogsOfWar;
+            bool dogsHeroIsEnabled = Settings.Values.IsTrue("DogsOfWarCharacter");
+            bool dogsUnitIsEnabled = Settings.Values.IsTrue("DogsOfWarEnabled");
+
+            if (!noDogsForArmybook && (dogsHeroIsEnabled || dogsUnitIsEnabled) && withMercenary)
+            {
+                Unit mercenaries = GetCategoryUnit("Dogs of War", close: true);
+
+                if (dogsHeroIsEnabled)
+                {
+                    mercenaries.Items.Add(GetCategoryUnit("Lords", close: true));
+                    mercenaries.Items.Add(GetCategoryUnit("Heroes", close: true));
+                }
+                
+                if (dogsUnitIsEnabled && dogsHeroIsEnabled)
+                {
+                    mercenaries.Items.Add(GetCategoryUnit("Units", close: true));
+                }
+
+                categories.Add(mercenaries);
+            }
 
             return categories;
         }

@@ -32,46 +32,51 @@ namespace WarhammerArmyAssembler.Interface
                 main.armyMainLabel.Background = ArmyBook.Data.FrontColor;
             }
 
-            List<Unit> categories = Army.Params.GetArmyCategories();
+            List<Unit> categories = Army.Params.GetArmyCategories(withMercenary: true);
 
             foreach (Unit entry in ArmyBook.Data.Units.Values)
             {
                 Unit unit = entry.Clone();
-
-                bool dogsCharsEnabled = Settings.Values.IsTrue("DogsOfWarCharacter");
-
-                bool noDogsUnits = !unit.IsHero() &&
-                    (ArmyBook.Data.NoDogsOfWar || !Settings.Values.IsTrue("DogsOfWarEnabled"));
-
-                bool noDogsCharacter = unit.IsHero() &&
-                    (ArmyBook.Data.NoDogsOfWar || !dogsCharsEnabled);
-
-                if ((noDogsUnits || noDogsCharacter) && unit.DogsOfWar)
-                    continue;
-
                 unit.InterfaceColor = ArmyBook.Data.FrontColor;
                 unit.PointsView = $" {unit.Points} pts";
 
                 int category = (int)unit.Type;
+                bool dogsHeroIsEnabled = Settings.Values.IsTrue("DogsOfWarCharacter");
+                bool dogsUnitIsEnabled = Settings.Values.IsTrue("DogsOfWarEnabled");
+                int dogsCategory = ArmyBook.Constants.DogsOfWarCategory;
 
-                if (unit.IsHero() && unit.DogsOfWar)
+                if (unit.DogsOfWar)
                 {
-                    category = unit.Type == Unit.UnitType.Lord ? 2 : 3;
+                    if (unit.IsHero())
+                    {
+                        if (!dogsHeroIsEnabled || ArmyBook.Data.NoDogsOfWar)
+                            continue;
+
+                        categories[dogsCategory].Items[(int)unit.Type].Items.Add(unit);
+                    }
+                    else
+                    {
+                        if (!dogsUnitIsEnabled || ArmyBook.Data.NoDogsOfWar)
+                            continue;
+
+                        if (unit.Prepayment != 0)
+                            unit.PointsView += $" (+{unit.Prepayment} pts)";
+
+                        if (dogsHeroIsEnabled)
+                        {
+                            int dogsUnitAfterHeroes = ArmyBook.Constants.DogsOfWarUnitsAfterHeroes;
+                            categories[dogsCategory].Items[dogsUnitAfterHeroes].Items.Add(unit);
+                        }
+                        else
+                        {
+                            categories[dogsCategory].Items.Add(unit);
+                        }
+                    }
                 }
-                else if (unit.DogsOfWar)
+                else
                 {
-                    string a_tmp = unit.Name;
-
-                    if (unit.Prepayment != 0)
-                        unit.PointsView += $" (+{unit.Prepayment} pts)";
-
-                    category = ArmyBook.Constants.DogsOfWarCategory;
+                    categories[category].Items.Add(unit);
                 }
-
-                if (!unit.IsHero() && !ArmyBook.Data.NoDogsOfWar && dogsCharsEnabled)
-                    category += 2;
-
-                categories[category].Items.Add(unit);
             }
 
             foreach (Unit unitType in categories)

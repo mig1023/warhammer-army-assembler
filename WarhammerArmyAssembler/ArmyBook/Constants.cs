@@ -16,6 +16,7 @@ namespace WarhammerArmyAssembler.ArmyBook
         public static int BaseArmySize = 2000;
         public static int LargeArmySize = 3000;
         public static int DogsOfWarCategory = 5;
+        public static int DogsOfWarUnitsAfterHeroes = 2;
         public static int SingleRunicItem = 1;
 
         public static string CommonXmlOptionPath { get; set; }
