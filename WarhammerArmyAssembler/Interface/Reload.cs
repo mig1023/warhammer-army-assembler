@@ -80,11 +80,7 @@ namespace WarhammerArmyAssembler.Interface
             }
 
             foreach (Unit unitType in categories)
-            {
-                unitType.Name = Army.Mod.CategoryNameModification(unitType.Name);
-                unitType.GroupBold = true;
                 main.ArmyList.Items.Add(unitType);
-            }
 
             List<string> artefactsTypes = ArmyBook.Data.Artefact.Values
                 .Select(x => x.ArtefactGroup)
@@ -118,8 +114,6 @@ namespace WarhammerArmyAssembler.Interface
                     artefacts.Items.Add(artefact);
                 }
 
-                artefacts.GroupBold = true;
-                artefacts.Artefacts = true;
                 main.ArmyList.Items.Add(artefacts);
             }
 

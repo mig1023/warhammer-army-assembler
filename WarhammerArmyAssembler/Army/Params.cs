@@ -193,10 +193,11 @@ namespace WarhammerArmyAssembler.Army
 
         private static Unit GetCategoryUnit(string name, bool close = false) => new Unit()
         {
-            Name = name,
+            Name = Mod.CategoryNameModification(name),
             TooltipColor = (SolidColorBrush)ArmyBook.Data.TooltipColor,
             Lore = name.ToUpper(),
             CloseTreeView = close,
+            GroupBold = true,
         };
 
         public static Option GetCategoryArtefact(string name) => new Option()
@@ -206,6 +207,8 @@ namespace WarhammerArmyAssembler.Army
             Description = name.ToUpper(),
             AddTo = new Dictionary<string, int>(),
             ChangeTo = new Dictionary<string, int>(),
+            GroupBold = true,
+            Artefacts = true,
         };
 
         public static List<Unit> GetArmyCategories(bool withMercenary = false)
