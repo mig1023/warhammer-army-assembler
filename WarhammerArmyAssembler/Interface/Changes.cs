@@ -601,28 +601,30 @@ namespace WarhammerArmyAssembler.Interface
                 XmlNode cover = Intro(xmlFile, "Styles/Images/Files/Cover");
                 string source = ImagesFilesName(cover, armyName, $"Cover{edition}.png");
 
+                int armyEdition = int.Parse(edition);
+                XmlNode illustrationNode = Intro(xmlFile, "Styles/Images/Files/Illustration");
+                string illustration = ImagesFilesName(illustrationNode, armyName, $"Illustration{edition}.jpg");
+
+                Border bannerBorder = new Border
+                {
+                    Padding = new Thickness(5),
+                    Child = TooltipBlock(head, armyEdition, description,
+                        illustration, released, authors, lineColor),
+                };
+
+                ToolTip armyBanner = new ToolTip
+                {
+                    MaxWidth = 600,
+                    Background = backColor,
+                    Content = bannerBorder,
+                };
+
                 Image newImage = new Image()
                 {
                     Source = new BitmapImage(new Uri(source)),
                     Margin = new Thickness(2),
                     Stretch = Stretch.UniformToFill,
-                };
-
-                XmlNode illustrationNode = Intro(xmlFile, "Styles/Images/Files/Illustration");
-                string illustration = ImagesFilesName(illustrationNode, armyName, $"Illustration{edition}.jpg");
-
-                int armyEdition = int.Parse(edition);
-
-                newImage.ToolTip = new ToolTip
-                {
-                    MaxWidth = 600,
-                    Background = backColor,
-                    Content = new Border
-                    {
-                        Padding = new Thickness(5),
-                        Child = TooltipBlock(head, armyEdition, description,
-                            illustration, released, authors, lineColor),
-                    }
+                    ToolTip = armyBanner,
                 };
 
                 left += 1;
