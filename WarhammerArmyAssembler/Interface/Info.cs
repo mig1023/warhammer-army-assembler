@@ -133,7 +133,7 @@ namespace WarhammerArmyAssembler.Interface
         private static string SpellLine(IEnumerable<string> spellList,
             int count, string loreName, int magicsCount)
         {
-            bool largeMagic = magicsCount > 2;
+            bool largeMagic = magicsCount > 1;
             string newLines = largeMagic ? "\n" : "\n\n";
 
             string spell = String.Join(newLines, spellList);
