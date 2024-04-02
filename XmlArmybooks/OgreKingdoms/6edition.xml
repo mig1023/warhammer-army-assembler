@@ -43,17 +43,9 @@
 					<Spell Name="Trollguts" Cast="3"/>
 				</Spells>
 			</Magic>
-			<Enemy>
-				<Name>Orcs and Goblins, Spells of the Big Waaagh!</Name>
-				<Dispells>
-					<Spell Name="Mork save us!" Cast="7"/>
-					<Spell Name="Gork'll fix it" Cast="8"/>
-					<Spell Name="Bash 'em ladz" Cast="9"/>
-					<Spell Name="The Foot of Gork" Cast="11"/>
-					<Spell Name="Gork's warpath" Cast="12"/>
-					<Spell Name="Waaagh!" Cast="14"/>
-				</Dispells>
-			</Enemy>
+			<Dispell>
+				<Enemy>Orcs and Goblins, Spells of the Big Waaagh!</Enemy>
+			</Dispell>
 		</Magics>
 		<Local>
 			<SpecialRules>
