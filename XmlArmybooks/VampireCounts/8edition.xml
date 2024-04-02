@@ -45,18 +45,9 @@
 				</Spells>
 			</Magic>
 			<Magic>The Lore of Death</Magic>
-			<Enemy>
-				<Name>The Empire, The Lore of Fire</Name>
-				<Dispells>
-					<Spell Name="Fireball" Cast="7"/>
-					<Spell Name="Cascading Fire-Cloak" Cast="7"/>
-					<Spell Name="Flaming Sword of Rhuin" Cast="10"/>
-					<Spell Name="The Burning Head" Cast="12"/>
-					<Spell Name="Piercing Bolts of Burning" Cast="12"/>
-					<Spell Name="Fulminating Flame Cage" Cast="13"/>
-					<Spell Name="Flame Storm" Cast="15"/>
-				</Dispells>
-			</Enemy>
+			<Dispell>
+				<Enemy>The Empire, The Lore of Fire</Enemy>
+			</Dispell>
 		</Magics>
 		<Local>
 			<SpecialRules>
