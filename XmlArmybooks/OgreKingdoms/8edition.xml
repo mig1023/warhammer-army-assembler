@@ -44,18 +44,9 @@
 					<Spell Name="The Maw" Cast="15"/>
 				</Spells>
 			</Magic>
-			<Enemy>
-				<Name>Orcs and Goblins, Spells of the Da Big Waaagh!</Name>
-				<Dispells>
-					<Spell Name="Brain Bursta" Cast="7"/>
-					<Spell Name="Gaze of Mork" Cast="9"/>
-					<Spell Name="Fist of Gork" Cast="10"/>
-					<Spell Name="The Hand of Gork" Cast="11"/>
-					<Spell Name="'Eadbutt" Cast="11"/>
-					<Spell Name="'Ere We Go!" Cast="13"/>
-					<Spell Name="Foot of Gork" Cast="17"/>
-				</Dispells>
-			</Enemy>
+			<Dispell>
+				<Enemy>Orcs and Goblins, Spells of the Da Big Waaagh!</Enemy>
+			</Dispell>
 		</Magics>
 		<Local>
 			<SpecialRules>
