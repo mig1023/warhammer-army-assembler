@@ -373,10 +373,15 @@ namespace WarhammerArmyAssembler.ArmyBook
         private static Dictionary<string, int> LoadSpellsFromSources(XmlNode magic, string type,
             Dictionary<string, Dictionary<string, int>> CommonXmlMagic, out string name)
         {
-            if (magic["Name"] == null)
+            if ((magic["Name"] == null) && String.IsNullOrEmpty(magic.InnerText))
+            {
+                name = String.Empty;
+                return new Dictionary<string, int>();
+            }
+            else if (magic["Name"] == null)
             {
                 name = magic.InnerText;
-                string commonMagicName = $"{magic.InnerText}-{Army.Data.ArmyEdition}";
+                string commonMagicName = $"{name}-{Army.Data.ArmyEdition}";
                 return CommonXmlMagic[commonMagicName];
             }
             else
