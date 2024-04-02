@@ -43,18 +43,10 @@
 					<Spell Name="Curse of Years" Cast="10"/>
 				</Spells>
 			</Magic>
-			<Magic>The Lore of Death</Magic>			
-			<Enemy>
-				<Name>The Empire, The Lore of Fire</Name>
-				<Dispells>
-					<Spell Name="Fire Ball" Cast="7"/>
-					<Spell Name="Flaming Sword of Rhuin" Cast="8"/>
-					<Spell Name="Fiery Blast" Cast="10"/>
-					<Spell Name="Burning Head" Cast="11"/>
-					<Spell Name="Conflagration of Doom" Cast="13"/>
-					<Spell Name="Wall of Fire" Cast="14"/>
-				</Dispells>
-			</Enemy>
+			<Magic>The Lore of Death</Magic>
+			<Dispell>
+				<Enemy>The Empire, The Lore of Fire</Enemy>
+			</Dispell>			
 		</Magics>
 		<Local>
 			<SpecialRules>
