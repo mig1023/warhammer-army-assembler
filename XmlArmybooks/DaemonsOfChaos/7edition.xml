@@ -65,17 +65,9 @@
 					<Spell Name="Phantasmagoria" Cast="10"/>
 				</Spells>
 			</Magic>
-			<Enemy>
-				<Name>Lizardmen, The Lore of Heaven</Name>
-				<Dispells>
-					<Spell Name="Portent of Far" Cast="7"/>
-					<Spell Name="Second Sign of Amul" Cast="7"/>
-					<Spell Name="Forked Lightning" Cast="8"/>
-					<Spell Name="Celestail Shield" Cast="9"/>
-					<Spell Name="Uranon's Thunder Bolt" Cast="11"/>
-					<Spell Name="The Comet of Cassanora" Cast="13"/>
-				</Dispells>
-			</Enemy>
+			<Dispell>
+				<Enemy>Lizardmen, The Lore of the Heavens</Enemy>
+			</Dispell>
 		</Magics>
 		<Local>
 			<SpecialRules>
