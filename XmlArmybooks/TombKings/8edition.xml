@@ -45,18 +45,9 @@
 			</Magic>
 			<Magic>The Lore of Light</Magic>
 			<Magic>The Lore of Death</Magic>
-			<Enemy>
-				<Name>Vampire Counts, The Lore of the Vampires</Name>
-				<Dispells>
-					<Spell Name="Invocation of Nehek" Cast="8"/>
-					<Spell Name="Vanhel's Danse Macabre" Cast="8"/>
-					<Spell Name="Hellish Vigour" Cast="10"/>
-					<Spell Name="Gaze of Nagash" Cast="11"/>
-					<Spell Name="Raise Dead" Cast="11"/>
-					<Spell Name="Curse of Years" Cast="14"/>
-					<Spell Name="Wind of Undeath" Cast="17"/>
-				</Dispells>
-			</Enemy>
+			<Dispell>
+				<Enemy>Vampire Counts, The Lore of the Vampires</Enemy>
+			</Dispell>
 		</Magics>
 		<Local>
 			<SpecialRules>
