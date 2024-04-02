@@ -318,19 +318,21 @@ namespace WarhammerArmyAssembler.ArmyBook
 
         private static void LoadMagic(XmlDocument xmlFile)
         {
-            Dictionary<string, Dictionary<string, int>> commons =
-                new Dictionary<string, Dictionary<string, int>>();
+            var commons = new Dictionary<string, Dictionary<string, int>>();
 
             XmlDocument xmlCommonMagic = new XmlDocument();
             xmlCommonMagic.Load(Constants.CommonXmlMagicPath);
 
-            foreach (XmlNode common in xmlCommonMagic.SelectNodes("Magics/Magic"))
+            foreach (XmlNode armybooks in xmlCommonMagic.SelectNodes("Magics/Magic"))
             {
-                string name = StringParse(common["Name"]);
-                string edition = StringParse(common["Edition"]);
-                string magic = $"{name}-{edition}";
+                string edition = StringParse(armybooks.Attributes["Edition"]);
 
-                commons.Add(magic, LoadSpells(common.SelectSingleNode("Spells")));
+                foreach (XmlNode common in armybooks.SelectNodes("Spells"))
+                {
+                    var spells = LoadSpells(common);
+                    string name = StringParse(common.Attributes["Name"]);
+                    commons.Add($"{name}-{edition}", spells);
+                }
             }
 
             string magics = "ArmyBook/Introduction/Magics";
