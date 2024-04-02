@@ -36,18 +36,9 @@
 			<Magic>The Lore of the Heavens</Magic>
 			<Magic>The Lore of Beasts</Magic>
 			<Magic>The Lore of Light</Magic>
-			<Enemy>
-				<Name>Warriors of Chaos, The Lore of Nurgle</Name>
-				<Dispells>
-					<Spell Name="Miasma of Pestilence" Cast="7"/>
-					<Spell Name="Ream of Corruption" Cast="9"/>
-					<Spell Name="Blades of Putrefaction" Cast="10"/>
-					<Spell Name="Curse of The Leper" Cast="12"/>
-					<Spell Name="Rancid Visitations" Cast="12"/>
-					<Spell Name="Fleshy Abundance" Cast="13"/>
-					<Spell Name="Plague Wind" Cast="17"/>
-				</Dispells>
-			</Enemy>
+			<Dispell>
+				<Enemy>Warriors of Chaos, The Lore of Nurgle</Enemy>
+			</Dispell>
 		</Magics>
 		<Local>
 			<SpecialRules>
