@@ -39,18 +39,9 @@
 			<Magic>The Lore of Fire</Magic>
 			<Magic>The Lore of Metal</Magic>
 			<Magic>The Lore of Light</Magic>
-			<Enemy>
-				<Name>Daemons of Chaos, The Lore of Nurgle</Name>
-				<Dispells>
-					<Spell Name="Miasma of Pestilence" Cast="7"/>
-					<Spell Name="Ream of Corruption" Cast="9"/>
-					<Spell Name="Blades of Putrefaction" Cast="10"/>
-					<Spell Name="Curse of The Leper" Cast="12"/>
-					<Spell Name="Rancid Visitations" Cast="12"/>
-					<Spell Name="Fleshy Abundance" Cast="13"/>
-					<Spell Name="Plague Wind" Cast="17"/>
-				</Dispells>
-			</Enemy>
+			<Dispell>
+				<Enemy>Daemons of Chaos, The Lore of Tzeentch</Enemy>
+			</Dispell>
 		</Magics>
 		<Local>
 			<SpecialRules>
