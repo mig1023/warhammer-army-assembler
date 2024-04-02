@@ -347,7 +347,10 @@ namespace WarhammerArmyAssembler.ArmyBook
                 Data.Magic.Add(name, spell);
             }
 
-            foreach (XmlNode enemy in xmlFile.SelectNodes($"{intro}/Dispell/Enemy"))
+            XmlNode enemies = xmlFile.SelectSingleNode($"{intro}/Dispell/Enemy");
+            string enemiesPath = enemies == null ? "Dispell" : "Dispell/Enemy";
+
+            foreach (XmlNode enemy in xmlFile.SelectNodes($"{intro}/{enemiesPath}"))
             {
                 string[] enemyLines = enemy.InnerText.Split(',');
                 string magicPath = enemyLines[0].Trim();
