@@ -335,22 +335,38 @@ namespace WarhammerArmyAssembler.ArmyBook
                 }
             }
 
-            string magics = "ArmyBook/Introduction/Magics";
-            XmlNode loreBook = xmlFile.SelectSingleNode(magics);
+            string intro = "ArmyBook/Introduction/Magics";
+            XmlNode loreBook = xmlFile.SelectSingleNode(intro);
 
             if (loreBook == null)
                 return;
 
-            foreach (XmlNode magic in xmlFile.SelectNodes($"{magics}/Magic"))
+            foreach (XmlNode magic in xmlFile.SelectNodes($"{intro}/Magic"))
             {
                 var spell = LoadSpellsFromSources(magic, "Spells", commons, out string name);
                 Data.Magic.Add(name, spell);
             }
 
-            foreach (XmlNode magic in xmlFile.SelectNodes($"{magics}/Enemy"))
+            foreach (XmlNode enemy in xmlFile.SelectNodes($"{intro}/Dispell/Enemy"))
             {
-                var dispell = LoadSpellsFromSources(magic, "Dispells", commons, out string name);
-                Data.Dispell.Add(name, dispell);
+                string[] enemyLines = enemy.InnerText.Split(',');
+                string magicPath = enemyLines[0].Trim();
+                string magicName = enemyLines[1].Trim();
+
+                XmlDocument xmlEnemyMagic = new XmlDocument();
+                xmlEnemyMagic.Load(XmlBook.ArmybooksPaths[$"{magicPath}-{Army.Data.ArmyEdition}"]);
+
+                foreach (XmlNode magic in xmlEnemyMagic.SelectNodes($"{intro}/Magic"))
+                {
+                    bool commonMagic = (magic["Name"] == null) && (magic.InnerText == magicName);
+                    bool enemyMagic = (magic["Name"] != null) && (magic["Name"].InnerText == magicName);
+
+                    if (!commonMagic && !enemyMagic)
+                        continue;
+
+                    var dispell = LoadSpellsFromSources(magic, "Spells", commons, out string _);
+                    Data.Dispell.Add(enemy.InnerText, dispell);
+                }
             }
         }
 

@@ -9,6 +9,9 @@ namespace WarhammerArmyAssembler.ArmyBook
 {
     class XmlBook
     {
+        public static Dictionary<string, string> ArmybooksPaths =
+            new Dictionary<string, string>();
+
         private static Dictionary<string, List<string>> HomologousSeries =
             new Dictionary<string, List<string>>();
 
@@ -116,6 +119,8 @@ namespace WarhammerArmyAssembler.ArmyBook
 
         private static SortedDictionary<string, string> FindAllXmlFilesInDirectories(string programDirectory)
         {
+            ArmybooksPaths = new Dictionary<string, string>();
+
             Constants.CommonXmlMagicPath = FindXmlFileByName(programDirectory, "CommonMagic.xml");
             Constants.CommonXmlOptionPath = FindXmlFileByName(programDirectory, "CommonOption.xml");
             Constants.EnemiesOptionPath = FindXmlFileByName(programDirectory, "Enemies.xml");
@@ -162,6 +167,7 @@ namespace WarhammerArmyAssembler.ArmyBook
                         armyOrderName += armyEdition.InnerText;
 
                     files.Add(armyOrderName, file);
+                    ArmybooksPaths.Add($"{armyName.InnerText}-{armyEdition.InnerText}", file);
                     AddHomologue(armyInternal.InnerText, file);
                 }
             }
