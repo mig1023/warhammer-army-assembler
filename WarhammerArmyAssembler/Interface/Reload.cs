@@ -109,9 +109,6 @@ namespace WarhammerArmyAssembler.Interface
                         lastRandomGroup = entry.RandomGroup;
                     }
 
-                    if (String.IsNullOrEmpty(entry.Lore))
-                        artefact.Lore = artefact.Name;
-
                     artefact.PointsView = PointsView(artefact);
                     artefact.InterfaceColor = ArmyBook.Data.FrontColor;
                     artefacts.Items.Add(artefact);

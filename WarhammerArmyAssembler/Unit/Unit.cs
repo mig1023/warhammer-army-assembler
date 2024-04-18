@@ -74,6 +74,7 @@ namespace WarhammerArmyAssembler
         public string PointsView { get; set; }
 
         public string Lore { get; set; }
+        public string TooltipText { get => Lore; }
 
         public Profile Movement { get; set; }
         public Profile WeaponSkill { get; set; }

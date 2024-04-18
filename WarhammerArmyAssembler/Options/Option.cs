@@ -60,6 +60,17 @@ namespace WarhammerArmyAssembler
         public string PointsView { get; set; }
         public string Description { get; set; }
         public string Lore { get; set; }
+        public string TooltipText
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Lore))
+                    return Description;
+                else
+                    return $"{Lore}\n\n{Description}";
+            }
+        }
+
         public bool BigWeapon { get; set; }
         public bool NativeArmour { get; set; }
 
