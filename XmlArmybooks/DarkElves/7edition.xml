@@ -179,7 +179,7 @@
 					<Name>Dance of Doom</Name>
 					<Points>30</Points>
 					<Only>Khainite</Only>
-					<AddToWard>5</AddToWard>
+					<Add To="Ward">5</Add>
 					<Lore>The sinuous Dance of Doom can enthrall even the most steely disciplined Swordmaster and be used to dodge the fastest shot or blow</Lore>
 					<Description>The model has a 5+ ward save</Description>
 				</Additional>
@@ -344,7 +344,7 @@
 				<Weapon>
 					<Name>Soulrender</Name>
 					<Points>15</Points>
-					<AddToStrength>2</AddToStrength>
+					<Add To="Strength">2</Add>
 					<HitLast/>
 					<ArmourPiercing>2</ArmourPiercing>
 					<Lore>When it was forged, this long blade was quenched in a Cauldron of Blood and can slice through steel as easily as bone</Lore>
@@ -355,9 +355,9 @@
 				<Armour>
 					<Name>Armour of Living Death</Name>
 					<Points>60</Points>
-					<AddToArmour>5</AddToArmour>
-					<AddToToughness>1</AddToToughness>
-					<AddToWounds>1</AddToWounds>
+					<Add To="Armour">5</Add>
+					<Add To="Toughness">1</Add>
+					<Add To="Wounds">1</Add>
 					<Stupidity/>
 					<Lore>It is claimed that anyone wearing this armour cannot die, sustained by its magical energy. Unfortunately, they cannot remove the armour, and are driven insane by its magic</Lore>
 					<Description>Heavy armour. In addition, the model has +1 Toughness and +1 Wound. Roll a D6 before deploying any models. On a roll of a 1, the wearer succumbs to the Armour of Living Death and is subject to stupidity for the battle</Description>
@@ -365,7 +365,7 @@
 				<Armour>
 					<Name>Armour of Eternal Servitude</Name>
 					<Points>35</Points>
-					<AddToArmour>5</AddToArmour>
+					<Add To="Armour">5</Add>
 					<Regeneration/>
 					<Lore>Oaths of loyalty and dedication to Khaine were sworn at the time of the armour's forging, and the wearer is granted extended life to serve their god</Lore>
 					<Description>Heavy armour. The wearer can Regenerate</Description>
@@ -373,7 +373,7 @@
 				<Additional>
 					<Name>Cloak of Hag Graef</Name>
 					<Points>25</Points>
-					<AddToArmour>6</AddToArmour>
+					<Add To="Armour">6</Add>
 					<Rule>Any ranged attack hits on the character have their Strength halved</Rule>
 					<Lore>Made from the scales of Aggraunir, the first sea dragon to be captured by the Dark Elves, the Cloak of Hag Graef can withstand the harshest blows</Lore>
 					<Description>Sea Dragon cloak. In addition, any ranged attack hits on the character (including shooting, magic missiles and other spells with a Strength value) have their Strength halved before rolling to wound (rounding up)</Description>
@@ -388,7 +388,7 @@
 				<Shield>
 					<Name>Shield of Ghrond</Name>
 					<Points>25</Points>
-					<AddToArmour>6</AddToArmour>
+					<Add To="Armour">6</Add>
 					<Rule>All hits the character suffers will be resolved with -1 Strength</Rule>
 					<Lore>Shaped into the leering face of an Ice Daemon, the shield of Ghrond is imbued with the power of the magical North wind, which robs attacks of their force</Lore>
 					<Description>The Shield of Ghrond is treated like a normal shield, and in addition all hits the character suffers will be resolved with -1 Strength</Description>
@@ -396,7 +396,7 @@
 				<Armour>
 					<Name>Blood Armour</Name>
 					<Points>15</Points>
-					<AddToArmour>5</AddToArmour>
+					<Add To="Armour">5</Add>
 					<Rule>For every inflicted wound in close combat, armour save is improved by one point</Rule>
 					<Lore>When anointed with the blood of the foe, this armour becomes ever more endurable</Lore>
 					<Description>Heavy armour. For every unsaved wound the wearer inflicts in close combat, this save is improved by one point (to 4+ then 3+, etc) to a maximum total of 1+ (including any other bonuses for a shield. Sea Dragon cloak, and so on)</Description>
@@ -406,7 +406,7 @@
 				<Additional>
 					<Name>Black Amulet</Name>
 					<Points>40</Points>
-					<AddToWard>4</AddToWard>
+					<Add To="Ward">4</Add>
 					<Rule>If ward save test is passed, the attacking model suffers 1 wound instead (with no armour save allowed)</Rule>
 					<Lore>Carved from the tortured heartstone of a mountain drenched in Dark Magic, the Black Amulet is a lustrous polished stone of midnight hue. It is engraved with a single glowing rune, and into its ebony facets have been poured all the captured malice and spite that emanates from the chill lands of Naggaroth. To behold its darksome shape is to see despair made physical, it is to abandon even the merest memory of hope</Lore>
 					<Description>The wearer has a 4+ ward save. If the wearer of the Black Amulet passes their ward save in close combat, then the attacking model suffers 1 wound instead (with no armour save allowed)</Description>
@@ -428,7 +428,7 @@
 				<Additional>
 					<Name>Seal of Ghrond</Name>
 					<Points>30</Points>
-					<AddToDispell>1</AddToDispell>
+					<Add To="Dispell">1</Add>
 					<Lore>This iron seal is blessed by the priestesses of Khaine to ward away hated magic</Lore>
 					<Description>Add 1 dice to the dispel dice pool</Description>
 				</Additional>
@@ -472,7 +472,7 @@
 				<Arcane>
 					<Name>Darkstar Cloak</Name>
 					<Points>25</Points>
-					<AddToCast>1</AddToCast>
+					<Add To="Cast">1</Add>
 					<Lore>Woven into the fabric of this cloak is the essence of a star stolen from the night sky of Nagarythe</Lore>
 					<Description>The cloak gives the Sorceress +1 power dice in each Magic phase. Only she may use this extra dice</Description>
 				</Arcane>
@@ -496,14 +496,14 @@
 					<Name>Banner of Nagarythe</Name>
 					<Points>125</Points>
 					<Unbreakable/>
-					<AddToCloseCombat>1</AddToCloseCombat>
+					<Add To="CloseCombat">1</Add>
 					<Lore>During the Sundering, many of Nagarythe's treasures were lost in battle or destroyed by natural disaster. Those that remained were greedily seized upon by nobles of both allegiances. Some fell into the hands of the Aesanar, who hid them away from Malekith's forces, but the most important were taken by the Dark Elves. The Banner of Nagarythe is the greatest of all such treasures, woven through with silver thread and inlaid with pearls and diamonds. For the Dark Elves, the Banner of Nagarythe is a physical reminder of the injustices heaped upon them by the Phoenix Throne. Moreover, it is the personal standard of the Witch King proclaims his right to rule not only Naggaroth, but the ten kingdoms of Ulthuan as well. For their part, the Shadow Warriors of Nagarythe deem this banner too mired in corruption and betrayal to any longer have any wholesome purpose. They seek not its return, but its destruction</Lore>
 					<Description>This standard gives an additional +1 to the combat resolution score of friendly units in combat within 12", and the unit containing the banner is Unbreakable</Description>
 				</Banner>
 				<Banner>
 					<Name>Hydra Banner</Name>
 					<Points>75</Points>
-					<AddToAttacks>1</AddToAttacks>
+					<Add To="Attacks">1</Add>
 					<Lore>Imbued with the magic of Hekarti the Hydra Queen, this banner quickens the reflexes so that those nearby strike with her own speed and savagery</Lore>
 					<Description>All models in the unit gain +1 Attack in the first round of any hand-to-hand combat (including mounts)</Description>
 				</Banner>
@@ -576,22 +576,22 @@
 					</HandWeapon>
 					<Armour>
 						<Name>Armour of Midnight</Name>
-						<AddToArmour>5</AddToArmour>
-						<AddToWard>2</AddToWard>
+						<Add To="Armour">5</Add>
+						<Add To="Ward">2</Add>
 						<Rule>2+ ward save against non-magical attacks</Rule>
 						<NoMultiWounds/>
 					</Armour>
 					<Armour>
 						<Name>Spellshield</Name>
-						<AddToArmour>6</AddToArmour>
+						<Add To="Armour">6</Add>
 						<MagicResistance>2</MagicResistance>
 						<Rule>If a spell cast at Malekith is dispelled by a dispel roll, the caster suffers a Strength 6 hit</Rule>
 						<Rule>For Bound Items, the Spellshield inflicts one Strength 6 hit</Rule>
 					</Armour>
 					<Arcane>
 						<Name>Circlet of Iron</Name>
-						<AddToCast>1</AddToCast>
-						<AddToDispell>1</AddToDispell>
+						<Add To="Cast">1</Add>
+						<Add To="Dispell">1</Add>
 					</Arcane>
 				</Equipments>
 			</Lord>
@@ -616,7 +616,7 @@
 					<HandWeapon/>
 					<Arcane>
 						<Name>Thousand and One Dark Blessing</Name>
-						<AddToWard>4</AddToWard>
+						<Add To="Ward">4</Add>
 						<MagicResistance>2</MagicResistance>
 					</Arcane>
 					<Arcane>
@@ -658,7 +658,7 @@
 					<HandWeapon>
 						<Name>Parrying Blade</Name>
 						<Rule>One model in base contact loses one Attack (to a minimum of 1)</Rule>
-						<AddToAttacks>1</AddToAttacks>
+						<Add To="Attacks">1</Add>
 					</HandWeapon>
 					<Arcane>
 						<Name>Amulet of Fire</Name>
@@ -742,11 +742,11 @@
 					<HeavyArmour/>
 					<Demon>
 						<Name>Tz'arkan</Name>
-						<AddToWeaponSkill>1</AddToWeaponSkill>
-						<AddToStrength>1</AddToStrength>
-						<AddToToughness>2</AddToToughness>
-						<AddToInitiative>2</AddToInitiative>
-						<AddToLeadership>1</AddToLeadership>
+						<Add To="WeaponSkill">1</Add>
+						<Add To="Strength">1</Add>
+						<Add To="Toughness">2</Add>
+						<Add To="Initiative">2</Add>
+						<Add To="Leadership">1</Add>
 						<Rule>If Malus is in base contact with a friendly model and not in contact with the enemy in any close combat phase, roll a D6. On a 1-3 Tz'arkan's murderous rage drives Malus to attack his allies</Rule>
 					</Demon>
 				</Equipments>
@@ -897,7 +897,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Scaly skin</Name>
-						<AddToArmour>3</AddToArmour>
+						<Add To="Armour">3</Add>
 					</Armour>
 				</Equipments>
 			</Mount>
