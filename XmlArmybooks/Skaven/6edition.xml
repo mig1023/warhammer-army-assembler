@@ -124,7 +124,7 @@
 				<Weapon>
 					<Name>Blade of Black Fury</Name>
 					<Points>50</Points>
-					<AddToAttacks>2</AddToAttacks>
+					<Add To="Attacks">2</Add>
 					<Lore>A Skaven wielding this is invigorated with sorcerous energy that pulses through his body</Lore>
 					<Description>The sword confers +2 Attacks to the wielder</Description>
 				</Weapon>
@@ -139,7 +139,7 @@
 				<Weapon>
 					<Name>Weeping Blade</Name>
 					<Points>45</Points>
-					<AddToStrength>1</AddToStrength>
+					<Add To="Strength">1</Add>
 					<MultiWounds>D3</MultiWounds>
 					<Lore>This weapon weeps a black and corrosive venom which can burn through armour and slay with the merest touch</Lore>
 					<Description>The wielder has +1 Strength. Each unsaved Wound is multiplied into D3 wounds</Description>
@@ -162,7 +162,7 @@
 				<Weapon>
 					<Name>Desolate Blade</Name>
 					<Points>40</Points>
-					<AddToStrength>2</AddToStrength>
+					<Add To="Strength">2</Add>
 					<Lore>This ancient weapon is imbued with dark power and glows udtb pulsing green light</Lore>
 					<Description>The sword confers +2 Strength to all close combat attacks made by the wielder</Description>
 				</Weapon>
@@ -217,7 +217,7 @@
 				<Armour>
 					<Name>Rust Armour</Name>
 					<Points>50</Points>
-					<AddToArmour>5</AddToArmour>
+					<Add To="Armour">5</Add>
 					<Rule>If the wearer is wounded by a hit with a Strength sufficiently high to completely cancel his armour save (or a hit that does not allow armour saves), the wound is discounted but the armour falls to pieces and is destroyed</Rule>
 					<Lore>This is an ancient, decaying suit of armour, held together with the power of dark sorcery</Lore>
 					<Description>Gives a 5+ Armour save that can be Combined with other armour as normal. In addition, if the wearer is wounded by a hit with a Strength sufficiently high to completely cancel his armour save (or a hit that does not allow armour saves at all, such as from a cannon ball), the wound is discounted but the armour falls to pieces and is destroyed</Description>
@@ -225,7 +225,7 @@
 				<Armour>
 					<Name>Warpstone Armour</Name>
 					<Points>35</Points>
-					<AddToArmour>4</AddToArmour>
+					<Add To="Armour">4</Add>
 					<Rule>Strength 4 hit against enemy for each successful armour save</Rule>
 					<Lore>Warpstone Armour contains powdered warpstone that is mixed in with the metal during the forging process, and radiates a poisonous aura</Lore>
 					<Description>Warpstone Armour gives its wearer a 4+ armour save. For each successful armour save made by the bearer in close combat, the armour immediately inflicts a Strength 4 hit against the model that struck the blow</Description>
@@ -233,7 +233,7 @@
 				<Armour>
 					<Name>Cautious Shield</Name>
 					<Points>25</Points>
-					<AddToArmour>6</AddToArmour>
+					<Add To="Armour">6</Add>
 					<Rule>Can force one model in base contact to lose 1 Attack (2 Attack if decide not to attack enemy)</Rule>
 					<Lore>This large magical shield emphasises a natural trait in Skaven nature</Lore>
 					<Description>Gives a 6+ armour save rhat can he combined with other armour as normal. The bearer can force one model in base contact to lose 1 Attack (he can choose which Attack in the case of opponents with different Attacks, such as cavalry models).\n\nIn addition, the model can decide not to attack at all, but to wield the shield with jwo hands and concentrate on defence. If he decides to do this, the chosen enemy will lose 2 Attacks. The player must declare which way the shield will be used at the beginning of each Close Combat phase, before any side strikes blows</Description>
@@ -257,14 +257,14 @@
 				<Additional>
 					<Name>Foul Pendant</Name>
 					<Points>30</Points>
-					<AddToWard>5</AddToWard>
+					<Add To="Ward">5</Add>
 					<Lore>Sickly green smoke radiates from this rat-skull token. This solidifies before incoming attacks, returning to smoke once more when the blow is deflected</Lore>
 					<Description>The pendant confers a 5+ Ward save to the bearer</Description>
 				</Additional>
 				<Additional>
 					<Name>Warpstone Amulet</Name>
 					<Points>25</Points>
-					<AddToWard>4</AddToWard>
+					<Add To="Ward">4</Add>
 					<Rule>At the end of the game roll a D6: on the result of 1, the character counts as a casualty</Rule>
 					<Lore>The Warpstone Amulet Radiates disharmony, hostility and confusion, so that anyone who attacks its bearer becomes dazed and bewildered</Lore>
 					<Description>The Amulet confers to the bearer a 4+ Ward save. At the end of the game roll a D6. On the result of 1, the character succumbs to the mutating power of the warpstone and counts as a casualty for the purposes of allocating Victory points, and cannot contest table quarters. No re-rolls are allowed for this final roll</Description>
@@ -272,7 +272,7 @@
 				<Additional>
 					<Name>Ring of Darkness</Name>
 					<Points>25</Points>
-					<AddToWard>4</AddToWard>
+					<Add To="Ward">4</Add>
 					<MagicResistance>1</MagicResistance>
 					<Lore>The bearer of this ring creates an area of almost impenetrable darkness when gazed upon by a creature that makes use of magical sight</Lore>
 					<Description>The bearer and the unit he is with have Magic Resistance (1). Also, when a spell, magic item or any other scrying magic would force the Skaven player to reveal magic items or any other 'hidden' presence in the unit, the Skaven player must only reveal the presence of this ring. Everything else remains hidden</Description>
@@ -312,9 +312,9 @@
 					<Name>Liber Bubonicus</Name>
 					<Points>40</Points>
 					<Only>Pestilens</Only>
-					<AddToWizard>1</AddToWizard>
-					<AddToCast>1</AddToCast>
-					<AddToDispell>1</AddToDispell>
+					<Add To="Wizard">1</Add>
+					<Add To="Cast">1</Add>
+					<Add To="Dispell">1</Add>
 					<Rule>Skavenbrew</Rule>
 					<Lore>This foul hook is inscribed with the clandestine lores of corrupt magic, and contains the secrets of every pestilence and plague in the world</Lore>
 					<Description>The bearer is a Level 1 Wizard, but has no Warpstone tokens. He knows the Pestilent Breath spell</Description>
@@ -441,7 +441,7 @@
 					</HandWeapon>
 					<Armour>
 						<Rule>Blessed by the Horned Rat</Rule>
-						<AddToWard>4</AddToWard>
+						<Add To="Ward">4</Add>
 					</Armour>
 					<Armour>
 						<Name>Amulet of the Horned One</Name>
@@ -480,7 +480,7 @@
 					</HandWeapon>
 					<HandWeapon>
 						<Name>Dominatator</Name>
-						<AddToAttack>1</AddToAttack>
+						<Add To="Attack">1</Add>
 					</HandWeapon>
 				</Equipments>
 			</Lord>
@@ -640,7 +640,7 @@
 					<Fear/>
 					<LargeBase/>
 					<MagicResistance>2</MagicResistance>
-					<AddToCast>2</AddToCast>
+					<Add To="Cast">2</Add>
 					<ImpactHit>D6</ImpactHit>
 					<Original>
 						<Rule>Ringing the Bell</Rule>
@@ -874,7 +874,7 @@
 					<RangeWeapon>Jezzail</RangeWeapon>
 					<Armour>
 						<Name>Pavise</Name>
-						<AddToArmour>5</AddToArmour>
+						<Add To="Armour">5</Add>
 					</Armour>
 				</Equipments>
 				<Options>
