@@ -100,8 +100,8 @@
 				<Weapon>
 					<Name>Loremaster</Name>
 					<WizardTo>1</WizardTo>
-					<AddToCast>1</AddToCast>
-					<AddToDispell>1</AddToDispell>
+					<Add To="Cast">1</Add>
+					<Add To="Dispell">1</Add>
 					<Points>40</Points>
 					<Honours/>
 					<Lore>Sated by his training in the martial arts, this character has now embarked upon the path of the mage</Lore>
@@ -111,7 +111,7 @@
 					<Name>Swordmaster</Name>
 					<WizardTo>1</WizardTo>
 					<KillingBlow/>
-					<AddToStrength>2</AddToStrength>
+					<Add To="Strength">2</Add>
 					<Dependencies>
 						<Off>Great weapon</Off>
 					</Dependencies>
@@ -140,7 +140,7 @@
 			<MagicWeapons>
 				<Weapon>
 					<Name>Blade of Leaping Gold</Name>
-					<AddToAttacks>3</AddToAttacks>
+					<Add To="Attacks">3</Add>
 					<Points>60</Points>
 					<Lore>A more finely balanced sword than this was never made</Lore>
 					<Description>The blade confers +3 Attacks on the character wielding it</Description>
@@ -163,7 +163,7 @@
 					<Name>Blade of Darting Steel</Name>
 					<Points>45</Points>
 					<HitFirst/>
-					<AddToHit>1</AddToHit>
+					<Add To="Hit">1</Add>
 					<Lore>Bright blue steel can be enchanted to hold spells of great speed and deadly accuracy, and the Elves of Ulthuan are masters of such magic</Lore>
 					<Description>The wielder always strikes first, even if his opponent charged that turn. If both models have this ability, roll off to see who strikes first in each Close Combat phase. In addition, the wielder adds +1 to his rolls to hit</Description>
 				</Weapon>
@@ -193,15 +193,15 @@
 				<Armour>
 					<Name>Armour of Protection</Name>
 					<Points>45</Points>
-					<AddToArmour>6</AddToArmour>
-					<AddToWard>4</AddToWard>
+					<Add To="Armour">6</Add>
+					<Add To="Ward">4</Add>
 					<Lore>This simple armour is adorned by a single Sarathai rune on the breastplate. The World Dragon itself is said to protect the wearer</Lore>
 					<Description>Counts as light armour (armour save 6+) which can be combined with other equipment normally. If the wearer fails his armour save he may make a 4+ Ward save</Description>
 				</Armour>
 				<Shield>
 					<Name>Golden Shield</Name>
 					<Points>35</Points>
-					<AddToArmour>6</AddToArmour>
+					<Add To="Armour">6</Add>
 					<SubOpponentToHit>1</SubOpponentToHit>
 					<Lore>A highly polished shield inlaid with swirling patterns in many types of gold</Lore>
 					<Description>This shield confers a 6+ armour save which can be combined with other equipment normally. In addition, all attempts to hit the bearer in close combat suffer a penalty of -1</Description>
@@ -210,7 +210,7 @@
 					<Name>Armour of Stars</Name>
 					<Only>Infantry</Only>
 					<Points>30</Points>
-					<AddToArmour>6</AddToArmour>
+					<Add To="Armour">6</Add>
 					<Rule>After any unsaved wound model is instantly teleported 3D6" in a random direction</Rule>
 					<Lore>Decorated with hundreds of glittering gems on a background of deepest blue lacquer, the Armour of Stars is a wonder to behold</Lore>
 					<Description>May only be worn by a model on foot. Counts as light armour (armour save 6+) which can be combined with other equipment normally. If the wearer suffers an unsaved wound then one of the gems will burst into brilliant white light as he is instantly teleported 3D6" in a random direction.\n\nNote that this means that he can only suffer 1 unsaved wound in a round of close combat as he will be teleported away before the second can strike him. However, if he was struck by a Killing Blow or a weapon that does multiple wounds per hit (such as a cannon ball) then he would still suffer the instant death or multiplied wounds as normal before teleporting away.\n\nIf the model is teleported into another model or impassable terrain then simply carry on moving it along in the same direction until it is 1" beyond. If the model teleports off the table then treat it as having pursued off</Description>
@@ -218,7 +218,7 @@
 				<Armour>
 					<Name>Armour of Heroes</Name>
 					<Points>25</Points>
-					<AddToArmour>5</AddToArmour>
+					<Add To="Armour">5</Add>
 					<Test Bet="Pass" Context="Round" Profile="Leadership"/>
 					<Lore>This finely wrought suit of armour is made in an unusual style, not seen since the time before the Sundering. A character wearing this armour seems to shine with an inner light. Surely he is one of the ancient gods of battle</Lore>
 					<Description>Counts as heavy armour (armour save 5+) which can be combined with other equipment normally. In order to allocate close combat attacks against the wearer, an opponent must first pass a Leadership test. Test each Close Combat phase. If the test is failed, the enemy may attack another model in base contact instead. Models who are Immune to Psychology are immune to this effect also</Description>
@@ -226,7 +226,7 @@
 				<Armour>
 					<Name>Shadow Armour</Name>
 					<Points>25</Points>
-					<AddToArmour>5</AddToArmour>
+					<Add To="Armour">5</Add>
 					<Scout/>
 					<Lore>Forged by the bitter Shadow Warriors in their hidden camps, the shimmering Shadow Armour weighs almost nothing. It exists somewhere between the real world and that of magic, a fact which mages find quite alarming</Lore>
 					<Description>Counts as heavy armour (armour save 5+) which can be combined with other equipment normally. In addition, if the wearer is an independent character on foot then he has the Scout special rule. He may choose to deploy either at the same rime as the other characters, or as a Scout (including setting up with a unit of Shadow Warriors)</Description>
@@ -234,7 +234,7 @@
 				<Additional>
 					<Name>Helm of Fortune</Name>
 					<Points>25</Points>
-					<AddToArmour>6</AddToArmour>
+					<Add To="Armour">6</Add>
 					<Reroll>ToArmour</Reroll>
 					<Lore>A helm of ithilmar and sea gold, bordered with tiny letters of intertwining runic script. These form a prayer to invoke Asuryan's protection upon the wearer</Lore>
 					<Description>This helm confers a 6+ armour save which can be combined with other equipment normally. The wearer may re-roll failed armour saves</Description>
@@ -242,8 +242,8 @@
 				<Shield>
 					<Name>Dragonscale Shield</Name>
 					<Points>20</Points>
-					<AddToArmour>5</AddToArmour>
-					<AddToWard>6</AddToWard>
+					<Add To="Armour">5</Add>
+					<Add To="Ward">6</Add>
 					<Lore>Although battered and scarred, this shield is a treasured heirloom of the days when Dragons roamed the skies</Lore>
 					<Description>This shield confers a 5+ armour save which can be combined with other equipment normally. Also gives the bearer a 6+ Ward save</Description>
 				</Shield>
@@ -252,7 +252,7 @@
 				<Additional>
 					<Name>Vambraces of Defence</Name>
 					<Points>55</Points>
-					<AddToWard>4</AddToWard>
+					<Add To="Ward">4</Add>
 					<Reroll>ToArmour</Reroll>
 					<Lore>These golden bracers are fabled to liave been found on the shores of distant Lustria and are inscribed with unusual glyphs</Lore>
 					<Description>Gives the wearer a 4+ Ward save. In addition, the wearer may re-roll failed armour saves</Description>
@@ -287,7 +287,7 @@
 				<Additional>
 					<Name>Guardian Phoenix</Name>
 					<Points>25</Points>
-					<AddToWard>5</AddToWard>
+					<Add To="Ward">5</Add>
 					<Lore>A spark from the sacred flame at the temple of Asuryan is held in this ornate casket</Lore>
 					<Description>Gives the wearer a 5+ Ward save</Description>
 				</Additional>
@@ -338,7 +338,7 @@
 				<Arcane>
 					<Name>Jewel of the Dusk</Name>
 					<Points>15</Points>
-					<AddToCast>1</AddToCast>
+					<Add To="Cast">1</Add>
 					<Lore>This fine ruby glows blood red with a sorcemus energy that even the least magically adept can clearly see</Lore>
 					<Description>The jewel gives the Mage +1 Power dice in each of his own Magic phases. Only he may use this dice</Description>
 				</Arcane>
@@ -369,8 +369,8 @@
 					<Name>Radiant Gem of Hoeth</Name>
 					<Points>45</Points>
 					<WizardTo>1</WizardTo>
-					<AddToCast>1</AddToCast>
-					<AddToDispell>1</AddToDispell>
+					<Add To="Cast">1</Add>
+					<Add To="Dispell">1</Add>
 					<Lore>The gem is normally kept in a black velvet bag, carefully hiding its brilliance from prying eyes</Lore>
 					<Description>The wearer counts as a Level 1 High Elf Mage. However, the wearer may still cast spells whilst wearing armour. This has no effect on characters who are already Wizards</Description>
 				</Additional>
@@ -509,14 +509,14 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Sunfang</Name>
-						<AddToStrength>3</AddToStrength>
+						<Add To="Strength">3</Add>
 						<Rule>Once per battle in his own Magic phase, Tyrion may use Sunfang to cast the bound spell Fury of Khaine (power level 6), the spell requires no Power dice to cast, all the power required is provided by Sunfang itself</Rule>
 					</HandWeapon>
 					<Armour>
 						<Name>Dragon Armour of Aenarion</Name>
 						<Rule>Immune to all breath and all Flaming attacks</Rule>
 						<ArmourTo>1</ArmourTo>
-						<AddToWard>4</AddToWard>
+						<Add To="Ward">4</Add>
 					</Armour>
 					<Armour>
 						<Name>Heart of Avelorn</Name>
@@ -563,7 +563,7 @@
 					</Arcane>
 					<Arcane>
 						<Name>The Moon Staff of Lileath</Name>
-						<AddToCast>1</AddToCast>
+						<Add To="Cast">1</Add>
 						<Rule>Once per battle, Moon Staff may granted D6 extra dice to cast, but no more additional dice for the rest of the battle</Rule>
 					</Arcane>
 					<Arcane>
@@ -716,7 +716,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Scaly skin</Name>
-						<AddToArmour>3</AddToArmour>
+						<Add To="Armour">3</Add>
 					</Armour>
 				</Equipments>
 			</Mount>
@@ -734,7 +734,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Scaly skin</Name>
-						<AddToArmour>3</AddToArmour>
+						<Add To="Armour">3</Add>
 					</Armour>
 				</Equipments>
 			</Mount>
@@ -994,7 +994,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Great axes</Name>
-						<AddToStrength>2</AddToStrength>
+						<Add To="Strength">2</Add>
 					</HandWeapon>
 					<HandWeapon/>
 					<LightArmour/>
