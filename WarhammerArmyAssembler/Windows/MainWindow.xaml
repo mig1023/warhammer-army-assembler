@@ -422,7 +422,22 @@
                                 </Style>
                             </DataGridTextColumn.CellStyle>
                         </DataGridTextColumn>
-                        <DataGridTextColumn Header="Unit" Binding="{Binding NameInGrid}" Width="*" MinWidth="120" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Unit" Binding="{Binding NameInGrid}" Width="*" MinWidth="120" IsReadOnly="True">
+                            <DataGridTextColumn.CellStyle>
+                                <Style TargetType="DataGridCell">
+                                    <Setter Property="ToolTip">
+                                        <Setter.Value>
+                                            <ToolTip Background="{Binding TooltipColor}" MaxWidth="300" Padding="0">
+                                                <StackPanel>
+                                                    <TextBlock Text="{Binding TooltipText}" FontSize="11" LineStackingStrategy="BlockLineHeight" LineHeight="13" TextWrapping="Wrap" Padding="8"/>
+                                                    <Image Source="{Binding Image}"/>
+                                                </StackPanel>
+                                            </ToolTip>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </DataGridTextColumn.CellStyle>
+                        </DataGridTextColumn>
                         <DataGridTemplateColumn Width="40">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
