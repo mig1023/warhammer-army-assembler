@@ -71,7 +71,7 @@
 					<Name>Destroyer of Eternities</Name>
 					<Points>70</Points>
 					<Only>Infantry</Only>
-					<AddToStrength>2</AddToStrength>
+					<Add To="Strength">2</Add>
 					<KillingBlow/>
 					<Lore>The bloodthirsty King Nekhesh first wielded this massive, ornate blade in battle, smashing his foes in all directions and severing limbs and heads with each sweeping blow. The blade destroys the very souls of those it slays, leaving them with no chance of reaching the afterlife. It was thus greatly feared in ancient Nehekhara, where to be killed with it was deemed a fate infinitely worse than death. The sword was also used to ritually execute captured foes of the King. Due to the power imbued through magical incantations, it can cleave through armor, muscle, and bone with ease</Lore>
 					<Description>Counts as a great weapon and has the Killing Blow special ability. The player may choose to attack normally with the Destroyer of Kternities or make a special attack. If the special attack is chosen, all enemy models that are touching the Tomb King take two automatic hits. These hits do benefit from the special rules for great weapons and Killing blow. If a target is riding a monster or a chariot, then both take two automatic hits. In a challenge, only the model engaged in the challenge counts as being in contact with the Tomb King</Description>
@@ -79,7 +79,7 @@
 				<Weapon>
 					<Name>Crook and Flail of Radiance</Name>
 					<Points>50</Points>
-					<AddToAttacks>1</AddToAttacks>
+					<Add To="Attacks">1</Add>
 					<HitFirst/>
 					<Lore>These gleaming, golden weapons represent the high status of the bearer, and all in his presence are humbled by the aura of majesty these weapons convey. Only the most powerful and influential leaders, from the Tomb Kings and the Tomb Princes, can bear these sacred symbols of rulership</Lore>
 					<Description>+1 Attack. Always strikes first. If another character has this ability, then resolve the order of attacks in Initiative order. Requires two hands</Description>
@@ -128,7 +128,7 @@
 				<Armour>
 					<Name>Armour of Eternity</Name>
 					<Points>70</Points>
-					<AddToArmour>6</AddToArmour>
+					<Add To="Armour">6</Add>
 					<Reroll>OpponentToWound</Reroll>
 					<Lore>Forged from the bronze of Mahrak and, cooled in the blood of the giant Lybrasian Scorpion and gilded with red and gold from Lahmia, the ancient breastplate known as the Armour of Eternity can turn aside even the strongest blow</Lore>
 					<Description>Enemy models must re-roll successful rolls to wound against the character. Counts as light armour</Description>
@@ -136,7 +136,7 @@
 				<Armour>
 					<Name>Scorpion Armour</Name>
 					<Points>40</Points>
-					<AddToArmour>5</AddToArmour>
+					<Add To="Armour">5</Add>
 					<Rule>The character can never suffer more than one wound due to combat resolution</Rule>
 					<Lore>The Scorpion Armour is decorated with designs of the Scorpion God, and is infused with protective energies</Lore>
 					<Description>The character can never suffer more than one wound due to combat resolution (after any modifiers for being within 12" of the Battle Standard, etc). If the wearer is with a unit, no more than half the wounds suffered due to combat resolution can be allocated against the character. For example, if the unit suffers four wounds, two wounds are lost by the unit and two wounds are allocated to the character of which one is ignored. Counts as heavy armour</Description>
@@ -144,15 +144,15 @@
 				<Armour>
 					<Name>Armour of the Ages</Name>
 					<Points>35</Points>
-					<AddToArmour>5</AddToArmour>
-					<AddToWounds>1</AddToWounds>
+					<Add To="Armour">5</Add>
+					<Add To="Wounds">1</Add>
 					<Lore>The Armour of the Ages imbues its wearer with the ability to continue fighting even when horrendously injured</Lore>
 					<Description>Counts as heavy armour. The bearer gains +1 Wound</Description>
 				</Armour>
 				<Shield>
 					<Name>Shield of Ptra</Name>
 					<Points>15</Points>
-					<AddToArmour>6</AddToArmour>
+					<Add To="Armour">6</Add>
 					<Rule>If the character makes an Armour save, any enemy unit in base contact reduces its WS to 1 for the remainder of the combat round</Rule>
 					<Lore>The mystical Shield of Ptra contains the energy of the Sun God Ptra, unleashed in a blinding flash of light</Lore>
 					<Description>Counts as a shield. If the bearer makes an Armour save, any enemy unit in base contact reduces its WS to 1 for the remainder of the combat round</Description>
@@ -162,7 +162,7 @@
 				<Additional>
 					<Name>Golden Ankhra</Name>
 					<Points>45</Points>
-					<AddToWard>4</AddToWard>
+					<Add To="Ward">4</Add>
 					<Lore>Shaped in the Nehekharan symbol of eternity, the talisman known as the Golden Ankhra surrounds the wearer with protective energies</Lore>
 					<Description>The model has a 4+ Ward save</Description>
 				</Additional>
@@ -368,12 +368,12 @@
 					</HandWeapon>
 					<Armour>
 						<Name>The Armour of Golden Magnificence</Name>
-						<AddToArmour>2</AddToArmour>
+						<Add To="Armour">2</Add>
 						<Rule>Armour saving is nerev modified to worse than a 4+, even of hit by attack that normally allows no Armour save</Rule>
 					</Armour>
 					<Armour>
 						<Name>The Crown of Nehekhara</Name>
-						<AddToWard>4</AddToWard>
+						<Add To="Ward">4</Add>
 						<Terror/>
 					</Armour>
 				</Equipments>
@@ -702,7 +702,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Huge ritual blades</Name>
-						<AddToStrength>2</AddToStrength>
+						<Add To="Strength">2</Add>
 						<HitLast/>
 					</HandWeapon>
 				</Equipments>
