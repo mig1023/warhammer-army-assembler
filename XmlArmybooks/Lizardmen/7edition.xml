@@ -89,7 +89,7 @@
 				<Weapon>
 					<Name>Blade of Revered Tzanuki</Name>
 					<Points>65</Points>
-					<AddToStrength>1</AddToStrength>
+					<Add To="Strength">1</Add>
 					<NoArmour/>
 					<Lore>Said to be the weapon wielded by the Old One Tzunki, this exquisitely crafted weapon is is unbreakable, and bas survived the most intense dragonfire unscathed, remaining icy cold to the touch afterwards. Such is its craftsmanship that it hums as it cuts through the air</Lore>
 					<Description>+1 Strenght. No armour saves are allowed against attacks made by the Blade of Revered Tzanuki</Description>
@@ -97,7 +97,7 @@
 				<Weapon>
 					<Name>Scimitar of the Sun Resplendent</Name>
 					<Points>50</Points>
-					<AddToAttacks>2</AddToAttacks>
+					<Add To="Attacks">2</Add>
 					<Lore>As light as a dagger, this curved blade invigorates the wielder with the power of the sun, fuelling his charge with fiery vigour</Lore>
 					<Description>The wielder of this blade has +2 Attacks</Description>
 				</Weapon>
@@ -154,8 +154,8 @@
 					<Name>Hide of the Cold Ones</Name>
 					<Only>Infantry</Only>
 					<Points>50</Points>
-					<AddToArmour>5</AddToArmour>
-					<AddToToughness>1</AddToToughness>
+					<Add To="Armour">5</Add>
+					<Add To="Toughness">1</Add>
 					<Fear/>
 					<Stupidity/>
 					<Lore>Only the toughest of Saurus Warriors can don the Hide of the Cold Ones, making his appearance fearsome to behold. However, the hide exudes a toxic slime that slowly poisons the user and dulls his mind</Lore>
@@ -165,23 +165,23 @@
 					<Name>Sacred Stegadon Helm</Name>
 					<Only>Skink</Only>
 					<Points>50</Points>
-					<AddToArmour>6</AddToArmour>
-					<AddToLeadership>1</AddToLeadership>
+					<Add To="Armour">6</Add>
+					<Add To="Leadership">1</Add>
 					<Lore>This mighty horned bone helmet is a potent symbol of power and respect. Those who wear it are accorded much reverence, for it is said that only those chosen by the Old Ones can place it on their heads without being struck down</Lore>
 					<Description>Confers +1 to the model's armour save, which may be combined with other armour as normal. In addition, the helm adds +1 to the model's Leadership</Description>
 				</Additional>
 				<Shield>
 					<Name>Shield of the Mirrored Pool</Name>
 					<Points>30</Points>
-					<AddToArmour>6</AddToArmour>
+					<Add To="Armour">6</Add>
 					<Rule>Magic missile reflected on 2+</Rule>
 					<Description>Shield. Any magic missile that strikes the bearer or any unit he is with is reflected on the roll of 2+ on a D6. If the spell is reflected, the results of the magic missile are resolved against the caster of the spell or the unit the character is with. This in turn cannot be dispelled</Description>
 				</Shield>
 				<Shield>
 					<Name>The Mainming Shield</Name>
 					<Points>30</Points>
-					<AddToArmour>6</AddToArmour>
-					<AddToAttacks>1</AddToAttacks>
+					<Add To="Armour">6</Add>
+					<Add To="Attacks">1</Add>
 					<Lore>The face of this shield is dark and reflective, and ripples spread from its centre when it deflects blows. Hostile enemy magic is absorbed by this ancient piece of armour, and may be rebounded back at the caster</Lore>
 					<Description>Shield. The Mainming Shield confres +1 Attack to the bearer. This additional attack is worked out using the base Strength of the wielder, and counts as magical</Description>
 				</Shield>
@@ -206,7 +206,7 @@
 					<Name>Divine Plaque of Protection</Name>
 					<Only>Slann</Only>
 					<Points>30</Points>
-					<AddToWard>2</AddToWard>
+					<Add To="Ward">2</Add>
 					<Lore>The Shield of the Old Ones grows more powerful under the influence of this glowing plaque, shining brightly and bursting into crackling sheets of lightning as it deflects incoming attacks</Lore>
 					<Description>The Slann's Shield of the Old Ones ward save in increased from 4+ to 2+ against the ranged attacks</Description>
 				</Arcane>
@@ -327,7 +327,7 @@
 				<Additional>
 					<Name>Glyph Necklace</Name>
 					<Points>30</Points>
-					<AddToWard>5</AddToWard>
+					<Add To="Ward">5</Add>
 					<Lore>An ancient and potent token of protection, this necklace wards off attacks, causing enemies to fumble their blows or their strikes to glance off scales</Lore>
 					<Description>The character wearing this gains a 5+ ward save</Description>
 				</Additional>
@@ -439,14 +439,14 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Cobra Mace of Mazdamundi</Name>
-						<AddToStrength>2</AddToStrength>
+						<Add To="Strength">2</Add>
 						<HitFirst/>
 						<PoisonAttack/>
 						<Rule>Destruction of magic weapons</Rule>
 					</HandWeapon>
 					<Armour>
 						<Name>Shield of the Old Ones</Name>
-						<AddToWard>4</AddToWard>
+						<Add To="Ward">4</Add>
 					</Armour>
 					<Banner>
 						<Name>Sun Standard of Hexoatl</Name>
@@ -473,7 +473,7 @@
 					</HandWeapon>
 					<HandWeapon>
 						<Name>Revered Spear of Tlanxla</Name>
-						<AddToStrength>1</AddToStrength>
+						<Add To="Strength">1</Add>
 						<MultiWounds>2</MultiWounds>
 					</HandWeapon>
 				</Equipments>
@@ -504,12 +504,12 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Blade of the Serpent's Tongue</Name>
-						<AddToAttacks>1</AddToAttacks>
+						<Add To="Attacks">1</Add>
 						<PoisonAttack/>
 					</HandWeapon>
 					<HandWeapon>
 						<Name>Plaque of Sotek</Name>
-						<AddToWard>5</AddToWard>
+						<Add To="Ward">5</Add>
 					</HandWeapon>
 				</Equipments>
 			</Lord>
@@ -573,7 +573,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Shield of the Old Ones</Name>
-						<AddToWard>4</AddToWard>
+						<Add To="Ward">4</Add>
 					</Armour>
 				</Equipments>
 			</Lord>
@@ -620,7 +620,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>The Star-Stone Mace</Name>
-						<AddToStrength>2</AddToStrength>
+						<Add To="Strength">2</Add>
 						<Rule>Enemy magic weapon count as mundane</Rule>
 					</HandWeapon>
 					<Armour>
@@ -630,7 +630,7 @@
 					</Armour>
 					<Armour>
 						<Name>Key to the Eternity Chamber</Name>
-						<AddToWard>5</AddToWard>
+						<Add To="Ward">5</Add>
 						<Rule>Enemy strikes last</Rule>
 					</Armour>
 				</Equipments>
@@ -653,12 +653,12 @@
 				<Equipments>
 					<Armour>
 						<Name>The Shield of Aeons</Name>
-						<AddToArmour>6</AddToArmour>
+						<Add To="Armour">6</Add>
 						<Rule>No benefits from charging Gar-Rok</Rule>
 					</Armour>
 					<HandWeapon>
 						<Name>The Mace of Ulamak</Name>
-						<AddToStrength>2</AddToStrength>
+						<Add To="Strength">2</Add>
 						<Reroll>ToHit</Reroll>
 					</HandWeapon>
 				</Equipments>
@@ -689,7 +689,7 @@
 					</Armour>
 					<Armour>
 						<Name>The Palanquin of Constellations</Name>
-						<AddToWard>5</AddToWard>
+						<Add To="Ward">5</Add>
 						<Rule>Place in skinks second rank</Rule>
 					</Armour>
 				</Equipments>
@@ -720,7 +720,7 @@
 						<Name>Mask of Heavens</Name>
 						<SubOpponentToHit>1</SubOpponentToHit>
 						<MagicResistance>1</MagicResistance>
-						<AddToWard>6</AddToWard>
+						<Add To="Ward">6</Add>
 					</Armour>
 				</Equipments>
 			</Hero>
@@ -1085,7 +1085,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Helberd</Name>
-						<AddToStrength>1</AddToStrength>
+						<Add To="Strength">1</Add>
 					</HandWeapon>
 					<HandWeapon/>
 					<LightArmour/>
