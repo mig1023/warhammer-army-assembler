@@ -88,8 +88,8 @@
 				<Armour>
 					<Name>The Helm of the Hunt</Name>
 					<Points>20</Points>
-					<AddToArmour>6</AddToArmour>
-					<AddToWeaponSkill>1</AddToWeaponSkill>
+					<Add To="Armour">6</Add>
+					<Add To="WeaponSkill">1</Add>
 					<Rule>Devastating Charge</Rule>
 					<Lore>Gwythraul, Lord of Nine Crags, is a celebratedfigure in Athel Loren, his deeds recounted as a mixture of history and wine-blurred myth. Bidden to journey within the Dreaming Wood by the goddess Lileath, he first travelled the twelve realms in search of enchanted treasures that would ensure survival in that Daemon-haunted land. In each realm, Gwythraul performed a quest of the ruler’s choosing, deeds ranging from the destruction ofBeastlord Brokar, to altering the course of the River Brilienne. Laden with magical heirlooms, Gwythraul at last entered the Dreaming Wood, and was lost for many generations. Only one item — the Helm of the Hunt, Orion’s last remnant ofa mortal life — survived Gwythraul’s journey, and only the bravest have dared don it thereafter. Legend counts Gwythraul’s quest as successful, though it is silent on its goal, and on the fate ofthe other treasures</Lore>
 					<Description>The wearer of the Helm of the Hunt counts his armour save as being one point higher than normal. Furthermore, the Helm of the Hunt grants the bearer the Devastating Charge special rule and +1 Weapon Skill on a turn in which he charges into combat</Description>
@@ -164,7 +164,7 @@
 				<Additional>
 					<Name>Helm of Discord</Name>
 					<Points>30</Points>
-					<AddToArmour>6</AddToArmour>
+					<Add To="Armour">6</Add>
 					<Test Bet="Pass" Context="Round" Profile="Leadership"/>
 					<Description>The wearer counts his armour save as being one point higher than normal. In addition, at the start of each Close Combat phase, choose an enemy character in base contact with the bearer or his unit. That character must immediately take a Leadership test. If the test is failed, the character succumbs to the helm's sibilant whispers of malice and jealousy. In this Close Combat phase, the victim cannot make attacks and is hit automatically</Description>
 				</Additional>
@@ -262,13 +262,13 @@
 					</RangeWeapon>
 					<Armour>
 						<Name>Cloak of Isha</Name>
-						<AddToWard>5</AddToWard>
+						<Add To="Ward">5</Add>
 						<MagicResistance>2</MagicResistance>
 						<Rule>At the start of each of your turns, roll a D6. On a score of 6, Orion regains a Wound lost earlier in the battle</Rule>
 					</Armour>
 					<Armour>
 						<Name>Horn of the Wild Hunt</Name>
-						<AddToWard>5</AddToWard>
+						<Add To="Ward">5</Add>
 						<Rule>At the start of each turn, the Horn of the Wild Hunt grants the Devastating Charge special rule to Orion, his unit, and all friendly Wood Elf units within 6"</Rule>
 					</Armour>
 				</Equipments>
@@ -398,17 +398,17 @@
 						<Name>Wizard Level 3</Name>
 						<Points>35</Points>
 						<Dependency/>
-						<AddToCast>1</AddToCast>
-						<AddToDispell>1</AddToDispell>
-						<AddToWizard>1</AddToWizard>
+						<Add To="Cast">1</Add>
+						<Add To="Dispell">1</Add>
+						<Add To="Wizard">1</Add>
 					</Option>
 					<Option>
 						<Name>Wizard Level 4</Name>
 						<Points>70</Points>
 						<Dependency/>
-						<AddToCast>2</AddToCast>
-						<AddToDispell>1</AddToDispell>
-						<AddToWizard>2</AddToWizard>
+						<Add To="Cast">2</Add>
+						<Add To="Dispell">1</Add>
+						<Add To="Wizard">2</Add>
 					</Option>
 					<Strangleroots Points="20"/>
 				</Options>
@@ -510,9 +510,9 @@
 					<Option>
 						<Name>Wizard Level 1</Name>
 						<Points>35</Points>
-						<AddToCast>1</AddToCast>
-						<AddToDispell>1</AddToDispell>
-						<AddToWizard>1</AddToWizard>
+						<Add To="Cast">1</Add>
+						<Add To="Dispell">1</Add>
+						<Add To="Wizard">1</Add>
 						<Rule>Use Lore of Shadow</Rule>
 					</Option>
 					<AsraiLongbow Points="5"/>
