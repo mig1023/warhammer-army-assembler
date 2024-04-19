@@ -436,17 +436,17 @@
 					<Option>
 						<Name>Wizard Level 3</Name>
 						<Points>50</Points>
-						<AddToWizard>1</AddToWizard>
-						<AddToCast>1</AddToCast>
-						<AddToDispell>1</AddToDispell>
+						<Add To="Wizard">1</Add>
+						<Add To="Cast">1</Add>
+						<Add To="Dispell">1</Add>
 						<Dependency/>
 					</Option>
 					<Option>
 						<Name>Wizard Level 4</Name>
 						<Points>85</Points>
-						<AddToWizard>2</AddToWizard>
-						<AddToCast>2</AddToCast>
-						<AddToDispell>1</AddToDispell>
+						<Add To="Wizard">2</Add>
+						<Add To="Cast">2</Add>
+						<Add To="Dispell">1</Add>
 						<Dependency/>
 					</Option>
 					<Option>
@@ -508,24 +508,24 @@
 					<Option>
 						<Name>Wizard Level 2</Name>
 						<Points>35</Points>
-						<AddToWizard>1</AddToWizard>
-						<AddToCast>1</AddToCast>
+						<Add To="Wizard">1</Add>
+						<Add To="Cast">1</Add>
 						<Dependency/>
 					</Option>
 					<Option>
 						<Name>Wizard Level 3</Name>
 						<Points>85</Points>
-						<AddToWizard>2</AddToWizard>
-						<AddToCast>2</AddToCast>
-						<AddToDispell>1</AddToDispell>
+						<Add To="Wizard">2</Add>
+						<Add To="Cast">2</Add>
+						<Add To="Dispell">1</Add>
 						<Dependency/>
 					</Option>
 					<Option>
 						<Name>Wizard Level 4</Name>
 						<Points>120</Points>
-						<AddToWizard>3</AddToWizard>
-						<AddToCast>3</AddToCast>
-						<AddToDispell>1</AddToDispell>
+						<Add To="Wizard">3</Add>
+						<Add To="Cast">3</Add>
+						<Add To="Dispell">1</Add>
 						<Dependency/>
 					</Option>
 					<Option>
@@ -546,7 +546,7 @@
 						<Name>Trapping of Nurgle</Name>
 						<Points>50</Points>
 						<MagicItemsPoints/>
-						<AddToArmour>4</AddToArmour>
+						<Add To="Armour">4</Add>
 						<Regeneration/>
 					</Option>
 					<NoxiousVapours Points="25"/>
@@ -580,24 +580,24 @@
 					<Option>
 						<Name>Wizard Level 2</Name>
 						<Points>35</Points>
-						<AddToWizard>1</AddToWizard>
-						<AddToCast>1</AddToCast>
+						<Add To="Wizard">1</Add>
+						<Add To="Cast">1</Add>
 						<Dependency/>
 					</Option>
 					<Option>
 						<Name>Wizard Level 3</Name>
 						<Points>85</Points>
-						<AddToWizard>2</AddToWizard>
-						<AddToCast>2</AddToCast>
-						<AddToDispell>1</AddToDispell>
+						<Add To="Wizard">2</Add>
+						<Add To="Cast">2</Add>
+						<Add To="Dispell">1</Add>
 						<Dependency/>
 					</Option>
 					<Option>
 						<Name>Wizard Level 4</Name>
 						<Points>120</Points>
-						<AddToWizard>3</AddToWizard>
-						<AddToCast>3</AddToCast>
-						<AddToDispell>1</AddToDispell>
+						<Add To="Wizard">3</Add>
+						<Add To="Cast">3</Add>
+						<Add To="Dispell">1</Add>
 						<Dependency/>
 					</Option>
 					<Option>
@@ -654,7 +654,7 @@
 					<HandWeapon>Hellblade</HandWeapon>
 					<Armour>
 						<Name>Cloak of Skulls</Name>
-						<AddToArmour>3</AddToArmour>
+						<Add To="Armour">3</Add>
 						<MagicResistance>2</MagicResistance>
 					</Armour>
 				</Equipments>
@@ -817,9 +817,9 @@
 						<Name>Wizard Level 1</Name>
 						<Points>50</Points>
 						<MagicItemsPoints/>
-						<AddToWizard>1</AddToWizard>
-						<AddToCast>1</AddToCast>
-						<AddToDispell>1</AddToDispell>
+						<Add To="Wizard">1</Add>
+						<Add To="Cast">1</Add>
+						<Add To="Dispell">1</Add>
 					</Option>
 					<StaffOfNurgle Points="50"/>
 					<NoxiousVapours Points="25"/>
