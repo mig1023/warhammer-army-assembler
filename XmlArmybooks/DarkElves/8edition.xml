@@ -109,7 +109,7 @@
 				<Additional>
 					<Name>The Black Amulet</Name>
 					<Points>60</Points>
-					<AddToWard>4</AddToWard>
+					<Add To="Ward">4</Add>
 					<Rule>Any successful ward save while fighting in a challenge inflicts one Wound on the bearer's opponent with no Armour saves</Rule>
 					<Lore>Carved from the tortured heartstone of a mountain drenched in Dark Magic, the Black Amulet is a lustrous polished stone of midnight hue. It is engraved with a single glowing rune, and into its ebony facets have been poured all the captured malice and spite that emanates from the chill lands of Naggaroth. To behold its darksome shape is to see despair made physical, it is to abandon even the merest memory of hope</Lore>
 					<Description>The wearer of the Black Amulet has a 4+ ward save. Furthermore, each time the bearer of the Black Amulet makes a successful ward save while fighting in a challenge, the Black Amulet inflicts one Wound on the bearer's opponent. Armour saves cannot be taken against Wounds d by the Black Amulet</Description>
@@ -180,7 +180,7 @@
 				<Additional>
 					<Name>Helm of Discord</Name>
 					<Points>30</Points>
-					<AddToArmour>6</AddToArmour>
+					<Add To="Armour">6</Add>
 					<Test Bet="Pass" Context="Round" Profile="Leadership"/>
 					<Lore>The battered Helm of Discord is a bronze helmet covered in withering symbols that both distract and unsettle any attacker</Lore>
 					<Description>The wearer counts his armour save as being one point higher than normal. In addition, at the start of each Close Combat phase, choose an enemy character in base contact with the bearer or his unit. That character must immediately take a Leadership test. If the test is failed, the character succumbs to the helm's sibilant whispers of malice and jealousy. In this Close Combat phase, the victim cannot make attacks and is hit automatically</Description>
@@ -285,14 +285,14 @@
 					</HandWeapon>
 					<Armour>
 						<Name>Armour of Midnight</Name>
-						<AddToArmour>5</AddToArmour>
-						<AddToWard>2</AddToWard>
+						<Add To="Armour">5</Add>
+						<Add To="Ward">2</Add>
 						<Rule>2+ ward save against non-magical attacks</Rule>
 						<NoMultiWounds/>
 					</Armour>
 					<Armour>
 						<Name>Supreme Spellshield</Name>
-						<AddToArmour>6</AddToArmour>
+						<Add To="Armour">6</Add>
 						<MagicResistance>2</MagicResistance>
 						<Rule>If a spell cast at Malekith is dispelled by a dispel roll, the caster suffers a D6 Strength 6 hits</Rule>
 					</Armour>
@@ -327,7 +327,7 @@
 					</Arcane>
 					<Arcane>
 						<Name>Thousand and One Dark Blessing</Name>
-						<AddToWard>4</AddToWard>
+						<Add To="Ward">4</Add>
 						<MagicResistance>2</MagicResistance>
 					</Arcane>
 					<Option>
@@ -393,10 +393,10 @@
 					<HeavyArmour/>
 					<Demon>
 						<Name>Tz'arkan</Name>
-						<AddToWeaponSkill>1</AddToWeaponSkill>
-						<AddToStrength>1</AddToStrength>
-						<AddToToughness>2</AddToToughness>
-						<AddToInitiative>2</AddToInitiative>
+						<Add To="WeaponSkill">1</Add>
+						<Add To="Strength">1</Add>
+						<Add To="Toughness">2</Add>
+						<Add To="Initiative">2</Add>
 						<Rule>Each time Malus Darkblade makes a To Hit roll of 1, a friendly model in base contact suffers an automatic hit at Malus Darkblade's Strength that must be re-rolled if it fails To Wound. Armour saves cannot be taken against Wounds Malus causes in this manner</Rule>
 					</Demon>
 				</Equipments>
@@ -515,7 +515,7 @@
 					<MurderousProwess/>
 					<PoisonAttack/>
 					<KillingBlow/>
-					<AddToWound>1</AddToWound>
+					<Add To="Wound">1</Add>
 					<HateHighElves/>
 					<Original>
 						<Rule>Can choose to deploy 'hidden' within another friendly Dark Elf infantry unit, but not Harpies</Rule>
@@ -560,11 +560,11 @@
 					<HeavyArmour/>
 					<Armour>
 						<Name>Sea Dragon cloak</Name>
-						<AddToArmour>5</AddToArmour>
+						<Add To="Armour">5</Add>
 					</Armour>
 					<Armour>
 						<Name>Helm of the Kraken</Name>
-						<AddToArmour>6</AddToArmour>
+						<Add To="Armour">6</Add>
 						<Regeneration/>
 						<Terror/>
 					</Armour>
@@ -587,11 +587,11 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Crimson Death</Name>
-						<AddToStrength>2</AddToStrength>
+						<Add To="Strength">2</Add>
 					</HandWeapon>
 					<Armour>
 						<Name>The Armour of Grief</Name>
-						<AddToArmour>5</AddToArmour>
+						<Add To="Armour">5</Add>
 						<Rule>Each time a model makes a successful To Hit roll against Kouran Darkhand in close combat, the model that struck the blow immediately suffers a Strength 5 hit</Rule>
 					</Armour>
 				</Equipments>
@@ -614,12 +614,12 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>The First Draich</Name>
-						<AddToStrength>2</AddToStrength>
+						<Add To="Strength">2</Add>
 						<HitLast/>
 					</HandWeapon>
 					<Armour>
 						<Name>Heavy armour</Name>
-						<AddToArmour>5</AddToArmour>
+						<Add To="Armour">5</Add>
 					</Armour>
 				</Equipments>
 			</Hero>
@@ -739,7 +739,7 @@
 						<Name>Manbane</Name>
 						<Dependency/>
 						<Points>20</Points>
-						<AddToWound>1</AddToWound>
+						<Add To="Wound">1</Add>
 					</Option>
 				</Options>
 				<Equipments>
@@ -789,7 +789,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Scaly skin</Name>
-						<AddToArmour>3</AddToArmour>
+						<Add To="Armour">3</Add>
 					</Armour>
 				</Equipments>
 			</Mount>
@@ -807,7 +807,7 @@
 				<Options>
 					<Option>
 						<Name>Iron Hard Skin</Name>
-						<AddToArmour>4</AddToArmour>
+						<Add To="Armour">4</Add>
 						<Points>20</Points>
 					</Option>
 					<Option>
@@ -831,7 +831,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Scaly skin</Name>
-						<AddToArmour>3</AddToArmour>
+						<Add To="Armour">3</Add>
 					</Armour>
 				</Equipments>
 			</Mount>
@@ -992,7 +992,7 @@
 					<LightArmour/>
 					<Armour>
 						<Name>Sea Dragon cloak</Name>
-						<AddToArmour>5</AddToArmour>
+						<Add To="Armour">5</Add>
 					</Armour>
 				</Equipments>
 				<Options>
