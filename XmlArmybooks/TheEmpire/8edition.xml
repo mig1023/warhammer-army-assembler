@@ -111,14 +111,14 @@
 					<Name>Armour of Meteoric Iron</Name>
 					<Points>50</Points>
 					<ArmourTo>1</ArmourTo>
-					<AddToWard>6</AddToWard>
+					<Add To="Ward">6</Add>
 					<Lore>Forged from a rare star-metal, it is said that no mortal blade can pierce the Armour of Meteoric Iron. Sword strikes, arrows, and even cannonballs, have all rebounded harmlessly against the Armour of Meteoric Iron, the Twin-Tailed Comet emblazoned on its breastplate not so much as scratched by the blows</Lore>
 					<Description>The Armour of Meteoric Iron grants the wearer both a 1+ armour save (that cannot be improved by any means) and a 6+ ward save</Description>
 				</Armour>
 				<Additional>
 					<Name>Helm of the Skavenslayer</Name>
 					<Points>15</Points>
-					<AddToArmour>6</AddToArmour>
+					<Add To="Armour">6</Add>
 					<Fear/>
 					<Rule>Causes Terror in all models in a Skaven army</Rule>
 					<Lore>The legendary helm of Count Mandred Skavenslayer was crafted from the skull of the Skaven warlord who fell at the Battle of the Howling Hills. Even after Mandred's assassination at the hands of the foul ratmen several decades later, it is said that a portion of his vengeful spirit lived on within the macabre helm, filling those who gaze upon its gruesome visage with fear and dread. Such is its reputation amongst the vile rat-spawn that the mere sight of the Skavenslayer's Helm drives them to frenetic action as they battle their instinctive fear and loathing of the object in equal measure</Lore>
@@ -128,7 +128,7 @@
 					<Name>The White Cloak of Ulric</Name>
 					<Points>50</Points>
 					<SubOpponentToHit>1</SubOpponentToHit>
-					<AddToWard>5</AddToWard>
+					<Add To="Ward">5</Add>
 					<Rule>2+ Ward save against Flaming Attacks</Rule>
 					<Lore>This cloak is made from the pelt of a ferocious white wolf of Middenland and was blessed by the High Priest of Ulric. The White Cloak is thus imbued with the power of the god of winter and a magical aura of frost protects the wearer, freezing the sword arms of enemies and shielding him from the hottest flames</Lore>
 					<Description>Enemies in base contact with the wearer are at -1 to all rolls To Hit. In addition, the wearer has a 5+ ward save, increasing to a 2+ ward save against Wounds caused by Flaming Attacks</Description>
@@ -192,7 +192,7 @@
 				<Additional>
 					<Name>Helm of Discord</Name>
 					<Points>30</Points>
-					<AddToArmour>6</AddToArmour>
+					<Add To="Armour">6</Add>
 					<Test Bet="Pass" Context="Round" Profile="Leadership"/>
 					<Description>The wearer counts his armour save as being one point higher than normal. In addition, at the start of each Close Combat phase, choose an enemy character in base contact with the bearer or his unit. That character must immediately take a Leadership test. If the test is failed, the character succumbs to the helm's sibilant whispers of malice and jealousy. In this Close Combat phase, the victim cannot make attacks and is hit automatically</Description>
 				</Additional>
@@ -282,7 +282,7 @@
 					<FullPlateArmour/>
 					<Armour>
 						<Name>The Silver Seal</Name>
-						<AddToWard>4</AddToWard>
+						<Add To="Ward">4</Add>
 						<MagicResistance>3</MagicResistance>
 					</Armour>
 				</Equipments>
@@ -421,7 +421,7 @@
 					</HandWeapon>
 					<HandWeapon>
 						<Name>Hand weapon</Name>
-						<AddToAttacks>1</AddToAttacks>
+						<Add To="Attacks">1</Add>
 					</HandWeapon>
 					<FullPlateArmour/>
 					<Armour>
@@ -463,7 +463,7 @@
 							<On>Warhorse</On>
 						</Dependencies>
 						<Points>6</Points>
-						<AddToArmour>6</AddToArmour>
+						<Add To="Armour">6</Add>
 					</Option>
 				</Options>
 			</Lord>
@@ -486,7 +486,7 @@
 					<Mount Name="Warhorse" Points="18"/>
 					<Option>
 						<Name>Barding for Warhorse</Name>
-						<AddToArmour>6</AddToArmour>
+						<Add To="Armour">6</Add>
 						<Dependencies>
 							<On>Warhorse</On>
 						</Dependencies>
@@ -612,7 +612,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Massive warhammer</Name>
-						<AddToStrength>2</AddToStrength>
+						<Add To="Strength">2</Add>
 						<HitLast/>
 					</HandWeapon>
 					<HeavyArmour/>
@@ -828,7 +828,7 @@
 				<Name>Celestail Hurricanum</Name>
 				<Profile M='8' WS='3' BS='3' S='5' T='5' W='5' I='3' A='1' Ld='7' AS='5'/>
 				<SpecialRules>
-					<AddToHit>1</AddToHit>
+					<Add To="Hit">1</Add>
 					<LargeTarget/>
 					<Original>
 						<Rule>Locus of Azyr</Rule>
@@ -850,7 +850,7 @@
 				<Equipments>
 					<Arcane>
 						<Rule>All friendly units within 6" have a 6+ Ward save</Rule>
-						<AddToWard>6</AddToWard>
+						<Add To="Ward">6</Add>
 					</Arcane>
 				</Equipments>
 			</Mount>
@@ -1102,7 +1102,7 @@
 					<Option>
 						<Name>Knights of the Inner Circle</Name>
 						<PointsPerModel>3</PointsPerModel>
-						<AddToStrength>1</AddToStrength>
+						<Add To="Strength">1</Add>
 						<OnlyOneInArmy/>
 					</Option>
 					<Command>
@@ -1156,7 +1156,7 @@
 					<Option>
 						<Name>Halberd</Name>
 						<Dependency/>
-						<AddToStrength>1</AddToStrength>
+						<Add To="Strength">1</Add>
 					</Option>
 					<Command>
 						<Champion Points="10" Name="Preceptor"/>
@@ -1267,7 +1267,7 @@
 					<Option>
 						<Name>Barding for Warhorse</Name>
 						<PointsPerModel>1</PointsPerModel>
-						<AddToArmour>6</AddToArmour>
+						<Add To="Armour">6</Add>
 					</Option>
 					<Command>
 						<Champion Points="10" Name="Sharpshooter"/>
@@ -1385,7 +1385,7 @@
 				<Lore>Celestial Hurricanum - similar to the Luminark of Hysh, this construct is of similar design but hails from the Celestial Wizards of the Celestial College. This Altar emits powerful energies from the Winds of Azyr, giving the wizard controlling it with unrivalled power over the heavens, where lightning bolts and meteorites crash towards their foes below in a hurricane of violence. The Orb of Sorcery that sits at the centre of the construct gathers these energies around it, eventually growing from a steady breeze to a mighty whirling hurricane. Such power is obsessively kept within the Celestial College, and it is rare indeed for these Altars to be deployed in battle.</Lore>
 				<Profile M='8' WS='3' BS='3' S='5' T='5' W='5' I='3' A='1' Ld='7' AS='5'/>
 				<SpecialRules>
-					<AddToHit>1</AddToHit>
+					<Add To="Hit">1</Add>
 					<LargeTarget/>
 					<Original>
 						<Rule>Locus of Azyr</Rule>
@@ -1411,7 +1411,7 @@
 				</SpecialRules>
 				<Equipments>
 					<Arcane>
-						<AddToWard>6</AddToWard>
+						<Add To="Ward">6</Add>
 						<Rule>All friendly units within 6" have a 6+ Ward save</Rule>
 					</Arcane>
 				</Equipments>
