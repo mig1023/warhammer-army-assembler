@@ -219,7 +219,7 @@
 				<Powers>
 					<Name>Scaled Skin</Name>
 					<Points>20</Points>
-					<AddToArmour>5</AddToArmour>
+					<Add To="Armour">5</Add>
 					<Lore>The champions skin is covered with a thousand reptilian scales, each as tough as Dragonhide</Lore>
 					<Description>The character has the Scaly Skin (5+) special rule</Description>
 				</Powers>
@@ -329,7 +329,7 @@
 					<Points>25</Points>
 					<HitFirst/>
 					<Stupidity/>
-					<AddToArmour>6</AddToArmour>
+					<Add To="Armour">6</Add>
 					<Lore>This helm is covered with eyeballs that stare into the world as it was, as it is, and as it shall once be. The stream of visions can overwhelm the bearer, but those who can sift through the bombardment of images are truly terrifying foes. They attack with preternatural reflexes, foreseeing their foe’s actions and striking them down before they can even raise their swords. The only vision the helm never reveals is the moment of its wearer’s demise, making it impossible for the champion to avoid such a fate. Upon the wearer’s death, a new boil appears on the helm’s surface. In time this bursts, revealing a new eyeball — the exact match of the previous owner - to join the helm’s ever-growing collection</Lore>
 					<Description>The bearer of the Helm of Many Eyes counts his armour save as being one higher than normal. In addition, the bearer has both the Always Strikes First and Stupidity special rules</Description>
 				</Additional>
@@ -409,7 +409,7 @@
 				<Additional>
 					<Name>Helm of Discord</Name>
 					<Points>30</Points>
-					<AddToArmour>6</AddToArmour>
+					<Add To="Armour">6</Add>
 					<Test Bet="Pass" Context="Round" Profile="Leadership"/>
 					<Description>The wearer counts his armour save as being one point higher than normal. In addition, at the start of each Close Combat phase, choose an enemy character in base contact with the bearer or his unit. That character must immediately take a Leadership test. If the test is failed, the character succumbs to the helm's sibilant whispers of malice and jealousy. In this Close Combat phase, the victim cannot make attacks and is hit automatically</Description>
 				</Additional>
@@ -514,7 +514,7 @@
 					</Armour>
 					<Armour>
 						<Name>The Eye of Sheerian</Name>
-						<AddToWard>3</AddToWard>
+						<Add To="Ward">3</Add>
 					</Armour>
 					<Shield/>
 				</Equipments>
@@ -543,7 +543,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Mark of Tzeentch</Name>
-						<AddToWard>6</AddToWard>
+						<Add To="Ward">6</Add>
 					</Armour>
 				</Equipments>
 			</Lord>
@@ -592,11 +592,11 @@
 					<HandWeapon>
 						<Name>Sliverslash</Name>
 						<HitFirst/>
-						<AddToAttacks>2</AddToAttacks>
+						<Add To="Attacks">2</Add>
 					</HandWeapon>
 					<Armour>
 						<Name>Auric Armour</Name>
-						<AddToArmour>2</AddToArmour>
+						<Add To="Armour">2</Add>
 						<Regeneration/>
 					</Armour>
 					<Shield/>
@@ -629,12 +629,12 @@
 					</HandWeapon>
 					<Armour>
 						<Name>The Scarlet Armour</Name>
-						<AddToArmour>3</AddToArmour>
+						<Add To="Armour">3</Add>
 						<Rule>Armour reduces the Strength of any attack against Valkia by 1 (to a minimum of 1)</Rule>
 					</Armour>
 					<Armour>
 						<Name>Daemonshield</Name>
-						<AddToArmour>6</AddToArmour>
+						<Add To="Armour">6</Add>
 						<Rule>All enemy models in base contact with Valkia at the beginning of each Close Combat phase lose an Attack (to a minimum of 1)</Rule>
 					</Armour>
 				</Equipments>
@@ -661,7 +661,7 @@
 					<ChaosArmour/>
 					<Armour>
 						<Name>Mark of Tzeentch</Name>
-						<AddToWard>6</AddToWard>
+						<Add To="Ward">6</Add>
 					</Armour>
 				</Equipments>
 			</Lord>
@@ -694,7 +694,7 @@
 						<Name>Chaos Steed</Name>
 						<Points>24</Points>
 						<Mount/>
-						<AddToArmour>6</AddToArmour>
+						<Add To="Armour">6</Add>
 					</Option>
 					<Mount Name="Steed of Slaanesh" Points="25" Dependencies="On: Mark of Slaanesh"/>
 					<Mount Name="Disc of Tzeentch" Points="30" Dependencies="On: Mark of Tzeentch"/>
@@ -708,7 +708,7 @@
 						<Dependencies>
 							<On>Mark of Khorne</On>
 						</Dependencies>
-						<AddToArmour>5</AddToArmour>
+						<Add To="Armour">5</Add>
 					</Option>
 					<Mount Name="Manticore" Points="150"/>
 					<Mount Name="Chaos Dragon" Points="330"/>
@@ -738,7 +738,7 @@
 						<Name>Chaos Steed</Name>
 						<Points>24</Points>
 						<Mount/>
-						<AddToArmour>6</AddToArmour>
+						<Add To="Armour">6</Add>
 					</Option>
 					<Mount Name="Steed of Slaanesh" Points="25" Dependencies="On: Mark of Slaanesh"/>
 					<Mount Name="Disc of Tzeentch" Points="30" Dependencies="On: Mark of Tzeentch"/>
@@ -874,7 +874,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Brass Collar of Khorne</Name>
-						<AddToWard>6</AddToWard>
+						<Add To="Ward">6</Add>
 						<MagicResistance>3</MagicResistance>
 					</Armour>
 					<Armour>
@@ -911,7 +911,7 @@
 						<Name>Chaos Steed</Name>
 						<Points>16</Points>
 						<Mount/>
-						<AddToArmour>6</AddToArmour>
+						<Add To="Armour">6</Add>
 					</Option>
 					<Mount Name="Steed of Slaanesh" Points="25" Dependencies="On: Mark of Slaanesh"/>
 					<Mount Name="Disc of Tzeentch" Points="30" Dependencies="On: Mark of Tzeentch"/>
@@ -925,7 +925,7 @@
 						<Dependencies>
 							<On>Mark of Khorne</On>
 						</Dependencies>
-						<AddToArmour>5</AddToArmour>
+						<Add To="Armour">5</Add>
 					</Option>
 					<BattleStandardBearer Points="25"/>
 				</Options>
@@ -954,7 +954,7 @@
 						<Name>Chaos Steed</Name>
 						<Points>16</Points>
 						<Mount/>
-						<AddToArmour>6</AddToArmour>
+						<Add To="Armour">6</Add>
 					</Option>
 					<Mount Name="Steed of Slaanesh" Points="25" Dependencies="On: Mark of Slaanesh"/>
 					<Mount Name="Disc of Tzeentch" Points="30" Dependencies="On: Mark of Tzeentch"/>
@@ -981,7 +981,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Scaly skin</Name>
-						<AddToArmour>3</AddToArmour>
+						<Add To="Armour">3</Add>
 					</Armour>
 				</Equipments>
 			</Mount>
