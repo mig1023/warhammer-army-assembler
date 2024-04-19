@@ -152,16 +152,16 @@
 					<Name>Bashas Axe of Stunty Smashin'</Name>
 					<Points>50</Points>
 					<ArmourPiercing>2</ArmourPiercing>
-					<AddToStrength>1</AddToStrength>
-					<AddToAttacks>1</AddToAttacks>
+					<Add To="Strength">1</Add>
+					<Add To="Attacks">1</Add>
 					<Lore>Basha's Axe of Stunty Smashin' is a weapon battered and stained through long years of hard use. While it shows evidence of many rough 'improvements', the core of its broad-headed blade and cutting edge is of a pure and untarnished metal, much like the expertly wrought master weapons forged by the Dwarf Runesmiths at the height of their powers. The rest of the chunky weapon is bash and cobbled together from other metals. It is a blade that slices armour with its razor edge, before punching through it with its hefty bulk. Bathed in the spiteful magics of the Night Goblins, it is a weapon to bring home all their curses upon the stunties</Lore>
 					<Description>The wielder of this weapon has the Armour Piercing special rule, and adds +1 to both his Attacks and Strength in close combat. This bonus is doubled if the wielder is in base contact with a model of Dwarfs. In addition, the wielder causes Fear in models of Dwarf army</Description>
 				</Weapon>
 				<Armour>
 					<Name>Armour of Gork</Name>
 					<Points>50</Points>
-					<AddToArmour>5</AddToArmour>
-					<AddToToughness>1</AddToToughness>
+					<Add To="Armour">5</Add>
+					<Add To="Toughness">1</Add>
 					<ImpactHit>D6</ImpactHit>
 					<Lore>Bashed together out of the blackest of metals underground, together with the reforged suits of slain stunties, this armour is thick and heavy. It wasn't until the blessing of Gork was bestowed upon it that the suit of armour became so formidable. Now, imbued with the brutal and aggressive spirit of the most ruthless and fightiest of Greenskin gods, it is fit for a king amongst Warbosses. The Armour of Gork gives its wearer an iron belligerence that steels his resolve, even as it hardens his hide</Lore>
 					<Description>Heavy Armour. The wearer has +D3 Toughness. Roll to determine the armour's effectiveness the first time the wearer is hit each turn, and use the result for the rest of the turn. In addition, the wearer has the Impact Hits (D6) special rule</Description>
@@ -170,14 +170,14 @@
 					<Name>Lucky Shrunken Head</Name>
 					<Points>50</Points>
 					<Only>Orc</Only>
-					<AddToWard>5</AddToWard>
+					<Add To="Ward">5</Add>
 					<Lore>Small and gruesomely shriveled, like some over-ripened fruit, only a powerful enemy can be turned into the right kind of Shrunken Head. There are few charms as potent, but it can be made stronger still by the application of the correct rituals, shuffling dances and chants. Orcs have known this magic for as long as there have been Orcs. Some have forgotten, but the Savage Orc Shamans have not. When the crude stitches that keep the mouth sewn shut quiver, and the long-closed eyelids twitch, then the spell has worked. It is no minor charm, but a Lucky Shrunken Head. The old ways are best</Lore>
 					<Description>The Lucky Shrunken Head can only be taken by a Savage Ore Shaman or Great Shaman. It increases the Warpaint save of the bearer and any unit he joins from 6+ to 5+. If Wurrzag is in the unit, his Warpaint save is increased to 4+</Description>
 				</Arcane>
 				<Banner>
 					<Name>Morks War Banner</Name>
 					<Points>100</Points>
-					<AddToWard>5</AddToWard>
+					<Add To="Ward">5</Add>
 					<Rule>A unit with Mork's War Banner has Magic Resistance(D6). Roll to determine the effectiveness of the banner the first time the unit needs to take any saving throws against spells in a turn. The result is used for all such saves made that turn</Rule>
 					<Lore>After powerful rituals and plenty of Shaman mumbo-jumbo, this banner was left leaning against an idol of Mork. There, under the totem's stony gaze, the banner has absorbed a fraction of the great Mork's mighty and indomitable spirit. This great green blessing drifts over and protects any that march under the banner's aura. The puny spells of enemy Wizards will be confounded - 'outclevered' by Mork's cunning. So strong is Mork that the enchanted weapons and items of foes become feeble in his merest presence. Good ol' Mork</Lore>
 					<Description>A unit with Mork's War Banner has Magic Resistance (D6). Roll to determine the effectiveness of the banner the first time the unit needs to take any saving throws against spells in a turn. The result is used for all such saves made that turn. In addition, all magic items belonging to enemy models that are in base contact with the bearer do not work (if an enemy in base contact has an item that would stop the banner from working, then roll off to see which item takes precedence)</Description>
@@ -237,7 +237,7 @@
 				<Additional>
 					<Name>Helm of Discord</Name>
 					<Points>30</Points>
-					<AddToArmour>6</AddToArmour>
+					<Add To="Armour">6</Add>
 					<Test Bet="Pass" Context="Round" Profile="Leadership"/>
 					<Description>The wearer counts his armour save as being one point higher than normal. In addition, at the start of each Close Combat phase, choose an enemy character in base contact with the bearer or his unit. That character must immediately take a Leadership test. If the test is failed, the character succumbs to the helm's sibilant whispers of malice and jealousy. In this Close Combat phase, the victim cannot make attacks and is hit automatically</Description>
 				</Additional>
@@ -355,8 +355,8 @@
 					</HandWeapon>
 					<Armour>
 						<Name>Azhag's 'Ard Armour</Name>
-						<AddToArmour>5</AddToArmour>
-						<AddToWard>5</AddToWard>
+						<Add To="Armour">5</Add>
+						<Add To="Ward">5</Add>
 					</Armour>
 					<Crown>
 						<Name>The Crown of Sorcery</Name>
@@ -381,13 +381,13 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Gitsnik</Name>
-						<AddToStrength>2</AddToStrength>
+						<Add To="Strength">2</Add>
 						<HitFirst/>
 					</HandWeapon>
 					<Armour>
 						<Name>Blood-forged Armour</Name>
-						<AddToArmour>1</AddToArmour>
-						<AddToWard>5</AddToWard>
+						<Add To="Armour">1</Add>
+						<Add To="Ward">5</Add>
 					</Armour>
 				</Equipments>
 			</Lord>
@@ -418,7 +418,7 @@
 					</Armour>
 					<Armour>
 						<Name>Warpaint of Wurrzag</Name>
-						<AddToWard>5</AddToWard>
+						<Add To="Ward">5</Add>
 					</Armour>
 				</Equipments>
 			</Lord>
@@ -440,13 +440,13 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Axe of Grom</Name>
-						<AddToStrength>2</AddToStrength>
+						<Add To="Strength">2</Add>
 						<KillingBlow/>
 						<Rule>Killing Blow on a 5+ against Elves</Rule>
 					</HandWeapon>
 					<Armour>
 						<Name>Lucky banner</Name>
-						<AddToWard>5</AddToWard>
+						<Add To="Ward">5</Add>
 					</Armour>
 				</Equipments>
 			</Lord>
@@ -517,7 +517,7 @@
 					<Choppa/>
 					<Armour>
 						<Name>Warpaint</Name>
-						<AddToWard>6</AddToWard>
+						<Add To="Ward">6</Add>
 					</Armour>
 				</Equipments>
 				<Options>
@@ -547,7 +547,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>A huge array of weapons</Name>
-						<AddToStrength>2</AddToStrength>
+						<Add To="Strength">2</Add>
 						<Flail/>
 					</HandWeapon>
 					<HeavyArmour/>
@@ -645,7 +645,7 @@
 					<Choppa/>
 					<Armour>
 						<Name>Warpaint</Name>
-						<AddToWard>6</AddToWard>
+						<Add To="Ward">6</Add>
 					</Armour>
 				</Equipments>
 				<Options>
@@ -715,7 +715,7 @@
 					</RangeWeapon>
 					<Armour>
 						<Name>Stinky Pelt</Name>
-						<AddToArmour>4</AddToArmour>
+						<Add To="Armour">4</Add>
 					</Armour>
 				</Equipments>
 			</Hero>
@@ -787,7 +787,7 @@
 					<Choppa/>
 					<Armour>
 						<Name>Warpaint</Name>
-						<AddToWard>6</AddToWard>
+						<Add To="Ward">6</Add>
 					</Armour>
 				</Equipments>
 				<Options>
@@ -817,7 +817,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>A huge array of weapons</Name>
-						<AddToStrength>2</AddToStrength>
+						<Add To="Strength">2</Add>
 						<Flail/>
 					</HandWeapon>
 					<HeavyArmour/>
@@ -916,7 +916,7 @@
 					<Choppa/>
 					<Armour>
 						<Name>Warpaint</Name>
-						<AddToWard>6</AddToWard>
+						<Add To="Ward">6</Add>
 					</Armour>
 				</Equipments>
 				<Options>
@@ -1131,8 +1131,8 @@
 					<Option>
 						<Name>Big'Uns</Name>
 						<PointsPerModel>2</PointsPerModel>
-						<AddToWeaponSkill>1</AddToWeaponSkill>
-						<AddToStrength>1</AddToStrength>
+						<Add To="WeaponSkill">1</Add>
+						<Add To="Strength">1</Add>
 						<OnlyOneInArmy/>
 						<MagicItems Points="50" Type="Unit"/>
 					</Option>
@@ -1188,7 +1188,7 @@
 					<Choppa/>
 					<Armour>
 						<Name>Warpaint</Name>
-						<AddToWard>6</AddToWard>
+						<Add To="Ward">6</Add>
 					</Armour>
 				</Equipments>
 				<Options>
@@ -1330,7 +1330,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>A huge array of weapons</Name>
-						<AddToStrength>2</AddToStrength>
+						<Add To="Strength">2</Add>
 						<Flail/>
 					</HandWeapon>
 					<HeavyArmour/>
@@ -1390,7 +1390,7 @@
 					<Choppa/>
 					<Armour>
 						<Name>Warpaint</Name>
-						<AddToWard>6</AddToWard>
+						<Add To="Ward">6</Add>
 					</Armour>
 				</Equipments>
 				<Options>
