@@ -214,14 +214,14 @@
 					<Name>Impenetrable Hide</Name>
 					<Points>75</Points>
 					<RandomGroup>Exalted Gifts</RandomGroup>
-					<AddToToughness>2</AddToToughness>
+					<Add To="Toughness">2</Add>
 					<Description>The Daemon has +2 Toughness</Description>
 				</Additional>
 				<Additional>
 					<Name>Massive Might</Name>
 					<Points>75</Points>
 					<RandomGroup>Exalted Gifts</RandomGroup>
-					<AddToStrength>3</AddToStrength>
+					<Add To="Strength">3</Add>
 					<Description>The Daemon has +3 Strength</Description>
 				</Additional>
 				<Additional>
@@ -235,7 +235,7 @@
 					<Name>Corpulence</Name>
 					<Points>50</Points>
 					<RandomGroup>Greater Gifts</RandomGroup>
-					<AddToWounds>2</AddToWounds>
+					<Add To="Wounds">2</Add>
 					<Description>The Daemon has +1 Wound</Description>
 				</Additional>
 				<Additional>
@@ -262,7 +262,7 @@
 					<Name>Unholy Flurry</Name>
 					<Points>50</Points>
 					<RandomGroup>Greater Gifts</RandomGroup>
-					<AddToAttacks>2</AddToAttacks>
+					<Add To="Attacks">2</Add>
 					<Description>The Daemon has +2 Attacks</Description>
 				</Additional>
 				<Weapon>
@@ -341,7 +341,7 @@
 				<Weapon>
 					<Name>Blade of Blood</Name>
 					<Points>50</Points>
-					<AddToStrength>1</AddToStrength>
+					<Add To="Strength">1</Add>
 					<KillingBlow/>
 					<Lore>The weighty Blade of Blood trembles with a portion of Khorne's boundless rage; its strike crushes not only flesh and armour, but the victim's very soul as well</Lore>
 					<Description>Attacks made with the Blade of Blood are resolved at +1 Strength. They also have the Killing Blow special rule</Description>
@@ -425,7 +425,7 @@
 				<Additional>
 					<Name>Helm of Discord</Name>
 					<Points>30</Points>
-					<AddToArmour>6</AddToArmour>
+					<Add To="Armour">6</Add>
 					<Test Bet="Pass" Context="Round" Profile="Leadership"/>
 					<Description>The wearer counts his armour save as being one point higher than normal. In addition, at the start of each Close Combat phase, choose an enemy character in base contact with the bearer or his unit. That character must immediately take a Leadership test. If the test is failed, the character succumbs to the helm's sibilant whispers of malice and jealousy. In this Close Combat phase, the victim cannot make attacks and is hit automatically</Description>
 				</Additional>
@@ -607,17 +607,17 @@
 					<Option>
 						<Name>Wizard Level 3</Name>
 						<Points>35</Points>
-						<AddToWizard>1</AddToWizard>
-						<AddToCast>1</AddToCast>
-						<AddToDispell>1</AddToDispell>
+						<Add To="Wizard">1</Add>
+						<Add To="Cast">1</Add>
+						<Add To="Dispell">1</Add>
 						<Dependency/>
 					</Option>
 					<Option>
 						<Name>Wizard Level 4</Name>
 						<Points>70</Points>
-						<AddToWizard>2</AddToWizard>
-						<AddToCast>2</AddToCast>
-						<AddToDispell>1</AddToDispell>
+						<Add To="Wizard">2</Add>
+						<Add To="Cast">2</Add>
+						<Add To="Dispell">1</Add>
 						<Dependency/>
 					</Option>
 				</Options>
@@ -730,7 +730,7 @@
 					</HandWeapon>
 					<Armour>
 						<Name>Cloak of Skulls</Name>
-						<AddToArmour>4</AddToArmour>
+						<Add To="Armour">4</Add>
 					</Armour>
 				</Equipments>
 				<Options>
@@ -894,9 +894,9 @@
 						<Name>Wizard Level 1</Name>
 						<Points>35</Points>
 						<MagicItemsPoints/>
-						<AddToWizard>1</AddToWizard>
-						<AddToCast>1</AddToCast>
-						<AddToDispell>1</AddToDispell>
+						<Add To="Wizard">1</Add>
+						<Add To="Cast">1</Add>
+						<Add To="Dispell">1</Add>
 					</Option>
 					<Virulence Points="40" Dependency="Skill"/>
 					<Fecundity Points="45" Dependency="Skill"/>
