@@ -104,8 +104,8 @@
 				<Powers>
 					<Name>Dark Acolyte</Name>
 					<Points>30</Points>
-					<AddToCast>1</AddToCast>
-					<AddToWizard>1</AddToWizard>
+					<Add To="Cast">1</Add>
+					<Add To="Wizard">1</Add>
 					<Lore>All Undead creatures are steeped in Dark Magic, and Vampires are no different. Some increase their powers through years of study and practise</Lore>
 					<Description>This Vampire has an additional Magic level</Description>
 				</Powers>
@@ -141,8 +141,8 @@
 				<Powers>
 					<Name>Avatar of Death</Name>
 					<Points>20</Points>
-					<AddToArmour>5</AddToArmour>
-					<AddToStrength>2</AddToStrength>
+					<Add To="Armour">5</Add>
+					<Add To="Strength">2</Add>
 					<Lore>Trained by the best swordsmen of different periods and cultures, the Vampire has become a deadly warrior capable of slaying the most monstrous of foes</Lore>	
 					<Description>The Vampire wears heavy armour and is armed with either a great weapon, hand weapon and shield or two hand weapons</Description>
 				</Powers>
@@ -163,7 +163,7 @@
 				<Powers>
 					<Name>Walking Death</Name>
 					<Points>25</Points>
-					<AddToCloseCombat>1</AddToCloseCombat>
+					<Add To="CloseCombat">1</Add>
 					<Lore>So powerful is the unholy presence of the Vampire that mere mortals are forced to flee in dread</Lore>
 					<Description>The presence of one or more Vampires with this power in a combat adds +1 to their side's combat resolution</Description>
 				</Powers>
@@ -224,7 +224,7 @@
 					<Name>The Black Axe of Krell</Name>
 					<Points>50</Points>
 					<Only>Wight King</Only>
-					<AddToStrength>2</AddToStrength>
+					<Add To="Strength">2</Add>
 					<MultiWounds>D3</MultiWounds>
 					<HitLast/>
 					<Test Bet="Wound" Context="Wound" Profile="Toughness"/>
@@ -271,16 +271,16 @@
 				<Armour>
 					<Name>Walach's Bloody Hauberk</Name>
 					<Points>45</Points>
-					<AddToArmour>4</AddToArmour>
-					<AddToWard>5</AddToWard>
+					<Add To="Armour">4</Add>
+					<Add To="Ward">5</Add>
 					<Lore>Once belonging to one of the greatest slaughterers of all time, vile magic has fused the blood of Walach's victims into this armour's enchantments, providing a shielding aura made of the souls of the damned</Lore>
 					<Description>The wearer has a 4+ armour save that may be combined with steeds, shield, etc. Walach's Bloody Hauberk also confers a 5+ ward save</Description>
 				</Armour>
 				<Armour>
 					<Name>The Accursed Armour</Name>
 					<Points>25</Points>
-					<AddToArmour>5</AddToArmour>
-					<AddToToughness>1</AddToToughness>
+					<Add To="Armour">5</Add>
+					<Add To="Toughness">1</Add>
 					<AddToWeaponSkill>-3</AddToWeaponSkill>
 					<AddToInitiative>-3</AddToInitiative>
 					<Lore>Some strange flaw in the enchantment of this armour renders the wearer considerably more resilient whilst robbing them of dexterity</Lore>
@@ -297,7 +297,7 @@
 					<Name>Armour of Night</Name>
 					<Only>Infantry</Only>
 					<Points>25</Points>
-					<AddToArmour>5</AddToArmour>
+					<Add To="Armour">5</Add>
 					<Rule>Enemies suffer a -2 to hit penalty</Rule>
 					<Lore>This black-enamelled armour swathes the wearer in an impenetrable cloud of darkness</Lore>
 					<Description>Models on foot only. Heavy armour. As long as the wearer is on his own, enemies suffer a -2 to hit penalty when shooting at him</Description>
@@ -306,7 +306,7 @@
 					<Name>Nightshroud</Name>
 					<Only>Infantry</Only>
 					<Points>20</Points>
-					<AddToArmour>6</AddToArmour>
+					<Add To="Armour">6</Add>
 					<Rule>Enemy models lose all charging bonuses, lose the Always Strikes First rule</Rule>
 					<Lore>Tendrils of shadow entangle all those who would strike the wearer of this armour, grappling with their swordarms and slowing their attacks</Lore>
 					<Description>Light armour. Enemy models wishing to attack the wearer lose all charging bonuses, lose the Always Strikes First rule (if diey have it) and have their Initiative reduced to 1</Description>
@@ -315,7 +315,7 @@
 					<Name>The Cadaverous Cuirass</Name>
 					<Only>Vampire</Only>
 					<Points>15</Points>
-					<AddToArmour>5</AddToArmour>
+					<Add To="Armour">5</Add>
 					<NoKillingBlow/>
 					<ImmuneToPoison/>
 					<Lore>The Vampire's exposed heart is protected by a cage of enchanted gold</Lore>
@@ -369,7 +369,7 @@
 				<Additional>
 					<Name>Crown of the Damned</Name>
 					<Points>35</Points>
-					<AddToWard>4</AddToWard>
+					<Add To="Ward">4</Add>
 					<Stupidity/>
 					<Lore>The bearer draws revitalising energies from the spirits imprisoned within the Crown, but at times their eternal wailing can be overpowering</Lore>
 					<Description>Grants the bearer a 4+ ward save, but the bearer is subject to Stupidity</Description>
@@ -522,7 +522,7 @@
 					<Terror/>
 					<Undead/>
 					<Reroll>ToWound</Reroll>
-					<AddToCloseCombat>1</AddToCloseCombat>
+					<Add To="CloseCombat">1</Add>
 					<Original>Enemy within 6" are at -1 Ld</Original>
 				</SpecialRules>
 				<Equipments>
@@ -558,7 +558,7 @@
 					</HandWeapon>
 					<Armour>
 						<Name>Armour of Templehof</Name>
-						<AddToWounds>2</AddToWounds>
+						<Add To="Wounds">2</Add>
 					</Armour>
 				</Equipments>
 				<Options>
@@ -601,7 +601,7 @@
 				<SpecialRules>
 					<Undead/>
 					<MagicItems Count="1" Type="Hero"/>
-					<AddToCloseCombat>1</AddToCloseCombat>
+					<Add To="CloseCombat">1</Add>
 				</SpecialRules>
 				<Equipments>
 					<HandWeapon>
@@ -952,7 +952,7 @@
 				<Options>
 					<Option>
 						<Name>Skeletal Steed barding</Name>
-						<AddToArmour>6</AddToArmour>
+						<Add To="Armour">6</Add>
 						<PointsPerModel>4</PointsPerModel>
 					</Option>
 					<Command>
