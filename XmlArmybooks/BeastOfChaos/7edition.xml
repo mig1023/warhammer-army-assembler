@@ -108,7 +108,7 @@
 				<Additional>
 					<Name>Many-Limbed Fiend</Name>
 					<Points>20</Points>
-					<AddToAttacks>1</AddToAttacks>
+					<Add To="Attacks">1</Add>
 					<Lore>The Beastman has sprouted additional arms, allowing him to unleash yet more carnage upon the battlefield</Lore>
 					<Description>The model may make a bonus attack in addition to his normal attacks. This bonus attack is always at the model's basic Strength and is never augmented by equipment or magic weapons</Description>
 				</Additional>
@@ -122,7 +122,7 @@
 				<Additional>
 					<Name>Gnarled Hide</Name>
 					<Points>15</Points>
-					<AddToArmour>5</AddToArmour>
+					<Add To="Armour">5</Add>
 					<Lore>The Beastman's skin has encysted, forming a layer of crusty natural armour as tough as chainmail</Lore>
 					<Description>The model has a scaly skin save of 5+, which is cumulative with other armour as normal</Description>
 				</Additional>
@@ -136,7 +136,7 @@
 				<Additional>
 					<Name>Uncanny Senses</Name>
 					<Points>10</Points>
-					<AddToInitiative>1</AddToInitiative>
+					<Add To="Initiative">1</Add>
 					<Lore>The Dark Gods have gifted the Beastman with acute senses, additional eyes or even an extra bead, granting it unnaturally fast reactions</Lore>
 					<Description>The model has +1 Initiative</Description>
 				</Additional>
@@ -167,7 +167,7 @@
 				<Weapon>
 					<Name>Stonecrusher Mace</Name>
 					<Points>65</Points>
-					<AddToStrength>3</AddToStrength>
+					<Add To="Strength">3</Add>
 					<Rule>When rolling To Wound against war machines and chariots or buildings, the character's Strength is increased to 10</Rule>
 					<Lore>A great blunt weapon with an iron beast-head at its tip, the Stonecrusher Mace has become a symbol of the Beastmen's eternal desire to unmake that which Man has made, and cast down his civilisation so that no stone is left standing upon another</Lore>
 					<Description>Stonecrusher Mace confers +3 Strength. When rolling To Wound against war machines and chariots (including War Altars, War Shrines, Steam Tanks and Corpse Carts, and so on) or buildings, the character's Strength is increased to 10</Description>
@@ -192,7 +192,7 @@
 					<Name>Axes of Khorgor</Name>
 					<Points>40</Points>
 					<Terror/>
-					<AddToAttacks>1</AddToAttacks>
+					<Add To="Attacks">1</Add>
 					<Reroll>ToHit</Reroll>
 					<Lore>One of the greatest Champions of the Beastmen ever to walk the Old World was a vicious brute named Khorgor. A vile thing, it's said he butchered hundreds of Humans. So wanton was he in his killing, he decorated his horns with the entrails of the dead. Whilst a great warrior in his own right, he was aided by a pair of blasphemous axes that could hew through armour and flesh with ease. So powerful was he when armed with these axes, no other Beastman could stand against him. But as with all things, Khorgor passed from this world and ownership of these terrible weapons changed hands many times, moving from successor to successor</Lore>
 					<Description>Requires two hands. The bearer gains +1 Attack and may re-roll any missed To Hit rolls in close combat</Description>
@@ -223,7 +223,7 @@
 				<Armour>
 					<Name>Blade-Blunter Armour</Name>
 					<Points>50</Points>
-					<AddToArmour>5</AddToArmour>
+					<Add To="Armour">5</Add>
 					<Rule>At the end of each round of close combat, roll a D6 for each magic weapon that hit the wearer of the armour: on the result of a 2+, the enemy item loses its special rules and ceases to count as a magic weapon</Rule>
 					<Lore>The Blade-Blunter Armour is encrusted with a vivid patina of corrosion and decay, cursed by a Bray-Shaman so that it spread to any blade that it strikes. Even the keenest weapon is blunted, dulled or shattered upon striking the armour</Lore>
 					<Description>Heavy armour. At the end of each round of close combat, roll a D6 for each magic weapon that hit the wearer of the armour. On the result of a 2+, the enemy item loses its special rules and ceases to count as a magic weapon. Instead it will count as a normal weapon of its type for the remainder of the battle</Description>
@@ -231,7 +231,7 @@
 				<Armour>
 					<Name>Trollhide</Name>
 					<Points>50</Points>
-					<AddToArmour>6</AddToArmour>
+					<Add To="Armour">6</Add>
 					<Regeneration/>
 					<Lore>The Trollhide confers some of the more gruesome abilities of its former occupant to the wearer</Lore>
 					<Description>Light armour. The wearer gains the Regeneration rule</Description>
@@ -239,7 +239,7 @@
 				<Armour>
 					<Name>Pelt of The Shadowgave</Name>
 					<Points>45</Points>
-					<AddToArmour>6</AddToArmour>
+					<Add To="Armour">6</Add>
 					<Rule>All shooting attacks directed at the character or his unit are at -1 To Hit</Rule>
 					<Rule>Spells that target the character or his unit deduct 2 from the casting roll</Rule>
 					<Lore>The Pelt of the Shadowgave is shrouded in sorcerous tendrils of darkness that gather darkness to both the wearer and those Beastmen that walk in his dark-shrouded footsteps</Lore>
@@ -248,7 +248,7 @@
 				<Armour>
 					<Name>Blackened Plate</Name>
 					<Points>20</Points>
-					<AddToArmour>5</AddToArmour>
+					<Add To="Armour">5</Add>
 					<Rule>2+ Ward save against all flaming attacks</Rule>
 					<Rule>Models in any unit that he is with have a 4+ Ward save against flaming attacks</Rule>
 					<Lore>This battered suit of ramshackle plate mail, the Blackened Plate, is blackened with the soot of burning palaces and temples. It is said that the wearer can walk through the fiercest conflagration unharmed</Lore>
@@ -257,7 +257,7 @@
 				<Additional>
 					<Name>Ramhorn Helm</Name>
 					<Points>15</Points>
-					<AddToArmour>6</AddToArmour>
+					<Add To="Armour">6</Add>
 					<Rule>For every armour save he passes, the character may immediately make a bonus attack at his basic Strength</Rule>
 					<Lore>This ornate headdress has two great curving ram horns that spiral and tighten around the wearer's own horns, allowing the bearer to deliver a devastating headbutt to any enemy that lowers his guard</Lore>
 					<Description>6+ armour save. This may be combined with other armour as normal. For every armour save he passes, the bearer may immediately make a bonus attack at his basic Strength</Description>
@@ -357,7 +357,7 @@
 				<Banner>
 					<Name>The Beast Banner</Name>
 					<Points>75</Points>
-					<AddToStrength>1</AddToStrength>
+					<Add To="Strength">1</Add>
 					<Rule>Unit have a +1 bonus to Strength</Rule>
 					<Lore>This ancient banner is stitched together from the skins of defeated enemies. Only the flayed skins of the most powerful foes are used, for the Beastmen become imbued with the power of their conquests</Lore>
 					<Description>The bearer and any unit he has joined have a +1 bonus to their Strength</Description>
@@ -404,7 +404,7 @@
 					</HandWeapon>
 					<Armour>
 						<Name>The Dark Mail</Name>
-						<AddToArmour>2</AddToArmour>
+						<Add To="Armour">2</Add>
 						<Rule>The Dark Mail negates the power of any magic or runic weapons carried by models in base contact - treat them as ordinary non-magical weapons of their type</Rule>
 					</Armour>
 				</Equipments>
