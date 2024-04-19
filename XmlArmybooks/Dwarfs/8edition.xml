@@ -75,7 +75,7 @@
 				<Weapon>
 					<Name>The Hammer of Karak Drazh</Name>
 					<Points>65</Points>
-					<AddToInitiative>4</AddToInitiative>
+					<Add To="Initiative">4</Add>
 					<Rule>Enemy that suffer one or more unsaved Wounds have their own Initiative reduced to 1 until the end of the Close Combat phase</Rule>
 					<Lore>The Runelords of Karak Drazh wrought wonders the likes of which had never been seen before, or since, but even amongst their treasure hoards, there was one hammer that stood out as exceptional. It was struck with runes so that it could be swung with preternatural ease, yet it hit with a bludgeoning force — its blows sending shock waves emanating outwards in ripples of concussive force. The weapon was feared lost forever with the fall of Karak Drazh, yet thousands of years later, it has again been recovered</Lore>
 					<Description>Attacks with the Hammer of Karak Drazh are resolved at +3 Initiative, and any enemy models that suffer one or more unsaved Wounds from it have their own Initiative reduced to 1 until the end of the Close Combat phase</Description>
@@ -231,7 +231,7 @@
 					<Name>Rune of Fury</Name>
 					<Runic>1</Runic>
 					<Points>25</Points>
-					<AddToAttacks>1</AddToAttacks>
+					<Add To="Attacks">1</Add>
 					<Lore>Bright and angry glow the Runes of Fury. The Dwarf wielding a weapon marked with them concentrates upon an unavenged grudge, causing him to became enraged at the wrongs his race has endured</Lore>
 					<Description>A weapon engraved with a Rune of Fury grants its wielder +1 Attack.\n\nA weapon engraved with two Runes of Fury grants its wielder +1 Attack and the Frenzy special rule.\n\nA weapon engraved with three Runes of Fury grants its wielder +1 Attack and the Frenzy special rule and, after each successful roll To Hit, it grants its user another Attack; roll To Hit and To Wound as normal. Attacks generated in this way do not generate further Attacks</Description>
 				</Weapon>
@@ -239,14 +239,14 @@
 					<Name>Rune of Fury</Name>
 					<Runic>2</Runic>
 					<Points>60</Points>
-					<AddToAttacks>1</AddToAttacks>
+					<Add To="Attacks">1</Add>
 					<Frenzy/>
 				</Weapon>
 				<Weapon>
 					<Name>Rune of Fury</Name>
 					<Runic>3</Runic>
 					<Points>100</Points>
-					<AddToAttacks>1</AddToAttacks>
+					<Add To="Attacks">1</Add>
 					<Rule>After each successful roll To Hit, it grants its user another Attack; roll To Hit and To Wound as normal; attacks generated in this way do not generate further Attacks</Rule>
 					<Frenzy/>
 				</Weapon>
@@ -284,14 +284,14 @@
 					<Runic>2</Runic>
 					<Points>35</Points>
 					<ArmourPiercing>1</ArmourPiercing>
-					<AddToStrength>1</AddToStrength>
+					<Add To="Strength">1</Add>
 				</Weapon>
 				<Weapon>
 					<Name>Rune of Cleaving</Name>
 					<Runic>3</Runic>
 					<Points>65</Points>
 					<ArmourPiercing>1</ArmourPiercing>
-					<AddToStrength>1</AddToStrength>
+					<Add To="Strength">1</Add>
 					<KillingBlow/>
 				</Weapon>
 				<Weapon>
@@ -313,7 +313,7 @@
 					<Name>Rune of Striking</Name>
 					<Runic>1</Runic>
 					<Points>10</Points>
-					<AddToWeaponSkill>1</AddToWeaponSkill>
+					<Add To="WeaponSkill">1</Add>
 					<Lore>A weapon with this rune moves to strike the foe's most vulnerable area with an uncanny precision</Lore>
 					<Description>A weapon engraved with a Rune of Striking grants its wielder +1 Weapon Skill.\n\nA weapon engraved with two Runes of Striking grants its wielder +1 Weapon Skill and allows its wielder to re-roll failed To Hit rolls in close combat.\n\nA weapon engraved with three Runes of Striking grants its wielder Weapon Skill 10 and allows him to re-roll failed To Hit rolls in close combat</Description>
 				</Weapon>
@@ -321,7 +321,7 @@
 					<Name>Rune of Striking</Name>
 					<Runic>2</Runic>
 					<Points>35</Points>
-					<AddToWeaponSkill>1</AddToWeaponSkill>
+					<Add To="WeaponSkill">1</Add>
 					<Reroll>ToHit</Reroll>
 				</Weapon>
 				<Weapon>
@@ -351,7 +351,7 @@
 					<Name>Rune of Speed</Name>
 					<Runic/>
 					<Points>5</Points>
-					<AddToInitiative>1</AddToInitiative>
+					<Add To="Initiative">1</Add>
 					<Lore>This rune enhances its bearer's awareness and quickness so that he moves more fluidly, taking faster opponents by surprise</Lore>
 					<Description>A weapon engraved with a Rune of Speed grants its wielder +1 Initiative</Description>
 				</Weapon>
@@ -377,7 +377,7 @@
 					<Name>Rune of Fortitude</Name>
 					<Runic>1</Runic>
 					<Points>35</Points>
-					<AddToToughness>1</AddToToughness>
+					<Add To="Toughness">1</Add>
 					<Lore>It is rumoured that armour bearing this rune eventually becomes sentient. Whilst no Runesmith has ever confirmed this rumour, they make no attempts to deny it either</Lore>
 					<Description>Armour engraved with a Rune of Fortitude grants its wearer +1 Toughness.\n\nArmour engraved with two Runes of Fortitude grants its wearer +1 Toughness and a 5+ ward save.\n\nArmour engraved with three Runes of Fortitude grants its wearer +1 Toughness and a 5+ ward save and, if the wearer suffers an unsaved Wound from an attack that has Multiple Wounds special rule, roll a D6. On a roll of 2+, he only suffers 1 Wound, regardless of how many Wounds would normally be caused; on a roll of 1, he suffers the full number of Wounds</Description>
 				</Armour>
@@ -385,15 +385,15 @@
 					<Name>Rune of Fortitude</Name>
 					<Runic>2</Runic>
 					<Points>50</Points>
-					<AddToToughness>1</AddToToughness>
-					<AddToWard>5</AddToWard>
+					<Add To="Toughness">1</Add>
+					<Add To="Ward">5</Add>
 				</Armour>
 				<Armour>
 					<Name>Rune of Fortitude</Name>
 					<Runic>3</Runic>
 					<Points>75</Points>
-					<AddToToughness>1</AddToToughness>
-					<AddToWard>5</AddToWard>
+					<Add To="Toughness">1</Add>
+					<Add To="Ward">5</Add>
 					<NoKillingBlow/>
 					<Rule>If the wearer suffers an unsaved Wound from an attack that has Multiple Wounds special rule, roll a D6: on a roll of 2+, he only suffers 1 Wound</Rule>
 				</Armour>
@@ -401,7 +401,7 @@
 					<Name>Rune of Iron</Name>
 					<Runic>1</Runic>
 					<Points>20</Points>
-					<AddToWounds>1</AddToWounds>
+					<Add To="Wounds">1</Add>
 					<Lore>When iron is saturated with magic, it is known as "lodestone." This rune focuses on the magnetic properties of lodestone to create magical armour. Runesmiths have learned to incorporate this potent rune of protection in multiples, increasing its powers like folded steel</Lore>
 					<Description>Armour engraved with a Rune of Iron grants its wearer +1 Wound.\n\nArmour engraved with two Runes of Iron grants its wearer +1 Wound and +1 Toughness.\n\nArmour engraved with three Runes of Iron grants its wearer +1 Wound, +1 Toughness and the Regeneration (5+) special rule</Description>
 				</Armour>
@@ -409,15 +409,15 @@
 					<Name>Rune of Iron</Name>
 					<Runic>2</Runic>
 					<Points>45</Points>
-					<AddToWounds>1</AddToWounds>
-					<AddToToughness>1</AddToToughness>
+					<Add To="Wounds">1</Add>
+					<Add To="Toughness">1</Add>
 				</Armour>
 				<Armour>
 					<Name>Rune of Iron</Name>
 					<Runic>3</Runic>
 					<Points>70</Points>
-					<AddToWounds>1</AddToWounds>
-					<AddToToughness>1</AddToToughness>
+					<Add To="Wounds">1</Add>
+					<Add To="Toughness">1</Add>
 					<ExtendedRegeneration>5</ExtendedRegeneration>
 				</Armour>
 				<Armour>
@@ -448,7 +448,7 @@
 					<Name>Rune of Stone</Name>
 					<Runic/>
 					<Points>5</Points>
-					<AddToArmour>6</AddToArmour>
+					<Add To="Armour">6</Add>
 					<Lore>Dwarf tradition tells that their race was created from the Father of Mountains -- the first rock of the Known World. So, the Rune of Stone is the first magic rune taught to apprentice Runesmiths</Lore>
 					<Description>Armour engraved with a Rune of Stone adds +1 to its wearer's armour save. Multiples of this rune have no further effect. The Rune of Stone is an exception to the Rule of Pride, meaning several characters can wear gromril armour engraved with a single Rune of Stone</Description>
 				</Armour>
@@ -466,7 +466,7 @@
 					<Name>Master Rune of Stromni Redbeard</Name>
 					<MasterRunic/>
 					<Points>75</Points>
-					<AddToCloseCombat>1</AddToCloseCombat>
+					<Add To="CloseCombat">1</Add>
 					<Lore>Stromni Redbeard made this rune in the days of Bael, Lord of Karak Azul. It was carved onto the battle standard of Durgin, son of Grindo, son of Grimnir</Lore>
 					<Description>A standard bearing the Master Rune of Stromni Redbeard confers a further +1 bonus to the bearer's unit's combat result score, and the combat result score of all other friendly Dwarf units within 12" of the bearer</Description>
 				</Banner>
@@ -483,7 +483,7 @@
 					<Name>Master Rune of Grungni</Name>
 					<MasterRunic/>
 					<Points>60</Points>
-					<AddToWard>4</AddToWard>
+					<Add To="Ward">4</Add>
 					<Rule>5+ Ward save against Wounds caused by shooting attacks and all magic missiles to any friendly units within 6" of the bearer</Rule>
 					<Lore>This rune stirs up the Winds of Magic, using their swirling arcane force to protect its bearer and shield nearby Dwarfs against enemy missile fire</Lore>
 					<Description>Battle Standard Bearer only. A standard bearing the Master Rune of Grungni confers a 4+ Ward save to its bearer. Additionally, it confers a 5+ Ward save against Wounds caused by shooting attacks and all magic missiles to any friendly units within 6" of the bearer</Description>
@@ -492,7 +492,7 @@
 					<Name>Rune of Battle</Name>
 					<Runic>1</Runic>
 					<Points>35</Points>
-					<AddToCloseCombat>1</AddToCloseCombat>
+					<Add To="CloseCombat">1</Add>
 					<Lore>During the Golden Age of the Karaz Ankor, even the lesser strongholds and fortified mines each had a banner with this rune struck on it. Many of these banners are now lost, but those that still remain in Dwarf hands are held aloft with pride</Lore>
 					<Description>A standard bearing a Rune of Battle confers a further +1 bonus to the bearer's unit's combat result score.\n\nA standard bearing two Runes of Battle confers a further +2 bonus to the bearer's unit's combat result score.\n\nA standard bearing three Runes of Battle confers a further +2 bonus to the bearer's unit's combat result score, and additionally confers the Fight in Extra Ranks special rule to the bearer's unit</Description>
 				</Banner>
@@ -500,13 +500,13 @@
 					<Name>Rune of Battle</Name>
 					<Runic>2</Runic>
 					<Points>70</Points>
-					<AddToCloseCombat>2</AddToCloseCombat>
+					<Add To="CloseCombat">2</Add>
 				</Banner>
 				<Banner>
 					<Name>Rune of Battle</Name>
 					<Runic>3</Runic>
 					<Points>125</Points>
-					<AddToCloseCombat>3</AddToCloseCombat>
+					<Add To="CloseCombat">3</Add>
 				</Banner>
 				<Banner>
 					<Name>Rune of Slowness</Name>
@@ -612,7 +612,7 @@
 					<Name>Rune of Warding</Name>
 					<Runic>1</Runic>
 					<Points>15</Points>
-					<AddToWard>6</AddToWard>
+					<Add To="Ward">6</Add>
 					<Lore>Striking three Runes of Warding correctly is a difficult task, even for experienced Runesmiths</Lore>
 					<Description>A model with a Rune of Warding has a 6+ Ward save.\n\nA model with two Runes of Warding has a 5+ Ward save.\n\nA model with three Runes of Warding has a 4+ Ward save</Description>
 				</Additional>
@@ -620,13 +620,13 @@
 					<Name>Rune of Warding</Name>
 					<Runic>2</Runic>
 					<Points>35</Points>
-					<AddToWard>5</AddToWard>
+					<Add To="Ward">5</Add>
 				</Additional>
 				<Additional>
 					<Name>Rune of Warding</Name>
 					<Runic>3</Runic>
 					<Points>45</Points>
-					<AddToWard>4</AddToWard>
+					<Add To="Ward">4</Add>
 				</Additional>
 				<Additional>
 					<Name>Rune of Spellbreaking</Name>
@@ -700,7 +700,7 @@
 					<Name>Stalwart Rune</Name>
 					<Runic>1</Runic>
 					<Points>15</Points>
-					<AddToCloseCombat>1</AddToCloseCombat>
+					<Add To="CloseCombat">1</Add>
 					<Lore>A war machine with this rune makes its crew unbearably proud -- they will fight with great boldness to defend their beloved engine of war</Lore>
 					<Description>A war machine engraved with a Stalwart Rune confers a +1 bonus to its crew's combat result score.\n\nA war machine engraved with two Stalwart Runes confers a +1 bonus to its crew's combat result score, and its crew also gain the Unbreakable special rule.\n\nA third Stalwart Rune has no further effect</Description>
 				</Additional>
@@ -708,7 +708,7 @@
 					<Name>Stalwart Rune</Name>
 					<Runic>2</Runic>
 					<Points>30</Points>
-					<AddToCloseCombat>1</AddToCloseCombat>
+					<Add To="CloseCombat">1</Add>
 					<Unbreakable/>
 				</Additional>
 				<Additional>
@@ -771,13 +771,13 @@
 					</HandWeapon>
 					<Armour>
 						<Name>The Throne of Power</Name>
-						<AddToArmour>5</AddToArmour>
-						<AddToWard>4</AddToWard>
+						<Add To="Armour">5</Add>
+						<Add To="Ward">4</Add>
 						<Rule>Inspiring Presence rule to 18"</Rule>
 					</Armour>
 					<Armour>
 						<Name>The Armour of Skaldour</Name>
-						<AddToArmour>4</AddToArmour>
+						<Add To="Armour">4</Add>
 						<Rule>2+ Ward save against attacks with the Killing Blow, Heroic Killing Blow or Multiple Wounds</Rule>
 					</Armour>
 					<Armour>
@@ -803,7 +803,7 @@
 					<Unbreakable/>
 					<Resolute/>
 					<ArmourPiercing>1</ArmourPiercing>
-					<AddToDispell>1</AddToDispell>
+					<Add To="Dispell">1</Add>
 					<HatredOrcs/>
 					<MagicResistance>3</MagicResistance>
 					<Original>
@@ -850,17 +850,17 @@
 					<HandWeapon>
 						<Name>Axe of Dargo</Name>
 						<KillingBlow/>
-						<AddToStrength>2</AddToStrength>
+						<Add To="Strength">2</Add>
 					</HandWeapon>
 					<GromrilArmour/>
 					<Armour>
 						<Name>Dragon Cloak of Fyrskar</Name>
-						<AddToWard>4</AddToWard>
+						<Add To="Ward">4</Add>
 						<Rule>2+ Ward save against all hits with the Flaming Attacks special rule</Rule>
 					</Armour>
 					<Armour>
 						<Name>The Slayer Crown</Name>
-						<AddToArmour>6</AddToArmour>
+						<Add To="Armour">6</Add>
 					</Armour>
 				</Equipments>
 			</Lord>
@@ -884,12 +884,12 @@
 					<HandWeapon>
 						<Name>The Hammer of Angrund</Name>
 						<HitFirst/>
-						<AddToWound>1</AddToWound>
+						<Add To="Wound">1</Add>
 					</HandWeapon>
 					<GromrilArmour/>
 					<Armour>
 						<Name>Shield of Defiance</Name>
-						<AddToWard>4</AddToWard>
+						<Add To="Ward">4</Add>
 						<Rule>Immune to the effects of the Killing Blow and Heroic Killing Blow special rules, treating wounding hits that would automatically slay as a normal Wound</Rule>
 					</Armour>
 				</Equipments>
@@ -917,8 +917,8 @@
 					<Option>
 						<Name>Shieldbearers</Name>
 						<Points>40</Points>
-						<AddToArmour>5</AddToArmour>
-						<AddToWounds>2</AddToWounds>
+						<Add To="Armour">5</Add>
+						<Add To="Wounds">2</Add>
 						<Mount/>
 						<Dependency/>
 					</Option>
@@ -932,7 +932,7 @@
 					<HandWeapon>
 						<Name>Hand weapon</Name>
 						<HitFirst/>
-						<AddToWound>1</AddToWound>
+						<Add To="Wound">1</Add>
 					</HandWeapon>
 					<GromrilArmour/>
 				</Equipments>
@@ -947,7 +947,7 @@
 					<MagicItems Points="150" Type="Hero"/>
 					<Resolute/>
 					<ArmourPiercing>1</ArmourPiercing>
-					<AddToDispell>1</AddToDispell>
+					<Add To="Dispell">1</Add>
 					<HatredOrcs/>
 					<MagicResistance>2</MagicResistance>
 					<Original>
@@ -962,7 +962,7 @@
 					<Option>
 						<Name>Anvil Guards</Name>
 						<Points>170</Points>
-						<AddToWard>5</AddToWard>
+						<Add To="Ward">5</Add>
 						<Mount/>
 					</Option>
 				</Options>
@@ -970,7 +970,7 @@
 					<HandWeapon>
 						<Name>Hand weapon</Name>
 						<HitFirst/>
-						<AddToWound>1</AddToWound>
+						<Add To="Wound">1</Add>
 					</HandWeapon>
 					<GromrilArmour/>
 				</Equipments>
@@ -1092,7 +1092,7 @@
 					<HandWeapon>
 						<Name>Hand weapon</Name>
 						<HitFirst/>
-						<AddToWound>1</AddToWound>
+						<Add To="Wound">1</Add>
 					</HandWeapon>
 					<GromrilArmour/>
 				</Equipments>
@@ -1107,7 +1107,7 @@
 					<MagicItems Points="75" Type="Hero"/>
 					<Resolute/>
 					<ArmourPiercing>1</ArmourPiercing>
-					<AddToDispell>1</AddToDispell>
+					<Add To="Dispell">1</Add>
 					<HatredOrcs/>
 					<MagicResistance>1</MagicResistance>
 					<Original>
@@ -1124,7 +1124,7 @@
 					<HandWeapon>
 						<Name>Hand weapon</Name>
 						<HitFirst/>
-						<AddToWound>1</AddToWound>
+						<Add To="Wound">1</Add>
 					</HandWeapon>
 					<GromrilArmour/>
 				</Equipments>
@@ -1156,7 +1156,7 @@
 					<HandWeapon>
 						<Name>Hand weapon</Name>
 						<HitFirst/>
-						<AddToWound>1</AddToWound>
+						<Add To="Wound">1</Add>
 					</HandWeapon>
 					<GromrilArmour/>
 				</Equipments>
@@ -1595,8 +1595,8 @@
 					<RangeWeapon>Drakegun</RangeWeapon>
 					<Armour>
 						<Name>Forge-proven Gromril Armour</Name>
-						<AddToArmour>4</AddToArmour>
-						<AddToWard>6</AddToWard>
+						<Add To="Armour">4</Add>
+						<Add To="Ward">6</Add>
 					</Armour>
 				</Equipments>
 				<Options>
