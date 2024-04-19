@@ -89,7 +89,7 @@
 				<Powers>
 					<Name>Curse of the Revenant</Name>
 					<Points>55</Points>
-					<AddToWounds>1</AddToWounds>
+					<Add To="Wounds">1</Add>
 					<Lore>Through magic, bloodletting or sheer force of will, the strength of this Vampire to survive the centuries is beyond compare</Lore>
 					<Description>This Vampire has +1 Wound on his profile</Description>
 				</Powers>
@@ -168,7 +168,7 @@
 				<Powers>
 					<Name>Dread Knight</Name>
 					<Points>10</Points>
-					<AddToWeaponSkill>2</AddToWeaponSkill>
+					<Add To="WeaponSkill">2</Add>
 					<Rule>Unless he is part of a combat containing Krell or a Vampiric character with higher Leadership, he must always issue a challenge when possible, and must answer any challenge issued by the enemy</Rule>
 					<Lore>This Vampire has followed the path of the warrior to its ultimate conclusion, taking up arms in dark mockery of a knightly vow</Lore>
 					<Description>The Vampire has +2 Weapon Skill. In addition, unless he is part of a combat containing Krell or a Vampiric character with higher Leadership, he must always issue a challenge when possible, and must answer any challenge issued by the enemy</Description>
@@ -195,7 +195,7 @@
 				<Armour>
 					<Name>Nightshroud</Name>
 					<Points>40</Points>
-					<AddToArmour>6</AddToArmour>
+					<Add To="Armour">6</Add>
 					<Rule>Enemy models in base contact lose all Strength bonuses conferred from normal and magical weapons, and have the Always Strikes Last special rule</Rule>
 					<Lore>Ensorcelled in pitch darkness in the heart of Castle Drachenfels, the Nightshroud owes more to the otherworld than to reality. Originally fashioned from the death-raiments of King Pharatohep, the Nightshroud has since been soaked in the blood of sorcerers and witches. The aura of gloom that clings to it is so strong it can physically manifest, lashing out with shadowy tendrils that grapple with all those who would strike the wearer</Lore>
 					<Description>The Nightshroud adds +1 to the bearer's armour save. Furthermore, enemy models in base contact with the wearer lose all Strength bonuses conferred from normal and magical weapons, and have the Always Strikes Last special rule</Description>
@@ -279,7 +279,7 @@
 				<Additional>
 					<Name>Helm of Discord</Name>
 					<Points>30</Points>
-					<AddToArmour>6</AddToArmour>
+					<Add To="Armour">6</Add>
 					<Test Bet="Pass" Context="Round" Profile="Leadership"/>
 					<Description>The wearer counts his armour save as being one point higher than normal. In addition, at the start of each Close Combat phase, choose an enemy character in base contact with the bearer or his unit. That character must immediately take a Leadership test. If the test is failed, the character succumbs to the helm's sibilant whispers of malice and jealousy. In this Close Combat phase, the victim cannot make attacks and is hit automatically</Description>
 				</Additional>
@@ -373,13 +373,13 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Blood Drinker</Name>
-						<AddToStrength>1</AddToStrength>
+						<Add To="Strength">1</Add>
 						<Rule>Restores lost Wounds on a score of 4+ for the purposes of The Hunger special rule</Rule>
 					</HandWeapon>
 					<HeavyArmour/>
 					<Armour>
 						<Name>Carstein Ring</Name>
-						<AddToWard>4</AddToWard>
+						<Add To="Ward">4</Add>
 						<Rule>The first time Vlad is removed from play, roll a D6 at the end of the phase: on a score of 2+ the vampire is immediately returned to 'life' with a single Wound</Rule>
 					</Armour>
 				</Equipments>
@@ -411,8 +411,8 @@
 					</HandWeapon>
 					<Armour>
 						<Name>Armour of Templehof</Name>
-						<AddToArmour>5</AddToArmour>
-						<AddToWounds>2</AddToWounds>
+						<Add To="Armour">5</Add>
+						<Add To="Wounds">2</Add>
 					</Armour>
 				</Equipments>
 				<Options>
@@ -437,7 +437,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Chaos Tomb Blade</Name>
-						<AddToAttacks>2</AddToAttacks>
+						<Add To="Attacks">2</Add>
 						<Rule>If Kemmler is in a unit of Skeleton Warriors or Grave Guard, for each model he slays in close combat, an extra model is added to his unit following the rules for Resurrecting Fallen Warriors</Rule>
 					</HandWeapon>
 					<HandWeapon>
@@ -583,14 +583,14 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>The Black Axe of Krell</Name>
-						<AddToStrength>2</AddToStrength>
+						<Add To="Strength">2</Add>
 						<MultiWounds>D3</MultiWounds>
 						<HitLast/>
 						<Rule>Any model taking an unsaved Wound must roll a D6 at the start of each of its subsequent turns: if the result is higher than the number of Wounds it has remaining, that model suffers an additional Wound with no armour saves allowed</Rule>
 					</HandWeapon>
 					<Armour>
 						<Name>Armour of the Barrows</Name>
-						<AddToArmour>4</AddToArmour>
+						<Add To="Armour">4</Add>
 						<Rule>If an enemy with a magic weapon wounds Krell in close combat and Krell passes his armour save, that magic weapon's abilities are nullified</Rule>
 					</Armour>
 				</Equipments>
@@ -1011,7 +1011,7 @@
 				<Options>
 					<Option>
 						<Name>Skeletal Steed barding</Name>
-						<AddToArmour>6</AddToArmour>
+						<Add To="Armour">6</Add>
 						<PointsPerModel>3</PointsPerModel>
 					</Option>
 					<Option>
