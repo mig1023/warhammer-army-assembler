@@ -185,7 +185,7 @@
 				<Weapon>
 					<Name>Ulag's Akrit axe</Name>
 					<Points>25</Points>
-					<AddToStrength>1</AddToStrength>
+					<Add To="Strength">1</Add>
 					<Reroll>ToHit</Reroll>
 					<Flail/>
 					<Lore>In battle this weapon writhes in the hands of the wielder, seemingly always hewing a shrewd idea of how best to strike the enemy</Lore>
@@ -212,9 +212,9 @@
 				<Weapon>
 					<Name>Mortog's best Basha</Name>
 					<Points>15</Points>
-					<AddToWeaponSkill>1</AddToWeaponSkill>
-					<AddToStrength>1</AddToStrength>
-					<AddToInitiative>1</AddToInitiative>
+					<Add To="WeaponSkill">1</Add>
+					<Add To="Strength">1</Add>
+					<Add To="Initiative">1</Add>
 					<Lore>Old Warboss Martog the Mauler had a vast collection of weapons - most of which were stolen from other owners. His most favourilist of all was a massive Dwaruen axe, heavy with runes and (since Martogs possession of it) Dwaruen blood</Lore>
 					<Description>The wielder of this blafe gains +1 Wepon Skill, +1 Strength and +1 Initiative</Description>
 				</Weapon>
@@ -239,15 +239,15 @@
 				<Armour>
 					<Name>Armour of Gork</Name>
 					<Points>50</Points>
-					<AddToArmour>6</AddToArmour>
-					<AddToToughness>1</AddToToughness>
+					<Add To="Armour">6</Add>
+					<Add To="Toughness">1</Add>
 					<Lore>If armour is made with the correct rituals instead of Just being bashed out of whatever hits of metal conic to band, it can be enchanted by a Shaman to offer a more formidable form of protection</Lore>
 					<Description>Light armour. The wearer has +1 Toughness</Description>
 				</Armour>
 				<Shield>
 					<Name>Spliteful shield</Name>
 					<Points>25</Points>
-					<AddToArmour>6</AddToArmour>
+					<Add To="Armour">6</Add>
 					<Rule>Strength 5 hit for each 1 on a enemy roll to Hit</Rule>
 					<Lore>This shield has razor-sharp teeth that snap and bite against unwary foes, making its hearer noticeably more dangerous and amused in equal measure</Lore>
 					<Description>Shield. Any foe that rolls a 1 when attempting to strike the bearer in close combat suffers a Strength 5 hit for each such roll</Description>
@@ -264,7 +264,7 @@
 				<Additional>
 					<Name>Warboss Umm's Best Boss 'at</Name>
 					<Points>30</Points>
-					<AddToWard>5</AddToWard>
+					<Add To="Ward">5</Add>
 					<Lore>This rune-encrusted and rather squashed looking helmet once belonged to a Dwarf king, or so legend tells</Lore>
 					<Description>Grants the rearer a 5+ Ward save</Description>
 				</Additional>
@@ -358,7 +358,7 @@
 				<Weapon>
 					<Name>Bigged's Kickin' boots</Name>
 					<Points>30</Points>
-					<AddToAttacks>1</AddToAttacks>
+					<Add To="Attacks">1</Add>
 					<Lore>Bigged, an old and boastful Orc, made bis last boast in front of an Empire cannon. Only bis boots were recovered - though bis vengeful spirit (and the odour of his feet) lingers on</Lore>
 					<Description>Grants the wearer +1 Atack on his profile</Description>
 				</Weapon>
@@ -490,13 +490,13 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Slagga's Slashas</Name>
-						<AddToAttacks>1</AddToAttacks>
+						<Add To="Attacks">1</Add>
 						<Reroll>ToHit</Reroll>
 					</HandWeapon>
 					<Armour>
 						<Name>Azhag's 'ard Amour</Name>
-						<AddToArmour>5</AddToArmour>
-						<AddToWard>5</AddToWard>
+						<Add To="Armour">5</Add>
+						<Add To="Ward">5</Add>
 					</Armour>
 					<Crown>
 						<Name>The Crown of Sorcery</Name>
@@ -520,13 +520,13 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Gitsnik</Name>
-						<AddToStrength>2</AddToStrength>
+						<Add To="Strength">2</Add>
 						<HitFirst/>
 					</HandWeapon>
 					<Armour>
 						<Name>Blood-forged Armour</Name>
-						<AddToArmour>1</AddToArmour>
-						<AddToWard>5</AddToWard>
+						<Add To="Armour">1</Add>
+						<Add To="Ward">5</Add>
 					</Armour>
 				</Equipments>
 			</Lord>
@@ -546,12 +546,12 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>The Axe of Grom</Name>
-						<AddToStrength>2</AddToStrength>
+						<Add To="Strength">2</Add>
 						<ExtendedKillingBlow>5</ExtendedKillingBlow>
 					</HandWeapon>
 					<Armour>
 						<Name>Lucky banner</Name>
-						<AddToWard>5</AddToWard>
+						<Add To="Ward">5</Add>
 					</Armour>
 				</Equipments>
 			</Lord>
@@ -788,7 +788,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Scaly skin</Name>
-						<AddToArmour>4</AddToArmour>
+						<Add To="Armour">4</Add>
 					</Armour>
 				</Equipments>
 			</Mount>
@@ -1204,7 +1204,7 @@
 					<FearElves/>
 					<ScythedWheel/>
 					<Original>
-						<AddToArmour>5</AddToArmour>
+						<Add To="Armour">5</Add>
 					</Original>
 				</SpecialRules>
 				<Equipments>
