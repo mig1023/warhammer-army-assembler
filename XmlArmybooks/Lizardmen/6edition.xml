@@ -60,7 +60,7 @@
 					<Name>Blessed Spawning of Tzunki</Name>
 					<Points>5</Points>
 					<TypeUnitIncrese/>
-					<AddToInitiative>1</AddToInitiative>
+					<Add To="Initiative">1</Add>
 					<Rule>Aquatic</Rule>
 					<Lore>Strongly associated with water, those blessed by the Sacred Spawning of Tzunki sometimes have mottled sea-green skin hues, their claws are often webbed and they have powerful gills hidden in folds of skin on their necks</Lore>
 					<Description>Aquatic, +1 Initiative</Description>
@@ -69,7 +69,7 @@
 					<Name>Blessed Spawning of Sotek</Name>
 					<Points>20</Points>
 					<TypeUnitIncrese/>
-					<AddToAttacks>1</AddToAttacks>
+					<Add To="Attacks">1</Add>
 					<Lore>The favoured spawnings of Sotek, the serpent great-god, are infused with the vengeful deity's blood-fuelled anger, and will attack their foes with great fury. Blood red is the colour associated with Sotek, and the physical representation of his blessing can vary from red skin and scales, to subtle hues of red on the crests or even just red warpaint</Lore>
 					<Description>When the unit/character charges, they get +1 Attack for that round of combat</Description>
 				</Powers>
@@ -77,7 +77,7 @@
 					<Name>Blessed Spawning of Quetzl</Name>
 					<Points>15</Points>
 					<TypeUnitIncrese/>
-					<AddToArmour>1</AddToArmour>
+					<Add To="Armour">1</Add>
 					<Lore>The servants of Quetzl are tough and warlike, as befits the chosen of the Warrior God. Those spawnings that are blessed by the divine protector and warrior-god Quetzl have especially thick, toughened scales covering their bodies, and bony spurs often protrude from their forearms</Lore>
 					<Description>Scaly Skin save increased by +1</Description>
 				</Powers>
@@ -108,7 +108,7 @@
 					<Name>Blessed Spawning of Tepok</Name>
 					<Points>20</Points>
 					<TypeUnitIncrese/>
-					<AddToDispell>1</AddToDispell>
+					<Add To="Dispell">1</Add>
 					<Lore>The blessing of inscrutable Tepok, the mysterious feathered-serpent god of the air and sacred places, manifests itself in the form of protection from harmful magic, and is often signified by the colour purple or deep blue</Lore>
 					<Description>The presence of the unit or character on the battlefield adds one dice to the player's Dispel dice pool</Description>
 				</Powers>
@@ -145,7 +145,7 @@
 					<Name>Cupped Hands of the Old Ones</Name>
 					<Only>Slann</Only>
 					<Points>50</Points>
-					<AddToWard>5</AddToWard>
+					<Add To="Ward">5</Add>
 					<Lore>A sphere of glowing light extends around the bearer as the divine protection of the Old Ones deflects the uncontrolled maelstrom of magic</Lore>
 					<Description>The entire unit that is accompanying the Slann gains a 5+ Ward save. Note, however, that the unit does not get this increase against models that are attacking it in close combat, for they are slightiy inside the mystical shield</Description>
 				</Arcane>
@@ -161,8 +161,8 @@
 					<Name>Plaque of Dominion</Name>
 					<Only>Slann</Only>
 					<Points>50</Points>
-					<AddToCast>1</AddToCast>
-					<AddToDispell>1</AddToDispell>
+					<Add To="Cast">1</Add>
+					<Add To="Dispell">1</Add>
 					<Lore>Formed into the image of a grimacing face, this is a potent plaque that helps to boost the amount of magical energy that is attracted to the Slann. Those unwary of its power can go mad just by looking at the horrific visage of the plaque</Lore>
 					<Description>Adds an extra +1 dice to the Lizsmdmen player's Power dice and Dispel pools</Description>
 				</Arcane>
@@ -179,7 +179,7 @@
 				<Weapon>
 					<Name>Blade of Revered Tzanuki</Name>
 					<Points>65</Points>
-					<AddToStrength>1</AddToStrength>
+					<Add To="Strength">1</Add>
 					<NoArmour/>
 					<Lore>Said to be the weapon wielded by the Old One Tzunki himself, this exquisitively crafted weapon is made of a hard, black material. It is unbreakable, and has survived the most intense dragon fire unscathed, even remaining icy cold to the touch. Such is its craftsmanship and design that it hums as it cuts through the air</Lore>
 					<Description>+1 Strenght. No armour saves are allowed against attacks made by the Blade of Revered Tzanuki</Description>
@@ -187,7 +187,7 @@
 				<Weapon>
 					<Name>Scimitar of the Sun Resplendent</Name>
 					<Points>50</Points>
-					<AddToAttacks>2</AddToAttacks>
+					<Add To="Attacks">2</Add>
 					<Lore>As light as a dagger, this curved blade invigorates the wielder with the power of the sun. They are filled with energy and mighty powers of endurance, and a fiery anger overcomes them in battle so that they attack their foes with great fury</Lore>
 					<Description>The wielder of this blade has +2 Attacks</Description>
 				</Weapon>
@@ -243,15 +243,15 @@
 					<Name>Sacred Stegadon Helm</Name>
 					<Only>Skink</Only>
 					<Points>40</Points>
-					<AddToArmour>6</AddToArmour>
-					<AddToLeadership>1</AddToLeadership>
+					<Add To="Armour">6</Add>
+					<Add To="Leadership">1</Add>
 					<Lore>This horned, bone helmet is a symbol of power and respect. Those who wear it are accorded much admiration and reverence, for it is said that only those chosen by the gods can place it on their heads without being struck down</Lore>
 					<Description>Confers +1 to the model's Armour save, which may be combined with other armour as normal. In addition, the helm adds +1 to the model's Leadership</Description>
 				</Additional>
 				<Shield>
 					<Name>Shield of the Mirrored Pool</Name>
 					<Points>30</Points>
-					<AddToArmour>6</AddToArmour>
+					<Add To="Armour">6</Add>
 					<Rule>Magic missile reflected on 2+</Rule>
 					<Lore>The face of this shield is dark and reflective, and ripples spread from its centre when it deflects blows. Hostile enemy magic is absorbed by this ancient piece of armour, and may be rebounded back at the caster</Lore>
 					<Description>The shield confers a +1 Armour save like a normal shield. In addition, any magic missile that strikes the bearer or any unit he is with is deflected on the roll of 4+ on a D6. If the spell is deflected, the results of the magic missile is resolved against the caster of the spell or the unit the character is with (following the normal targeting rules). This in turn cannot be dispelled</Description>
@@ -259,8 +259,8 @@
 				<Shield>
 					<Name>The Mainming Shield</Name>
 					<Points>30</Points>
-					<AddToArmour>6</AddToArmour>
-					<AddToAttacks>1</AddToAttacks>
+					<Add To="Armour">6</Add>
+					<Add To="Attacks">1</Add>
 					<Lore>This shield has been created more as a weapon than for protection, and the warrior using it can hack and slash with its barbed edges</Lore>
 					<Description>The shield confers a +1 Armour save like a normal shield. In addition, it confers +1 Attack to the model using it. This additional attack is worked out using the base Strength of the wielder, and counts as magical</Description>
 				</Shield>
@@ -366,7 +366,7 @@
 				<Additional>
 					<Name>Glyph Necklace</Name>
 					<Points>30</Points>
-					<AddToWard>5</AddToWard>
+					<Add To="Ward">5</Add>
 					<Lore>An ancient and potent token of protection, this necklace wards off attacks directed at its wearer. Enemies fumble their blows, their strikes glance off scales and they cannot seem to manage to attack the bearer effectively</Lore>
 					<Description>The character wearing this gains a 5+ ward save</Description>
 				</Additional>
@@ -415,8 +415,8 @@
 					<ColdBlooded/>
 					<LargeBase/>
 					<Slots>Hero, Rare</Slots>
-					<AddToCast>1</AddToCast>
-					<AddToDispell>1</AddToDispell>
+					<Add To="Cast">1</Add>
+					<Add To="Dispell">1</Add>
 					<MagicResistance>2</MagicResistance>
 					<Original>
 						<Rule>The Spirit of venerable Lord Kroak</Rule>
@@ -435,7 +435,7 @@
 					</Armour>
 					<AdditionalArmour>
 						<Name>Shield of the Old Ones</Name>
-						<AddToWard>3</AddToWard>
+						<Add To="Ward">3</Add>
 					</AdditionalArmour>
 				</Equipments>
 			</Lord>
@@ -456,7 +456,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Revered Spear of Tlanxla</Name>
-						<AddToStrength>1</AddToStrength>
+						<Add To="Strength">1</Add>
 					</HandWeapon>
 					<RangeWeapon>
 						<Name>Hands of Gods</Name>
@@ -492,7 +492,7 @@
 					<Option>
 						<Name>Third Generation</Name>
 						<Slots>Hero</Slots>
-						<AddToWounds>1</AddToWounds>
+						<Add To="Wounds">1</Add>
 						<Points>85</Points>
 						<Dependency/>
 						<Rule>No roll on the Miscast Table</Rule>
@@ -501,7 +501,7 @@
 					<Option>
 						<Name>Second Generation</Name>
 						<Slots>Hero, Rare</Slots>
-						<AddToWounds>2</AddToWounds>
+						<Add To="Wounds">2</Add>
 						<Points>135</Points>
 						<Dependency/>
 						<Rule>No roll on the Miscast Table</Rule>
@@ -513,7 +513,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Shield of the Old Ones</Name>
-						<AddToWard>4</AddToWard>
+						<Add To="Ward">4</Add>
 					</Armour>
 				</Equipments>
 			</Lord>
