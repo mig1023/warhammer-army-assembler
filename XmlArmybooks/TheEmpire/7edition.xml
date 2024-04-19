@@ -113,7 +113,7 @@
 				<Weapon>
 					<Name>Sword of Sigismund</Name>
 					<Points>45</Points>
-					<AddToStrength>1</AddToStrength>
+					<Add To="Strength">1</Add>
 					<HitFirst/>
 					<Lore>This sword, wielded in the crusades by the Grand Master of the Knights Panther, once belonged to Emperor Sigismund and has been passed down through all the Princes of Altdorf since then</Lore>
 					<Description>The wielder of this sword strikes with +1 Strength and benefits from the 'always strikes first' special rule in close combat</Description>
@@ -127,7 +127,7 @@
 				<Weapon>
 					<Name>Sword of Power</Name>
 					<Points>40</Points>
-					<AddToStrength>2</AddToStrength>
+					<Add To="Strength">2</Add>
 					<Lore>Forged from the hardest star metal, the wielder of this weapon is bestowed with supernatural strength, his every blow is able to smash through the thickest of armour with ease</Lore>
 					<Description>The sword confers +2 Strength to all close combat attacks made by the character</Description>
 				</Weapon>
@@ -170,7 +170,7 @@
 				<Armour>
 					<Name>The Gilded Armour</Name>
 					<Points>40</Points>
-					<AddToArmour>5</AddToArmour>
+					<Add To="Armour">5</Add>
 					<Test Bet="Pass" Context="ArmourSave" Profile="Strength"/>
 					<Lore>This golden suit of armour was a gift from the Elves of Ulthuan to Magnus the Pious after the Great War Against Chaos. It repels weapons with an invisible force</Lore>
 					<Description>Heavy armour. Models attacking the wearer in close combat must pass a Strength test before rolling to hit for every Attack directed at the target. If the test is failed, the Attack is lost. Special Attacks (like those of a Giant, impact hits and anything not included in the Attacks value on a model's profile) are not affected</Description>
@@ -178,7 +178,7 @@
 				<Armour>
 					<Name>Dawn Armour</Name>
 					<Points>35</Points>
-					<AddToArmour>4</AddToArmour>
+					<Add To="Armour">4</Add>
 					<Reroll>ToArmour</Reroll>
 					<Lore>A Master Wizard of the Gold Order forged this suit of plate under the first rays of the sun. The enchantment concealed in the metal will repair any damage within an eyeblink</Lore>
 					<Description>Full plate armour (armour save 4+). The model can re-roll any failed armour save</Description>
@@ -186,8 +186,8 @@
 				<Armour>
 					<Name>Armour of Tarnus</Name>
 					<Points>35</Points>
-					<AddToArmour>6</AddToArmour>
-					<AddToWard>5</AddToWard>
+					<Add To="Armour">6</Add>
+					<Add To="Ward">5</Add>
 					<Lore>This armour was worn by the warrior wizard Frederick von Tarnus. Such was the power invested in the armour's forging that von Tarnus’ own magic was unaffected by its protection</Lore>
 					<Description>Light armour. The Armour of Tarnus confers a 5+ ward save to the wearer</Description>
 				</Armour>
@@ -201,7 +201,7 @@
 				<Additional>
 					<Name>Helm of the Ratslayer</Name>
 					<Points>25</Points>
-					<AddToArmour>6</AddToArmour>
+					<Add To="Armour">6</Add>
 					<Rule>Causes Fear in all models in a Skaven army</Rule>
 					<Lore>The legendary helm of Count Mandred Ratslayer was crafted from the skull of the warlord who fell at the Battle of the Howling Hills. Such is its reputation amongst the rat-spawn that they dread to face its wearer</Lore>
 					<Description>This helm confers a 6+ armour save which can be combined with other equipment normally (including normal armour and a shield). In addition, the wearer causes Fear in all models in a Skaven army</Description>
@@ -209,7 +209,7 @@
 				<Shield>
 					<Name>Shield of the Gorgon</Name>
 					<Points>25</Points>
-					<AddToArmour>6</AddToArmour>
+					<Add To="Armour">6</Add>
 					<Rule>Can force one model in base contact to lose one Attack</Rule>
 					<Lore>The image on this shield represents the head of a Gorgon, a hideous monster said to dwell in the harsh deserts of Araby. Enemies try to avoid its gaze, for the eyes of a Gorgon are rumoured to turn living creatures to stone</Lore>
 					<Description>Shield. The wearer can force one model in base contact to lose one Attack. In the case of models with different Attacks (eg, mounted models) the wearer chooses which Attack is lost. Special Attacks (like those of a Giant, impact hits and anything not included in the Attacks value on a model's profile) are not affected</Description>
@@ -217,7 +217,7 @@
 				<Shield>
 					<Name>Bronze Shield</Name>
 					<Points>20</Points>
-					<AddToArmour>6</AddToArmour>
+					<Add To="Armour">6</Add>
 					<Rule>Ignores the first hit in the battle from shooting or close combat</Rule>
 					<Lore>A shield made of bronze can carry a powerful enchantment of protection, but only for a short time</Lore>
 					<Description>Shield. The bearer ignores the first hit in the battle from shooting or close combat</Description>
@@ -227,7 +227,7 @@
 				<Additional>
 					<Name>Shroud of Magnus</Name>
 					<Points>50</Points>
-					<AddToWard>5</AddToWard>
+					<Add To="Ward">5</Add>
 					<MagicResistance>2</MagicResistance>
 					<Lore>This ancient shroud was laid upon the body of Magnus the Pious after his death. On it one can still see the features of the Saviour of the Empire, his countenance as noble in death as it was in life</Lore>
 					<Description>This item gives the bearer a 5+ Ward save and magic resistance (2)</Description>
@@ -235,7 +235,7 @@
 				<Additional>
 					<Name>Holy Relic</Name>
 					<Points>45</Points>
-					<AddToWard>4</AddToWard>
+					<Add To="Ward">4</Add>
 					<Lore>The most famous holy relic in the Empire is the icon of Sigmar carried by the Arch Lector of Nuln, a token which is said to grant the bearer great fortitude</Lore>
 					<Description>The Holy Relic gives its bearer a 4+ Ward save</Description>
 				</Additional>
@@ -249,7 +249,7 @@
 				<Additional>
 					<Name>The White Cloak</Name>
 					<Points>35</Points>
-					<AddToWard>5</AddToWard>
+					<Add To="Ward">5</Add>
 					<Rule>2+ Ward save against Flaming Attacks</Rule>
 					<Lore>This cloak has been enchanted by Ar-Ulric, the High Priest of the Sect of Ulric, the god of winter and war. The magics of the cloak frost the air around the wearer, rendering him almost immune to even the hottest flame</Lore>
 					<Description>This item gives a 5+ ward save, which is increased to 2+ against Flaming Attacks</Description>
@@ -257,7 +257,7 @@
 				<Additional>
 					<Name>The Crimson Amulet</Name>
 					<Points>20</Points>
-					<AddToWard>6</AddToWard>
+					<Add To="Ward">6</Add>
 					<Rule>Automatically passes any characteristic tests he has to take (except Leadership tests)</Rule>
 					<Lore>Originally possessed by a tribal chieftain at the time of Sigmar, legends say that the bearer of this rough-hewn pendant is capable of performing exceptional displays of strength and agility</Lore>
 					<Description>This item gives a 6+ ward save. The wearer automatically passes any characteristic tests he has to take (except Leadership tests)</Description>
@@ -450,7 +450,7 @@
 					<Terror/>
 					<Undead/>
 					<Reroll>ToWound</Reroll>
-					<AddToCloseCombat>1</AddToCloseCombat>
+					<Add To="CloseCombat">1</Add>
 					<Original>Leader of Men</Original>
 				</SpecialRules>
 				<Equipments>
@@ -462,7 +462,7 @@
 					<FullPlateArmour/>
 					<Armour>
 						<Name>The Silver Seal</Name>
-						<AddToWard>4</AddToWard>
+						<Add To="Ward">4</Add>
 						<MagicResistance>3</MagicResistance>
 					</Armour>
 				</Equipments>
@@ -519,7 +519,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>The Staff of Command</Name>
-						<AddToStrength>2</AddToStrength>
+						<Add To="Strength">2</Add>
 					</HandWeapon>
 					<Armour>
 						<Name>The Jade Griffon</Name>
@@ -624,7 +624,7 @@
 					<HandWeapon>Warhammer</HandWeapon>
 					<Arcane>
 						<Rule>Prayers of Sigmar</Rule>
-						<AddToDispell>2</AddToDispell>
+						<Add To="Dispell">2</Add>
 					</Arcane>
 				</Equipments>
 				<Options>
@@ -695,12 +695,12 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Two-handed warhammer</Name>
-						<AddToStrength>2</AddToStrength>
+						<Add To="Strength">2</Add>
 					</HandWeapon>
 					<HeavyArmour/>
 					<Arcane>
 						<Rule>Prayers of Sigmar</Rule>
-						<AddToDispell>1</AddToDispell>
+						<Add To="Dispell">1</Add>
 					</Arcane>
 				</Equipments>
 			</Hero>
@@ -748,7 +748,7 @@
 					<HandWeapon>Warhammer</HandWeapon>
 					<Arcane>
 						<Rule>Prayers of Sigmar</Rule>
-						<AddToDispell>1</AddToDispell>
+						<Add To="Dispell">1</Add>
 					</Arcane>
 				</Equipments>
 				<Options>
@@ -817,7 +817,7 @@
 				<Profile M='8' WS='1' BS='0' S='4' T='4' W='1' I='1' A='1' Ld='0'/>
 				<SpecialRules>
 					<ImpactHit>D3</ImpactHit>
-					<AddToArmour>5</AddToArmour>
+					<Add To="Armour">5</Add>
 				</SpecialRules>
 			</Mount>
 			<Mount>
@@ -958,7 +958,7 @@
 					<Option>
 						<Name>Knights of the Inner Circle</Name>
 						<PointsPerModel>3</PointsPerModel>
-						<AddToStrength>1</AddToStrength>
+						<Add To="Strength">1</Add>
 					</Option>
 					<Command>
 						<Champion Points="16" Name="Preceptor"/>
@@ -1148,7 +1148,7 @@
 					<Option>
 						<Name>Barding for Warhorse</Name>
 						<PointsPerModel>2</PointsPerModel>
-						<AddToArmour>6</AddToArmour>
+						<Add To="Armour">6</Add>
 						<Rule>No longer Fast Cavalry</Rule>
 					</Option>
 					<Command>
