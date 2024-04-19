@@ -103,7 +103,7 @@
 				<Weapon>
 					<Name>The Tenderiser</Name>
 					<Points>50</Points>
-					<AddToStrength>2</AddToStrength>
+					<Add To="Strength">2</Add>
 					<HitLast/>
 					<MultiWounds>D3</MultiWounds>
 					<Lore>The Tenderiser is a massive two-ended club made from the axle of a Great Caravan. It is so heavy that even a normal Ogre Bull would struggle to lift it. The destructive power bound into its twin heads enables the bearer to shatter a boulder with one strike</Lore>
@@ -112,7 +112,7 @@
 				<Weapon>
 					<Name>Siegebreaker</Name>
 					<Points>30</Points>
-					<AddToStrength>3</AddToStrength>
+					<Add To="Strength">3</Add>
 					<HitLast/>
 					<MultiWounds>D6</MultiWounds>
 					<Rule>When rolling to hit, compare the Ogre's Weapon Skill with the enemy's Initiative value instead his Weapon Skill</Rule>
@@ -138,7 +138,7 @@
 				<Armour>
 					<Name>Mastodon Armour</Name>
 					<Points>50</Points>
-					<AddToArmour>5</AddToArmour>
+					<Add To="Armour">5</Add>
 					<Rule>If character is killed by an attack that is not made in close combat, then rolls a dice: on the roll of a 2+ he is return to life with 1 wound at the end of the phase</Rule>
 					<Lore>The Mastodon Armour is a great set of plates and chainmail forged by the Chaos Dwarfs in exchange for hundreds of human and Gnoblar slaves. It shifts and hardens in response to incoming attacks</Lore>
 					<Description>The Mastodon Armour is heavy armour (5+ Armour Save). If at any point the wielder is killed by an attack that is not made in close combat, then rolls a dice. On the roll of a 2+ he is return to life with 1 wound at the end of the phase</Description>
@@ -146,7 +146,7 @@
 				<Additional>
 					<Name>Greatskull</Name>
 					<Points>35</Points>
-					<AddToArmour>6</AddToArmour>
+					<Add To="Armour">6</Add>
 					<Rule>Any spellcaster that targets the character or the unit he is with, will miscast on any roll of a double 2 or a double 3 as well as on the roll of a double 1</Rule>
 					<Lore>The Greatskull is an ancient, tattooed cave-beast skull, worn as a gut-plate, bleeds hostility and confusion into the minds of any who would do its bearer harm with the arcane arts</Lore>
 					<Description>Grants a 6+ Armour Save that can be combined with other equipment normally. Any spellcaster that targets the character with the Greatskull, or the unit he is with, will miscast on any roll of a double 2 or a double 3 as well as on the roll of a double 1</Description>
@@ -154,7 +154,7 @@
 				<Additional>
 					<Name>Bullgut</Name>
 					<Points>30</Points>
-					<AddToArmour>6</AddToArmour>
+					<Add To="Armour">6</Add>
 					<Rule>Unit Strength as 6</Rule>
 					<Rule>Impact hits caused by the Ogre's Bull Charge are considered to be Armour Piercing</Rule>
 					<Lore>A Bullgut is a heavy-duty gut-plate with two sharp curving horns that jut out from it, wrenched from the skull of a mighty cave-beast. The ground itself shakes when the bearer makes a bull charge</Lore>
@@ -163,7 +163,7 @@
 				<Additional>
 					<Name>Gut Maw</Name>
 					<Points>30</Points>
-					<AddToArmour>6</AddToArmour>
+					<Add To="Armour">6</Add>
 					<Rule>If character kills an opponent during a challenge, he may immediately restore a number of wounds equal to the starting Wounds characteristic of the slain opponent, if character is already at full Wounds, then he may add +1 Wound to his profile</Rule>
 					<Lore>The Gut Maw is a polished brass gut-plate with a set of huge iron jaws attached to it, blessed by several generations of Butchers and passed through clan to clan. Its jaws can open wide and swallow a foe in battle, and according to Ogres, the victim passes straight through and into the Great Maw itself. There it is consumed and the life force of those ingested by the Gut Maw is passed on to bolster its wearer</Lore>
 					<Description>Grants a 6+ Armour Save that can be combined with other equipment normally. If an Ogre wearing the Gut Maw kills an opponent during a challenge, he may immediately restore a number of wounds equal to the starting Wounds characteristic of the slain opponent. If the owner of the Gut Maw is already at full Wounds, then he may add +1 Wound to his profile</Description>
@@ -187,7 +187,7 @@
 				<Additional>
 					<Name>Wyrdstone necklace</Name>
 					<Points>20</Points>
-					<AddToWard>5</AddToWard>
+					<Add To="Ward">5</Add>
 					<Rule>Roll a D6 after deployment, if the result is a 1 the bearer suffers a wound with no saves allowed</Rule>
 					<Rule>For each individual wound the bearer suffers, roll a D6. If this roll is higher than the result of the To Wound roll, that wound is discounted</Rule>
 					<Lore>Perhaps plucked from the ruins of Mordheim or even from the searing Baleful Deserts around the Great Maw, this shard of Wyrdstone has been bound into a crude necklace where it quietly and silently absorbs its bearer's life force</Lore>
