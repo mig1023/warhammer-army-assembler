@@ -145,7 +145,7 @@
 					<Name>Axes of Khorgor</Name>
 					<Points>65</Points>
 					<Only>Infantry</Only>
-					<AddToAttacks>1</AddToAttacks>
+					<Add To="Attacks">1</Add>
 					<Reroll>ToHit</Reroll>
 					<Lore>One of the greatest Champions of the Beastmen ever to walk the Old World was a vicious brute named Khorgor. A vile thing, it's said he butchered hundreds of Humans. So wanton was he in his killing, he decorated his horns with the entrails of the dead. Whilst a great warrior in his own right, he was aided by a pair of blasphemous axes that could hew through armour and flesh with ease. So powerful was he when armed with these axes, no other Beastman could stand against him. But as with all things, Khorgor passed from this world and ownership of these terrible weapons changed hands many times, moving from successor to successor</Lore>
 					<Description>This pair of axes requires two hands to use. The bearer gains +1 Attack and may re-roll any missed rolls to hit in close combat</Description>
@@ -153,7 +153,7 @@
 				<Weapon>
 					<Name>The Black Maul</Name>
 					<Points>60</Points>
-					<AddToStrength>2</AddToStrength>
+					<Add To="Strength">2</Add>
 					<Frenzy/>
 					<Lore>This large-hafted weapon ends in a spiked head. Stained black from the blood of thousands of victims, it seems alive with violence. Any who carries this weapon for long finds their thoughts ever drifting towards carnage and bloodshed, and eventually find themselves obeying the weapon’s longings</Lore>
 					<Description>Adds +2 to the bearer's Strength, and the bearer is also subject to frenzy</Description>
@@ -177,7 +177,7 @@
 					<Name>Slaughterer's Blade</Name>
 					<Only>Infantry</Only>
 					<Points>40</Points>
-					<AddToStrength>2</AddToStrength>
+					<Add To="Strength">2</Add>
 					<HitLast/>
 					<Rule>For each wound inflicted to enemy, roll a D6 immediately: hach roll of a 4+ heals one lost Wound to the bearer (up to their starting Wounds total)</Rule>
 					<Lore>Taking the form of a crude glaive writhing with veins and gasping, fanged mouths, the Slaughterer's Blade feeds indiscriminately on bloodletting. Any who wield it are said to gain eternal life, provided that the blood on the blade never dries</Lore>
@@ -195,7 +195,7 @@
 				<Additional>
 					<Name>Pelt of The Dark Young</Name>
 					<Points>25</Points>
-					<AddToArmour>6</AddToArmour>
+					<Add To="Armour">6</Add>
 					<MagicResistance>1</MagicResistance>
 					<Lore>After years of being smeared in blood, filth and excrement in the name of the Chaos gods, the Champion's pelt has mutated into an iron-hard cloak of gristle and hair that affords protection from both physical and magical attacks.</Lore>
 					<Description>The Pelt confers a 6+ Scaly Skin save that can be combined with normal armour. It also gives the bearer and any unit he joins Magic Resistance (1)</Description>
@@ -203,7 +203,7 @@
 				<Armour>
 					<Name>Trollhide Armour</Name>
 					<Points>20</Points>
-					<AddToArmour>5</AddToArmour>
+					<Add To="Armour">5</Add>
 					<Regeneration/>
 					<Lore>The Trollhide confers some of the more gruesome abilities of its former occupant to the wearer</Lore>
 					<Description>Trollhide Armour counts as a suit of heavy armour. The wearer may also Regenerate, except that lost Wounds are only regained on the roll of a 6, rather than a 4, 5 or 6</Description>
@@ -218,7 +218,7 @@
 				<Armour>
 					<Name>Chaos armour</Name>
 					<Points>10</Points>
-					<AddToArmour>4</AddToArmour>
+					<Add To="Armour">4</Add>
 					<Lore>Chaos Armour is a set of finely-wrought but menacingly baroque plate armour favoured by Chaos Champions and Chaos Lords. Some sources claim that those Warriors of Chaos lucky enough to earn a suit through their deeds can find their bodies fused with the armour until warrior and battle-plate are one</Lore>
 					<Description>Chaos Armour gives a 4+ Armour save, that can be combined with other equipment as normal (other than light armour and heavy armour). A model may wear Chaos Armour and still cast spells</Description>
 				</Armour>
@@ -227,7 +227,7 @@
 				<Additional>
 					<Name>Crown of Horns</Name>
 					<Points>30</Points>
-					<AddToWard>5</AddToWard>
+					<Add To="Ward">5</Add>
 					<Rule>+1 to any attempts to rally to a unit</Rule>
 					<Lore>Occasionally, a beast that has earned the favour of his patron god sprouts a thick crown of long, jetblack horns from his skull. Rivulets of blood constantly trickle from where the horns have pushed through his forehead, and it is obvious to all that the bearer has truly been marked for greatness</Lore>
 					<Description>The bearer benefits from a 5+ Ward save and confers +1 to any attempts to rally to a unit he has joined, in addition to other modifiers</Description>
@@ -235,7 +235,7 @@
 				<Additional>
 					<Name>Rune of The True Beast</Name>
 					<Points>30</Points>
-					<AddToWard>5</AddToWard>
+					<Add To="Ward">5</Add>
 					<Rule>Ridden monsters, lone monsters, the steeds pulling chariots, cavalry mounts and swarms may never direct their attacks at a model bearing the Rune of the True Beast, although their riders may attack as normal</Rule>
 					<Lore>The bearer has a rare and potent rune fused into his flesh, a sigil of pure savagery that has devolved its wearer into nothing more than a ravenous mass of muscle and fangs. Even the strongest beast will cower before the unbridled ferocity of this raging predator</Lore>
 				</Additional>
@@ -286,7 +286,7 @@
 				<Arcane>
 					<Name>Staff of Darkoth</Name>
 					<Points>25</Points>
-					<AddToStrength>2</AddToStrength>
+					<Add To="Strength">2</Add>
 					<HitLast/>
 					<Rule>Shaman knows spell The Wild Call</Rule>
 					<Lore>The Staff of Darkoth, and its wielder, are crawling with slugs, bugs, and insects. They seeth over the surface of the wood, infect the shaman's fur and inhabit his robes</Lore>
@@ -297,7 +297,7 @@
 				<Banner>
 					<Name>The Beast Banner</Name>
 					<Points>60</Points>
-					<AddToAttacks>1</AddToAttacks>
+					<Add To="Attacks">1</Add>
 					<Lore>This ancient banner is stitched together from the skins of defeated enemies. Only the flayed skins of the most powerful foes are used, for the Beastmen become imbued with the power of their conquests</Lore>
 					<Description>All Beasts of Chaos models in the unit, including characters, gain +1 Attack when they charge</Description>
 				</Banner>
@@ -351,14 +351,14 @@
 					<HandWeapon/>
 					<HandWeapon>
 						<Name>Scourge</Name>
-						<AddToAttacks>1</AddToAttacks>
+						<Add To="Attacks">1</Add>
 						<Rule>Khazrak makes one attack with Scourge in each Close Combat phase, in addition to his four normal hand weapon attacks, if you successfully roll to wound with Scourge, Khazrak may immediately roll to wound again, and so on until he fails to make the required score</Rule>
 					</HandWeapon>
 					<Armour>
 						<Name>The Dark Mail</Name>
 						<MagicResistance>1</MagicResistance>
 						<Rule>If he or the unit he is with is the target of a spell that is successfully cast, Khazrak gains +1 Strength (to a maximum of 10) for the remainder of the battle</Rule>
-						<AddToArmour>2</AddToArmour>
+						<Add To="Armour">2</Add>
 					</Armour>
 				</Equipments>
 			</Lord>
@@ -372,7 +372,7 @@
 				<SpecialRules>
 					<ImmuneToPsychology/>
 					<General/>
-					<AddToAttacks>1</AddToAttacks>
+					<Add To="Attacks">1</Add>
 					<Slots>Hero</Slots>
 					<Raiders/>
 					<Ambush/>
@@ -420,9 +420,9 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>The Beast-Roar</Name>
-						<AddToStrength>2</AddToStrength>
+						<Add To="Strength">2</Add>
 						<HitLast/>
-						<AddToDispell>2</AddToDispell>
+						<Add To="Dispell">2</Add>
 						<Rule>If a Wizard (friend or enemy) rolls a double when rolling on the Miscast table, then the unfortunate Wizard is instantly turned into a Chaos Spawn under the control of the Beastmen player</Rule>
 					</HandWeapon>
 					<Armour>
