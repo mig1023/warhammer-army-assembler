@@ -924,6 +924,9 @@ namespace WarhammerArmyAssembler.ArmyBook
                 newOption.DependencyGroup = String.IsNullOrEmpty(group) ? "Default" : group;
             }
 
+            foreach (XmlNode setProperty in xmlNode.SelectNodes("Add"))
+                SetPropertyShort(newOption.AddTo, setProperty, attributeName: "To");
+
             foreach (string name in Constants.ProfilesNames.Keys)
             {
                 SetProperty(newOption.AddTo, xmlNode, $"AddTo{name}");

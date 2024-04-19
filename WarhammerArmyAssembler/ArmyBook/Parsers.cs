@@ -337,6 +337,16 @@ namespace WarhammerArmyAssembler.ArmyBook
             return folder;
         }
 
+        public static void SetPropertyShort(Dictionary<string, int> list, XmlNode xmlNode, string attributeName)
+        {
+            if (xmlNode == null)
+                return;
+
+            int newValue = int.Parse(xmlNode.InnerText);
+            string name = xmlNode.Attributes[attributeName].InnerText;
+            list.Add(name, newValue);
+        }
+
         public static void SetProperty(Dictionary<string, int> list, XmlNode value, string name)
         {
             XmlNode xmlNode = XmlValueSemiParser(value, name);
