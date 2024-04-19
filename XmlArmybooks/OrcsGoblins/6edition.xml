@@ -149,7 +149,7 @@
 				<Weapon>
 					<Name>Basha's Big Aхе of Bashin'</Name>
 					<Points>50</Points>
-					<AddToAttacks>2</AddToAttacks>
+					<Add To="Attacks">2</Add>
 					<Lore>This legendary axe is all that is left of the once mighty Basha Warboss of the Iron Skullz after he stood rather too close to a drunken giant at the Battle of Grim's Crag</Lore>
 					<Description>The axe gives the wielder +2 Attacks in close combat</Description>
 				</Weapon>
@@ -163,7 +163,7 @@
 				<Weapon>
 					<Name>Fumpa's Club of Fumpin'</Name>
 					<Points>40</Points>
-					<AddToStrength>2</AddToStrength>
+					<Add To="Strength">2</Add>
 					<Lore>Since the dawn of last Thursday Fumpa's club has been the traditional symbol of leadership amongst the Blacknose tribe. Of course, to start with there were a few who didn't see it like that, but they've all since been, er, convinced</Lore>
 					<Description>The Club of Fumpin confers +2 Strength to all close combat attacks made by the character fighting with it</Description>
 				</Weapon>
@@ -210,7 +210,7 @@
 				<Armour>
 					<Name>Armour of Protectyness</Name>
 					<Points>60</Points>
-					<AddToArmour>5</AddToArmour>
+					<Add To="Armour">5</Add>
 					<FirstWoundDiscount/>
 					<Lore>It s not often that Gobbos get to name magical items and this is why. The Armour of Protectyness was quenched in the blood of a Troll and has gained some of its regenerative powers</Lore>
 					<Description>Counts as wearing armour (5+ armour save) which can be combined with other equipment normally. Also, the wearer discounts the first wound he suffers</Description>
@@ -218,7 +218,7 @@
 				<Armour>
 					<Name>Armour of Mork</Name>
 					<Points>50</Points>
-					<AddToArmour>5</AddToArmour>
+					<Add To="Armour">5</Add>
 					<MagicResistance>2</MagicResistance>
 					<Lore>Armour made with the aid of a Shaman (as one of the ingredients) is a strong defence against enemy magic</Lore>
 					<Description>Counts as wearing armour (5+ armour save) which can be combined with other equipment normally. Also gives the wearer and the unit he is with Magic Resistance (2)</Description>
@@ -226,15 +226,15 @@
 				<Shield>
 					<Name>Ironskin Shield</Name>
 					<Points>50</Points>
-					<AddToArmour>6</AddToArmour>
-					<AddToWard>4</AddToWard>
+					<Add To="Armour">6</Add>
+					<Add To="Ward">4</Add>
 					<Lore>This ancient iron bound shield is rusty and battered but its experience in battle gives the bearer much protection</Lore>
 					<Description>Counts as a shield (6+ armour save) which can be combined with other equipment normally. Also gives the bearer a 4+ Ward save</Description>
 				</Shield>
 				<Armour>
 					<Name>Armour of Gork</Name>
 					<Points>35</Points>
-					<AddToArmour>5</AddToArmour>
+					<Add To="Armour">5</Add>
 					<Reroll>ToArmour</Reroll>
 					<Lore>If armour is made with the correct rituals instead of just being bashed out of whatever bits of metal come to hand, it can be enchanted by a Shaman to offer extra protection</Lore>
 					<Description>Counts as wearing armour (5+ armour save) which can be combined with other equipment normally. The wearer may re-roll failed armour saves</Description>
@@ -242,7 +242,7 @@
 				<Shield>
 					<Name>Ugbkag's Lucky Shield</Name>
 					<Points>30</Points>
-					<AddToArmour>6</AddToArmour>
+					<Add To="Armour">6</Add>
 					<Rule>Discounts the first hit suffered in the battle</Rule>
 					<Lore>Ugbrag had this shield made for him by a captured Dwarf smith, but the smith 'forgot' to tell him that the enchantment only worked once in each battle</Lore>
 					<Description>Counts as a shield (6+ armour save) which can be combined with other equipment normally. Also, the bearer discounts the first hit suffered in the battle</Description>
@@ -259,8 +259,8 @@
 					<Name>Nobbla's 'Elmet</Name>
 					<Points>20</Points>
 					<Only>Goblin</Only>
-					<AddToArmour>6</AddToArmour>
-					<AddToWard>6</AddToWard>
+					<Add To="Armour">6</Add>
+					<Add To="Ward">6</Add>
 					<Lore>Given that it was made by Gobbos Nobbla's ‘Elmet is a fantastic piece of workmanship given that it was made by Gobbos</Lore>
 					<Description>Gives the wearer a 6+ armour save and may be worn in addition to normal armour. Also gives the wearer a 6+ Ward save</Description>
 				</Additional>
@@ -276,14 +276,14 @@
 				<Additional>
 					<Name>Warboss Umm's Best Big Boss's 'at</Name>
 					<Points>30</Points>
-					<AddToWard>5</AddToWard>
+					<Add To="Ward">5</Add>
 					<Lore>Originally this rune-encrusted and rather squashed looking helmet belonged to a Dwarf king or so legend tells Although it is a boon in combat it is far from infallible as its change in ownership attests</Lore>
 					<Description>Magical Boss's 'at wot protects you - giz you a 5+ Ward save dunnit. May be worn in addition to normal or magical armour</Description>
 				</Additional>
 				<Armour>
 					<Name>Magical Warpaint</Name>
 					<Points>25</Points>
-					<AddToWard>5</AddToWard>
+					<Add To="Ward">5</Add>
 					<Lore>Some of the more reclusive and frequently madder Sat age Orc Shamans know the secret of preparing magical warpaint that is much more effective than the coloured mud that the warriors usually daub themselves with</Lore>
 					<Description>Savage Orcs only. If the wearer fails his armour save, he may make a 5+ Ward save. A model cannot wear any armour (not even magical) if it has the Magical Warpaint, though it may carry a shield</Description>
 				</Armour>
@@ -345,7 +345,7 @@
 					<Name>Warboss Imbad's Iron Gnashas</Name>
 					<Only>Orc</Only>
 					<Points>50</Points>
-					<AddToAttacks>1</AddToAttacks>
+					<Add To="Attacks">1</Add>
 					<KillingBlow/>
 					<Lore>A huge metal jaw plate that belonged to the infamous Imbad - his psychotic spirit lives on within it</Lore>
 					<Description>The character wearing the Gnashas gains +1 Attack in close combat. This additional attack counts as being made with the Killing Blow special ability</Description>
@@ -361,7 +361,7 @@
 				<Weapon>
 					<Name>Bigged's 'Ed Kickin Boots</Name>
 					<Points>40</Points>
-					<AddToAttacks>1</AddToAttacks>
+					<Add To="Attacks">1</Add>
 					<Lore>Bigged - an old and boastful Orc - made his last boast in front of an Empire cannon. Only his boots w ere recovered. His vengeful spirit lives on (the odour of his feet lingers forever)</Lore>
 					<Description>Iron-shod unpleasantness. In close combat the wearer gets one additional automatic hit at his basic Strength value in addition to his normal Attacks</Description>
 				</Weapon>
@@ -384,7 +384,7 @@
 					<Name>'Edbuttin' 'At</Name>
 					<Only>Orc</Only>
 					<Points>25</Points>
-					<AddToAttacks>1</AddToAttacks>
+					<Add To="Attacks">1</Add>
 					<Rule>One extra Attack with the Killing Blow special ability</Rule>
 					<Lore>'Eadbuttin contests are an old Orc favourite for resolving disputes and the greenskins aren't above a bit of magical cheating to help them win</Lore>
 					<Description>May only be used in challenges. The wearer gets one extra Attack, made before all other blows are struck. This Attack is made with the Killing Blow special ability and is resolved at the wearer's normal Strength. Even if the opponent is killed by the 'eadbutt, the character wearing the 'At should still make his remaining attacks to calculate overkill for combat resolution</Description>
@@ -412,7 +412,7 @@
 					<Name>Rowdy Grott's Big Red Raggedy Banner</Name>
 					<Only>Goblin</Only>
 					<Points>75</Points>
-					<AddToLeadership>1</AddToLeadership>
+					<Add To="Leadership">1</Add>
 					<Lore>The big red raggedy banner belonged to the rabble rousing Rowdy Grott Rowdy was an uppity Orc runtling who led a revolt of grotty Gobbos, Snots and litl'uns against his biggers and betters</Lore>
 					<Description>Common Goblins (including characters) in a unit with Rowdy Grott's Big Red Raggedy Banner get a +1 Leadership bonus up to a maximum value of 9</Description>
 				</Banner>
@@ -434,7 +434,7 @@
 				<Banner>
 					<Name>Gork's WAAAGH! banner</Name>
 					<Points>30</Points>
-					<AddToMovement>1</AddToMovement>
+					<Add To="Movement">1</Add>
 					<Lore>On the eve of battle the Greenskin shamans invoke the spirit of the great god Gork before the tribe's mighty Waaagh! banner. The banner is liberally daubed with vast quantities of Orc dung blood and spittle which will serve to absorb the battle thirst of Gork. The shamans whirl and dance insanely howling and gabbling in spirit talk all night long as the Waaagh! banner slowly grows in power. It also acquires a unique odour which is an unmistakable mark of tribal recognition</Lore>
 					<Description>The unit that carries Gork's Waaagh! banner adds +1 to its Movement value (i.e. +1" on its normal move and +2" on its charge and march) so long as it moves towards the closest enemy by the shortest route</Description>
 				</Banner>
@@ -474,7 +474,7 @@
 					<Hate/>
 					<ImmuneToPsychology/>
 					<General/>
-					<AddToCloseCombat>2</AddToCloseCombat>
+					<Add To="CloseCombat">2</Add>
 					<Slots>Hero, Special</Slots>
 					<IgnoreGreenskinPanic/>
 					<QuellAnimosity/>
@@ -482,13 +482,13 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Gitsnik</Name>
-						<AddToStrength>2</AddToStrength>
+						<Add To="Strength">2</Add>
 						<HitFirst/>
 					</HandWeapon>
 					<Armour>
 						<Name>Blood-forged Armour</Name>
-						<AddToArmour>1</AddToArmour>
-						<AddToWard>5</AddToWard>
+						<Add To="Armour">1</Add>
+						<Add To="Ward">5</Add>
 					</Armour>
 					<Armour>
 						<Name>Mork's All-Seeing Eye</Name>
@@ -529,7 +529,7 @@
 					</Armour>
 					<Armour>
 						<Name>Warpaint</Name>
-						<AddToWard>5</AddToWard>
+						<Add To="Ward">5</Add>
 					</Armour>
 				</Equipments>
 			</Lord>
@@ -934,7 +934,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Scaly skin</Name>
-						<AddToArmour>4</AddToArmour>
+						<Add To="Armour">4</Add>
 					</Armour>
 				</Equipments>
 			</Mount>
