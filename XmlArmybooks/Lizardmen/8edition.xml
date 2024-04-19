@@ -170,8 +170,8 @@
 				<Additional>
 					<Name>Sacred Stegadon Helm of Itza</Name>
 					<Points>40</Points>
-					<AddToArmour>6</AddToArmour>
-					<AddToToughness>1</AddToToughness>
+					<Add To="Armour">6</Add>
+					<Add To="Toughness">1</Add>
 					<ImpactHit>D3</ImpactHit>
 					<Lore>Any Lizardmen wearing a helmet made from a Stegadon skull is accorded due respect, for it is a potent symbol of power. However, any adorned with the Sacred Stegadon Helm of Itza is accorded the reverence due to a Slann. The horns ofthe helm came from the mighty Xelbalbia, a divinely huge Stegadon whose heroics in the Defence o f Itza during the Great Catastrophe were overshadowed only by the defence ofthe Bridge of Stars</Lore>
 					<Description>The wearer of the Sacred Stegadon Helm counts his armour save as being one point higher than normal. Furthermore, the Sacred Stegadon Helm grants the wearer +1 Toughness and the Impact Hits (D3) special rule</Description>
@@ -257,7 +257,7 @@
 				<Additional>
 					<Name>Helm of Discord</Name>
 					<Points>30</Points>
-					<AddToArmour>6</AddToArmour>
+					<Add To="Armour">6</Add>
 					<Test Bet="Pass" Context="Round" Profile="Leadership"/>
 					<Description>The wearer counts his armour save as being one point higher than normal. In addition, at the start of each Close Combat phase, choose an enemy character in base contact with the bearer or his unit. That character must immediately take a Leadership test. If the test is failed, the character succumbs to the helm's sibilant whispers of malice and jealousy. In this Close Combat phase, the victim cannot make attacks and is hit automatically</Description>
 				</Additional>
@@ -410,7 +410,7 @@
 					</HandWeapon>
 					<HandWeapon>
 						<Name>Revered Spear of Tlanxla</Name>
-						<AddToStrength>1</AddToStrength>
+						<Add To="Strength">1</Add>
 						<MultiWounds>2</MultiWounds>
 					</HandWeapon>
 					<LightArmour/>
@@ -448,7 +448,7 @@
 					</HandWeapon>
 					<HandWeapon>
 						<Name>Plaque of Sotek</Name>
-						<AddToWard>5</AddToWard>
+						<Add To="Ward">5</Add>
 					</HandWeapon>
 				</Equipments>
 			</Lord>
@@ -476,7 +476,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Shield of the Old Ones</Name>
-						<AddToWard>4</AddToWard>
+						<Add To="Ward">4</Add>
 					</Armour>
 				</Equipments>
 			</Lord>
@@ -525,7 +525,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>The Star-stone Mace</Name>
-						<AddToStrength>2</AddToStrength>
+						<Add To="Strength">2</Add>
 						<HitFirst/>
 						<Rule>At the start of every Close Combat phase, all enemy models in base contact with Chakax must reveal their magic items. If Chakax scores one or more hits against a model with any magic items, roll a D6; on a 5+ one randomly determined magic item is immediately destroyed and cannot be used further in this game</Rule>
 					</HandWeapon>
@@ -536,7 +536,7 @@
 					</Armour>
 					<Armour>
 						<Name>Key to the Eternity Chamber</Name>
-						<AddToWard>5</AddToWard>
+						<Add To="Ward">5</Add>
 					</Armour>
 				</Equipments>
 			</Hero>
@@ -559,7 +559,7 @@
 				<Equipments>
 					<Armour>
 						<Name>The Shield of Aeons</Name>
-						<AddToArmour>5</AddToArmour>
+						<Add To="Armour">5</Add>
 						<Rule>Any enemy model that makes a successful charge against Gor-Rok and ends the Movement phase in base contact with him must immediately take a Dangerous Terrain test with a -1 penalty</Rule>
 					</Armour>
 					<HandWeapon>
@@ -594,7 +594,7 @@
 					</HandWeapon>
 					<Armour>
 						<Name>Monor Shield of the Old Ones</Name>
-						<AddToWard>5</AddToWard>
+						<Add To="Ward">5</Add>
 					</Armour>
 					<Armour>
 						<Name>Eye of the Old Ones</Name>
@@ -957,7 +957,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Helberd</Name>
-						<AddToStrength>1</AddToStrength>
+						<Add To="Strength">1</Add>
 					</HandWeapon>
 					<LightArmour/>
 					<Shield/>
