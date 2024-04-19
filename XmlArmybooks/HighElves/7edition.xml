@@ -85,7 +85,7 @@
 			<MagicWeapons>
 				<Weapon>
 					<Name>Blade of Leaping Gold</Name>
-					<AddToAttacks>3</AddToAttacks>
+					<Add To="Attacks">3</Add>
 					<Points>60</Points>
 					<Lore>A more finely balanced sword than this was never made</Lore>
 					<Description>The blade confers +3 Attacks on the character wielding it</Description>
@@ -123,7 +123,7 @@
 					<Only>Infantry</Only>
 					<Points>40</Points>
 					<KillingBlow/>
-					<AddToStrength>2</AddToStrength>
+					<Add To="Strength">2</Add>
 					<Lore>A legendary blade forged by Aren, one of the first Swordmasters of Hoeth. It is as tall as an elf and a light as a willow switch</Lore>
 					<Description>Model on foot only, requires two hands. The bearer adds +2 to his Strength when using the White Sword. In addition it confers the Killing Blow special rule</Description>
 				</Weapon>
@@ -145,15 +145,15 @@
 				<Armour>
 					<Name>Armour of Protection</Name>
 					<Points>45</Points>
-					<AddToArmour>6</AddToArmour>
-					<AddToWard>4</AddToWard>
+					<Add To="Armour">6</Add>
+					<Add To="Ward">4</Add>
 					<Lore>This simple armour is adorned by a single Sarathai rune on the breastplate. The World Dragon itself is said to protect the wearer</Lore>
 					<Description>Counts as light armour (armour save 6+) which can be combined with other equipment normally. It also provides a 4+ Ward save</Description>
 				</Armour>
 				<Shield>
 					<Name>Golden Shield</Name>
 					<Points>35</Points>
-					<AddToArmour>6</AddToArmour>
+					<Add To="Armour">6</Add>
 					<Reroll>OpponentToHit</Reroll>
 					<Lore>A highly polished shield inlaid with swirling patterns in many types of gold</Lore>
 					<Description>This shield confers a 6+ armour save which can be combined with other equipment normally. In addition, all successful attempts to hit the bearer in close combat must be re-rolled</Description>
@@ -162,7 +162,7 @@
 					<Name>Armour of Stars</Name>
 					<Only>Infantry</Only>
 					<Points>30</Points>
-					<AddToArmour>6</AddToArmour>
+					<Add To="Armour">6</Add>
 					<Rule>After any unsaved wound model is instantly teleported 3D6" in a random direction</Rule>
 					<Lore>Decorated with hundreds of glittering gems on a background of deepest blue lacquer, the Armour of Stars is a wonder to behold</Lore>
 					<Description>May only be worn by a model on foot. The Armour of Stars counts as light armour (armour save 6+) which can be combined with other equipment normally. If the wearer suffers an unsaved wound he is instantly teleported 3D6" in a random direction</Description>
@@ -170,7 +170,7 @@
 				<Armour>
 					<Name>Armour of Heroes</Name>
 					<Points>30</Points>
-					<AddToArmour>5</AddToArmour>
+					<Add To="Armour">5</Add>
 					<Test Bet="Pass" Context="Round" Profile="Leadership"/>
 					<Lore>This finely wrought suit of armour is made in an unusual style, not seen since the time before the Sundering. A character wearing this armour seems to shine with an inner light. Surely he is one of the ancient gods of battle</Lore>
 					<Description>Counts as heavy armour (armour save 5+) which can be combined with other equipment normally. In order to allocate close combat attacks against the wearer, an opponent must first pass a Leadership test. Test each Close Combat phase. If the test is failed, the enemy may not attack</Description>
@@ -178,15 +178,15 @@
 				<Additional>
 					<Name>Temakador's Gauntlets</Name>
 					<Points>30</Points>
-					<AddToArmour>6</AddToArmour>
-					<AddToWard>5</AddToWard>
+					<Add To="Armour">6</Add>
+					<Add To="Ward">5</Add>
 					<Lore>Prince Temakador disliked harming fellow nobles in a duel, but he hated even more to be harmed himsel</Lore>
 					<Description>These gauntlets grant a 6+ armour save which can be combined with other equipment normally. They also give the bearer a 5+ Ward save against attacks of Strength 4 or greater</Description>
 				</Additional>
 				<Armour>
 					<Name>Shadow Armour</Name>
 					<Points>25</Points>
-					<AddToArmour>5</AddToArmour>
+					<Add To="Armour">5</Add>
 					<Scout/>
 					<Lore>Forged by the bitter Shadow Warriors in their hidden camps, the shimmering Shadow Armour weighs almost nothing. It exists somewhere between the real world and that of magic, a fact which mages find quite alarming</Lore>
 					<Description>Counts as heavy armour (armour save 5+) which can be combined with other equipment normally. In addition, if the wearer is an independent character on foot then he has the Scout special rule. He may choose to deploy either at the same rime as the other characters, or as a Scout (including setting up with a unit of Shadow Warriors)</Description>
@@ -201,7 +201,7 @@
 				<Additional>
 					<Name>Helm of Fortune</Name>
 					<Points>25</Points>
-					<AddToArmour>6</AddToArmour>
+					<Add To="Armour">6</Add>
 					<Reroll>ToArmour</Reroll>
 					<Lore>A helm of ithilmar and sea gold, bordered with tiny letters of intertwining runic script. These form a prayer to invoke Asuryan's protection upon the wearer</Lore>
 					<Description>This helm confers a 6+ armour save which can be combined with other equipment normally. The wearer may re-roll failed armour saves</Description>
@@ -209,8 +209,8 @@
 				<Shield>
 					<Name>Dragonscale Shield</Name>
 					<Points>20</Points>
-					<AddToArmour>5</AddToArmour>
-					<AddToWard>6</AddToWard>
+					<Add To="Armour">5</Add>
+					<Add To="Ward">6</Add>
 					<Lore>Although battered and scarred, this shield is a treasured heirloom of the days when Dragons roamed the skies</Lore>
 					<Description>This shield confers a 5+ armour save which can be combined with other equipment normally. Also gives the bearer a 6+ Ward save</Description>
 				</Shield>
@@ -218,7 +218,7 @@
 					<Name>Mask of the Merlord</Name>
 					<Points>10</Points>
 					<Only>Infantry</Only>
-					<AddToArmour>6</AddToArmour>
+					<Add To="Armour">6</Add>
 					<Rule>Can move over marsh, rivers, lakes or any other water features without penalty, and will benefit from soft cover while in such terrain</Rule>
 					<Lore>Discovered by Admiral Gdadic, the gold surface of this strange war mask ripples with magical power</Lore>
 					<Description>Model on foot only. This mask confers a 6+ armour save which can be combined with other equipment normally. In addition, the wearer can move over marsh, rivers, lakes or any other water features without penalty, and will benefit from soft cover while in such terrain</Description>
@@ -228,7 +228,7 @@
 				<Additional>
 					<Name>Vambraces of Defence</Name>
 					<Points>55</Points>
-					<AddToWard>4</AddToWard>
+					<Add To="Ward">4</Add>
 					<Reroll>ToArmour</Reroll>
 					<Lore>These golden bracers are fabled to liave been found on the shores of distant Lustria and are inscribed with unusual glyphs</Lore>
 					<Description>Gives the wearer a 4+ Ward save. In addition, the wearer may re-roll failed armour saves</Description>
@@ -263,7 +263,7 @@
 				<Additional>
 					<Name>Guardian Phoenix</Name>
 					<Points>25</Points>
-					<AddToWard>5</AddToWard>
+					<Add To="Ward">5</Add>
 					<Lore>A spark from the sacred flame at the temple of Asuryan is held in this ornate casket</Lore>
 					<Description>Gives the wearer a 5+ Ward save</Description>
 				</Additional>
@@ -397,7 +397,7 @@
 				<Arcane>
 					<Name>Jewel of the Dusk</Name>
 					<Points>15</Points>
-					<AddToCast>1</AddToCast>
+					<Add To="Cast">1</Add>
 					<Lore>This fine ruby glows blood red with a sorcemus energy that even the least magically adept can clearly see</Lore>
 					<Description>The jewel gives the Mage +1 Power dice in each of his own Magic phases</Description>
 				</Arcane>
@@ -428,8 +428,8 @@
 					<Name>Radiant Gem of Hoeth</Name>
 					<Points>45</Points>
 					<WizardTo>1</WizardTo>
-					<AddToCast>1</AddToCast>
-					<AddToDispell>1</AddToDispell>
+					<Add To="Cast">1</Add>
+					<Add To="Dispell">1</Add>
 					<Lore>The gem is normally kept in a black velvet bag, carefully hiding its brilliance from prying eyes</Lore>
 					<Description>The wearer counts as a Level 1 High Elf Mage. This has no effect on characters who are already Wizards</Description>
 				</Additional>
@@ -514,14 +514,14 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Sunfang</Name>
-						<AddToStrength>3</AddToStrength>
+						<Add To="Strength">3</Add>
 						<Rule>Flaming Attacks</Rule>
 						<Rule>Once per battle in the Shooting phase, Tyrion may release the power within Sunfang, unleashing a ticry blast of magical power. Tills is a breath attack with a Strength ot 4</Rule>
 					</HandWeapon>
 					<Armour>
 						<Name>Dragon Armour of Aenarion</Name>
 						<ArmourTo>1</ArmourTo>
-						<AddToWard>4</AddToWard>
+						<Add To="Ward">4</Add>
 					</Armour>
 					<Armour>
 						<Name>Heart of Avelorn</Name>
@@ -587,14 +587,14 @@
 					<HeavyArmour/>
 					<Armour>
 						<Name>The Helm of Yvresse</Name>
-						<AddToArmour>6</AddToArmour>
-						<AddToWard>5</AddToWard>
+						<Add To="Armour">6</Add>
+						<Add To="Ward">5</Add>
 					</Armour>
 					<Arcane>
 						<Name>Talisman of Hoeth</Name>
-						<AddToWizard>2</AddToWizard>
-						<AddToCast>2</AddToCast>
-						<AddToDispell>1</AddToDispell>
+						<Add To="Wizard">2</Add>
+						<Add To="Cast">2</Add>
+						<Add To="Dispell">1</Add>
 					</Arcane>
 				</Equipments>
 			</Lord>
@@ -622,7 +622,7 @@
 					</Arcane>
 					<Arcane>
 						<Name>Stone of Midnight</Name>
-						<AddToWard>4</AddToWard>
+						<Add To="Ward">4</Add>
 						<Rule>Anyone shooting at Alith Anar suffers an additional penalty of -1 on the roll to hit</Rule>
 					</Arcane>
 				</Equipments>
@@ -658,7 +658,7 @@
 						<Name>Tiranoc Chariot</Name>
 						<Points>85</Points>
 						<Mount/>
-						<AddToArmour>2</AddToArmour>
+						<Add To="Armour">2</Add>
 					</Option>
 				</Options>
 				<Equipments>
@@ -685,7 +685,7 @@
 						<Name>Tiranoc Chariot</Name>
 						<Points>85</Points>
 						<Mount/>
-						<AddToArmour>2</AddToArmour>
+						<Add To="Armour">2</Add>
 					</Option>
 				</Options>
 				<Equipments>
@@ -732,12 +732,12 @@
 					<HandWeapon>
 						<Name>Chayal</Name>
 						<KillingBlow/>
-						<AddToStrength>2</AddToStrength>
+						<Add To="Strength">2</Add>
 					</HandWeapon>
 					<HeavyArmour/>
 					<Armour>
 						<Name>Pelt of Charandis</Name>
-						<AddToArmour>6</AddToArmour>
+						<Add To="Armour">6</Add>
 						<ImmuneToPoison/>
 						<Rule>3+ Armour save against shooting attacks</Rule>
 					</Armour>
@@ -747,7 +747,7 @@
 						<Name>Lion Chariot</Name>
 						<Points>130</Points>
 						<Mount/>
-						<AddToArmour>2</AddToArmour>
+						<Add To="Armour">2</Add>
 					</Option>
 				</Options>
 			</Hero>
@@ -778,7 +778,7 @@
 						<Name>Tiranoc Chariot</Name>
 						<Points>85</Points>
 						<Mount/>
-						<AddToArmour>2</AddToArmour>
+						<Add To="Armour">2</Add>
 					</Option>
 					<BattleStandardBearer Points="25"/>
 				</Options>
@@ -803,7 +803,7 @@
 						<Name>Tiranoc Chariot</Name>
 						<Points>85</Points>
 						<Mount/>
-						<AddToArmour>2</AddToArmour>
+						<Add To="Armour">2</Add>
 					</Option>
 				</Options>
 				<Equipments>
@@ -892,7 +892,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Scaly skin</Name>
-						<AddToArmour>5</AddToArmour>
+						<Add To="Armour">5</Add>
 					</Armour>
 				</Equipments>
 			</Mount>
@@ -910,7 +910,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Scaly skin</Name>
-						<AddToArmour>4</AddToArmour>
+						<Add To="Armour">4</Add>
 					</Armour>
 				</Equipments>
 			</Mount>
@@ -928,7 +928,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Scaly skin</Name>
-						<AddToArmour>3</AddToArmour>
+						<Add To="Armour">3</Add>
 					</Armour>
 				</Equipments>
 			</Mount>
@@ -1099,7 +1099,7 @@
 					<HandWeapon/>
 					<HandWeapon>
 						<Name>Woodsmans axe</Name>
-						<AddToStrength>2</AddToStrength>
+						<Add To="Strength">2</Add>
 					</HandWeapon>
 					<HeavyArmour/>
 					<Additional>
