@@ -127,15 +127,15 @@
 				<Weapon>
 					<Name>Warplock-augmented Weapon</Name>
 					<Points>45</Points>
-					<AddToStrength>1</AddToStrength>
-					<AddToAttacks>1</AddToAttacks>
+					<Add To="Strength">1</Add>
+					<Add To="Attacks">1</Add>
 					<Lore>This blade is attached to a warp generator that channels crackling energy along the weapon</Lore>
 					<Description>A Warplock Weapon adds +1 Strength and +1 Attack to any model so equipped</Description>
 				</Weapon>
 				<Weapon>
 					<Name>Blade of Corruption</Name>
 					<Points>35</Points>
-					<AddToStrength>1</AddToStrength>
+					<Add To="Strength">1</Add>
 					<MultiWounds>2</MultiWounds>
 					<Rule>Wielder suffers 2 wounds if roll 2 or more rolls of To Hit</Rule>
 					<Lore>This sword has been left for 13 days in the dreaded Cauldron of One Thousand Poxes</Lore>
@@ -152,7 +152,7 @@
 				<Weapon>
 					<Name>Dwarfbane</Name>
 					<Points>25</Points>
-					<AddToStrength>1</AddToStrength>
+					<Add To="Strength">1</Add>
 					<Rule>Re-roll all failed to Wound rolls against Dwarfs</Rule>
 					<ArmourPiercing>1</ArmourPiercing>
 					<Lore>Many weapons have been forged during the wars to wrest the Worlds Edge Mountains from the Dwarfs. Each is cruelly barbed and deadly</Lore>
@@ -170,7 +170,7 @@
 				<Armour>
 					<Name>Warpstone Armour</Name>
 					<Points>30</Points>
-					<AddToArmour>4</AddToArmour>
+					<Add To="Armour">4</Add>
 					<Rule>Strength 4 hit against enemy for each successful armour save</Rule>
 					<Lore>Wrought within the great warpforges underneath Skavenblight, this armour radiates an evil aura</Lore>
 					<Description>Warpstone Armour gives its wearer a 4+ armour save. For each successful armour save made by the bearer in close combat, the armour immediately inflicts a Strength 4 hit against the model that struck the blow. Any casualties caused will count towards combat resolution. Warpstone Armour can be worn by Clan Skryre Warlock Engineers</Description>
@@ -178,7 +178,7 @@
 				<Armour>
 					<Name>World's Edge Armour</Name>
 					<Points>25</Points>
-					<AddToArmour>4</AddToArmour>
+					<Add To="Armour">4</Add>
 					<Rule>First wound by Strength 6+ is discounted, but armour is completely destroyed</Rule>
 					<Lore>Many suits of Dwarf-forged gromril have fallen into the clutches of the Skaven. These mastercrafted pieces of plate are often recrafted to make a patchwork protection with other pieces of scavenged armour</Lore>
 					<Description>The armour gives its wearer a 4+ armour save. The first time the wearer is wounded by a Strength high enough to completely cancel his armour save, or is not permitted an armour save for any reason, the wound is discounted, but the armour is completely destroyed</Description>
@@ -186,7 +186,7 @@
 				<Shield>
 					<Name>Shield of Distraction</Name>
 					<Points>15</Points>
-					<AddToArmour>6</AddToArmour>
+					<Add To="Armour">6</Add>
 					<Rule>Any models in base contact suffer -1 Attack</Rule>
 					<Lore>Grimy and ill-kept, this shield bears tainted hides, grisly trophies, or runes that are painful to look upon</Lore>
 					<Description>Any models in base contact wishing to strike the bearer of this shield suffer -1 Attack, to a minimum of 1</Description>
@@ -196,7 +196,7 @@
 				<Additional>
 					<Name>Foul Pendant</Name>
 					<Points>30</Points>
-					<AddToWard>6</AddToWard>
+					<Add To="Ward">6</Add>
 					<Lore>These take many forms - ratskull tokens, raw chunks of warpstone, or items bearing Skaven runes of power</Lore>
 					<Description>This wicked token of the Horned Rat’s power confers a 5+ ward save upon the bearer</Description>
 				</Additional>
@@ -233,7 +233,7 @@
 				<Arcane>
 					<Name>Scrying Stone</Name>
 					<Points>15</Points>
-					<AddToWard>3</AddToWard>
+					<Add To="Ward">3</Add>
 					<WardForFirstWound>3</WardForFirstWound>
 					<Lore>An orb made of the polished gallstones from the dreaded Blindwyrm of the underworld is said to be able to glimpse the future. At least on occasion, it seems to be true</Lore>
 					<Description>One use only. The bearer of this mystical ball gains a 3+ ward save against the first wound suffered. If the wound is saved because of the ward save of the Scrying Ball, the bearer will be subject to Stupidity in the following friendly turn as he awaits further helpful instructions from the mysterious globe</Description>
@@ -331,7 +331,7 @@
 					<Name>Warlock optics</Name>
 					<Only>Skryre</Only>
 					<Points>20</Points>
-					<AddToBallisticSkill>1</AddToBallisticSkill>
+					<Add To="BallisticSkill">1</Add>
 					<Lore>This warp-enhanced seeing device allows a Warlock Engineer to focus on a foe clearly, even those partially hidden in cover</Lore>
 					<Description>A Warlock Engineer equipped with Warlock Optics adds +1 to his Ballistic Skill. Additionally, a model so equipped can see partially see through objects and so suffers no penalty for shooting at targets in cover</Description>
 				</Weapon>
@@ -482,7 +482,7 @@
 					</HandWeapon>
 					<Armour>
 						<Rule>Blessing of the Horned Rat</Rule>
-						<AddToWard>4</AddToWard>
+						<Add To="Ward">4</Add>
 						<Rule>Frendly model within 6" takes a wound instead</Rule>
 					</Armour>
 					<Armour>
@@ -515,9 +515,9 @@
 					<RangeWeapon>Warpfire Thrower, one use only, re-roll the artillery dice</RangeWeapon>
 					<Armour>
 						<Name>Iron Frame</Name>
-						<AddToStrength>3</AddToStrength>
-						<AddToArmour>3</AddToArmour>
-						<AddToWard>5</AddToWard>
+						<Add To="Strength">3</Add>
+						<Add To="Armour">3</Add>
+						<Add To="Ward">5</Add>
 					</Armour>
 				</Equipments>
 			</Lord>
@@ -549,7 +549,7 @@
 					</HandWeapon>
 					<HandWeapon>
 						<Name>Whip of Domination</Name>
-						<AddToAttack>1</AddToAttack>
+						<Add To="Attack">1</Add>
 						<Rule>-2 enemy Leadership penalty after unsaved wound</Rule>
 					</HandWeapon>
 					<LightArmour/>
@@ -580,11 +580,11 @@
 					</HandWeapon>
 					<HandWeapon>
 						<Name>Additional blade</Name>
-						<AddToAttack>1</AddToAttack>
+						<Add To="Attack">1</Add>
 					</HandWeapon>
 					<Armour>
 						<Name>Warp-shared Armour</Name>
-						<AddToArmour>3</AddToArmour>
+						<Add To="Armour">3</Add>
 						<Rule>Strength 5 hit against the enemy for each succeful armour save</Rule>
 					</Armour>
 				</Equipments>
@@ -689,7 +689,7 @@
 					</Armour>
 					<Armour>
 						<Rule>Dodge</Rule>
-						<AddToWard>4</AddToWard>
+						<Add To="Ward">4</Add>
 					</Armour>
 				</Equipments>
 			</Hero>
@@ -715,7 +715,7 @@
 					<HandWeapon>Tail blade</HandWeapon>
 					<Armour>
 						<Name>Lucky Skullhelm</Name>
-						<AddToWard>4</AddToWard>
+						<Add To="Ward">4</Add>
 						<Rule>Re-roll a dice once per game</Rule>
 					</Armour>
 				</Equipments>
@@ -744,7 +744,7 @@
 					<RangeWeapon>Throwing stars</RangeWeapon>
 					<Armour>
 						<Rule>Dodge</Rule>
-						<AddToWard>4</AddToWard>
+						<Add To="Ward">4</Add>
 					</Armour>
 				</Equipments>
 			</Hero>
@@ -768,17 +768,17 @@
 					<Option>
 						<Name>Level 1 Wizard</Name>
 						<Points>50</Points>
-						<AddToCast>1</AddToCast>
-						<AddToDispell>1</AddToDispell>
-						<AddToWizard>1</AddToWizard>
+						<Add To="Cast">1</Add>
+						<Add To="Dispell">1</Add>
+						<Add To="Wizard">1</Add>
 						<Dependency/>
 					</Option>
 					<Option>
 						<Name>Level 2 Wizard</Name>
 						<Points>85</Points>
-						<AddToCast>2</AddToCast>
-						<AddToDispell>1</AddToDispell>
-						<AddToWizard>2</AddToWizard>
+						<Add To="Cast">2</Add>
+						<Add To="Dispell">1</Add>
+						<Add To="Wizard">2</Add>
 						<Dependency/>
 					</Option>
 					<WarlockWeapon Points="45"/>
@@ -830,8 +830,8 @@
 					<Option>
 						<Name>Level 2 Wizard</Name>
 						<Points>35</Points>
-						<AddToCast>1</AddToCast>
-						<AddToWizard>1</AddToWizard>
+						<Add To="Cast">1</Add>
+						<Add To="Wizard">1</Add>
 					</Option>
 					<Option>
 						<Name>Plague Censer</Name>
@@ -902,7 +902,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Borne Litter</Name>
-						<AddToArmour>6</AddToArmour>
+						<Add To="Armour">6</Add>
 					</Armour>
 				</Equipments>
 			</Mount>
@@ -1292,7 +1292,7 @@
 					<RangeWeapon>Jazzail</RangeWeapon>
 					<Armour>
 						<Name>Pavise</Name>
-						<AddToArmour>4</AddToArmour>
+						<Add To="Armour">4</Add>
 					</Armour>
 				</Equipments>
 				<Options>
