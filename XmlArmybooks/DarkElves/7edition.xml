@@ -257,7 +257,7 @@
 					<Name>Executioner's Axe</Name>
 					<Only>Infantry</Only>
 					<Points>80</Points>
-					<AddToStrength>10</AddToStrength>
+					<Add To="Strength">10</Add>
 					<MultiWounds>D3</MultiWounds>
 					<Lore>The Executioner's Axe is a huge, black-bladed weapon bound with spells of dismemberment. A single blow from it can cut any opponent in half</Lore>
 					<Description>Requires two hands. Strikes last. In close combat, the wielder counts as having a Strength double that of their target's Toughness, up to a maximum of Strength 10. In addition, the Executioner's Axe causes D3 wounds</Description>
@@ -517,7 +517,7 @@
 				<Banner>
 					<Name>Standard of Slaughter</Name>
 					<Points>35</Points>
-					<AddToCloseCombat>D3</AddToCloseCombat>
+					<Add To="CloseCombat">D3</Add>
 					<Lore>Anointed with the blood of an Ulthuan Elf, this banner imbues its regiment with bitter determination</Lore>
 					<Description>On any turn the unit with the Standard of Slaughter charges, the banner adds +D3 to the unit's combat resolution</Description>
 				</Banner>
