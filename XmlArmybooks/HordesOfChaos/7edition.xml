@@ -143,7 +143,7 @@
 				<Weapon>
 					<Name>Sword of Change</Name>
 					<Points>65</Points>
-					<AddToStrength>1</AddToStrength>
+					<Add To="Strength">1</Add>
 					<Rule>Every time an enemy character or monster takes an unsaved wound it must take a Toughness test: if the test is failed, the victim becomes a repulsive Spawn-thing, all enemy models in base contact with the victim take a S4 hit, the victim is then removed from play</Rule>
 					<Lore>The Sword of Change has the power to reduce those it pierces into mindless, flailing mounds of flesh</Lore>
 					<Description>Confers +1 Strength. Every time an enemy character or monster takes an unsaved wound from the Sword of Change it must take a Toughness test. If the test is failed, the victim becomes a repulsive Spawn-thing. All enemy models in base contact with the victim take a S4 hit as the Spawn-thing flails wildly in its death throes (unsaved wounds will count towards combat resolution). The victim is then removed from play</Description>
@@ -151,9 +151,9 @@
 				<Weapon>
 					<Name>Chaos Runesword</Name>
 					<Points>50</Points>
-					<AddToWeaponSkill>1</AddToWeaponSkill>
-					<AddToStrength>1</AddToStrength>
-					<AddToAttacks>1</AddToAttacks>
+					<Add To="WeaponSkill">1</Add>
+					<Add To="Strength">1</Add>
+					<Add To="Attacks">1</Add>
 					<Lore>These evil blades were forged from black gromril by the Dwarf Runesmith Grugni Ironheart, a secret worshipper of the Chaos Gods</Lore>
 					<Description>The wielder gains +1 Weapon Skill, +1 Strength and +1 Attack</Description>
 				</Weapon>
@@ -190,7 +190,7 @@
 					<Name>Axe of Khorn</Name>
 					<Points>45</Points>
 					<KillingBlow/>
-					<AddToStrength>1</AddToStrength>
+					<Add To="Strength">1</Add>
 					<Lore>This blood{orged axe is a sign of Khorne's favour, and unerringly severs heads so that yet more skulls might be laid at Khorne's feet</Lore>
 					<Description>This axe confers +1 Strength and the Killing Blow special rule upon the bearer</Description>
 				</Weapon>
@@ -228,15 +228,15 @@
 				<Armour>
 					<Name>Skinhidden Plate</Name>
 					<Points>60</Points>
-					<AddToArmour>4</AddToArmour>
-					<AddToToughness>1</AddToToughness>
+					<Add To="Armour">4</Add>
+					<Add To="Toughness">1</Add>
 					<Lore>Over time this armour has sank beneath the skin of the wearer, giving him a terribly distorted appearance but dramatically increased resilience</Lore>
 					<Description>Chaos armour. The Skinhidden Plate confers +1 Toughness upon the wearer</Description>
 				</Armour>
 				<Shield>
 					<Name>Chaos Runeshield</Name>
 					<Points>50</Points>
-					<AddToArmour>6</AddToArmour>
+					<Add To="Armour">6</Add>
 					<Rule>Negates the power of any magic or runic weapons carried by models in base contact</Rule>
 					<Lore>This shield was created by bitter Chaos Dwarf forgemasters as a defence against the runeweapons of the sons of Grungni</Lore>
 					<Description>Shield. Negates the power of any magic or runic weapons carried by models in base contact - treat them as ordinary non-magical weapons of their type</Description>
@@ -244,7 +244,7 @@
 				<Armour>
 					<Name>Armour of Damnation</Name>
 					<Points>45</Points>
-					<AddToArmour>4</AddToArmour>
+					<Add To="Armour">4</Add>
 					<Reroll>OpponentToHit</Reroll>
 					<Lore>This ornate suit of Chaos armour shimmers with the eldritch energies of the Chaos Wastes, distorting the wearer's outline and clouding its foes' minds</Lore>
 					<Description>Chaos armour. Any model striking the wearer in close combat must re-roll successful rolls to hit</Description>
@@ -252,7 +252,7 @@
 				<Armour>
 					<Name>Crimson Armour of Dargan</Name>
 					<Points>40</Points>
-					<AddToArmour>4</AddToArmour>
+					<Add To="Armour">4</Add>
 					<NoKillingBlow/>
 					<NoMultiWounds/>
 					<Lore>The rich crimson metal of this armour flares into a storm of blood-coloured light when its wearer wills it, dazzling those who would strike him a mortal blow</Lore>
@@ -261,15 +261,15 @@
 				<Armour>
 					<Name>Armour of Morrslieb</Name>
 					<Points>35</Points>
-					<AddToArmour>4</AddToArmour>
-					<AddToWard>4</AddToWard>
+					<Add To="Armour">4</Add>
+					<Add To="Ward">4</Add>
 					<Lore>This artefact was not forged but hewn from rock; rock that was once part of the Chaos moon Morrslieb</Lore>
 					<Description>Chaos armour. Confers a 4+ Ward save against non-magical attacks</Description>
 				</Armour>
 				<Armour>
 					<Name>The Bronze Armour of Zhrakk</Name>
 					<Points>15</Points>
-					<AddToArmour>4</AddToArmour>
+					<Add To="Armour">4</Add>
 					<ImmuneToPsychology/>
 					<NoKillingBlow/>
 					<NotALeader/>
@@ -310,7 +310,7 @@
 				<Weapon>
 					<Name>Collar of Khorne</Name>
 					<Points>25</Points>
-					<AddToWard>6</AddToWard>
+					<Add To="Ward">6</Add>
 					<MagicResistance>2</MagicResistance>
 					<Lore>The Champion has bested a Flesh Hound of Khorne in unarmed combat and won the right to wear the beast's rune-etched collar around his own neck</Lore>
 					<Description>The model with the Collar of Khorne has Magic Resistance (2) and a 6+ Ward save</Description>
@@ -357,7 +357,7 @@
 				<Arcane>
 					<Name>Power Familiar</Name>
 					<Points>25</Points>
-					<AddToCast>1</AddToCast>
+					<Add To="Cast">1</Add>
 					<Lore>The Familiar acts as a tiny magnet for the inconstant zephyrs that power its master's spells</Lore>
 					<Description>The familiar adds one power dice to its owner's pool during each friendly Magic phase</Description>
 				</Arcane>
@@ -398,7 +398,7 @@
 					<Dependencies>
 						<Off>Mark of Khorne</Off>
 					</Dependencies>
-					<AddToCast>1</AddToCast>
+					<Add To="Cast">1</Add>
 					<Rule>Knows a random spell from the Lore of Fire, Shadow or Death (player's choice)</Rule>
 					<Rule>Roll 1D6+1 instead of 2D6 on the Miscast table</Rule>
 					<Lore>Tbe Book of Secrets contains many dark truths, but all too often the price of such knowledge is life itsel</Lore>
@@ -528,7 +528,7 @@
 					</Armour>
 					<Armour>
 						<Name>The Eye of Sheerian</Name>
-						<AddToWard>3</AddToWard>
+						<Add To="Ward">3</Add>
 					</Armour>
 				</Equipments>
 			</Lord>
@@ -555,7 +555,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Mark of Tzeentch</Name>
-						<AddToWard>6</AddToWard>
+						<Add To="Ward">6</Add>
 					</Armour>
 				</Equipments>
 			</Lord>
@@ -577,11 +577,11 @@
 					<HandWeapon>
 						<Name>Sliverslash</Name>
 						<HitFirst/>
-						<AddToAttacks>2</AddToAttacks>
+						<Add To="Attacks">2</Add>
 					</HandWeapon>
 					<Armour>
 						<Name>Auric Armour</Name>
-						<AddToArmour>1</AddToArmour>
+						<Add To="Armour">1</Add>
 						<Regeneration/>
 					</Armour>
 					<Shield/>
@@ -616,7 +616,7 @@
 					</HandWeapon>
 					<Armour>
 						<Name>Armour of the Storm</Name>
-						<AddToArmour>5</AddToArmour>
+						<Add To="Armour">5</Add>
 						<Rule>If any lightning-based spell targets a unit within 12" of Kholek, the spell's effects are redirected toward Kholek instead</Rule>
 					</Armour>
 				</Equipments>
@@ -645,7 +645,7 @@
 					</HandWeapon>
 					<Armour>
 						<Name>The Scarlet Armour</Name>
-						<AddToArmour>3</AddToArmour>
+						<Add To="Armour">3</Add>
 						<Rule>Armour reduces the Strength of any attack against Valkia by 1 (to a minimum of 1)</Rule>
 					</Armour>
 					<Armour>
@@ -676,7 +676,7 @@
 					<ChaosArmour/>
 					<Armour>
 						<Name>Mark of Tzeentch</Name>
-						<AddToWard>6</AddToWard>
+						<Add To="Ward">6</Add>
 					</Armour>
 				</Equipments>
 			</Lord>
@@ -920,7 +920,7 @@
 				<Equipments>
 					<Armour>
 						<Name>Scaly skin</Name>
-						<AddToArmour>3</AddToArmour>
+						<Add To="Armour">3</Add>
 					</Armour>
 				</Equipments>
 			</Mount>
@@ -1249,7 +1249,7 @@
 				<Equipments>
 					<HandWeapon>
 						<Name>Ensorcelled weapon</Name>
-						<AddToStrength>1</AddToStrength>
+						<Add To="Strength">1</Add>
 					</HandWeapon>
 					<ChaosArmour/>
 					<Shield/>
