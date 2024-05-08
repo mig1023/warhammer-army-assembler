@@ -74,11 +74,7 @@
 				<SpawnMarkOfSlaanesh Name="Mark of Slaanesh" Rules="HitFirst"/>
 				<DaemonicFlight Rules="Rule: Fly"/>
 				<DaemonOfKhorne Rules="Rule: Hate Daemon of Slaanesh; Rule: +1 Strength for the rest of the turn after successful charge"/>
-				<DaemonOfTzeentch>
-					Rule: Hate Daemon of Nurgle
-					Rule: Re-roll Ward save results of 1
-					Rule: Re-roll Channelling results of 1
-				</DaemonOfTzeentch>
+				<DaemonOfTzeentch Rules="Rule: Hate Daemon of Nurgle; Rule: Re-roll Ward save results of 1; Rule: Re-roll Channelling results of 1"/>
 				<DaemonOfNurgle>
 					SubOpponentToHit: 1
 					Rule: Hate Daemon of Tzeentch
