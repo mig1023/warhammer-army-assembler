@@ -342,7 +342,7 @@ namespace WarhammerArmyAssembler.ArmyBook
             if (xmlNode == null)
                 return;
 
-            int newValue = int.Parse(xmlNode.InnerText);
+            int newValue = IntParse(xmlNode);
             string name = xmlNode.Attributes[attributeName].InnerText;
             list.Add(name, newValue);
         }
