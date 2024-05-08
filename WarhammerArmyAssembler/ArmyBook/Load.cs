@@ -171,7 +171,18 @@ namespace WarhammerArmyAssembler.ArmyBook
                     title = Services.CamelNameSplit(option.Name, pathetic: true);
                 }
 
-                string value = $"{title}|{option.InnerText}";
+                string body = String.Empty;
+
+                if (option.Attributes["Rules"] != null)
+                {
+                    body = option.Attributes["Rules"].InnerText;
+                }
+                else
+                {
+                    body = option.InnerText;
+                }
+
+                string value = $"{title}|{body}";
                 commonXmlOption.Add(option.Name, value);
             }
         }
