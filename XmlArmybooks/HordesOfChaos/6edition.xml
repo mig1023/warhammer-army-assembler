@@ -67,11 +67,7 @@
 				<MarkOfNurgleUnit Name="Mark of Nurgle" Rules="Fear"/>
 				<MarkOfTzeentchUnit Name="Mark of Tzeentch" Rules="AddToCast: 1"/>
 				<ChaosArmour Rules="AddToArmour: 4; NativeArmour"/>
-				<Chosen>
-					AddToArmour: 6
-					AddToAttacks: 1
-					OnlyOneSuchUnits
-				</Chosen>
+				<Chosen Rules="AddToArmour: 6; AddToAttacks: 1; OnlyOneSuchUnits"/>
 				<ThrowingAxes/>
 				<ThrowingSpears/>
 				<Mark/>
