@@ -63,12 +63,7 @@
 				<PoisonedAttacks Rules="PoisonAttack"/>
 				<ScalySkin Name="Scaly Skin" Rules="AddToArmour: 6"/>
 				<ThrowingAxes/>
-				<GreatWeaponSpecific>
-					Name: Great weapon
-					AddToStrength: 2
-					AddToArmour: -1
-					HitLast
-				</GreatWeaponSpecific>
+				<GreatWeaponSpecific Name="Great weapon" Rules="AddToStrength: 2; AddToArmour: -1; HitLast"/>
 			</Options>
 		</Local>
 	</Introduction>
