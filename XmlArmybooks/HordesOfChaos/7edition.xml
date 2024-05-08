@@ -61,11 +61,7 @@
 			<Options>
 				<ChaosArmour Rules="AddToArmour: 4; NativeArmour"/>
 				<MarkOfKhorne Rules="Frenzy"/>
-				<MarkOfKhorneSpawn>
-					Name: Mark of Khorne
-					AddToStrength: 1
-					Frenzy
-				</MarkOfKhorneSpawn>
+				<MarkOfKhorneSpawn Name="Mark of Khorne" Rules="AddToStrength: 1; Frenzy"/>
 				<MarkOfNurgle>
 					Rule: -1 to hit shooting and -1 WS in close combat
 				</MarkOfNurgle>
