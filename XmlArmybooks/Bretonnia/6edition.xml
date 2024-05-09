@@ -45,12 +45,7 @@
 				<LeadershipOfKnight>May use the Leadership of any non-fleeing Knight within 6" of them; unit Standards do not confer any additional Victory Points if they are captured</LeadershipOfKnight>
 			</SpecialRules>
 			<Options>
-				<QuestingVow>
-					Group: QuestingVow
-					HitLast
-					AddToStrength: 2
-					Rule: May re-roll any failed Psychology tests
-				</QuestingVow>
+				<QuestingVow Rules="Group: QuestingVow; HitLast; AddToStrength: 2; Rule: May re-roll any failed Psychology tests"/>
 				<GrailVow>
 					Group: GrailVow
 					ImmuneToPsychology
