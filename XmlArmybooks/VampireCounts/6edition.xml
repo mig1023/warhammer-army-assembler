@@ -59,12 +59,7 @@
 			</SpecialRules>
 			<Options>
 				<VonCarstein/>
-				<NecrarchLord>
-					Name: Necrarch
-					AddToWeaponSkill: -2
-					Rule: +1 to the total rolled when trying to cast a spell
-					NoMundaneWeapons
-				</NecrarchLord>
+				<NecrarchLord Name="Necrarch" Rules="AddToWeaponSkill: -2; Rule: +1 to the total rolled when trying to cast a spell; NoMundaneWeapons"/>
 				<NecrarchHero>
 					Name: Necrarch
 					AddToWeaponSkill: -2
