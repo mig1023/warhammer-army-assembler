@@ -79,11 +79,7 @@
 			<Options>
 				<Etherblade Rules="MagicItemsPoints; NoArmour"/>
 				<ArmedMonstrosity Rules="MagicItemsPoints; AddToAttacks: 2"/>
-				<DRobes>
-					Name: Daemonic Robes
-					MagicItemsPoints
-					Rule: Can never be wounded on better than a 3+
-				</DRobes>
+				<DRobes Name="Daemonic Robes" Rules="MagicItemsPoints; Rule: Can never be wounded on better than a 3+"/>
 				<EnrGaze>
 					Name: Enrapturing Gaze
 					MagicItemsPoints
