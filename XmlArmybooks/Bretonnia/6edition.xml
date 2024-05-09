@@ -46,12 +46,7 @@
 			</SpecialRules>
 			<Options>
 				<QuestingVow Rules="Group: QuestingVow; HitLast; AddToStrength: 2; Rule: May re-roll any failed Psychology tests"/>
-				<GrailVow>
-					Group: GrailVow
-					ImmuneToPsychology
-					AddToWard: 6
-					Rule: 5+ Ward save versus attacks with Strength 5 or higher
-				</GrailVow>
+				<GrailVow Rules="Group: GrailVow; ImmuneToPsychology; AddToWard: 6; Rule: 5+ Ward save versus attacks with Strength 5 or higher"/>
 				<MorningStar>
 					Name: Morning star
 					Flail
