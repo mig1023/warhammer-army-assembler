@@ -97,10 +97,7 @@
 				<PestilentMucus Rules="MagicItemsPoints; Rule: When Daemon suffers a wound, all enemy models in base contact must pass a Toughness test for each wound inflicted of themselves suffer a wound, with no armour saves allowed"/>
 				<NurglesRot Name="Nurgle's Rot" Rules="MagicItemsPoints; Rule: Enemy model in base contact at the start of any Magic phase suffer a wound on the roll of a 6, with no Armour Saves allowed"/>
 				<StreamOfBile Rules="MagicItemsPoints; Rule: Strength 4 breath weapon"/>
-				<SlimeTrail>
-					MagicItemsPoints
-					Rule: Enemy inits do not receive combat result bonuses for attacking the flank or rear
-				</SlimeTrail>
+				<SlimeTrail Rules="MagicItemsPoints; Rule: Enemy inits do not receive combat result bonuses for attacking the flank or rear"/>
 				<SirenSong>
 					MagicItemsPoints
 					Rule: Once per game, before charges are declared, nominate one enemy within 20", the target unit must either declare a charge against the Daemon (or the unit it is with) or immediately flee, exactly as if it had failed a Panic test
