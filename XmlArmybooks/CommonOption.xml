@@ -49,12 +49,7 @@
 	<Group Name="8ed common magic weapons">
 		<GiantBlade Type="Weapon" Rules="AddToStrength: 3; Lore: A massive sword that is still surprisingly versatile to use in combat. Nevertheless, when it strikes it can cleave a foe in twain" Description="Close combat attacks made with this sword are resolved at +3 Strength"/>
 		<SwordOfBloodshed Type="Weapon" Rules="AddToAttacks: 3; Lore: A sword tinged red, for wherever it is swung bloodshed is guaranteed, with multiple foes falling in a single deadly arc" Description="The wielder has +3 Attacks"/>
-		<ObsidianBlade>
-			Type: Weapon
-			NoArmour
-			Lore: A blade made of darkest obsidian with an edge that is said to not exist in this mortal plane - no armour can stand against it
-			Description: Armour saves cannot be taken against wounds caused by the Obsidian Blade
-		</ObsidianBlade>
+		<ObsidianBlade Type="Weapon" Rules="NoArmour; Lore: A blade made of darkest obsidian with an edge that is said to not exist in this mortal plane - no armour can stand against it" Description="Armour saves cannot be taken against wounds caused by the Obsidian Blade"/>
 		<OgreBlade>
 			Type: Weapon
 			AddToStrength: 2
