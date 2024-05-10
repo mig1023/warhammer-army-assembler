@@ -35,12 +35,8 @@
 		<Skirmishers Rules="Rule: Skirmishers"/>
 	</Group>
 	<Group Name="6ed/7ed common magic items">
-		<SwordOfStriking Type="Weapon" Rules="AddToHit: 1; Description: +1 to Hit"/>
-		<SwordOfBattle>
-			Type: Weapon
-			AddToAttacks: 1
-			Description: +1 Attack
-		</SwordOfBattle>
+		<SwordOfStriking Rules="Type: Weapon; AddToHit: 1; Description: +1 to Hit"/>
+		<SwordOfBattle Rules="Type: Weapon; AddToAttacks: 1; Description: +1 Attack"/>
 		<SwordOfMight>
 			Type: Weapon
 			AddToStrength: 1
