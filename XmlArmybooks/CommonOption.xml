@@ -70,13 +70,7 @@
 		<ArmourOfFortune Type="Armour" Rules="AddToArmour: 5; AddToWard: 5" Lore="Those who don the Armour of Fortune seem to have the favour of Ranald, able to parry the lethal blow with a lucky deflection" Description="Heavy armour. The Armour of Fortune grants the wearer a 5+ ward save"/>
 		<GlitteringScales Name="Glittering Scales" Type="Armour" Rules="AddToArmour: 6; SubOpponentToHit: -1" Lore="Such is the shine upon every scale in this resplendent mail that the foe can't help but be dazzled" Description="Light armour. Enemies suffer a -1 to hit penalty when attempting to strike the wearer in close combat"/>
 		<ShieldOfPtolos Type="Shield" Rules="AddToArmour: 6; Rule: 1+ armour save against shooting attacks" Lore="First discovered in the far south by tomb raiders, the Shield of Ptolos grants the wielder a great defensive boon against missile attacks" Description="Shield. The bearer has a 1+ armour save against shooting attacks"/>
-		<Spellshield>
-			Type: Shield
-			AddToArmour: 6
-			MagicResistance: 1
-			Lore: This shield is branded with wards of arcane protection, it has had many owners in its storied past
-			Description: Shield. The bearer gains Magic Resistance (1)
-		</Spellshield>
+		<Spellshield Type="Shield" Rules="AddToArmour: 6; MagicResistance: 1" Lore="This shield is branded with wards of arcane protection, it has had many owners in its storied past" Description="Shield. The bearer gains Magic Resistance (1)"/>
 		<GamblersArmour>
 			Name: Gambler's Armour
 			Type: Armour
