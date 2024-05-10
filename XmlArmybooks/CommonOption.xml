@@ -38,11 +38,7 @@
 		<SwordOfStriking Rules="Type: Weapon; AddToHit: 1; Description: +1 to Hit"/>
 		<SwordOfBattle Rules="Type: Weapon; AddToAttacks: 1; Description: +1 Attack"/>
 		<SwordOfMight Rules="Type: Weapon; AddToStrength: 1; Description: +1 Strenght"/>
-		<BitingBlade>
-			Type: Weapon
-			ArmourPiercing: 1
-			Description: -1 Armour save
-		</BitingBlade>
+		<BitingBlade Rules="Type: Weapon; ArmourPiercing: 1; Description: -1 Armour save"/>
 		<EnchantedShield>
 			Type: Shield
 			AddToArmour: 5
