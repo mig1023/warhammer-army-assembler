@@ -60,12 +60,7 @@
 		<GoldSigilSword Name="Gold Sigil Sword" Type="Weapon" Rules="InitiativeTo: 10" Lore="This golden sword gifts its user with a foresight and speed in combat that no mortal should ever have" Description="Attacks from the Gold Sigil Sword are made at Initiative 10"/>
 		<RelicSword Type="Weapon" Rules="WoundOn: 5" Lore="The Relic Sword was discovered in an ancient barrow close to the swamps of Mourkain. There are not many beings that can shrug off a wound from this blade" Description="Attacks made with the Relic Sword will always wound on a 5+ unless they would normally need a lower result"/>
 		<ShriekingBlade Type="Weapon" Rules="Fear" Lore="This blade was stolen from a Tomb Banshee while she sang a haunting nursery tale to a forgotten child. Now the blade sings too, and shrieks when it strikes a foe" Description="The bearer causes Fear"/>
-		<TormentorSword>
-			Type: Weapon
-			Rule: A monster or character that suffers an unsaved wound has the Stupidity special rule for the rest of the game
-			Lore: Those that take a wound from the jagged blade of the Tormentor Sword will not only feel pain - their thoughts will be wracked with terrible omens
-			Description: A monster or character that suffers an unsaved wound from the Tormentor sword has the Stupidity special rule for the rest of the game
-		</TormentorSword>
+		<TormentorSword Type="Weapon" Rules="Rule: A monster or character that suffers an unsaved wound has the Stupidity special rule for the rest of the game" Lore="Those that take a wound from the jagged blade of the Tormentor Sword will not only feel pain - their thoughts will be wracked with terrible omens" Description="A monster or character that suffers an unsaved wound from the Tormentor sword has the Stupidity special rule for the rest of the game"/>
 		<WarriorBane>
 			Type: Weapon
 			Rule: A monster or character that suffers unsaved wounds from Warrior Bane permanently loses one Attack for each unsaved wound
