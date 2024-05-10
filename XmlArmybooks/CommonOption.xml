@@ -42,11 +42,7 @@
 		<EnchantedShield Type="Shield" Rules="AddToArmour: 5" Description="5+ Armour save"/>
 		<TalismanOfProtection Type="AdditionalArmour" Rules="AddToWard: 5" Description="6+ Ward save"/>
 		<StaffOfSorcery Type="Arcane" Rules="AddToWard: 5; Rule: +1 to dispell" Description="+1 to dispell"/>
-		<DispellScroll>
-			Type: Arcane
-			Multiple
-			Description: Automatically dispel an enemy spell, one use only
-		</DispellScroll>
+		<DispellScroll Type="Arcane" Rules="Multiple" Description="Automatically dispel an enemy spell, one use only"/>
 		<PowerStone>
 			Type: Arcane
 			Multiple
