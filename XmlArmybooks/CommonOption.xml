@@ -73,13 +73,7 @@
 		<Spellshield Type="Shield" Rules="AddToArmour: 6; MagicResistance: 1" Lore="This shield is branded with wards of arcane protection, it has had many owners in its storied past" Description="Shield. The bearer gains Magic Resistance (1)"/>
 		<GamblersArmour Name=" Gambler's Armour" Type="Armour" Rules="AddToArmour: 5; AddToWard: 6" Lore="Ranald, the God of Thieves, Tricksters and Gamblers has blessed the armour and those who are willing to take a chance" Description="Heavy armour. The Gambler's Armour grants the wearer a 6+ Ward save"/>
 		<Dragonhelm Type="AdditionalArmour" Rules="AddToArmour: 6; Rule: 2+ Ward save against flaming attacks" Lore="An ornate helm fashioned in the style of dragon scales, allowing the wearer to shrug off burning flame and bolts of fire" Description="The wearer counts his armour save as being one point higher than normal. The wearer has a 2+ ward save against flaming attacks"/>
-		<CharmedShield>
-			Type: Shield
-			AddToArmour: 6
-			Rule: First hit suffered is discounted on a roll of 2+
-			Lore: The front of this shield depicts a warrior being blessed by a nameless lady. Its wielder gains protection from the sigil, especially against foes armed with missiles
-			Description: Shield. One use only. The first hit suffered by the bearer of the Charmed Shield is discounted on a roll of 2+
-		</CharmedShield>
+		<CharmedShield Type="Shield" Rules="AddToArmour: 6; Rule: First hit suffered is discounted on a roll of 2+" Lore="The front of this shield depicts a warrior being blessed by a nameless lady. Its wielder gains protection from the sigil, especially against foes armed with missiles" Description="Shield. One use only. The first hit suffered by the bearer of the Charmed Shield is discounted on a roll of 2+"/>
 		<TalismanOfPreservation>
 			Type: AdditionalArmour
 			AddToWard: 4
