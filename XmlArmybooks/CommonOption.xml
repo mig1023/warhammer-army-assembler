@@ -40,11 +40,7 @@
 		<SwordOfMight Rules="Type: Weapon; AddToStrength: 1; Description: +1 Strenght"/>
 		<BitingBlade Rules="Type: Weapon; ArmourPiercing: 1; Description: -1 Armour save"/>
 		<EnchantedShield Rules="Type: Shield; AddToArmour: 5; Description: 5+ Armour save"/>
-		<TalismanOfProtection>
-			Type: AdditionalArmour
-			AddToWard: 5
-			Description: 6+ Ward save
-		</TalismanOfProtection>
+		<TalismanOfProtection Rules="Type: AdditionalArmour; AddToWard: 5; Description: 6+ Ward save"/>
 		<StaffOfSorcery>
 			Type: Arcane
 			AddToWard: 5
