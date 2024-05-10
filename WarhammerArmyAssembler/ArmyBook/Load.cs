@@ -182,6 +182,9 @@ namespace WarhammerArmyAssembler.ArmyBook
                 if (option.Attributes["Description"] != null)
                     body += $";Description:{option.Attributes["Description"].InnerText}";
 
+                if (option.Attributes["Lore"] != null)
+                    body += $";Lore:{option.Attributes["Lore"].InnerText}";
+
                 if (String.IsNullOrEmpty(body))
                     body = option.InnerText;
 
