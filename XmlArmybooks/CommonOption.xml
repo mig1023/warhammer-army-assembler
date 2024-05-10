@@ -77,12 +77,7 @@
 		<TalismanOfPreservation Type="AdditionalArmour" Rules="AddToWard: 4" Lore="The gleaming Talisman of Preservation gives its wearer the ability to shrug off mortal wounds" Description="The Talisman of Preservation grants the bearer a 4+ Ward save"/>
 		<ObsidianLodestone Name="Obsidian Lodestone" Type="AdditionalArmour" Rules="MagicResistance: 3" Lore="The lodestone of pure obsidian contains many dark djinn, imprisoned by a sultan-sorcerer whose name is lost to time. It is a powerful anti-magic artefact" Description="The Obsidian Lodestone grants Magic Resistance (3)"/>
 		<TalismanOfEndurance Type="AdditionalArmour" Rules="AddToWard: 5" Lore="Those that wear the Talisman of Endurance can tolerate wounds and pain and suffering far in excess of mortal norms" Description="The Talisman of Endurance grants the bearer a 5+ Ward save"/>
-		<Dawnstone>
-			Type: AdditionalArmour
-			Reroll: ToArmour
-			Lore: A precious stone that glows at the break of every dawn, its bearer is said to be protected by an invisible field
-			Description: The bearer re-rolls failed armour saves
-		</Dawnstone>
+		<Dawnstone Type="AdditionalArmour" Rules="Reroll: ToArmour" Lore="A precious stone that glows at the break of every dawn, its bearer is said to be protected by an invisible field" Description="The bearer re-rolls failed armour saves"/>
 		<OpalAmulet>
 			Type: AdditionalArmour
 			WardForFirstWound: 4
