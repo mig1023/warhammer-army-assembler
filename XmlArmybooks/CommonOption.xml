@@ -35,13 +35,13 @@
 		<Skirmishers Rules="Rule: Skirmishers"/>
 	</Group>
 	<Group Name="6ed/7ed common magic items">
-		<SwordOfStriking Rules="Type: Weapon; AddToHit: 1; Description: +1 to Hit"/>
-		<SwordOfBattle Rules="Type: Weapon; AddToAttacks: 1; Description: +1 Attack"/>
-		<SwordOfMight Rules="Type: Weapon; AddToStrength: 1; Description: +1 Strenght"/>
-		<BitingBlade Rules="Type: Weapon; ArmourPiercing: 1; Description: -1 Armour save"/>
-		<EnchantedShield Rules="Type: Shield; AddToArmour: 5; Description: 5+ Armour save"/>
-		<TalismanOfProtection Rules="Type: AdditionalArmour; AddToWard: 5; Description: 6+ Ward save"/>
-		<StaffOfSorcery Rules="Type: Arcane; AddToWard: 5; Rule: +1 to dispell; Description: +1 to dispell"/>
+		<SwordOfStriking Type="Weapon" Rules="AddToHit: 1" Description="+1 to Hit"/>
+		<SwordOfBattle Type="Weapon" Rules="AddToAttacks: 1" Description="+1 Attack"/>
+		<SwordOfMight Type="Weapon" Rules="AddToStrength: 1" Description="+1 Strenght"/>
+		<BitingBlade Type="Weapon" Rules="ArmourPiercing: 1" Description="-1 Armour save"/>
+		<EnchantedShield Type="Shield" Rules="AddToArmour: 5" Description="5+ Armour save"/>
+		<TalismanOfProtection Type="AdditionalArmour" Rules="AddToWard: 5" Description="6+ Ward save"/>
+		<StaffOfSorcery Type="Arcane" Rules="AddToWard: 5; Rule: +1 to dispell" Description="+1 to dispell"/>
 		<DispellScroll>
 			Type: Arcane
 			Multiple
