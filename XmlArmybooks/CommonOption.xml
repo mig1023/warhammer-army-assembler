@@ -92,12 +92,7 @@
 		<RazorStandard Type="Banner" Rules="ArmourPiercing: 1" Lore="Regiments or mobs that fly the Razor Standard will slice through enemy armour and penetrate the their opponents' flesh far easier" Description="Models in a unit with the Razor Standard have the Armour Piercing special rule"/>
 		<BannerOfSwiftness Type="Banner" Rules="AddToMovement: 1" Lore="No matter the weather, the Banner of Swiftness always flaps as if in a gale. Those who march under it, traverse the elements at a much greater pace" Description="Models in a unit with the Banner of Swiftness have +1 to their Movement characteristic"/>
 		<LichebonePennant Name="Lichebone Pennant" Type="Banner" Rules="MagicResistance: 1" Lore="The sigil on this banner is old, and hurts the eyes to gaze upon it - yet those who walk under it in battle are protected by an arcane shield" Description="Models in a unit with the Lichebone Pennant have Magic Resistance (1)"/>
-		<StandardOfDiscipline>
-			Type: Banner
-			AddToLeadership: 1
-			Lore: Those who go to war with the Standard of Discipline do so under the stern glare of the figure upon the banner and know that they should continue fighting rather than rout
-			Description: Models in a unit with the Standard of Discipline have +1 Leadership, but cannot use the General's Inspiring Presence special rule
-		</StandardOfDiscipline>
+		<StandardOfDiscipline Type="Banner" Rules="AddToLeadership: 1" Lore="Those who go to war with the Standard of Discipline do so under the stern glare of the figure upon the banner and know that they should continue fighting rather than rout" Description="Models in a unit with the Standard of Discipline have +1 Leadership, but cannot use the General's Inspiring Presence special rule"/>
 		<BannerOfEternalFlame>
 			Type: Banner
 			Rule: Flaming Attacks
