@@ -58,12 +58,7 @@
 		<SwordOfSwiftSlaying Type="Weapon" Rules="HitFirst" Lore="A sword of silver that never dims. When used in anger, the sword arm of its owner darts forth before an opponent can even raise their guard" Description="The wieider of the Sword of Swift Slaying has the Always Strikes First special rule"/>
 		<BerserkerSword Type="Weapon" Rules="Frenzy" Lore="This blade constantly drips with blood as if only just pulled from a corpse - those that wield it scream with rage, demanding to feed the sword its next victim" Description="The bearer has the Frenzy special rule and can never lose his Frenzy"/>
 		<GoldSigilSword Name="Gold Sigil Sword" Type="Weapon" Rules="InitiativeTo: 10" Lore="This golden sword gifts its user with a foresight and speed in combat that no mortal should ever have" Description="Attacks from the Gold Sigil Sword are made at Initiative 10"/>
-		<RelicSword>
-			Type: Weapon
-			WoundOn: 5
-			Lore: The Relic Sword was discovered in an ancient barrow close to the swamps of Mourkain. There are not many beings that can shrug off a wound from this blade
-			Description: Attacks made with the Relic Sword will always wound on a 5+ unless they would normally need a lower result
-		</RelicSword>
+		<RelicSword Type="Weapon" Rules="WoundOn: 5" Lore="The Relic Sword was discovered in an ancient barrow close to the swamps of Mourkain. There are not many beings that can shrug off a wound from this blade" Description="Attacks made with the Relic Sword will always wound on a 5+ unless they would normally need a lower result"/>
 		<ShriekingBlade>
 			Type: Weapon
 			Fear
