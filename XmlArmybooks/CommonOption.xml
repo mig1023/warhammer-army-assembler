@@ -98,12 +98,7 @@
 		<ScarecrowBanner Type="Banner" Rules="Rule: Сauses Fear in models with the Fly special rule" Lore="The mangled form of a terrifying scarecrow has spent too long under Morrslieb's glow. It was taken from the fields and now is a banner to frighten anything with wings" Description="A unit with the Scarecrow Banner causes Fear in models with the Fly special rule"/>
 	</Group>
 	<Group Name="8ed common arcane items">
-		<BookOfAshur>
-			Type: Arcane
-			Rule: +1 bonus on attempts to cast and dispel
-			Lore: This arcane tome, bound in ancient dragon hide, contains much wisdom on the conjuring and subjugation of spells
-			Description: The bearer receives a +1 bonus on attempts to cast and dispel
-		</BookOfAshur>
+		<BookOfAshur Type="Arcane" Rules="Rule: +1 bonus on attempts to cast and dispel" Lore="This arcane tome, bound in ancient dragon hide, contains much wisdom on the conjuring and subjugation of spells" Description="The bearer receives a +1 bonus on attempts to cast and dispel"/>
 		<FeedbackScroll>
 			Type: Arcane
 			Rule: Once per game, after the enemy spell has been resolved, roll a dice for every dice used to cast the spell, the casting Wizard takes a wound for every result of 5+ rolled, with no armour saves allowed
