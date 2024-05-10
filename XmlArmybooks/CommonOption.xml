@@ -54,11 +54,7 @@
 		<SwordOfStrife Type="Weapon" Rules="AddToAttacks: 2; Lore: The Sword of Strife never has an owner for long, for those who wield it will always find it in their hand when their temper rises" Description="This wieider of the Sword of Strife has +2 Attacks"/>
 		<FencersBlades Name="Fencer's Blades" Type="Weapon" Rules="WeaponSkillTo: 10; Lore: An enchanted duo of blades - one long and one short - give the wielder a dazzling array of skilful moves, to parry and deceive an opponent" Description="Paired weapons, the bearer has Weapon Skill 10"/>
 		<SwordOfAntiHeroes Name="Sword of Anti-Heroes" Type="Weapon" Rules="Rule: +1 Strength and +1 Attack for every enemy character in base contact; Lore: This sword was said to be smelted in a cursed furnace and then quenched in the bloody body of a dying champion" Description="The bearer has +1 Strength and +1 Attack for every enemy character in base contact with him or his unit. These bonuses are calculated at the start of each round ol close combat and last until its end"/>
-		<SpellthievingSword>
-			Type: Weapon
-			Rule: A Wizard that suffers unsaved wounds from the Spellthieving Sword loses one of his spells
-			Description: A Wizard that suffers unsaved wounds from the Spellthieving Sword loses one of his spells (determined randomly) for each unsaved wound
-		</SpellthievingSword>
+		<SpellthievingSword Type="Weapon" Rules="Rule: A Wizard that suffers unsaved wounds from the Spellthieving Sword loses one of his spells" Description="A Wizard that suffers unsaved wounds from the Spellthieving Sword loses one of his spells (determined randomly) for each unsaved wound"/>
 		<SwordOfSwiftSlaying>
 			Type: Weapon
 			HitFirst
