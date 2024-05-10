@@ -37,14 +37,10 @@
 		<Champion Rules="Command"/>
 		<Musician Rules="Command"/>
 		<StandardBearer Rules="Command"/>
-		<BattleStandardBearer>
-			OnlyOneInArmy
-		</BattleStandardBearer>
+		<BattleStandardBearer Rules="OnlyOneInArmy"/>
 	</Group>
 	<Group Name="Special rules">
-		<Fly>
-			Rule: Fly
-		</Fly>
+		<Fly Rules="Rule: Fly"/>
 		<FlyingCavalry>
 			Rule: Flying Cavalry
 		</FlyingCavalry>
