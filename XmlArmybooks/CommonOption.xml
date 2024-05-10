@@ -39,11 +39,7 @@
 		<SwordOfBattle Rules="Type: Weapon; AddToAttacks: 1; Description: +1 Attack"/>
 		<SwordOfMight Rules="Type: Weapon; AddToStrength: 1; Description: +1 Strenght"/>
 		<BitingBlade Rules="Type: Weapon; ArmourPiercing: 1; Description: -1 Armour save"/>
-		<EnchantedShield>
-			Type: Shield
-			AddToArmour: 5
-			Description: 5+ Armour save
-		</EnchantedShield>
+		<EnchantedShield Rules="Type: Shield; AddToArmour: 5; Description: 5+ Armour save"/>
 		<TalismanOfProtection>
 			Type: AdditionalArmour
 			AddToWard: 5
