@@ -77,12 +77,7 @@
 				<SavageOrc Rules="AddToAttacks: 1; Frenzy; Rule: Warprint"/>
 				<BlackOrc Rules="AddToWeaponSkill: 1"/>
 				<NightGoblin Rules="AddToInitiative: 1; AddToLeadership: -1"/>
-				<Biguns>
-					Name: Big'Uns
-					AddToWeaponSkill: 1
-					AddToStrength: 1
-					OnlyOneInArmy
-				</Biguns>
+				<Biguns Name="Big'Uns" Rules="AddToWeaponSkill: 1; AddToStrength: 1; OnlyOneInArmy"/>
 				<AdditionalChoppa>
 					AddToAttacks: 1
 				</AdditionalChoppa>
