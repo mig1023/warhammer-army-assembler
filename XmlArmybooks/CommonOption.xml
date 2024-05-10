@@ -65,14 +65,7 @@
 	</Group>
 	<Group Name="8ed common magic armours">
 		<ArmourOfDestiny Type="Armour" Rules="AddToArmour: 5; AddToWard: 4" Lore="The Armour of Destiny is worn by a great Hero among every generation, their fate entwined with the ensorcelled suit" Description="Heavy armour. The Armour of Destiny grants the wearer a 4+ ward save"/>
-		<TrickstersHelm>
-			Name: Trickster's Helm
-			Type: AdditionalArmour
-			AddToArmour: 6
-			Reroll: OpponentToWound
-			Lore: A dingy, battered helmet that looks like any other � but this is the Trickster�s Helm, a powerful artefact that protects the wearer
-			Description: The wearer counts his armour save as being one point higher than normal. Any successful roll to wound made against the wearer of the Trickster's Helm must be re-rolled
-		</TrickstersHelm>
+		<TrickstersHelm Name="Trickster's Helm" Type="AdditionalArmour" Rules="AddToArmour: 6; Reroll: OpponentToWound" Lore="A dingy, battered helmet that looks like any other, but this is the Trickster's Helm, a powerful artefact that protects the wearer" Description="The wearer counts his armour save as being one point higher than normal. Any successful roll to wound made against the wearer of the Trickster's Helm must be re-rolled"/>
 		<ArmourOfSilveredSteel>
 			Type: Armour
 			ArmourTo: 2
