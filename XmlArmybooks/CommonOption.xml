@@ -69,13 +69,7 @@
 		<ArmourOfSilveredSteel Type="Armour" Rules="ArmourTo: 2; Reroll: OpponentToWound" Lore="The gleaming, all-encasing suit of silver is light but still grants the wearer a heavy degree of protection - surely, the hallmarks of Elven artifice" Description="The Armour of Silvered Steel grants its wearer a 2+ armour save that cannot be improved by any means"/>
 		<ArmourOfFortune Type="Armour" Rules="AddToArmour: 5; AddToWard: 5" Lore="Those who don the Armour of Fortune seem to have the favour of Ranald, able to parry the lethal blow with a lucky deflection" Description="Heavy armour. The Armour of Fortune grants the wearer a 5+ ward save"/>
 		<GlitteringScales Name="Glittering Scales" Type="Armour" Rules="AddToArmour: 6; SubOpponentToHit: -1" Lore="Such is the shine upon every scale in this resplendent mail that the foe can't help but be dazzled" Description="Light armour. Enemies suffer a -1 to hit penalty when attempting to strike the wearer in close combat"/>
-		<ShieldOfPtolos>
-			Type: Shield
-			AddToArmour: 6
-			Rule: 1+ armour save against shooting attacks
-			Lore: First discovered in the far south by tomb raiders, the Shield of Ptolos grants the wielder a great defensive boon against missile attacks
-			Description: Shield. The bearer has a 1+ armour save against shooting attacks
-		</ShieldOfPtolos>
+		<ShieldOfPtolos Type="Shield" Rules="AddToArmour: 6; Rule: 1+ armour save against shooting attacks" Lore="First discovered in the far south by tomb raiders, the Shield of Ptolos grants the wielder a great defensive boon against missile attacks" Description="Shield. The bearer has a 1+ armour save against shooting attacks"/>
 		<Spellshield>
 			Type: Shield
 			AddToArmour: 6
