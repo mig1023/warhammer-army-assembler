@@ -174,13 +174,16 @@ namespace WarhammerArmyAssembler.ArmyBook
                 string body = String.Empty;
 
                 if (option.Attributes["Rules"] != null)
-                {
                     body = option.Attributes["Rules"].InnerText;
-                }
-                else
-                {
+
+                if (option.Attributes["Type"] != null)
+                    body += $";Type:{option.Attributes["Type"].InnerText}";
+
+                if (option.Attributes["Description"] != null)
+                    body += $";Description:{option.Attributes["Description"].InnerText}";
+
+                if (String.IsNullOrEmpty(body))
                     body = option.InnerText;
-                }
 
                 string value = $"{title}|{body}";
                 commonXmlOption.Add(option.Name, value);
