@@ -944,8 +944,8 @@ namespace WarhammerArmyAssembler.ArmyBook
             foreach (XmlNode setProperty in xmlNode.SelectNodes("Add"))
                 SetPropertyShort(newOption.AddTo, setProperty, attributeName: "To");
 
-            foreach (XmlNode setProperty in xmlNode.SelectNodes("Set"))
-                SetPropertyShort(newOption.ChangeTo, setProperty, attributeName: "In");
+            foreach (XmlNode setProperty in xmlNode.SelectNodes("Change"))
+                SetPropertyShort(newOption.ChangeTo, setProperty, attributeName: "Set");
 
             foreach (string name in Constants.ProfilesNames.Keys)
             {
