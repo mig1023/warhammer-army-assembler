@@ -67,7 +67,7 @@ namespace WarhammerArmyAssembler
                 if (string.IsNullOrEmpty(Lore))
                     return Description;
                 else
-                    return $"{Lore}\n\n*   *   *\n\n{Description}";
+                    return Lore;
             }
         }
 
