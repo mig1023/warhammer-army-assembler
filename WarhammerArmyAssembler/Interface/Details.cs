@@ -4,6 +4,7 @@ using System.Linq;
 using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Shapes;
 
@@ -487,13 +488,21 @@ namespace WarhammerArmyAssembler.Interface
                 Background = background,
             };
 
+            if (enabled && !String.IsNullOrEmpty(caption))
+            {
+                newPart.Cursor = Cursors.Hand;
+            }
+
             newPart.Width = partWidth ?? (countable ? 51 : 77);
 
             if (countable && enabled && (caption == "+" || caption == "-"))
+            {
                 newPart.MouseDown += CountableOption_Click;
-
+            }
             else if (!countable && enabled)
+            {
                 newPart.MouseDown += AddOption_Click;
+            }
 
             double leftMargin = Math.Ceiling(margins[0] + 2 + actualPrevPartWidth);
 
