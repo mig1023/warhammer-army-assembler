@@ -79,12 +79,14 @@ namespace WarhammerArmyAssembler.Test
 
         private static void EnemiesGroupBox(string name, int current)
         {
-            int len = name.Length + 6;
+            var nameLen = name.Length > 4 ? 3 : 4;
+            var len = name.Length + nameLen;
+
             string firestLineFix = (current == 0 ? "\n" : String.Empty);
 
-            Data.Console(Data.SupplText, $"\n{new String('/', len)}\n");
-            Data.Console(Data.SupplText, $"// {name.ToUpper()} //\n");
-            Data.Console(Data.SupplText, $"{new String('/', len)}\n\n{firestLineFix}");
+            Data.Console(Data.SupplText, $"\n{new String('✱', len)}\n");
+            Data.Console(Data.SupplText, $"✱✱ {name.ToUpper()} ✱✱\n");
+            Data.Console(Data.SupplText, $"{new String('✱', len)}\n\n{firestLineFix}");
         }
 
         public static void BattleRoyaleTest(Unit unit, Unit unitMount, IProgress<string> progress)
